@@ -3,4 +3,8 @@ Title: Index
 <a name="Index-ApacheOpenEJB"></a>
 # Apache OpenEJB
 
-Apache OpenEJB is an embeddable and lightweight EJB 3.0 implementation that can be used as a standalone server or embedded into Tomcat, JUnit, TestNG, Eclipse, IntelliJ, Maven, Ant, and any IDE or application. OpenEJB is included in Apache Geronimo, IBM WebSphere Application Server CE, and Apple's WebObjects.
+Apache OpenEJB is an embeddable and lightweight EJB 3.0 implementation that
+can be used as a standalone server or embedded into Tomcat, JUnit, TestNG,
+Eclipse, IntelliJ, Maven, Ant, and any IDE or application. OpenEJB is
+included in Apache Geronimo, IBM WebSphere Application Server CE, and
+Apple's WebObjects.
