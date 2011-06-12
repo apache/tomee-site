@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{% block title %}{{ headers.title }}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://incubator.apache.org/lucy/css/lucy.css">
+  </head>
+
+  <body>
+
+    <div id="lucy-rigid_wrapper">
+
+      <div id="lucy-top" class="container_16 lucy-white_box_3d">
+
+        <div id="lucy-logo_box" class="grid_8">
+          <a href="/lucy/"><img src="http://incubator.apache.org/lucy/images/lucy_logo_150x100.png" alt="Apache Lucy™"></a>
+        </div> <!-- lucy-logo_box -->
+
+        <div #id="lucy-top_nav_box" class="grid_8">
+          <div id="lucy-top_nav_bar" class="container_8">
+            <ul>
+              <li><a href="http://www.apache.org/" title="Apache Software Foundation">Apache Software Foundation</a></li>
+              <li><a href="http://www.apache.org/licenses/" title="License">License</a></li>
+              <li><a href="http://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></li>
+              <li><a href="http://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></li>
+              <li><a href="http://www.apache.org/security/ " title="Security">Security</a></li>
+            </ul>
+          </div> <!-- lucy-top_nav_bar -->
+          <p>{{ breadcrumbs|safe }}</p>
+          <form name="lucy-top_search_box" id="lucy-top_search_box" action="http://www.google.com/search" method="get">
+            <input value="*.apache.org" name="sitesearch" type="hidden"/>
+            <input type="text" name="q" id="query" style="width:85%">
+            <input type="submit" id="submit" value="Search">
+          </form>
+        </div> <!-- lucy-top_nav_box -->
+
+        <div class="clear"></div>
+
+      </div> <!-- lucy-top -->
+
+      <div id="lucy-main_content" class="container_16 lucy-white_box_3d">
+
+        <div class="grid_4" id="lucy-left_nav_box">
+          <h6>About</h6>
+            <ul>
+              <li><a href="/lucy/">Welcome</a></li>
+              <li><a href="/lucy/faq.html">FAQ</a></li>
+              <li><a href="/lucy/people.html">People</a></li>
+            </ul>
+          <h6>Resources</h6>
+            <ul>
+              <li><a href="/lucy/download.html">Download</a></li>
+              <li><a href="/lucy/mailing_lists.html">Mailing Lists</a></li>
+              <li><a href="/lucy/docs/perl/">Documentation</a></li>
+              <li><a href="http://wiki.apache.org/lucy/">Wiki</a></li>
+              <li><a href="https://issues.apache.org/jira/browse/LUCY">Issue Tracker</a></li>
+              <li><a href="/lucy/version_control.html">Version Control</a></li>
+            </ul>
+          <h6>Related Projects</h6>
+            <ul>
+              <li><a href="http://lucene.apache.org/java/">Lucene</a></li>
+              <li><a href="http://lucene.apache.org/solr/">Solr</a></li>
+              <li><a href="http://incubator.apache.org/lucene.net/">Lucene.NET</a></li>
+              <li><a href="http://lucene.apache.org/pylucene/">PyLucene</a></li>
+              <li><a href="http://lucene.apache.org/openrelevance/">Open Relevance</a></li>
+            </ul>
+        </div> <!-- lucy-left_nav_box -->
+
+        <div id="lucy-main_content_box" class="grid_9">
+          {{ content|markdown }}
+        </div> <!-- lucy-main_content_box --> 
+        <div class="clear"></div>
+
+      </div> <!-- lucy-main_content -->
+
+      <div id="lucy-copyright" class="container_16">
+        <p>Copyright &#169; 2010-2011 The Apache Software Foundation, Licensed under the 
+           <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+           <br/>
+          
+        </p>
+      </div> <!-- lucy-copyright -->
+
+    </div> <!-- lucy-rigid_wrapper -->
+
+  </body>
+</html>
