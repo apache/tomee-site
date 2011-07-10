@@ -1,0 +1,277 @@
+Title: Containers and Resources
+{anchor: containers}
+<a name="ContainersandResources-Containers"></a>
+# Containers
+{anchor:Default CMP Container-container}
+<a name="ContainersandResources-CMP_ENTITY"></a>
+## CMP_ENTITY
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="CMP_ENTITY">
+    </Container>
+
+Declarable in properties via
+{panel}
+Foo = new://Container?type=CMP_ENTITY
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+    | CmpEngineFactory | Default value is
+_org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory_.||
+
+{anchor:Default BMP Container-container}
+<a name="ContainersandResources-BMP_ENTITY"></a>
+## BMP_ENTITY
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="BMP_ENTITY">
+    </Container>
+
+Declarable in properties via
+{panel}
+Foo = new://Container?type=BMP_ENTITY
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+  
+  
+
+{anchor:Default Stateless Container-container}
+<a name="ContainersandResources-STATELESS"></a>
+## STATELESS
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="STATELESS">
+    </Container>
+
+Declarable in properties via
+{panel}
+Foo = new://Container?type=STATELESS
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+  
+  
+  
+  
+  
+  
+
+{anchor:Default Stateful Container-container}
+<a name="ContainersandResources-STATEFUL"></a>
+## STATEFUL
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="STATEFUL">
+    </Container>
+
+Declarable in properties via
+{panel}
+Foo = new://Container?type=STATEFUL
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+  
+  
+  
+  
+  
+  
+  
+  
+
+{anchor:Default MDB Container-container}
+<a name="ContainersandResources-MESSAGE"></a>
+## MESSAGE
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="MESSAGE">
+    </Container>
+
+Declarable in properties via
+{panel}
+Foo = new://Container?type=MESSAGE
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+{anchor: resources}
+<a name="ContainersandResources-Resources"></a>
+# Resources
+{anchor:Default JDBC Database-resource}
+<a name="ContainersandResources-javax.sql.DataSource"></a>
+## javax.sql.DataSource
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="javax.sql.DataSource">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=javax.sql.DataSource
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+  
+  
+  
+  
+  
+  
+  
+  
+    | Password | Default password|
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+{anchor:Default JMS Resource Adapter-resource}
+<a name="ContainersandResources-ActiveMQResourceAdapter"></a>
+## ActiveMQResourceAdapter
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="ActiveMQResourceAdapter">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=ActiveMQResourceAdapter
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+  
+  
+  
+  
+  
+  
+
+{anchor:Default JMS Connection Factory-resource}
+<a name="ContainersandResources-javax.jms.ConnectionFactory"></a>
+## javax.jms.ConnectionFactory
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="javax.jms.ConnectionFactory">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=javax.jms.ConnectionFactory
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+    | ResourceAdapter | Default value is _Default JMS Resource Adapter_.||
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+{anchor:Default Queue-resource}
+<a name="ContainersandResources-javax.jms.Queue"></a>
+## javax.jms.Queue
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="javax.jms.Queue">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=javax.jms.Queue
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+    | destination | Specifies the name of the queue|
+
+{anchor:Default Topic-resource}
+<a name="ContainersandResources-javax.jms.Topic"></a>
+## javax.jms.Topic
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="javax.jms.Topic">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=javax.jms.Topic
+{panel}
+Supports the following properties
+    || Property Name || Description ||
+    | destination | Specifies the name of the topic|
+
+{anchor:Default ORB-resource}
+<a name="ContainersandResources-org.omg.CORBA.ORB"></a>
+## org.omg.CORBA.ORB
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="org.omg.CORBA.ORB">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=org.omg.CORBA.ORB
+{panel}
+No properties.
+
+{anchor:Default Mail Session-resource}
+<a name="ContainersandResources-javax.mail.Session"></a>
+## javax.mail.Session
+Declarable in openejb.xml via
+
+    <Resource id="Foo" type="javax.mail.Session">
+    </Resource>
+
+Declarable in properties via
+{panel}
+Foo = new://Resource?type=javax.mail.Session
+{panel}
+No properties.

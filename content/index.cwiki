@@ -1,20 +1,52 @@
-h1. Welcome to Apache OpenEJB! 
-
-Apache OpenEJB is an embeddable and lightweight EJB 3.0 implementation that can be used as a standalone server or embedded into Tomcat, JUnit, TestNG, Eclipse, IntelliJ, Maven, Ant, and any IDE or application. OpenEJB is included in Apache Geronimo, IBM WebSphere Application Server CE, and Apple's WebObjects. 
-
-h2. Major features
- - Supports EJB 3.0, 2.1, 2.0, 1.1 in all modes; embedded, standalone or otherwise.
- - JAX-WS support
- - JMS support
- - J2EE connector support
- - Can be dropped into Tomcat 5 or 6 adding various JavaEE 5 and EJB 3.0 features to a standard Tomcat install.
- - CMP support is implemented over JPA allowing to freely mix CMP and JPA usage.
- - Complete support for Glassfish descriptors allowing those users to embedded test their applications.
- - Incredibly flexible jndi name support allows you to specify formats at macro and micro levels and imitate the format of other vendors.
- - Allows for easy testing and debugging in IDEs such as Eclipse, Idea Intellij or NetBeans with no plugins required.
- - Usable in ordinary JUnit or other style test cases without complicated setup or external processes.
- - Validates applications entirely and reports all failures at once, with three selectable levels of detail, avoiding several hours worth of "fix, recompile, redeploy, fail, repeat" cycles. 
-
-h1. News
-{blogrss:https://blogs.apache.org/openejb/feed/entries/atom}
-
+# *Java EE Basics*
+## [Getting Things|Basics - Getting Things]
+## [Security|Basics - Security]
+## [Transactions|Basics - Transactions]
+# *EJB 3.0 Applications*
+## [EJB 3.0 Specification]
+## [Callbacks]
+## [Understanding Callbacks]
+## [Security Annotations]
+## [Transaction Annotations]
+## [EJB Refs]
+## [XML Overrides|Annotations, XML and Defaults]
+## [JPA Concepts]
+# *EJB 3.1 Applications*
+## [Singleton Beans]
+# *Configuration*
+## [Understanding the Directory Layout]
+## [System Properties]
+## [Deployments]
+## [Containers and Resources]
+## [JMS Resources and MDB Container]
+## [Configuring DataSources]
+## [Configuring JavaMail]
+## [Security]
+## [Clients]
+## [JNDI Names]
+# *JPA Providers*
+## [General|JPA Usage]
+## [OpenJPA]
+## [Hibernate]
+# *Standalone Server*
+## [Startup]
+## [Deploy Tool]
+## [Properties Tool]
+# *Testing Techniques*
+## [Application discovery via the classpath]
+## [Embedded Configuration]
+## [Configuring DataSources in Tests]
+## [Configuring PersistenceUnits in Tests]
+## [Configuring Containers in Tests]
+## [Configuring Logging in Tests]
+## [Alternate Descriptors]
+## [Unit Testing Transactions]
+## [TestCase with TestBean inner-class]
+## [TestCase Injection (@LocalClient)|Local Client Injection]
+# *Spring*
+## [Spring and OpenEJB 3.0]
+## [Spring and OpenEJB 3.1 and later|Spring]
+## [Spring, EJB and JPA example|Spring EJB and JPA]
+# *Advanced*
+## [Failover]
+# [Examples]

@@ -1,0 +1,156 @@
+Title: Annotations, XML and Defaults
+The following is a list of all annotations and their attributes, the xml
+tags that correspond to them (for overriding), and what the default values
+are when left unspecified.
+
+<table>
+<tr><th> Annotation </th><th> xml element(s) </th><th> default value </th></tr>
+<tr><td> @Stateless </td><td> * <session>
+</tr>
+* <ejb-class>
+* <session-type>Stateless</session-type> |  |
+<tr><td> - name </td><td> <ejb-name> </td><td> The simple name of the bean class. For
+_org.acme.superfun.WidgetBean_ the ejb-name will be *WidgetBean* </td></tr>
+<tr><td> - description </td><td> <description> </td><td> </td></tr>
+<tr><td> - mappedName </td><td> <mapped-name> </td><td> </td></tr>
+<tr><td> @Stateful </td><td>  * <session>
+</tr>
+* <ejb-class>
+* <session-type>Stateful</session-type> |  |
+<tr><td> - name </td><td> <ejb-name> </td><td> The simple name of the bean class. For
+_org.acme.superfun.WidgetBean_ the ejb-name will be *WidgetBean* </td></tr>
+<tr><td> - description </td><td> <description> </td><td> </td></tr>
+<tr><td> - mappedName </td><td> <mapped-name> </td><td> </td></tr>
+<tr><td> @MessageDriven </td><td>  * <message-driven>
+</tr>
+* <ejb-class>
+* <session-type>Stateful</session-type> |  |
+<tr><td> - name </td><td> <ejb-name> </td><td> The simple name of the bean class. For
+_org.acme.superfun.WidgetBean_ the ejb-name will be *WidgetBean* </td></tr>
+<tr><td> - description </td><td> <description> </td><td> </td></tr>
+<tr><td> - mappedName </td><td> <mapped-name> </td><td> </td></tr>
+<tr><td> - messageListenerInterface </td><td> <messaging-type> </td><td> The interface the bean
+class implements.  When relying upon the default is illegal for the bean to
+implement more than one interface </td></tr>
+<tr><td> - activationConfig\[](.html)
+ </td><td> <activation-config> </td><td> </td></tr>
+<tr><td> @ActivationConfigProperty </td><td> <activation-config-property> </td><td> </td></tr>
+<tr><td> - propertyName </td><td> <activation-config-property-name> </td><td> </td></tr>
+<tr><td> - propertyValue </td><td> <activation-config-property-value> </td><td> </td></tr>
+<tr><td> @RemoteHome </td><td> * <home>
+</tr>
+* <remote> | The home is inspected to determine the value of <remote>|
+<tr><td> @LocalHome </td><td> * <local-home>
+</tr>
+* <local> | The local-home is inspected to determine the value of <local> |
+<tr><td> @TransactionManagement </td><td> <transaction-type> </td><td>
+TransactionManagementType.CONTAINER (xml value "Container") </td></tr>
+<tr><td> @TransactionAttribute </td><td> * <container-transaction>
+</tr>
+* <transaction-attribute> | All method default to
+TransactionAttributeType.REQUIRED (xml value "Required") |
+<tr><td> @RolesAllowed </td><td> * <method-permission>
+</tr>
+* <role-name> | |
+<tr><td> @PermitAll </td><td>	* <method-permission>
+</tr>
+* <unchecked> | All methods default to unchecked |
+<tr><td> @DenyAll </td><td> <exclude-list> </td><td> </td></tr>
+<tr><td> @RunAs </td><td> * <security-identity>
+</tr>
+* <run-as>
+* <role-name> | |
+<tr><td> @DeclareRoles </td><td> <security-role-ref> </td><td> </td></tr>
+<tr><td> @Interceptors </td><td> * <interceptor>
+</tr>
+ * <interceptor-binding>
+ * <interceptor-class> | |
+<tr><td> @ExcludeDefaultInterceptors </td><td>  * <interceptor-binding>
+</tr>
+* <exclude-default-interceptors> | |
+<tr><td> @ExcludeClassInterceptors </td><td>  * <interceptor-binding>
+</tr>
+* <exclude-class-interceptors> | |
+<tr><td> @AroundInvoke </td><td> <around-invoke> </td><td> </td></tr>
+<tr><td> @PostConstruct </td><td> <post-construct> </td><td> </td></tr>
+<tr><td> @PreDestroy </td><td> <pre-destroy> </td><td> </td></tr>
+<tr><td> @PrePassivate </td><td> <pre-passivate> </td><td> </td></tr>
+<tr><td> @PostActivate </td><td> <post-activate> </td><td> </td></tr>
+<tr><td> @Init </td><td> <init-method> </td><td> </td></tr>
+<tr><td> @Remove </td><td> <remove-method> </td><td> </td></tr>
+<tr><td> - retainIfException </td><td> <retain-if-exception> </td><td> false </td></tr>
+<tr><td> @Timeout </td><td> <timeout-method> </td><td> </td></tr>
+<tr><td> @ApplicationException </td><td> * <application-exception>
+</tr>
+* <exception-class> | |
+<tr><td> - rollback </td><td> <rollback> </td><td> false </td></tr>
+<tr><td> @EJB </td><td> * <ejb-ref>
+</tr>
+* <ejb-local-ref>
+* <injection-target> | |
+<tr><td> - name </td><td> * <ejb-ref-name> </td><td> * on class: illegal to leave undefined
+</tr>
+* on field: \{className}/\{fieldName} as in *org.superbiz.Widget/myEjb*
+* on setter: \{className}/\{propertyName} as in setMyEjb() defaults to
+*org.superbiz.Widget/myEjb* |
+<tr><td> - beanInterface </td><td> * <home>
+</tr>
+* <local-home>
+* <remote>
+* <local> | * on class: illegal to leave undefined
+* on field: the data type of the field
+* on setter: the data type of the first method param |
+<tr><td> - beanName </td><td> <ejb-link> </td><td> </td></tr>
+<tr><td> - description </td><td> <description> </td><td> </td></tr>
+<tr><td> - mappedName </td><td> <mapped-name> </td><td> </td></tr>
+<tr><td> @Resource </td><td> * <env-entry>
+</tr>
+* <resource-ref>
+* <resource-env-ref>
+* <injection-target> | |
+<tr><td> - name </td><td> * <env-entry-name>
+</tr>
+* <res-ref-name> 
+* <resource-env-ref-name> | * on class: illegal to leave undefined
+* on field: \{className}/\{fieldName} as in
+*org.superbiz.Widget/myDataSource*
+* on setter: \{className}/\{propertyName} as in setMyDataSource() defaults
+to *org.superbiz.Widget/myDataSource* |
+<tr><td> - type </td><td> * <env-entry-type>
+</tr>
+* <res-type>
+* <resource-env-ref-type> | * on class: illegal to leave undefined
+* on field: the data type of the field
+* on setter: the data type of the first method param |
+<tr><td> - description </td><td> <description> </td><td> </td></tr>
+<tr><td> - mappedName </td><td> <mapped-name> </td><td> </td></tr>
+<tr><td> - shareable </td><td> <res-sharing-scope> </td><td> true (xml value "Shareable") </td></tr>
+<tr><td> - authenticationType </td><td> <res-auth> </td><td> AuthenticationType.CONTAINER (xml
+value "Container") </td></tr>
+<tr><td> @PersistenceUnit </td><td> * <persistence-unit-ref>
+</tr>
+* <injection-target> |	|
+<tr><td> - name </td><td> <persistence-unit-ref-name> </td><td>on class: illegal to leave
+undefined
+</tr>
+* on field: \{className}/\{fieldName} as in *org.superbiz.Widget/myUnit*
+* on setter: \{className}/\{propertyName} as in setMyUnit() defaults to
+*org.superbiz.Widget/myUnit* |
+<tr><td> - unitName </td><td> <persistence-unit-name> </td><td> vendor specific </td></tr>
+<tr><td> @PersistenceContext </td><td> * <persistence-context-ref>
+</tr>
+* <injection-target> |	|
+<tr><td> - name </td><td> <persistence-context-ref-name> </td><td>on class: illegal to leave
+undefined
+</tr>
+* on field: \{className}/\{fieldName} as in *org.superbiz.Widget/myContext*
+* on setter: \{className}/\{propertyName} as in setMyContext() defaults to
+*org.superbiz.Widget/myContext* |
+<tr><td> - unitName </td><td> <persistence-unit-name> </td><td> vendor specific </td></tr>
+<tr><td> - type </td><td> <persistence-context-type> </td><td> PersistenceContextType.TRANSACTION
+(xml value "Transaction") </td></tr>
+<tr><td> - properties[](.html)
+ </td><td> </td><td> </td></tr>
+<tr><td> @PersistenceProperty </td><td> <persistence-property> </td><td> </td></tr>
+<tr><td> - name </td><td> <name> </td><td> </td></tr>
+<tr><td> - value </td><td> <value> </td><td> </td></tr>

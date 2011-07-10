@@ -1,37 +1,53 @@
 Title: Index
-<a name="Index-WelcometoApacheOpenEJB!"></a>
-# Welcome to Apache OpenEJB! 
-
-Apache OpenEJB is an embeddable and lightweight EJB 3.0 implementation that
-can be used as a standalone server or embedded into Tomcat, JUnit, TestNG,
-Eclipse, IntelliJ, Maven, Ant, and any IDE or application. OpenEJB is
-included in Apache Geronimo, IBM WebSphere Application Server CE, and
-Apple's WebObjects. 
-
-<a name="Index-Majorfeatures"></a>
-## Major features
- - Supports EJB 3.0, 2.1, 2.0, 1.1 in all modes; embedded, standalone or
-otherwise.
- - JAX-WS support
- - JMS support
- - J2EE connector support
- - Can be dropped into Tomcat 5 or 6 adding various JavaEE 5 and EJB 3.0
-features to a standard Tomcat install.
- - CMP support is implemented over JPA allowing to freely mix CMP and JPA
-usage.
- - Complete support for Glassfish descriptors allowing those users to
-embedded test their applications.
- - Incredibly flexible jndi name support allows you to specify formats at
-macro and micro levels and imitate the format of other vendors.
- - Allows for easy testing and debugging in IDEs such as Eclipse, Idea
-Intellij or NetBeans with no plugins required.
- - Usable in ordinary JUnit or other style test cases without complicated
-setup or external processes.
- - Validates applications entirely and reports all failures at once, with
-three selectable levels of detail, avoiding several hours worth of "fix,
-recompile, redeploy, fail, repeat" cycles. 
-
-<a name="Index-News"></a>
-# News
-{blogrss:https://blogs.apache.org/openejb/feed/entries/atom}
-
+1. *Java EE Basics*
+1. # [Getting Things](basics---getting-things.html)
+1. # [Security](basics---security.html)
+1. # [Transactions](basics---transactions.html)
+1. *EJB 3.0 Applications*
+1. # [EJB 3.0 Specification](ejb-3.0-specification.html)
+1. # [Callbacks](callbacks.html)
+1. # [Understanding Callbacks](understanding-callbacks.html)
+1. # [Security Annotations](security-annotations.html)
+1. # [Transaction Annotations](transaction-annotations.html)
+1. # [EJB Refs](ejb-refs.html)
+1. # [XML Overrides](annotations,-xml-and-defaults.html)
+1. # [JPA Concepts](jpa-concepts.html)
+1. *EJB 3.1 Applications*
+1. # [Singleton Beans](singleton-beans.html)
+1. *Configuration*
+1. # [Understanding the Directory Layout](understanding-the-directory-layout.html)
+1. # [System Properties](system-properties.html)
+1. # [Deployments](deployments.html)
+1. # [Containers and Resources](containers-and-resources.html)
+1. # [JMS Resources and MDB Container](jms-resources-and-mdb-container.html)
+1. # [Configuring DataSources](configuring-datasources.html)
+1. # [Configuring JavaMail](configuring-javamail.html)
+1. # [Security](security.html)
+1. # [Clients](clients.html)
+1. # [JNDI Names](jndi-names.html)
+1. *JPA Providers*
+1. # [General](jpa-usage.html)
+1. # [OpenJPA](openjpa.html)
+1. # [Hibernate](hibernate.html)
+1. *Standalone Server*
+1. # [Startup](startup.html)
+1. # [Deploy Tool](deploy-tool.html)
+1. # [Properties Tool](properties-tool.html)
+1. *Testing Techniques*
+1. # [Application discovery via the classpath](application-discovery-via-the-classpath.html)
+1. # [Embedded Configuration](embedded-configuration.html)
+1. # [Configuring DataSources in Tests](configuring-datasources-in-tests.html)
+1. # [Configuring PersistenceUnits in Tests](configuring-persistenceunits-in-tests.html)
+1. # [Configuring Containers in Tests](configuring-containers-in-tests.html)
+1. # [Configuring Logging in Tests](configuring-logging-in-tests.html)
+1. # [Alternate Descriptors](alternate-descriptors.html)
+1. # [Unit Testing Transactions](unit-testing-transactions.html)
+1. # [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
+1. # [TestCase Injection (@LocalClient)](local-client-injection.html)
+1. *Spring*
+1. # [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
+1. # [Spring and OpenEJB 3.1 and later](spring.html)
+1. # [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
+1. *Advanced*
+1. # [Failover](failover.html)
+1. [Examples](examples.html)

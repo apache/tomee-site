@@ -1,0 +1,77 @@
+Title: Understanding the Directory Layout
+When freshly unpacked, OpenEJB will look like this:
+
+{panel}
+ openejb-3.0/
+ openejb-3.0/logs/
+ openejb-3.0/apps/
+ openejb-3.0/lib/
+ openejb-3.0/lib/_<several jars>_
+ openejb-3.0/LICENSE.txt
+ openejb-3.0/NOTICE.txt
+ openejb-3.0/README.txt
+ openejb-3.0/bin/
+ openejb-3.0/bin/openejb.bat
+ openejb-3.0/bin/openejb
+ openejb-3.0/conf/
+ openejb-3.0/conf/README.txt
+{panel}
+
+<a name="UnderstandingtheDirectoryLayout-Directories"></a>
+# Directories
+
+<a name="UnderstandingtheDirectoryLayout-bin/"></a>
+## bin/
+
+Contains commands to start/stop the server (You can also do a lot of other
+stuff like deploy/undeploy, but we will just talk about things needed to
+get you started)
+
+<a name="UnderstandingtheDirectoryLayout-lib/"></a>
+## lib/
+
+Contains several jar files (you only need of few of these jars in your
+classpath to do EJB development)
+
+<a name="UnderstandingtheDirectoryLayout-apps/"></a>
+## apps/
+
+Once you create your EJB's and jar them up, you can place your jar file in
+this directory and start the server. The server will automatically deploy
+all the EJB's contained in this JAR.
+
+<a name="UnderstandingtheDirectoryLayout-logs/"></a>
+## logs/
+
+Contains log files.
+
+<a name="UnderstandingtheDirectoryLayout-conf/"></a>
+## conf/
+
+This directory contains nothing but a README.txt file at the time OpenEJB
+is unpacked.  The first time OpenEJB is started however, these files will
+be created:
+
+
+      conf/
+        openejb.xml 	       (main config file)
+    
+        logging.properties	       (log levels and files)
+    
+        login.config	       (jaas config file)
+        users.properties	       (users that can log in)
+        groups.properties	       (groups in which users belong)
+    
+        admin.properties	       (network socket for administration)
+        ejbd.properties	       (network socket for ejb invocations)
+        hsql.properties	       (network socket for hsql client access)
+        httpejbd.properties        (network socket for ejb invocations over
+http)
+        telnet.properties	       (network socket for telnet "server") 
+
+
+These files can be edited as desired.  If at any time you are unhappy with
+your changes or simply wish to start over, you can delete or move any of
+the files above and a new one containing the default values will be
+automatically created.
+
