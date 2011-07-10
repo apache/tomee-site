@@ -188,7 +188,7 @@ David
 
 </three>
 
-h3. scp, ssh, and rsync examples for working with files and directories on
+### scp, ssh, and rsync examples for working with files and directories on
 people.apache.org
 
 *Contributed by*: David Blevins

@@ -78,7 +78,7 @@ work/
 
 {deck}
 
-h1. \[OPENEJB:Windows\](openejb:windows\.html)
+# \[OPENEJB:Windows\](openejb:windows\.html)
  Set JAVA_HOME environment variable
 
 For Windows users, the Tomcat shell scripts must know the location of the
@@ -91,7 +91,7 @@ C:\>set JAVA_HOME =C:\your\java\installation
 
     {deck}
     
-    h1. \[OPENEJB:Unix\]
+# \[OPENEJB:Unix\]
  Make shell scripts executable
     
     For Unix users, the shell scripts in the Tomcat installation are not

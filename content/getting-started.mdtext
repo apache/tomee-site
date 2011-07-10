@@ -1,5 +1,5 @@
 Title: Getting Started
-h2. &nbsp;The following instructions are written using Eclipse 3.2. We will
+## &nbsp;The following instructions are written using Eclipse 3.2. We will
 refer to the install location of OpenEJB as OPENEJB_HOME
 
 Here are some basic steps you need to perform to get started with OpenEJB

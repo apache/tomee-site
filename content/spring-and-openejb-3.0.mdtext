@@ -71,7 +71,7 @@ the EJB beans it [finds in the classpath|Application discovery via the classpath
 .  You can then expose any of these things to other Spring components with
 custom factory beans.
     
-    h1. Injecting OpenEJB-created resources into Spring components
+# Injecting OpenEJB-created resources into Spring components
     
     If you want to have any of the Topics, Queues, DataSources, EntityManagers
 or more that OpenEJB creates injected into components that Spring creates,

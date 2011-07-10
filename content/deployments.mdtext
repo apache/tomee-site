@@ -23,7 +23,7 @@ So, for example, of the value of openejb.base was 'c:\timeapp\' then
 OpenEJB would look for the jar 'c:\timeapp\timeTrack.jar'.  See the [OPENEJB:Configuration]
  guide for more details.
     
-    h2.  A directory of jars
+##  A directory of jars
     
     To point to a directory that contains several jar files that OpenEJB should
 load, simply declare a 'Deployments' element with a 'dir' attribute
@@ -88,7 +88,7 @@ OpenEJB finds a META-INF directory with an 'ejb-jar.xml' fine inside, then
 OpenEJB will treat the directory as an unpacked ejb jar.  Otherwise OpenEJB
 will look for ejb jar files to load as detailed in the above section.
     
-    h1.  Log file 
+#  Log file 
     
     When trying to figure out if your ejbs were loaded, the openejb.log file is
 an incredible asset.

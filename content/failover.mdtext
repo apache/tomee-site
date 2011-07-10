@@ -141,7 +141,7 @@ the client knows the URL of a server in the cluster, it may use it and
 connect directly to that server, at which point that server will share the
 full list of its peers.
     
-    h2. Multicast Servers with TCP Clients
+## Multicast Servers with TCP Clients
     
     Note that clients do not need to use multicast to communicate with servers.
  Servers can use multicast to discover each other, but clients are still
@@ -229,9 +229,9 @@ p.put(Context.PROVIDER_URL,
 InitialContext remoteContext = new InitialContext(p);
 
     
-    h2. Considerations
+## Considerations
     
-    h3. Network size
+### Network size
     
     The general disadvantage of this topology is the number of connections
 required.  The number of connections for the network of servers is equal to
@@ -246,7 +246,7 @@ allows the server to handle many connections (all of them) with one thread.
  From a pure threading perspective, the option is extremely efficient with
 just one thread to listen and broadcast to many peers.	
     
-    h3. Double connect 
+### Double connect 
     
     It is possible in this process that two servers learn of each other at the
 same time and each attempts to connect to the other simultaneously,
@@ -256,7 +256,7 @@ connections will be dropped and one will be kept.  In practice this race
 condition rarely happens and can be avoided almost entirely by fanning out
 server startup by as little as 100 milliseconds.
     
-    h1. Multipoint Configuration Recommendations
+# Multipoint Configuration Recommendations
     
     As mentioned above the {{initialServers}} is only used for bootstrapping
 the multipoint network.  Once running, all servers will dynamically
@@ -274,7 +274,7 @@ dynamically.
 must already be running when the server starts or the server might never
 become introduced and connected to all the other servers in the network.
     
-    h2. Failed scenario (background)
+## Failed scenario (background)
     
     As an example of a failed scenario, imagine there are three servers;
 server1, server2, server3.  They are setup only to point to the server in
@@ -325,7 +325,7 @@ listing nothing at all, then all servers would fully discover each other
 regardless of startup order; assuming all three servers did eventually
 start.
     
-    h2. Bootstrapping Three Servers or Less
+## Bootstrapping Three Servers or Less
     
     In a three sever scenario, we recommend simply having all three servers
 list all three servers.  
@@ -341,7 +341,7 @@ list all three servers.
 maintain and it will work even if you decide not to start one of the three
 servers.
     
-    h2. Bootstrapping Four Servers or More
+## Bootstrapping Four Servers or More
     {span:style=float: right;}
     {gliffy:name=MultipointFour|space=OPENEJBx30|page=Failover|align=right|border=false|size=L|version=3}
     {span}
@@ -384,7 +384,7 @@ convenience.
     
     {div:style=clear:both;}{div}
     
-    h2. Command line overrides
+## Command line overrides
     
     Always remember that any property in a conf/<server-service>.properties
 file can be overridden on the command line or via system properties.  So it

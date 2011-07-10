@@ -50,7 +50,7 @@ Show a config file with the elements hyperlinked.
 </openejb>
 
     
-    h1.  Basic Layout
+#  Basic Layout
     
     Basically, openejb.base is the source for 100% of all configuration
 information and third party config files (log4j, castor, instantdb,
@@ -102,7 +102,7 @@ relative to openejb.base.
       * The jars in the lib and dist directories under openejb.home are added
 to the classpath.
     
-    h2. Summary
+## Summary
     
     A summary of the above in a different notation:
     
@@ -116,7 +116,7 @@ openejb.base)
     Classpath includes openejb.home/lib and openejb.home/dist
     {noformat}
     
-    h2. Example layout
+## Example layout
     
     In this one the openejb.home and openejb.base are set, everything else is
 defaulted.  The openejb.conf file as been updated to point to the ejb jars
@@ -136,7 +136,7 @@ by name (abc-ejbs.jar and xyz-ejbs.jar).
     {noformat}
     
     
-    h2. Another Example layout
+## Another Example layout
     
     In this example openejb.home and openejb.base are setup as well as the
 explicit paths for the openejb and log4j configuration files.

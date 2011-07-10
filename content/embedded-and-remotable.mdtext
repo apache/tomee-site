@@ -95,12 +95,12 @@ to the embedded container system over the ejbd protocol.
 
 {snippet:id=setup|url=openejb3/examples/telephone-stateful/src/test/java/org/superbiz/telephone/TelephoneTest.java|lang=java}
 
-h2. LocalInitialContextFactory: making in-vm calls to a remote business
+## LocalInitialContextFactory: making in-vm calls to a remote business
 interface
 
 {snippet:id=localcontext|url=openejb3/examples/telephone-stateful/src/test/java/org/superbiz/telephone/TelephoneTest.java|lang=java}
 
-h2. RemoteInitialContextFactory: making networked calls to a remote
+## RemoteInitialContextFactory: making networked calls to a remote
 business interface
 
 This is the part you would want to do in apps that are running a different

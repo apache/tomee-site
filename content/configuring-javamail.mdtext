@@ -30,7 +30,7 @@ which may cause issues if the provider does not actively trim the values
 before attempting to use them.
     {note}
     
-    h1. Overriding
+# Overriding
     
     If you wanted to do a System property or InitialContext property override
 of the above example mail session, you could do so like this:

@@ -47,9 +47,9 @@ p.put("movieDatabaseUnmanaged.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
 p.put("movieDatabaseUnmanaged.JtaManaged", "false");
 
     
-    h1. Common exceptions
+# Common exceptions
     
-    h2. Table not found in statement
+## Table not found in statement
     
     Or as derby will report it "Table 'abc.xyz' doesn't exist"
     

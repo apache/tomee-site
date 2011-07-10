@@ -77,7 +77,7 @@ provider (in this case Hibernate).  With one exception OpenEJB does not
 understand or modify these properties.	Details on that one exception
 below.
     
-    h3.  No need to specify a "transaction lookup" property
+###  No need to specify a "transaction lookup" property
     
 All vendors have such a property for getting a reference to the container's
 TransactionManager and nothing works if this is not set correctly to the
@@ -87,7 +87,7 @@ take the liberty of setting it for you.
     Here are the persistence provider classes we understand and the defaults we
 will set for you:
     
-    h4. Provider org.hibernate.ejb.HibernatePersistence
+#### Provider org.hibernate.ejb.HibernatePersistence
     
     When using this provider, the *hibernate.transaction.manager_lookup_class*
 will be automatically set by OpenEJB to
@@ -97,7 +97,7 @@ with the standard "org.hibernate.transaction." prefix.
     
     Custom lookup implementations will never be overwritten.
     
-    h4. Provider oracle.toplink.essentials.PersistenceProvider
+#### Provider oracle.toplink.essentials.PersistenceProvider
     
     Or _oracle.toplink.essentials.ejb.cmp3.EntityManagerFactoryProvider_.
     
@@ -109,7 +109,7 @@ prefix.
     
     Custom transaction controller implementations will never be overwritten.
     
-    h4. Provider org.eclipse.persistence.jpa.PersistenceProvider
+#### Provider org.eclipse.persistence.jpa.PersistenceProvider
     
     Or _org.eclipse.persistence.jpa.osgi.PersistenceProvider_.
     
@@ -121,7 +121,7 @@ with the standard "org.eclipse.persistence.transaction." prefix.
     
     Custom transaction controller implementations will never be overwritten.
     
-    h4. Provider org.apache.openjpa.persistence.PersistenceProviderImpl
+#### Provider org.apache.openjpa.persistence.PersistenceProviderImpl
     
     OpenJPA is capable of discovering the correct method for locating the
 TransactionManager without the need for users to specify the specific

@@ -23,7 +23,7 @@ svn copy -m "OpenEJB 3.0-beta-1 branch" \
   https://svn.apache.org/repos/asf/openejb/branches/3.0-beta-1
 
     
-    h1.  Merging things from trunk to the branch
+#  Merging things from trunk to the branch
     
     While fixing issues in the branch and trunk in parallel it may happen that
 some changes in trunk have not been applied to the branch. Provided you're
@@ -255,7 +255,7 @@ href="http://openejb.apache.org/">http://openejb.apache.org/</A> </P>
 <P></P></BODY></HTML>
 
     
-    h1.  Publishing
+#  Publishing
     
     When all voting is done
     

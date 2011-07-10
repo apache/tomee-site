@@ -69,6 +69,6 @@ javax.jms.Topic topic = (Topic)
 context.lookup("openejb:Resource/BarTopic");
 
     
-    h1. Internal ActiveMQ Broker
+# Internal ActiveMQ Broker
     
     _TODO_

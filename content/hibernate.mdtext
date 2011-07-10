@@ -41,7 +41,7 @@ always be used and never replaced by OpenEJB.
     Note that if you need more functionality in this area we are always happy
 to add it.
     
-    h1. Not using OpenEJB in production?
+# Not using OpenEJB in production?
     
     If you're using OpenEJB 3.0 which does not support the dynamic switching of
 the _hibernate.transaction.manager_lookup_class_ this is one way to achieve

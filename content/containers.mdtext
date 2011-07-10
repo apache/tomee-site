@@ -51,7 +51,7 @@ $
     You see that. No beans, no JDBC resources, nothing but one CMP container
 called "Default CMP Container".
     
-    h1. Naming your Container
+# Naming your Container
     
     You can call the container anything you want, just change the value of the
 id attribute. Here is a container called "My PostgreSQL Contianer"
@@ -108,7 +108,7 @@ After deployment, you would end up with a configuration like this one
 do not redeploy the myCMPBean.jar to point to the new container id, you
 will have big problems!
     
-    h1. Container types
+# Container types
     
     You can declare as many containers as you want. The available container
 types are:

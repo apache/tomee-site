@@ -70,11 +70,11 @@ subclass from WebAdminBean and include it in your ejb-jar.xml file as such:
 link that causes the EJB code to be execute. Very simple and makes it
 possible to package administrative components with your EJB applications.
     
-    h1. WebAdmin Plugins
+# WebAdmin Plugins
     
     Here is a project that already takes advantage of the new feature. [BeanGen|http://beangen.sourceforge.net]
     
-    h1. Developers guide
+# Developers guide
     Below is David Blevins' email on how webadmin worked. Please have a look at
 the text below before you start working on porting the existing WebAdmin to
 version 3.

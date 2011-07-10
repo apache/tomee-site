@@ -41,7 +41,7 @@ database like Derby, so it is usable in any application regardless if that
 application is run via Maven, Ant, Intellij, Eclipse, NetBeans, JUnit,
 TestNG, etc.
 
-h3. Can I start and stop OpenEJB from an IDE? If yes, which IDE is
+### Can I start and stop OpenEJB from an IDE? If yes, which IDE is
 supported by OpenEJB?
 
 The short answer is yes.  The basic approach for all embedding scenarios is
@@ -54,7 +54,7 @@ embed openejb in your application and IDE.  See [Application discovery via the c
  for various ways to have your applications discovered. 
 
 
-h3.  During embedded testing, how can I externalize all my DataSource
+###  During embedded testing, how can I externalize all my DataSource
 configuration? 
 
 Create an openejb.xml file in any directory that gets added to your test

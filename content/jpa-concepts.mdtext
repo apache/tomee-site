@@ -173,7 +173,7 @@ entityManager.getTransaction();
 }
 
     
-    h1.  Valid TRANSACTION Unit usage
+#  Valid TRANSACTION Unit usage
     
     EJBs can use TRANSACTION persistence units through the EntityManager as
 follows:

@@ -58,9 +58,9 @@ following xml.
 
     
     
-    h1. Lookup only
+# Lookup only
     
-    h2.  Via annotation
+##  Via annotation
     
     {code:title=Usable by EJB, Interceptor, Servlet, Filter, or Listener}
     package org.superbiz;

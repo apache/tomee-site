@@ -22,7 +22,7 @@ as it allows OpenEJB to find your application in the classpath without the
 need for you to specify any path information which tends to complicate
 builds.
     
-    h1. Including/Excluding paths (advanced)
+# Including/Excluding paths (advanced)
     
     If you do not like the idea of having the ejb-jar.xml in your app or an
 openejb.xml, we can search the classpath for annotated beans (@Stateless,
@@ -74,7 +74,7 @@ like to use these settings to also filter out jars that do contain
 descriptors, set the *openejb.deployments.classpath.filter.descriptors*
 property to _true_.  The default is _false_.
     
-    h1. Troubleshooting
+# Troubleshooting
     
     If you're having trouble determining if the META-INF/ejb-jar.xml file for
 your ejb module is in the classpath, a little debug code like this in your

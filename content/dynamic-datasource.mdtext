@@ -187,7 +187,7 @@ class-name="implementation class">
       </ServiceProvider>
     </ServiceJar>{code}
     
-    h2. openejb.xml
+## openejb.xml
     
     In the openejb.xml file, you have to declare your dynamic database and in
 our example it needs the proxied datasources too:

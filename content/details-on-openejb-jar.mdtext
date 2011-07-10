@@ -59,7 +59,7 @@ client's JNDI namespace. The *container-id* is the name of the container in
 your openejb.conf file that you would like the bean to run in. There MUST
 be one *ejb-deployment* element for each EJB in your jar.
     
-    h1. What if my bean uses a JDBC datasource?
+# What if my bean uses a JDBC datasource?
     
     Then you simply add a <resource-link> element to your <ejb-deployment>
 element like this
