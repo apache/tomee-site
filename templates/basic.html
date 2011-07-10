@@ -44,7 +44,7 @@
         <TD class="Col2">&nbsp;</TD>
         <TD class="Col3" id="breadcrumbs">
           <!-- $TOP_NAV_BAR -->
-          {{ breadcrumbs|safe }}
+          <A href="" title="Index">Home</A> | <A href="news.html" title="News">News</A> | <A href="faq.html" title="FAQ">FAQ</A> | <A href="download.html" title="Download">Download</A> | <A href="mailing-lists.html" title="Mailing Lists">Lists</A> | <A href="http://issues.apache.org/jira/browse/OPENEJB" class="external-link" rel="nofollow">Issues</A>
         </TD>
         <TD class="Col4"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
         <TD class="Col5">&nbsp;</TD>
@@ -130,7 +130,7 @@
             <TR>
               <TD  id="page_title">
                 <!-- $TITLE -->
-                $title
+                {% block title %}{{ headers.title }}{% endblock %}
               </TD>
 
               <TD align="right">
