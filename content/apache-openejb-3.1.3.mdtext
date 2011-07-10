@@ -124,13 +124,13 @@ Linux (JDK 1.6) </th><th> Mac OSX (JDK 1.5) </th><th> Mac OSX (JDK 1.6) </th></t
 <a name="ApacheOpenEJB3.1.3-Improvements"></a>
 ### Improvements
 
-  h5. Upgrades
+#### Upgrades
   * [OPENEJB-1227](https://issues.apache.org/jira/browse/OPENEJB-1227)
  Support for ActiveMQ 5
   * [OPENEJB-977](https://issues.apache.org/jira/browse/OPENEJB-977)
   Upgrade to CXF 2.2.10
 
-  h5. Client-Server & Failover
+#### Client-Server & Failover
   * [OPENEJB-1293](https://issues.apache.org/jira/browse/OPENEJB-1293)
  Conditional Client Failover based on container or bean thrown Exception
 types
@@ -153,7 +153,7 @@ types
  Client connection pool timeouts events catchable as
 ConnectionPoolTimeoutException
 
-  h5. Testing
+#### Testing
   * [OPENEJB-1240](https://issues.apache.org/jira/browse/OPENEJB-1240)
  @WebServiceRef support for @LocalClient
   * [OPENEJB-1130](https://issues.apache.org/jira/browse/OPENEJB-1130)
@@ -181,7 +181,7 @@ files
  Validation: @Resource UserTransaction injection mistakenly used on bean
 with Container-Managed Transactions
 
-  h5. Misc
+#### Misc
   * [OPENEJB-1255](https://issues.apache.org/jira/browse/OPENEJB-1255)
  Time-based configuration options can now be additive, as in "1 hour, 27
 minutes and 34 seconds"
