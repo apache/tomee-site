@@ -1,0 +1,13 @@
+Title: OpenEJB 1.0 Test Matrix
+
+<table>
+<tr><th> </th><th> Windows XP (JDK 1.4) </th><th> Windows XP (JDK 1.5) </th><th> Linux (JDK 1.4) </th><th>
+Linux (JDK 1.5) </th><th> Mac OSX (JDK 1.4) </th><th> Mac OSX (JDK 1.5) </th></tr>
+<tr><td>Embedded</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Standalone</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Tomcat 4.1.x (Global Mode)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Tomcat 4.1.x (Webapp Mode)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Tomcat 5.0.x (Global Mode)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Tomcat 5.0.x (Webapp Mode)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Tomcat 5.5.x (Global Mode)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>
+<tr><td> Tomcat 5.5.x (Webapp Mode)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td><td>(/)</td></tr>

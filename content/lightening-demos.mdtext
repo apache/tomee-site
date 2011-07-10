@@ -1,0 +1,53 @@
+Title: Lightening Demos
+<a name="LighteningDemos-LighteningDemosDetails"></a>
+### Lightening Demos Details
+
+<table>
+<tr><th> Demo Name					  </th><th> Description </th><th> Sponsor
+     </th><th> Links/Comments			  </th></tr>
+<tr><td> TestCase Injection				  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=g5l14g9rbcm.html)
+, [Vimeo </td><td> http://vimeo.com/16876983]
+ </td></tr>
+<tr><td> Simple @WebService				  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=zcsnhvloxjc.html)
+, [Vimeo </td><td> http://vimeo.com/16876894]
+ </td></tr>
+<tr><td> Simple @Stateless bean			  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=alx2jta96xu.html)
+, [Vimeo </td><td> http://vimeo.com/16876787]
+ </td></tr>
+<tr><td> Simple @Stateful bean 			  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=9jqxbfzswoq.html)
+, [Vimeo </td><td> http://vimeo.com/16876733]
+ </td></tr>
+<tr><td> Simple @MessageDriven bean			  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=hmxfxmdlcjq.html)
+, [Vimeo </td><td> http://vimeo.com/16876667]
+ </td></tr>
+<tr><td> EntityManager injection and usage		  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=s4uiioaehgq.html)
+, [Vimeo </td><td> http://vimeo.com/16876564]
+ </td></tr>
+<tr><td> DataSource injection and usage		  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=g3liplegdjk.html)
+, [Vimeo </td><td> http://vimeo.com/16876492]
+ </td></tr>
+<tr><td> Alternate Descriptors 			  </td><td>		 </td><td> David
+Blevins </td><td> [Youtube ](-http://www.youtube.com/watch?v=r1ldc40esug.html)
+, [Vimeo </td><td> http://vimeo.com/16876426]
+ </td></tr>
+<tr><td> Getting started with the OpenEJB Eclipse Plugin </td><td>		 </td><td> David
+Blevins </td><td> [Vimeo ](-http://vimeo.com/7393498.html)
+  </td></tr>
+<tr><td> EJB Unit Testing with Eclipse and OpenEJB	  </td><td>		 </td><td> David
+Blevins </td><td> [Vimeo ](-http://vimeo.com/6149008.html)
+  </td></tr>
+<tr><td> ScreenFlow720 				  </td><td>		 </td><td> David
+Blevins </td><td> [Vimeo ](-http://vimeo.com/16872034.html)
+ </td></tr>
+</table>
+
+
+*NOTE: For more details about the idea behind Lightening Demos, please read [this ](-http://markmail.org/message/5jq5xun44kt7tcni.html)
+ e-mail thread.*

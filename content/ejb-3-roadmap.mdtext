@@ -1,0 +1,92 @@
+Title: EJB 3 RoadMap
+{swizzlejira}
+1. set( $jira =
+$rss.fetch("http://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?&pid=12310530&component=12311366")
+)
+1. set( $axis =
+$rss.fetch("http://issues.apache.org/jira/si/jira.issueviews:issue-xml/OPENEJB-114/OPENEJB-114.xml")
+)
+1. set( $corba =
+$rss.fetch("http://issues.apache.org/jira/si/jira.issueviews:issue-xml/OPENEJB-113/OPENEJB-113.xml")
+)
+1. set( $geronimo =
+$rss.fetch("http://issues.apache.org/jira/si/jira.issueviews:issue-xml/OPENEJB-524/OPENEJB-524.xml")
+)
+1. set( $issues = $jira.fillSubTasks() )
+
+<a name="EJB3RoadMap-EJB3.0RoadMap"></a>
+# EJB 3.0 Road Map
+
+<a name="EJB3RoadMap-SimplifiedLifecycle"></a>
+##  Simplified Lifecycle
+1. set( $lifecycle = $jira.getIssue("OPENEJB-76").subTasks)
+1. set( $lifecycle = $lifecycle.union($jira.getIssue("OPENEJB-77").subTasks)
+)
+{swizzlejiraissues:issues=$as.param($lifecycle)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-DependencyInjection"></a>
+##  Dependency Injection
+1. set( $dependencyInjection = $jira.getIssue("OPENEJB-98").subTasks) 
+{swizzlejiraissues:issues=$as.param($dependencyInjection)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-BusinessInterfaces"></a>
+##  Business Interfaces
+1. set( $businessInterfaces = $jira.getIssue("OPENEJB-90").subTasks) 
+1. set( $businessInterfaces =
+$businessInterfaces.union($jira.getIssue("OPENEJB-406")) )
+{swizzlejiraissues:issues=$as.param($businessInterfaces)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-EJB3.0<->EJB2.1Compatability"></a>
+##  EJB 3.0 <-> EJB 2.1 Compatability
+1. set( $ejb2compat = $jira.getIssue("OPENEJB-89").subTasks) 
+{swizzlejiraissues:issues=$as.param($ejb2compat)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-Annotations"></a>
+##  Annotations
+1. set( $annotations = $jira.getIssue("OPENEJB-216").subTasks)
+{swizzlejiraissues:issues=$as.param($annotations)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-JNDIENC"></a>
+##  JNDI ENC
+1. set( $jndi = $jira.getIssue("OPENEJB-370").subTasks)
+{swizzlejiraissues:issues=$as.param($jndi)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-Interceptors"></a>
+##  Interceptors
+1. set( $interceptors = $jira.getIssue("OPENEJB-79").subTasks)
+1. set( $interceptors = $interceptors.union($jira.getIssue("OPENEJB-78")) )
+1. set( $interceptors = $interceptors.union($jira.getIssue("OPENEJB-80")) )
+{swizzlejiraissues:issues=$as.param($interceptors)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-Integration"></a>
+##  Integration
+1. set( $integration = $axis.issues )
+1. set( $integration = $integration.union($corba.issues) )
+1. set( $integration = $integration.union($geronimo.issues) )
+{swizzlejiraissues:issues=$as.param($integration)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-CMP2.xviaJPA"></a>
+## CMP 2.x via JPA
+1. set( $cmp =
+$rss.fetch("http://issues.apache.org/jira/si/jira.issueviews:issue-xml/OPENEJB-123/OPENEJB-123.xml")
+)
+1. set( $void = $cmp.fillSubTasks() )
+1. set( $cmp = $cmp.getIssue("OPENEJB-123") )
+{swizzlejiraissues:issues=$as.param($cmp.subTasks)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-Validation"></a>
+##  Validation
+1. set( $validation = $jira.getIssue("OPENEJB-453").subTasks)
+{swizzlejiraissues:issues=$as.param($validation)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-ComplianceTests"></a>
+##  Compliance Tests
+1. set( $itests = $jira.getIssue("OPENEJB-142").subTasks)
+{swizzlejiraissues:issues=$as.param($itests)|columns=summary;assignee;priority;status|style=progress}
+
+<a name="EJB3RoadMap-Examples"></a>
+##  Examples
+1. set( $examples = $jira.getIssue("OPENEJB-342").subTasks)
+{swizzlejiraissues:issues=$as.param($examples)|columns=summary;assignee;priority;status|style=progress}
+
+{swizzlejira}

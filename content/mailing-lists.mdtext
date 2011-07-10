@@ -1,0 +1,74 @@
+Title: Mailing Lists
+<a name="MailingLists-UserMailingList"></a>
+# User Mailing List
+
+Where the general OpenEJB community goes to ask questions, make
+suggestions, chat  with other users and developers, and keep a finger on
+the pulse of the project.
+
+Medium volume mailing list, dedicated to the  OpenEJB community.
+
+* [users@openejb.apache.org](mailto:users@openejb.apache.org.html)
+* [Subscribe](mailto:users-subscribe@openejb.apache.org.html)
+* [Unsubscribe](mailto:users-unsubscribe@openejb.apache.org.html)
+
+OpenEJB Users Online Archives/Forums:
+<table>
+<tr><th> Search </th><th> Post </th><th> Depth </th><th> Archive URL </th></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2002 </td><td>  http://openejb.markmail.org/search/?q=type:users </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2002 </td><td>  http://marc.info/?l=openejb-user </td></tr>
+<tr><td> (x) </td><td> (x) </td><td> 2006 </td><td> 
+http://mail-archives.apache.org/mod_mbox/openejb-users/ </td></tr>
+<tr><td> (/) </td><td> (/) </td><td> 2006 </td><td>  http://n4.nabble.com/OpenEJB-User-f979441.html </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2007 </td><td>  http://www.mail-archive.com/users@openejb.apache.org
+</td></tr>
+</table>
+
+<a name="MailingLists-DeveloperMailingList"></a>
+# Developer Mailing List
+
+If you're a developer or contributor on OpenEJB, this is the place for you.
+Join in on the develpment and planning discussions. Get the scoop on the
+changes that take place in OpenEJB as our team is hard at work in
+developing and refining the OpenEJB container system.
+
+* [dev@openejb.apache.org](mailto:dev@openejb.apache.org.html)
+* [Subscribe](mailto:dev-subscribe@openejb.apache.org.html)
+* [Unsubscribe](mailto:dev-unsubscribe@openejb.apache.org.html)
+
+OpenEJB Developers Online Archives/Forums:
+<table>
+<tr><th> Search </th><th> Post </th><th> Depth </th><th> Archive URL </th></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2002 </td><td> 
+http://openejb.markmail.org/search/?q=type:development </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2002 </td><td>  http://marc.info/?l=openejb-development </td></tr>
+<tr><td> (x) </td><td> (x) </td><td> 2006 </td><td>  http://mail-archives.apache.org/mod_mbox/openejb-dev/
+</td></tr>
+<tr><td> (/) </td><td> (/) </td><td> 2006 </td><td>  http://n4.nabble.com/OpenEJB-Dev-f982480.html </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2007 </td><td>  http://www.mail-archive.com/dev@openejb.apache.org </td></tr>
+</table>
+
+
+<a name="MailingLists-CommitMailingList"></a>
+# Commit Mailing List
+
+Keep tabs on all the changes to our svn. We have mixed a few of the popular
+perl scripts for cvs email notification as well as added a few features
+that are all new. This new list provides you with as-it-happens information
+regarding OpenEJB development.
+
+* [commits@openejb.apache.org](mailto:commits@openejb.apache.org.html)
+* [Subscribe](mailto:commits-subscribe@openejb.apache.org.html)
+* [Unsubscribe](mailto:commits-unsubscribe@openejb.apache.org.html)
+
+OpenEJB Commits Online Archives/Forums:
+<table>
+<tr><th> Search </th><th> Post </th><th> Depth </th><th> Archive URL </th></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2002 </td><td>  http://openejb.markmail.org/search/?q=type:checkins </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2004 </td><td>  http://marc.info/?l=openejb-cvs </td></tr>
+<tr><td> (x) </td><td> (x) </td><td> 2006 </td><td> 
+http://mail-archives.apache.org/mod_mbox/openejb-commits/ </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2007 </td><td> 
+http://www.mail-archive.com/commits@openejb.apache.org </td></tr>
+</table>
+

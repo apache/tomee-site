@@ -1,5 +1,5 @@
-Title: Index
-<a name="Index-WelcometoApacheOpenEJB!"></a>
+Title: New Index Text
+<a name="NewIndexText-WelcometoApacheOpenEJB!"></a>
 # Welcome to Apache OpenEJB! 
 
 Apache OpenEJB is an embeddable and lightweight EJB 3.0 implementation that
@@ -8,7 +8,7 @@ Eclipse, IntelliJ, Maven, Ant, and any IDE or application. OpenEJB is
 included in Apache Geronimo, IBM WebSphere Application Server CE, and
 Apple's WebObjects. 
 
-<a name="Index-Majorfeatures"></a>
+<a name="NewIndexText-Majorfeatures"></a>
 ## Major features
  - Supports EJB 3.0, 2.1, 2.0, 1.1 in all modes; embedded, standalone or
 otherwise.
@@ -27,11 +27,7 @@ macro and micro levels and imitate the format of other vendors.
 Intellij or NetBeans with no plugins required.
  - Usable in ordinary JUnit or other style test cases without complicated
 setup or external processes.
- - Validates applications entirely and reports all failures at once, with
+ - Validates applications entirely and reports all failures at once with,
 three selectable levels of detail, avoiding several hours worth of "fix,
 recompile, redeploy, fail, repeat" cycles. 
-
-<a name="Index-News"></a>
-# News
-{blogrss:https://blogs.apache.org/openejb/feed/entries/atom}
 
