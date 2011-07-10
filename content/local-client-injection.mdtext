@@ -81,6 +81,6 @@ If you encounter this try setting this openejb-specific boot flag so that
 annotations will be treated specially and always loaded by the parent
 classloader
 
-{quote}openejb.tempclassloader.skip=annotations{quote}
+`openejb.tempclassloader.skip=annotations`
 
 
