@@ -1,87 +1,205 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+  <HEAD>
+    <!-- $PAGETITLE -->
     <title>{% block title %}{{ headers.title }}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="http://incubator.apache.org/lucy/css/lucy.css">
-  </head>
+    <LINK href="http://openejb.apache.org/all.css" rel="stylesheet" type="text/css">
+    <!--[if IE]><link rel="stylesheet" type="text/css" media="screen, projection" href="openejb.apache.org/ie.css"><![endif]-->
 
-  <body>
+    <LINK rel="SHORTCUT ICON" href="http://openejb.apache.org/images/favicon.ico">
+    <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </HEAD>
+  <BODY>
 
-    <div id="lucy-rigid_wrapper">
+    <!-- Delay the loading of the external javascript file needed for labels (as it takes too long to load and visibly holds loading of the page body) -->
+    <!-- To do this without javascript errors over undefined functions, we need to declare stubs here (that are overrided later by the proper implementations) -->
+    <SCRIPT language="JavaScript" type="text/javascript">
+      function doAddLabel(hideTextfieldAfterAddParam)
+      {
+      // stub
+      }
 
-      <div id="lucy-top" class="container_16 lucy-white_box_3d">
+      function onAddLabel()
+      {
+      // stub
+      }
 
-        <div id="lucy-logo_box" class="grid_8">
-          <a href="/OpenEJB/"><img src="http://openejb.apache.org/images/logo_openejb.gif" alt="Apache OpenEJB™"></a>
-        </div> <!-- lucy-logo_box -->
+      function showLabelsInput()
+      {
+      // stub
+      }
+    </SCRIPT>
 
-        <div #id="lucy-top_nav_box" class="grid_8">
-          <div id="lucy-top_nav_bar" class="container_8">
-            <ul>
-              <li><a href="http://www.apache.org/" title="Apache Software Foundation">Apache Software Foundation</a></li>
-              <li><a href="http://www.apache.org/licenses/" title="License">License</a></li>
-              <li><a href="http://www.apache.org/foundation/sponsorship.html" title="Sponsorship">Sponsorship</a></li>
-              <li><a href="http://www.apache.org/foundation/thanks.html" title="Thanks">Thanks</a></li>
-              <li><a href="http://www.apache.org/security/ " title="Security">Security</a></li>
-            </ul>
-          </div> <!-- lucy-top_nav_bar -->
-          <p>{{ breadcrumbs|safe }}</p>
-          <form name="lucy-top_search_box" id="lucy-top_search_box" action="http://www.google.com/search" method="get">
-            <input value="*.apache.org" name="sitesearch" type="hidden"/>
-            <input type="text" name="q" id="query" style="width:85%">
-            <input type="submit" id="submit" value="Search">
-          </form>
-        </div> <!-- lucy-top_nav_box -->
+    <A name="top"></A>
+    <TABLE class="frameTable" cellpadding="0" cellspacing="0" border="0">
+      <TR class="Row1">
+        <TD class="Col1"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col2"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col3"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col4"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col5"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+      </TR>
+      <TR class="Row2">
+        <TD class="Col1"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col2">&nbsp;</TD>
+        <TD class="Col3" id="breadcrumbs">
+          <!-- $TOP_NAV_BAR -->
+          {{ breadcrumbs|safe }}
+        </TD>
+        <TD class="Col4"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col5">&nbsp;</TD>
+      </TR>
+      <TR class="Row3">
+        <TD class="Col1"><IMG alt="" class="Row3Img" id="thinLine" src="http://openejb.apache.org/images/line_sm.gif"></TD>
+        <TD class="Col2"><IMG alt="" class="Row3Img" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col3"><IMG alt="" class="Row3Img" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col4"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col5"><IMG alt="" class="Row3Img" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+      </TR>
+      <TR class="Row4">
+        <TD class="Col1">
+          <SPAN id="Navigation">
 
-        <div class="clear"></div>
+            <H3><A name="Navigation-Overview"></A>Overview</H3>
 
-      </div> <!-- lucy-top -->
+            <UL class="alternate" type="square">
+            <LI><A href="" title="Index">Home</A></LI>
+            <LI><A href="news.html" title="News">News</A></LI>
+            <LI><A href="faq.html" title="FAQ">FAQ</A></LI>
+            <LI><A href="download.html" title="Download">Download</A></LI>
+            <LI><A href="../OPENEJBx30/index.html" title="Index">Documentation</A></LI>
+            <LI><A href="examples.html" title="Examples">Examples</A></LI>
+            <LI><A href="http://cwiki.apache.org/confluence/display/OPENEJB/Lightening%20Demos" class="external-link" rel="nofollow">Lightning Demos</A></LI>
+            <LI><A href="mailing-lists.html" title="Mailing Lists">Mailing Lists</A></LI>
+            <LI><A href="source-code.html" title="Source Code">Source Code</A></LI>
+            <LI><A href="http://blogs.apache.org/openejb" class="external-link" rel="nofollow">Project Blog</A></LI>
+            </UL>
 
-      <div id="lucy-main_content" class="container_16 lucy-white_box_3d">
 
-        <div class="grid_4" id="lucy-left_nav_box">
-          <h6>About</h6>
-            <ul>
-              <li><a href="/lucy/">Welcome</a></li>
-              <li><a href="/lucy/faq.html">FAQ</a></li>
-              <li><a href="/lucy/people.html">People</a></li>
-            </ul>
-          <h6>Resources</h6>
-            <ul>
-              <li><a href="/lucy/download.html">Download</a></li>
-              <li><a href="/lucy/mailing_lists.html">Mailing Lists</a></li>
-              <li><a href="/lucy/docs/perl/">Documentation</a></li>
-              <li><a href="http://wiki.apache.org/lucy/">Wiki</a></li>
-              <li><a href="https://issues.apache.org/jira/browse/LUCY">Issue Tracker</a></li>
-              <li><a href="/lucy/version_control.html">Version Control</a></li>
-            </ul>
-          <h6>Related Projects</h6>
-            <ul>
-              <li><a href="http://lucene.apache.org/java/">Lucene</a></li>
-              <li><a href="http://lucene.apache.org/solr/">Solr</a></li>
-              <li><a href="http://incubator.apache.org/lucene.net/">Lucene.NET</a></li>
-              <li><a href="http://lucene.apache.org/pylucene/">PyLucene</a></li>
-              <li><a href="http://lucene.apache.org/openrelevance/">Open Relevance</a></li>
-            </ul>
-        </div> <!-- lucy-left_nav_box -->
+            <H3><A name="Navigation-Servers"></A>Servers</H3>
 
-        <div id="lucy-main_content_box" class="grid_9">
+            <UL class="alternate" type="square">
+            <LI><A href="local-server.html" title="Local Server">Local</A></LI>
+            <LI><A href="remote-server.html" title="Remote Server">Remote</A></LI>
+            </UL>
+
+
+            <H3><A name="Navigation-Integrations"></A>Integrations</H3>
+
+            <UL class="alternate" type="square">
+            <LI><A href="../OPENEJBx30/tomcat.html" title="Tomcat">Tomcat</A></LI>
+            <LI><A href="geronimo.html" title="Geronimo">Geronimo</A></LI>
+            <LI><A href="webobjects.html" title="WebObjects">WebObjects</A></LI>
+            </UL>
+
+
+            <H3><A name="Navigation-Community"></A>Community</H3>
+
+            <UL class="alternate" type="square">
+            <LI><A href="team.html" title="Team">Team</A></LI>
+            <LI><A href="articles.html" title="Articles">Articles</A></LI>
+            <LI><A href="http://webchat.freenode.net/?channels=openejb" class="external-link" rel="nofollow">IRC</A></LI>
+            </UL>
+
+
+            <H3><A name="Navigation-RelatedProjects"></A>Related Projects</H3>
+
+            <UL class="alternate" type="square">
+            <LI><A href="http://activemq.apache.org/" class="external-link" rel="nofollow">ActiveMQ</A></LI>
+            <LI><A href="http://openjpa.apache.org/" class="external-link" rel="nofollow">OpenJPA</A></LI>
+            <LI><A href="http://cxf.apache.org/" class="external-link" rel="nofollow">CXF</A></LI>
+            </UL>
+
+          </SPAN>
+        </TD>
+        <TD class="Col2">&nbsp;</TD>
+        <TD class="Col3">
+          <TABLE id="PageHeader" border="0" width="100%">
+            <TR>
+              <TD>
+                <A href="http://openejb.org/">
+                  <IMG hspace="0" src="http://openejb.apache.org/images/logo_openejb.gif" vspace="0">
+                </A>
+              </TD>
+              <TD align="right">
+                <A href="http://www.apache.org/">
+                  <IMG src="http://www.apache.org/images/asf-logo.gif" width="258" height="66">
+                </A>
+              </TD>
+            </TR>
+            <TR>
+              <TD  id="page_title">
+                <!-- $TITLE -->
+                $title
+              </TD>
+
+              <TD align="right">
+                <br><br>
+                <!-- Google CSE Search Box Begins  -->
+                <FORM id="searchbox_010475492895890475512:_t4iqjrgx90" action="http://www.google.com/cse">
+                  <INPUT type="hidden" name="cx" value="010475492895890475512:_t4iqjrgx90">
+                  <INPUT type="hidden" name="cof" value="FORID:0">
+                  <INPUT name="q" type="text" size="25">
+                  <INPUT type="submit" name="sa" value="Search">
+                </FORM>
+                <SCRIPT type="text/javascript"
+                        src="http://www.google.com/coop/cse/brand?form=searchbox_010475492895890475512:_t4iqjrgx90"></SCRIPT>
+                <!-- Google CSE Search Box Ends -->
+
+              </TD>
+            </TR>
+          </TABLE>
+          <P>
+            <!-- $BODY -->
+            <DIV id="PageContent">
           {{ content|markdown }}
-        </div> <!-- lucy-main_content_box --> 
-        <div class="clear"></div>
+            </DIV>
+          </P>
+        </TD>
+        <TD class="Col4"><IMG src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col5">
+        </TD>
+      </TR>
+      <TR  class="Row5">
+        <TD class="Col1">&nbsp;</TD>
+        <TD class="Col2">&nbsp;</TD>
+        <TD class="Col3">
+          <br>
+          <br>
+          <IMG width="100%" height="1" src="http://openejb.apache.org/images/line_light.gif">
+          <table width="100%">
+            <tr>
+              <td>
+                <SPAN class="bodyGrey">
+                  <SMALL>
+                    <NOTICE><!-- $FOOTER -->
+                      Apache OpenEJB is an project of The Apache Software Foundation (ASF)
+                    </NOTICE>
+                  </SMALL>
+                </SPAN>
+              </td>
+            </tr>
+          </table>
+          <br>
+        </TD>
+        <TD class="Col4"><IMG src="http://openejb.apache.org/images/dotTrans.gif"></TD>
+        <TD class="Col5">&nbsp;</TD>
+      </TR>
+    </TABLE>
 
-      </div> <!-- lucy-main_content -->
+    <!-- Needed for composition plugin -->
+    <!-- delay the loading of large javascript files to the end so that they don't interfere with the loading of page content -->
+    <SPAN style="display: none">
+      <SCRIPT type="text/javascript" language="JavaScript"
+              src="http://cwiki.apache.org/confluence/labels-javascript"></SCRIPT>
 
-      <div id="lucy-copyright" class="container_16">
-        <p>Copyright &#169; 2010-2011 The Apache Software Foundation, Licensed under the 
-           <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
-           <br/>
-          
-        </p>
-      </div> <!-- lucy-copyright -->
+      <SCRIPT src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+      </SCRIPT>
+      <SCRIPT type="text/javascript">
+        _uacct = "UA-2717626-1";
+        urchinTracker();
+      </SCRIPT>
+    </SPAN>
 
-    </div> <!-- lucy-rigid_wrapper -->
-
-  </body>
-</html>
+  </BODY>
+</HTML>
