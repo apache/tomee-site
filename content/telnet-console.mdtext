@@ -6,9 +6,7 @@ Title: Telnet Console
 
 To use OpenEJB's Telnet Console, simply boot your server normally.
 
-{quote}
-$ ./bin/openejb start
-{quote}
+> $ ./bin/openejb start
 
 
     OPENEJB_HOME=/Users/dblevins/Desktop/openejb-1.0
@@ -32,9 +30,7 @@ $ ./bin/openejb start
 
 Then in another shell telnet in 
 
-{quote}
-$ telnet localhost 4202
-{quote}
+> $ telnet localhost 4202
 
     Trying ::1...
     Connected to localhost.
@@ -108,9 +104,7 @@ in xinet.d style config files.	The telnet shell is controlled via the
 $OPENEJB_HOME/conf/telnet.properties file.  This file is created for you
 automatically after the first time OpenEJB boots.
 
-{quote}
-$ cat conf/telnet.properties 
-{quote}
+> $ cat conf/telnet.properties 
 
         server	= org.openejb.server.telnet.TelnetServer
         bind	= 127.0.0.1

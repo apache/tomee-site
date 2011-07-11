@@ -46,16 +46,12 @@ You really only need to know two commands to use OpenEJB, [deploy](openejbx30:de
 
 For help information and command options, try this:
 
-{quote}
-openejb deploy --help
-openejb start --help
-{quote}
+> openejb deploy --help
+> openejb start --help
 
 For examples on using the start command and options, try this:
 
-{quote}
-openejb start --examples
-{quote}
+> openejb start --examples
 
 That's it!
 

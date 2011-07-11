@@ -1,7 +1,5 @@
 Title: Tips and Suggestions
-{quote}
-
-{quote}
+> 
 
 <a name="TipsandSuggestions-Usefulinformationforcontributors"></a>
 ## Useful information for contributors
@@ -112,11 +110,9 @@ commit onwards.
 <a name="TipsandSuggestions-*Contributedby*:DavidBlevins"></a>
 #### *Contributed by*: David Blevins
 
-{quote}
-If you put "\[jira\](jira\.html)
- OPENEJB-XXX" anywhere in your subject line and cc jira@apache.org our
-email gets added as a comment with all '> quoted' text stripped out.
-{quote}
+> If you put "\[jira\](jira\.html)
+>  OPENEJB-XXX" anywhere in your subject line and cc jira@apache.org our
+> email gets added as a comment with all '> quoted' text stripped out.
 PS: XXX is the JIRA issue number
 
 <a name="TipsandSuggestions-Details"></a>
@@ -368,19 +364,17 @@ separating commands with ';' as if one of the commands fail, the remaining
 commands will not be executed.
 
 *Suggestion from Dain*
-{quote}
-&nbsp;I suggest that you always do a full build (with tests) before
-committing.  I do this even if the change is small because I have been
-burned too many times by trivial changes. At the very least I suggest you
-run
-
-    mvn -Dtest=none clean install
-
-Using \-Dtest=none instead of \-Dmaven.test.skip=true causes maven to
-compile the test classes so you know that your change doesn't have compile
-errors.
-If you want to be thorough, run with \-Dassemble.
-{quote}
+> &nbsp;I suggest that you always do a full build (with tests) before
+> committing.  I do this even if the change is small because I have been
+> burned too many times by trivial changes. At the very least I suggest you
+> run
+> 
+>     mvn -Dtest=none clean install
+> 
+> Using \-Dtest=none instead of \-Dmaven.test.skip=true causes maven to
+> compile the test classes so you know that your change doesn't have compile
+> errors.
+> If you want to be thorough, run with \-Dassemble.
 
 <a name="TipsandSuggestions-JAXBUsage"></a>
 ### JAXB Usage

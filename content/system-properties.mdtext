@@ -55,10 +55,8 @@ the format:
 
 Could be overridden as follows via system properties on the command line: 
 
-{quote}
-./bin/openejb start -Dmysql.JdbcDriver=com.mysql.jdbc.Driver
--Dmysql.JdbcUrl=jdbc:mysql://localhost/test -Dmysql.UserName=test
-{quote}
+> ./bin/openejb start -Dmysql.JdbcDriver=com.mysql.jdbc.Driver
+> -Dmysql.JdbcUrl=jdbc:mysql://localhost/test -Dmysql.UserName=test
 
 <a name="SystemProperties-OverridingServerServices"></a>
 #  Overriding Server Services
@@ -93,6 +91,4 @@ of the following: bind, port, threads, disabled, only_from.
 So to set the address and port the ejbd service will bind to, simply
 specify this on the command line:
 
-{quote}
-./bin/openejb start -Dejbd.bind=192.168.1.12 -Dejbd.port=9988
-{quote}
+> ./bin/openejb start -Dejbd.bind=192.168.1.12 -Dejbd.port=9988

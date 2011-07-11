@@ -101,9 +101,7 @@ Running the example is fairly simple.  In the "lookup-of-ejbs" directory of
 the [examples zip](openejb:download.html)
 , just run:
 
-{quote}
-$ mvn clean install
-{quote}
+> $ mvn clean install
 
 Which should create output like the following.
 

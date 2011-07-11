@@ -14,22 +14,16 @@ Subversion client using the following URL [http://svn.apache.org/repos/asf/opene
 
 Performing the checkout from the command line using the subversion client
 is as easy as executing the following command:
-{quote}
-$ svn co [http://svn.apache.org/repos/asf/openejb/trunk/openejb3](http://svn.apache.org/repos/asf/openejb/trunk/openejb3)
-{quote}
+> $ svn co [http://svn.apache.org/repos/asf/openejb/trunk/openejb3](http://svn.apache.org/repos/asf/openejb/trunk/openejb3)
 
 If you are experiencing problems with errors like "400 Bad Request
 (http://svn.apache.org)", try using:
-{quote}
-$ svn co [https://svn.apache.org/repos/asf/openejb/trunk/openejb3](https://svn.apache.org/repos/asf/openejb/trunk/openejb3)
-{quote}
+> $ svn co [https://svn.apache.org/repos/asf/openejb/trunk/openejb3](https://svn.apache.org/repos/asf/openejb/trunk/openejb3)
 
 or alternatively with Apache Maven 2 or later:
-{quote}
-mvn scm:checkout
--DconnectionUrl=scm:svn:http://svn.apache.org/repos/asf/openejb/trunk/openejb3
--DcheckoutDirectory=openejb3
-{quote}
+> mvn scm:checkout
+> -DconnectionUrl=scm:svn:http://svn.apache.org/repos/asf/openejb/trunk/openejb3
+> -DcheckoutDirectory=openejb3
 
 It's not yet known how to see the progress of the checkout as mvn
 scm:checkout checks out the sources non-interactively. It's worth to know
@@ -53,15 +47,11 @@ All builders are available [from the page](http://ci.apache.org/builders)
 
 To build the code, you'll need to grab a copy of [Apache Maven](http://maven.apache.org)
  version 2.0.4 or later.  The standard build command is as follows:
-{quote}
-$ cd openejb3
-$ mvn -Dassemble clean install
-{quote}
+> $ cd openejb3
+> $ mvn -Dassemble clean install
 or alternatively when on Unix-like OSes
-{quote}
-$ cd openejb3
-$ mvn \-o \-Dmaven.\{test,itest\}.skip \-Dassemble clean install
-{quote}
+> $ cd openejb3
+> $ mvn \-o \-Dmaven.\{test,itest\}.skip \-Dassemble clean install
 Running with the *assemble* option turned on enables a profile that builds
 OpenEJB's assemblies (distros). They live in *assembly* directory. You can
 remove it from the command line if you're not interested in them - just

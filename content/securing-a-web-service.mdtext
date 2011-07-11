@@ -90,9 +90,7 @@ wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
 In order to recover WSS4J properties both for input and output, we use
 naming conventions.
 Each property is made of 
-{quote}
-*<wss4j>.<in|out>.<wss4j property name>=<wss4j property value>*
-{quote}
+> *<wss4j>.<in|out>.<wss4j property name>=<wss4j property value>*
 
 For example : *wss4j.in.action = UsernameToken*
 

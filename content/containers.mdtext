@@ -29,24 +29,22 @@ it and everything. There would be no other containers running in the server
 at all. If you telnet'd into the server and typed the 'system' command, you
 could see for yourself that there is nothing else in the system.
     
-    {quote}
-    dblevins@Miles /dev/OpenEJB
-    $ telnet localhost 4200
-    Trying 127.0.0.1...
-    Connected to Miles
-    Escape character is '^]
-'.
-    OpenEJB Remote Server Console
-    type 'help' for a list of commands
-    [openejb]
-$ system
-    Containers:
-     Default CMP Container
-    
-    Deployments:
-    [openejb]
-$
-    {quote}
+>     dblevins@Miles /dev/OpenEJB
+>     $ telnet localhost 4200
+>     Trying 127.0.0.1...
+>     Connected to Miles
+>     Escape character is '^]
+> '.
+>     OpenEJB Remote Server Console
+>     type 'help' for a list of commands
+>     [openejb]
+> $ system
+>     Containers:
+>      Default CMP Container
+>     
+>     Deployments:
+>     [openejb]
+> $
     
     You see that. No beans, no JDBC resources, nothing but one CMP container
 called "Default CMP Container".
@@ -69,26 +67,24 @@ If you were to deploy a CMP bean into this configuration, you would see "My
 PostgreSQL Container" in the list of usable containers, in fact, it would
 be the only container in the list.
 
-{quote}
-dblevins@Miles /dev/OpenEJB/openejb
-$ ./openejb.sh deploy -conf example_02.conf myCMPBean.jar
-...(skipping to step two)...
-
-==--- Step 2 ---==
-
-Please specify which container the bean will run in.
-Available containers are:
-
-Num	Type		ID
-
-1	CMP_ENTITY	My PostgreSQL Container
-
-Type the number of the container
--options to view the list again
-or -help for more information.
-
-Container:
-{quote}
+> dblevins@Miles /dev/OpenEJB/openejb
+> $ ./openejb.sh deploy -conf example_02.conf myCMPBean.jar
+> ...(skipping to step two)...
+> 
+> ==--- Step 2 ---==
+> 
+> Please specify which container the bean will run in.
+> Available containers are:
+> 
+> Num	Type		ID
+> 
+> 1	CMP_ENTITY	My PostgreSQL Container
+> 
+> Type the number of the container
+> -options to view the list again
+> or -help for more information.
+> 
+> Container:
 
 After deployment, you would end up with a configuration like this one
 
