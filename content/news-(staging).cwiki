@@ -1,3 +1,0 @@
-{info:title=Apache OpenEJB 3.1 Released}
-The Apache OpenEJB community is proud to release [OpenEJB 3.1].  This release contains significant enhancements, improvements, new functionality and allows developers to get early access to some key parts of EJB 3.1. In addition to the embeddable EJB container and Collapsed EAR (ejbs in .war files) functionality which have been long standing OpenEJB features, now slated for EJB 3.1, this release contains full support for the new EJB 3.1 [Singleton|OPENEJBx30:Singleton Example] Session bean type. The Singleton API adds some critical new functionality to EJB such as application startup/shutdown hooks and multi-threaded capabilities. Much of what Stateless beans are used for now can be replaced by a multi-threaded Singleton.
-{info}
