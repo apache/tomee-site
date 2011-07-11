@@ -112,12 +112,12 @@ a short while here:
   It is now possible to deploy and run EJB apps that are not  in a *.jar
 archive.  For example, for ejb app located at:
 
-    bq. /home/jsmith/myejbapp/META-INF/ejb-jar.xml
+    /home/jsmith/myejbapp/META-INF/ejb-jar.xml
 
   Simply add a Deployments declaration to the openejb.conf  like the
 following:
 
-    bq. <Deployment dir="/home/jsmith/myejbapp" />
+    <Deployment dir="/home/jsmith/myejbapp" />
 
 <a name="OpenEJB1.0-AutoDeployforSimpleApps"></a>
 ## Auto Deploy for Simple Apps

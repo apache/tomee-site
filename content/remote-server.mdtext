@@ -24,14 +24,14 @@ So, here it is in short.
 
 Deploy your bean with the Deploy Tool:
 
-bq. c:\openejb> openejb.bat deploy beans\myBean.jar
+    c:\openejb> openejb.bat deploy beans\myBean.jar
 
 See the [OPENEJBx30:Deploy Tool](openejbx30:deploy-tool.html)
  documentation for more details on deploying beans.
 
 Start the server:
 
-bq. c:\openejb> openejb.bat start -h 25.14.3.92 -p 4201
+    c:\openejb> openejb.bat start -h 25.14.3.92 -p 4201
 
 See the Remote Server command-line guide for more details on starting the
 Remote Server.
