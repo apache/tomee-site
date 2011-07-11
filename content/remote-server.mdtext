@@ -40,8 +40,7 @@ Create an initial context in your client as such:
 
 
     Properties p = new Properties();
-    p.put("java.naming.factory.initial",
-"org.apache.openejb.client.RemoteInitialContextFactory");
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
     p.put("java.naming.provider.url", "ejbd://25.14.3.92:4201");
     p.put("java.naming.security.principal", "myuser");
     p.put("java.naming.security.credentials", "mypass");

@@ -9,11 +9,9 @@ for you!
 
 <a name="TimeSaved-Calculator"></a>
 # Calculator
-{html}
-<script type="text/javascript"
-src="http://prototypejs.org/assets/2010/4/1/prototype.js"></script>
+<script type="text/javascript" src="http://prototypejs.org/assets/2010/4/1/prototype.js"></script>
 <script>
-  
+
   function calculate() {
     var developers = $("devs").getValue();
     var cycles = $("cycles").getValue();
@@ -21,116 +19,71 @@ src="http://prototypejs.org/assets/2010/4/1/prototype.js"></script>
 
     var individual_deployTime_openejb = $("time_openejb").getValue();
     var individual_deployTime_vendor = $("time_vendor").getValue();
-    var individual_deployTime_savings = individual_deployTime_vendor -
-individual_deployTime_openejb;
+    var individual_deployTime_savings = individual_deployTime_vendor - individual_deployTime_openejb;
 
-    var individual_deployTimePerHour_openejb = cycles *
-individual_deployTime_openejb / 8;
-    var individual_deployTimePerHour_vendor =  cycles *
-individual_deployTime_vendor / 8;
-    var individual_deployTimePerHour_savings =
-individual_deployTimePerHour_vendor - individual_deployTimePerHour_openejb;
+    var individual_deployTimePerHour_openejb = cycles * individual_deployTime_openejb / 8;
+    var individual_deployTimePerHour_vendor =  cycles * individual_deployTime_vendor / 8;
+    var individual_deployTimePerHour_savings = individual_deployTimePerHour_vendor - individual_deployTimePerHour_openejb;
 
-    var individual_deployTimePerWeek_openejb =
-individual_deployTimePerHour_openejb * 40;
-    var individual_deployTimePerWeek_vendor =
-individual_deployTimePerHour_vendor * 40;
-    var individual_deployTimePerWeek_savings =
-individual_deployTimePerWeek_vendor - individual_deployTimePerWeek_openejb;
+    var individual_deployTimePerWeek_openejb = individual_deployTimePerHour_openejb * 40;
+    var individual_deployTimePerWeek_vendor = individual_deployTimePerHour_vendor * 40;
+    var individual_deployTimePerWeek_savings = individual_deployTimePerWeek_vendor - individual_deployTimePerWeek_openejb;
 
-    var individual_deployTimePerMonth_openejb =
-individual_deployTimePerWeek_openejb * 4.33;
-    var individual_deployTimePerMonth_vendor =
-individual_deployTimePerWeek_vendor * 4.33;
-    var individual_deployTimePerMonth_savings =
-individual_deployTimePerMonth_vendor -
-individual_deployTimePerMonth_openejb;
+    var individual_deployTimePerMonth_openejb = individual_deployTimePerWeek_openejb * 4.33;
+    var individual_deployTimePerMonth_vendor = individual_deployTimePerWeek_vendor * 4.33;
+    var individual_deployTimePerMonth_savings = individual_deployTimePerMonth_vendor - individual_deployTimePerMonth_openejb;
 
-    var team_deployTime_openejb = developers *
-individual_deployTime_openejb;
+    var team_deployTime_openejb = developers * individual_deployTime_openejb;
     var team_deployTime_vendor = developers * individual_deployTime_vendor;
-    var team_deployTime_savings = developers *
-individual_deployTime_savings;
+    var team_deployTime_savings = developers * individual_deployTime_savings;
 
-    var team_deployTimePerHour_openejb = developers *
-individual_deployTimePerHour_openejb;
-    var team_deployTimePerHour_vendor = developers *
-individual_deployTimePerHour_vendor;
-    var team_deployTimePerHour_savings = developers *
-individual_deployTimePerHour_savings;
+    var team_deployTimePerHour_openejb = developers * individual_deployTimePerHour_openejb;
+    var team_deployTimePerHour_vendor = developers * individual_deployTimePerHour_vendor;
+    var team_deployTimePerHour_savings = developers * individual_deployTimePerHour_savings;
 
-    var team_deployTimePerWeek_openejb = developers *
-individual_deployTimePerWeek_openejb;
-    var team_deployTimePerWeek_vendor = developers *
-individual_deployTimePerWeek_vendor;
-    var team_deployTimePerWeek_savings = developers *
-individual_deployTimePerWeek_savings;
+    var team_deployTimePerWeek_openejb = developers * individual_deployTimePerWeek_openejb;
+    var team_deployTimePerWeek_vendor = developers * individual_deployTimePerWeek_vendor;
+    var team_deployTimePerWeek_savings = developers * individual_deployTimePerWeek_savings;
 
-    var team_deployTimePerMonth_openejb = developers *
-individual_deployTimePerMonth_openejb;
-    var team_deployTimePerMonth_vendor = developers *
-individual_deployTimePerMonth_vendor;
-    var team_deployTimePerMonth_savings = developers *
-individual_deployTimePerMonth_savings;
+    var team_deployTimePerMonth_openejb = developers * individual_deployTimePerMonth_openejb;
+    var team_deployTimePerMonth_vendor = developers * individual_deployTimePerMonth_vendor;
+    var team_deployTimePerMonth_savings = developers * individual_deployTimePerMonth_savings;
 
     var total_savings = team_deployTimePerWeek_savings * weeks;
-    
-    $("individual.deployTime.openejb").innerHTML =
-format(individual_deployTime_openejb);
-    $("individual.deployTime.vendor").innerHTML =
-format(individual_deployTime_vendor);
-    $("individual.deployTime.savings").innerHTML =
-format(individual_deployTime_savings);
 
-    $("individual.deployTimePerHour.openejb").innerHTML =
-format(individual_deployTimePerHour_openejb);
-    $("individual.deployTimePerHour.vendor").innerHTML =
-format(individual_deployTimePerHour_vendor);
-    $("individual.deployTimePerHour.savings").innerHTML =
-format(individual_deployTimePerHour_savings);
+    $("individual.deployTime.openejb").innerHTML = format(individual_deployTime_openejb);
+    $("individual.deployTime.vendor").innerHTML = format(individual_deployTime_vendor);
+    $("individual.deployTime.savings").innerHTML = format(individual_deployTime_savings);
 
-    $("individual.deployTimePerWeek.openejb").innerHTML =
-format(individual_deployTimePerWeek_openejb);
-    $("individual.deployTimePerWeek.vendor").innerHTML =
-format(individual_deployTimePerWeek_vendor);
-    $("individual.deployTimePerWeek.savings").innerHTML =
-format(individual_deployTimePerWeek_savings);
+    $("individual.deployTimePerHour.openejb").innerHTML = format(individual_deployTimePerHour_openejb);
+    $("individual.deployTimePerHour.vendor").innerHTML = format(individual_deployTimePerHour_vendor);
+    $("individual.deployTimePerHour.savings").innerHTML = format(individual_deployTimePerHour_savings);
 
-    $("individual.deployTimePerMonth.openejb").innerHTML =
-format(individual_deployTimePerMonth_openejb);
-    $("individual.deployTimePerMonth.vendor").innerHTML =
-format(individual_deployTimePerMonth_vendor);
-    $("individual.deployTimePerMonth.savings").innerHTML =
-format(individual_deployTimePerMonth_savings);
+    $("individual.deployTimePerWeek.openejb").innerHTML = format(individual_deployTimePerWeek_openejb);
+    $("individual.deployTimePerWeek.vendor").innerHTML = format(individual_deployTimePerWeek_vendor);
+    $("individual.deployTimePerWeek.savings").innerHTML = format(individual_deployTimePerWeek_savings);
 
-    $("team.deployTime.openejb").innerHTML =
-format(team_deployTime_openejb);
+    $("individual.deployTimePerMonth.openejb").innerHTML = format(individual_deployTimePerMonth_openejb);
+    $("individual.deployTimePerMonth.vendor").innerHTML = format(individual_deployTimePerMonth_vendor);
+    $("individual.deployTimePerMonth.savings").innerHTML = format(individual_deployTimePerMonth_savings);
+
+    $("team.deployTime.openejb").innerHTML = format(team_deployTime_openejb);
     $("team.deployTime.vendor").innerHTML = format(team_deployTime_vendor);
-    $("team.deployTime.savings").innerHTML =
-format(team_deployTime_savings);
-    $("team.deployTimePerHour.openejb").innerHTML =
-format(team_deployTimePerHour_openejb);
-    $("team.deployTimePerHour.vendor").innerHTML =
-format(team_deployTimePerHour_vendor);
-    $("team.deployTimePerHour.savings").innerHTML =
-format(team_deployTimePerHour_savings);
-    $("team.deployTimePerWeek.openejb").innerHTML =
-format(team_deployTimePerWeek_openejb);
-    $("team.deployTimePerWeek.vendor").innerHTML =
-format(team_deployTimePerWeek_vendor);
-    $("team.deployTimePerWeek.savings").innerHTML =
-format(team_deployTimePerWeek_savings);
-    $("team.deployTimePerMonth.openejb").innerHTML =
-format(team_deployTimePerMonth_openejb);
-    $("team.deployTimePerMonth.vendor").innerHTML =
-format(team_deployTimePerMonth_vendor);
-    $("team.deployTimePerMonth.savings").innerHTML =
-format(team_deployTimePerMonth_savings);
+    $("team.deployTime.savings").innerHTML = format(team_deployTime_savings);
+    $("team.deployTimePerHour.openejb").innerHTML = format(team_deployTimePerHour_openejb);
+    $("team.deployTimePerHour.vendor").innerHTML = format(team_deployTimePerHour_vendor);
+    $("team.deployTimePerHour.savings").innerHTML = format(team_deployTimePerHour_savings);
+    $("team.deployTimePerWeek.openejb").innerHTML = format(team_deployTimePerWeek_openejb);
+    $("team.deployTimePerWeek.vendor").innerHTML = format(team_deployTimePerWeek_vendor);
+    $("team.deployTimePerWeek.savings").innerHTML = format(team_deployTimePerWeek_savings);
+    $("team.deployTimePerMonth.openejb").innerHTML = format(team_deployTimePerMonth_openejb);
+    $("team.deployTimePerMonth.vendor").innerHTML = format(team_deployTimePerMonth_vendor);
+    $("team.deployTimePerMonth.savings").innerHTML = format(team_deployTimePerMonth_savings);
 
     $("totalSavings").innerHTML = longFormat(total_savings);
 
   }
-  
+
   function format(secs) {
     var mins = Math.floor(secs / 60)
     secs = secs % 60;
@@ -194,21 +147,17 @@ format(team_deployTimePerMonth_savings);
   </tr>
   <tr>
     <td><strong>Time to start/deploy your app in OpenEJB?</strong></td>
-    <td><input id="time_openejb" value="0" type="text" size="5"/>
-<i>seconds</i></td>
+    <td><input id="time_openejb" value="0" type="text" size="5"/> <i>seconds</i></td>
   </tr>
   <tr>
-    <td><strong>Time to start/deploy your app in your other
-platform?</strong></td>
-    <td><input id="time_vendor" value="0" type="text" size="5"/>
-<i>seconds</i></td>
+    <td><strong>Time to start/deploy your app in your other platform?</strong></td>
+    <td><input id="time_vendor" value="0" type="text" size="5"/> <i>seconds</i></td>
   </tr>
   <tr>
     <td colspan="2" align="center">&nbsp;</td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><input type="button" id="calculate"
-value="Calculate" onclick="calculate();"/></td>
+    <td colspan="2" align="center"><input type="button" id="calculate" value="Calculate" onclick="calculate();"/></td>
   </tr>
 </table>
 
@@ -294,4 +243,3 @@ value="Calculate" onclick="calculate();"/></td>
 <h3>Total Savings</h3>
 
 <p><span  id="totalSavings"></span></p>
-{html}

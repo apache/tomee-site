@@ -13,13 +13,12 @@ your InitialContext with the standard javax.naming.Context properties for
 user/pass info, which is:
 
     Properties props = new Properties();
-    props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-"org.apache.openejb.client.RemoteInitialContextFactory");
+    props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
     props.setProperty(Context.PROVIDER_URL, "ejbd://localhost:4201");
     props.setProperty(Context.SECURITY_PRINCIPAL, "someuser");
     props.setProperty(Context.SECURITY_CREDENTIALS, "thepass");
     props.setProperty("openejb.authentication.realmName", "PropertiesLogin");
-// optional
+    // optional
     InitialContext ctx = new InitialContext(props);
     ctx.lookup(...);
 

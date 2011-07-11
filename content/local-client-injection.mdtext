@@ -47,8 +47,7 @@ in the instantiated local client object:
     
         public void setUp() throws Exception {
     	Properties p = new Properties();
-    	p.put(Context.INITIAL_CONTEXT_FACTORY,
-"org.apache.openejb.client.LocalInitialContextFactory");
+    	p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
     	InitialContext initialContext = new InitialContext(p);
     	initialContext.bind("inject", this);
         }

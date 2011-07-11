@@ -78,37 +78,37 @@ understand or modify these properties.	Details on that one exception
 below.
     
 ###  No need to specify a "transaction lookup" property
-    
+
 All vendors have such a property for getting a reference to the container's
 TransactionManager and nothing works if this is not set correctly to the
 OpenEJB specific class.  To make the lives of users easier, OpenEJB will
 take the liberty of setting it for you.
-    
+
 Here are the persistence provider classes we understand and the defaults we
 will set for you:
-    
+
 #### Provider org.hibernate.ejb.HibernatePersistence
-    
+
 When using this provider, the *hibernate.transaction.manager_lookup_class*
 will be automatically set by OpenEJB to
 _org.apache.openejb.hibernate.TransactionManagerLookup_.  If the property
 is already set in the persistence unit it will be overwritten if it starts
 with the standard "org.hibernate.transaction." prefix.	
-    
+
 Custom lookup implementations will never be overwritten.
-    
+
 #### Provider oracle.toplink.essentials.PersistenceProvider
-    
+
 Or _oracle.toplink.essentials.ejb.cmp3.EntityManagerFactoryProvider_.
-    
+
 When using this provider, the *toplink.target-server* will be automatically
 set by OpenEJB to _org.apache.openejb.toplink.JTATransactionController_. 
 If the property is already set in the persistence unit it will be
 overwritten if it starts with the standard "oracle.toplink.transaction."
 prefix.  
-    
-    Custom transaction controller implementations will never be overwritten.
-    
+
+Custom transaction controller implementations will never be overwritten.
+
 #### Provider org.eclipse.persistence.jpa.PersistenceProvider
 
 Or _org.eclipse.persistence.jpa.osgi.PersistenceProvider_.
@@ -118,12 +118,12 @@ automatically set by OpenEJB to
 _org.apache.openejb.eclipselink.JTATransactionController_.  If the property
 is already set in the persistence unit it will be overwritten if it starts
 with the standard "org.eclipse.persistence.transaction." prefix.  
-    
+
 Custom transaction controller implementations will never be overwritten.
-    
+
 #### Provider org.apache.openjpa.persistence.PersistenceProviderImpl
-    
+
 OpenJPA is capable of discovering the correct method for locating the
 TransactionManager without the need for users to specify the specific
 strategy.  Therefore no specific "magic" is required.
-    
+

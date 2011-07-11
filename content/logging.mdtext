@@ -42,39 +42,30 @@ org.apache.openejb.util.LogCategory instance. Here is what the LogCategory
 class looks like
 
     public final class LogCategory {
-    	private final String name;
-    	public static final LogCategory OPENEJB = new LogCategory(
-"OpenEJB");
-    	public static final LogCategory OPENEJB_ADMIN =
-OPENEJB.createChild("admin");
-    	public static final LogCategory OPENEJB_STARTUP =
-OPENEJB.createChild("startup");
-    	public static final LogCategory OPENEJB_STARTUP_CONFIG =
-OPENEJB_STARTUP.createChild("config");
-    	public static final LogCategory OPENEJB_STARTUP_VALIDATION =
-OPENEJB_STARTUP.createChild("validation");
+      private final String name;
+      public static final LogCategory OPENEJB = new LogCategory( "OpenEJB");
+      public static final LogCategory OPENEJB_ADMIN = OPENEJB.createChild("admin");
+      public static final LogCategory OPENEJB_STARTUP = OPENEJB.createChild("startup");
+      public static final LogCategory OPENEJB_STARTUP_CONFIG = OPENEJB_STARTUP.createChild("config");
+      public static final LogCategory OPENEJB_STARTUP_VALIDATION = OPENEJB_STARTUP.createChild("validation");
            // other categories removed for code brevity
-    	private LogCategory(String name){
-    		this.name = name;
-    	}
-    	public String getName() {
-    		return name;
-    	}
-    	/**
-    	 * Creates a child category of this category. <B>Use this method
-sparingly</B>. This method is to be used in only those circumstances where
-the name of the
-    	 * category is not known upfront and is a derived name. If you know
-the name of the category, it is highly recommended to add a static final
-field
-    	 * of type LogCategory in this class
-    	 * @param child
-    	 * @return - LogCategory
-    	 */
-    	public LogCategory createChild(String child){
-    		return new LogCategory(this.name+"."+child);
-    	}
-    
+      private LogCategory(String name){
+        this.name = name;
+      }
+      public String getName() {
+        return name;
+      }
+      /**
+       * Creates a child category of this category. <B>Use this method sparingly</B>. This method is to be used in only those circumstances where the name of the
+       * category is not known upfront and is a derived name. If you know the name of the category, it is highly recommended to add a static final field
+       * of type LogCategory in this class
+       * @param child
+       * @return - LogCategory
+       */
+      public LogCategory createChild(String child){
+        return new LogCategory(this.name+"."+child);
+      }
+
     }
 
 Notice carefully how each LogCategory instance is created.&nbsp; The
@@ -84,8 +75,7 @@ category upfront, simply open the LogCategory class and add another
 category. For example, if you needed to add a category named SHUTDOWN, here
 is the recommended way to add it
 
-    public static final LogCategory OPENEJB_SHUTDOWN =
-LogCategory.OPENEJB.createChild("shutdown");
+    public static final LogCategory OPENEJB_SHUTDOWN = LogCategory.OPENEJB.createChild("shutdown");
 
 Sometimes you may want to create a category whose name is "generated" at
 runtime. In that case you can use the "createChild" method of the

@@ -4,8 +4,7 @@ Title: Clients
 
 
     Properties p = new Properties();
-    p.put("java.naming.factory.initial",
-"org.apache.openejb.client.LocalInitialContextFactory");
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.LocalInitialContextFactory");
     
     InitialContext ctx = new InitialContext(p);
     
@@ -38,8 +37,7 @@ Title: Clients
 
 
     Properties p = new Properties();
-    p.put("java.naming.factory.initial",
-"org.apache.openejb.client.LocalInitialContextFactory");
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.LocalInitialContextFactory");
     p.put("openejb.authentication.realmName", "MyApp");
     
     InitialContext ctx = new InitialContext(p);
@@ -52,8 +50,7 @@ Title: Clients
 
 
     Properties p = new Properties();
-    p.put("java.naming.factory.initial",
-"org.apache.openejb.client.RemoteInitialContextFactory");
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
     p.put("java.naming.provider.url", "ejbd://localhost:4201");
     // user and pass optional
     p.put("java.naming.security.principal", "myuser");
@@ -69,8 +66,7 @@ Title: Clients
 
 
     Properties p = new Properties();
-    p.put("java.naming.factory.initial",
-"org.apache.openejb.client.RemoteInitialContextFactory");
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
     p.put("java.naming.provider.url", "http://localhost:4204/ejb");
     // user and pass optional
     p.put("java.naming.security.principal", "myuser");
@@ -87,8 +83,7 @@ Title: Clients
 
 
     Properties p = new Properties();
-    p.put("java.naming.factory.initial",
-"org.apache.openejb.client.RemoteInitialContextFactory");
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
     p.put("java.naming.provider.url", "http://127.0.0.1:8080/openejb/ejb");
     // user and pass optional
     p.put("java.naming.security.principal", "myuser");

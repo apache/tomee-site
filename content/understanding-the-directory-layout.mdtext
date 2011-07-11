@@ -1,21 +1,19 @@
 Title: Understanding the Directory Layout
 When freshly unpacked, OpenEJB will look like this:
 
-{panel}
- openejb-3.0/
- openejb-3.0/logs/
- openejb-3.0/apps/
- openejb-3.0/lib/
- openejb-3.0/lib/_<several jars>_
- openejb-3.0/LICENSE.txt
- openejb-3.0/NOTICE.txt
- openejb-3.0/README.txt
- openejb-3.0/bin/
- openejb-3.0/bin/openejb.bat
- openejb-3.0/bin/openejb
- openejb-3.0/conf/
- openejb-3.0/conf/README.txt
-{panel}
+    openejb-3.0/
+    openejb-3.0/logs/
+    openejb-3.0/apps/
+    openejb-3.0/lib/
+    openejb-3.0/lib/_<several jars>_
+    openejb-3.0/LICENSE.txt
+    openejb-3.0/NOTICE.txt
+    openejb-3.0/README.txt
+    openejb-3.0/bin/
+    openejb-3.0/bin/openejb.bat
+    openejb-3.0/bin/openejb
+    openejb-3.0/conf/
+    openejb-3.0/conf/README.txt
 
 <a name="UnderstandingtheDirectoryLayout-Directories"></a>
 # Directories
@@ -65,8 +63,7 @@ be created:
         admin.properties	       (network socket for administration)
         ejbd.properties	       (network socket for ejb invocations)
         hsql.properties	       (network socket for hsql client access)
-        httpejbd.properties        (network socket for ejb invocations over
-http)
+        httpejbd.properties        (network socket for ejb invocations over http)
         telnet.properties	       (network socket for telnet "server") 
 
 

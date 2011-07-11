@@ -7,8 +7,7 @@ need for an openejb.xml entirely) like so:
 
 
     Properties p = new Properties();
-    p.put(Context.INITIAL_CONTEXT_FACTORY,
-"org.apache.openejb.client.LocalInitialContextFactory");
+    p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
     
     p.put("myDataSource", "new://Resource?type=DataSource");
     p.put("myDataSource.JdbcDriver", "org.apache.derby.jdbc.EmbeddedDriver");

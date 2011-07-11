@@ -46,8 +46,7 @@ Exception
         }
     
         @AroundInvoke
-        public Object invoke(InvocationContext invocationContext) throws
-Exception {
+        public Object invoke(InvocationContext invocationContext) throws Exception {
     	return invocationContext.proceed();
         }
     }
@@ -79,9 +78,8 @@ Exception {
         }
     
         @AroundInvoke
-        public Object invoke(InvocationContext invocationContext) throws
-Exception {
-    	return invocationContext.proceed();
+        public Object invoke(InvocationContext invocationContext) throws Exception {
+    	      return invocationContext.proceed();
         }
     
         @PostActivate
@@ -120,9 +118,8 @@ Exception {
         }
     
         @AroundInvoke
-        public Object invoke(InvocationContext invocationContext) throws
-Exception {
-    	return invocationContext.proceed();
+        public Object invoke(InvocationContext invocationContext) throws Exception {
+    	      return invocationContext.proceed();
         }
     }
 
@@ -151,9 +148,8 @@ Exception {
         }
     
         @AroundInvoke
-        public Object invoke(InvocationContext invocationContext) throws
-Exception {
-    	return invocationContext.proceed();
+        public Object invoke(InvocationContext invocationContext) throws Exception {
+          	return invocationContext.proceed();
         }
     
         @PostActivate
