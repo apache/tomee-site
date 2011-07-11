@@ -70,21 +70,22 @@ on the fly to the field/setter type used by the bean class.  For example:
 
 Works with an ejb-jar.xml as follows:
 
-  <ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
-  metadata-complete="false">
-    <enterprise-beans>
-      <session>
-        <ejb-name>MyBean</ejb-name>
-        <env-entry>
-    <env-entry-name>org.superbiz.foo.MyBean/myDate</env-entry-name>
-    <env-entry-value>2008-04-19</env-entry-value>
-    <env-entry-type>java.lang.String</env-entry-type>
-        </env-entry>
-      </session>
-    </enterprise-beans>
-  </ejb-jar>
+    <ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
+    metadata-complete="false">
+      <enterprise-beans>
+        <session>
+          <ejb-name>MyBean</ejb-name>
+          <env-entry>
+      <env-entry-name>org.superbiz.foo.MyBean/myDate</env-entry-name>
+      <env-entry-value>2008-04-19</env-entry-value>
+      <env-entry-type>java.lang.String</env-entry-type>
+          </env-entry>
+        </session>
+      </enterprise-beans>
+    </ejb-jar>
 
     
 Or with an env-entries.properties file as follows:
+
     org.superbiz.foo.MyBean/myDate = 2008-04-19
 
