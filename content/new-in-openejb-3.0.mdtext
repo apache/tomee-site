@@ -57,7 +57,7 @@ JavaBeans PropertyEditor.  We include several built-in PropertyEditors
 already such as Date, InetAddress, Class, File, URL, URI, Map, List and
 more.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyBean.java</B></DIV><DIV class="codeContent panelContent">
+
     import java.net.URI;
     import java.io.File;
     import java.util.Date;
@@ -89,7 +89,7 @@ are not container controlled resources (i.e. datasources and things of that
 nature).  You can configure you ejbs via a properties file and skip the
 need for an ejb-jar.xml and it's 5 lines per property madness.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>META-INF/env-entries.properties</B></DIV><DIV class="codeContent panelContent">
+
     blog = http://acme.org/myblog
     birthday = locale=en_US style=MEDIUM Mar 1, 1954
     homeDirectory = /home/esmith/

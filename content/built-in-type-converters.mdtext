@@ -70,23 +70,21 @@ on the fly to the field/setter type used by the bean class.  For example:
 
 Works with an ejb-jar.xml as follows:
 
-{code:xml|title=META-INF/ejb-jar.xml}
-<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
-metadata-complete="false">
-  <enterprise-beans>
-    <session>
-      <ejb-name>MyBean</ejb-name>
-      <env-entry>
-	<env-entry-name>org.superbiz.foo.MyBean/myDate</env-entry-name>
-	<env-entry-value>2008-04-19</env-entry-value>
-	<env-entry-type>java.lang.String</env-entry-type>
-      </env-entry>
-    </session>
-  </enterprise-beans>
-</ejb-jar>
+  <ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
+  metadata-complete="false">
+    <enterprise-beans>
+      <session>
+        <ejb-name>MyBean</ejb-name>
+        <env-entry>
+    <env-entry-name>org.superbiz.foo.MyBean/myDate</env-entry-name>
+    <env-entry-value>2008-04-19</env-entry-value>
+    <env-entry-type>java.lang.String</env-entry-type>
+        </env-entry>
+      </session>
+    </enterprise-beans>
+  </ejb-jar>
 
     
-    Or with an env-entries.properties file as follows:
-    {code:none|title=META-INF/env-entries.properties}
+Or with an env-entries.properties file as follows:
     org.superbiz.foo.MyBean/myDate = 2008-04-19
 

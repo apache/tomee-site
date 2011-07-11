@@ -81,8 +81,7 @@ the same as if you would use a common java property file.
     <properties>
       wss4j.in.action = UsernameToken
       wss4j.in.passwordType = PasswordDigest
-     
-wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
+      wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
     </properties>
     [...]
 
@@ -112,8 +111,7 @@ For example : *wss4j.in.action = UsernameToken*
     		<properties>
     		    wss4j.in.action = UsernameToken
     		    wss4j.in.passwordType = PasswordDigest
-    		   
-wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
+            wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
     		</properties>
     	    </web-service-security>
     	</session>
@@ -137,26 +135,19 @@ This request contains SOAP headers to manage security. You can see
     Host: 127.0.0.1:8204
     Connection: keep-alive
     Transfer-Encoding: chunked
-     
+
     524
     <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
       <soap:Header>
-        <wsse:Security
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
-soap:mustUnderstand="1">
-          <wsse:UsernameToken
-xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
-    wsu:Id="UsernameToken-22402238" 
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soap:mustUnderstand="1">
+          <wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    wsu:Id="UsernameToken-22402238"
     xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-    	<wsse:Username
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">jane</wsse:Username>
-    	<wsse:Password
-Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest" 
+            <wsse:Username xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">jane</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest"
     xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">tf7k3a4GREIt1xec/KXVmBdRNIg=</wsse:Password>
-    	<wsse:Nonce
-xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">cKhUhmjQ1hGYPsdOLez5kA==</wsse:Nonce>
-    	<wsu:Created
-xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2009-04-14T20:16:26.203Z</wsu:Created>
+            <wsse:Nonce xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">cKhUhmjQ1hGYPsdOLez5kA==</wsse:Nonce>
+            <wsu:Created xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">2009-04-14T20:16:26.203Z</wsu:Created>
           </wsse:UsernameToken>
         </wsse:Security>
       </soap:Header>
@@ -199,52 +190,43 @@ Here is a snippet from the webservice-ws-security example demonstrating
 this:
 
 
-    
     public class CustomPasswordHandler implements CallbackHandler {
-        public void handle(Callback[]
- callbacks) throws IOException, UnsupportedCallbackException {
-            WSPasswordCallback pc = (WSPasswordCallback) callbacks[0]
-;
-            
-    	if(pc.getUsage() == WSPasswordCallback.USERNAME_TOKEN) {
-    	    // TODO get the password from the users.properties if possible
-    	    pc.setPassword("waterfall");
-                
-    	} else if(pc.getUsage() == WSPasswordCallback.DECRYPT) {
-    	    pc.setPassword("serverPassword");
-                
-    	} else if(pc.getUsage() == WSPasswordCallback.SIGNATURE) {
-    	    pc.setPassword("serverPassword");
-                
-    	}
-            
-    	if ((pc.getUsage() == WSPasswordCallback.USERNAME_TOKEN)
-    		|| (pc.getUsage() ==
-WSPasswordCallback.USERNAME_TOKEN_UNKNOWN)) {
-                
-    	    SecurityService securityService = SystemInstance.get()
-    		    .getComponent(SecurityService.class);
-    	    Object token = null;
-    	    try {
-    		securityService.disassociate();
-    
-    		token = securityService.login(pc.getIdentifer(),
-pc.getPassword());
-    		securityService.associate(token);
-    		
-    	    } catch (LoginException e) {
-    		e.printStackTrace();
-    		throw new SecurityException("wrong password");
-    	    } finally {
-    	    }
-    	}
-                
-    
+
+        public void handle(Callback[] callbacks) throws IOException, UnsupportedCallbackException {
+            WSPasswordCallback pc = (WSPasswordCallback) callbacks[0];
+
+            if (pc.getUsage() == WSPasswordCallback.USERNAME_TOKEN) {
+                // TODO get the password from the users.properties if possible
+                pc.setPassword("waterfall");
+
+            } else if (pc.getUsage() == WSPasswordCallback.DECRYPT) {
+
+                pc.setPassword("serverPassword");
+
+            } else if (pc.getUsage() == WSPasswordCallback.SIGNATURE) {
+
+                pc.setPassword("serverPassword");
+
+            }
+
+            if ((pc.getUsage() == WSPasswordCallback.USERNAME_TOKEN) || (pc.getUsage() == WSPasswordCallback.USERNAME_TOKEN_UNKNOWN)) {
+
+                SecurityService securityService = SystemInstance.get().getComponent(SecurityService.class);
+                Object token = null;
+                try {
+                    securityService.disassociate();
+
+                    token = securityService.login(pc.getIdentifer(), pc.getPassword());
+                    securityService.associate(token);
+
+                } catch (LoginException e) {
+                    e.printStackTrace();
+                    throw new SecurityException("wrong password");
+                }
+            }
         }
     }
     
-
-
 
 
 <a name="SecuringaWebService-Examples"></a>

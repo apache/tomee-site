@@ -83,14 +83,12 @@ org.hibernate.dialect.HSQLDialect");
 # Example of using jndi.properties
 
 Here's an example of the same properties being specified via a
-jndi.properties file.  This file just needs to be placed in the classpath,
+`jndi.properties file`.  This file just needs to be placed in the classpath,
 not in a subdirectory of a path in the classpath such as META-INF, but at
 the root of any of the paths in the classpath.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>jndi.properties</B></DIV><DIV class="codeContent panelContent">
     # set the initial context factory
-    java.naming.factory.initial =
-org.apache.openejb.client.LocalInitialContextFactory
+    java.naming.factory.initial = org.apache.openejb.client.LocalInitialContextFactory
     
     # change some logging
     log4j.category.OpenEJB.options = debug

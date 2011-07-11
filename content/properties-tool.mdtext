@@ -28,11 +28,11 @@ if you reapply them back into conf/openejb.xml or conf/system.properties.
 Any component configured in OpenEJB via the openejb.xml (and some that
 aren't) can be overridden using system properties.  The format is:
 
-<id>.<property-name>=<property-value>
+`<id>.<property-name>=<property-value>`
 
 And this can be done on the command line as follows:
 
-./bin/openejb -D<id>.<property-name>=<property-value> ...
+`./bin/openejb -D<id>.<property-name>=<property-value> ...`
 
 Or by adding the property to the conf/system.properties file.  Note that
 command line overrides win over overrides in the
@@ -50,157 +50,163 @@ new property value before constructing the individual component.
 <a name="PropertiesTool-Exampleoutput"></a>
 # Example output
 
-{code:none}
-1. Container(id=Default CMP Container)
-1. className: org.apache.openejb.core.cmp.CmpContainer
-1. Default\ CMP\
-Container.CmpEngineFactory=org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory
-Default\ CMP\ Container.Engine=instantdb
-Default\ CMP\ Container.ConnectorName=Default JDBC Database
+    # Container(id=Default CMP Container)
+    # className: org.apache.openejb.core.cmp.CmpContainer
+    #
+    Default\ CMP\ Container.CmpEngineFactory=org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory
+    Default\ CMP\ Container.Engine=instantdb
+    Default\ CMP\ Container.ConnectorName=Default JDBC Database
 
-1. Container(id=Default BMP Container)
-1. className: org.apache.openejb.core.entity.EntityContainer
-1. Default\ BMP\ Container.PoolSize=10
+    # Container(id=Default BMP Container)
+    # className: org.apache.openejb.core.entity.EntityContainer
+    #
+    Default\ BMP\ Container.PoolSize=10
 
-1. Container(id=Default Stateful Container)
-1. className: org.apache.openejb.core.stateful.StatefulContainer
-1. Default\ Stateful\ Container.BulkPassivate=50
-Default\ Stateful\
-Container.Passivator=org.apache.openejb.core.stateful.SimplePassivater
-Default\ Stateful\ Container.TimeOut=20
-Default\ Stateful\ Container.PoolSize=500
+    # Container(id=Default Stateful Container)
+    # className: org.apache.openejb.core.stateful.StatefulContainer
+    #
+    Default\ Stateful\ Container.BulkPassivate=50
+    Default\ Stateful\ Container.Passivator=org.apache.openejb.core.stateful.SimplePassivater
+    Default\ Stateful\ Container.TimeOut=20
+    Default\ Stateful\ Container.PoolSize=500
 
-1. Container(id=Default Stateless Container)
-1. className: org.apache.openejb.core.stateless.StatelessContainer
-1. Default\ Stateless\ Container.PoolSize=10
-Default\ Stateless\ Container.StrictPooling=true
-Default\ Stateless\ Container.TimeOut=0
+    # Container(id=Default Stateless Container)
+    # className: org.apache.openejb.core.stateless.StatelessContainer
+    #
+    Default\ Stateless\ Container.PoolSize=10
+    Default\ Stateless\ Container.StrictPooling=true
+    Default\ Stateless\ Container.TimeOut=0
 
-1. Container(id=Default MDB Container)
-1. className: org.apache.openejb.core.mdb.MdbContainer
-1. Default\ MDB\ Container.ResourceAdapter=Default JMS Resource Adapter
-Default\ MDB\ Container.InstanceLimit=10
-Default\ MDB\ Container.MessageListenerInterface=javax.jms.MessageListener
-Default\ MDB\
-Container.ActivationSpecClass=org.apache.activemq.ra.ActiveMQActivationSpec
+    # Container(id=Default MDB Container)
+    # className: org.apache.openejb.core.mdb.MdbContainer
+    #
+    Default\ MDB\ Container.ResourceAdapter=Default JMS Resource Adapter
+    Default\ MDB\ Container.InstanceLimit=10
+    Default\ MDB\ Container.MessageListenerInterface=javax.jms.MessageListener
+    Default\ MDB\ Container.ActivationSpecClass=org.apache.activemq.ra.ActiveMQActivationSpec
 
-1. ConnectionManager(id=Default Local TX ConnectionManager)
-1. className: org.apache.openejb.resource.SharedLocalConnectionManager
-1. 
-1. Resource(id=Default JMS Resource Adapter)
-1. className: org.apache.activemq.ra.ActiveMQResourceAdapter
-1. Default\ JMS\ Resource\ Adapter.ServerUrl=vm\://localhost?async\=true
-Default\ JMS\ Resource\
-Adapter.BrokerXmlConfig=broker\:(tcp\://localhost\:61616)
-Default\ JMS\ Resource\ Adapter.ThreadPoolSize=30
+    # ConnectionManager(id=Default Local TX ConnectionManager)
+    # className: org.apache.openejb.resource.SharedLocalConnectionManager
+    #
 
-1. Resource(id=Default JDBC Database)
-1. className: org.apache.openejb.resource.jdbc.BasicManagedDataSource
-1. Default\ JDBC\ Database.MinIdle=0
-Default\ JDBC\ Database.Password=xxxx
-Default\ JDBC\ Database.JdbcUrl=jdbc\:hsqldb\:file\:hsqldb
-Default\ JDBC\ Database.MaxIdle=20
-Default\ JDBC\ Database.ConnectionProperties=
-Default\ JDBC\ Database.MaxWait=-1
-Default\ JDBC\ Database.TimeBetweenEvictionRunsMillis=-1
-Default\ JDBC\ Database.MaxActive=20
-Default\ JDBC\ Database.DefaultAutoCommit=true
-Default\ JDBC\ Database.AccessToUnderlyingConnectionAllowed=false
-Default\ JDBC\ Database.JdbcDriver=org.hsqldb.jdbcDriver
-Default\ JDBC\ Database.TestWhileIdle=false
-Default\ JDBC\ Database.UserName=sa
-Default\ JDBC\ Database.MaxOpenPreparedStatements=0
-Default\ JDBC\ Database.TestOnBorrow=true
-Default\ JDBC\ Database.PoolPreparedStatements=false
-Default\ JDBC\ Database.ConnectionInterface=javax.sql.DataSource
-Default\ JDBC\ Database.TestOnReturn=false
-Default\ JDBC\ Database.MinEvictableIdleTimeMillis=1800000
-Default\ JDBC\ Database.NumTestsPerEvictionRun=3
-Default\ JDBC\ Database.InitialSize=0
+    # Resource(id=Default JMS Resource Adapter)
+    # className: org.apache.activemq.ra.ActiveMQResourceAdapter
+    #
+    Default\ JMS\ Resource\ Adapter.ServerUrl=vm\://localhost?async\=true
+    Default\ JMS\ Resource\ Adapter.BrokerXmlConfig=broker\:(tcp\://localhost\:61616)
+    Default\ JMS\ Resource\ Adapter.ThreadPoolSize=30
 
-1. Resource(id=Default Unmanaged JDBC Database)
-1. className: org.apache.openejb.resource.jdbc.BasicDataSource
-1. Default\ Unmanaged\ JDBC\ Database.MaxWait=-1
-Default\ Unmanaged\ JDBC\ Database.InitialSize=0
-Default\ Unmanaged\ JDBC\ Database.DefaultAutoCommit=true
-Default\ Unmanaged\ JDBC\ Database.ConnectionProperties=
-Default\ Unmanaged\ JDBC\ Database.MaxActive=10
-Default\ Unmanaged\ JDBC\ Database.TestOnBorrow=true
-Default\ Unmanaged\ JDBC\ Database.JdbcUrl=jdbc\:hsqldb\:file\:hsqldb
-Default\ Unmanaged\ JDBC\ Database.TestOnReturn=false
-Default\ Unmanaged\ JDBC\
-Database.AccessToUnderlyingConnectionAllowed=false
-Default\ Unmanaged\ JDBC\ Database.Password=xxxx
-Default\ Unmanaged\ JDBC\ Database.MinEvictableIdleTimeMillis=1800000
-Default\ Unmanaged\ JDBC\ Database.PoolPreparedStatements=false
-Default\ Unmanaged\ JDBC\ Database.MaxOpenPreparedStatements=0
-Default\ Unmanaged\ JDBC\ Database.ConnectionInterface=javax.sql.DataSource
-Default\ Unmanaged\ JDBC\ Database.MinIdle=0
-Default\ Unmanaged\ JDBC\ Database.NumTestsPerEvictionRun=3
-Default\ Unmanaged\ JDBC\ Database.TimeBetweenEvictionRunsMillis=-1
-Default\ Unmanaged\ JDBC\ Database.JdbcDriver=org.hsqldb.jdbcDriver
-Default\ Unmanaged\ JDBC\ Database.UserName=sa
-Default\ Unmanaged\ JDBC\ Database.MaxIdle=10
-Default\ Unmanaged\ JDBC\ Database.TestWhileIdle=false
+    # Resource(id=Default JDBC Database)
+    # className: org.apache.openejb.resource.jdbc.BasicManagedDataSource
+    #
+    Default\ JDBC\ Database.MinIdle=0
+    Default\ JDBC\ Database.Password=xxxx
+    Default\ JDBC\ Database.JdbcUrl=jdbc\:hsqldb\:file\:hsqldb
+    Default\ JDBC\ Database.MaxIdle=20
+    Default\ JDBC\ Database.ConnectionProperties=
+    Default\ JDBC\ Database.MaxWait=-1
+    Default\ JDBC\ Database.TimeBetweenEvictionRunsMillis=-1
+    Default\ JDBC\ Database.MaxActive=20
+    Default\ JDBC\ Database.DefaultAutoCommit=true
+    Default\ JDBC\ Database.AccessToUnderlyingConnectionAllowed=false
+    Default\ JDBC\ Database.JdbcDriver=org.hsqldb.jdbcDriver
+    Default\ JDBC\ Database.TestWhileIdle=false
+    Default\ JDBC\ Database.UserName=sa
+    Default\ JDBC\ Database.MaxOpenPreparedStatements=0
+    Default\ JDBC\ Database.TestOnBorrow=true
+    Default\ JDBC\ Database.PoolPreparedStatements=false
+    Default\ JDBC\ Database.ConnectionInterface=javax.sql.DataSource
+    Default\ JDBC\ Database.TestOnReturn=false
+    Default\ JDBC\ Database.MinEvictableIdleTimeMillis=1800000
+    Default\ JDBC\ Database.NumTestsPerEvictionRun=3
+    Default\ JDBC\ Database.InitialSize=0
 
-1. Resource(id=Default JMS Connection Factory)
-1. className: org.apache.activemq.ra.ActiveMQManagedConnectionFactory
-1. Default\ JMS\ Connection\
-Factory.ConnectionInterface=javax.jms.ConnectionFactory, \
-javax.jms.QueueConnectionFactory, javax.jms.TopicConnectionFactory
-Default\ JMS\ Connection\ Factory.ResourceAdapter=Default JMS Resource
-Adapter
+    # Resource(id=Default Unmanaged JDBC Database)
+    # className: org.apache.openejb.resource.jdbc.BasicDataSource
+    #
+    Default\ Unmanaged\ JDBC\ Database.MaxWait=-1
+    Default\ Unmanaged\ JDBC\ Database.InitialSize=0
+    Default\ Unmanaged\ JDBC\ Database.DefaultAutoCommit=true
+    Default\ Unmanaged\ JDBC\ Database.ConnectionProperties=
+    Default\ Unmanaged\ JDBC\ Database.MaxActive=10
+    Default\ Unmanaged\ JDBC\ Database.TestOnBorrow=true
+    Default\ Unmanaged\ JDBC\ Database.JdbcUrl=jdbc\:hsqldb\:file\:hsqldb
+    Default\ Unmanaged\ JDBC\ Database.TestOnReturn=false
+    Default\ Unmanaged\ JDBC\ Database.AccessToUnderlyingConnectionAllowed=false
+    Default\ Unmanaged\ JDBC\ Database.Password=xxxx
+    Default\ Unmanaged\ JDBC\ Database.MinEvictableIdleTimeMillis=1800000
+    Default\ Unmanaged\ JDBC\ Database.PoolPreparedStatements=false
+    Default\ Unmanaged\ JDBC\ Database.MaxOpenPreparedStatements=0
+    Default\ Unmanaged\ JDBC\ Database.ConnectionInterface=javax.sql.DataSource
+    Default\ Unmanaged\ JDBC\ Database.MinIdle=0
+    Default\ Unmanaged\ JDBC\ Database.NumTestsPerEvictionRun=3
+    Default\ Unmanaged\ JDBC\ Database.TimeBetweenEvictionRunsMillis=-1
+    Default\ Unmanaged\ JDBC\ Database.JdbcDriver=org.hsqldb.jdbcDriver
+    Default\ Unmanaged\ JDBC\ Database.UserName=sa
+    Default\ Unmanaged\ JDBC\ Database.MaxIdle=10
+    Default\ Unmanaged\ JDBC\ Database.TestWhileIdle=false
 
-1. SecurityService(id=Default Security Service)
-1. className: org.apache.openejb.core.security.SecurityServiceImpl
-1. 
-1. TransactionManager(id=Default Transaction Manager)
-1. className:
-org.apache.geronimo.transaction.manager.GeronimoTransactionManager
-1. 
-1. ServerService(id=httpejbd)
-1. className: org.apache.openejb.server.httpd.HttpEjbServer
-1. httpejbd.port=4204
-httpejbd.name=httpejbd
-httpejbd.disabled=false
-httpejbd.server=org.apache.openejb.server.httpd.HttpEjbServer
-httpejbd.threads=200
-httpejbd.bind=127.0.0.1
+    # Resource(id=Default JMS Connection Factory)
+    # className: org.apache.activemq.ra.ActiveMQManagedConnectionFactory
+    #
+    Default\ JMS\ Connection\ Factory.ConnectionInterface=javax.jms.ConnectionFactory, \
+    javax.jms.QueueConnectionFactory, javax.jms.TopicConnectionFactory
+    Default\ JMS\ Connection\ Factory.ResourceAdapter=Default JMS Resource Adapter
 
-1. ServerService(id=telnet)
-1. className: org.apache.openejb.server.telnet.TelnetServer
-1. telnet.port=4202
-telnet.name=telnet
-telnet.disabled=false
-telnet.bind=127.0.0.1
-telnet.threads=5
-telnet.server=org.apache.openejb.server.telnet.TelnetServer
+    # SecurityService(id=Default Security Service)
+    # className: org.apache.openejb.core.security.SecurityServiceImpl
+    #
 
-1. ServerService(id=ejbd)
-1. className: org.apache.openejb.server.ejbd.EjbServer
-1. ejbd.disabled=false
-ejbd.bind=127.0.0.1
-ejbd.server=org.apache.openejb.server.ejbd.EjbServer
-ejbd.port=4201
-ejbd.name=ejbd
-ejbd.threads=200
+    # TransactionManager(id=Default Transaction Manager)
+    # className: org.apache.geronimo.transaction.manager.GeronimoTransactionManager
+    #
 
-1. ServerService(id=hsql)
-1. className: org.apache.openejb.server.hsql.HsqlService
-1. hsql.port=9001
-hsql.name=hsql
-hsql.disabled=false
-hsql.server=org.apache.openejb.server.hsql.HsqlService
-hsql.bind=127.0.0.1
+    # ServerService(id=httpejbd)
+    # className: org.apache.openejb.server.httpd.HttpEjbServer
+    #
+    httpejbd.port=4204
+    httpejbd.name=httpejbd
+    httpejbd.disabled=false
+    httpejbd.server=org.apache.openejb.server.httpd.HttpEjbServer
+    httpejbd.threads=200
+    httpejbd.bind=127.0.0.1
 
-1. ServerService(id=admin)
-1. className: org.apache.openejb.server.admin.AdminDaemon
-1. admin.disabled=false
-admin.bind=127.0.0.1
-admin.only_from=localhost
-admin.port=4200
-admin.threads=1
-admin.name=admin
-admin.server=org.apache.openejb.server.admin.AdminDaemon
+    # ServerService(id=telnet)
+    # className: org.apache.openejb.server.telnet.TelnetServer
+    #
+    telnet.port=4202
+    telnet.name=telnet
+    telnet.disabled=false
+    telnet.bind=127.0.0.1
+    telnet.threads=5
+    telnet.server=org.apache.openejb.server.telnet.TelnetServer
 
-    
+    # ServerService(id=ejbd)
+    # className: org.apache.openejb.server.ejbd.EjbServer
+    #
+    ejbd.disabled=false
+    ejbd.bind=127.0.0.1
+    ejbd.server=org.apache.openejb.server.ejbd.EjbServer
+    ejbd.port=4201
+    ejbd.name=ejbd
+    ejbd.threads=200
+
+    # ServerService(id=hsql)
+    # className: org.apache.openejb.server.hsql.HsqlService
+    #
+    hsql.port=9001
+    hsql.name=hsql
+    hsql.disabled=false
+    hsql.server=org.apache.openejb.server.hsql.HsqlService
+    hsql.bind=127.0.0.1
+
+    # ServerService(id=admin)
+    # className: org.apache.openejb.server.admin.AdminDaemon
+    #
+    admin.disabled=false
+    admin.bind=127.0.0.1
+    admin.only_from=localhost
+    admin.port=4200
+    admin.threads=1
+    admin.name=admin
+    admin.server=org.apache.openejb.server.admin.AdminDaemon

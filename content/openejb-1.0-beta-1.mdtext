@@ -92,22 +92,20 @@ of the very first CMP accessed to grab a datasource and hold onto it for
 use on all requests into the CMP container.  This was configured with
 something like this:
 
-{code:xml|title=cmp.global_database.xml}
-   <database name="Global_TX_Database" engine="instantdb">
+    <database name="Global_TX_Database" engine="instantdb">
        <jndi name="java:comp/env/jdbc/basic/entityDatabase" />
        <mapping href="conf/default.cmp_mapping.xml" />
-   </database>
+    </database>
 
     
-    This was just wrong.  We've switched it so that the "jndi" tag of a Castor
+This was just wrong.  We've switched it so that the "jndi" tag of a Castor
 database.xml file can be set directly to the global JNDI name of a
 Connector element declared in an openejb.conf file.  
     
-    {code:xml|title=cmp.global_database.xml}
-       <database name="Global_TX_Database" engine="instantdb">
-           <jndi name="java:openejb/connector/Default JDBC Database" />
-           <mapping href="conf/default.cmp_mapping.xml" />
-       </database>
+     <database name="Global_TX_Database" engine="instantdb">
+         <jndi name="java:openejb/connector/Default JDBC Database" />
+         <mapping href="conf/default.cmp_mapping.xml" />
+     </database>
 
 
 This is still not so optimal as we do not want to people using OpenEJB's

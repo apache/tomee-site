@@ -18,32 +18,25 @@ This usage involves no xml parsing or classpath scanning.  If you don't
 give it to OpenEJB, OpenEJB doesn't know about it.  This is OpenEJB with
 all the magic stripped away.  At a high level:
 
-1. You build your app in code using the JAXB tree in code and hand it to
-the *ConfigurationFactory*.
-1. # The *org.apache.openejb.jee* package contains JAXB trees for
-ejb-jar.xml, beans.xml and all the Java EE deployment descriptors.
-1. The *ConfigurationFactory* will produce a fully canonical version of
-the app called the *Info* tree by:
-1. # Merging all sources of meta-data -- xml and annotations
-1. # Resolving all ejb, persistence unit, datasource and other references
-1. # Validating the app and looking for mistakes
-1. The *Info* tree is
-1. # The singular source of information about the application from this
-point forward.
-1. # Pure data with no smarts or logic of any kind.
-1. # The instruction set of what would be built by the assembler.
-1. The *Assembler* will build and start the application exactly as
-described in the *Info* tree.
-1. # When this step completes, you have a running application.
-1. # Any failures prior to this point require no cleanup.  Only the
-assembler builds "live" objects.
+  # You build your app in code using the JAXB tree in code and hand it to the {{ConfigurationFactory}}.
+  ## The {{org.apache.openejb.jee}} package contains JAXB trees for ejb-jar.xml, beans.xml and all the Java EE deployment descriptors.
+  # The {{ConfigurationFactory}} will produce a fully canonical version of the app called the {{Info}} tree by:
+  ## Merging all sources of meta-data -- xml and annotations
+  ## Resolving all ejb, persistence unit, datasource and other references
+  ## Validating the app and looking for mistakes
+  # The {{Info}} tree is
+  ## The singular source of information about the application from this point forward.
+  ## Pure data with no smarts or logic of any kind.
+  ## The instruction set of what would be built by the assembler.
+  # The {{Assembler}} will build and start the application exactly as described in the {{Info}} tree.
+  ## When this step completes, you have a running application.
+  ## Any failures prior to this point require no cleanup.  Only the assembler builds "live" objects.
 
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>StatefulTest.java</B></DIV><DIV class="codeContent panelContent">
     import javax.ejb.LocalBean;
     import javax.ejb.Stateful;
     import javax.naming.InitialContext;
-    
+
     import junit.framework.TestCase;
     import org.apache.openejb.assembler.classic.Assembler;
     import org.apache.openejb.assembler.classic.SecurityServiceInfo;
@@ -52,44 +45,41 @@ assembler builds "live" objects.
     import org.apache.openejb.config.ConfigurationFactory;
     import org.apache.openejb.jee.EjbJar;
     import org.apache.openejb.jee.StatefulBean;
-    
+
     public class StatefulTest extends TestCase {
-    
+
         @Override
         protected void setUp() throws Exception {
-    
-    	System.setProperty(javax.naming.Context.INITIAL_CONTEXT_FACTORY,
-LocalInitialContextFactory.class.getName());
-    
-    	ConfigurationFactory config = new ConfigurationFactory();
-    	Assembler assembler = new Assembler();
-    
-           
-assembler.createTransactionManager(config.configureService(TransactionServiceInfo.class));
-           
-assembler.createSecurityService(config.configureService(SecurityServiceInfo.class));
-    
-    	EjbJar ejbJar = new EjbJar();
-    	ejbJar.addEnterpriseBean(new StatefulBean(MyBean.class));
-    
-    	assembler.createApplication(config.configureApplication(ejbJar));
+
+            System.setProperty(javax.naming.Context.INITIAL_CONTEXT_FACTORY, LocalInitialContextFactory.class.getName());
+
+            ConfigurationFactory config = new ConfigurationFactory();
+            Assembler assembler = new Assembler();
+
+            assembler.createTransactionManager(config.configureService(TransactionServiceInfo.class));
+            assembler.createSecurityService(config.configureService(SecurityServiceInfo.class));
+
+            EjbJar ejbJar = new EjbJar();
+            ejbJar.addEnterpriseBean(new StatefulBean(MyBean.class));
+
+            assembler.createApplication(config.configureApplication(ejbJar));
         }
-    
+
         public void test() throws Exception {
-    	InitialContext context = new InitialContext();
-    	MyBean myBean = (MyBean) context.lookup("MyBeanLocalBean");
-    
-    	assertEquals("pan", myBean.echo("nap"));
+            InitialContext context = new InitialContext();
+            MyBean myBean = (MyBean) context.lookup("MyBeanLocalBean");
+
+            assertEquals("pan", myBean.echo("nap"));
         }
-    
+
         @Stateful
         @LocalBean
         public static class MyBean {
-    
-    	public String echo(String string) {
-    	    StringBuilder sb = new StringBuilder(string);
-    	    return sb.reverse().toString();
-    	}
+
+            public String echo(String string) {
+                StringBuilder sb = new StringBuilder(string);
+                return sb.reverse().toString();
+            }
         }
     }
 
@@ -100,8 +90,7 @@ assembler.createSecurityService(config.configureService(SecurityServiceInfo.clas
 Slightly more detailed account of the above.  Our startup and deploy world
 is broken into two phases:
   
-  1. configuration (app.jar -> AppInfo)  we build up a fully normalized and
-validated tree.  Some of the steps are
+  1. configuration (app.jar -> AppInfo)  we build up a fully normalized and validated tree.  Some of the steps are
        - read in descriptors
        - process annotations filling in the descriptor tree
        - validating app compliance
@@ -110,21 +99,19 @@ validated tree.  Some of the steps are
        - turning the descriptor tree into Info objects for final assembly
        - final validation check
 
-  2. assembly (AppInfo -> actual running app)  we assemble a running app as
-detailed by the AppInfo
+  2. assembly (AppInfo -> actual running app)  we assemble a running app as detailed by the AppInfo
        - creating classloaders for the application
        - creating EntityManagers and EntityManagerFactories
        - creating live objects associated with resource-env-refs
        - creating deployment (CoreDeploymentInfo) objects for each ejb
        - creating the jndi enc of each ejb
-       - adding method permission objects into the security system (JACC
-Provider)
+       - adding method permission objects into the security system (JACC Provider)
        - creating transaction policy objects for each ejb
-       - creating interceptor stacks and bindings for each ejb	    
-       - adding ejbs to containers (which may also do things like create
-pools)
+       - creating interceptor stacks and bindings for each ejb
+       - adding ejbs to containers (which may also do things like create pools)
        - adding ejbs to the live ContainerSystem registry of ejbs
        - adding global jndi entries for each ejb
+
 
 
 The listings above aren't necesarrily complete or perfectly ordered, but
@@ -154,8 +141,8 @@ tree and check that everything is compliant to these strict rules.
 All of the aforementioned configuration phase sits behind this info object
 tree and an interface that produces it:
 
-  org.apache.openejb.assembler.classic.OpenEjbConfiguration
-  org.apache.openejb.assembler.classic.OpenEjbConfigurationFactory
+ - org.apache.openejb.assembler.classic.OpenEjbConfiguration
+ - org.apache.openejb.assembler.classic.OpenEjbConfigurationFactory
 
 The job of the OpenEjbConfigurationFactory is simply to produce an 
 OpenEjbConfiguration tree.  With this simple decoupling when the time comes

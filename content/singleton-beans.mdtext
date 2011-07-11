@@ -68,7 +68,6 @@ put @Lock(READ) on their bean class, thus changing the default, and then
 The locking modes of Container-Managed Concurrency map directly to the *[java.util.concurrent.ReadWriteLock](http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReadWriteLock.html)
 * API which looks like this:
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>java.util.concurrent.ReadWriteLock</B></DIV><DIV class="codeContent panelContent">
     public interface ReadWriteLock {
        /**
         * Returns the lock used for reading.
@@ -110,7 +109,6 @@ to acquire the read or write lock.  This annotation can be used on the bean
 class or individual methods.  The annotation maps directly to the [java.util.concurrent.locks.Lock](http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/Lock.html)
  interface.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>java.util.concurrent.locks.Lock</B></DIV><DIV class="codeContent panelContent">
     public interface Lock {
     
         /**
@@ -208,19 +206,18 @@ annotation "just in case" and should only be used when truly needed.
 
 Singletons can be declared in the ejb-jar.xml as follows:
 
-{code:xml|title=META-INF/ejb-jar.xml}
-<ejb-jar>
-  <enterprise-beans>
-    <session>
-      <ejb-name>MySingletonBean</ejb-name>
-      <ejb-class>org.superbiz.MySingletonBean</ejb-class>
-      <session-type>Singleton</session-type>
-      <load-on-startup/>
-      <depends-on>
-	<ejb-name>SingletonFoo</ejb-name>
-	<ejb-name>SingletonBar</ejb-name>
-      </depends-on>
-    </session>
-  </enterprise-beans>
-</ejb-jar>
+    <ejb-jar>
+      <enterprise-beans>
+        <session>
+          <ejb-name>MySingletonBean</ejb-name>
+          <ejb-class>org.superbiz.MySingletonBean</ejb-class>
+          <session-type>Singleton</session-type>
+          <load-on-startup/>
+          <depends-on>
+              <ejb-name>SingletonFoo</ejb-name>
+              <ejb-name>SingletonBar</ejb-name>
+          </depends-on>
+        </session>
+      </enterprise-beans>
+    </ejb-jar>
 

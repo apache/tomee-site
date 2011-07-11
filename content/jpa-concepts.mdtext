@@ -129,56 +129,53 @@ Calling EntityManager.merge() will re-attach a Detached object.
 Servlets and EJBs can use RESOURCE_LOCAL persistence units through the
 EntityManagerFactory as follows:
 
-{code:xml=persistence.xml}
-<?xml version="1.0" encoding="UTF-8" ?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
-  <!-- Tutorial "unit" -->
-  <persistence-unit name="Tutorial" transaction-type="RESOURCE_LOCAL">
-    <non-jta-data-source>myNonJtaDataSource</non-jta-data-source>
-    <class>org.superbiz.jpa.Account</class>
-  </persistence-unit>
-	
-</persistence>
+      <!-- Tutorial "unit" -->
+      <persistence-unit name="Tutorial" transaction-type="RESOURCE_LOCAL">
+        <non-jta-data-source>myNonJtaDataSource</non-jta-data-source>
+        <class>org.superbiz.jpa.Account</class>
+      </persistence-unit>
 
-    
+    </persistence>
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceUnit;
+And referenced as follows
 
-public class MyEjbOrServlet ... {
+    import javax.persistence.EntityManagerFactory;
+    import javax.persistence.EntityManager;
+    import javax.persistence.EntityTransaction;
+    import javax.persistence.PersistenceUnit;
 
-    @PersistenceUnit(unitName="Tutorial")
-    private EntityManagerFactory factory;
+    public class MyEjbOrServlet ... {
 
-    // Proper exception handling left out for simplicity
-    public void ejbMethodOrServletServiceMethod() throws Exception {
-	EntityManager entityManager = factory.createEntityManager();
+        @PersistenceUnit(unitName="Tutorial")
+        private EntityManagerFactory factory;
 
-	EntityTransaction entityTransaction =
-entityManager.getTransaction();
-        
-	entityTransaction.begin();
+        // Proper exception handling left out for simplicity
+        public void ejbMethodOrServletServiceMethod() throws Exception {
+            EntityManager entityManager = factory.createEntityManager();
 
-	Account account = entityManager.find(Account.class, 12345);
-        
-	account.setBalance(5000);
+            EntityTransaction entityTransaction = entityManager.getTransaction();
 
-	entityTransaction.commit();
+            entityTransaction.begin();
+
+            Account account = entityManager.find(Account.class, 12345);
+
+            account.setBalance(5000);
+
+            entityTransaction.commit();
+        }
+
+        ...
     }
-    
-    ...
-}
 
     
 #  Valid TRANSACTION Unit usage
-    
-    EJBs can use TRANSACTION persistence units through the EntityManager as
+
+EJBs can use TRANSACTION persistence units through the EntityManager as
 follows:
     
-    {code:xml=persistence.xml}
     <?xml version="1.0" encoding="UTF-8" ?>
     <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
     
@@ -191,7 +188,7 @@ follows:
     	
     </persistence>
 
-
+And referenced as follows
 
     import javax.ejb.Stateless;
     import javax.ejb.TransactionAttribute;

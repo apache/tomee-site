@@ -74,24 +74,22 @@ that change as much as we do, definitely voice your support by sending note
 to [jsr-316-comments@jcp.org](mailto:jsr-316-comments@jcp.org.html)
 
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>Not yet possible</B></DIV><DIV class="codeContent panelContent">
+Not yet possible
+
     @Stateless
-    
+
     public class WidgetBean implements Widget {
-    
-        public WidgetBean(@Resource(name = "count") Integer count, @EJB Foo
-foo, @Resource DataSource ds) {
+
+        public WidgetBean(@Resource(name = "count") Integer count, @EJB Foo foo, @Resource DataSource ds) {
            // do something
         }
-    
+
         public int getCount() {
-    	return count;
+            return count;
         }
-    
+
         public Foo getFoo() {
-    	return foo;
+            return foo;
         }
     }
-
-
 

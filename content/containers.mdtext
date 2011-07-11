@@ -9,21 +9,19 @@ defined in the container system. The part that actually makes it a cmp
 container is the ctype attribute, specifially, a ctype attribute set to
 CMP_ENTITY as such...
 
-{code:xml|title=example_01.conf}
-<?xml version="1.0"?>
-<openejb>
+    <?xml version="1.0"?>
+    <openejb>
 
-<Container id="Default CMP Container" ctype="CMP_ENTITY"/>
+    <Container id="Default CMP Container" ctype="CMP_ENTITY"/>
 
-</openejb>
+    </openejb>
 
-    
-    The really fun part is that the above configuration file is completely
+The really fun part is that the above configuration file is completely
 legal! If you started the server and pointed to this file...
     
-    bq. ./openejb.sh start -conf example_01.conf
+    ./openejb.sh start -conf example_01.conf
     
-    ...you would end up with a running server that contained only one
+...you would end up with a running server that contained only one
 container, called "Default CMP Container". You could then deploy beans into
 it and everything. There would be no other containers running in the server
 at all. If you telnet'd into the server and typed the 'system' command, you
@@ -46,15 +44,14 @@ could see for yourself that there is nothing else in the system.
 >     [openejb]
 > $
     
-    You see that. No beans, no JDBC resources, nothing but one CMP container
+You see that. No beans, no JDBC resources, nothing but one CMP container
 called "Default CMP Container".
     
 # Naming your Container
     
-    You can call the container anything you want, just change the value of the
+You can call the container anything you want, just change the value of the
 id attribute. Here is a container called "My PostgreSQL Contianer"
     
-    {code:xml|title=example_02.conf}
     <?xml version="1.0"?>
     <openejb>
     
@@ -88,18 +85,16 @@ be the only container in the list.
 
 After deployment, you would end up with a configuration like this one
 
-{code:xml|title=example_02.conf}
-<?xml version="1.0"?>
-<openejb>
+    <?xml version="1.0"?>
+    <openejb>
 
-<Container id="My PostgreSQL Container" ctype="CMP_ENTITY"/>
+    <Container id="My PostgreSQL Container" ctype="CMP_ENTITY"/>
 
-<Deployments jar="myCMPBean.jar" />
+    <Deployments jar="myCMPBean.jar" />
 
-</openejb>
+    </openejb>
 
-    
-    Most important, that bean will now be mapped directly to the container id
+Most important, that bean will now be mapped directly to the container id
 "My PostgreSQL Container". So if you change the name of the container and
 do not redeploy the myCMPBean.jar to point to the new container id, you
 will have big problems!
@@ -113,9 +108,8 @@ types are:
     	* STATELESS
     	* STATEFUL
     
-    The containers can all be of the same type, or a mix of the types.
+The containers can all be of the same type, or a mix of the types.
     
-    {code:xml|title=example_03.conf}
     <?xml version="1.0"?>
     <openejb>
     
@@ -140,39 +134,36 @@ container declaration. So it's possible to declare multiple containers of
 the same type, but configure each one differently. Let's use our CMP_ENTITY
 containers above as an example.
 
-{code:xml|title=example_03.conf}
-<?xml version="1.0"?>
-<openejb>
+    <?xml version="1.0"?>
+    <openejb>
 
-<Container id="My PostgreSQL Container" ctype="CMP_ENTITY">
-    Global_TX_Database	  conf/postgresql.cmp.global-database.xml
-    Local_TX_Database	  conf/postgresql.cmp.local-database.xml
-</Container>
+    <Container id="My PostgreSQL Container" ctype="CMP_ENTITY">
+        Global_TX_Database	  conf/postgresql.cmp.global-database.xml
+        Local_TX_Database	  conf/postgresql.cmp.local-database.xml
+    </Container>
 
-<Container id="My MySQL Container" ctype="CMP_ENTITY">
-    Global_TX_Database	conf/mysql.cmp.global-database.xml
-    Local_TX_Database	conf/mysql.cmp.local-database.xml
-</Container>
+    <Container id="My MySQL Container" ctype="CMP_ENTITY">
+        Global_TX_Database	conf/mysql.cmp.global-database.xml
+        Local_TX_Database	conf/mysql.cmp.local-database.xml
+    </Container>
 
-<Container id="My InstantDB Container" ctype="CMP_ENTITY">
-    Global_TX_Database	conf/instantdb.cmp.global-database.xml
-    Local_TX_Database	conf/instantdb.cmp.local-database.xml
-</Container>
+    <Container id="My InstantDB Container" ctype="CMP_ENTITY">
+        Global_TX_Database	conf/instantdb.cmp.global-database.xml
+        Local_TX_Database	conf/instantdb.cmp.local-database.xml
+    </Container>
 
-<Container id="My Stateful Session Container" ctype="STATEFUL"/>
-<Container id="My Stateless Session Container" ctype="STATELESS"/>
+    <Container id="My Stateful Session Container" ctype="STATEFUL"/>
+    <Container id="My Stateless Session Container" ctype="STATELESS"/>
 
-</openejb>
+    </openejb>
 
-    
-    The format of the configuration parameters is actually just regular old
+The format of the configuration parameters is actually just regular old
 java.util.Properties file format. It keeps things simple and doesn't
 require you to type endless amounts of tags that are just name/value pairs
 anyway. The java.util.Properties file format allows for spaces, tabs,
 colons, or equals signs to separate the name value pairs, so this would
 also be acceptable..
     
-    {code:xml|title=example_03.conf}
     <?xml version="1.0"?>
     <openejb>
     

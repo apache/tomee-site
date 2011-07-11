@@ -15,29 +15,27 @@ start with this basic class that has a built-in lookup allowing for a
 common prefix to be optionally applied to the beginning of all lookup
 strings.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyLocator.java</B></DIV><DIV class="codeContent panelContent">
     public class MyLocator {
         private final Context context;
-    
+
         public MyLocator() throws NamingException {
-    	this(null);
+            this(null);
         }
-    
+
         public MyLocator(String commonPrefix) throws NamingException {
-    	Properties properties = new Properties();
-    	properties.put(Context.INITIAL_CONTEXT_FACTORY,
-"org.apache.openejb.client.RemoteInitialContextFactory");
-    	properties.put(Context.PROVIDER_URL, "ejbd://localhost:4201/");
-    	this.context = new InitialContext(properties);
+            Properties properties = new Properties();
+            properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
+            properties.put(Context.PROVIDER_URL, "ejbd://localhost:4201/");
+            this.context = new InitialContext(properties);
         }
-    
+
         public Object lookup(String name) {
-    	try {
-    	    if (commonPrefix != null) name = commonPrefix + "/" +name;
-    	    return context.lookup(name);
-    	} catch (NamingException e) {
-    	    throw new IllegalArgumentException(e);
-    	}
+            try {
+                if (commonPrefix != null) name = commonPrefix + "/" +name;
+                return context.lookup(name);
+            } catch (NamingException e) {
+                throw new IllegalArgumentException(e);
+            }
         }
     }
 
@@ -149,11 +147,10 @@ in a JNDI tree that's a bit more human readable.
 
 
     public <T> T lookup(Class ejbClass, Class<T> type) {
-        return (T) lookup(ejbClass.getSimpleName() + "" +
-type.getSimpleName());
+        return (T) lookup(ejbClass.getSimpleName() + "" + type.getSimpleName());
     }
 
-
+and
 
     MyLocator locator = new MyLocator();
     Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);   

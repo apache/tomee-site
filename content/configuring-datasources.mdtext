@@ -92,17 +92,14 @@ There are several possible ways to refer to it, as follows.
 
 *BY matching variable name to resource name*
 
-
-{code:java}
-@Stateless
-public class FooBean {
-    @Resource DataSource myDerbyDatabase;
-}
+    @Stateless
+    public class FooBean {
+        @Resource DataSource myDerbyDatabase;
+    }
 
     
-    *OR BY matching name*
+*OR BY matching name*
     
-    {code:java}
     @Stateless
     public class FooBean {
         @Resource(name="myDerbyDatabase")
@@ -111,36 +108,36 @@ public class FooBean {
 
 
 *OR BY JNDI lookup*
-{code:java}
-@Resource(name="myDerbyDatabase", type=javax.sql.DataSource.class)
-@Stateless
-public class FooBean {
 
-    public void setSessionContext(SessionContext sessionContext) {
-	DataSource dataSource = (DataSource)
-sessionContext.lookup("myDerbyDatabase");
+    @Resource(name="myDerbyDatabase", type=javax.sql.DataSource.class)
+    @Stateless
+    public class FooBean {
+
+        public void setSessionContext(SessionContext sessionContext) {
+            DataSource dataSource = (DataSource)
+            sessionContext.lookup("myDerbyDatabase");
+        }
+
+        public void someOtherMethod() throws Exception {
+            InitialContext initialContext = new InitialContext();
+            DataSource dataSource = (DataSource)
+            initialContext.lookup("java:comp/env/myDerbyDatabase");
+        }
     }
 
-    public void someOtherMethod() throws Exception {
-	InitialContext initialContext = new InitialContext();
-	DataSource dataSource = (DataSource)
-initialContext.lookup("java:comp/env/myDerbyDatabase");
-    }
-}
+*OR*
 
-    *OR*
-    {code:xml}
     <resource-ref>
-       <res-ref-name>myDerbyDatabase</res-ref-name>
-       <res-type>javax.sql.DataSource</res-type>
-     </resource-ref>
+      <res-ref-name>myDerbyDatabase</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+    </resource-ref>
 
 *OR*
 
     <resource-ref>
        <res-ref-name>jdbc/myDerbyDatabase</res-ref-name>
        <res-type>javax.sql.DataSource</res-type>
-     </resource-ref>
+    </resource-ref>
 
 *OR*
 
@@ -148,5 +145,5 @@ initialContext.lookup("java:comp/env/myDerbyDatabase");
        <res-ref-name>someOtherName</res-ref-name>
        <res-type>javax.sql.DataSource</res-type>
        <mapped-name>myDerbyDatabase</mapped-name>
-     </resource-ref>
+    </resource-ref>
 

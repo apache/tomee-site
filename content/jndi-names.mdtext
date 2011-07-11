@@ -202,20 +202,19 @@ with these examples is to show the various ways you can isolate specific
 interfaces or types of interfaces to gain more specific control on how they
 are named.
 
-{code:xml|title=#1}
-<openejb-jar>
-  <ejb-deployment ejb-name="FooBean">
-    <jndi name="LocalOne" interface="org.superbiz.LocalOne"/> 
-    <jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/> 
-    <jndi name="RemoteOne" interface="org.superbiz.RemoteOne"/> 
-    <jndi name="RemoteTwo" interface="org.superbiz.RemoteTwo"/> 
-    <jndi name="FooHome" interface="org.superbiz.FooHome"/> 
-    <jndi name="FooLocalHome" interface="org.superbiz.FooLocalHome"/> 
-  </ejb-deployment>
-</openejb-jar>
+    <openejb-jar>
+      <ejb-deployment ejb-name="FooBean">
+        <jndi name="LocalOne" interface="org.superbiz.LocalOne"/>
+        <jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/>
+        <jndi name="RemoteOne" interface="org.superbiz.RemoteOne"/>
+        <jndi name="RemoteTwo" interface="org.superbiz.RemoteTwo"/>
+        <jndi name="FooHome" interface="org.superbiz.FooHome"/>
+        <jndi name="FooLocalHome" interface="org.superbiz.FooLocalHome"/>
+      </ejb-deployment>
+    </openejb-jar>
 
-    
-    {code:xml|title=#2}
+Or
+
     <openejb-jar>
       <ejb-deployment ejb-name="FooBean">
         <!-- applies to LocalOne and LocalTwo -->
@@ -232,30 +231,27 @@ are named.
       </ejb-deployment>
     </openejb-jar>
 
+Or
 
-{code:xml|title=#3}
-<openejb-jar>
-  <ejb-deployment ejb-name="FooBean">
-    <!-- applies to RemoteOne, RemoteTwo, FooHome, and FooLocalHome -->
-    <jndi name="{interfaceClass.simpleName}"/> 
-
-    <!-- these two would count as an override on the above format -->
-    <jndi name="LocalOne" interface="org.superbiz.LocalOne"/> 
-    <jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/> 
-  </ejb-deployment>
-</openejb-jar>
-
-    
-    {code:xml|title=#4}
     <openejb-jar>
       <ejb-deployment ejb-name="FooBean">
-        <!-- applies to LocalOne, LocalTwo, RemoteOne, RemoteTwo, FooHome, and
-FooLocalHome -->
-        <jndi name="{interfaceClass.simpleName}"/> 
+        <!-- applies to RemoteOne, RemoteTwo, FooHome, and FooLocalHome -->
+        <jndi name="{interfaceClass.simpleName}"/>
+
+        <!-- these two would count as an override on the above format -->
+        <jndi name="LocalOne" interface="org.superbiz.LocalOne"/>
+        <jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/>
       </ejb-deployment>
     </openejb-jar>
 
-
+or
+    
+    <openejb-jar>
+      <ejb-deployment ejb-name="FooBean">
+        <!-- applies to LocalOne, LocalTwo, RemoteOne, RemoteTwo, FooHome, and FooLocalHome -->
+        <jndi name="{interfaceClass.simpleName}"/> 
+      </ejb-deployment>
+    </openejb-jar>
 
 
 <a name="JNDINames-ChangingtheDefaultSetting"></a>

@@ -34,53 +34,52 @@ neater ones are (ordered simple to complex):
 <a name="ContributionTips-Whatistheprocess?"></a>
 # What is the process?
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>Contributor.java</B></DIV><DIV class="codeContent panelContent">
     public void contributeToOpenSource() {
-    
+
         boolean stillInterestedAndHavingFun = true;
         int taskSize = 1; // start small!
-        
+
         contributing:
         while (stillInterestedAndHavingFun) {
-        
-    	Task task = findSomethingInteresting(taskSize++);
-        
-    	if (!task.hasJira()) {
-    	    createJira(task);
-    	} else {
-    	    requestToBeAssignedToJira(task.jiraId());
-    	}
-        
-    	while (task.inProgress()) {
-        
-    	    chatOnListALittleGetCleverIdeas(task, new Ideas(task));
-    	    hackALittle(task);
-        
-    	    if (task.tooHard() || task.notFun()) {
-    		// no big deal, try again with something else
-    		taskSize--;
-    		continue contributing;
-    	    }
-    	}
-        
-    	File patchFile = createSvnOrGitPatch(task);
-    	attachToJira(task.jiraId(), patchFile);
-    	askForReviewOnList(task.jiraId());
-        
-    	while (!committed(patchFile)) {
-        
-    	    try {
-    		pokeAtSometingElse();
-    		helpOnUserList();
-    		dayDream();
-    	    } catch (MoreThanAWeekException e) {
-    		// Assume it fell off the radar -- happens.
-    		// Evidence we need more committers.
-    		bumpThreadOnList(task);
-    	    }
-    	}
+
+            Task task = findSomethingInteresting(taskSize++);
+
+            if (!task.hasJira()) {
+                createJira(task);
+            } else {
+                requestToBeAssignedToJira(task.jiraId());
+            }
+
+            while (task.inProgress()) {
+
+                chatOnListALittleGetCleverIdeas(task, new Ideas(task));
+                hackALittle(task);
+
+                if (task.tooHard() || task.notFun()) {
+                    // no big deal, try again with something else
+                    taskSize--;
+                    continue contributing;
+                }
+            }
+
+            File patchFile = createSvnOrGitPatch(task);
+            attachToJira(task.jiraId(), patchFile);
+            askForReviewOnList(task.jiraId());
+
+            while (!committed(patchFile)) {
+
+                try {
+                    pokeAtSometingElse();
+                    helpOnUserList();
+                    dayDream();
+                } catch (MoreThanAWeekException e) {
+                    // Assume it fell off the radar -- happens.
+                    // Evidence we need more committers.
+                    bumpThreadOnList(task);
+                }
+            }
         }
-    
+
     }
 
 

@@ -49,35 +49,32 @@ debugging, developing, etc.
 Try something like this for a simple IntraVM (Local) Client:
 
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>c:\my\app\MyEjbApplication.java</B></DIV><DIV class="codeContent panelContent">
-    import java.util.Properties;
+    import FooHome;
+
     import javax.naming.Context;
     import javax.naming.InitialContext;
     import javax.rmi.PortableRemoteObject;
-    import FooHome;
-    
+    import java.util.Properties;
+
     public class MyEjbApplication {
-    
-    public static void main( String args[]
-) {
-      try{
-        
-        Properties properties = new Properties();
-        
-        properties.put(Context.INITIAL_CONTEXT_FACTORY, 
-    	"org.openejb.client.LocalInitialContextFactory");
-        
-        InitialContext ctx = new InitialContext(properties);
-        
-        Object obj = ctx.lookup("my/bean/Foo");
-        
-        FooHome ejbHome = (FooHome)
-    	PortableRemoteObject.narrow(obj, FooHome.class);
-      
-      } catch (Exception e){
-        e.printStackTRace();
-      }
-    }
+
+        public static void main(String args[]) {
+            try {
+
+                Properties properties = new Properties();
+
+                properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.openejb.client.LocalInitialContextFactory");
+
+                InitialContext ctx = new InitialContext(properties);
+
+                Object obj = ctx.lookup("my/bean/Foo");
+
+                FooHome ejbHome = (FooHome) PortableRemoteObject.narrow(obj, FooHome.class);
+
+            } catch (Exception e) {
+                e.printStackTRace();
+            }
+        }
     }
 
 
@@ -86,24 +83,21 @@ Try something like this for a simple IntraVM (Local) Client:
 That would be the simplest spec compliant client you could create. If you
 don't care about spec compliance and just want to "cheat", you can do this:
 
-
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>c:\my\app\MyEjbApplication.java</B></DIV><DIV class="codeContent panelContent">
-    import javax.naming.InitialContext;
     import FooHome;
-    
+
+    import javax.naming.InitialContext;
+
     public class MyEjbApplication {
-    
-    public static void main( String args[]
-) {
-      try{
-        
-        FooHome ejbHome = (FooHome)new InitialContext().lookup(
-    			    "java:openejb/ejb/my/bean/Foo");
-      
-      } catch (Exception e){
-        e.printStackTRace();
-      }
-    }
+
+        public static void main(String args[]) {
+            try {
+
+                FooHome ejbHome = (FooHome) new InitialContext().lookup("java:openejb/ejb/my/bean/Foo");
+
+            } catch (Exception e) {
+                e.printStackTRace();
+            }
+        }
     }
 
 
@@ -277,24 +271,20 @@ in your openejb.conf file will be resolved assuming OPENEJB_HOME as the
 base path.
 
 
-{code:xml|title=openejb.conf}
-<openejb>
-...
+    <openejb>
+    ...
 
-<Deployments dir="beans\" />
-</openejb>
+    <Deployments dir="beans\" />
+    </openejb>
 
     
-    
-    
-    The above deployment path, "beans\", would automatically be expanded to
+The above deployment path, "beans\", would automatically be expanded to
 "c:\dir\openejb\beans".
     
-    If you want tell OpenEJB to look outside the OPENEJB_HOME, then use an
+If you want tell OpenEJB to look outside the OPENEJB_HOME, then use an
 absolute file path as shown below.
     
     
-    {code:xml|title=openejb.conf}
     <openejb>
     ...
     
@@ -307,21 +297,16 @@ OpenEJB can look in any number of directories for beans, just add those
 directories to your openejb.conf file as such.
 
 
-{code:xml|title=openejb.conf}
-<openejb>
-...
+    <openejb>
+    ...
 
-<Deployments dir="beans\" />
-<Deployments dir="c:\my\app\my\beans\" /></openejb>
+    <Deployments dir="beans\" />
+    <Deployments dir="c:\my\app\my\beans\" /></openejb>
 
-    
-    
-    
-    Furthermore, you can add jars individually to OpenEJB's deployment path by
+Furthermore, you can add jars individually to OpenEJB's deployment path by
 naming the jar directly.
     
     
-    {code:xml|title=openejb.conf}
     <openejb>
     ...
     

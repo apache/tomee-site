@@ -43,17 +43,16 @@ breeze.
 This is the openejb-jar.xml that is created by the Deploy tool in the Hello
 World example. As you can see, the file format is extremely simple.
 
-{code:xml|title=openejb-jar.xml}
-<?xml version="1.0"?>
-<openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
-    <ejb-deployment  ejb-name="Hello" 
-		     deployment-id="Hello" 
-		     container-id="Default Stateless Container"/>
-</openejb-jar>
+    <?xml version="1.0"?>
+    <openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
+        <ejb-deployment  ejb-name="Hello"
+             deployment-id="Hello"
+             container-id="Default Stateless Container"/>
+    </openejb-jar>
 
     
     
-    The *ejb-name* attribute is the name you gave the bean in your ejb-jar.xml.
+The *ejb-name* attribute is the name you gave the bean in your ejb-jar.xml.
 The *deployment-id* is the name you want to use to lookup the bean in your
 client's JNDI namespace. The *container-id* is the name of the container in
 your openejb.conf file that you would like the bean to run in. There MUST
@@ -61,10 +60,9 @@ be one *ejb-deployment* element for each EJB in your jar.
     
 # What if my bean uses a JDBC datasource?
     
-    Then you simply add a <resource-link> element to your <ejb-deployment>
+Then you simply add a <resource-link> element to your <ejb-deployment>
 element like this
     
-    {code:xml|title=openejb-jar.xml}
     <?xml version="1.0"?>
     <openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
         
@@ -93,46 +91,43 @@ resource.
 You will need one <resource-link> element for every <resource-ref> element
 in your ejb-jar.xml. So if you had an ejb-jar.xml like the following
 
-{code:xml|title=ejb-jar.xml}
-<?xml version="1.0"?>
-<ejb-jar>
-    <enterprise-beans>
-	<session>
-	    <ejb-name>MyExampleBean</ejb-name>
-	    <home>com.widget.ExampleHome</home>
-	    <remote>com.widget.ExampleObject</remote>
-	    <ejb-class>com.widget.ExampleBean</ejb-class>
-	    <session-type>Stateless</session-type>
-	    <transaction-type>Container</transaction-type>
-    
-	    <resource-ref>
-		<description>
-		This is a reference to a JDBC database.
-		</description>
-		<res-ref-name>jdbc/myFirstDatabase</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-	    </resource-ref>
-        
-	    <resource-ref>
-		<description>
-		This is another reference to a JDBC database.
-		</description>
-		<res-ref-name>jdbc/anotherDatabase</res-ref-name>
-		<res-type>javax.sql.DataSource</res-type>
-		<res-auth>Container</res-auth>
-	    </resource-ref>
-        
-	</session>
-    </enterprise-beans>
-</ejb-jar>
+    <?xml version="1.0"?>
+    <ejb-jar>
+      <enterprise-beans>
+        <session>
+          <ejb-name>MyExampleBean</ejb-name>
+          <home>com.widget.ExampleHome</home>
+          <remote>com.widget.ExampleObject</remote>
+          <ejb-class>com.widget.ExampleBean</ejb-class>
+          <session-type>Stateless</session-type>
+          <transaction-type>Container</transaction-type>
+
+          <resource-ref>
+            <description>
+              This is a reference to a JDBC database.
+            </description>
+            <res-ref-name>jdbc/myFirstDatabase</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+          </resource-ref>
+
+          <resource-ref>
+            <description>
+              This is another reference to a JDBC database.
+            </description>
+            <res-ref-name>jdbc/anotherDatabase</res-ref-name>
+            <res-type>javax.sql.DataSource</res-type>
+            <res-auth>Container</res-auth>
+          </resource-ref>
+
+        </session>
+      </enterprise-beans>
+    </ejb-jar>
 
     
-    
-    Then you would need two <resource-link> elements for that bean in your
+Then you would need two <resource-link> elements for that bean in your
 openejb-jar.xml file as such.
     
-    {code:xml|title=openejb-jar.xml}
     <?xml version="1.0"?>
     <openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
         

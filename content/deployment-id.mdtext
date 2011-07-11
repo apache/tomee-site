@@ -101,7 +101,6 @@ Each bean is added to the public, global namespace using it's deployment id
 as its JNDI lookup. For example, if a bean had a deployment-id of
 "/my/bean/foo", a non-bean client could lookup that bean as follows.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyAppClient.java</B></DIV><DIV class="codeContent panelContent">
     ...
     Object bean = initialContext.lookup("/my/bean/Foo");
     ...
@@ -141,7 +140,6 @@ Just as before, clients can lookup beans from the Remote Server using the
 bean's deployment id. For example, if a bean had a deployment-id of
 "/my/bean/foo", a client could lookup that bean as follows.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyAppClient.java</B></DIV><DIV class="codeContent panelContent">
     ...
     Object bean = initialContext.lookup("/my/bean/Foo");
     ...
@@ -161,44 +159,30 @@ just as with the Local Server and Remote Server, clients can lookup beans
 using the bean's deployment id. OpenORB has a JNDI implementation of their
 naming service, so lookups can be done just as before.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyAppClient.java</B></DIV><DIV class="codeContent panelContent">
     ...
-    Object bean = initialContext.lookup("/my/bean/Foo");
-    ...
-    {}
-    
-    CORBA clients can also access beans in OpenEJB as CORBA objects. These can
-be looked up from OpenORB's naming service (CosNaming) as follows.
-    
-    {code:title=MyCorbaAppClient.java}
-    ...
-    String[]
- args = ...
-    
+    String[] args = ...
+
     // The ORB and Object
     org.omg.CORBA.ORB    orb  = null;
     org.omg.CORBA.Object bean = null.
-    
+
     // The Naming Service and Object Name
     org.omg.CosNaming.NamingContext   context = null;
-    org.omg.CosNaming.NameComponent[]
-    name = null;
-    
+    org.omg.CosNaming.NameComponent[]    name = null;
+
     // Get the ORB
-    orb = org.omg.CORBA.ORB.init( args, null );		     
-     
-    // Get the Naming Service 
+    orb = org.omg.CORBA.ORB.init( args, null );
+
+    // Get the Naming Service
     org.omg.CORBA.Object ref = null;
     ref = orb.resolve_initial_references("NameService");
     context = org.omg.CosNaming.NamingContextHelper.narrow( ref );
-    
+
     // Get the Name as a component
-    // Note: the string is the bean's deployment id 
-    name    = new org.omg.CosNaming.NameComponent[ 1 ]
-;
-    name[0]
- = new org.omg.CosNaming.NameComponent("/my/bean/foo","");
-    
+    // Note: the string is the bean's deployment id
+    name    = new org.omg.CosNaming.NameComponent[ 1 ];
+    name[0] = new org.omg.CosNaming.NameComponent("/my/bean/foo","");
+
     // Finally, get the bean as a CORBA object
     // Equvalent to an InitialContext.lookup("/my/bean/foo");
     bean = context.resolve( name );

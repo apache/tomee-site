@@ -314,7 +314,6 @@ JavaBeans PropertyEditor.  We include several built-in PropertyEditors
 already such as Date, InetAddress, Class, File, URL, URI, Map, List, any
 java.lang.Enum and more.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyBean.java</B></DIV><DIV class="codeContent panelContent">
     import java.net.URI;
     import java.io.File;
     import java.util.Date;
@@ -335,7 +334,6 @@ powerful.  Declare an injectable field that leverages Java Generics and we
 will use that information to boost your injection to the next level.  For
 example:
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>MyBean.java</B></DIV><DIV class="codeContent panelContent">
     import java.net.URI;
     import java.io.File;
     
@@ -400,7 +398,6 @@ are not container controlled resources (i.e. datasources and things of that
 nature).  You can configure you ejbs via a properties file and skip the
 need for an ejb-jar.xml and it's 5 lines per property madness.
 
-<DIV class="code panel" style="border-style: solid;border-width: 1px;"><DIV class="codeHeader panelHeader" style="border-bottom-width: 1px;border-bottom-style: solid;"><B>META-INF/env-entries.properties</B></DIV><DIV class="codeContent panelContent">
     blog = http://acme.org/myblog
     birthday = 1954-03-01
     homeDirectory = /home/esmith/
@@ -451,33 +448,24 @@ Some example output might look like the following.  Here we illegally add
 some annotations to the "Movies" bean's interface as well as use the wrong
 annotations for various types of injection:
 
-{code:none}
-FAIL ... Movies:  @Stateful cannot be applied to an interface:
-org.superbiz.injection.jpa.Movies
-FAIL ... Movies:  Missing required "type" attribute on class-level
-@Resource usage
-FAIL ... Movies:  Mistaken use of @Resource on an EntityManagerFactory
-reference.  
-		  Use @PersistenceUnit for ref
-"org.superbiz.injection.jpa.MoviesImpl/entityManagerFactory"
-FAIL ... Movies:  Mistaken use of @PersistenceUnit on an EntityManager
-reference.  
-		  Use @PersistenceContext for ref
-"org.superbiz.injection.jpa.MoviesImpl/entityManager"
-WARN ... Movies:  Inoring @RolesAllowed used on interface
-org.superbiz.injection.jpa.Movies method deleteMovie.
-		  Annotation only usable on the bean class.
-WARN ... Movies:  Ignoring @TransactionAttribute used on interface
-org.superbiz.injection.jpa.Movies method addMovie.
-		  Annotation only usable on the bean class.
+    FAIL ... Movies:  @Stateful cannot be applied to an interface: org.superbiz.injection.jpa.Movies
+    FAIL ... Movies:  Missing required "type" attribute on class-level @Resource usage
+    FAIL ... Movies:  Mistaken use of @Resource on an EntityManagerFactory reference.
+                      Use @PersistenceUnit for ref "org.superbiz.injection.jpa.MoviesImpl/entityManagerFactory"
+    FAIL ... Movies:  Mistaken use of @PersistenceUnit on an EntityManager reference.
+                      Use @PersistenceContext for ref "org.superbiz.injection.jpa.MoviesImpl/entityManager"
+    WARN ... Movies:  Inoring @RolesAllowed used on interface org.superbiz.injection.jpa.Movies method deleteMovie.
+                      Annotation only usable on the bean class.
+    WARN ... Movies:  Ignoring @TransactionAttribute used on interface org.superbiz.injection.jpa.Movies method addMovie.
+                      Annotation only usable on the bean class.
 
     
 ## JNDI Name Formatting
     
-    A complication when using EJB is that plain client applications are at the
+A complication when using EJB is that plain client applications are at the
 mercy of vendor's chosen methodology for how JNDI names should be
 constructed.  OpenEJB breaks the mold by allowing you to [specify the exact format|OPENEJBx30:JNDI Names]
- you'd like OpenEJB to use for your server or any individual application. 
+you'd like OpenEJB to use for your server or any individual application.
 Supply us with a formatting string, such as
 "ejb/\{ejbName}/\{interfaceClass.simpleName}", to get a JNDI layout that
 best matches your needs.
