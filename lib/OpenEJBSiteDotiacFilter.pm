@@ -15,6 +15,11 @@ sub markdown_filter {
     # Use raw value rather than escape (by calling repr() rather than
     # string()) so that we can embed html in our .mdtext documents.
     my $raw  = $value->repr;
+
+    $raw =~ s,(/),<IMG class="emoticon" src="https://cwiki.apache.org/confluence/images/icons/emoticons/check.gif" height="16" width="16" align="absmiddle" alt="" border="0">,g;
+    $raw =~ s,(x),<IMG class="emoticon" src="https://cwiki.apache.org/confluence/images/icons/emoticons/error.gif" height="16" width="16" align="absmiddle" alt="" border="0">,g;
+
+    
     my $html = markdown($raw);
 
     # Blindly mark return value as safe.
