@@ -192,3 +192,75 @@ Obviously, the above style to object creation couples really well to the `Resour
 that gives you Properties objects back. You put the class name and config for your plugin in the
 properties files and pass the properties right into the ObjectRecipe and more or less get a
 little do-it-yourself IoC plugin system.
+
+# OpenEJB/TomEE
+
+Here is a grep of some of the calls made to `AnnotationFinder`.  Most of this code is in an OpenEJB class called
+`AnnotationDeployer` whose primary job is to merge the @annotation and <xml> metadata into one tree.
+
+            for (Annotated<Class<?>> clazz : finder.findMetaAnnotatedClasses(LocalClient.class)) {
+            for (Annotated<Class<?>> clazz : finder.findMetaAnnotatedClasses(RemoteClient.class)) {
+        	List<Class<?>> connectorClasses = finder.findAnnotatedClasses(Connector.class);
+        	List<Class<?>> classes = finder.findAnnotatedClasses(ConnectionDefinitions.class);
+        	classes = finder.findAnnotatedClasses(ConnectionDefinition.class);
+        	classes = finder.findAnnotatedClasses(Activation.class);
+        	classes = finder.findAnnotatedClasses(AdministeredObject.class);
+            classes.addAll(finder.findAnnotatedClasses(WebService.class));
+            classes.addAll(finder.findAnnotatedClasses(WebServiceProvider.class));
+            for (Annotated<Class<?>> beanClass : finder.findMetaAnnotatedClasses(Singleton.class)) {
+            for (Annotated<Class<?>> beanClass : finder.findMetaAnnotatedClasses(Stateless.class)) {
+            for (Annotated<Class<?>> beanClass : finder.findMetaAnnotatedClasses(Stateful.class)) {
+            for (Annotated<Class<?>> beanClass : finder.findMetaAnnotatedClasses(ManagedBean.class)) {
+            for (Annotated<Class<?>> beanClass : finder.findMetaAnnotatedClasses(MessageDriven.class)) {
+            List<Class<?>> appExceptions = finder.findAnnotatedClasses(ApplicationException.class);
+                    List<Class<?>> list = finder.findAnnotatedClasses(annotation);
+                final List<Annotated<Class<?>>> annotatedClasses = sortClasses(annotationFinder.findMetaAnnotatedClasses(Interceptors.class));
+                final List<Annotated<Method>> annotatedMethods = sortMethods(annotationFinder.findMetaAnnotatedMethods(Interceptors.class));
+                for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(ExcludeDefaultInterceptors.class)) {
+                for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(ExcludeClassInterceptors.class))) {
+                            if (annotationFinder.isAnnotationPresent(Path.class) || !annotationFinder.findAnnotatedMethods(Path.class).isEmpty()) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(Asynchronous.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(Asynchronous.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(RolesAllowed.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(PermitAll.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(DenyAll.class)) {
+            scheduleMethods.addAll(annotationFinder.findMetaAnnotatedMethods(javax.ejb.Schedules.class));
+            scheduleMethods.addAll(annotationFinder.findMetaAnnotatedMethods(javax.ejb.Schedule.class));
+                for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(PostConstruct.class))) {
+                for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(PreDestroy.class))) {
+                    for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(javax.interceptor.AroundInvoke.class))) {
+                    for (Annotated<Method> method : sortMethods((annotationFinder.findMetaAnnotatedMethods(javax.interceptor.AroundTimeout.class)))) {
+                    List<Annotated<Method>> timeoutMethods = sortMethods(annotationFinder.findMetaAnnotatedMethods(javax.ejb.Timeout.class));
+                    for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(AfterBegin.class))) {
+                    for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(BeforeCompletion.class))) {
+                    for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(AfterCompletion.class))) {
+                    for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(PostActivate.class))) {
+                    for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(PrePassivate.class))) {
+                for (Annotated<Method> method : sortMethods(annotationFinder.findMetaAnnotatedMethods(Init.class))) {
+                List<Annotated<Method>> removeMethods = sortMethods(annotationFinder.findMetaAnnotatedMethods(Remove.class));
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(EJBs.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(EJB.class)) {
+            for (Annotated<Field> field : annotationFinder.findMetaAnnotatedFields(EJB.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(EJB.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(Resources.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(Resource.class)) {
+            for (Annotated<Field> field : annotationFinder.findMetaAnnotatedFields(Resource.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(Resource.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(WebServiceRefs.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(WebServiceRef.class)) {
+            for (Annotated<Field> field : annotationFinder.findMetaAnnotatedFields(WebServiceRef.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(WebServiceRef.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(PersistenceUnits.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(PersistenceUnit.class)) {
+            for (Annotated<Field> field : annotationFinder.findMetaAnnotatedFields(PersistenceUnit.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(PersistenceUnit.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(PersistenceContexts.class)) {
+            for (Annotated<Class<?>> clazz : annotationFinder.findMetaAnnotatedClasses(PersistenceContext.class)) {
+            for (Annotated<Field> field : annotationFinder.findMetaAnnotatedFields(PersistenceContext.class)) {
+            for (Annotated<Method> method : annotationFinder.findMetaAnnotatedMethods(PersistenceContext.class)) {
+            int ann = annotationFinder.findAnnotatedClasses(handler.getAnnotationClass()).size();
+            ann += annotationFinder.findAnnotatedMethods(handler.getAnnotationClass()).size();
+            List<Annotated<Class<?>>> types = sortClasses(annotationFinder.findMetaAnnotatedClasses(annotationClass));
+            List<Annotated<Method>> methods = annotationFinder.findMetaAnnotatedMethods(annotationClass);
+        List<Class<?>> annotatedClasses = finder.findAnnotatedClasses(Path.class);
+        methods.addAll(finder.findAnnotatedMethods(Path.class));
