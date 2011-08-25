@@ -45,7 +45,6 @@ So for example with the following persistence.xml:
 You can override and add persistence unit properties in your test case.
 There are currently no facilities for removing them (if you have a need for
 that let us know -- it hasn't really come up so far).
-    
 
     Properties p = new Properties();
     p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
@@ -55,7 +54,6 @@ that let us know -- it hasn't really come up so far).
 
     context = new InitialContext(p);
 
-    
 The overriding order is as follows: 1 = highest, 4 = lowest.
     
     # InitialContext properties
@@ -76,7 +74,21 @@ These properties would be passed by OpenEJB directly to the persistence
 provider (in this case Hibernate).  With one exception OpenEJB does not
 understand or modify these properties.	Details on that one exception
 below.
-    
+
+### Common mistakes
+
+Note that you **must** use the **unit name** as the prefix.  This will not work:
+
+        Properties p = new Properties();
+        p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
+
+        p.put("hibernate.hbm2ddl.auto", "update");
+        p.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
+
+        context = new InitialContext(p);
+
+Currently, only properties that start with the unit name are search and applied.
+
 ###  No need to specify a "transaction lookup" property
 
 All vendors have such a property for getting a reference to the container's
@@ -95,7 +107,7 @@ _org.apache.openejb.hibernate.TransactionManagerLookup_.  If the property
 is already set in the persistence unit it will be overwritten if it starts
 with the standard "org.hibernate.transaction." prefix.	
 
-Custom lookup implementations will never be overwritten.
+Custom lookup implementations will never be overwritten automatically.
 
 #### Provider oracle.toplink.essentials.PersistenceProvider
 
@@ -107,7 +119,7 @@ If the property is already set in the persistence unit it will be
 overwritten if it starts with the standard "oracle.toplink.transaction."
 prefix.  
 
-Custom transaction controller implementations will never be overwritten.
+Custom transaction controller implementations will never be overwritten automatically.
 
 #### Provider org.eclipse.persistence.jpa.PersistenceProvider
 
@@ -119,7 +131,7 @@ _org.apache.openejb.eclipselink.JTATransactionController_.  If the property
 is already set in the persistence unit it will be overwritten if it starts
 with the standard "org.eclipse.persistence.transaction." prefix.  
 
-Custom transaction controller implementations will never be overwritten.
+Custom transaction controller implementations will never be overwritten automatically.
 
 #### Provider org.apache.openjpa.persistence.PersistenceProviderImpl
 
