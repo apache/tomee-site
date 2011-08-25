@@ -5,6 +5,8 @@ use warnings;
 
 use LWP;
 
+print "Content-Type: text/html\n\n";
+
 my $ua = LWP::UserAgent->new();
 
 my $content = $ua->get("https://repository.apache.org/content/groups/snapshots/org/apache/openejb/apache-tomee/4.0.0-SNAPSHOT/")->content;
