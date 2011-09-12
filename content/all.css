@@ -53,10 +53,56 @@ img {
 }
 
 .Col1 {
-    background: #7270c2;
-    width: 110px;
+    /*background: #8b8ac2;*/
+    /*background: #9a99c2;*/
+    background: #a4a3c2;
+    /*background: #aba9d9;*/
+    /*background: #b8b6d9;*/
+    background-image:url('gradient-001.png');
+    background-size:150px 2px;
+    background-repeat: repeat-y;
+    width: 130px;
     padding-left: 20px;
     border-right: 7px solid;
+}
+
+#Navigation h3, #Navigation a {
+    /*color: #cbcbeb;*/
+    /*color: #cfcff0;*/
+    color: #dfdfeb;
+}
+
+
+/* Navigation ------------------------------*/
+
+#Navigation h3 {
+    font-size: 14px;
+    border-bottom: 1px solid #8280d2;
+    /*border-right: 1px solid #8280d2;*/
+    margin-bottom: .5em;
+}
+
+#Navigation ul {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+#Navigation li {
+    margin: 0px;
+    margin-right: 15%;
+    line-height: 17px;
+    font-size: 11px;
+    list-style: none;
+}
+
+#Navigation .feeds {
+    padding-left: 0px;
+}
+
+#Navigation .feedsText {
+    vertical-align: top;
 }
 
 .Col2 {
@@ -117,9 +163,9 @@ img {
     padding: 10px;
 }
 
-.Row5 .Col1 {
-    background: url(http://openejb.apache.org/images/stripe105.gif) repeat-x left top;
-}
+/*.Row5 .Col1 {*/
+    /*background: url(http://openejb.apache.org/images/stripe105.gif) repeat-x left top;*/
+/*}*/
 
 .bodyGrey {
     font-size: 11px;
@@ -132,42 +178,6 @@ img {
 
 .ExamplesTable .Cel1 {
     width: 160px;
-}
-
-/* Navigation ------------------------------*/
-
-#Navigation h3, #Navigation a {
-    color: #cbcbeb;
-}
-
-#Navigation h3 {
-    font-size: 14px;
-    border-bottom: 1px solid #8280d2;
-    border-right: 1px solid #8280d2;
-    margin-bottom: .5em;
-}
-
-#Navigation ul {
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 15px;
-}
-
-#Navigation li {
-    margin: 0px;
-    margin-right: 15%;
-    line-height: 17px;
-    font-size: 11px;
-    list-style: none;
-}
-
-#Navigation .feeds {
-    padding-left: 0px;
-}
-
-#Navigation .feedsText {
-    vertical-align: top;
 }
 
 /* Page Header ---------------------------*/
@@ -189,6 +199,18 @@ img {
 #RightContent {
     /*padding: 12px;*/
     width: 300px;
+
+    -moz-border-radius-topleft: .4em;
+    -moz-border-radius-topright: .4em;
+    -webkit-border-top-left-radius: .4em;
+    -webkit-border-top-right-radius: .4em;
+    -webkit-border-bottom-left-radius: .4em;
+    -webkit-border-bottom-right-radius: .4em;
+    border-top-left-radius: .4em;
+    border-top-right-radius: .4em;
+    border-bottom-left-radius: .4em;
+    border-bottom-right-radius: .4em;
+
 }
 
 #RightContent .panel {
@@ -196,6 +218,16 @@ img {
     font-size: 14px;
     padding: 0px;
     margin-bottom: .5em;
+    -moz-border-radius-topleft: .4em;
+    -moz-border-radius-topright: .4em;
+    -webkit-border-top-left-radius: .4em;
+    -webkit-border-top-right-radius: .4em;
+    -webkit-border-bottom-left-radius: .4em;
+    -webkit-border-bottom-right-radius: .4em;
+    border-top-left-radius: .4em;
+    border-top-right-radius: .4em;
+    border-bottom-left-radius: .4em;
+    border-bottom-right-radius: .4em;
 }
 
 #RightContent .panelHeader {
@@ -287,9 +319,19 @@ h1 {
     padding-bottom: 6px;
     border-top: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
-    color: #000000;
+    color: #7270c2;
     font-size: 18px;
     background-color: #eeeeee;
+    -moz-border-radius-topleft: .4em;
+    -moz-border-radius-topright: .4em;
+    -webkit-border-top-left-radius: .4em;
+    -webkit-border-top-right-radius: .4em;
+    -webkit-border-bottom-left-radius: .4em;
+    -webkit-border-bottom-right-radius: .4em;
+    border-top-left-radius: .4em;
+    border-top-right-radius: .4em;
+    border-bottom-left-radius: .4em;
+    border-bottom-right-radius: .4em;
 }
 
 h2 {

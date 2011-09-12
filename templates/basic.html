@@ -3,52 +3,23 @@
   <HEAD>
     <!-- $PAGETITLE -->
     <title>{% block title %}{{ headers.title }}{% endblock %}</title>
-    <LINK href="http://openejb.apache.org/all.css" rel="stylesheet" type="text/css">
+    <LINK href="all.css" rel="stylesheet" type="text/css">
     <!--[if IE]><link rel="stylesheet" type="text/css" media="screen, projection" href="openejb.apache.org/ie.css"><![endif]-->
+
+    <link href="prettify.css" type="text/css" rel="stylesheet" />
+
+    <script src="/javascript/prettify.js" type="text/javascript"></script>
+    <script src="/javascript/jquery-latest.js"></script>
+    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+    <script src="/javascript/common.js"></script>
 
     <LINK rel="SHORTCUT ICON" href="http://openejb.apache.org/images/favicon.ico">
     <META http-equiv="Content-Type" content="text/html;charset=UTF-8">
   </HEAD>
   <BODY>
 
-    <!-- Delay the loading of the external javascript file needed for labels (as it takes too long to load and visibly holds loading of the page body) -->
-    <!-- To do this without javascript errors over undefined functions, we need to declare stubs here (that are overrided later by the proper implementations) -->
-    <SCRIPT language="JavaScript" type="text/javascript">
-      function doAddLabel(hideTextfieldAfterAddParam)
-      {
-      // stub
-      }
-
-      function onAddLabel()
-      {
-      // stub
-      }
-
-      function showLabelsInput()
-      {
-      // stub
-      }
-    </SCRIPT>
-
     <A name="top"></A>
     <TABLE class="frameTable" cellpadding="0" cellspacing="0" border="0">
-      <TR class="Row1">
-        <TD class="Col1"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-        <TD class="Col2"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-        <TD class="Col3"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-        <TD class="Col4"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-        <TD class="Col5"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-      </TR>
-      <TR class="Row2">
-        <TD class="Col1"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-        <TD class="Col2">&nbsp;</TD>
-        <TD class="Col3" id="breadcrumbs">
-          <!-- $TOP_NAV_BAR -->
-          <A href="" title="Index">Home</A> | <A href="news.html" title="News">News</A> | <A href="faq.html" title="FAQ">FAQ</A> | <A href="download.html" title="Download">Download</A> | <A href="mailing-lists.html" title="Mailing Lists">Lists</A> | <A href="http://issues.apache.org/jira/browse/OPENEJB" class="external-link" rel="nofollow">Issues</A>
-        </TD>
-        <TD class="Col4"><IMG alt="" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
-        <TD class="Col5">&nbsp;</TD>
-      </TR>
       <TR class="Row3">
         <TD class="Col1"><IMG alt="" class="Row3Img" id="thinLine" src="http://openejb.apache.org/images/line_sm.gif"></TD>
         <TD class="Col2"><IMG alt="" class="Row3Img" src="http://openejb.apache.org/images/dotTrans.gif"></TD>
@@ -67,7 +38,6 @@
             <LI><A href="news.html" title="News">News</A></LI>
             <LI><A href="faq.html" title="FAQ">FAQ</A></LI>
             <LI><A href="download.html" title="Download">Download</A></LI>
-            <LI><A href="documentation.html" title="Index">Documentation</A></LI>
             <LI><A href="documentation.html" title="Index">Documentation</A></LI>
             <LI><A href="examples.html" title="Examples">Examples</A></LI>
             <LI><A href="lightening-demos.html" class="external-link" rel="nofollow">Lightning Demos</A></LI>
@@ -161,7 +131,7 @@
         <TD class="Col5">
         </TD>
       </TR>
-      <TR  class="Row5">
+      <TR class="Row5">
         <TD class="Col1">&nbsp;</TD>
         <TD class="Col2">&nbsp;</TD>
         <TD class="Col3">
