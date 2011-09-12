@@ -58,7 +58,7 @@ img {
     background: #a4a3c2;
     /*background: #aba9d9;*/
     /*background: #b8b6d9;*/
-    background-image:url('gradient-001.png');
+    background-image:url('/images/gradient-001.png');
     background-size:150px 2px;
     background-repeat: repeat-y;
     width: 130px;
