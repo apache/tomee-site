@@ -1,3 +1,3 @@
 RewriteEngine on
 
-^/examples/(.*) http://ci.apache.org/projects/openejb/examples-generated/$1 [P]
+RewriteRule ^/examples/(.*) http://ci.apache.org/projects/openejb/examples-generated/$1 [P]
