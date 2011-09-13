@@ -2,5 +2,5 @@ Title: Download
 <a name="Download-ApacheOpenEJB3.1.4"></a>
 # Apache OpenEJB 3.1.4
 
-{include:Apache OpenEJB 3.1.4}
+{{ apache-openejb-3.1.4:content|markdown }}
  
