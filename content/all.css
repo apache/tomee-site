@@ -58,10 +58,13 @@ img {
     background: #a4a3c2;
     /*background: #aba9d9;*/
     /*background: #b8b6d9;*/
-    background-image:url('/images/gradient-001.png');
-    background-size:150px 2px;
+    /*background-image:url('images/gradient-AK6T6.png');*/
+    background-image:url('images/gradient-QUC5C.png');
+    /*background-image:url('images/gradient-KNWSM.png');*/
+    /*background-image:url('images/gradient-002.png');*/
+    background-size:130px 2px;
     background-repeat: repeat-y;
-    width: 130px;
+    width: 110px;
     padding-left: 20px;
     border-right: 7px solid;
 }
@@ -108,6 +111,10 @@ img {
 .Col2 {
     width: 40px;
 }
+
+/*.Col3 {*/
+    /*width: 700px;*/
+/*}*/
 
 .Col4 {
     width: 10px;
@@ -489,6 +496,8 @@ table.bodyTable td {
     font-family: Courier;
     margin: 10px;
     line-height: 13px;
+    background-color: #f0f0f0;
+    padding: 3px;
 }
 
 .preformattedHeader {
@@ -498,11 +507,6 @@ table.bodyTable td {
     text-align: center;
 }
 
-.preformattedContent {
-    background-color: #f0f0f0;
-    padding: 3px;
-}
-
 pre {
     padding: 0px;
     margin-top: 5px;
@@ -510,6 +514,24 @@ pre {
     margin-bottom: 5px;
     margin-right: 5px;
     text-align: left;
+}
+
+pre {
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+	background: #f0f0f0;
+	/*border-left: 1px solid #ccc;*/
+	/*border-bottom: 1px solid #ccc;*/
+	width: 600px;
+	overflow: auto; /*--If the Code exceeds the width, a scrolling is available--*/
+	overflow-Y: hidden;  /*--Hides vertical scroll created by IE--*/
+}
+
+pre code {
+	margin: 0 0 0 15px;  /*--Left Margin--*/
+	padding: 18px 0;
+	display: block;
 }
 
 .source {
@@ -931,4 +953,85 @@ div.Updated div.smalltext {
     border-top: 1px solid white;
     padding-top: 2px;
     margin-top: 0px;
+}
+
+.code {
+    font-size: 1em;
+}
+
+#PageContent {
+    width: 100%;
+}
+#list, #aggregate {
+    width: 600px;
+    float: left;
+}
+
+#checkboxes-check {
+    margin-right: 0;
+    float: right;
+    width: 25em;
+    text-align: center;
+}
+
+.spacer {
+    margin: 0px;
+    width: 60em;
+}
+
+#checkboxes-button ul, #checkboxes-check ul, #header ul {
+    list-style-type:none;
+}
+#floatingbar ul li {
+    margin-top: -1.1em;
+}
+#checkboxes-button ul li {
+    float:left;
+}
+
+#floatingbar {
+    overflow: hidden;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 1.1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: Arial;
+    font-weight: bold;
+    background-color: #5A5CB8;
+}
+
+#floatingbar ul {
+    list-style-type:none;
+}
+#floatingbar ul li, #header ul li {
+    float:left;
+    color:#666;
+}
+#floatingbar ul li a {
+    text-decoration:none;
+    color:#000;
+    padding-left: 10px;
+    font-size:12px;
+    font-weight:normal;
+    font-family:Arial;
+}
+#floatingbar ul li a:hover {
+    color:#000033;
+}
+
+.button {
+    font-size: 0.9em;
+    width: 20em;
+}
+
+#api-info {
+    margin-top: 1em;
+    margin-left: 3em;
+}
+
+.downloadzip {
+    color: #ccc;
 }
