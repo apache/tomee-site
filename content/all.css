@@ -69,10 +69,17 @@ img {
     border-right: 7px solid;
 }
 
-#Navigation h3, #Navigation a {
+#Navigation h3 {
     /*color: #cbcbeb;*/
     /*color: #cfcff0;*/
+    /*color: #dfdfeb;*/
     color: #dfdfeb;
+}
+
+#Navigation a {
+    color: #cbcbeb;
+    /*color: #cfcff0;*/
+    /*color: #dfdfeb;*/
 }
 
 
