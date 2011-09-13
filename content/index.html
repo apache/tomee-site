@@ -2,5 +2,20 @@
 
 {% block title %}Apache OpenEJB and Apache TomEE{% endblock %}
 {% block content %}
-        Hello World
+    <div>
+        {{ project_info.content|markdown }}
+    </div>
+    <div class="clear"></div>
+    <div id="news" class="container_16">
+    <div id="news_feed" class="grid_9 suffix_1">
+        <h3>Latest News</h3>
+
+        {% for e in blog.list %}
+        <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>
+        <div class="section-content">{{ e.content|safe|truncatewords_html:50 }}</div>
+        <hr>
+        {% endfor %}
+    </div>
+    <div class="clear"></div>
+    </div>
 {% endblock %}
