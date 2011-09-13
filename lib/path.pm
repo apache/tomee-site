@@ -1,6 +1,7 @@
 package path;
 use strict;
 use warnings;
+use ASF::Value;
 
 # The @patterns array is used to map filepaths to page treatments.  Each
 # element must be an arrayref with 3 elements of its own: a regex pattern for
