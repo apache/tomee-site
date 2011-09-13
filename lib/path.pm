@@ -9,7 +9,16 @@ use warnings;
 # be passed to the view subroutine.
 
 our @patterns = (
-    [ qr!\.mdtext$!, basic => { template => "basic.html" } ],
+
+    [qr!^/index\.html$!, news_page =>
+      {
+        blog     => ASF::Value::Blogs->new(blog => "openejb", limit=> 3),
+        twitter  => ASF::Value::Twitter->new(name => 'OpenEJB', limit => 3),
+      },
+    ],
+
+    [qr!\.mdtext$!, basic => { template => "basic.html" } ],
+
 );
 
 # The %dependecies hash is used when building pages that reference or depend

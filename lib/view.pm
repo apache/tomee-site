@@ -38,15 +38,47 @@ use OpenEJBSiteDotiacFilter;
 
 BEGIN { push @Dotiac::DTL::TEMPLATE_DIRS, "templates"; }
 
+# This is most widely used view.  It takes a
+# 'template' argument and a 'path' argument.
+# Assuming the path ends in foo.mdtext, any files
+# like foo.page/bar.mdtext will be parsed and
+# passed to the template in the "bar" (hash)
+# variable.
+# Has the same behavior as the above for foo.page/bar.txt
+# files, parsing them into a bar variable for the template.
+# Otherwise presumes the template is the path.
+
+sub news_page {
+    my %args = @_;
+    my $template = "content$args{path}";
+
+    my $page_path = $template;
+    $page_path =~ s/\.[^.]+$/.page/;
+    if (-d $page_path) {
+        for my $f (grep -f, glob "$page_path/*.mdtext") {
+            $f =~ m!/([^/]+)\.mdtext$! or die "Bad filename: $f\n";
+            $args{$1} = {};
+            read_text_file $f, $args{$1};
+        }
+    }
+
+    my $rendered = Dotiac::DTL->new($template)->render(\%args);
+    return ($rendered, 'html', \%args);
+}
+
 # A "basic" view, which takes 'template' and 'path' parameters.
 
 sub basic {
     my %args = @_;
     my $filepath = "content$args{path}";
+
     read_text_file($filepath, \%args);
+
     $args{path} =~ s/\.mdtext$/\.html/;
     $args{breadcrumbs} = _breadcrumbs($args{path});
+
     my $template_path = "templates/$args{template}";
+
     my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
     return ($rendered, 'html', \%args);
 }
