@@ -24,7 +24,14 @@ img {
 .frameTable {
     border: 0px;
     padding: 0px;
-    width: 100%;
+    width: 700px;
+}
+
+#name {
+    background-image: url("images/feather-50.png");
+    background-repeat: no-repeat;
+    /*font-weight: bold;*/
+    font-size: 70px;
 }
 
 .Row1 {
