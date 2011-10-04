@@ -156,6 +156,11 @@ img {
     width: 40px;
 }
 
+.Row1 .Col2 img {
+    width: 40px;
+    height: 5px;
+}
+
 /*.Col3 {*/
     /*width: 700px;*/
 /*}*/
