@@ -9,7 +9,7 @@ sub import {
     *Dotiac::DTL::Filter::markdown = \&markdown_filter;
 }
 
-sub markdown_filter {
+sub markdown_filter_ {
     my $value = shift;
 
     # Use raw value rather than escape (by calling repr() rather than
