@@ -4,7 +4,7 @@
 {% block content %}
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit">
-      <h1>Apache TomEE</h1>
+      <img src="http://openejb.staging.apache.org/images/feather-logo.png" alt="">
       <p>Apache TomEE, pronounced "Tommy", is an all-Apache Java EE 6 Web Profile certified stack where Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.</p>
       <p><a class="btn primary large" href="downloads.html">Download &raquo;</a></p>
     </div>
@@ -13,12 +13,12 @@
     <div class="row">
       <div class="span6">
         <h2>TomEE+</h2>
-        <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <p>TomEE Plus has all the features of TomEE with the addition of JAX-RS, JAX-WS, JMS and the Java Connector Architecture.  The additional functionality is delivered via Apache CXF, Apache ActiveMQ and the Geronimo Connector library</p>
         <p><a class="btn" href="#">View details &raquo;</a></p>
       </div>
       <div class="span5">
         <h2>OpenEJB</h2>
-         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+         <p>Don't be mislead by the name, OpenEJB contains a lot more than EJB.  A better description might be "headless TomEE+" as it contains everything TomEE+ contains minus Servlets, JSP and JSF.  OpenEJB contains full support for EJB 3.1, CDI, JPA, JMS, JAX-RS, JAX-WS, Transaction, Security, JavaMail, Bean Validation and the Java Connector Architecture.</p>
         <p><a class="btn" href="#">View details &raquo;</a></p>
      </div>
       <div class="span5">
@@ -28,20 +28,18 @@
       </div>
     </div>
 
-    <div>
-        {{ project_info.content|markdown }}
-    </div>
-    <div class="clear"></div>
-    <div id="news" class="container_16">
-    <div id="news_feed" class="grid_9 suffix_1">
-        <h3>Latest News</h3>
+    <div class="row">
+        <div class="clear"></div>
+        <div id="news" class="container_16">
+        <div id="news_feed" class="grid_9 suffix_1">
+            <h3>Latest News</h3>
 
-        {% for e in blog.list %}
-        <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>
-        <div class="section-content">{{ e.content|safe|truncatewords_html:50 }}</div>
-        <hr>
-        {% endfor %}
-    </div>
-    <div class="clear"></div>
+            {% for e in blog.list %}
+            <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>
+            <div class="section-content">{{ e.content|safe|truncatewords_html:50 }}</div>
+            <hr>
+            {% endfor %}
+        </div>
+        <div class="clear"></div>
     </div>
 {% endblock %}
