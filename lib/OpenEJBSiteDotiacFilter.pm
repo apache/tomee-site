@@ -21,11 +21,11 @@ sub markdown_filter {
 
     
     my $html = markdown($raw);
-
+    return $html;
     # Blindly mark return value as safe.
-    my $retval = Dotiac::DTL::Value->safe($html);
-
-    return $retval;
+#    my $retval = Dotiac::DTL::Value->safe($html);
+#
+#    return $retval;
 }
 
 1;
