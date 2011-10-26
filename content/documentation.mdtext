@@ -1,53 +1,93 @@
 Title: Index
-1. *Java EE Basics*
-    1. [Getting Things](basics---getting-things.html)
-    1. [Security](basics---security.html)
-    1. [Transactions](basics---transactions.html)
-1. *EJB 3.0 Applications*
-    1. [EJB 3.0 Specification](ejb-3.0-specification.html)
-    1. [Callbacks](callbacks.html)
-    1. [Understanding Callbacks](understanding-callbacks.html)
-    1. [Security Annotations](security-annotations.html)
-    1. [Transaction Annotations](transaction-annotations.html)
-    1. [EJB Refs](ejb-refs.html)
-    1. [XML Overrides](annotations,-xml-and-defaults.html)
-    1. [JPA Concepts](jpa-concepts.html)
-1. *EJB 3.1 Applications*
-    1. [Singleton Beans](singleton-beans.html)
-1. *Configuration*
-    1. [Understanding the Directory Layout](understanding-the-directory-layout.html)
-    1. [System Properties](system-properties.html)
-    1. [Deployments](deployments.html)
-    1. [Containers and Resources](containers-and-resources.html)
-    1. [JMS Resources and MDB Container](jms-resources-and-mdb-container.html)
-    1. [Configuring DataSources](configuring-datasources.html)
-    1. [Configuring JavaMail](configuring-javamail.html)
-    1. [Security](security.html)
-    1. [Clients](clients.html)
-    1. [JNDI Names](jndi-names.html)
-1. *JPA Providers*
-    1. [General](jpa-usage.html)
-    1. [OpenJPA](openjpa.html)
-    1. [Hibernate](hibernate.html)
-1. *Standalone Server*
-    1. [Startup](startup.html)
-    1. [Deploy Tool](deploy-tool.html)
-    1. [Properties Tool](properties-tool.html)
-1. *Testing Techniques*
-    1. [Application discovery via the classpath](application-discovery-via-the-classpath.html)
-    1. [Embedded Configuration](embedded-configuration.html)
-    1. [Configuring DataSources in Tests](configuring-datasources-in-tests.html)
-    1. [Configuring PersistenceUnits in Tests](configuring-persistenceunits-in-tests.html)
-    1. [Configuring Containers in Tests](configuring-containers-in-tests.html)
-    1. [Configuring Logging in Tests](configuring-logging-in-tests.html)
-    1. [Alternate Descriptors](alternate-descriptors.html)
-    1. [Unit Testing Transactions](unit-testing-transactions.html)
-    1. [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
-    1. [TestCase Injection (@LocalClient)](local-client-injection.html)
-1. *Spring*
-    1. [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
-    1. [Spring and OpenEJB 3.1 and later](spring.html)
-    1. [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
-1. *Advanced*
-    1. [Failover](failover.html)
-1. [Examples](examples.html)
+
+<div class="row">
+
+<div class="span-one-third">
+### Java EE Basics
+- [Getting Things](basics---getting-things.html)
+- [Security](basics---security.html)
+- [Transactions](basics---transactions.html)
+</div>
+
+
+<div class="span-one-third">
+### Applications
+- [Callbacks](callbacks.html)
+- [Understanding Callbacks](understanding-callbacks.html)
+- [EJB Refs](ejb-refs.html)
+- [XML Overrides](annotations,-xml-and-defaults.html)
+</div>
+
+<div class="span-one-third">
+###  Enterprise JavaBeans
+- [Singleton Beans](singleton-beans.html)
+- [Security Annotations](security-annotations.html)
+- [Transaction Annotations](transaction-annotations.html)
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="span-one-third">
+###  Configuration
+- [Understanding the Directory Layout](understanding-the-directory-layout.html)
+- [System Properties](system-properties.html)
+- [Deployments](deployments.html)
+- [Containers and Resources](containers-and-resources.html)
+- [JMS Resources and MDB Container](jms-resources-and-mdb-container.html)
+- [Configuring DataSources](configuring-datasources.html)
+- [Configuring JavaMail](configuring-javamail.html)
+- [Security](security.html)
+- [Clients](clients.html)
+- [JNDI Names](jndi-names.html)
+</div>
+
+<div class="span-one-third">
+###  Java Persistence Architecture
+- [JPA Concepts](jpa-concepts.html)
+- [General](jpa-usage.html)
+- [OpenJPA](openjpa.html)
+- [Hibernate](hibernate.html)
+</div>
+
+<div class="span-one-third">
+###  Testing Techniques
+- [Application discovery via the classpath](application-discovery-via-the-classpath.html)
+- [Embedded Configuration](embedded-configuration.html)
+- [Configuring DataSources in Tests](configuring-datasources-in-tests.html)
+- [Configuring PersistenceUnits in Tests](configuring-persistenceunits-in-tests.html)
+- [Configuring Containers in Tests](configuring-containers-in-tests.html)
+- [Configuring Logging in Tests](configuring-logging-in-tests.html)
+- [Alternate Descriptors](alternate-descriptors.html)
+- [Unit Testing Transactions](unit-testing-transactions.html)
+- [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
+- [TestCase Injection (@LocalClient)](local-client-injection.html)
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="span-one-third">
+###  Standalone Server
+- [Startup](startup.html)
+- [Deploy Tool](deploy-tool.html)
+- [Properties Tool](properties-tool.html)
+</div>
+
+<div class="span-one-third">
+###  Failover
+- [Failover](failover.html)
+</div>
+
+<div class="span-one-third">
+###  Spring
+- [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
+- [Spring and OpenEJB 3.1 and later](spring.html)
+- [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
+</div>
+
+</div>
