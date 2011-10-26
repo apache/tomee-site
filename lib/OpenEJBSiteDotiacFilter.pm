@@ -9,7 +9,7 @@ sub import {
     *Dotiac::DTL::Filter::markdown = \&markdown_filter;
 }
 
-sub markdown_filter_ {
+sub markdown_filter {
     my $value = shift;
 
     # Use raw value rather than escape (by calling repr() rather than
@@ -21,11 +21,11 @@ sub markdown_filter_ {
 
     
     my $html = markdown($raw);
-
-    # Blindly mark return value as safe.
-    my $retval = Dotiac::DTL::Value->safe($html);
-
-    return $retval;
+    return $html;
+#    # Blindly mark return value as safe.
+#    my $retval = Dotiac::DTL::Value->safe($html);
+#
+#    return $retval;
 }
 
 1;
