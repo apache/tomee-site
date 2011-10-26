@@ -1,5 +1,5 @@
 Title: JMS Resources and MDB Container
-<a name="JMSResourcesandMDBContainer-ExternalActiveMQBroker"></a>
+
 # External ActiveMQ Broker
 
     <openejb>
@@ -26,8 +26,32 @@ The {{ServerUrl}} would be changed to point to the host and port of the
 ActiveMQ process.  The various URL formats that ActiveMQ supports also
 work, such as 'failover:'.
 
+# Internal ActiveMQ Broker
+    
+    <openejb>
+        <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
+            BrokerXmlConfig =  broker:(tcp://someHostName:61616)
+            ServerUrl       =  tcp://someHostName:61616
+        </Resource>
+
+        <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
+            ResourceAdapter MyJmsResourceAdapter
+        </Resource>
+
+        <Container id="MyJmsMdbContainer" ctype="MESSAGE">
+            ResourceAdapter MyJmsResourceAdapter
+        </Container>
+
+        <Resource id="FooQueue" type="javax.jms.Queue"/>
+        <Resource id="BarTopic" type="javax.jms.Topic"/>
+    </openejb>
+
+The `BrokerXmlConfig` tells ActiveMQ to start on the tcp host/port `someHostName` and `61616`
+
+# Configuration via System properties
+
 The same can be done via properties in an embedded configuration, via the
-{{conf/system.properties}} file or on the command line via {{-D}} flags.
+`conf/system.properties` file or on the command line via `-D` flags.
 
 
     Properties p = new Properties();
@@ -35,7 +59,6 @@ The same can be done via properties in an embedded configuration, via the
 
     p.put("MyJmsResourceAdapter", "new://Resource?type=ActiveMQResourceAdapter");
     p.put("MyJmsResourceAdapter.ServerUrl", "tcp://someHostName:61616");
-    // Do not start the ActiveMQ broker
     p.put("MyJmsResourceAdapter.BrokerXmlConfig", "");
 
     p.put("MyJmsConnectionFactory", "new://Resource?type=javax.jms.ConnectionFactory");
@@ -49,16 +72,14 @@ The same can be done via properties in an embedded configuration, via the
 
     InitialContext context = new InitialContext(p);
 
+# Global lookup of JMS Resources
+
 From anywhere in the same VM as the EJB Container you could lookup the
 above resources like so:
-    
+
     javax.jms.ConnectionFactory cf = (ConnectionFactory)
             context.lookup("openejb:Resource/MyJmsConnectionFactory");
 
     javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
     javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
 
-    
-# Internal ActiveMQ Broker
-    
-    _TODO_
