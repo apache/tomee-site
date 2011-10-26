@@ -67,7 +67,7 @@ $content
 <HTML>
   <HEAD>
     <!-- $PAGETITLE -->
-    <TITLE>OpenEJB - $title</TITLE>
+    <TITLE>$title</TITLE>
     <LINK href="http://openejb.apache.org/all.css" rel="stylesheet" type="text/css">
     <!--[if IE]><link rel="stylesheet" type="text/css" media="screen, projection" href="openejb.apache.org/ie.css"><![endif]-->
 
@@ -88,7 +88,7 @@ $content
         loading_text: "loading list..."
         });
     });
-</script>
+</script> 
 
   </HEAD>
   <BODY>
@@ -175,9 +175,7 @@ $content
           <TABLE id="PageHeader" border="0" width="100%">
             <TR>
               <TD>
-                <A href="http://openejb.org/">
-                  <IMG hspace="0" src="http://openejb.apache.org/images/logo_openejb.gif" vspace="0">
-                </A>
+                  <IMG hspace="0" src="http://openejb.staging.apache.org/images/feather-logo.png" vspace="0">
               </TD>
               <TD align="right">
                 <A href="http://www.apache.org/">
@@ -223,7 +221,7 @@ $content
             #set ($content = $content.replaceAll("^<[pP]>|</[pP]>$", "") )
             <div id="RightContent">$content</div>
           #end
-
+          
         </TD>
       </TR>
       <TR  class="Row5">
@@ -250,7 +248,7 @@ $content
                 </SPAN>
               </td>
               <td align="right">
-                <A style="color:#999;font-size:small;font-weight:normal;" href="$confluenceUri/pages/editpage.action?spaceKey=OPENEJBx30&title=$page.title">[ edit ]</A>
+                <A style="color:#999;font-size:small;font-weight:normal;" href="$confluenceUri/pages/editpage.action?spaceKey=OPENEJB&title=$page.title">[ edit ]</A>
               </td>
             </tr>
           </table>
