@@ -34,7 +34,7 @@ use warnings;
 use Carp;
 use Dotiac::DTL;
 use ASF::Util qw( read_text_file );
-use OpenEJBSiteDotiacFilter;
+#use OpenEJBSiteDotiacFilter;
 
 BEGIN { push @Dotiac::DTL::TEMPLATE_DIRS, "templates"; }
 
