@@ -48,9 +48,7 @@
           <h1>{% block title %}{{ headers.title }}{% endblock %}</h1>
         </div>
 
-        <div class="row">
           {% block content %}{{ content|markdown }}{% endblock %}
-        </div>
 
       <footer>
         <p>
