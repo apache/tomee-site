@@ -2,6 +2,32 @@
 
 {% block title %}Apache OpenEJB and Apache TomEE{% endblock %}
 {% block content %}
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+      <h1>Apache TomEE</h1>
+      <p>Apache TomEE, pronounced "Tommy", is an all-Apache Java EE 6 Web Profile certified stack where Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.</p>
+      <p><a class="btn primary large" href="downloads.html">Download &raquo;</a></p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="span6">
+        <h2>TomEE+</h2>
+        <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+      </div>
+      <div class="span5">
+        <h2>OpenEJB</h2>
+         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+     </div>
+      <div class="span5">
+        <h2>Examples</h2>
+        <p>See the extensive list of examples being developed for Java EE 6. All are functional and tested before publishing. Some are documented. These also stream from the continuous integration system.</p>
+        <p><a class="btn" href="http://ci.apache.org/projects/openejb/examples-generated/">View details &raquo;</a></p>
+      </div>
+    </div>
+
     <div>
         {{ project_info.content|markdown }}
     </div>
