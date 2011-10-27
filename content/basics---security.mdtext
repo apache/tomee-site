@@ -22,10 +22,10 @@ Note, this is partially documented in the EJB 3 spec section 14.8.1.1.
 1. Once a remote bean has been instantiated, from within the container, it
 inherits the entire security context, and all roles will be inherited the
 same as the method where the bean is being looked up.
-1. Looking up a bean via an InitialContext, or via injection, will inherit
+1. Looking up a bean via an `InitialContext`, or via injection, will inherit
 the security context (user, roles, etc), thereby propagating the security
 through to any container bean in the chain of method calls.
-1. No properties are allowed for the InitialContext, and you *MUST* be
+1. No properties are allowed for the `InitialContext`, and you *MUST* be
 calling the no args constructor only.  There are documents elsewhere that
 describe using the OpenEJB initial context factories and such, with
 usernames and passwords, etc; it should be noted that this method of using

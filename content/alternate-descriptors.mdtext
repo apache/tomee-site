@@ -21,7 +21,7 @@ us know.  You should never have to go the long way to do something simple.
 # openejb.altdd.prefix
 
 To use this functionality, just set the new "openejb.altdd.prefix" system
-property or InitialContext property to something like "_test_", then any
+property or `InitialContext` property to something like "_test_", then any
 descriptors in your META-INF/ directory that start with "_test._" will
 override the regular descriptor.  So for example with an app like this:
 
