@@ -1,36 +1,36 @@
 Title: Index
 
-<div class="row">
+{row
 
-<div class="span-one-third">
+{span-one-third
 ### Java EE Basics
 - [Getting Things](basics---getting-things.html)
 - [Security](basics---security.html)
 - [Transactions](basics---transactions.html)
-</div>
+}
 
 
-<div class="span-one-third">
+{span-one-third
 ### Applications
 - [Callbacks](callbacks.html)
 - [Understanding Callbacks](understanding-callbacks.html)
 - [EJB Refs](ejb-refs.html)
 - [XML Overrides](annotations,-xml-and-defaults.html)
-</div>
+}
 
-<div class="span-one-third">
+{span-one-third
 ###  Enterprise JavaBeans
 - [Singleton Beans](singleton-beans.html)
 - [Security Annotations](security-annotations.html)
 - [Transaction Annotations](transaction-annotations.html)
-</div>
+}
 
-</div>
+}
 
 
-<div class="row">
+{row
 
-<div class="span-one-third">
+{span-one-third
 ###  Configuration
 - [Understanding the Directory Layout](understanding-the-directory-layout.html)
 - [System Properties](system-properties.html)
@@ -42,17 +42,17 @@ Title: Index
 - [Security](security.html)
 - [Clients](clients.html)
 - [JNDI Names](jndi-names.html)
-</div>
+}
 
-<div class="span-one-third">
+{span-one-third
 ###  Java Persistence Architecture
 - [JPA Concepts](jpa-concepts.html)
 - [General](jpa-usage.html)
 - [OpenJPA](openjpa.html)
 - [Hibernate](hibernate.html)
-</div>
+}
 
-<div class="span-one-third">
+{span-one-third
 ###  Testing Techniques
 - [Application discovery via the classpath](application-discovery-via-the-classpath.html)
 - [Embedded Configuration](embedded-configuration.html)
@@ -64,30 +64,30 @@ Title: Index
 - [Unit Testing Transactions](unit-testing-transactions.html)
 - [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
 - [TestCase Injection (@LocalClient)](local-client-injection.html)
-</div>
+}
 
-</div>
+}
 
 
-<div class="row">
+{row
 
-<div class="span-one-third">
+{span-one-third
 ###  Standalone Server
 - [Startup](startup.html)
 - [Deploy Tool](deploy-tool.html)
 - [Properties Tool](properties-tool.html)
-</div>
+}
 
-<div class="span-one-third">
+{span-one-third
 ###  Failover
 - [Failover](failover.html)
-</div>
+}
 
-<div class="span-one-third">
+{span-one-third
 ###  Spring
 - [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
 - [Spring and OpenEJB 3.1 and later](spring.html)
 - [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
-</div>
+}
 
-</div>
+}

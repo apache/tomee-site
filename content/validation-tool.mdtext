@@ -37,15 +37,15 @@ Windows users can execute the following command:
 
 In UNIX, Linux, or Mac OS X, the deploy tool can be executed as follows:
 
-{{[user@host openejb](user@host-openejb.html)
-# ./openejb.sh validate -help}}
+`[user@host openejb](user@host-openejb.html)
+# ./openejb.sh validate -help`
 
 
 Depending on your OpenEJB version, you may need to change execution bits to
 make the scripts executable. You can do this with the following command.
 
-{{[user@host openejb](user@host-openejb.html)
-# chmod 755 openejb.sh bin/*.sh}}
+`[user@host openejb](user@host-openejb.html)
+# chmod 755 openejb.sh bin/*.sh`
 
 
 From here on out, it will be assumed that you know how to execute the right

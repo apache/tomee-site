@@ -246,19 +246,19 @@ server startup by as little as 100 milliseconds.
     
 # Multipoint Configuration Recommendations
     
-As mentioned above the {{initialServers}} is only used for bootstrapping
+As mentioned above the `initialServers` is only used for bootstrapping
 the multipoint network.  Once running, all servers will dynamically
 establish direct connections with each other and there is no single point
 of failure.
     
 However to ensure that the bootstrapping process can occur successfully,
-the {{initialServers}} property of the {{conf/multipoint.properties}} file
+the `initialServers` property of the `conf/multipoint.properties` file
 must be set carefully and with a specific server start order in mind.  Each
-server consults its {{initialServers}} list exactly once in the
+server consults its `initialServers` list exactly once in the
 bootstrapping phase at startup, after that time connections are made
 dynamically.
     
-This means that at least one of the servers listed in {{initialServers}}
+This means that at least one of the servers listed in `initialServers`
 must already be running when the server starts or the server might never
 become introduced and connected to all the other servers in the network.
     
@@ -285,7 +285,7 @@ order:
     
 At this point all servers would be fully connected.  But the above setup is
 flawed and could easily fail.  The first flaw is server3 lists nothing in
-its {{initialServers}} list, so if it were restarted it would leave the
+its `initialServers` list, so if it were restarted it would leave the
 multipoint network and not know how to get back in.
 
 The second flaw is if you started them in any other order, you would also

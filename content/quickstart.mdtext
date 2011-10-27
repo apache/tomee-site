@@ -37,8 +37,8 @@ For Windows users, that looks like this:
 
 For UNIX/Linux/Mac OS X users, that looks like this:
 
-{{[user@host openejb-3.0](user@host-openejb-3.0.html)
-# ./bin/openejb}}
+`[user@host openejb-3.0](user@host-openejb-3.0.html)
+# ./bin/openejb`
 
 You really only need to know two commands to use OpenEJB, [deploy](openejbx30:deploy-tool.html)
  and [start|OPENEJBx30:Startup]

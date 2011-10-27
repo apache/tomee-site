@@ -22,7 +22,7 @@ Title: JMS Resources and MDB Container
     </openejb>
 
     
-The {{ServerUrl}} would be changed to point to the host and port of the
+The `ServerUrl` would be changed to point to the host and port of the
 ActiveMQ process.  The various URL formats that ActiveMQ supports also
 work, such as 'failover:'.
 

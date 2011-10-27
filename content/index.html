@@ -1,11 +1,13 @@
 {% extends "basic.html" %}
 
-{% block title %}Apache OpenEJB and Apache TomEE{% endblock %}
+{% block title %}Apache TomEE & OpenEJB{% endblock %}
 {% block content %}
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit">
       <img src="http://openejb.staging.apache.org/images/feather-logo.png" alt="">
-      <p>Apache TomEE, pronounced "Tommy", is an all-Apache Java EE 6 Web Profile certified stack where Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.</p>
+      <p>
+          Apache TomEE, pronounced "Tommy", is an all-Apache Java EE 6 Web Profile certified stack where Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.
+      </p>
       <p><a class="btn primary large" href="downloads.html">Download &raquo;</a></p>
     </div>
 
@@ -18,28 +20,44 @@
       </div>
       <div class="span5">
         <h2>OpenEJB</h2>
-         <p>Don't be mislead by the name, OpenEJB contains a lot more than EJB.  A better description might be "headless TomEE+" as it contains everything TomEE+ contains minus Servlets, JSP and JSF.  OpenEJB contains full support for EJB 3.1, CDI, JPA, JMS, JAX-RS, JAX-WS, Transaction, Security, JavaMail, Bean Validation and the Java Connector Architecture.</p>
+         <p>Don't be mislead by the name, OpenEJB contains a lot more than EJB.  A better description might be "headless TomEE+" as it contains everything TomEE+ contains minus Servlets, JSP and JSF.</p>
         <p><a class="btn" href="#">View details &raquo;</a></p>
      </div>
       <div class="span5">
         <h2>Examples</h2>
         <p>See the extensive list of examples being developed for Java EE 6. All are functional and tested before publishing. Some are documented. These also stream from the continuous integration system.</p>
-        <p><a class="btn" href="http://ci.apache.org/projects/openejb/examples-generated/">View details &raquo;</a></p>
+        <p><a class="btn" href="examples/">View details &raquo;</a></p>
       </div>
     </div>
 
+    <div class="page-header">&nbsp;</div>
+
     <div class="row">
-        <div class="clear"></div>
-        <div id="news" class="container_16">
-        <div id="news_feed" class="grid_9 suffix_1">
+        <div class="span-two-thirds">
             <h3>Latest News</h3>
 
             {% for e in blog.list %}
             <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>
-            <div class="section-content">{{ e.content|safe|truncatewords_html:50 }}</div>
+            {{ e.content|safe|truncatewords_html:50 }}
             <hr>
             {% endfor %}
         </div>
-        <div class="clear"></div>
+        <div class="span-one-third">
+            <h3>Twitter</h3>
+
+            <ul>
+            <li>Join us on twitter!<a href="http://twitter.com/ApacheTomEE" class="twitter-follow-button">Follow @ApacheTomEE</a>
+            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+            </li>
+            </ul>
+
+            {% for e in twitter.list %}
+            <ul>
+            <li>
+            <a href="{{ e.url }}">@</a>{{ e.title|safe }}
+            </li>
+            </ul>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
