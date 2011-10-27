@@ -1,0 +1,22 @@
+{% extends "basic.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="span8">
+        <small>{{ breadcrumbs|safe }}</small><br>
+    </div>
+    <div class="span8">
+        <div class="pull-right">
+            <small><a href="{{ zipurl }}">download example</a>
+        </div>
+    </div>
+</div>
+
+<div class="page-header">
+<h1>{{ headers.title }}</h1>
+</div>
+
+{{ content|markdown }}
+
+{% endblock %}

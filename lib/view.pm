@@ -35,6 +35,7 @@ use Carp;
 use Dotiac::DTL;
 use ASF::Util qw( read_text_file );
 use OpenEJBSiteDotiacFilter;
+use Data::Dumper;
 
 BEGIN { push @Dotiac::DTL::TEMPLATE_DIRS, "templates"; }
 
@@ -75,7 +76,8 @@ sub basic {
     read_text_file($filepath, \%args);
 
     $args{path} =~ s/\.mdtext$/\.html/;
-    $args{breadcrumbs} = _breadcrumbs($args{path});
+    $args{base} = _base($args{path});
+    $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
 
     my $template_path = "templates/$args{template}";
 
@@ -83,21 +85,79 @@ sub basic {
     return ($rendered, 'html', \%args);
 }
 
+sub example {
+    my %args = @_;
+    my $filepath = "content$args{path}";
+
+    read_text_file($filepath, \%args);
+
+    $args{path} =~ s/README\.md(text)?$/index\.html/;
+    $args{base} = _base($args{path});
+    $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
+    $args{zipurl} = _zipurl($args{path});
+
+    my $template_path = "templates/$args{template}";
+
+    my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+
+    return ($rendered, 'html', \%args);
+}
+
 sub _breadcrumbs {
     my $path        = shift;
+    my $base        = shift;
+
     my @breadcrumbs = (
-        qq|<a href="http://www.apache.org/">Apache</a>|,
-        qq|<a href="/">Incubator</a>|,
+        qq|<a href="$base/index.html">Home</a>|,
     );
     my @path_components = split( m!/!, $path );
     pop @path_components;
-    my $relpath = "";
+
+    my $relpath = $base;
+
+
     for (@path_components) {
         $relpath .= "$_/";
         next unless $_;
-        push @breadcrumbs, qq(<a href="$relpath">\u$_</a>);
+
+        my @names = split("-", $_);
+        my $name = "";
+        for my $n (@names) {
+            $name .= ucfirst($n) . " ";
+        }
+        $name =~ s/ *$//;
+
+        push @breadcrumbs, qq(<a href="$relpath">\u$name</a>);
     }
     return join "&nbsp;&raquo&nbsp;", @breadcrumbs;
+}
+
+sub _base {
+    my $path        = shift;
+
+    my @path_components = split( m!/!, $path );
+    pop @path_components;
+    pop @path_components;
+
+    my $rel = "./";
+
+    for (@path_components) {
+        $rel .= "../";
+    }
+
+    return $rel;
+}
+
+sub _zipurl {
+    my $path        = shift;
+
+    my $base = "http://ci.apache.org/projects/openejb/examples-generated/";
+
+    # path:  /examples-trunk/simple-stateless/index.html
+
+    $path =~ s,.*/([^/]+)/index.html,$1/$1.zip,;
+
+    return $base . $path;
 }
 
 1;

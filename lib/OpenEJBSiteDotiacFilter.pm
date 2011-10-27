@@ -19,13 +19,26 @@ sub markdown_filter {
     $raw =~ s,\(/\),<IMG class="emoticon" src="https://cwiki.apache.org/confluence/images/icons/emoticons/check.gif" height="16" width="16" align="absmiddle" alt="" border="0">,g;
     $raw =~ s,\(x\),<IMG class="emoticon" src="https://cwiki.apache.org/confluence/images/icons/emoticons/error.gif" height="16" width="16" align="absmiddle" alt="" border="0">,g;
 
-    
+
+    my $start = "{{{{{";
+    my $end = "}}}}}";
+
+    $raw =~ s,(^|\n){,$start,g;
+    $raw =~ s,(^|\n)},$end,g;
+
     my $html = markdown($raw);
-    return $html;
+
+    $html =~ s,$start([a-z0-9-]+),<div class="$1">,g;
+    $html =~ s,$end,</div>,g;
+
+    $html =~ s,<li><p>,<li>,g;
+    $html =~ s,</p></li>,</li>,g;
+
+
     # Blindly mark return value as safe.
-#    my $retval = Dotiac::DTL::Value->safe($html);
-#
-#    return $retval;
+    my $retval = Dotiac::DTL::Value->safe($html);
+
+    return $retval;
 }
 
 1;

@@ -14,11 +14,14 @@ our @patterns = (
     [qr!^/index\.html$!, news_page =>
       {
         blog     => ASF::Value::Blogs->new(blog => "openejb", limit=> 3),
-        twitter  => ASF::Value::Twitter->new(name => 'OpenEJB', limit => 3),
+        twitter  => ASF::Value::Twitter->new(name => 'ApacheTomEE', limit => 6),
       },
     ],
 
-    [qr!\.mdtext$!, basic => { template => "basic.html" } ],
+    [qr!README\.md$!, example => { template => "example.html" } ],
+    [qr!README\.mdtext$!, example => { template => "example.html" } ],
+
+    [qr!\.mdtext$!, basic => { template => "doc.html" } ],
 
 );
 

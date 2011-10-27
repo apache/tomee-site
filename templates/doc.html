@@ -1,0 +1,12 @@
+{% extends "basic.html" %}
+
+{% block content %}
+
+<div class="page-header">
+<small>{{ breadcrumbs|safe }}</small><br>
+<h1>{{ headers.title }}</h1>
+</div>
+
+{{ content|markdown }}
+
+{% endblock %}
