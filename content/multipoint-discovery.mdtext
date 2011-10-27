@@ -1,160 +1,4 @@
-Title: Failover
-<a name="Failover-Overview"></a>
-# Overview
-
-OpenEJB supports stateless failover.  Specifically, the ability for an EJB
-client to failover from one server to the next if a request cannot be
-completed.  No application state information is communicated between the
-servers, so this functionality should be used only with applications that
-are inherently stateless.  A common term for this sort of setup is a server
-farm.
-
-The basic design assumption is that all servers in the same group have the
-same applications deployed and are capable of doing the same job.  Servers
-can be brought online and offline while clients are running.  As members
-join/leave this information is sent to the client as part of normal EJB
-request/response communication so active clients always have the most
-current information on servers that can process their request should
-communication with a particular server fail.
-
-<a name="Failover-Failover"></a>
-## Failover
-
-On each request to the server, the client will send the version number
-associated with the list of servers in the cluster it is aware of. 
-Initially this version will be zero and the list will be empty.  Only when
-the server sees the client has an old list will the server send the updated
-list.  This is an important distinction as the list is not transmitted back
-and forth on every request, only on change.  If the membership of the
-cluster is stable there is essentially no clustering overhead to the
-protocol -- 8 byte overhead to each request and 1 byte on each response --
-so you will *not* see an exponential slowdown in response times the more
-members are added to the cluster.  This new list takes affect for all
-proxies that share the same connection.
-
-When a server shuts down, more connections are refused, existing
-connections not in mid-request are closed, any remaining connections are
-closed immediately after completion of the request in progress and clients
-can failover gracefully to the next server in the list.  If a server
-crashes requests are retried on the next server in the list (or depending
-on the ConnectionStrategy).  This failover pattern is followed until there
-are no more servers in the list at which point the client attempts a final
-multicast search (if it was created with a multicast PROVIDER_URL) before
-abandoning the request and throwing an exception to the caller.
-
-By default, the failover is ordered but random selection is supported.	The
-multicast discovery aspect of the client adds a nice randomness to the
-selection of the first server.
-
-<a name="Failover-Discovery"></a>
-## Discovery
-
-Each discoverable service has a URI which is broadcast as a heartbeat to
-other servers in the cluster.  This URI advertises the service's type, its
-cluster group, and its location in the format of 'group:type:location'. 
-Say for example "cluster1:ejb:ejbd://thehost:4201".  The URI is sent out
-repeatedly in a pulse and its presence on the network indicates its
-availability and its absence indicates the service is no longer available.
-
-The sending of this pulse (the heartbeat) can be done via UDP or TCP:
-multicast and "multipoint" respectively.  More on that in the following
-section.  The rate at which the heartbeat is pulsed to the network can be
-specified via the 'heart_rate' property.  The default is 500 milliseconds. 
-This rate is also used when listening for services on the network.  If a
-service goes missing for the duration of 'heart_rate' multiplied by
-'max_missed_heartbeats', then the service is considered dead.
-
-The 'group' property, cluster1 in the example, is used to dissect the
-servers on the network into smaller logical clusters.  A given server will
-broadcast all it's services with the group prefixed in the URI, as well it
-will ignore any services it sees broadcast if they do not share the same
-group name.
-
-<a name="Failover-Multicast(UDP)"></a>
-# Multicast (UDP)
-
-Multicast is the preferred way to broadcast the heartbeat on the network. 
-The simple technique of broadcasting a non-changing service URI on the
-network has specific advantages to multicast.  The URI itself is
-essentially stateless and there is no "i'm alive" URI or an "i'm dead" URI.
-
-In this way the issues with UDP being unordered and unreliable melt away as
-state is no longer a concern and packet sizes are always small. 
-Complicated libraries that ride atop UDP and attempt to offer reliability
-(retransmission) and ordering on UDP can be avoided.  As well the
-advantages UDP has over TCP are retained as there are no java layers
-attempting to force UDP communication to be more TCP-like.  The simple
-design means UDP/Multicast is only used for discovery and from there on out
-critical information is transmitted over TCP/IP which is obviously going to
-do a better job at ensuring reliability and ordering.
-
-<a name="Failover-ServerConfiguration"></a>
-## Server Configuration
-
-When you boot the server there should be a conf/multicast.properties file
-containing:
-
-
-    server	    = org.apache.openejb.server.discovery.MulticastDiscoveryAgent
-    bind	    = 239.255.2.3
-    port	    = 6142
-    disabled    = true
-    group	    = default
-
-
-Just need to enable that by setting 'disabled=false'.  All of the above
-settings except *server* can be changed.  The *port* and *bind* must
-be valid for general multicast/udp network communication.
-
-The *group* setting can be changed to further group servers that may use
-the same multicast channel.  As shown below the client also has a *group*
-setting which can be used to select an appropriate server from the
-multicast channel.
-
-<a name="Failover-MulticastClient"></a>
-## Multicast Client
-
-The multicast functionality is not just for servers to find each other in a
-cluster, it can also be used for EJB clients to discover a server.  A
-special "multicast://" URL can be used in the InitialContext properties to
-signify that multicast should be used to seed the connection process.  Such
-as:
-
-    Properties p = new Properties();
-    p.put(Context.INITIAL_CONTEXT_FACTORY,
-    "org.apache.openejb.client.RemoteInitialContextFactory");
-    p.put(Context.PROVIDER_URL, "multicast://239.255.2.3:6142?group=default");
-    InitialContext remoteContext = new InitialContext(p);
-
-The URL has optional query parameters such as "schemes" and "group" and
-"timeout" which allow you to zero in on a particular type of service of a
-particular cluster group as well as set how long you are willing to wait in
-the discovery process till finally giving up.  The first matching service
-that it sees "flowing" around on the UDP stream is the one it picks and
-sticks to for that and subsequent requests, ensuring UDP is only used when
-there are no other servers to talk to.
-    
-Note that EJB clients do not need to use multicast to find a server.  If
-the client knows the URL of a server in the cluster, it may use it and
-connect directly to that server, at which point that server will share the
-full list of its peers.
-    
-## Multicast Servers with TCP Clients
-    
-Note that clients do not need to use multicast to communicate with servers.
-Servers can use multicast to discover each other, but clients are still
-free to connect to servers in the network using the server's TCP address.
-    
-    Properties p = new Properties();
-    p.put(Context.INITIAL_CONTEXT_FACTORY,  "org.apache.openejb.client.RemoteInitialContextFactory");
-    p.put(Context.PROVIDER_URL, "ejbd://192.168.1.30:4201");
-    InitialContext remoteContext = new InitialContext(p);
-
-When the client connects, the server will send the URLs of all the servers
-in the group and failover will take place normally.
-
-<a name="Failover-Multipoint(TCP)"></a>
-# Multipoint (TCP)
+Title: Multipoint (TCP) Discovery
 
 As TCP has no real broadcast functionality to speak of, communication of
 who is in the network is achieved by each server having a physical
@@ -180,10 +24,7 @@ it to decide who to connect to next.
 The entire process is essentially the art of using a statically maintained
 list to bootstrap getting the more valuable dynamically maintained list.
 
-{div:style=clear:both;}{div}
-
-<a name="Failover-ServerConfiguration"></a>
-## Server Configuration
+# Server Configuration
 
 
 In the server this list can be specified via the
@@ -196,7 +37,7 @@ In the server this list can be specified via the
     initialServers = 192.168.1.20:4212, 192.168.1.30:4212, 192.168.1.40:4212
 
 
-The above configuration shows the server has an port 4212 open for
+The above configuration shows the server has an `port` `4212` open for
 connections by other servers for multipoint communication.  The
 `initialServers` list should be a comma separated list of other similar
 servers on the network.  Only one of the servers listed is required to be
@@ -204,12 +45,12 @@ running when this server starts up -- it is not required to list all
 servers in the network.
 
 <a name="Failover-ClientConfiguration"></a>
-## Client Configuration
+# Client Configuration
 
 Configuration in the client is similar, but note that EJB clients do not
-participate directly in multipoint communication and do *not* connect to
+participate directly in multipoint communication and do **not** connect to
 the multipoint port.  The server list is simply a list of the regular
-"ejbd://" urls that a client normally uses to connect to a server.
+`ejbd://` urls that a client normally uses to connect to a server.
 
     Properties p = new Properties();
     p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");

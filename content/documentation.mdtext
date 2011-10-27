@@ -79,8 +79,13 @@ Title: Index
 }
 
 {span-one-third
-###  Failover
-- [Failover](failover.html)
+### Discovery and Failover
+- [Overview](ejb-failover.html)
+- [Multicast Discovery (UDP)](multicast-discovery.html)
+- [Multipoint Discovery (TCP)](multipoint-discovery.html)
+- [Multipoint Considerations](multipoint-considerations.html)
+- [Multipoint Recommendations](multipoint-recommendations.html)
+- [Logging Events](failover-logging.html)
 }
 
 {span-one-third
