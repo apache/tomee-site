@@ -18,10 +18,9 @@ our @patterns = (
       },
     ],
 
-    [qr!README\.md$!, example => { template => "example.html" } ],
-    [qr!README\.mdtext$!, example => { template => "example.html" } ],
+    [qr!README\.md(text)?$!, example => { template => "example.html" } ],
 
-    [qr!\.mdtext$!, basic => { template => "doc.html" } ],
+    [qr!\.md(text)?$!, basic => { template => "doc.html" } ],
 
 );
 
