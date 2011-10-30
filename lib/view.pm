@@ -95,6 +95,7 @@ sub example {
     $args{base} = _base($args{path});
     $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
     $args{zipurl} = _zipurl($args{path});
+    $args{apis} = `java -jar lib/cms-tools-r1195124.jar $filepath`;
 
     my $template_path = "templates/$args{template}";
 
