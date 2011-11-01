@@ -1,4 +1,8 @@
-Title: Writing Examples
+Title: Writing Presentable Examples
+
+Writing an example is easy.  Any example is a good one.  The more the better.
+
+Writing examples that can be used in a presentations is hard.
 
 Some basic guideliness of writing examples:
 
@@ -12,22 +16,24 @@ Some basic guideliness of writing examples:
 
 # Noise vs signal
 
+It takes time to learn the example scenario (noise).  You need to learn the scenario before you can start to see the imporant parts (signal).
+
+Be very mindful of your noise to signal ratio.
+
 Example scenarios do not need to be believable and should not be elaborate.  Get to the point in as few classes as possible.
 
 You should be able to explain the entire example in two minutes.
 
-# 5 was to do the same thing
+# Five ways to do the same thing
 
-It takes time to learn the example scenario.  Be very mindful of that.
-
-If there are five ways to do the same thing, avoid making 5 different different scenarios.  Copy the example to a new directory, and tweak it to show the variation.
+If there are five ways to do the same thing, avoid making five different scenarios.  Copy the example to a new directory, and tweak it to show the variation.
 
 So say you used objects `Green`, `Square` and `Checkers` to show the basic concept and you wish to show the next variation of that same concecpt.  It is tempting to add to the same
 example objects `Yellow`, `Triangle` and `PolkaDots`.
 
 Avoid that.  Copy `Green`, `Square` and `Checkers` to a new example, change the package name, and update the few lines needed to show the difference.
 
-Which is easier to learn?
+Where does your eye focus?
 
  - 934 + 55 = 989
  - 513 - 19 = 494
@@ -35,13 +41,15 @@ Which is easier to learn?
  - 708 / 89 = 7
  - 401 % 63 = 23
 
-Or:
+How about now?
 
  - 102 + 35 = 137
  - 102 - 35 = 67
  - 102 * 35 = 3570
  - 102 / 35 = 2
  - 102 % 35 = 32
+
+The intent of the second set of numbers can be easily guessed.  An explanation that it is about the math operators confirms that and locks it in your brain.
 
 When presenting, you only get so much time to show people ideas.  If they have to learn a new set of names and understand their relationship on each tiny variation, it severely
 impacts their ability to see what is supposed to be the same and what is supposed to be different.  As a presenter this means you must show less and what you do show will be shown
