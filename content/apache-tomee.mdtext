@@ -1,53 +1,36 @@
 Title: Apache TomEE
+
 Apache TomEE, pronounced "Tommy", is an all-Apache stack aimed at *Java EE
 6 Web Profile* certification where Tomcat is top dog.
 
-<a name="ApacheTomEE-Overview"></a>
-### Overview
+## TomEE
 
-{span:style=float: right; margin-left: 20px;}
+The Web Profile version of TomEE contains
 
-{html}
+ - **CDI** - Apache OpenWebBeans
+ - **EJB** - Apache OpenEJB
+ - **JPA** - Apache OpenJPA
+ - **JSF** - Apache MyFaces
+ - **JSP** - Apache Tomcat
+ - **JSTL** - Apache Tomcat
+ - **JTA** - Apache Geronimo Transaction
+ - **Servlet** - Apache Tomcat
+ - **Javamail** - Apache Geronimo JavaMail
+ - **Bean Validation** - Apache Bean Validation
 
-<iframe width="425" height="349" alt="JAXLondon, Spring 2011"
-src="http://www.youtube.com/embed/GJ_32qD1TrA" frameborder="0"
-allowfullscreen></iframe>
-<br/>
-Jonathan Gallimore and David Blevins @ <a
-href="http://jaxlondon.com/2011s/">JAX London, Spring 2011</a>
-{html}
-{span}
-{div}
+## TomEE+
 
-<table>
-<tr><td>Connector </td><td> Apache Geronimo Connector </td></tr>
-<tr><td>CDI </td><td> Apache OpenWebBeans </td></tr>
-<tr><td>EJB</td><td> Apache OpenEJB </td></tr>
-<tr><td>Javamail</td><td> Apache Geronimo JavaMail </td></tr>
-<tr><td>JPA</td><td> Apache OpenJPA </td></tr>
-<tr><td>JSF </td><td> Apache MyFaces </td></tr>
-<tr><td>JSP </td><td> Apache Tomcat </td></tr>
-<tr><td>JSTL </td><td> Apache Tomcat </td></tr>
-<tr><td>JTA </td><td> Apache Geronimo Transaction </td></tr>
-<tr><td>Servlet </td><td> Apache Tomcat </td></tr>
-</table>
+The TomEE Plus distribution adds the following:
 
-<a name="ApacheTomEE-Extras"></a>
-### Extras
-<table>
-<tr><td>JMS</td><td> Apache ActiveMQ </td></tr>
-<tr><td>Web Services </td><td> Apache CXF</td></tr>
-</table>
+ - **JAX-RS** - Apache CXF
+ - **JAX-WS** - Apache CXF
+ - **JMS** - Apache ActiveMQ
+ - **Connector** - Apache Geronimo Connector
 
-{div}
-{div:style=clear:both;}{div}
-
-<a name="ApacheTomEE-Goal"></a>
 #  Goal
 
 Simple, Get more from Tomcat without giving anything up.
 
-<a name="ApacheTomEE-Focuses"></a>
 #  Focuses
 
 Some core focuses guide the integration:
@@ -60,7 +43,6 @@ The desire to beef up Tomcat installations has persisted despite the
 existence of full-blown app servers, many of which include Tomcat in some
 truncated and stripped-down form.  Not TomEE.
 
-<a name="ApacheTomEE-UndertheCovers"></a>
 # Under the Covers
 
 Apache TomEE is assembled from a vanilla Apache Tomcat zip file.  No
@@ -75,7 +57,6 @@ Servlets now get access to JPA and Transactions, EJBs get access to Tomcat
 provided Security.  Any Tomcat provided resources, say from a context.xml,
 can be looked up or injected by *any* managed component in the system.
 
-<a name="ApacheTomEE-KeepitTight,KeepitSimple"></a>
 # Keep it Tight, Keep it Simple
 
 There's a definite "less is more" philosophy in Apache TomEE.  It's too
@@ -93,7 +74,6 @@ you'd end up with TomEE.  The result speaks for itself:
  - Compatible with most Tomcat-aware tools
  - Compatible with Tomcat-tested apps
 
-<a name="ApacheTomEE-History"></a>
 # History
 
 In Apache TomEE's previous life, it was simply known as the OpenEJB+Tomcat
