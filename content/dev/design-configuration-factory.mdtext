@@ -3,7 +3,7 @@ Title: Design - Configuration Factory
 <a name="Design-ConfigurationFactory-ConfigurationFactory"></a>
 ## Configuration Factory
 
-Sub-component of [Classic Assembler](design---classic-assembler.html)
+Sub-component of [Classic Assembler](design-classic-assembler.html)
 
 <a name="Design-ConfigurationFactory-Definition"></a>
 ## Definition
@@ -34,5 +34,5 @@ the system, services, jars, and beans to be constructed
 <a name="Design-ConfigurationFactory-Implementations"></a>
 ## Implementations
  * XML Configuration Factory _(no longer supported)_
- * [Nova Configuration Factory](design---nova-configuration-factory.html)
+ * [Nova Configuration Factory](design-nova-configuration-factory.html)
 

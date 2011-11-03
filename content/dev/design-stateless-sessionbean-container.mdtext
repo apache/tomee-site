@@ -3,7 +3,7 @@ Title: Design - Stateless SessionBean Container
 <a name="Design-StatelessSessionBeanContainer-StatelessSessionBeanContainer"></a>
 ## Stateless SessionBean Container
 
-Implementation of [Container](design---container.html)
+Implementation of [Container](design-container.html)
 
 <a name="Design-StatelessSessionBeanContainer-Description"></a>
 ## Description

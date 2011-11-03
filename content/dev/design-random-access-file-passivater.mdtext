@@ -3,7 +3,7 @@ Title: Design - Random Access File Passivater
 <a name="Design-RandomAccessFilePassivater-RandomAccessFilePassivater"></a>
 ## Random Access File Passivater
 
-Implementation of [Passivation Strategy](design---passivation-strategy.html)
+Implementation of [Passivation Strategy](design-passivation-strategy.html)
 
 <a name="Design-RandomAccessFilePassivater-Description"></a>
 ## Description

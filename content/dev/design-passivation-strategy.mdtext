@@ -2,7 +2,7 @@ Title: Design - Passivation Strategy
 <a name="Design-PassivationStrategy-PassivationStrategy"></a>
 ## Passivation Strategy
 
-Sub-component of [Stateful SessionBean Container](design---stateful-sessionbean-container.html)
+Sub-component of [Stateful SessionBean Container](design-stateful-sessionbean-container.html)
 
 
 <a name="Design-PassivationStrategy-Definition"></a>
@@ -22,5 +22,5 @@ beans to a temporary storage.
 
 <a name="Design-PassivationStrategy-Implementations"></a>
 ## Implementations
- * [Random Access File Passivater](design---random-access-file-passivater.html)
- * [Simple Passivater](design---simple-passivater.html)
+ * [Random Access File Passivater](design-random-access-file-passivater.html)
+ * [Simple Passivater](design-simple-passivater.html)

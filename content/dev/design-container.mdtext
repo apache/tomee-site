@@ -30,7 +30,7 @@ enforcing security and privileges
 
 <a name="Design-Container-Implementations"></a>
 ## Implementations
- * [Stateful SessionBean Container](design---stateful-sessionbean-container.html)
- * [Stateless SessionBean Container](design---stateless-sessionbean-container.html)
- * [BMP EntityBean Container](design---bmp-entitybean-container.html)
- * [CMP EntityBean Container](design---cmp-entitybean-container.html)
+ * [Stateful SessionBean Container](design-stateful-sessionbean-container.html)
+ * [Stateless SessionBean Container](design-stateless-sessionbean-container.html)
+ * [BMP EntityBean Container](design-bmp-entitybean-container.html)
+ * [CMP EntityBean Container](design-cmp-entitybean-container.html)

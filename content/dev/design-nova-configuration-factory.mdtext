@@ -3,7 +3,7 @@ Title: Design - Nova Configuration Factory
 <a name="Design-NovaConfigurationFactory-NovaConfigurationFactory"></a>
 ## Nova Configuration Factory
 
-Implementation of [Configuration Factory](design---configuration-factory.html)
+Implementation of [Configuration Factory](design-configuration-factory.html)
 
 <a name="Design-NovaConfigurationFactory-Description"></a>
 ## Description

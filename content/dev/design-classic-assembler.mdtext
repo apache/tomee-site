@@ -3,7 +3,7 @@ Title: Design - Classic Assembler
 <a name="Design-ClassicAssembler-ClassicAssembler"></a>
 ## Classic Assembler
 
-Implementation of [Assembler](design---assembler.html)
+Implementation of [Assembler](design-assembler.html)
 
 <a name="Design-ClassicAssembler-Description"></a>
 ## Description
@@ -25,4 +25,4 @@ compliant.
 
 <a name="Design-ClassicAssembler-Sub-components"></a>
 ## Sub-components
- * [Configuration Factory](design---configuration-factory.html)
+ * [Configuration Factory](design-configuration-factory.html)

@@ -3,7 +3,7 @@ Title: Design - BMP EntityBean Container
 <a name="Design-BMPEntityBeanContainer-BMPEntityBeanContainer"></a>
 ## BMP EntityBean Container
 
-Implementation of [Container](design---container.html)
+Implementation of [Container](design-container.html)
 
 
 <a name="Design-BMPEntityBeanContainer-Description"></a>

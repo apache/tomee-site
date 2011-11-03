@@ -29,5 +29,5 @@ Any component wishing to serve or deliver Enterprise JavaBeans.
 
 <a name="Design-ApplicationServer-Implementations"></a>
 ## Implementations
- * [Local Server](design---local-server.html)
- * [Remote Server](design---remote-server.html)
+ * [Local Server](design-local-server.html)
+ * [Remote Server](design-remote-server.html)

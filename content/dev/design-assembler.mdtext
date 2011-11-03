@@ -30,4 +30,4 @@ complexity and should not be done without a deep understanding of OpenEJB.
 
 <a name="Design-Assembler-Implementations"></a>
 ## Implementations
- * [Classic Assembler](design---classic-assembler.html)
+ * [Classic Assembler](design-classic-assembler.html)

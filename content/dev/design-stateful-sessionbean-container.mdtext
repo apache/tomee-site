@@ -2,7 +2,7 @@ Title: Design - Stateful SessionBean Container
 <a name="Design-StatefulSessionBeanContainer-StatefulSessionBeanContainer"></a>
 ## Stateful SessionBean Container
 
-Implementation of [Container](design---container.html)
+Implementation of [Container](design-container.html)
 
 <a name="Design-StatefulSessionBeanContainer-Description"></a>
 ## Description
@@ -21,4 +21,4 @@ Stateful SessionBeans.
 
 <a name="Design-StatefulSessionBeanContainer-Sub-components"></a>
 ## Sub-components
- * [Passivation Strategy](design---passivation-strategy.html)
+ * [Passivation Strategy](design-passivation-strategy.html)

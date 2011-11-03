@@ -3,7 +3,7 @@ Title: Design - CMP EntityBean Container
 <a name="Design-CMPEntityBeanContainer-CMPEntityBeanContainer"></a>
 ## CMP EntityBean Container
 
-Implementation of [Container](design---container.html)
+Implementation of [Container](design-container.html)
 
 <a name="Design-CMPEntityBeanContainer-Description"></a>
 ## Description

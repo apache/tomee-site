@@ -28,10 +28,10 @@ system
 
 <a name="Design-Sub-components"></a>
 ## Sub-components
-* [Application Server](design---application-server.html)
-* [Transaction Service](design---transaction-service.html)
-* [Security Service](design---security-service.html)
-* [Resource Manager](design---resource-manager.html)
-* [Container](design---container.html)
-* [Assembler](design---assembler.html)
+* [Application Server](design-application-server.html)
+* [Transaction Service](design-transaction-service.html)
+* [Security Service](design-security-service.html)
+* [Resource Manager](design-resource-manager.html)
+* [Container](design-container.html)
+* [Assembler](design-assembler.html)
 
