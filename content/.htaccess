@@ -26,20 +26,31 @@ Redirect permanent /embedded-and-remotable.html http://openejb.apache.org/3.0/em
 
 Redirect permanent /3.0/apache-tomee.html http://openejb.apache.org/apache-tomee.html
 Redirect permanent /3.0/jpa-concepts.html http://openejb.apache.org/jpa-concepts.html
-Redirect permanent /3.0/injection-of-entitymanager-example.html http://openejb.apache.org/injection-of-entitymanager-example.html
-Redirect permanent /3.0/simple-stateless-example.html http://openejb.apache.org/simple-stateless-example.html
+
+
+Redirect permanent /3.0/injection-of-entitymanager-example.html http://openejb.apache.org/examples-trunk/injection-of-entitymanager/README.html
+Redirect permanent /3.0/simple-stateless-example.html           http://openejb.apache.org/examples-trunk/simple-stateless/README.html
+Redirect permanent /3.0/stateless-session-beans.html            http://openejb.apache.org/examples-trunk/simple-stateless/README.html
+Redirect permanent /3.0/injection-of-other-ejbs-example.html    http://openejb.apache.org/examples-trunk/injection-of-ejbs/README.html
+Redirect permanent /3.0/simple-stateful-example.html            http://openejb.apache.org/examples-trunk/simple-stateful/README.html
+Redirect permanent /3.0/testing-transactions-example.html       http://openejb.apache.org/examples-trunk/testing-transactions/README.html
+Redirect permanent /3.0/injection-of-datasource-example.html    http://openejb.apache.org/examples-trunk/injection-of-datasource/README.html
+Redirect permanent /3.0/injection-of-env-entry-example.html     http://openejb.apache.org/examples-trunk/injection-of-env-entry/README.html
+Redirect permanent /3.0/ejb-21-compatibility-example.html       http://openejb.apache.org/examples-trunk/component-interfaces/README.html
+Redirect permanent /3.0/testing-security-example.html           http://openejb.apache.org/examples-trunk/testing-security/README.html
+Redirect permanent /3.0/lookup-of-other-ejbs-example.html       http://openejb.apache.org/examples-trunk/lookup-of-ejbs/README.html
+Redirect permanent /3.0/embedded-and-remotable.html             http://openejb.apache.org/examples-trunk/telephone-stateful/README.html
+Redirect permanent /3.0/unit-testing-transactions.html          http://openejb.apache.org/examples-trunk/testing-transactions/README.html
+Redirect permanent /3.0/singleton-example.html                  http://openejb.apache.org/examples-trunk/simple-singleton/README.html
+Redirect permanent /3.0/interceptor-example.html                http://openejb.apache.org/examples-trunk/interceptors/README.html
+
+
 Redirect permanent /3.0/transaction-annotations.html http://openejb.apache.org/transaction-annotations.html
-Redirect permanent /3.0/injection-of-other-ejbs-example.html http://openejb.apache.org/injection-of-other-ejbs-example.html
-Redirect permanent /3.0/simple-stateful-example.html http://openejb.apache.org/simple-stateful-example.html
 Redirect permanent /3.0/index.html http://openejb.apache.org/index.html
 Redirect permanent /3.0/jndi-names.html http://openejb.apache.org/jndi-names.html
-Redirect permanent /3.0/testing-transactions-example.html http://openejb.apache.org/testing-transactions-example.html
 Redirect permanent /3.0/openjpa.html http://openejb.apache.org/openjpa.html
-Redirect permanent /3.0/injection-of-datasource-example.html http://openejb.apache.org/injection-of-datasource-example.html
-Redirect permanent /3.0/injection-of-env-entry-example.html http://openejb.apache.org/injection-of-env-entry-example.html
 Redirect permanent /3.0/spring-ejb-and-jpa.html http://openejb.apache.org/spring-ejb-and-jpa.html
 Redirect permanent /3.0/configuring-persistenceunits-in-tests.html http://openejb.apache.org/configuring-persistenceunits-in-tests.html
-Redirect permanent /3.0/ejb-21-compatibility-example.html http://openejb.apache.org/ejb-21-compatibility-example.html
 Redirect permanent /3.0/persistence-context.html http://openejb.apache.org/persistence-context.html
 Redirect permanent /3.0/hibernate.html http://openejb.apache.org/hibernate.html
 Redirect permanent /3.0/tomcat.html http://openejb.apache.org/tomcat.html
@@ -47,22 +58,17 @@ Redirect permanent /3.0/ejb-local-ref.html http://openejb.apache.org/ejb-local-r
 Redirect permanent /3.0/ejb-refs.html http://openejb.apache.org/ejb-refs.html
 Redirect permanent /3.0/security-annotations.html http://openejb.apache.org/security-annotations.html
 Redirect permanent /3.0/configuring-datasources.html http://openejb.apache.org/configuring-datasources.html
-Redirect permanent /3.0/testing-security-example.html http://openejb.apache.org/testing-security-example.html
 Redirect permanent /3.0/persistence-unit-ref.html http://openejb.apache.org/persistence-unit-ref.html
 Redirect permanent /3.0/resource-injection.html http://openejb.apache.org/resource-injection.html
 Redirect permanent /3.0/resource-ref-for-datasource.html http://openejb.apache.org/resource-ref-for-datasource.html
 Redirect permanent /3.0/javaagent.html http://openejb.apache.org/javaagent.html
-Redirect permanent /3.0/embedded-and-remotable.html http://openejb.apache.org/embedded-and-remotable.html
 Redirect permanent /3.0/basics-getting-things.html http://openejb.apache.org/basics-getting-things.html
-Redirect permanent /3.0/lookup-of-other-ejbs-example.html http://openejb.apache.org/lookup-of-other-ejbs-example.html
 Redirect permanent /3.0/ejb-30-specification.html http://openejb.apache.org/ejb-30-specification.html
 Redirect permanent /3.0/local-client-injection.html http://openejb.apache.org/local-client-injection.html
 Redirect permanent /3.0/deploy-tool.html http://openejb.apache.org/deploy-tool.html
 Redirect permanent /3.0/examples.html http://openejb.apache.org/examples.html
 Redirect permanent /3.0/embedded-configuration.html http://openejb.apache.org/embedded-configuration.html
 Redirect permanent /3.0/javaagent-with-maven-surefire.html http://openejb.apache.org/javaagent-with-maven-surefire.html
-Redirect permanent /3.0/singleton-example.html http://openejb.apache.org/singleton-example.html
-Redirect permanent /3.0/unit-testing-transactions.html http://openejb.apache.org/unit-testing-transactions.html
 Redirect permanent /3.0/tomcat-detailed-instructions.html http://openejb.apache.org/tomcat-detailed-instructions.html
 Redirect permanent /3.0/jms-resources-and-mdb-container.html http://openejb.apache.org/jms-resources-and-mdb-container.html
 Redirect permanent /3.0/spring.html http://openejb.apache.org/spring.html
@@ -72,7 +78,7 @@ Redirect permanent /3.0/singleton-beans.html http://openejb.apache.org/singleton
 Redirect permanent /3.0/containers-and-resources.html http://openejb.apache.org/containers-and-resources.html
 Redirect permanent /3.0/tomcat-ejb-refs.html http://openejb.apache.org/tomcat-ejb-refs.html
 Redirect permanent /3.0/application-discovery-via-the-classpath.html http://openejb.apache.org/application-discovery-via-the-classpath.html
-Redirect permanent /3.0/failover.html http://openejb.apache.org/failover.html
+Redirect permanent /3.0/failover.html http://openejb.apache.org/ejb-failover.html
 Redirect permanent /3.0/clients.html http://openejb.apache.org/clients.html
 Redirect permanent /3.0/ejb-jpa-jsf-jax-rs.html http://openejb.apache.org/ejb-jpa-jsf-jax-rs.html
 Redirect permanent /3.0/common-persistenceprovider-properties.html http://openejb.apache.org/common-persistenceprovider-properties.html
@@ -108,7 +114,6 @@ Redirect permanent /3.0/configuring-javamail.html http://openejb.apache.org/conf
 Redirect permanent /3.0/restful-web-service-with-openejb-jersey-junit-maven-mysql-and-tomcat.html http://openejb.apache.org/restful-web-service-with-openejb-jersey-junit-maven-mysql-and-tomcat.html
 Redirect permanent /3.0/testcase-with-testbean-inner-class.html http://openejb.apache.org/testcase-with-testbean-inner-class.html
 Redirect permanent /3.0/basics-transactions.html http://openejb.apache.org/basics-transactions.html
-Redirect permanent /3.0/3.0 http://openejb.apache.org/3.0
 Redirect permanent /3.0/design-application-server.html http://openejb.apache.org/design-application-server.html
 Redirect permanent /3.0/understanding-the-directory-layout.html http://openejb.apache.org/understanding-the-directory-layout.html
 Redirect permanent /3.0/design-container.html http://openejb.apache.org/design-container.html
@@ -131,7 +136,6 @@ Redirect permanent /3.0/design-cmp-entitybean-container.html http://openejb.apac
 Redirect permanent /3.0/design-passivation-strategy.html http://openejb.apache.org/design-passivation-strategy.html
 Redirect permanent /3.0/design-transaction-service.html http://openejb.apache.org/design-transaction-service.html
 Redirect permanent /3.0/hello-world.html http://openejb.apache.org/hello-world.html
-Redirect permanent /3.0/interceptor-example.html http://openejb.apache.org/interceptor-example.html
 Redirect permanent /3.0/online-javadocs.html http://openejb.apache.org/online-javadocs.html
 Redirect permanent /3.0/design-bmp-entitybean-container.html http://openejb.apache.org/design-bmp-entitybean-container.html
 Redirect permanent /3.0/design-nova-configuration-factory.html http://openejb.apache.org/design-nova-configuration-factory.html
@@ -142,4 +146,3 @@ Redirect permanent /3.0/design.html http://openejb.apache.org/design.html
 Redirect permanent /3.0/documentation.html http://openejb.apache.org/documentation.html
 Redirect permanent /3.0/embedding.html http://openejb.apache.org/embedding.html
 Redirect permanent /3.0/introduction-to-the-command-line-tools.html http://openejb.apache.org/introduction-to-the-command-line-tools.html
-Redirect permanent /3.0/stateless-session-beans.html http://openejb.apache.org/stateless-session-beans.html
