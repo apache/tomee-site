@@ -1,277 +1,876 @@
-Title: Containers and Resources
-{anchor: containers}
-<a name="ContainersandResources-Containers"></a>
-# Containers
-{anchor:Default CMP Container-container}
-<a name="ContainersandResources-CMP_ENTITY"></a>
-## CMP_ENTITY
-Declarable in openejb.xml via
+# STATELESS <small>Container </small>
 
-    <Container id="Foo" type="CMP_ENTITY">
-    </Container>
-
-Declarable in properties via
-{panel}
-Foo = new://Container?type=CMP_ENTITY
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-    | CmpEngineFactory | Default value is
-_org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory_.||
-
-{anchor:Default BMP Container-container}
-<a name="ContainersandResources-BMP_ENTITY"></a>
-## BMP_ENTITY
-Declarable in openejb.xml via
-
-    <Container id="Foo" type="BMP_ENTITY">
-    </Container>
-
-Declarable in properties via
-{panel}
-Foo = new://Container?type=BMP_ENTITY
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-  
-  
-
-{anchor:Default Stateless Container-container}
-<a name="ContainersandResources-STATELESS"></a>
-## STATELESS
 Declarable in openejb.xml via
 
     <Container id="Foo" type="STATELESS">
     </Container>
 
 Declarable in properties via
-{panel}
-Foo = new://Container?type=STATELESS
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-  
-  
-  
-  
-  
-  
 
-{anchor:Default Stateful Container-container}
-<a name="ContainersandResources-STATEFUL"></a>
-## STATEFUL
+    Foo = new://Container?type=STATELESS
+
+## Properties
+
+### AccessTimeout
+
+Specifies the time an invokation should wait for an instance
+of the pool to become available.
+
+After the timeout is reached, if an instance in the pool cannot
+be obtained, the method invocation will fail.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+"1 hour and 27 minutes and 10 seconds"
+
+Any usage of the `javax.ejb.AccessTimeout` annotation will
+override this setting for the bean or method where the
+annotation is used.
+
+### MaxSize
+
+Specifies the size of the bean pools for this stateless
+SessionBean container.  If StrictPooling is not used, instances
+will still be created beyond this number if there is demand, but
+they will not be returned to the pool and instead will be
+immediately destroyed.
+
+### MinSize
+
+Specifies the minimum number of bean instances that should be in
+the pool for each bean.  Pools are prefilled to the minimum on
+startup.  Note this will create start order dependencies between
+other beans that also eagerly start, such as other `@Stateless`
+beans with a minimum or `@Singleton` beans using `@Startup`.  The
+start order.
+
+The minimum pool size is rigidly maintained.  Instances in the
+minimum side of the pool are not eligible for `IdleTimeout` or
+`GarbageCollection`, but are subject to `MaxAge` and flushing.
+
+If the pool is flushed it is immediately refilled to the minimum
+size with `MaxAgeOffset` applied.  If an instance from the minimum
+side of the pool reaches its `MaxAge`, it is also immediately
+replaced.  Replacement is done in a background queue using the
+number of threads specified by `CallbackThreads`.
+
+### StrictPooling
+
+StrictPooling tells the container what to do when the pool
+reaches it's maximum size and there are incoming requests that
+need instances.
+
+With strict pooling, requests will have to wait for instances to
+become available. The pool size will never grow beyond the the
+set `MaxSize` value.  The maximum amount of time a request should
+wait is specified via the `AccessTimeout` setting.
+
+Without strict pooling, the container will create temporary
+instances to meet demand. The instances will last for just one
+method invocation and then are removed.
+
+Setting `StrictPooling` to `false` and `MaxSize` to `0` will result in
+no pooling. Instead instances will be created on demand and live
+for exactly one method call before being removed.
+
+### MaxAge
+
+Specifies the maximum time that an instance should live before
+it should be retired and removed from use.  This will happen
+gracefully.  Useful for situations where bean instances are
+designed to hold potentially expensive resources such as memory
+or file handles and need to be periodically cleared out.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+`1 hour and 27 minutes and 10 seconds`
+
+### ReplaceAged
+
+When `ReplaceAged` is enabled, any instances in the pool that
+expire due to reaching their `MaxAge` will be replaced immediately
+so that the pool will remain at its current size.  Replacement
+is done in a background queue so that incoming threads will not
+have to wait for instance creation.
+
+The aim of his option is to prevent user requests from paying
+the instance creation cost as `MaxAge` is enforced, potentially
+while under heavy load at peak hours.
+
+Instances from the minimum side of the pool are always replaced
+when they reach their `MaxAge`, this setting dictates the
+treatment of non-minimum instances.
+
+### ReplaceFlushed
+
+When `ReplaceFlushed` is enabled, any instances in the pool that
+are flushed will be replaced immediately so that the pool will
+remain at its current size.  Replacement is done in a background
+queue so that incoming threads will not have to wait for
+instance creation.
+
+The aim of his option is to prevent user requests from paying
+the instance creation cost if a flush performed while under
+heavy load at peak hours.
+
+Instances from the minimum side of the pool are always replaced
+when they are flushed, this setting dictates the treatment of
+non-minimum instances.
+
+A bean may flush its pool by casting the `SessionContext` to
+`Flushable` and calling `flush()`.  See `SweepInterval` for details on
+how flush is performed.
+
+    import javax.annotation.Resource;
+    import javax.ejb.SessionContext;
+    import javax.ejb.Stateless;
+    import java.io.Flushable;
+    import java.io.IOException;
+
+    public class MyBean {
+
+        private SessionContext sessionContext;
+
+        public void flush() throws IOException {
+
+            ((Flushable) sessionContext).flush();
+        }
+    }
+
+### MaxAgeOffset
+
+Applies to MaxAge usage and would rarely be changed, but is a
+nice feature to understand.
+
+When the container first starts and the pool is filled to the
+minimum size, all those "minimum" instances will have the same
+creation time and therefore all expire at the same time dictated
+by the `MaxAge` setting.  To protect against this sudden drop
+scenario and provide a more gradual expiration from the start
+the container will spread out the age of the instances that fill
+the pool to the minimum using an offset.
+
+The `MaxAgeOffset` is not the final value of the offset, but
+rather it is used in creating the offset and allows the
+spreading to push the initial ages into the future or into the
+past.  The pool is filled at startup as follows:
+
+    for (int i = 0; i < poolMin; i++) {
+        long ageOffset = (maxAge / poolMin * i * maxAgeOffset) % maxAge;
+        pool.add(new Bean(), ageOffset));
+    }
+
+The default `MaxAgeOffset` is -1 which causes the initial
+instances in the pool to live a bit longer before expiring.  As
+a concrete example, let's say the MinSize is 4 and the MaxAge is
+100 years.  The generated offsets for the four instances created
+at startup would be 0, -25, -50, -75.  So the first instance
+would be "born" at age 0, die at 100, living 100 years.  The
+second instance would be born at -25, die at 100, living a total
+of 125 years.  The third would live 150 years.  The fourth 175
+years.
+
+A `MaxAgeOffset` of 1 would cause instances to be "born" older
+and therefore die sooner.  Using the same example `MinSize` of 4
+and `MaxAge` of `100 years`, the life spans of these initial four
+instances would be 100, 75, 50, and 25 years respectively.
+
+A `MaxAgeOffset` of 0 will cause no "spreading" of the age of the
+first instances used to fill the pool to the minimum and these
+instances will of course reach their MaxAge at the same time.
+It is possible to set to decimal values such as -0.5, 0.5, -1.2,
+or 1.2.
+
+### IdleTimeout
+
+Specifies the maximum time that an instance should be allowed to
+sit idly in the pool without use before it should be retired and
+removed.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+"1 hour and 27 minutes and 10 seconds"
+
+### GarbageCollection
+
+Allows Garbage Collection to be used as a mechanism for shrinking
+the pool.  When set to true all instances in the pool, excluding
+the minimum, are eligible for garbage collection by the virtual
+machine as per the rules of `java.lang.ref.SoftReference` and can be
+claimed by the JVM to free memory.  Instances garbage collected
+will have their `@PreDestroy` methods called during finalization.
+
+In the OpenJDK VM the `-XX:SoftRefLRUPolicyMSPerMB` flag can adjust
+how aggressively SoftReferences are collected.  The default
+OpenJDK setting is 1000, resulting in inactive pooled instances
+living one second of lifetime per free megabyte in the heap, which
+is very aggressive.  The setting should be increased to get the
+most out of the `GarbageCollection` feature of the pool.  Much
+higher settings are safe.  Even a setting as high as 3600000 (1
+hour per free MB in the heap) does not affect the ability for the
+VM to garbage collect SoftReferences in the event that memory is
+needed to avoid an `OutOfMemoryException`.
+
+### SweepInterval
+
+The frequency in which the container will sweep the pool and
+evict expired instances.  Eviction is how the `IdleTimeout`,
+`MaxAge`, and pool "flush" functionality is enforced.  Higher
+intervals are better.
+
+Instances in use are excluded from sweeping.  Should an instance
+expire while in use it will be evicted immediately upon return
+to the pool.  Effectively `MaxAge` and flushes will be enforced as
+a part of normal activity or sweeping, while IdleTimeout is only
+enforcable via sweeping.  This makes aggressive sweeping less
+important for a pool under moderate load.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+`1 hour and 27 minutes and 10 seconds`
+
+### CallbackThreads
+
+When sweeping the pool for expired instances a thread pool is
+used to process calling `@PreDestroy` on expired instances as well
+as creating new instances as might be required to fill the pool
+to the minimum after a Flush or `MaxAge` expiration.  The
+`CallbackThreads` setting dictates the size of the thread pool and
+is shared by all beans deployed in the container.
+
+### CloseTimeout
+
+PostConstruct methods are invoked on all instances in the pool
+when the bean is undeployed and its pool is closed.  The
+`CloseTimeout` specifies the maximum time to wait for the pool to
+close and `PostConstruct` methods to be invoked.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+`1 hour and 27 minutes and 10 seconds`
+
+## Default declaration
+    <Container id="Default Stateless Container" type="STATELESS">
+        AccessTimeout = 30 seconds
+        MaxSize = 10
+        MinSize = 0
+        StrictPooling = true
+        MaxAge = 0 hours
+        ReplaceAged = true
+        ReplaceFlushed = false
+        MaxAgeOffset = -1
+        IdleTimeout = 0 minutes
+        GarbageCollection = false
+        SweepInterval = 5 minutes
+        CallbackThreads = 5
+        CloseTimeout = 5 minutes
+    </Container>
+
+# STATEFUL <small>Container </small>
+
 Declarable in openejb.xml via
 
     <Container id="Foo" type="STATEFUL">
     </Container>
 
 Declarable in properties via
-{panel}
-Foo = new://Container?type=STATEFUL
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-  
-  
-  
-  
-  
-  
-  
-  
 
-{anchor:Default MDB Container-container}
-<a name="ContainersandResources-MESSAGE"></a>
-## MESSAGE
+    Foo = new://Container?type=STATEFUL
+
+## Properties
+
+### AccessTimeout
+
+Specifies the maximum time an invocation could wait for the
+`@Stateful` bean instance to become available before giving up.
+
+After the timeout is reached a `javax.ejb.ConcurrentAccessTimeoutException`
+will be thrown.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+"1 hour and 27 minutes and 10 seconds"
+
+Any usage of the `javax.ejb.AccessTimeout` annotation will
+override this setting for the bean or method where the
+annotation is used.
+
+### Cache
+
+The cache is responsible for managing stateful bean
+instances.  The cache can page instances to disk as memory
+is filled and can destroy abandoned instances.  A different
+cache implementation can be used by setting this property
+to the fully qualified class name of the Cache implementation.
+
+### Passivator
+
+The passivator is responsible for writing beans to disk
+at passivation time. Different passivators can be used
+by setting this property to the fully qualified class name
+of the `PassivationStrategy` implementation. The passivator
+is not responsible for invoking any callbacks or other
+processing, its only responsibly is to write the bean state
+to disk.
+
+Known implementations:
+
+- org.apache.openejb.core.stateful.RAFPassivater
+- org.apache.openejb.core.stateful.SimplePassivater
+
+### TimeOut
+
+Specifies the time a bean can be idle before it is removed by the container.
+
+This value is measured in minutes. A value of 5 would
+result in a time-out of 5 minutes between invocations.
+A value of -1 would mean no timeout.
+A value of 0 would mean a bean can be immediately removed by the container.
+
+Any usage of the `javax.ejb.StatefulTimeout` annotation will
+override this setting for the bean where the annotation is used.
+
+### Frequency
+
+Specifies the frequency (in seconds) at which the bean cache is checked for 
+idle beans.
+
+### Capacity
+
+Specifies the size of the bean pools for this
+stateful SessionBean container.
+
+### BulkPassivate
+
+Property name that specifies the number of instances
+to passivate at one time when doing bulk passivation.
+
+## Default declaration
+    <Container id="Default Stateful Container" type="STATEFUL">
+        AccessTimeout = 30 seconds
+        Cache = org.apache.openejb.core.stateful.SimpleCache
+        Passivator = org.apache.openejb.core.stateful.SimplePassivater
+        TimeOut = 20
+        Frequency = 60
+        Capacity = 1000
+        BulkPassivate = 100
+    </Container>
+
+# SINGLETON <small>Container </small>
+
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="SINGLETON">
+    </Container>
+
+Declarable in properties via
+
+    Foo = new://Container?type=SINGLETON
+
+## Properties
+
+### AccessTimeout
+
+Specifies the maximum time an invocation could wait for the
+`@Singleton` bean instance to become available before giving up.
+
+After the timeout is reached a `javax.ejb.ConcurrentAccessTimeoutException`
+will be thrown.
+
+Usable time units: nanoseconds, microsecons, milliseconds,
+seconds, minutes, hours, days.  Or any combination such as
+`1 hour and 27 minutes and 10 seconds`
+
+Any usage of the `javax.ejb.AccessTimeout` annotation will
+override this setting for the bean or method where the
+annotation is used.
+
+## Default declaration
+    <Container id="Default Singleton Container" type="SINGLETON">
+        AccessTimeout = 30 seconds
+    </Container>
+
+# MESSAGE <small>Container </small>
+
 Declarable in openejb.xml via
 
     <Container id="Foo" type="MESSAGE">
     </Container>
 
 Declarable in properties via
-{panel}
-Foo = new://Container?type=MESSAGE
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-  
-  
-  
-  
-  
-  
-  
-  
+
+    Foo = new://Container?type=MESSAGE
+
+## Properties
+
+### ResourceAdapter
+
+The resource adapter delivers messages to the container
+
+### MessageListenerInterface
+
+Specifies the message listener interface handled by this container
+
+### ActivationSpecClass
+
+Specifies the activation spec class
+
+### InstanceLimit
+
+Specifies the maximum number of bean instances that are
+allowed to exist for each MDB deployment.
+
+## Default declaration
+    <Container id="Default MDB Container" type="MESSAGE">
+        ResourceAdapter = Default JMS Resource Adapter
+        MessageListenerInterface = javax.jms.MessageListener
+        ActivationSpecClass = org.apache.activemq.ra.ActiveMQActivationSpec
+        InstanceLimit = 10
+    </Container>
+
+# MANAGED <small>Container </small>
+
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="MANAGED">
+    </Container>
+
+Declarable in properties via
+
+    Foo = new://Container?type=MANAGED
+
+No properties.
+
+# CMP_ENTITY <small>Container </small>
+
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="CMP_ENTITY">
+    </Container>
+
+Declarable in properties via
+
+    Foo = new://Container?type=CMP_ENTITY
+
+## Properties
+
+### CmpEngineFactory
+
+No description.
+
+## Default declaration
+    <Container id="Default CMP Container" type="CMP_ENTITY">
+        CmpEngineFactory = org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory
+    </Container>
+
+# BMP_ENTITY <small>Container </small>
+
+Declarable in openejb.xml via
+
+    <Container id="Foo" type="BMP_ENTITY">
+    </Container>
+
+Declarable in properties via
+
+    Foo = new://Container?type=BMP_ENTITY
+
+## Properties
+
+### PoolSize
+
+Specifies the size of the bean pools for this
+bmp entity container.
+
+## Default declaration
+    <Container id="Default BMP Container" type="BMP_ENTITY">
+        PoolSize = 10
+    </Container>
 
 
-{anchor: resources}
-<a name="ContainersandResources-Resources"></a>
-# Resources
-{anchor:Default JDBC Database-resource}
-<a name="ContainersandResources-javax.sql.DataSource"></a>
-## javax.sql.DataSource
+# javax.sql.DataSource <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="javax.sql.DataSource">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=javax.sql.DataSource
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-  
-  
-  
-  
-  
-  
-  
-  
-    | Password | Default password|
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-{anchor:Default JMS Resource Adapter-resource}
-<a name="ContainersandResources-ActiveMQResourceAdapter"></a>
-## ActiveMQResourceAdapter
+    Foo = new://Resource?type=javax.sql.DataSource
+
+## Properties
+
+### Definition
+
+No description.
+
+### JtaManaged
+
+Determines wether or not this data source should be JTA managed
+or user managed.  If set to 'true' it will automatically be enrolled
+in any ongoing transactions.  Calling begin/commit/rollback or setAutoCommit
+on the datasource or connection will not be allowed.  If you need to perform
+these functions yourself, set `JtaManaged` to `false`
+
+In terms of JPA persistence.xml:
+
+- `JtaManaged=true` can be used as a 'jta-data-source'
+- `JtaManaged=false` can be used as a 'non-jta-data-source'
+
+### JdbcDriver
+
+Driver class name
+
+### JdbcUrl
+
+Url for creating connections
+
+### UserName
+
+Default user name
+
+### Password
+
+Default password
+
+### PasswordCipher
+
+No description.
+
+### ConnectionProperties
+
+The connection properties that will be sent to the JDBC
+driver when establishing new connections
+
+Format of the string must be [propertyName=property;]*
+
+NOTE - The "user" and "password" properties will be passed
+explicitly, so they do not need to be included here.
+
+### DefaultAutoCommit
+
+The default auto-commit state of new connections
+
+### DefaultReadOnly
+
+The default read-only state of new connections
+If not set then the setReadOnly method will not be called.
+(Some drivers don't support read only mode, ex: Informix)
+
+### DefaultTransactionIsolation
+
+The default TransactionIsolation state of new connections
+If not set then the `setTransactionIsolation` method will not
+be called. The allowed values for this property are:
+
+- `NONE`
+- `READ_COMMITTED`
+- `READ_UNCOMMITTED`
+- `REPEATABLE_READ`
+- `SERIALIZABLE`
+
+Note: Most JDBC drivers do not support all isolation levels
+
+### InitialSize
+
+The initial number of connections that are created when the
+pool is started
+
+### MaxActive
+
+The maximum number of active connections that can be
+allocated from this pool at the same time, or a negative
+number for no limit.
+
+### MaxIdle
+
+The maximum number of connections that can remain idle in
+the pool, without extra ones being released, or a negative
+number for no limit.
+
+### MinIdle
+
+The minimum number of connections that can remain idle in
+the pool, without extra ones being created, or zero to
+create none.
+
+### MaxWait
+
+The maximum number of milliseconds that the pool will wait
+(when there are no available connections) for a connection
+to be returned before throwing an exception, or -1 to wait
+indefinitely.
+
+### ValidationQuery
+
+The SQL query that will be used to validate connections from
+this pool before returning them to the caller. If specified,
+this query MUST be an SQL SELECT statement that returns at
+least one row.
+
+### TestOnBorrow
+
+If true connections will be validated before being returned
+from the pool. If the validation fails, the connection is
+destroyed, and a new conection will be retrieved from the
+pool (and validated).
+
+NOTE - for a true value to have any effect, the
+ValidationQuery parameter must be set.
+
+### TestOnReturn
+
+If true connections will be validated before being returned
+to the pool.  If the validation fails, the connection is
+destroyed instead of being returned to the pool.
+
+NOTE - for a true value to have any effect, the
+ValidationQuery parameter must be set.
+
+### TestWhileIdle
+
+If true connections will be validated by the idle connection
+evictor (if any). If the validation fails, the connection is
+destroyed and removed from the pool
+
+NOTE - for a true value to have any effect, the
+timeBetweenEvictionRunsMillis property must be a positive
+number and the ValidationQuery parameter must be set.
+
+### TimeBetweenEvictionRunsMillis
+
+The number of milliseconds to sleep between runs of the idle
+connection evictor thread. When set to a negative number, no
+idle connection evictor thread will be run.
+
+### NumTestsPerEvictionRun
+
+The number of connectionss to examine during each run of the
+idle connection evictor thread (if any).
+
+### MinEvictableIdleTimeMillis
+
+The minimum amount of time a connection may sit idle in the
+pool before it is eligable for eviction by the idle
+connection evictor (if any).
+
+### PoolPreparedStatements
+
+If true, a statement pool is created for each Connection and
+PreparedStatements created by one of the following methods are
+pooled:
+
+    public PreparedStatement prepareStatement(String sql);
+    public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)
+
+### MaxOpenPreparedStatements
+
+The maximum number of open statements that can be allocated
+from the statement pool at the same time, or zero for no
+limit.
+
+NOTE - Some drivers have limits on the number of open
+statements, so make sure there are some resources left
+for the other (non-prepared) statements.
+
+### AccessToUnderlyingConnectionAllowed
+
+If true the raw physical connection to the database can be
+accessed using the following construct:
+
+    Connection conn = ds.getConnection();
+    Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
+    ...
+    conn.close()
+
+Default is false, because misbehaving programs can do harmfull
+things to the raw connection shuch as closing the raw
+connection or continuing to use the raw connection after it
+has been assigned to another logical connection.  Be careful
+and only use when you need direct access to driver specific
+extensions.
+
+NOTE: Do NOT close the underlying connection, only the
+original logical connection wrapper.
+
+## Default declaration
+    <Resource id="Default JDBC Database" type="javax.sql.DataSource">
+        Definition = 
+        JtaManaged = true
+        JdbcDriver = org.hsqldb.jdbcDriver
+        JdbcUrl = jdbc:hsqldb:file:data/hsqldb/hsqldb
+        UserName = sa
+        Password = 
+        PasswordCipher = PlainText
+        ConnectionProperties = 
+        DefaultAutoCommit = true
+        DefaultReadOnly = 
+        DefaultTransactionIsolation = 
+        InitialSize = 0
+        MaxActive = 20
+        MaxIdle = 20
+        MinIdle = 0
+        MaxWait = -1
+        ValidationQuery = 
+        TestOnBorrow = true
+        TestOnReturn = false
+        TestWhileIdle = false
+        TimeBetweenEvictionRunsMillis = -1
+        NumTestsPerEvictionRun = 3
+        MinEvictableIdleTimeMillis = 1800000
+        PoolPreparedStatements = false
+        MaxOpenPreparedStatements = 0
+        AccessToUnderlyingConnectionAllowed = false
+    </Resource>
+
+# ActiveMQResourceAdapter <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="ActiveMQResourceAdapter">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=ActiveMQResourceAdapter
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-  
-  
-  
-  
-  
-  
 
-{anchor:Default JMS Connection Factory-resource}
-<a name="ContainersandResources-javax.jms.ConnectionFactory"></a>
-## javax.jms.ConnectionFactory
+    Foo = new://Resource?type=ActiveMQResourceAdapter
+
+## Properties
+
+### BrokerXmlConfig
+
+Broker configuration
+
+### ServerUrl
+
+Broker address
+
+### DataSource
+
+DataSource for persistence messages
+
+## Default declaration
+    <Resource id="Default JMS Resource Adapter" type="ActiveMQResourceAdapter">
+        BrokerXmlConfig = broker:(tcp://localhost:61616)?useJmx=false
+        ServerUrl = vm://localhost?async=true
+        DataSource = Default Unmanaged JDBC Database
+    </Resource>
+
+# javax.jms.ConnectionFactory <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="javax.jms.ConnectionFactory">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=javax.jms.ConnectionFactory
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-    | ResourceAdapter | Default value is _Default JMS Resource Adapter_.||
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-{anchor:Default Queue-resource}
-<a name="ContainersandResources-javax.jms.Queue"></a>
-## javax.jms.Queue
+    Foo = new://Resource?type=javax.jms.ConnectionFactory
+
+## Properties
+
+### ResourceAdapter
+
+No description.
+
+### TransactionSupport
+
+Specifies if the connection is enrolled in global transaction
+allowed values: xa, local or none
+
+### PoolMaxSize
+
+Maximum number of physical connection to the ActiveMQ broker
+
+### PoolMinSize
+
+Minimum number of physical connection to the ActiveMQ broker
+
+### ConnectionMaxWaitMilliseconds
+
+Maximum amount of time to wait for a connection
+
+### ConnectionMaxIdleMinutes
+
+Maximum amount of time a connection can be idle before being reclaimed
+
+## Default declaration
+    <Resource id="Default JMS Connection Factory" type="javax.jms.ConnectionFactory">
+        ResourceAdapter = Default JMS Resource Adapter
+        TransactionSupport = xa
+        PoolMaxSize = 10
+        PoolMinSize = 0
+        ConnectionMaxWaitMilliseconds = 5000
+        ConnectionMaxIdleMinutes = 15
+    </Resource>
+
+# javax.jms.Queue <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="javax.jms.Queue">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=javax.jms.Queue
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-    | destination | Specifies the name of the queue|
 
-{anchor:Default Topic-resource}
-<a name="ContainersandResources-javax.jms.Topic"></a>
-## javax.jms.Topic
+    Foo = new://Resource?type=javax.jms.Queue
+
+## Properties
+
+### destination
+
+Specifies the name of the queue
+
+## Default declaration
+    <Resource id="Default Queue" type="javax.jms.Queue">
+        destination = 
+    </Resource>
+
+# javax.jms.Topic <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="javax.jms.Topic">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=javax.jms.Topic
-{panel}
-Supports the following properties
-    || Property Name || Description ||
-    | destination | Specifies the name of the topic|
 
-{anchor:Default ORB-resource}
-<a name="ContainersandResources-org.omg.CORBA.ORB"></a>
-## org.omg.CORBA.ORB
+    Foo = new://Resource?type=javax.jms.Topic
+
+## Properties
+
+### destination
+
+Specifies the name of the topic
+
+## Default declaration
+    <Resource id="Default Topic" type="javax.jms.Topic">
+        destination = 
+    </Resource>
+
+# org.omg.CORBA.ORB <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="org.omg.CORBA.ORB">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=org.omg.CORBA.ORB
-{panel}
+
+    Foo = new://Resource?type=org.omg.CORBA.ORB
+
 No properties.
 
-{anchor:Default Mail Session-resource}
-<a name="ContainersandResources-javax.mail.Session"></a>
-## javax.mail.Session
+# javax.mail.Session <small>Resource </small>
+
 Declarable in openejb.xml via
 
     <Resource id="Foo" type="javax.mail.Session">
     </Resource>
 
 Declarable in properties via
-{panel}
-Foo = new://Resource?type=javax.mail.Session
-{panel}
+
+    Foo = new://Resource?type=javax.mail.Session
+
 No properties.
+
+
