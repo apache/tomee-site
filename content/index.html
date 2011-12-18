@@ -52,11 +52,11 @@
             </ul>
 
             {% for e in twitter.list %}
-            <ul>
-            <li>
+            <dl>
+            <dd>
             <a href="{{ e.url }}">@</a>{{ e.title|safe }}
-            </li>
-            </ul>
+            </dd>
+            </dl>
             {% endfor %}
         </div>
     </div>
