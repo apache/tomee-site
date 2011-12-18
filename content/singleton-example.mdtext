@@ -56,6 +56,7 @@ public class PropertyRegistryBean implements PropertyRegistry {
 }
 </pre></code>
 
+<div class="container">
 ComponentRegistryBean
 
 Here we see a bean that uses the Container-Managed Concurrency option, the default. With @ConcurrencyManagement(CONTAINER) the container controls whether multi-threaded access should be allowed to the bean (@Lock(READ)) or if single-threaded access should be enforced (@Lock(WRITE)).
@@ -170,3 +171,4 @@ Results :
 
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 </pre></code>
+</div>
