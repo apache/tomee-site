@@ -1,135 +1,172 @@
 Title: Singleton Example
-{tip:title=OpenEJB 3.1 or later required}
-<a name="SingletonExample-Overview"></a>
-# Overview
 
-As the name implies a javax.ejb.Singleton is a session bean with a
-guarantee that there is at most one instance in the application.
+#Overview
 
-What it gives you that is completely missing in EJB 3.0 and prior versions
-is the ability to have an EJB that is notified when the application starts
-and notified when the application stops.  So you can do all sorts of things
-that you previously could only do with a load-on-startup servlet.  It also
-gives you a place to hold data that pertains to the entire application and
-all users using it, without the need for a static.  Additionally, Singleton
-beans can be invoked by several threads at one time similar to a Servlet.
+As the name implies a javax.ejb.Singleton is a session bean with a guarantee that there is at most one instance in the application.
 
-_See the [Singleton Beans](singleton-beans.html)
- page for a full description of the javax.ejb.Singleton api._
+What it gives that is completely missing in EJB 3.0 and prior versions is the ability to have an EJB that is notified when the application starts and notified when the application stops. So you can do all sorts of things that you previously could only do with a load-on-startup servlet. It also gives you a place to hold data that pertains to the entire application and all users using it, without the need for a static. Additionally, Singleton beans can be invoked by several threads at one time similar to a Servlet.
 
-<a name="SingletonExample-TheCode"></a>
-# The Code
-<a name="SingletonExample-PropertyRegistryBean"></a>
-## PropertyRegistryBean
+See the Singleton Beans Javadocs linked at the bottom for a full description.
 
-Here we see a bean that uses the Bean-Managed Concurrency option as well as
-the *@Startup* annotation which causes the bean to be instantiated by the
-container when the application starts.	Singleton beans with
-*@ConcurrencyManagement(BEAN)* are responsible for their own thread-safety.
- The bean shown is a simple properties "registry" and provides a place
-where options could be set and retrieved by all beans in the application.
+#The Code
+PropertyRegistryBean
 
-{snippet:url=openejb3/examples/simple-singleton/src/main/java/org/superbiz/registry/PropertyRegistryBean.java|lang=java|id=code}
+Here we see a bean that uses the Bean-Managed Concurrency option as well as the @Startup annotation which causes the bean to be instantiated by the container when the application starts. Singleton beans with @ConcurrencyManagement(BEAN) are responsible for their own thread-safety. The bean shown is a simple properties "registry" and provides a place where options could be set and retrieved by all beans in the application.
 
-<a name="SingletonExample-ComponentRegistryBean"></a>
-## ComponentRegistryBean
+<pre><code>
+import static javax.ejb.ConcurrencyManagementType.BEAN;
+import javax.ejb.Singleton;
+import javax.ejb.ConcurrencyManagement;
+import javax.ejb.Startup;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import java.util.Properties;
+@Singleton
+@ConcurrencyManagement(BEAN)
+@Startup
+public class PropertyRegistryBean implements PropertyRegistry {
+    // Note the java.util.Properties object is a thread-safe
+    // collections that uses synchronization.  If it didn't
+    // you would have to use some form of synchronization
+    // to ensure the PropertyRegistryBean is thread-safe.
+    private final Properties properties = new Properties();
 
-Here we see a bean that uses the Container-Managed Concurrency option, the
-default.  With *@ConcurrencyManagement(CONTAINER)* the container controls
-whether multi-threaded access should be allowed to the bean (*@Lock(READ)*)
-or if single-threaded access should be enforced (*@Lock(WRITE)*).
+    // The @Startup method ensures that this method is
+    // called when the application starts up.
+    @PostConstruct
+    public void applicationStartup() {
+        properties.putAll(System.getProperties());
+    }
+    @PreDestroy
+    public void applicationShutdown() {
+        properties.clear();
+    }
+    public String getProperty(String key) {
+        return properties.getProperty(key);
+    }
 
-{snippet:url=openejb3/examples/simple-singleton/src/main/java/org/superbiz/registry/ComponentRegistryBean.java|lang=java|id=code}
+    public String setProperty(String key, String value) {
+        return (String) properties.setProperty(key, value);
+    }
 
-Unless specified explicitly on the bean class or a method, the default
-@Lock value is @Lock(WRITE).  The code above uses the @Lock(READ)
-annotation on bean class to change the default so that multi-threaded
-access is granted by default.  We then only need to apply the @Lock(WRITE)
-annotation to the methods that modify the state of the bean.
+    public String removeProperty(String key) {
+        return (String) properties.remove(key);
+    }
 
-Essentially @Lock(READ) allows multithreaded access to the Singleton bean
-instance *unless* someone is invoking an @Lock(WRITE) method.  With
-@Lock(WRITE), the thread invoking the bean will be guaranteed to have
-exclusive access to the Singleton bean instance for the duration of its
-invocation.  This combination allows the bean instance to use data types
-that are not normally thread safe.  Great care must still be used, though.  
+}
+</pre></code>
 
-In the example we see ComponentRegistryBean using a java.util.HashMap which
-is not synchronized.  To make this ok we do three things:
+ComponentRegistryBean
 
-1. Encapsulation.  We don't expose the HashMap instance directly; including
-its iterators, key set, value set or entry set.
-1. We use @Lock(WRITE) on the methods that mutate the map such as the put()
-and remove() methods.  
-1. We use @Lock(READ) on the get() and values() methods as they do not
-change the map state and are guaranteed not to be called at the same as any
-of the @Lock(WRITE) methods, so we know the state of the HashMap is no
-being mutated and therefore safe for reading.
+Here we see a bean that uses the Container-Managed Concurrency option, the default. With @ConcurrencyManagement(CONTAINER) the container controls whether multi-threaded access should be allowed to the bean (@Lock(READ)) or if single-threaded access should be enforced (@Lock(WRITE)).
 
-The end result is that the threading model for this bean will switch from
-multi-threaded access to single-threaded access dynamically as needed
-depending on the which methods are being invoked.  This gives Singletons a
-bit of an advantage over Servlets for processing multi-threaded requests.
+<pre><code>
+import static javax.ejb.LockType.READ;
+import static javax.ejb.LockType.WRITE;
+import javax.ejb.Lock;
+import javax.ejb.Singleton;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Collection;
+import java.util.ArrayList;
 
-_See the [Singleton Beans](singleton-beans.html)
- page for more advanced details on Container-Managed Concurrency._
+@Singleton
+@Lock(READ)
+public class ComponentRegistryBean implements ComponentRegistry {
 
-<a name="SingletonExample-TestCase"></a>
-# Test Case
+    private final Map<Class, Object> components = new HashMap<Class, Object>();
 
-{snippet:url=openejb3/examples/simple-singleton/src/test/java/org/superbiz/registry/ComponentRegistryBeanTest.java|lang=java|id=code}
+    public <T> T getComponent(Class<T> type) {
+        return (T) components.get(type);
+    }
 
-<a name="SingletonExample-Running"></a>
-#  Running
+    public Collection<?> getComponents() {
+        return new ArrayList(components.values());
+    }
 
-Running the example is fairly simple.  In the "simple-singleton" directory
-run:
+    @Lock(WRITE)
+    public <T> T setComponent(Class<T> type, T value) {
+        return (T) components.put(type, value);
+    }
+
+    @Lock(WRITE)
+    public <T> T removeComponent(Class<T> type) {
+        return (T) components.remove(type);
+    }
+
+}
+</code></pre>
+Unless specified explicitly on the bean class or a method, the default @Lock value is @Lock(WRITE). The code above uses the @Lock(READ) annotation on bean class to change the default so that multi-threaded access is granted by default. We then only need to apply the @Lock(WRITE) annotation to the methods that modify the state of the bean.
+
+Essentially @Lock(READ) allows multithreaded access to the Singleton bean instance unless someone is invoking an @Lock(WRITE) method. With @Lock(WRITE), the thread invoking the bean will be guaranteed to have exclusive access to the Singleton bean instance for the duration of its invocation. This combination allows the bean instance to use data types that are not normally thread safe. Great care must still be used, though.
+
+In the example we see ComponentRegistryBean using a java.util.HashMap which is not synchronized. To make this ok we do three things:
+
+   1. Encapsulation. We don't expose the HashMap instance directly; including its iterators, key set, value set or entry set.
+   2. We use @Lock(WRITE) on the methods that mutate the map such as the put() and remove() methods.
+   3. We use @Lock(READ) on the get() and values() methods as they do not change the map state and are guaranteed not to be called at the same as any of the @Lock(WRITE) methods, so we know the state of the HashMap is no being mutated and therefore safe for reading.
+
+The end result is that the threading model for this bean will switch from multi-threaded access to single-threaded access dynamically as needed depending on the which methods are being invoked. This gives Singletons a bit of an advantage over Servlets for processing multi-threaded requests.
+
+See the Singleton Beans page for more advanced details on Container-Managed Concurrency.
+Test Case
+
+<pre><code>
+public class ComponentRegistryBeanTest extends TestCase {
+    public void test() throws Exception {
+        Properties props = new Properties();
+        props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
+        InitialContext context = new InitialContext(props);
+        // Both references below will point to the exact same instance
+        ComponentRegistry one = (ComponentRegistry) context.lookup("ComponentRegistryBeanLocal");
+        ComponentRegistry two = (ComponentRegistry) context.lookup("ComponentRegistryBeanLocal");
+        URI expectedUri = new URI("foo://bar/baz");
+        one.setComponent(URI.class, expectedUri);
+        URI actualUri = two.getComponent(URI.class);
+        assertSame(expectedUri, actualUri);
+        Date expectedDate = new Date();
+        two.setComponent(Date.class, expectedDate);
+        Date actualDate = one.getComponent(Date.class);
+        assertSame(expectedDate, actualDate);
+    }
+}
+</pre></code>
+
+#Running
+
+Running the example is fairly simple. In the "simple-singleton" directory run:
 
 $ mvn clean install
 
 Which should create output like the following.
 
 
-    -------------------------------------------------------
-     T E S T S
-    -------------------------------------------------------
-    Running org.superbiz.registry.ComponentRegistryBeanTest
-    Apache OpenEJB 3.1-SNAPSHOT    build: 20080820-09:53
-    http://openejb.apache.org/
-    INFO - openejb.home =
-/Users/dblevins/work/openejb3/examples/simple-singleton
-    INFO - openejb.base =
-/Users/dblevins/work/openejb3/examples/simple-singleton
-    INFO - Configuring Service(id=Default Security Service,
-type=SecurityService, provider-id=Default Security Service)
-    INFO - Configuring Service(id=Default Transaction Manager,
-type=TransactionManager, provider-id=Default Transaction Manager)
-    INFO - Found EjbModule in classpath:
-/Users/dblevins/work/openejb3/examples/simple-singleton/target/classes
-    INFO - Beginning load:
-/Users/dblevins/work/openejb3/examples/simple-singleton/target/classes
-    INFO - Configuring enterprise application: classpath.ear
-    INFO - Configuring Service(id=Default Singleton Container, type=Container,
-provider-id=Default Singleton Container)
-    INFO - Auto-creating a container for bean ComponentRegistryBean:
-Container(type=SINGLETON, id=Default Singleton Container)
-    INFO - Enterprise application "classpath.ear" loaded.
-    INFO - Assembling app: classpath.ear
-    INFO - Jndi(name=ComponentRegistryBeanLocal) -->
-Ejb(deployment-id=ComponentRegistryBean)
-    INFO - Jndi(name=PropertyRegistryBeanLocal) -->
-Ejb(deployment-id=PropertyRegistryBean)
-    INFO - Created Ejb(deployment-id=ComponentRegistryBean,
-ejb-name=ComponentRegistryBean, container=Default Singleton Container)
-    INFO - Created Ejb(deployment-id=PropertyRegistryBean,
-ejb-name=PropertyRegistryBean, container=Default Singleton Container)
-    INFO - Deployed Application(path=classpath.ear)
-    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.879 sec
-    Running org.superbiz.registry.PropertiesRegistryBeanTest
-    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
-    
-    Results :
-    
-    Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+#Tests
+<pre><code>
+Running org.superbiz.registry.ComponentRegistryBeanTest
+Apache OpenEJB 3.1-SNAPSHOT    build: 20080820-09:53
+http://openejb.apache.org/
+INFO - openejb.home = /Users/dblevins/work/openejb3/examples/simple-singleton
+INFO - openejb.base = /Users/dblevins/work/openejb3/examples/simple-singleton
+INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)
+INFO - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+INFO - Found EjbModule in classpath: /Users/dblevins/work/openejb3/examples/simple-singleton/target/classes
+INFO - Beginning load: /Users/dblevins/work/openejb3/examples/simple-singleton/target/classes
+INFO - Configuring enterprise application: classpath.ear
+INFO - Configuring Service(id=Default Singleton Container, type=Container, provider-id=Default Singleton Container)
+INFO - Auto-creating a container for bean ComponentRegistryBean: Container(type=SINGLETON, id=Default Singleton Container)
+INFO - Enterprise application "classpath.ear" loaded.
+INFO - Assembling app: classpath.ear
+INFO - Jndi(name=ComponentRegistryBeanLocal) --> Ejb(deployment-id=ComponentRegistryBean)
+INFO - Jndi(name=PropertyRegistryBeanLocal) --> Ejb(deployment-id=PropertyRegistryBean)
+INFO - Created Ejb(deployment-id=ComponentRegistryBean, ejb-name=ComponentRegistryBean, container=Default Singleton Container)
+INFO - Created Ejb(deployment-id=PropertyRegistryBean, ejb-name=PropertyRegistryBean, container=Default Singleton Container)
+INFO - Deployed Application(path=classpath.ear)
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.879 sec
+Running org.superbiz.registry.PropertiesRegistryBeanTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
 
+Results :
 
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+</pre></code>
