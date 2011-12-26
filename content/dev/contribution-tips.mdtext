@@ -2,7 +2,7 @@ Title: Contribution Tips
 <a name="ContributionTips-Firststeps"></a>
 # First steps
 
-1. Subscribe to the [dev list](mailto:dev-subscribe@openejb.apche.org)
+1. Subscribe to the [dev list](mailto:dev-subscribe@openejb.apache.org)
    and say Hi
 1. Get the source code with svn or git
     - svn https://svn.apache.org/repos/asf/openejb/trunk/openejb
