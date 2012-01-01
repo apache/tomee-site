@@ -1,47 +1,14 @@
 Title: System Properties
-<a name="SystemProperties-Generalproperties"></a>
+
 # General properties
-{info:title=Update this section}
-Update this section and add more documentation and examples of the usage of
-each property. Group similar properties
-{info}
-openejb.authentication.realmName
-openejb.base
-openejb.configuration
-openejb.deploymentId.format
-openejb.deployments.classpath
-openejb.deployments.classpath.ear
-openejb.deployments.classpath.exclude
-
-openejb.deployments.classpath.filter.descriptors
-openejb.deployments.classpath.filter.systemapps
-openejb.deployments.classpath.include
-
-openejb.deployments.classpath.require.descriptor
-openejb.deployments.classpath.ear
-openejb.descriptors.output
-openejb.embedded.remotable
-openejb.home
-openejb.jndiname.failoncollision
-openejb.jndiname.format
-openejb.jndiname.strategy.class
-openejb.localcopy
-openejb.log.factory
-openejb.nobanner
-openejb.provider.default
-openejb.validation.output.level
-openejb.validation.skip
-openejb.version
-
 <a name="SystemProperties-Overridingopenejb.xml"></a>
 #  Overriding openejb.xml
 
 Anything in the openejb.xml file can be overridden via system properties of
 the format: 
 
-{panel}
-  -D<id>.<property-name>=<property-value>
-{panel}
+
+  `-D<id>.<property-name>=<property-value>`
 
 ..where id is the value in the config file for example: 
 
@@ -81,9 +48,9 @@ For example, when OpenEJB starts it prints out the following:
 Each of those has the same standard xinet.d-like properties which can also
 be configured as such:
 
-{panel}
-  -D<id>.<property-name>=<property-value>
-{panel}
+
+  `-D<id>.<property-name>=<property-value>`
+
 
 ... where 'id' is the name of the server service and 'property-name' is one
 of the following: bind, port, threads, disabled, only_from.
@@ -91,4 +58,4 @@ of the following: bind, port, threads, disabled, only_from.
 So to set the address and port the ejbd service will bind to, simply
 specify this on the command line:
 
-> ./bin/openejb start -Dejbd.bind=192.168.1.12 -Dejbd.port=9988
+    ./bin/openejb start -Dejbd.bind=192.168.1.12 -Dejbd.port=9988
