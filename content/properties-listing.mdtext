@@ -77,6 +77,10 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
     |openejb.jsessionid-support | bool | remove URL from session tracking modes for this context (see javax.servlet.SessionTrackingMode)|
     |openejb.myfaces.disable-default-values | bool | by default TomEE will initialize myfaces with some its default values to avoid useless logging|
     |openejb.web.xml.major | int | major version of web.xml. Can be useful to force tomcat to scan servlet 3 annotatino when deploying with a servlet 2.x web.xml|
+    |tomee.jaxws.subcontext | string | sub context used to bind jaxws web services, default is
+webservices|
+    |tomee.jaxws.oldsubcontext| bool | wether or not activate old way to bind jaxws webservices directly
+on root context|
     
     # TomEE Arquillian adaptor
     |Name | Value | Description|
