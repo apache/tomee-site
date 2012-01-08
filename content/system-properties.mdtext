@@ -26,6 +26,10 @@ Could be overridden as follows via system properties on the command line:
 > -Dmysql.JdbcUrl=jdbc:mysql://localhost/test -Dmysql.UserName=test
 
 <a name="SystemProperties-OverridingServerServices"></a>
+
+#### Related docs:
+[Properties Listing](properties-listing.html) : A partial list of configurable properties
+
 #  Overriding Server Services
 
 Any server service installed into OpenEJB can be overridden in the same
