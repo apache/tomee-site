@@ -2,16 +2,15 @@ Title: Unix Daemon
 
 TomEE can be run as a daemon using the jsvc tool from the commons-daemon project. Source tarballs for jsvc are included with the TomEE binaries, and need to be compiled. Building jsvc requires a C ANSI compiler (such as GCC), GNU Autoconf, and a JDK.
 
-Before running the script, the JAVA_HOME environment variable should be set to the base path of the JDK. Alternately, when calling the ./configure script, the path of the JDK may be specified using the --with-java parameter, such as ./configure --with-java=/usr/java.
+Before running the script, the `JAVA_HOME` environment variable should be set to the base path of the JDK. Alternately, when calling the `./configure` script, the path of the JDK may be specified using the `--with-java` parameter, such as `./configure --with-java=/usr/java`.
 
-Using the following commands should result in a compiled jsvc binary, located in the $CATALINA_HOME/bin folder. This assumes that GNU TAR is used, and that CATALINA_HOME is an environment variable pointing to the base path of the TomEE installation.
+Using the following commands should result in a compiled jsvc binary, located in the `$TOMEE_HOME/bin` folder. This assumes that GNU TAR is used, and that `TOMEE_HOME` is an environment variable pointing to the base path of the TomEE installation.
 
 Please note that you should use the GNU make (gmake) instead of the native BSD make on FreeBSD systems.
 
 # Building
 
-    tar xzvf apache-tomee-1.0.0-beta-2-webprofile.tar.gz
-    cd apache-tomee-webprofile-1.0.0-beta-2/bin/
+    cd $TOMEE_HOME/bin
     tar xzvf commons-daemon-native.tar.gz
     cd commons-daemon-1.0.7-native-src/unix/
     ./configure
@@ -19,15 +18,13 @@ Please note that you should use the GNU make (gmake) instead of the native BSD m
     chmod 755 jsvc
     mv jsvc ../..
 
+Note that the `commons-daemon-1.0.7-native-src` directory may have a slightly different version number.
+
 # Starting (unix)
 
     cd $TOMEE_HOME
-    sudo ./bin/jsvc \
-        -cp ./bin/bootstrap.jar:./bin/tomcat-juli.jar \
-        -javaagent:lib/openejb-javaagent.jar \
-        -outfile ./logs/catalina.out \
-        -errfile ./logs/catalina.err \
-        org.apache.catalina.startup.Bootstrap
+    sudo ./bin/jsvc -cp ./bin/bootstrap.jar:./bin/tomcat-juli.jar -javaagent:lib/openejb-javaagent.jar \
+        -outfile ./logs/catalina.out -errfile ./logs/catalina.err org.apache.catalina.startup.Bootstrap
 
 # Starting (osx)
 
@@ -35,22 +32,19 @@ For a 64-bit JVM such as OSX Lion
 
     cd $TOMEE_HOME
 
-    sudo arch -arch x86_64 ./bin/jsvc -jvm server \
-        -cp ./bin/bootstrap.jar:./bin/tomcat-juli.jar \
-        -javaagent:lib/openejb-javaagent.jar \
-        -outfile ./logs/catalina.out \
-        -errfile ./logs/catalina.err  \
+    sudo arch -arch x86_64 ./bin/jsvc -jvm server -cp ./bin/bootstrap.jar:./bin/tomcat-juli.jar \
+        -javaagent:lib/openejb-javaagent.jar -outfile ./logs/catalina.out -errfile ./logs/catalina.err \
         org.apache.catalina.startup.Bootstrap
 
 For a 32-bit JVM
 
     cd $TOMEE_HOME
-
-    sudo arch -arch i386 ./bin/jsvc -jvm server \
-        -cp ./bin/bootstrap.jar:./bin/tomcat-juli.jar \
-        -javaagent:lib/openejb-javaagent.jar \
-        -outfile ./logs/catalina.out \
-        -errfile ./logs/catalina.err  \
+    sudo arch -arch i386 ./bin/jsvc -jvm server -cp ./bin/bootstrap.jar:./bin/tomcat-juli.jar \
+        -javaagent:lib/openejb-javaagent.jar -outfile ./logs/catalina.out -errfile ./logs/catalina.err \
         org.apache.catalina.startup.Bootstrap
+
+## Note on formatting
+
+Note that `\` at the end of each line is unix syntax to keep everything effectively as one line and one command.  The command is simply too long to show as one line on a fixed width html page.
 
 
