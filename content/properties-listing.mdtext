@@ -59,6 +59,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
     | openejb.logger.external | bool | use another log configuration(log4j for instance) |
     | openejb.nobanner | bool | activate or not the OpenEJB banner (activated by default)
     | openejb.check.classloader | bool | if true print some information about duplicated classes | 
+    | openejb.check.classloader.verbose | bool | if true print classes intersections | 
 
     Note: all resources can be configured by properties, see http://openejb.apache.org/embedded-configuration.html and http://openejb.apache.org/properties-tool.html|
     
