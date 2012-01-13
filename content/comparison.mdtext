@@ -1,8 +1,7 @@
 Title: Comparison
 
-# How is OpenEJB different than TomEE?
 
-It's different in two major ways, only one of them technical:
+OpenEJB and TomEE are different in two major ways, only one of them technical:
 
  - TomEE incorporates two additional projects; Tomcat and MyFaces
  - TomEE, as a name, more easily implies the breadth of technologies included
