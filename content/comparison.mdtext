@@ -1,5 +1,41 @@
 Title: Comparison
 
+# How is OpenEJB different than TomEE?
+
+It's different in two major ways, only one of them technical:
+
+ - TomEE incorporates two additional projects; Tomcat and MyFaces
+ - TomEE, as a name, more easily implies the breadth of technologies included
+
+Effectively, TomEE is a superset of OpenEJB.
+
+<table>
+<tr>
+<th></th>
+<th>Tomcat</th>
+<th>OpenEJB</th>
+<th>TomEE+</th>
+</tr>
+
+<tr><td>Java Servlets</td><td>(/)</td><td></td><td>(/)</td></tr>
+<tr><td>Java ServerPages (JSP)</td> <td>(/)</td> <td></td> <td>(/)</td></tr>
+<tr><td>Java ServerFaces (JSF)</td><td></td><td></td><td>(/)</td></tr>
+<tr><td>Java Transaction API (JTA)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java Persistence API (JPA)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java API for XML Web Services (JAX-WS)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java API for RESTful Web Services (JAX-RS)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java Messaging Service (JMS)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java Contexts and Dependency Injection (CDI)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java EE Connector Architecture (inaccurately called JCA sometimes)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java Authentication and Authorization Service (JAAS)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Java Authorization Contract for Containers (JACC)</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>JavaMail API</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Bean Validation</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr><td>Enterprise JavaBeans</td><td></td><td>(/)</td><td>(/)</td></tr>
+</table>
+
+# What is EJB?
+
 EJB as a technology has been historically misunderstood.  Many people do not realize, for example, that EJB is only a tiny bit smaller than Java EE itself.
 
 Due to the many things integrated with EJB, the API effectively pulls in nearly all the Java EE APIs.
@@ -49,39 +85,3 @@ So what is left out of the EJB "profile" ?
  - Java Servlets
  - Java ServerPages (JSP)
  - Java ServerFaces (JSF)
-
-Why wasn't TomEE done as a separate project?  Actually it effectively was, that other project is Tomcat.  Tomcat and MyFaces to be exact.
-
-# How is OpenEJB different than TomEE?
-
-It's different in two major ways, only one of them technical:
-
- - TomEE incorporates two additional projects; Tomcat and MyFaces
- - TomEE, as a name, more easily implies the breadth of technologies included
-
-Effectively, TomEE is a superset of OpenEJB.
-
-<table>
-<tr>
-<th></th>
-<th>Tomcat</th>
-<th>OpenEJB</th>
-<th>TomEE+</th>
-</tr>
-
-<tr><td>Java Servlets</td><td>(/)</td><td></td><td>(/)</td></tr>
-<tr><td>Java ServerPages (JSP)</td> <td>(/)</td> <td></td> <td>(/)</td></tr>
-<tr><td>Java ServerFaces (JSF)</td><td></td><td></td><td>(/)</td></tr>
-<tr><td>Java Transaction API (JTA)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Persistence API (JPA)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java API for XML Web Services (JAX-WS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java API for RESTful Web Services (JAX-RS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Messaging Service (JMS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Contexts and Dependency Injection (CDI)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java EE Connector Architecture (inaccurately called JCA sometimes)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Authentication and Authorization Service (JAAS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Authorization Contract for Containers (JACC)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>JavaMail API</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Bean Validation</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Enterprise JavaBeans</td><td></td><td>(/)</td><td>(/)</td></tr>
-</table>
