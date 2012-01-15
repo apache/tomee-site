@@ -1,86 +1,125 @@
 Title: Comparison
 
-
-OpenEJB and TomEE are different in two major ways, only one of them technical:
+Apache OpenEJB and Apache TomEE are born from the same project and community.  They differ in two major ways, only one of them technical:
 
  - TomEE incorporates two additional projects; Tomcat and MyFaces
  - TomEE, as a name, more easily implies the breadth of technologies included
 
-Effectively, TomEE is a superset of OpenEJB.
+Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE grew out of OpenEJB.
 
 <table>
 <tr>
 <th></th>
 <th>Tomcat</th>
-<th>OpenEJB</th>
+<th>TomEE</th>
 <th>TomEE+</th>
+<th>OpenEJB</th>
 </tr>
 
-<tr><td>Java Servlets</td><td>(/)</td><td></td><td>(/)</td></tr>
-<tr><td>Java ServerPages (JSP)</td> <td>(/)</td> <td></td> <td>(/)</td></tr>
-<tr><td>Java ServerFaces (JSF)</td><td></td><td></td><td>(/)</td></tr>
-<tr><td>Java Transaction API (JTA)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Persistence API (JPA)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java API for XML Web Services (JAX-WS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java API for RESTful Web Services (JAX-RS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Messaging Service (JMS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Contexts and Dependency Injection (CDI)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java EE Connector Architecture (inaccurately called JCA sometimes)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Authentication and Authorization Service (JAAS)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Java Authorization Contract for Containers (JACC)</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>JavaMail API</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Bean Validation</td><td></td><td>(/)</td><td>(/)</td></tr>
-<tr><td>Enterprise JavaBeans</td><td></td><td>(/)</td><td>(/)</td></tr>
+<tr>
+<td>Java Servlets</td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+<td></td>
+</tr>
+<tr>
+<td>Java ServerPages (JSP)</td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+<td></td>
+</tr>
+<tr>
+<td>Java ServerFaces (JSF)</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td></td>
+</tr>
+<tr>
+<td>Java Transaction API (JTA)</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java Persistence API (JPA)</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java Contexts and Dependency Injection (CDI)</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java Authentication and Authorization Service (JAAS)</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java Authorization Contract for Containers (JACC)</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>JavaMail API</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Bean Validation</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Enterprise JavaBeans</td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java API for XML Web Services (JAX-WS)</td>
+<td></td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java API for RESTful Web Services (JAX-RS)</td>
+<td></td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java EE Connector Architecture</td>
+<td></td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+<tr>
+<td>Java Messaging Service (JMS)</td>
+<td></td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
 </table>
 
-# What is EJB?
-
-EJB as a technology has been historically misunderstood.  Many people do not realize, for example, that EJB is only a tiny bit smaller than Java EE itself.
-
-Due to the many things integrated with EJB, the API effectively pulls in nearly all the Java EE APIs.
-
-It is impossible to implement "just" an EJB container and there really is no such thing as "just EJB".
-
-# The EJB "Profile"
-
-There is no such thing as the "EJB Profile" in Java EE, but in many ways that's exactly what EJB is; a profile like the Web Profile or the Full Profile.
-
-Some concrete examples of how EJB is really just a "profile" of Java EE.
-
- - JTA and EXTENDED JPA EntityManagers are created and managed by the EJB Container
- - Message-Driven Beans (MDBs) require support for the Java EE Connector Architecture and the Java Message Service (JMS)
- - Stateless and Singleton beans can be exposed as JAX-WS and JAX-RS services
- - All EJBs *are* CDI beans ... always
- - Transactions (TransactionManager) and Security (JAAS & JACC) are basic services of any EJB
- - Timers and Schedules require integration with things like Quartz
- - The following resource can be injected into any EJB
-     - Bean Validation `javax.validation.Validator` and `javax.validation.ValidatorFactory`
-     - JavaMail `javax.mail.Session`
-     - JMS `javax.jms.Topic`, `javax.jms.Queue` and `javax.jms.ConnectionFactory`
-     - CORBA `org.omg.CORBA`
-     - JAX-WS WebService endpoints
-     - JTA `javax.transaction.UserTransaction`
-     - CDI `javax.enterprise.inject.spi.BeanManager`
-
-When you break apart "E" "J" and "B", what it means is the seamless integration of the following technologies:
-
- - Java Transaction API (JTA)
- - Java Persistence API (JPA)
- - Java API for XML Web Services (JAX-WS)
- - Java API for RESTful Web Services (JAX-RS)
- - Java Messaging Service (JMS)
- - Java Contexts and Dependency Injection (CDI)
- - Java EE Connector Architecture (inaccurately called JCA sometimes)
- - Java Authentication and Authorization Service (JAAS)
- - Java Authorization Contract for Containers (JACC)
- - JavaMail API
- - Bean Validation
-
-
-# Outside the EJB "profile"
-
-So what is left out of the EJB "profile" ?
-
- - Java Servlets
- - Java ServerPages (JSP)
- - Java ServerFaces (JSF)
