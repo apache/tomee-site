@@ -104,6 +104,60 @@ sub example {
     return ($rendered, 'html', \%args);
 }
 
+sub sitemap {
+    my %args = @_;
+    my $template = "content/$args{path}";
+#    $args{breadcrumbs} .= _breadcrumbs($args{path});
+    $args{base} = _base($args{path});
+
+    my $dir = $template;
+    $dir =~ s!/[^/]+$!!;
+    opendir my $dh, $dir or die "Can't opendir $dir: $!\n";
+    my %data;
+    for (map "$dir/$_", grep $_ ne "." && $_ ne ".." && $_ ne ".svn", readdir $dh) {
+        if (-f and /\.mdtext$/) {
+            my $file = $_;
+            $file =~ s/^content//;
+            no warnings 'once';
+            for my $p (@path::patterns) {
+                my ($re, $method, $args) = @$p;
+                next unless $file =~ $re;
+                my $s = view->can($method) or die "Can't locate method: $method\n";
+                my ($content, $ext, $vars) = $s->(path => $file, %$args);
+                $file =~ s/\.mdtext$/.$ext/;
+                $data{$file} = $vars;
+                last;
+            }
+        }
+    }
+
+    my $content = "";
+
+    for (sort keys %data) {
+        my $link = $_;
+        $link =~ s,.*/,,;
+
+        my $title = $data{$_}->{headers}->{title};
+        $title = $link unless $title;
+
+        $content .= "- [$title]($link)\n";
+        for my $hdr (grep /^#/, split "\n", $data{$_}->{content}) {
+            $hdr =~ /^(#+)\s+([^#]+)?\s+\1\s+\{#([^}]+)\}$/ or next;
+            my $level = length $1;
+            $level *= 4;
+            $content .= " " x $level;
+            $content .= "- [$2]($_#$3)\n";
+        }
+    }
+
+    $args{content} = $content;
+    my $rendered = Dotiac::DTL->new($template)->render(\%args);
+
+    return ($rendered, 'html', \%args);
+#    return Dotiac::DTL::Template($template)->render(\%args), html => \%args;
+}
+
+
 sub _breadcrumbs {
     my $path        = shift;
     my $base        = shift;

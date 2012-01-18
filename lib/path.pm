@@ -22,6 +22,11 @@ our @patterns = (
 
     [qr!\.md(text)?$!, basic => { template => "doc.html" } ],
 
+    [qr!sitemap\.html$!, sitemap => { headers => { title => "Sitemap" }} ],
+
+    [qr!dev/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
+
+
 );
 
 # The %dependecies hash is used when building pages that reference or depend
@@ -29,7 +34,10 @@ our @patterns = (
 # links to.  The keys for %dependencies are filepaths, and the values are
 # arrayrefs containing other filepaths.
 
-our %dependencies = ();
+our %dependencies = (
+    "/sitemap.html" => [ grep s!^content!!, glob "content/*.mdtext" ],
+    "/dev/index.html" => [ grep s!^content!!, glob "content/dev/*.mdtext" ],
+);
 
 1;
 
