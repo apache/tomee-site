@@ -81,6 +81,8 @@ Note: all resources can be configured by properties, see http://openejb.apache.o
 |openejb.web.xml.major | int | major version of web.xml. Can be useful to force tomcat to scan servlet 3 annotatino when deploying with a servlet 2.x web.xml|
 |tomee.jaxws.subcontext | string | sub context used to bind jaxws web services, default is
 webservices|
+|openejb.servicemanager.enabled| bool | run all services detected or only known available services (WS
+and RS|
 |tomee.jaxws.oldsubcontext| bool | wether or not activate old way to bind jaxws webservices directly
 on root context|
 
