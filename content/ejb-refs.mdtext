@@ -164,7 +164,8 @@ If say, there are two servers that have the `OrangeBeanRemote` bean, you could e
 
 In the event that the `ejbd://192.168.1.20:4201` server cannot be contacted, the second server will be tried.
 
-See these docs for more details on Failover and Discovery:
+This sort of arangement can also happen dynamicall against a list of servers that continuously grows and shrinks.  The server list is maintained behind
+the scenes using server discovery logic that can function on either UDP or TCP.  See these docs for more details on Failover and Discovery:
 
  - [Multicast Discovery (UDP)](multicast-discovery.html)
  - [Multipoint Discovery (TCP)](multipoint-discovery.html)
