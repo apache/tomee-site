@@ -91,22 +91,21 @@ xml.  The following would be added to the ejb-jar.xml of shapesApp.jar:
 
     <ejb-jar>
       <enterprise-beans>
-    
+
         <session>
           <ejb-name>SquareBean</ejb-name>
           <ejb-ref>
-    	<ejb-ref-name>com.foo.shapes.SquareBean/orangeRemote</ejb-ref-name>
-    	<ejb-ref-type>Session</ejb-ref-type>
-    	<remote>com.foo.colors.OrangeRemote</remote>
-    	<ejb-link>colorsApp.jar#OrangeBean</ejb-link>
-    	<injection-target>
-    	 
-<injection-target-class>com.foo.shapes.SquareBean</injection-target-class>
-    	  <injection-target-name>orangeRemote</injection-target-name>
-    	</injection-target>
+            <ejb-ref-name>com.foo.shapes.SquareBean/orangeRemote</ejb-ref-name>
+            <ejb-ref-type>Session</ejb-ref-type>
+            <remote>com.foo.colors.OrangeRemote</remote>
+            <ejb-link>colorsApp.jar#OrangeBean</ejb-link>
+            <injection-target>
+              <injection-target-class>com.foo.shapes.SquareBean</injection-target-class>
+              <injection-target-name>orangeRemote</injection-target-name>
+            </injection-target>
           </ejb-ref>
         </session>
-    
+
       </enterprise-beans>
     </ejb-jar>
 
@@ -115,3 +114,39 @@ Note that the value of <ejb-ref-name> could actually be anything and the
 above example would still work as there is no annotation that needs to
 match the <ejb-ref-name> and no one will likely be looking up the EJB as
 it's injected.
+
+# Referencing a bean in another server
+
+As of OpenEJB 4.0.0-beta-3, server to server references work.
+
+First we need to configure and name the InitialContext that will be used to satisfy the lookup to the other server.
+
+In this example we are calling our InitialContext `shoe` for fun.
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <openejb>
+
+      <JndiProvider id="shoe">
+        java.naming.provider.url = ejbd://localhost:4201
+        java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
+      </JndiProvider>
+
+    </openejb>
+
+Declaring the `@EJB` reference is then done using a `mappedName`  that references the named `InitialContext`
+
+    public class BlueBean implements BlueRemote {
+
+        @EJB(mappedName = "jndi:ext://shoe/OrangeBeanRemote")
+        private OrangeRemote orangeRemote;
+
+        public void hasOrangeRemote() {
+            Assert.assertNotNull("orangeRemote is null", orangeRemote);
+            assertEquals("olleh", orangeRemote.echo("hello"));
+        }
+    }
+
+Specifically, the `mappedName` syntax is as follows:
+
+ - jndi:ext://`<contextId>`/`<jndiName>`
+
