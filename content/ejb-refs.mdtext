@@ -150,3 +150,22 @@ Specifically, the `mappedName` syntax is as follows:
 
  - jndi:ext://`<contextId>`/`<jndiName>`
 
+
+## Referencing a bean in "many" servers
+
+Note the above also works with the various forms of failover that TomEE supports.
+
+If say, there are two servers that have the `OrangeBeanRemote` bean, you could expand the `<JndiProvider>` delcaration like so:
+
+      <JndiProvider id="shoe">
+        java.naming.provider.url = failover:ejbd://192.168.1.20:4201,ejbd://192.168.1.30:4201
+        java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
+      </JndiProvider>
+
+In the event that the `ejbd://192.168.1.20:4201` server cannot be contacted, the second server will be tried.
+
+See these docs for more details on Failover and Discovery:
+
+ - [Multicast Discovery (UDP)](multicast-discovery.html)
+ - [Multipoint Discovery (TCP)](multipoint-discovery.html)
+
