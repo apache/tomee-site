@@ -55,7 +55,6 @@ Notice:Licensed to the Apache Software Foundation (ASF) under one
 |[<uppercase service name>.]<service id>.<name> or [<uppercase service name>.]<service id>|<name> | whatever is supported (generally string, int ...) | set this value to the corresponding service. example: [EnterpriseBean.]<ejb-name>.activation.<property>, [PERSISTENCEUNIT.]<persistence unit name>.<property>, [RESOURCE.]<name>|<property> ...|
 | log4j.category.OpenEJB.options | DEBUG, INFO, ... | active one OpenEJB log level
 | openejb.jmx.active | bool | activate (by default) or not the OpenEJB JMX MBeans |
-| openejb.logger.external | bool | use another log configuration(log4j for instance) |
 | openejb.nobanner | bool | activate or not the OpenEJB banner (activated by default)
 | openejb.check.classloader | bool | if true print some information about duplicated classes | 
 | openejb.check.classloader.verbose | bool | if true print classes intersections | 
