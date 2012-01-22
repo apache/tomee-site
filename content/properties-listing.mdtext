@@ -42,7 +42,6 @@ Notice:Licensed to the Apache Software Foundation (ASF) under one
 |openejb.deployments.classpath.include and openejb.deployments.classpath.exclude | regex | regex to filter the scanned classpath (when you are in this case)|
 |openejb.deployments.package.include and openejb.deployments.package.exclude | regex | regex to filter scanned packages|
 |openejb.autocreate.jta-datasource-from-non-jta-one | bool | whether or not auto create the jta datasource if it doesn't exist but a non jta datasource exists. Useful when using hibernate to be able to get a real non jta datasource.|
-|openejb.read-all.persistence.xml | bool | allow to scan persistence.xml in lib of the deployed webapp|
 |openejb.altdd.prefix | string | prefix use for altDD (example test to use a test.ejb-jar.xml).|
 |org.apache.openejb.default.system.interceptors | list of interceptor (qualified names) separated by a comma or a space | add these interceptor on all beans|
 |openejb.jndiname.strategy.class | class name | an implementation of org.apache.openejb.assembler.classic.JndiBuilder.JndiNameStrategy|
