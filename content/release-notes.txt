@@ -6,8 +6,8 @@ Apache TomEE 1.0.0-beta-2
 
 Upgrades:
 
-  * [TOMEE-109] Upgrade to XBean 3.9
   * [TOMEE-81] Upgrade HSQLDB to 2.2.4
+  * [TOMEE-109] Upgrade to XBean 3.9
   * [TOMEE-112] Upgrade wss4j to 1.6.3
   * [TOMEE-117] Upgrade OpenWebBeans to 1.1.3
   * [TOMEE-118] Upgrade CXF to 2.5.1
@@ -18,31 +18,30 @@ Upgrades:
 
 New Features:
 
-  * [TOMEE-58] New concept of persistence-fragment.xml file
-  * [TOMEE-104] Allow custom JAX-RS providers to be used
-  * [TOMEE-101] Example: CDI Events and @Observes
-  * [TOMEE-95] Command line 'java -jar tomee-embedded.jar myAwesome.war' launching
-  * [TOMEE-99] Example: CDI @Alternative and @Stereotype
-  * [TOMEE-97] Beginning documentation for Meta-Annotation support
-  * [TOMEE-96] All-in-one TomEE Embedded jar
+  * [TOMEE-6] Arquillian adapter
   * [TOMEE-84] TomEE Embedded Container
   * [TOMEE-86] Implementation of EJBContainer.createEJBContainer for TomEE Embedded
-  * [TOMEE-37] TomEE webapps based Deployer implementation
-  * [TOMEE-6] Arquillian adapter
-  * [TOMEE-72] Example: Reloading Persistence unit properties dynamically
+  * [TOMEE-96] All-in-one TomEE Embedded jar
+  * [TOMEE-95] Command line 'java -jar tomee-embedded.jar myAwesome.war' launching
+  * [TOMEE-58] New concept of persistence-fragment.xml file
   * [TOMEE-71] Ability to reload Persistence units via JMX
-  * [OPENEJB-1744] Example: MDBs as CDI beans
-  * [OPENEJB-1517] EJBContainer.createEJBContainer MODULES supports various org.apache.openejb.jee.* types
-  * [OPENEJB-1707] allow to set a custom cxf jax-rs provider (or none activated provider)
-  * [OPENEJB-1706] CDI Injection support for MDBs
-  * [OPENEJB-1571] CDI Injection for clients of EJBContainer and tests using ApplicationComposer
-  * [OPENEJB-1654] System property overrides for MDB ActivationConfig
-  * [OPENEJB-1691] allow to specify proxy handler for dynamic implementation beans
-  * [OPENEJB-1690] Ability to define DataSources, Topics, Queues and other resources in applications with a META-INF/resources.xml file
-  * [OPENEJB-1453] Metatyping for EJB and Dependency Injection Annotations
+  * [TOMEE-72] Example: Reloading Persistence unit properties dynamically
+  * [TOMEE-104] Allow custom JAX-RS providers to be used
+  * [TOMEE-99] Example: CDI @Alternative and @Stereotype
+  * [TOMEE-101] Example: CDI Events and @Observes
+  * [TOMEE-97] Beginning documentation for Meta-Annotation support
+  * [TOMEE-37] TomEE webapps based Deployer implementation
   * [OPENEJB-1454] Meta Annotation Support
+  * [OPENEJB-1691] Dynamic @Proxy beans
   * [OPENEJB-1430] Scanning an JMX Registration of @ObjectName mbeans in applications
   * [OPENEJB-1737] Example: Dynamic JMX MBean example
+  * [OPENEJB-1517] EJBContainer.createEJBContainer MODULES supports various org.apache.openejb.jee.* types
+  * [OPENEJB-1571] CDI Injection for clients of EJBContainer and tests using ApplicationComposer
+  * [OPENEJB-1706] CDI Injection support for MDBs
+  * [OPENEJB-1744] Example: MDBs as CDI beans
+  * [OPENEJB-1654] System property overrides for MDB ActivationConfig
+  * [OPENEJB-1690] Ability to define DataSources, Topics, Queues and other resources in applications with a META-INF/resources.xml file
+  * [OPENEJB-1453] Metatyping for EJB and Dependency Injection Annotations
   * [OWB-621] Alternative configuration method for buggy container or pre servlet api 2.5 container
 
 Improvements:
