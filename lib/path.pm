@@ -18,6 +18,8 @@ our @patterns = (
       },
     ],
 
+    [qr!^/downloads.html$!, news_page => { } ],
+
     [qr!README\.md(text)?$!, example => { template => "example.html" } ],
 
     [qr!\.md(text)?$!, basic => { template => "doc.html" } ],
