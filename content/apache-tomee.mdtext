@@ -5,6 +5,10 @@ Apache TomEE, pronounced "Tommy", is an all-Apache stack aimed at *Java EE
 
 ## TomEE
 
+{row
+{span6
+
+
 The Web Profile version of TomEE contains
 
  - **CDI** - Apache OpenWebBeans
@@ -26,6 +30,15 @@ The TomEE Plus distribution adds the following:
  - **JAX-WS** - Apache CXF
  - **JMS** - Apache ActiveMQ
  - **Connector** - Apache Geronimo Connector
+
+}
+{span10
+{hero-unit
+<iframe width="460" height="264" src="http://www.youtube.com/embed/eCrtoSTZ2RE" frameborder="0" allowfullscreen></iframe>
+}
+}
+}
+
 
 #  Goal
 
