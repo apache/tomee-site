@@ -1686,6 +1686,14 @@ a.menu:after, .dropdown-toggle:after {
 .breadcrumb .active a {
   color: #404040;
 }
+.featured-video {
+  background-color: #ffffff;
+  margin: 4px;
+  padding: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
 .hero-unit {
   background-color: #f5f5f5;
   margin-bottom: 30px;
