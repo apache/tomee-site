@@ -88,10 +88,10 @@ that further for a specific interface of that ejb.
 The jndi name format can be set on a server level via a _system property_,
 for example:
 
-{panel:border=dotted}
-$ ./bin/openejb start
-"-Dopenejb.jndiname.format=\{ejbName}/\{interfaceClass}"
-{panel}
+
+    $ ./bin/openejb start
+    -Dopenejb.jndiname.format=\{ejbName}/\{interfaceClass}"
+
 
 As usual, other ways of specifying system properties are via the
 conf/system.properties file in a standalone server, or via the
