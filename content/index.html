@@ -58,12 +58,6 @@
             {% endfor %}
         </div>
         <div class="span-one-third">
-            <dl>
-              <dd><a href="http://twitter.com/ApacheTomEE" class="twitter-follow-button">Follow @ApacheTomEE</a>
-              <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-              </dd>
-            </dl>
-
             <div id="twtr-search-widget"></div>
             <link href="http://widgets.twimg.com/j/1/widget.css" type="text/css" rel="stylesheet">
             <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -73,11 +67,11 @@
               type: 'profile',
               interval: 6000,
               title: '',
-              subject: 'Twitter',
+              subject: '<a href="http://twitter.com/ApacheTomEE" class="twitter-follow-button">Follow @ApacheTomEE</a>',
               type: 'search',
               search: "ApacheTomEE OR apachetomee OR 'apache tomee' OR openejb OR OpenEJB",
               width: 300,
-              height: 360,
+              height: 380,
               theme: {
                 shell: {
                   background: '#f5f5f5',
@@ -100,6 +94,11 @@
                 behavior: 'default'
               }
               }).render().start();
+            </script>
+
+            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+            <script>
+              twttr.widgets.load();
             </script>
         </div>
     </div>
