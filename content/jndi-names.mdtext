@@ -1,9 +1,11 @@
 Title: JNDI Names
+
 <a name="JNDINames-What'sMyBean'sJNDIName?"></a>
 # What's My Bean's JNDI Name?
 There are two things to keep in mind before you start reading:
-1. OpenEJB provides a default JNDI name to your EJB. 
-1. You can customize the JNDI name.
+       
+1   OpenEJB provides a default JNDI name to your EJB.     
+2   You can customize the JNDI name.
 
 <a name="JNDINames-DefaultJNDIname"></a>
 ## Default JNDI name 
@@ -18,83 +20,56 @@ name format.
 
 <a name="JNDINames-JNDINameFormatting"></a>
 #  JNDI Name Formatting
-{excerpt}
+
 The *openejb.jndiname.format* property allows you to supply a template for
 the global JNDI names of all your EJBs.  With it, you have complete control
 over the structure of the JNDI layout can institute a design pattern just
 right for your client apps.  See the [Service Locator](service-locator.html)
  doc for clever ways to use the JNDI name formatting functionality in
 client code.
-
- || variable || description ||
- | moduleId |  Typically the name of the ejb-jar file or the <ejb-jar
-id=""> id value if specified | 
- | ejbType |  STATEFUL, STATELESS, BMP_ENTITY, CMP_ENTITY, or
-MESSAGE_DRIVEN | 
- | ejbClass |  for a class named _org.acme.superfun.WidgetBean_ results in
-*org.acme.superfun.WidgetBean* | 
- | ejbClass.simpleName |  for a class named _org.acme.superfun.WidgetBean_
-results in *WidgetBean* | 
- | ejbClass.packageName |  for a class named _org.acme.superfun.WidgetBean_
-results in *org.acme.superfun* | 
- | ejbName |  The ejb-name as specified in xml or via the 'name' attribute
-in an @Stateful, @Stateless, or @MessageDriven annotation | 
- | deploymentId |  The unique system id for the ejb.  Typically the ejbName
-unless specified in the openejb-jar.xml or via changing the
-openejb.deploymentId.format | 
- | interfaceType |  see interfaceType.annotationName | 
- | interfaceType.annotationName | Following the EJB 3 annotations
-@RemoteHome, @LocalHome, @Remote and @Local
-- *RemoteHome*	_(EJB 2 EJBHome)_
-- *LocalHome* _(EJB 2 EJBLocalHome)_
-- *Remote* _(EJB 3 Business Remote)_
-- *Local* _(EJB 3 Business Local)_
-- *Endpoint* _(EJB webservice endpoint)_
 <table>
-<tr></tr>
- | interfaceType.annotationNameLC | This is the same as
-interfaceType.annotationName, but all in lower case.
-<tr></tr>
+<tr><td>variable</td><td>	 description</td></tr>
+<tr><td>moduleId</td><td>	 Typically the name of the ejb-jar file<br> or the <ejb-jar id=""> id value if specified</td></tr>
+<tr><td>ejbType</td><td>	 STATEFUL, STATELESS, BMP_ENTITY, CMP_ENTITY, or MESSAGE_DRIVEN</td></tr>
+<tr><td>ejbClass</td><td>	 for a class named org.acme.superfun.WidgetBean results in org.acme.superfun.WidgetBean</td></tr>
+<tr><td>ejbClass.simpleName</td><td>	 for a class named org.acme.superfun.WidgetBean results in WidgetBean</td></tr>
+<tr><td>ejbClass.packageName</td><td>	 for a class named org.acme.superfun.WidgetBean results in org.acme.superfun</td></tr>
+<tr><td>ejbName</td><td>	 The ejb-name as specified in xml or via the 'name' attribute in an @Stateful, @Stateless, or @MessageDriven annotation</td></tr>
+<tr><td>deploymentId</td><td>	 The unique system id for the ejb. Typically the ejbName unless specified in the openejb-jar.xml or via changing the openejb.deploymentId.format</td></tr>
+<tr><td>interfaceType</td><td>	 see interfaceType.annotationName</td></tr>
+<tr><td>interfaceType.annotationName</td><td>	 Following the EJB 3 annotations @RemoteHome, @LocalHome, @Remote and @Local
+RemoteHome (EJB 2 EJBHome)
+LocalHome (EJB 2 EJBLocalHome)
+Remote (EJB 3 Business Remote)
+Local (EJB 3 Business Local)
+Endpoint (EJB webservice endpoint)</td></tr>
+<tr><td>interfaceType.annotationNameLC</td><td>	 This is the same as interfaceType.annotationName, but all in lower case.</td></tr>
+<tr><td>interfaceType.xmlName</td><td>	 Following the ejb-jar.xml descriptor elements <home>, <local-home>, <business-remote>, <business-local>, and <service-endpoint>:
+home (EJB 2 EJBHome)
+local-home (EJB 2 EJBLocalHome)
+business-remote (EJB 3 Business Remote)
+business-local (EJB 3 Business Local)
+service-endpoint (EJB webservice endpoint)</td></tr>
+<tr><td>interfaceType.xmlNameCc</td><td>	 Camel-case version of interfaceType.xmlName:
+Home (EJB 2 EJBHome)
+LocalHome (EJB 2 EJBLocalHome)
+BusinessRemote (EJB 3 Business Remote)
+BusinessLocal (EJB 3 Business Local)
+ServiceEndpoint (EJB webservice endpoint)</td></tr>
+<tr><td>interfaceType.openejbLegacyName	 Following the OpenEJB 1.0 hard-coded format:
+(empty string) (EJB 2 EJBHome)
+Local (EJB 2 EJBLocalHome)
+BusinessRemote (EJB 3 Business Remote)
+BusinessLocal (EJB 3 Business Local)
+ServiceEndpoint (EJB webservice endpoint)</td></tr>
+<tr><td>interfaceClass</td><td>	
+(business) for a class named org.acme.superfun.WidgetRemote results in org.acme.superfun.WidgetRemote<br>
+(home) for a class named org.acme.superfun.WidgetHome results in org.acme.superfun.WidgetHome</td></tr>
+<tr><td>interfaceClass.simpleName</td><td>
+(business) for a class named org.acme.superfun.WidgetRemote results in WidgetRemote
+(home) for a class named org.acme.superfun.WidgetHome results in WidgetHome</td></tr>
+<tr><td>interfaceClass.packageName</td><td>	 for a class named org.acme.superfun.WidgetRemote results in org.acme.superfun</td></tr>
 </table>
- 
- | interfaceType.xmlName |  Following the ejb-jar.xml descriptor elements
-<home>, <local-home>, <business-remote>, <business-local>, and
-<service-endpoint>:
-- *home*  _(EJB 2 EJBHome)_
-- *local-home* _(EJB 2 EJBLocalHome)_
-- *business-remote* _(EJB 3 Business Remote)_
-- *business-local* _(EJB 3 Business Local)_
-- *service-endpoint* _(EJB webservice endpoint)_
- | 
- | interfaceType.xmlNameCc |  Camel-case version of interfaceType.xmlName:
-- *Home*  _(EJB 2 EJBHome)_
-- *LocalHome* _(EJB 2 EJBLocalHome)_
-- *BusinessRemote* _(EJB 3 Business Remote)_
-- *BusinessLocal* _(EJB 3 Business Local)_
-- *ServiceEndpoint* _(EJB webservice endpoint)_ | 
- | interfaceType.openejbLegacyName |  Following the OpenEJB 1.0 hard-coded
-format:
-- _(empty string)_  _(EJB 2 EJBHome)_
-- *Local* _(EJB 2 EJBLocalHome)_
-- *BusinessRemote* _(EJB 3 Business Remote)_
-- *BusinessLocal* _(EJB 3 Business Local)_
-- *ServiceEndpoint* _(EJB webservice endpoint)_ | 
- | interfaceClass |  - _(business)_ for a class named
-_org.acme.superfun.WidgetRemote_ results in
-*org.acme.superfun.WidgetRemote* 
- - _(home)_ for a class named _org.acme.superfun.WidgetHome_ results in
-*org.acme.superfun.WidgetHome*
-<table>
-<tr></tr>
- | interfaceClass.simpleName |	- _(business)_ for a class named
-_org.acme.superfun.WidgetRemote_ results in *WidgetRemote* 
-- _(home)_ for a class named _org.acme.superfun.WidgetHome_ results in
-*WidgetHome* | 
- | interfaceClass.packageName |  for a class named
-_org.acme.superfun.WidgetRemote_ results in *org.acme.superfun* | 
-{excerpt}
-</table>
-
 <a name="JNDINames-SettingtheJNDIname"></a>
 #  Setting the JNDI name
 
