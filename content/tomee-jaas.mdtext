@@ -13,11 +13,11 @@ Note: only the first one will be used.
 
 # Configuration
 
-* add to your CATALINA_OPTS the java.security.auth.login.config system property:
+Add to your `CATALINA_OPTS` the `java.security.auth.login.config` system property:
 
     -Djava.security.auth.login.config=$CATALINA_BASE/conf/login.config
 
-* configure your realm in server.xml file
+Configure your realm in server.xml file
 
     <?xml version='1.0' encoding='utf-8'?>
     <Server port="8005" shutdown="SHUTDOWN">
@@ -42,7 +42,7 @@ Note: only the first one will be used.
       </Service>
     </Server>
 
-* configure your login.config file
+Configure your `login.config` file
 
     PropertiesLogin {
         org.apache.openejb.core.security.jaas.PropertiesLoginModule required
@@ -52,5 +52,5 @@ Note: only the first one will be used.
     };
 
 
-* configure your login module specifically (users.properties for snippets of this page for instance)
+Configure your login module specifically (users.properties for snippets of this page for instance)
 
