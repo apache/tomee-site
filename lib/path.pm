@@ -14,7 +14,6 @@ our @patterns = (
     [qr!^/index\.html$!, news_page =>
       {
         blog     => ASF::Value::Blogs->new(blog => "openejb", limit=> 3),
-        twitter  => ASF::Value::Twitter->new(name => 'ApacheTomEE', limit => 6),
       },
     ],
 

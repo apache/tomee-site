@@ -81,6 +81,16 @@ sub basic {
 
     my $template_path = "templates/$args{template}";
 
+    my @includes = ($args{content} =~ m/{include:([^ ]+?)}/g);
+
+    foreach my $include (@includes) {
+        my %a = ();
+        read_text_file("content/$include", \%a);
+        my $text = $a{content};
+        $args{headers}{title} = $a{headers}{title} unless $args{headers}{title};
+        $args{content} =~ s/{include:$include}/$text/g;
+    }
+
     my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
     return ($rendered, 'html', \%args);
 }
