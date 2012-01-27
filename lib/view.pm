@@ -84,6 +84,8 @@ sub basic {
     my @includes = ($args{content} =~ m/{include:([^ ]+?)}/g);
 
     foreach my $include (@includes) {
+        next unless ( -e "content/$include");
+
         my %a = ();
         read_text_file("content/$include", \%a);
         my $text = $a{content};
