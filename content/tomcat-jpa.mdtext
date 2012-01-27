@@ -5,49 +5,55 @@ Tomcat + Java EE = TomEE, the Java Enterprise Edition of Tomcat.  With TomEE you
 In a plain Servlet, Filter or Listener you can do fun things like injection of JPA EntityManager or EntityManagerFactory:
 
     import javax.annotation.Resource;
+    import javax.persistence.EntityManager;
+    import javax.persistence.PersistenceContext;
     import javax.servlet.http.HttpServlet;
-    import javax.jms.Topic;
-    import javax.jms.Queue;
-    import javax.jms.ConnectionFactory;
+    import javax.transaction.UserTransaction;
 
     public class MyServet extends HttpServlet {
 
-        @Resource(name = "foo")
-        private Topic fooTopic;
-
-        @Resource(name = "bar")
-        private Queue barQueue;
-
         @Resource
-        private ConnectionFactory connectionFactory;
+        private UserTransaction userTransaction;
+
+        @PersistenceContext
+        private EntityManager entityManager;
+
 
         @Override
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             //...
 
-            Connection connection = connectionFactory.createConnection();
-            connection.start();
+            userTransaction.begin();
 
-            // Create a Session
-            Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
-            // Create a MessageProducer from the Session to the Topic or Queue
-            MessageProducer producer = session.createProducer(fooTopic);
-            producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
-
-            // Create a message
-            TextMessage message = session.createTextMessage("Hello World!");
-
-            // Tell the producer to send the message
-            producer.send(message);
+            try {
+                entityManager.persist(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
+                entityManager.persist(new Movie("Joel Coen", "Fargo", 1996));
+                entityManager.persist(new Movie("Joel Coen", "The Big Lebowski", 1998));
+            } finally {
+                userTransaction.commit();
+            }
 
             //...
         }
 
     }
 
-No need to add even a single library!  In the above scenario even the "foo" Topic and the "bar" Queue would be automatically created with no configuration necessary.
+No need to add even a single library!  To make the above work all you need is a `WEB-INF/persistence.xml` file in your webapp like the following:
 
-[Download](downloads.html) TomEE and you're minutes away from a functioning JMS application on Tomcat.
+    <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+
+      <persistence-unit name="movie-unit">
+        <jta-data-source>movieDatabase</jta-data-source>
+        <non-jta-data-source>movieDatabaseUnmanaged</non-jta-data-source>
+
+        <properties>
+          <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+        </properties>
+      </persistence-unit>
+    </persistence>
+
+DataSources will automatically be created if they haven't be configured explicitly.
+
+[Download](downloads.html) TomEE and you're minutes away from a functioning JPA application on Tomcat.
 
 {include:apache-tomee.mdtext}
