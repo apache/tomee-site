@@ -27,6 +27,8 @@ our @patterns = (
 
     [qr!dev/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
 
+    [qr!sitemap.xml$!, sitemapxml => { headers => {  }} ],
+
 
 );
 
@@ -37,6 +39,7 @@ our @patterns = (
 
 our %dependencies = (
     "/sitemap.html" => [ grep s!^content!!, glob "content/*.mdtext" ],
+    "/sitemap.xml" => [ grep s!^content!!, glob "content/*.mdtext" ],
     "/dev/index.html" => [ grep s!^content!!, glob "content/dev/*.mdtext" ],
 );
 

@@ -169,6 +169,56 @@ sub sitemap {
 #    return Dotiac::DTL::Template($template)->render(\%args), html => \%args;
 }
 
+sub sitemapxml {
+    my %args = @_;
+    my $template = "content/$args{path}";
+    $args{base} = _base($args{path});
+
+    my $dir = $template;
+    $dir =~ s!/[^/]+$!!;
+    opendir my $dh, $dir or die "Can't opendir $dir: $!\n";
+    my %data;
+    for (map "$dir/$_", grep $_ ne "." && $_ ne ".." && $_ ne ".svn", readdir $dh) {
+        if (-f and /\.md(text)?$/) {
+            my $file = $_;
+            $file =~ s/^content//;
+            no warnings 'once';
+            for my $p (@path::patterns) {
+                my ($re, $method, $args) = @$p;
+                next unless $file =~ $re;
+                my $s = view->can($method) or die "Can't locate method: $method\n";
+                my ($content, $ext, $vars) = $s->(path => $file, %$args);
+                $file =~ s/\.mdtext$/.$ext/;
+                $data{$file} = $vars;
+                last;
+            }
+        }
+    }
+
+    my $content .= '<?xml version="1.0" encoding="utf-8"?>' . "\n";
+    $content .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+
+    for (sort keys %data) {
+        my $link = $_;
+        $link =~ s,.*/,,;
+
+        $content .= "    <url>\n";
+        $content .= "        <loc>http://tomee.apache.org/$link</loc>\n";
+
+        if ($link =~ m/tomcat/) {
+            $content .= "        <priority>0.8</priority>\n";
+        }
+
+        $content .= "    </url>\n";
+    }
+
+    $content .= "</urlset>\n";
+
+    $args{content} = $content;
+
+    return ($content, 'xml', \%args);
+}
+
 
 sub _breadcrumbs {
     my $path        = shift;
