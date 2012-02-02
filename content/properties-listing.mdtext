@@ -60,6 +60,7 @@ Notice:Licensed to the Apache Software Foundation (ASF) under one
 | openejb.check.classloader.verbose | bool | if true print classes intersections | 
 | openejb.additional.exclude | string separated by comma | list of prefixes you want to exclude and are not in the default list of exclusion|
 | openejb.additional.include | string separated by comma | list of prefixes you want to remove from thedefault list of exclusion|
+| openejb.offline | bool | if true can create datasources and containers automatically |
 
 Note: all resources can be configured by properties, see http://openejb.apache.org/embedded-configuration.html and http://openejb.apache.org/properties-tool.html|
 
