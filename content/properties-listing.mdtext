@@ -4,7 +4,7 @@ Title: System Properties Listing
 <table>
 <tr><td>Name </td><td> Value </td><td> Description</td></tr>
 <tr><td>openejb.embedded.remotable</td><td> bool </td><td> actiavte or not the remote services when available </td></tr>
-<tr><td><service prefix>.bind, <service prefix>.port, <service prefix>.disabled, <service prefix>.threads</td><td> host or IP, port, bool</td><td> override the host. Available for ejbd and httpejbd services (used by jaxws and jaxrs), number of thread to maneg requests  </td><td> -
+<tr><td><service prefix>.bind, &lt;service prefix&gt;.port, &lt;service prefix&gt;.disabled, &lt;service prefix&gt;.threads</td><td> host or IP, port, bool</td><td> override the host. Available for ejbd and httpejbd services (used by jaxws and jaxrs), number of thread to maneg requests  </td><td> -
 <tr><td>openejb.embedded.initialcontext.close </td><td> LOGOUT or DESTROY </td><td> configure the hook called when closing the initial context. Useful when starting OpenEJB from a new InitialContext([properties]) instantiation. By default it simply logs out the logged user if it exists. DESTROY means clean the container.</td></tr>
 <tr><td>javax.persistence.provider </td><td> string </td><td> override the JPA provider value</td></tr>
 <tr><td>javax.persistence.transactionType </td><td> string </td><td> override the transaction type for persistence contexts</td></tr>
