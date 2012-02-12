@@ -10,7 +10,7 @@ Title: System Properties Listing
 <tr><td>javax.persistence.transactionType </td><td> string </td><td> override the transaction type for persistence contexts</td></tr>
 <tr><td>javax.persistence.jtaDataSource </td><td> string </td><td> override the JTA datasource value for persistence contexts</td></tr>
 <tr><td>javax.persistence.nonJtaDataSource </td><td> string </td><td> override the non JTA datasource value for persistence contexts</td></tr>
-<tr><td>openejb.descriptors.output </td><td> dump memory deployment descriptors. Can be used to set complete metadata to true and avoid scanning when starting the container or to check the used configuration.</td></tr>
+<tr><td>openejb.descriptors.output </td><td>bool</td><td> dump memory deployment descriptors. Can be used to set complete metadata to true and avoid scanning when starting the container or to check the used configuration.</td></tr>
 <tr><td>openejb.deployments.classpath.require.descriptor </td><td> CLIENT or EJB </td><td> can allow to filter what you want to scan (client modules or ejb modules)</td></tr>
 <tr><td>openejb.descriptors.output.folder </td><td> path </td><td> where to dump deployement descriptors if activated. </td></tr>
 <tr><td>openejb.strict.interface.declaration </td><td> bool </td><td> add some validations on session beans (spec validations in particular). false by default.</td></tr>
@@ -33,32 +33,35 @@ Title: System Properties Listing
 <tr><td>openejb.jndiname.format </td><td> composition (+string) of these properties: ejbType, ejbClass, ejbClass.simpleName, ejbClass.packageName, ejbName, deploymentId, interfaceType, interfaceType.annotationName, interfaceType.annotationNameLC, interfaceType.xmlName, interfaceType.xmlNameCc, interfaceType.openejbLegacyName, interfaceClass, interfaceClass.simpleName, interfaceClass.packageName </td><td> default {deploymentId}{interfaceType.annotationName}. Change the name used for the ejb.</td></tr>
 <tr><td>openejb.org.quartz.threadPool.class </td><td> class qualified name which implements org.quartz.spi.ThreadPool </td><td> the thread pool used by quartz (used to manage ejb timers)</td></tr>
 <tr><td>openejb.localcopy </td><td> bool </td><td> default true. whether or not copy EJB arguments[/method/interface] for remote invocations.</td></tr>
-<tr><td>openejb.cxf.jax-rs.providers </td><td> the list of the qualified name of the JAX-RS providers separated by comma or space. Note: to specify a provider for a specific service suffix its class qualified name by ".providers", the value follow the same rules. Note 2: default is a shortcut for jaxb and json providers.</td></tr>
+<tr><td>openejb.cxf.jax-rs.providers </td><td> the list of the qualified name of the JAX-RS providers separated by comma or space. Note: to specify a provider for a specific service suffix its class qualified name by ".providers", the value follow the same rules. Note 2: default is a shortcut for jaxb and json providers.</td><td></td></tr>
 <tr><td>openejb.wsAddress.format </td><td> composition (+string) of {ejbJarId}, ejbDeploymentId, ejbType, ejbClass, ejbClass.simpleName, ejbName, portComponentName, wsdlPort, wsdlService </td><td> default /{ejbDeploymentId}. The WS name format.</td></tr>
 <tr><td>org.apache.openejb.server.webservices.saaj.provider </td><td> axis2, sun or null </td><td> specified the saaj configuration</td></tr>
-<tr><td>[<uppercase service name>.]<service id>.<name> or [<uppercase service name>.]<service id></td><td><name> </td><td> whatever is supported (generally string, int ...) </td><td> set this value to the corresponding service. example: [EnterpriseBean.]<ejb-name>.activation.<property>, [PERSISTENCEUNIT.]<persistence unit name>.<property>, [RESOURCE.]<name></td><td><property> ...</td></tr>
-<tr><td> log4j.category.OpenEJB.options </td><td> DEBUG, INFO, ... </td><td> active one OpenEJB log level
+<tr><td>[&lt;uppercase service name&gt;.]&lt;service id&gt;.&lt;name&gt; or [&lt;uppercase service name&gt;.]&lt;service id&gt;</td><td> whatever is supported (generally string, int ...) </td><td> set this value to the corresponding service. example: [EnterpriseBean.]&lt;ejb-name&gt;.activation.&lt;property&gt;, [PERSISTENCEUNIT.]&lt;persistence unit name>.&lt;property&gt;, [RESOURCE.]&lt;name&gt;</td></tr>
+<tr><td> log4j.category.OpenEJB.options </td><td> DEBUG, INFO, ... </td><td> active one OpenEJB log level. need log4j in the classpath</td></tr>
 <tr><td> openejb.jmx.active </td><td> bool </td><td> activate (by default) or not the OpenEJB JMX MBeans </td></tr>
 <tr><td> openejb.nobanner </td><td> bool </td><td> activate or not the OpenEJB banner (activated by default)
-<tr><td> openejb.check.classloader </td><td> bool </td><td> if true print some information about duplicated classes </td><td> 
-<tr><td> openejb.check.classloader.verbose </td><td> bool </td><td> if true print classes intersections </td><td> 
+<tr><td> openejb.check.classloader </td><td> bool </td><td> if true print some information about duplicated classes </td><tr>
+<tr><td> openejb.check.classloader.verbose </td><td> bool </td><td> if true print classes intersections </td><tr> 
 <tr><td> openejb.additional.exclude </td><td> string separated by comma </td><td> list of prefixes you want to exclude and are not in the default list of exclusion</td></tr>
 <tr><td> openejb.additional.include </td><td> string separated by comma </td><td> list of prefixes you want to remove from thedefault list of exclusion</td></tr>
 <tr><td> openejb.offline </td><td> bool </td><td> if true can create datasources and containers automatically </td></tr>
-<tr><td> openejb.exclude-include.order </td><td> include-exclude or exclude-include </td><td> if the inclusion/exclusion should win on conflicts (intersection) </td><td>
+<tr><td> openejb.exclude-include.order </td><td> include-exclude or exclude-include </td><td> if the inclusion/exclusion should win on conflicts (intersection) </td><tr>
 </table>
 
 Note: all resources can be configured by properties, see http://openejb.apache.org/embedded-configuration.html and http://openejb.apache.org/properties-tool.html|
 
 
 # OpenEJB client
+<table>
 <tr><td>Name </td><td> Value </td><td> Description</td></tr>
 <tr><td>openejb.client.identityResolver </td><td> implementation of org.apache.openejb.client.IdentityResolver  </td><td> default org.apache.openejb.client.JaasIdentityResolver. The class to get the client identity.</td></tr>
 <tr><td>openejb.client.connection.pool.timeout or openejb.client.connectionpool.timeout </td><td> int (ms) </td><td> the timeout of the client</td></tr>
 <tr><td>openejb.client.connection.pool.size or openejb.client.connectionpool.size </td><td> int </td><td> size of the socket pool</td></tr>
 <tr><td>openejb.client.keepalive </td><td> int (ms) </td><td> the keepalive duration</td><td>
+</table>
 
 # TomEE specific system properties
+<table>
 <tr><td>Name </td><td> Value </td><td> Description</td></tr>
 <tr><td>openejb.crosscontext </td><td> bool </td><td> set the cross context property on tomcat context (can be done in the traditionnal way if the deployment is don through the webapp discovery and not the OpenEJB Deployer EJB)</td></tr>
 <tr><td>openejb.jsessionid-support </td><td> bool </td><td> remove URL from session tracking modes for this context (see javax.servlet.SessionTrackingMode)</td></tr>
@@ -67,9 +70,12 @@ Note: all resources can be configured by properties, see http://openejb.apache.o
 <tr><td>tomee.jaxws.subcontext </td><td> string </td><td> sub context used to bind jaxws web services, default is webservices</td></tr>
 <tr><td>openejb.servicemanager.enabled</td><td> bool </td><td> run all services detected or only known available services (WS and RS</td></tr>
 <tr><td>tomee.jaxws.oldsubcontext</td><td> bool </td><td> wether or not activate old way to bind jaxws webservices directly on root context</td><td>
+</table>
 
 # TomEE Arquillian adaptor
+<table>
 <tr><td>Name </td><td> Value </td><td> Description</td></tr>
 <tr><td>tomee.ejbcontainer.http.port </td><td> int </td><td> tomee port, -1 means random. When using a random port you can retreive it getting this property too.</td></tr>
 <tr><td>tomee.arquillian.http </td><td> int </td><td> http port used by the embedded arquillian adaptor</td></tr>
 <tr><td>tomee.arquillian.stop </td><td> int </td><td> shutdown port used by the embedded arquillian adaptor</td><td>
+</table>
