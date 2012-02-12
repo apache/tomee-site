@@ -48,7 +48,7 @@ Title: System Properties Listing
 <tr><td> openejb.exclude-include.order </td><td> include-exclude or exclude-include </td><td> if the inclusion/exclusion should win on conflicts (intersection) </td><tr>
 </table>
 
-Note: all resources can be configured by properties, see http://openejb.apache.org/embedded-configuration.html and http://openejb.apache.org/properties-tool.html|
+Note: all resources can be configured by properties, see http://openejb.apache.org/embedded-configuration.html and http://openejb.apache.org/properties-tool.html
 
 
 # OpenEJB client
