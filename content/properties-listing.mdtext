@@ -2,7 +2,7 @@ Title: System Properties Listing
 
 # OpenEJB system properties
 <table>
-<tr><td>Name </td><td> Value </td><td> Description</td></tr>
+<tr><td>**Name**</td><td>**Value**</td><td>**Description**</td></tr>
 <tr><td>openejb.embedded.remotable</td><td> bool </td><td> actiavte or not the remote services when available </td></tr>
 <tr><td><service prefix>.bind, &lt;service prefix&gt;.port, &lt;service prefix&gt;.disabled, &lt;service prefix&gt;.threads</td><td> host or IP, port, bool</td><td> override the host. Available for ejbd and httpejbd services (used by jaxws and jaxrs), number of thread to maneg requests  </td><tr>
 <tr><td>openejb.embedded.initialcontext.close </td><td> LOGOUT or DESTROY </td><td> configure the hook called when closing the initial context. Useful when starting OpenEJB from a new InitialContext([properties]) instantiation. By default it simply logs out the logged user if it exists. DESTROY means clean the container.</td></tr>
@@ -53,7 +53,7 @@ Note: all resources can be configured by properties, see http://openejb.apache.o
 
 # OpenEJB client
 <table>
-<tr><td>Name </td><td> Value </td><td> Description</td></tr>
+<tr><td>**Name**</td><td>**Value**</td><td>**Description**</td></tr>
 <tr><td>openejb.client.identityResolver </td><td> implementation of org.apache.openejb.client.IdentityResolver  </td><td> default org.apache.openejb.client.JaasIdentityResolver. The class to get the client identity.</td></tr>
 <tr><td>openejb.client.connection.pool.timeout or openejb.client.connectionpool.timeout </td><td> int (ms) </td><td> the timeout of the client</td></tr>
 <tr><td>openejb.client.connection.pool.size or openejb.client.connectionpool.size </td><td> int </td><td> size of the socket pool</td></tr>
@@ -62,7 +62,7 @@ Note: all resources can be configured by properties, see http://openejb.apache.o
 
 # TomEE specific system properties
 <table>
-<tr><td>Name </td><td> Value </td><td> Description</td></tr>
+<tr><td>**Name**</td><td>**Value**</td><td>**Description**</td></tr>
 <tr><td>openejb.crosscontext </td><td> bool </td><td> set the cross context property on tomcat context (can be done in the traditionnal way if the deployment is don through the webapp discovery and not the OpenEJB Deployer EJB)</td></tr>
 <tr><td>openejb.jsessionid-support </td><td> bool </td><td> remove URL from session tracking modes for this context (see javax.servlet.SessionTrackingMode)</td></tr>
 <tr><td>openejb.myfaces.disable-default-values </td><td> bool </td><td> by default TomEE will initialize myfaces with some its default values to avoid useless logging</td></tr>
@@ -74,7 +74,7 @@ Note: all resources can be configured by properties, see http://openejb.apache.o
 
 # TomEE Arquillian adaptor
 <table>
-<tr><td>Name </td><td> Value </td><td> Description</td></tr>
+<tr><td>**Name**</td><td>**Value**</td><td>**Description**</td></tr>
 <tr><td>tomee.ejbcontainer.http.port </td><td> int </td><td> tomee port, -1 means random. When using a random port you can retreive it getting this property too.</td></tr>
 <tr><td>tomee.arquillian.http </td><td> int </td><td> http port used by the embedded arquillian adaptor</td></tr>
 <tr><td>tomee.arquillian.stop </td><td> int </td><td> shutdown port used by the embedded arquillian adaptor</td><tr>
