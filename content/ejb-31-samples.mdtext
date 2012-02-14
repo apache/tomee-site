@@ -1,0 +1,9 @@
+Title: EJB 3.1 Samples
+
+Each EJB 3.1 sample comes with JUnit unit tests that can be run
+Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system without
+special plugins using OpenEJB as an embedded EJB container.  The easiest
+way to run a sample in your IDE is to use maven (*mvn eclipse:eclipse*
+or *mvn idea:idea*) to generate project descriptors.
+
+{include:examples-trunk/index.md}

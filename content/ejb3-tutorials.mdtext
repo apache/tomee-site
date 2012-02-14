@@ -1,11 +1,9 @@
 Title: EJB3 Tutorials
-<a name="EJB3Tutorials-EJB3Tutorials"></a>
 
-All EJB 3.0 tutorials come with JUnit unit tests that can be run in
+Each EJB3 tutorial comes with JUnit unit tests that can be run in
 Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system without
 special plugins using OpenEJB as an embedded EJB container.  The easiest
-way to run the tutorials in your IDE is to use maven (`mvn
-eclipse:eclipse` or *mvn idea:idea*) to generate project descriptors.
+way to run a tutorial in your IDE is to use maven (*mvn eclipse:eclipse*
+or *mvn idea:idea*) to generate project descriptors.
 
 {include:examples-trunk/index.md}
-

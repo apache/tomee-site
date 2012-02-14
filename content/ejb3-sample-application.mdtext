@@ -1,0 +1,9 @@
+Title: EJB3 Sample Application
+
+Each EJB3 sample application comes with JUnit unit tests that can be run in
+Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system without
+special plugins using OpenEJB as an embedded EJB container.  The easiest
+way to run a sample application in your IDE is to use maven (*mvn eclipse:eclipse*
+or *mvn idea:idea*) to generate project descriptors.
+
+{include:examples-trunk/index.md}

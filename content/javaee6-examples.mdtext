@@ -1,6 +1,6 @@
-Title: JavaEE 6 Examples
+Title: JavaEE6 Examples
 
-Each Java EE 6 example comes with JUnit unit tests that can be run
+Each JavaEE6 example comes with JUnit unit tests that can be run
 in Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system
 without special plugins using Apache TomEE as an embedded JavaEE container.  The
 easiest way to run a JavaEE example in your IDE is to use maven

@@ -1,12 +1,9 @@
 Title: EJB Annotation Examples
-<a name="EJBAnnotationExamples-EJBAnnotationExamples"></a>
 
-All EJB 3.0 annotation examples come with JUnit unit tests that can be run
-in Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system
-without special plugins using OpenEJB as an embedded EJB container.  The
-easiest way to run the ejb annotation examples in your IDE is to use maven
-(*mvn eclipse:eclipse* or *mvn idea:idea*) to generate project
-descriptors.
+Each EJB annotation example comes with JUnit unit tests that can be run in
+Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system without
+special plugins using OpenEJB as an embedded EJB container.  The easiest
+way to run a annotation example in your IDE is to use maven (*mvn eclipse:eclipse*
+or *mvn idea:idea*) to generate project descriptors.
 
 {include:examples-trunk/index.md}
-

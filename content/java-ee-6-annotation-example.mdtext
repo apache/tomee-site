@@ -1,0 +1,9 @@
+Title: Java EE 6 Annotation Example
+
+Each Java EE 6 annotation example comes with JUnit unit tests that can be run
+in Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system
+without special plugins using Apache TomEE as an embedded JavaEE container.  The
+easiest way to run a Java EE 6 annotation example in your IDE is to use maven
+(*mvn eclipse:eclipse* or *mvn idea:idea*) to generate project descriptors.
+
+{include:examples-trunk/index.md}

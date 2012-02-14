@@ -1,6 +1,6 @@
 Title: JavaEE Sample Applications
 
-Each Java EE sample application comes with JUnit unit tests that can be run
+Each JavaEE sample application comes with JUnit unit tests that can be run
 in Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system
 without special plugins using Apache TomEE as an embedded JavaEE container.  The
 easiest way to run a JavaEE sample application in your IDE is to use maven

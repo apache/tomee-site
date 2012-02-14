@@ -1,11 +1,9 @@
-Title: EJB3 HowTo
-<a name="EJB3HowTo-EJB3HowTo"></a>
+Title: EJB3 Howto
 
-All EJB 3.0 howtos come with JUnit unit tests that can be run in Eclipse,
-IntelliJ, NetBeans, Maven, Ant or any IDE or build system without special
-plugins using OpenEJB as an embedded EJB container.  The easiest way to run
-the howtos in your IDE is to use maven (*mvn eclipse:eclipse* or `mvn
-idea:idea`) to generate project descriptors.
+Each EJB3 howto comes with JUnit unit tests that can be run in
+Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system without
+special plugins using OpenEJB as an embedded EJB container.  The easiest
+way to run a howto in your IDE is to use maven (*mvn eclipse:eclipse*
+or *mvn idea:idea*) to generate project descriptors.
 
 {include:examples-trunk/index.md}
-
