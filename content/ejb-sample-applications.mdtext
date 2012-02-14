@@ -1,6 +1,5 @@
 Title: EJB Sample Applications
 <a name="EJBSampleApplications-EJBSampleApplications"></a>
-# EJB Sample Applications
 
 All EJB 3.0 sample applications come with JUnit unit tests that can be run
 in Eclipse, IntelliJ, NetBeans, Maven, Ant or any IDE or build system
@@ -9,5 +8,5 @@ easiest way to run the sample applications in your IDE is to use maven
 (*mvn eclipse:eclipse* or *mvn idea:idea*) to generate project
 descriptors.
 
-{include:OPENEJBx30:Examples Table}
+{include:examples-trunk/index.md}
 
