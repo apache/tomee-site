@@ -90,6 +90,15 @@ sub basic {
         read_text_file("content/$include", \%a);
         my $text = $a{content};
         $args{headers}{title} = $a{headers}{title} unless $args{headers}{title};
+
+        # If the file to be included is in a child directory, resolve all the links
+        # in the included content to be relative to this document
+        if ($include =~ m,/,) {
+            my $ipath = $include;
+            $ipath =~ s,/[^/]*$,,;
+            $text =~ s,(\[[^[]+])\(([^/][^)]+)\),$1($ipath/$2),g;
+        }
+
         $args{content} =~ s/{include:$include}/$text/g;
     }
 
@@ -224,8 +233,11 @@ sub _breadcrumbs {
     my $path        = shift;
     my $base        = shift;
 
+    my $index = "$base/index.html";
+    $index =~ s,/+,/,g;
+
     my @breadcrumbs = (
-        qq|<a href="$base/index.html">Home</a>|,
+        qq|<a href="$index">Home</a>|,
     );
     my @path_components = split( m!/!, $path );
     pop @path_components;
@@ -235,6 +247,7 @@ sub _breadcrumbs {
 
     for (@path_components) {
         $relpath .= "$_/";
+        $relpath =~ s,/+,/,g;
         next unless $_;
 
         my @names = split("-", $_);
@@ -243,7 +256,6 @@ sub _breadcrumbs {
             $name .= ucfirst($n) . " ";
         }
         $name =~ s/ *$//;
-
         push @breadcrumbs, qq(<a href="$relpath">\u$name</a>);
     }
     return join "&nbsp;&raquo&nbsp;", @breadcrumbs;
