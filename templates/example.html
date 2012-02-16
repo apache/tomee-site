@@ -7,14 +7,18 @@
         <small>{{ breadcrumbs|safe }}</small><br>
     </div>
     <div class="span8">
-        <div class="pull-right">
-            <small><a href="{{ zipurl }}">download example</a>
-        </div>
     </div>
 </div>
-
+&nbsp;
 <div class="page-header">
-<h1>{{ headers.title }}</h1>
+<h1>{{ headers.title }}
+
+    <div style="float: right; position: relative; bottom: -10px; ">
+        <a onclick="javascript:gpshare()" class="gp-share sprite" title="share on Google+">share [gp]</a>
+        <a onclick="javascript:fbshare()" class="fb-share sprite" title="share on Facebook">share [fb]</a>
+        <a onclick="javascript:twshare()" class="tw-share sprite" title="share on Twitter">share [tw]</a>
+    </div>
+</h1>
 </div>
 
 {{ content|markdown }}

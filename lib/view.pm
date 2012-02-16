@@ -106,6 +106,40 @@ sub basic {
     return ($rendered, 'html', \%args);
 }
 
+sub apilinks {
+    my $dir = shift;
+
+    my %imports;
+
+    for my $java (listdir($dir, ".*\.java\$")) {
+
+        open J, "<$java" or die "Can't open $java: $!\n";
+        while (<J>) {
+            next unless /^import.*javax/;
+            next if /\*/;
+            chomp;
+            my $static = m/static/;
+            s/.* |;$//g;
+
+            my $link = $_;
+            $link =~ s/(.*)\./$1#/ if $static;
+            $link =~ s,\.,/,g;
+            $link =~ s,(#.*)$,.html$1, if $static;
+            $link =~ s,$,.html, unless $static;
+
+            $imports{$_} = $link;
+        }
+    }
+
+    my $apis = "<ul>";
+    for my $i (sort keys %imports) {
+        $apis .= "<li><a href=\"http://docs.oracle.com/javaee/6/api/$imports{$i}\">$i</a></li>\n";
+    }
+    $apis .= "</ul>";
+
+    return $apis;
+}
+
 sub example {
     my %args = @_;
     my $filepath = "content$args{path}";
@@ -116,12 +150,17 @@ sub example {
     $args{base} = _base($args{path});
     $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
     $args{zipurl} = _zipurl($args{path});
-    $args{apis} = `java -jar lib/cms-tools-r1195124.jar $filepath`;
+
+    my $dir = $filepath;
+    $dir =~ s!/[^/]+$!!;
+
+    $args{apis} = apilinks($dir);
 
     my $template_path = "templates/$args{template}";
 
     my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
 
+#    print Dumper( \%args );
     return ($rendered, 'html', \%args);
 }
 
@@ -186,7 +225,7 @@ sub sitemapxml {
     my $dir = $template;
     $dir =~ s!/[^/]+$!!;
 
-    my %data = listdir($dir);
+    my %data = listcontent($dir);
 
     my $content .= '<?xml version="1.0" encoding="utf-8"?>' . "\n";
     $content .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
@@ -214,7 +253,7 @@ sub sitemapxml {
     return ($content, 'xml', \%args);
 }
 
-sub listdir() {
+sub listcontent {
     my $dir = shift;
     my %data;
 
@@ -231,19 +270,35 @@ sub listdir() {
                 my ($content, $ext, $vars) = $s->(path => $file, %$args);
                 $file =~ s/\.md(text)?$/.$ext/;
 
-                print "LISTING $file\n";
                 $data{$file} = $vars;
                 last;
             }
-        }
-
-        if (-d) {
-            my %subdir = listdir($_);
+        } elsif (-d) {
+            my %subdir = listcontent($_);
             %data = (%subdir, %data);
         }
     }
 
     return %data;
+}
+
+sub listdir {
+    my $dir = shift;
+    my $pattern = shift;
+
+    my @files;
+
+    opendir my $dh, $dir or die "Can't opendir $dir: $!\n";
+    for (map "$dir/$_", grep $_ ne "." && $_ ne ".." && $_ ne ".svn", readdir $dh) {
+        if (-f and /$pattern/) {
+            push @files, $_;
+        } elsif (-d) {
+            my @subdir = listdir($_, $pattern);
+            push @files, @subdir;
+        }
+    }
+
+    return @files;
 }
 
 

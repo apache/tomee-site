@@ -18,10 +18,51 @@
     <link href="{{base}}bootstrap-mods.css" rel="stylesheet">
 
     <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
+        body {
+          padding-top: 60px;
+        }
+        .sprite {
+            display: inline-block;
+            height: 20px;
+            margin: 0 auto 4px;
+            outline: medium none;
+            text-indent: -999em;
+            width: 24px;
+            background-image: url('{{base}}images/sprites.png');
+            background-repeat: no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .fb-share {
+            background-position: 0px -40px;
+        }
+        .gp-share {
+            background-position: 0px 0px;
+        }
+        .tw-share {
+            background-position: 0px -80px;
+        }
     </style>
+    <script type="text/javascript">
+      function fbshare () {
+          window.open(
+                  "http://www.facebook.com/sharer/sharer.php?u="+document.URL,
+                  'Share on Facebook',
+                  'width=640,height=426');
+      };
+      function gpshare () {
+          window.open(
+                  "https://plus.google.com/share?url="+document.URL,
+                  'Share on Google+',
+                  'width=584,height=385');
+      };
+      function twshare () {
+          window.open(
+                  "https://twitter.com/intent/tweet?url="+document.URL+"&text={{ headers.title }} " + document.URL,
+                  'Share on Twitter',
+                  'width=800,height=526');
+      };
+    </script>
 
 
     <!-- Le fav and touch icons -->
@@ -88,7 +129,6 @@
         Copyright &copy; 2011 The Apache Software Foundation, Licensed under the Apache License, Version 2.0.
         Apache and the Apache feather logo are trademarks of The Apache Software Foundation.
         </p>
-          <p><a href="/sitemap.html">sitemap</a></p>
       </footer>
 
     </div> <!-- /container -->
