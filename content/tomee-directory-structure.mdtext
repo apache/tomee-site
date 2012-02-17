@@ -19,10 +19,16 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 #TomEE Directory Layout:
 
 
-TomEE directory layout is very much like that of Tomcat. Say you have unzipped in a directory 'tomee'
+TomEE directory layout is the same as that of Tomcat, with the addition of a few files.
+
+
+The changes are as described below:
+ 
+
+(Say you have unzipped in a directory 'tomee')
 
 ###tomee/webapps
- Works the same way as it does for Tomcat. Drop your directories/wars in here!
+ Works the same way as it does for Tomcat. Drop your directories/wars in here! 
 
 ###tomee/webapps/openejb 
 The added webapp which brings the “EE” (Read, place where all the magic happens)
@@ -33,11 +39,13 @@ The added webapp which brings the “EE” (Read, place where all the magic happ
 
 ###tomee/conf 
 
-Added openejb.xml described below. server.xml As in tomcat. One Extra Listener. Can configure ports, hosts, engines, threadpools etc
+Added openejb.xml 
+
+Server.xml As in tomcat with one extra listener. (Can configure ports, hosts, engines, threadpools etc)
 
 ###tomee/logs
 
- Added openejb.log
+Added openejb.log
 
 ###tomee/webapps/openejb/lib 
 
@@ -45,4 +53,4 @@ All the new lib jars provided by the server.
 
 ###tomee/conf/openejb.xml
 
- This is where most TomEE configuration happens – This is where global resources are defined.
+This is where most TomEE configuration happens – This is where global resources are defined.
