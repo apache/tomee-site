@@ -158,9 +158,20 @@ sub example {
 
     my $template_path = "templates/$args{template}";
 
-    my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+    my $svndir = $args{path};
+    $svndir =~ s,/index.html,,;
+    $svndir =~ s,/examples-trunk/,trunk/openejb/examples/,;
+
+    $args{repo} = $svndir;
+
+    my $example = $svndir;
+    $example =~ s,.*/,,;
+    $args{example} = $example;
 
 #    print Dumper( \%args );
+
+    my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+
     return ($rendered, 'html', \%args);
 }
 
