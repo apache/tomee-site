@@ -21,7 +21,7 @@ Cache)
  - An **EntityManagerFactory** creates an EntityManager (and therefore a
 PersistenceContext/Cache)
 
-Comparing `EntityManager` and `EntityManagerFactory`
+Comparing `RESOURCE_LOCAL` and `TRANSACTION` persistence contexts
 
 With &lt;persistence-unit transaction-type="**RESOURCE_LOCAL**"> **you** are
 responsible for EntityManager (PersistenceContext/Cache) creating and
