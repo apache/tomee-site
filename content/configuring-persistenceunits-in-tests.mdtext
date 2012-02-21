@@ -6,7 +6,7 @@ The most common situation in EJB related testing by far is the need to
 alter your persistence.xml for a test environment.
 
 <a name="ConfiguringPersistenceUnitsinTests-Overridingthe<jta-data-source>and<non-jta-data-source>"></a>
-## Overriding the <jta-data-source> and <non-jta-data-source>
+## Overriding the $lt;jta-data-source> and $lt;non-jta-data-source>
 
 OpenEJB will automatically use the DataSources you have setup in your test
 environment, we're pretty good at guessing the right DataSources you intend
@@ -20,7 +20,7 @@ environment and helps eliminate the need for a "test" persistence.xml
 if we had to adjust the DataSources of your persistence.xml.
 
 <a name="ConfiguringPersistenceUnitsinTests-Overridingthepersistence-unit<properties>"></a>
-##  Overriding the persistence-unit <properties>
+##  Overriding the persistence-unit $lt;properties>
 
 You can override any property in your test setup via either system
 properties or the initial context properties.  The format is:
@@ -56,10 +56,10 @@ that let us know -- it hasn't really come up so far).
 
 The overriding order is as follows: 1 = highest, 4 = lowest.
     
-    # InitialContext properties
-    # jndi.properties from the classpath
-    # System properties
-    # persistence.xml properties
+1. InitialContext properties
+1. jndi.properties from the classpath
+1. System properties
+1. persistence.xml properties
      
 By default there are no overrides in 1-3, so #4 is the only source of
 information.  
