@@ -10,55 +10,57 @@ touch or feel from a coding perspective.
 
 Here's a quick cheat sheet of the JPA world:
 
- - A *Cache* is a *copy of data*, copy meaning pulled from but living
+ - A **Cache** is a **copy of data**, copy meaning pulled from but living
 outside the database.
- - *Flushing* a Cache is the act of putting modified data back into the
+ - **Flushing** a Cache is the act of putting modified data back into the
 database.
- - A *PersistenceContext* is essentially a Cache. It also tends to have
+ - A **PersistenceContext** is essentially a Cache. It also tends to have
 it's own non-shared database connection.
- - An *EntityManager* represents a PersistenceContext (and therefore a
+ - An **EntityManager** represents a PersistenceContext (and therefore a
 Cache)
- - An *EntityManagerFactory* creates an EntityManager (and therefore a
+ - An **EntityManagerFactory** creates an EntityManager (and therefore a
 PersistenceContext/Cache)
 
+Comparing `EntityManager` and `EntityManagerFactory`
 
- - With <persistence-unit transaction-type="*RESOURCE_LOCAL*"> *you* are
+With &lt;persistence-unit transaction-type="**RESOURCE_LOCAL**"> **you** are
 responsible for EntityManager (PersistenceContext/Cache) creating and
 tracking...
-    -- You *must* use the *EntityManagerFactory* to get an EntityManager
-    -- The resulting *EntityManager* instance *is* a
+
+- You **must** use the **EntityManagerFactory** to get an EntityManager
+- The resulting **EntityManager** instance **is** a
 PersistenceContext/Cache
-    -- An *EntityManagerFactory* can be injected via the *@PersistenceUnit*
+- An **EntityManagerFactory** can be injected via the **@PersistenceUnit**
 annotation only (not @PersistenceContext)
-    -- You are *not* allowed to use @PersistenceContext to refer to a unit
+- You are **not** allowed to use @PersistenceContext to refer to a unit
 of type RESOURCE_LOCAL
-    -- You *must* use the *EntityTransaction* API to begin/commit around
-*every* call to your EntityManger
-    -- Calling entityManagerFactory.createEntityManager() twice results in
-*two* separate EntityManager instances and therefor *two* separate
+- You **must** use the **EntityTransaction** API to begin/commit around
+**every** call to your EntityManger
+- Calling entityManagerFactory.createEntityManager() twice results in
+**two** separate EntityManager instances and therefor **two** separate
 PersistenceContexts/Caches.
-    -- It is *almost never* a good idea to have more than one *instance* of
+- It is **almost never** a good idea to have more than one **instance** of
 an EntityManager in use (don't create a second one unless you've destroyed
 the first)
 
-
- - With <persistence-unit transaction-type="*TRANSACTION*"> the *container*
+With &lt;persistence-unit transaction-type="**TRANSACTION**"> the **container**
 will do EntityManager (PersistenceContext/Cache) creating and tracking...
-    -- You *cannot* use the *EntityManagerFactory* to get an EntityManager
-    -- You can only get an *EntityManager* supplied by the *container*
-    -- An *EntityManager* can be injected via the *@PersistenceContext*
+
+- You **cannot** use the **EntityManagerFactory** to get an EntityManager
+- You can only get an **EntityManager** supplied by the **container**
+- An **EntityManager** can be injected via the **@PersistenceContext**
 annotation only (not @PersistenceUnit)
-    -- You are *not* allowed to use @PersistenceUnit to refer to a unit of
+- You are **not** allowed to use @PersistenceUnit to refer to a unit of
 type TRANSACTION
-    -- The *EntityManager* given by the container is a *reference* to the
+- The **EntityManager** given by the container is a **reference** to the
 PersistenceContext/Cache associated with a JTA Transaction.
-    -- If no JTA transaction is in progress, the EntityManager *cannot be
-used* because there is no PersistenceContext/Cache.
-    -- Everyone with an EntityManager reference to the *same unit* in the
-*same transaction* will automatically have a reference to the *same
-PersistenceContext/Cache*
-    -- The PersistenceContext/Cache is *flushed* and cleared at JTA
-*commit* time
+- If no JTA transaction is in progress, the EntityManager **cannot be
+used** because there is no PersistenceContext/Cache.
+- Everyone with an EntityManager reference to the **same unit** in the
+**same transaction** will automatically have a reference to the **same
+PersistenceContext/Cache**
+- The PersistenceContext/Cache is **flushed** and cleared at JTA
+**commit** time
 
 <a name="JPAConcepts-Cache==PersistenceContext"></a>
 #  Cache == PersistenceContext
@@ -89,17 +91,17 @@ against the current transaction.
 <a name="JPAConcepts-CachesandDetaching"></a>
 # Caches and Detaching
 
-Detaching is the concept of a persistent object *leaving* the
+Detaching is the concept of a persistent object **leaving** the
 PersistenceContext/Cache.  Leaving means that any updates made to the
-object are *not* reflected in the PersistenceContext/Cache.  An object will
-become Detached if it somehow *lives longer* or is *used outside* the scope
+object are **not** reflected in the PersistenceContext/Cache.  An object will
+become Detached if it somehow **lives longer** or is **used outside** the scope
 of the PersistenceContext/Cache.  
 
 For a TRANSACTION unit, the PersistenceContext/Cache will live as long as
 the transaction does.  When a transaction completes (commits or rollsback)
 all objects that were in the PersistenceContext/Cache are Detached.  You
 can still use them, but they are no longer associated with a
-PersistenceContext/Cache and modifications on them will *not* be reflected
+PersistenceContext/Cache and modifications on them will **not** be reflected
 in a PersistenceContext/Cache and therefore not the database either.
 
 Serializing objects that are currently in a PersistenceContext/Cache will
@@ -118,7 +120,7 @@ and exceptions to be thrown.  If you wish to Detach a Collection of
 persistent objects it is always a good idea to iterate over the Collection
 at least once.
 
-You *cannot* call EntityManager.persist() or EntityManager.remove() on a
+You **cannot** call EntityManager.persist() or EntityManager.remove() on a
 Detached object.
 
 Calling EntityManager.merge() will re-attach a Detached object.
