@@ -3,7 +3,8 @@ Title: Embedded Configuration
 #  Defaults, Overrides and Order
 
 When booting up OpenEJB for testing via the `LocalInitialContextFactory`
-there is quite a bit of flexibility to how things are configured.
+or the newer `EJBContainer.createEJBContainer()` API part of EJB 3.1 there
+is quite a bit of flexibility to how things are configured.
 
 OpenEJB will function fine with no configuration at all and will happily
 create things as needed and select defaults for everything.  So in a real
@@ -11,12 +12,26 @@ sense configuration is all about overriding those defaults.  There are
 several places to put your overrides and an a specific order how they are
 applied.  Here they are in order of preference; 1 = highest, 5 = lowest.
 
+{row
+{span8
+**InitialContext**
+
 1. InitialContext properties
 1. jndi.properties from the classpath
 1. System properties
 1. openejb.xml declarations/properties
-1. service-jar.xml declarations/properties (internal concept, no need to
-worry about it)
+1. service-jar.xml declarations/properties (internal concept)
+}
+
+{span8
+**EJBContainer API**
+1. EJBContainer.createEJBContainer(Map) entries
+1. System properties
+1. openejb.xml declarations/properties
+1. service-jar.xml declarations/properties (internal concept)
+
+}
+}
 
 It opens up some interesting possibilities in how you configure your
 environment.  You could do 100% of your configuration in your test case via
