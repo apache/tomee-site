@@ -3,7 +3,7 @@ Title: Configuring DataSources in Tests
 # InitialContext properties
 
 You can configure data sources from within your test case (avoiding the
-need for an openejb.xml entirely) like so:
+need for an `openejb.xml` entirely) like so:
 
 
     Properties p = new Properties();
@@ -24,20 +24,20 @@ See [Containers and Resources](containers-and-resources.html)
  for a full list of supported Resource types and their properties.
 
 <a name="ConfiguringDataSourcesinTests-Noteon<jta-data-source>and<non-jta-data-source>"></a>
-## Note on <jta-data-source> and <non-jta-data-source>
+## Note on &lt;jta-data-source> and &lt;non-jta-data-source>
 
 When configuring DataSources to be used by persistence.xml files, the
-DataSource supplied for <jta-data-source> is typically identical to the
-<non-jta-data-source>, but with the JtaManaged property set differently. 
+DataSource supplied for `<jta-data-source>` is typically identical to the
+`<non-jta-data-source>`, but with the `JtaManaged` property set differently.
 Keeping with our philosophy to free you up from redundant configuration, we
 will happily auto-create a missing jta-data-source or non-jta-data-source
 based upon the supplied DataSource.
 
 In the example above, a new DataSource would be generated as an exact copy
-but with the name "myDataSourceUnmanaged" and its JtaManaged flag set to
-false.	If the supplied DataSource was not JtaManaged, then the generated
-DataSource would be called "myDataSourceJta" and have its JtaManaged flag
-set to true.
+but with the name "myDataSourceUnmanaged" and its `JtaManaged` flag set to
+`false`.	If the supplied DataSource was not `JtaManaged`, then the generated
+DataSource would be called "myDataSourceJta" and have its `JtaManaged` flag
+set to `true`.
 
 When relying on this functionality it is not necessary to specify the name
-of the generated DataSource in the persistence.xml file.
+of the generated DataSource in the `persistence.xml` file.
