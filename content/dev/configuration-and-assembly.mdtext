@@ -31,6 +31,7 @@ all the magic stripped away.  At a high level:
     1. When this step completes, you have a running application.
     1. Any failures prior to this point require no cleanup.  Only the assembler builds "live" objects.
 
+An example of what this looks like in code
 
     import javax.ejb.LocalBean;
     import javax.ejb.Stateful;
