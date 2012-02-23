@@ -5,16 +5,16 @@ Title: JMS Resources and MDB Container
     <openejb>
         <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
             # Do not start the embedded ActiveMQ broker
-            BrokerXmlConfig
-            ServerUrl tcp://someHostName:61616
+            BrokerXmlConfig  =
+            ServerUrl = tcp://someHostName:61616
         </Resource>
 
         <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
-            ResourceAdapter MyJmsResourceAdapter
+            ResourceAdapter = MyJmsResourceAdapter
         </Resource>
 
         <Container id="MyJmsMdbContainer" ctype="MESSAGE">
-            ResourceAdapter MyJmsResourceAdapter
+            ResourceAdapter = MyJmsResourceAdapter
         </Container>
 
         <Resource id="FooQueue" type="javax.jms.Queue"/>
@@ -35,11 +35,11 @@ work, such as 'failover:'.
         </Resource>
 
         <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
-            ResourceAdapter MyJmsResourceAdapter
+            ResourceAdapter = MyJmsResourceAdapter
         </Resource>
 
         <Container id="MyJmsMdbContainer" ctype="MESSAGE">
-            ResourceAdapter MyJmsResourceAdapter
+            ResourceAdapter = MyJmsResourceAdapter
         </Container>
 
         <Resource id="FooQueue" type="javax.jms.Queue"/>
@@ -47,6 +47,46 @@ work, such as 'failover:'.
     </openejb>
 
 The `BrokerXmlConfig` tells ActiveMQ to start on the tcp host/port `someHostName` and `61616`
+
+# Internal ActiveMQ Broker with activemq.xml
+
+The `activemq.xml` file format has a significant number of extra dependencies, such as Spring, and is therefore not included in the distribution by default.
+
+This support can be enabled by adding the right libraries and creating an `conf/activemq.xml` file.
+
+Add the following jar to the `tomee.home/lib/` directory:
+
+- [spring-beans-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-beans/2.5.6/spring-beans-2.5.6.jar)
+- [spring-context-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-context/2.5.6/spring-context-2.5.6.jar)
+- [spring-core-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-core/2.5.6/spring-core-2.5.6.jar)
+- [spring-web-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-web/2.5.6/spring-web-2.5.6.jar)
+- [xbean-spring-3.9.jar](http://repo1.maven.org/maven2/org/apache/xbean/xbean-spring/3.9/xbean-spring-3.9.jar)
+
+Create an [activemq.xml file](http://activemq.apache.org/xml-configuration.html) a in `tome.home/conf/activemq.xml`.
+
+Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
+
+
+    <openejb>
+        <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
+            BrokerXmlConfig =  xbean:file:conf/activemq.xml
+            ServerUrl       =  tcp://someHostName:61616
+        </Resource>
+
+        <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
+            ResourceAdapter = MyJmsResourceAdapter
+        </Resource>
+
+        <Container id="MyJmsMdbContainer" ctype="MESSAGE">
+            ResourceAdapter = MyJmsResourceAdapter
+        </Container>
+
+        <Resource id="FooQueue" type="javax.jms.Queue"/>
+        <Resource id="BarTopic" type="javax.jms.Topic"/>
+    </openejb>
+
+Finally, restart the server.
+
 
 # Configuration via System properties
 
