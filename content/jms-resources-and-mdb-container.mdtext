@@ -54,7 +54,7 @@ The `activemq.xml` file format has a significant number of extra dependencies, s
 
 This support can be enabled by adding the right libraries and creating an `conf/activemq.xml` file.
 
-Add the following jar to the `tomee.home/lib/` directory:
+Add the following jars to the `tomee.home/lib/` directory:
 
 - [spring-beans-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-beans/2.5.6/spring-beans-2.5.6.jar)
 - [spring-context-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-context/2.5.6/spring-context-2.5.6.jar)
@@ -62,7 +62,7 @@ Add the following jar to the `tomee.home/lib/` directory:
 - [spring-web-2.5.6.jar](http://repo1.maven.org/maven2/org/springframework/spring-web/2.5.6/spring-web-2.5.6.jar)
 - [xbean-spring-3.9.jar](http://repo1.maven.org/maven2/org/apache/xbean/xbean-spring/3.9/xbean-spring-3.9.jar)
 
-Create an [activemq.xml file](http://activemq.apache.org/xml-configuration.html) a in `tome.home/conf/activemq.xml`.
+Create an [activemq.xml file](http://activemq.apache.org/xml-configuration.html) a in `tomee.home/conf/activemq.xml`.
 
 Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
 
