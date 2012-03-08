@@ -12,6 +12,16 @@ For convenience it is possible to specify a _compound_ form, such as:
  - "1 hour, 45 minutes"
  - "15 minutes, 23 seconds, and 10 milliseconds"
 
+Spaces are also optional between the number and the time unit, which can be nice when using the abbreviated forms:
+
+ - "1hr" 
+ - "27m"
+ - "10s"
+ - "3d and 2hr"
+ - "1hr, 45min"
+ - "15m, 23s, and 10ms"
+
+
 Abbreviations are accepted as follows:
 
 
