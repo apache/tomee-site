@@ -70,6 +70,7 @@ Note: all resources can be configured by properties, see http://openejb.apache.o
 <tr><td>tomee.jaxws.subcontext </td><td> string </td><td> sub context used to bind jaxws web services, default is webservices</td></tr>
 <tr><td>openejb.servicemanager.enabled</td><td> bool </td><td> run all services detected or only known available services (WS and RS</td></tr>
 <tr><td>tomee.jaxws.oldsubcontext</td><td> bool </td><td> wether or not activate old way to bind jaxws webservices directly on root context</td><tr>
+<tr><td>openejb.modulename.useHash</td><td> bool </td><td> add a hash after the module name of the webmodule if it is generated from the webmodule location, it avoids conflicts between multiple deployment (through ear) of the same webapp. Note: it disactivated by default since names are less nice this way.</td><tr>
 </table>
 
 # TomEE Arquillian adaptor
