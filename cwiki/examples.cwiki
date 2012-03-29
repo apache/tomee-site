@@ -1,5 +1,0 @@
-h1. EJB3 Examples
-
-All examples come with JUnit unit tests that can be run in any IDE, Maven or Ant without special plugins using OpenEJB as an embedded EJB container.  The easiest way to run the examples in your IDE is to use maven ({{mvn eclipse:eclipse}} or {{mvn idea:idea}}) to generate project descriptors.
-
-{include:Examples Table}

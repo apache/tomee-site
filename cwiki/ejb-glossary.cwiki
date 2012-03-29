@@ -1,6 +1,0 @@
-
-- *JPA* - javax.persistence API
-- *component interface* - refers to the legacy interfaces that extend either javax.ejb.EJBObject or javax.ejb.EJBLocalObject
-- *business interface* - refers to the new style of local or remote interfaces that does not extend either javax.ejb.EJBObject or javax.ejb.EJBLocalObject
-
-
