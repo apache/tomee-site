@@ -7,8 +7,8 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 {span-one-third
 ### General Guide 
 - [Using TomEE with Eclipse](tomee-and-eclipse.html)
-- [Difference- OpenEJB,TomEE](comparison.html)
-
+- [Comparison: OpenEJB,TomEE,TomEE+](comparison.html)
+- [Deploying in TomEE](deploying-in-tomee.html)
 }
 
 {span-one-third
