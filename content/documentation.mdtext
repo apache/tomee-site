@@ -60,13 +60,13 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 
 
-{row
+{span-one-third
 
 ### OpenEJB Standalone Server
 - [Startup](startup.html)
 - [Deploy Tool](deploy-tool.html)
 - [Properties Tool](properties-tool.html)
-
+}
 
 {span-one-third
 ###  Spring
