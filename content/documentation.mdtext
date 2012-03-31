@@ -13,7 +13,6 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 
 {span-one-third
 ###  Configuration
-- [Understanding the Directory Layout](understanding-the-directory-layout.html)
 - [System Properties](system-properties.html)
 - [Deployments](deployments.html)
 - [Containers and Resources](containers-and-resources.html)
@@ -63,6 +62,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 {span-one-third
 
 ### OpenEJB Standalone Server
+- [Understanding the Directory Layout](understanding-the-directory-layout.html)
 - [Startup](startup.html)
 - [Deploy Tool](deploy-tool.html)
 - [Properties Tool](properties-tool.html)
