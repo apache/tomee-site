@@ -7,9 +7,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 {span-one-third
 ### General Guide 
 - [Using TomEE with Eclipse](tomee-and-eclipse.html)
-- [What's the difference? OpenEJB, TomEE, Tomee+ ?](comparison.html)
-- [Not looking for TomEE? Looking for the previous OpenEJB standalone server docs?](standalone-server.html)
-
+- [Difference- OpenEJB,TomEE](comparison.html)
 
 }
 
@@ -27,12 +25,6 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [JNDI Names](jndi-names.html)
 }
 
-
-}
-
-
-{row
-
 {span-one-third
 ###  Testing Techniques
 - [Application discovery via the classpath](application-discovery-via-the-classpath.html)
@@ -46,6 +38,13 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
 - [TestCase Injection (@LocalClient)](local-client-injection.html)
 }
+
+
+
+}
+
+
+{row
 
 {span-one-third
 ### Discovery and Failover
@@ -63,11 +62,18 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 
 {row
 
+### OpenEJB Standalone Server
+- [Startup](startup.html)
+- [Deploy Tool](deploy-tool.html)
+- [Properties Tool](properties-tool.html)
+
+
 {span-one-third
 ###  Spring
 - [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
 - [Spring and OpenEJB 3.1 and later](spring.html)
 - [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
 }
+
 
 }
