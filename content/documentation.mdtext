@@ -1,8 +1,8 @@
 Title: Index
 
 See also the [examples page](examples-trunk/index.html) for downloadable, executable and code-focused view of Java EE and TomEE.
-{row
 
+{row
 
 {span-one-third
 ### General Guide 
@@ -12,26 +12,6 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 
 
 }
-
-{span-one-third
-### Applications
-- [Callbacks](callbacks.html)
-- [Understanding Callbacks](understanding-callbacks.html)
-- [EJB Refs](ejb-refs.html)
-- [XML Overrides](annotations,-xml-and-defaults.html)
-}
-
-{span-one-third
-###  Enterprise JavaBeans
-- [Singleton Beans](singleton-beans.html)
-- [Security Annotations](security-annotations.html)
-- [Transaction Annotations](transaction-annotations.html)
-}
-
-}
-
-
-{row
 
 {span-one-third
 ###  Configuration
@@ -47,13 +27,11 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [JNDI Names](jndi-names.html)
 }
 
-{span-one-third
-###  Java Persistence Architecture
-- [JPA Concepts](jpa-concepts.html)
-- [General](jpa-usage.html)
-- [OpenJPA](openjpa.html)
-- [Hibernate](hibernate.html)
+
 }
+
+
+{row
 
 {span-one-third
 ###  Testing Techniques
@@ -69,22 +47,6 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [TestCase Injection (@LocalClient)](local-client-injection.html)
 }
 
-}
-
-
-{row
-
-
-
-
-
-{span-one-third
-### Java EE Basics
-- [Getting Things](basics---getting-things.html)
-- [Security](basics---security.html)
-- [Transactions](basics---transactions.html)
-}
-
 {span-one-third
 ### Discovery and Failover
 - [Overview](ejb-failover.html)
@@ -94,6 +56,12 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [Multipoint Recommendations](multipoint-recommendations.html)
 - [Logging Events](failover-logging.html)
 }
+
+
+}
+
+
+{row
 
 {span-one-third
 ###  Spring
