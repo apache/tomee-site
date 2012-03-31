@@ -49,3 +49,15 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 }
 
 }
+
+
+{row
+
+{span-one-third
+###  Enterprise JavaBeans
+- [Singleton Beans](singleton-beans.html)
+- [Security Annotations](security-annotations.html)
+- [Transaction Annotations](transaction-annotations.html)
+}
+
+}
