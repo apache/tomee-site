@@ -3,13 +3,15 @@ Title: Index
 See also the [examples page](examples-trunk/index.html) for downloadable, executable and code-focused view of Java EE and TomEE.
 {row
 
-{span-one-third
-### Java EE Basics
-- [Getting Things](basics---getting-things.html)
-- [Security](basics---security.html)
-- [Transactions](basics---transactions.html)
-}
 
+{span-one-third
+### General Guide 
+- [Using TomEE with Eclipse](tomee-and-eclipse.html)
+- [What's the difference? OpenEJB, TomEE, Tomee+ ?](comparison.html)
+- [Not looking for TomEE? Looking for the previous OpenEJB standalone server docs?](standalone-server.html)
+
+
+}
 
 {span-one-third
 ### Applications
@@ -72,11 +74,15 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 
 {row
 
+
+
+
+
 {span-one-third
-###  Standalone Server
-- [Startup](startup.html)
-- [Deploy Tool](deploy-tool.html)
-- [Properties Tool](properties-tool.html)
+### Java EE Basics
+- [Getting Things](basics---getting-things.html)
+- [Security](basics---security.html)
+- [Transactions](basics---transactions.html)
 }
 
 {span-one-third
