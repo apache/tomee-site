@@ -18,9 +18,12 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 
 #Deploying in TomEE
 
-
 Deploying in TomEE is quite simple. 
 
-You could simply package your application as a war and "drop it in" tomee/webapps folder.
+You could deploy your application just like how you would deploy with Tomcat. For an example, [tomee-and-eclipse](tomee-and-eclipse.html) shows
+how to use TomEE along with Eclipse.
 
+Or you could simply package your application as a war/ear and "drop it in" tomee/webapps folder.
 
+### Related docs:
+[Collapsed EAR](collapsed-ear.html) describles how packaging in EAR is no longer needed, and how your EJBs/Servlets could reside in the same WAR.
