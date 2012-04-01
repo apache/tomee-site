@@ -9,6 +9,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [Using TomEE with Eclipse](tomee-and-eclipse.html)
 - [Comparison: OpenEJB,TomEE,TomEE+](comparison.html)
 - [Deploying in TomEE](deploying-in-tomee.html)
+- [TomEE Directory structure](tomee-directory-structure.html)
 }
 
 {span-one-third
