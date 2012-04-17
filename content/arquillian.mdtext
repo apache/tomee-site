@@ -10,6 +10,44 @@ To use the TomEE Embedded Arquillian Adapter, simply add this dependency to your
       <version>1.0.0-beta-3-SNAPSHOT</version>
     </dependency>
 
+It supports the following configuration options in the arquillian.xml:
+
+    <container qualifier="tomee" default="true">
+        <configuration>
+            <property name="httpPort">0</property>
+            <property name="stopPort">0</property>
+            <property name="ajpPort">0</property>
+        </configuration>
+    </container>
+
+When set to zero, a random port will be chosen and can be retrieved in the test via the following system properties which are set by the adapter:
+
+  - `tomee.httpPort`
+  - `tomee.stopPort`
+  - `tomee.ajpPort`
+
+The above can also be used to set the related configuration options as system properties rather than via the arquillian.xml file.
+So for example if `tomee.httpPort` is set to `0` as a system property passed to surefire like so:
+
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <systemPropertyVariables>
+              <tomee.httpPort>0</tomee.httpPort>
+            </systemPropertyVariables>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+
+The test case can use the same property to retrieve the random port that was chosen by the TomEE Arquillian Adapter.
+
+    URL url = new URL("http://localhost:" + System.getProperty("tomee.httpPort");
+    // use the URL to connect to the server
+
 # TomEE WebProfile Remote Adapter
 
 
