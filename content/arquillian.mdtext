@@ -1,0 +1,80 @@
+Title: TomEE and Arquillian
+
+# TomEE Embedded Adapter
+
+To use the TomEE Embedded Arquillian Adapter, simply add this dependency to your Arquillian setup
+
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
+      <artifactId>arquillian-tomee-embedded</artifactId>
+      <version>1.0.0-beta-3-SNAPSHOT</version>
+    </dependency>
+
+# TomEE WebProfile Remote Adapter
+
+
+    <properties>
+      <tomee.version>1.0.0-beta-3-SNAPSHOT</tomee.version>
+    </properties>
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <systemPropertyVariables>
+              <tomee.classifier>webprofile</tomee.classifier>
+              <tomee.version>${tomee.version}</tomee.version>
+            </systemPropertyVariables>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.openejb</groupId>
+        <artifactId>arquillian-tomee-remote</artifactId>
+        <version>${tomee.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.openejb</groupId>
+        <artifactId>apache-tomee</artifactId>
+        <version>${tomee.version}</version>
+        <classifier>webprofile</classifier>
+        <type>zip</type>
+      </dependency>
+    </dependencies>
+
+# TomEE+ (Plus) Remote Adapter
+
+    <properties>
+      <tomee.version>1.0.0-beta-3-SNAPSHOT</tomee.version>
+    </properties>
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <systemPropertyVariables>
+              <tomee.classifier>plus</tomee.classifier>
+              <tomee.version>${tomee.version}</tomee.version>
+            </systemPropertyVariables>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.openejb</groupId>
+        <artifactId>arquillian-tomee-remote</artifactId>
+        <version>${tomee.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.openejb</groupId>
+        <artifactId>apache-tomee</artifactId>
+        <version>${tomee.version}</version>
+        <classifier>plus</classifier>
+        <type>zip</type>
+      </dependency>
+    </dependencies>
