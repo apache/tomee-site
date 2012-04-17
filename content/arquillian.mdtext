@@ -144,7 +144,7 @@ Setting up both adapters is quite easy via maven profiles.  Here the default ada
           <dependency>
             <groupId>org.apache.openejb</groupId>
             <artifactId>arquillian-tomee-embedded</artifactId>
-            <version>1.0.0-beta-3-SNAPSHOT</version>
+            <version>1.0.0</version>
           </dependency>
         </dependencies>
       </profile>
