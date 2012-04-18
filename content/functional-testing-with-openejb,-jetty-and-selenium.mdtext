@@ -27,11 +27,9 @@ configure them to see the EJB and WAR modules of my application:
     	try {
     	    // initialize OpenEJB & add some test data
     	    Properties properties = new Properties();
-    	    properties.put(Context.INITIAL_CONTEXT_FACTORY,
-"org.apache.openejb.client.LocalInitialContextFactory");
+    	    properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
     	    InitialContext ic = new InitialContext(properties);
-    	    PeopleFacade facade = (PeopleFacade)
-ic.lookup("PeopleFacadeEJBRemote");
+    	    PeopleFacade facade = (PeopleFacade) ic.lookup("PeopleFacadeEJBRemote");
     	    new TestFixture(facade).addTestData();
     
     	    // setup web app
@@ -40,8 +38,7 @@ ic.lookup("PeopleFacadeEJBRemote");
     	    InitialContext initialContext = setupJndi(context);
     
     	    // start the server
-    	    context.setServletHandler(new
-EmbeddedServerServletHandler(initialContext));
+    	    context.setServletHandler(new EmbeddedServerServletHandler(initialContext));
     	    context.setContextPath("/");
     	    server = new Server(9091);
     	    server.addHandler(context);
@@ -52,8 +49,7 @@ EmbeddedServerServletHandler(initialContext));
     	}
         }
     
-        private InitialContext setupJndi(WebAppContext context) throws
-NamingException {
+        private InitialContext setupJndi(WebAppContext context) throws NamingException {
     	// setup local JNDI
     	InitialContext initialContext = new InitialContext();
     	WebApp webApp = getWebApp(context);
@@ -62,14 +58,10 @@ NamingException {
     	    String ejbLink = ref.getEjbLink();
     
     	    // get enterprise bean info
-    	    EnterpriseBeanInfo beanInfo = new
-EJBHelper().getEJBInfo(ejbLink);
-    	    if (beanInfo.jndiNames != null && beanInfo.jndiNames.size() >
-0) {
-    		String jndiName = "java:openejb/ejb/" +
-beanInfo.jndiNames.get(0);
-    		initialContext.bind("java:comp/env/" + ref.getEjbRefName(),
-new LinkRef(jndiName));
+    	    EnterpriseBeanInfo beanInfo = new EJBHelper().getEJBInfo(ejbLink);
+    	    if (beanInfo.jndiNames != null && beanInfo.jndiNames.size() > 0) {
+    		String jndiName = "java:openejb/ejb/" + beanInfo.jndiNames.get(0);
+    		initialContext.bind("java:comp/env/" + ref.getEjbRefName(), new LinkRef(jndiName));
     	    }
     	}
     	return initialContext;
@@ -79,8 +71,7 @@ new LinkRef(jndiName));
     	String currentPath = new File(".").getAbsolutePath();
     	String warPath;
     
-            String[]
- pathParts = currentPath.split("(\\\\|/)+");
+            String[]  pathParts = currentPath.split("(\\\\|/)+");
     
     	int webPart = Arrays.asList(pathParts).indexOf("PersonWEB");
     	if (webPart == -1) {
@@ -89,8 +80,7 @@ new LinkRef(jndiName));
     	    StringBuffer buffer = new StringBuffer();
     
     	    for (int i = 0; i < webPart; i++) {
-                    buffer.append(pathParts[i]
-);
+                    buffer.append(pathParts[i]);
     		buffer.append(File.separator);
     	    }
     
@@ -108,8 +98,7 @@ new LinkRef(jndiName));
     	return server;
         }
     
-        public static void main(String[]
- args) {
+        public static void main(String[]  args) {
     	try {
     	    EmbeddedServer.getInstance().getServer().join();
     	} catch (Exception e) {
@@ -121,8 +110,7 @@ new LinkRef(jndiName));
     	WebApp webApp = null;
     
     	try {
-    	    FileInputStream is = new FileInputStream(new
-File(context.getWar() + "/WEB-INF/web.xml").getAbsolutePath());
+    	    FileInputStream is = new FileInputStream(new File(context.getWar() + "/WEB-INF/web.xml").getAbsolutePath());
     	    webApp = (WebApp) JaxbJavaee.unmarshal(WebApp.class, is);
     	} catch (Exception e) {
     	    e.printStackTrace();
@@ -173,8 +161,7 @@ like this:
     			continue;
     		    }
                        
-    		    String jndiName = "java:openejb/ejb/" +
-beanInfo.jndiNames.get(0);
+    		    String jndiName = "java:openejb/ejb/" + beanInfo.jndiNames.get(0);
     		    Object o = initialContext.lookup(jndiName);
     
     		    declaredField.setAccessible(true);
@@ -209,8 +196,7 @@ sure the Embedded server is running, and start Selenium:
         protected void setUp() throws Exception {
     	super.setUp();
     	EmbeddedServer.getInstance();
-    	selenium = new DefaultSelenium("localhost", 4444, "*iexplore",
-"http://localhost:9091/");
+    	selenium = new DefaultSelenium("localhost", 4444, "*iexplore", "http://localhost:9091/");
     	selenium.start();
         }
     
@@ -228,16 +214,13 @@ and I can then I write a test like this:
     	selenium.open("/People");
     	selenium.type("firstname", "Jonathan");
     	selenium.type("lastname", "Gallimore");
-            selenium.click("//input[@name='add' and @value='Add']
-");
+            selenium.click("//input[@name='add' and @value='Add']");
     	selenium.waitForPageToLoad("30000");
     	selenium.type("filter", "gallimore");
     	selenium.click("submit");
     	selenium.waitForPageToLoad("30000");
-            assertEquals(1, selenium.getXpathCount("//div[@id='people']
-/ul/li").intValue());
-            assertEquals("Jonathan Gallimore", selenium.getText("//div[@id='people']
-/ul/li[1]"));
+            assertEquals(1, selenium.getXpathCount("//div[@id='people']/ul/li").intValue());
+            assertEquals("Jonathan Gallimore", selenium.getText("//div[@id='people']/ul/li[1]"));
     
         }
     } 
