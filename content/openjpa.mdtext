@@ -1,7 +1,7 @@
 Title: OpenJPA
 OpenJPA is bundled with OpenEJB as the default persistence provider.
 
-An example of  working persistence.xml for OpenJPA:
+An example of working `persistence.xml` for OpenJPA:
 
     <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
@@ -11,8 +11,7 @@ An example of  working persistence.xml for OpenJPA:
         <class>org.superbiz.injection.jpa.Movie</class>
 
         <properties>
-          <property name="openjpa.jdbc.SynchronizeMappings"
-    value="buildSchema(ForeignKeys=true)"/>
+          <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
         </properties>
       </persistence-unit>
     </persistence>
@@ -105,11 +104,8 @@ unless explicitly set otherwise in the bean class or method in question.
 ### Solutions
 
 You can either:
-1. Change your bean or it's method to use
-TransactionAttributeType.NOT_REQUIRED or TransactionAttributeType.NEVER
-which will guarantee it will not be invoked in a JTA transaction.
-1. Change your persistence.xml so the persistence-unit uses
-transaction-type="TRANSACTION" making it capable of participating in a JTA
-transaction.
+
+1. Change your bean or it's method to use `TransactionAttributeType.NOT_REQUIRED` or `TransactionAttributeType.NEVER` which will guarantee it will not be invoked in a JTA transaction.
+1. Change your persistence.xml so the persistence-unit uses `transaction-type="TRANSACTION"` making it capable of participating in a JTA transaction.
 
 
