@@ -19,9 +19,9 @@ interface to be used as both @Local and @Remote.
 
 Basically we have:
 
-&nbsp;openejb/Deployment/<hardcoded internal format>
-&nbsp;openejb/local/<strategy format>
-&nbsp;openejb/remote/<strategy format>
+* openejb/Deployment/&lt;hardcoded internal format&gt;
+* openejb/local/&lt;strategy format&gt;
+* openejb/remote/&lt;strategy format&gt;
 
 The 'openejb/Deployment' section is the non-changing fully qualified name
 for use internally and by app clients.

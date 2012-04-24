@@ -35,16 +35,12 @@ You can configure your beans in a variety of ways.  Generally speaking, a
 transaction is started when a method is called, but can be configured using
 @TransactionAttribute(value = TransactionAttributeType.X), where X is one
 of...
-1. REQUIRED - the default, which is to start a transaction if one does not
-exist, but to use the existing one if it has already been started.
-1. REQUIRES_NEW - the transaction is created on every call, and ends when
-the call is completed.	Beans don't partake in transactions created by
-other parts of the system.
-1. MANDATORY - a transaction must always exist prior to the call, and it
-will be used.  It is an error otherwise
+
+1. REQUIRED - the default, which is to start a transaction if one does not exist, but to use the existing one if it has already been started.
+1. REQUIRES_NEW - the transaction is created on every call, and ends when the call is completed.	Beans don't partake in transactions created by other parts of the system.
+1. MANDATORY - a transaction must always exist prior to the call, and it will be used.  It is an error otherwise
 1. NOT_SUPPORTED - component not included in the transaction
-1. SUPPORTS - transaction will be used if it exists, but will not be created
-if it does not exist
+1. SUPPORTS - transaction will be used if it exists, but will not be created if it does not exist
 1. NEVER - if a transaction exists, it is an error to call the method
 
 @TransactionAttribute applies to both methods and entire beans.  You may

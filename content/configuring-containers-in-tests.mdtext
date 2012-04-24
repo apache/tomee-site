@@ -6,7 +6,7 @@ the bean, allowing you to test your callbacks behave as you need them to.
 
 
     Properties p = new Properties();
-    p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
+    p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.core.LocalInitialContextFactory");
     
     p.put("myStatefulContainer", "new://Container?type=STATEFUL");
     p.put("myStatefulContainer.PoolSize", "0");

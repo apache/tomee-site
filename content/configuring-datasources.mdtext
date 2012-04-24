@@ -30,9 +30,10 @@ can abbreviated to just _DataSource_ as follows:
 
 
 See [Containers and Resources](containers-and-resources.html)
- for a complete list of supported DataSource properties.  See [DataSource Password Encryption]
+ for a complete list of supported DataSource properties.  See [DataSource Password
+Encryption](datasource-password-encryption.html)
  for information on specifying non-plain-text database passwords in your
-openejb.xml file.  See [Common DataSource Configurations]
+openejb.xml file.  See [Common DataSource Configurations](common-datasource-configurations.html)
  for a list of the commonly used databases and their driver configurations.
 
 You may also need data partitioning per customer or depending on any other
@@ -69,6 +70,7 @@ DataSource references in your ejb should get automatically mapped to the
 Resource you declare.  The shortest and easiest rule is that *if your
 reference name matches a Resource in your openejb.xml, that's the one you
 get*.&nbsp; Essentially, the rules for mapping are as follows.
+
 1. Name Attribute Match - @Resource with a name attribute matching the
 resource name gets that resource injected
 1. Injected Name Match - variable name matching the resource name gets that 

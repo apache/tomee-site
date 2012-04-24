@@ -58,15 +58,15 @@ OpenEJB.  You still need to follow the ejb jar layout and include an
 
 For example, if you have a directory structure like this:
 
-> C:\myapp\
-> C:\myapp\acmeEjbs\
-> C:\myapp\acmeEjbs\META-INF\ejb-jar.xml
-> C:\myapp\acmeEjbs\org\acme\Foo.class
-> C:\myapp\acmeEjbs\org\acme\FooBean.class
-> C:\myapp\acmeEjbs\org\acme\FooHome.class
-> C:\myapp\acmeEjbs\org\acme\Bar.class
-> C:\myapp\acmeEjbs\org\acme\BarBean.class
-> C:\myapp\acmeEjbs\org\acme\BarHome.class
+    > C:\myapp\
+    > C:\myapp\acmeEjbs\
+    > C:\myapp\acmeEjbs\META-INF\ejb-jar.xml
+    > C:\myapp\acmeEjbs\org\acme\Foo.class
+    > C:\myapp\acmeEjbs\org\acme\FooBean.class
+    > C:\myapp\acmeEjbs\org\acme\FooHome.class
+    > C:\myapp\acmeEjbs\org\acme\Bar.class
+    > C:\myapp\acmeEjbs\org\acme\BarBean.class
+    > C:\myapp\acmeEjbs\org\acme\BarHome.class
 
 Then you would delcare a 'Deployments' element with the 'dir' attribute set
 to 'C:\myapp\acmeEjbs' as shown below.

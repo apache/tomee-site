@@ -200,12 +200,7 @@ bean, the second bean and all beans in it's jar will not be loaded. In
 addition, the system will log a warning like the following one asking you
 to redeploy the jar and choose an different deployment ID for the bean.
 
-{panel:title=openejb.log}
-WARN : Jar C:\openejb\beans\fooEjbs.jar cannot be loaded.  The 
-Deployment ID "/my/bean/foo" is already in use.  Please redeploy 
-this jar and assign a different deployment ID to the bean with 
-the ejb-name "FooBean".
-{panel}
+    WARN : Jar C:\openejb\beans\fooEjbs.jar cannot be loaded.  The Deployment ID "/my/bean/foo" is already in use.  Please redeploy this jar and assign a different deployment ID to the bean with the ejb-name "FooBean".
 
 For example, the acmeEjbs.jar contains a bean with the ejb-name
 "DaffyDuckBean". The disneyEjbs.jar contains contains a bean with the
@@ -228,9 +223,4 @@ of the beans in the disneyEjbs.jar as they may need the "DonaldDuckBean"
 bean to function properly. The disneyEjbs.jar is skipped and the following
 warning is logged.
 
-{panel:title=openejb.log}
-WARN : Jar C:\openejb\beans\disneyEjbs.jar cannot be loaded.  The 
-Deployment ID "/my/favorite/duck" is already in use.  Please redeploy 
-this jar and assign a different deployment ID to the bean with 
-the ejb-name "DonaldDuckBean".
-{panel}
+    WARN : Jar C:\openejb\beans\disneyEjbs.jar cannot be loaded.  The  Deployment ID "/my/favorite/duck" is already in use.  Please redeploy  this jar and assign a different deployment ID to the bean with the ejb-name "DonaldDuckBean".

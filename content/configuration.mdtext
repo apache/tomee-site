@@ -5,25 +5,16 @@ Title: Configuration
 <a name="Configuration-ConfigurationProperties"></a>
 ## Configuration Properties
 
-*  *openejb.home* - OpenEJB home (installation) directory path. All
-relative paths are resolved against the property unless openejb.base is
-set. Unless set, the value is assigned to the _user.dir_ Java property.
-*  *openejb.base* - OpenEJB base directory path. If set, the directory
-pointed by the property is searched for resources before openejb.home.
-*  *openejb.configuration* - OpenEJB configuration file path.
-*  *openejb.loader* - OpenEJB loader that's responsible for loading EJBs.
-There are 3 different loader types:  
-**  *tomcat-webapp* - set it when inside of Tomcat scoped at just the
-webapp, aka. [Collapsed EAR](collapsed-ear.html)
-**  *tomcat* - set it when inside of Tomcat scoped for all webapps to share
-**  *system* (also: bootstrap)
-**  *embedded* (also: noload)
-*  *openejb.configurator* (default:
-_org.openejb.alt.config.ConfigurationFactory_ ) - a class that builds
-org.openejb.alt.assembler.classic.OpenEjbConfiguration object; implements
-the org.openejb.alt.assembler.classic.OpenEjbConfigurationFactory interface
-*  *openejb.descriptors.output* - possible values: true|false - When set
-OpenEJB saves deployment descriptors - ejb-jar.xml and openejb-jar.xml
+*  _openejb.home_ - OpenEJB home (installation) directory path. All relative paths are resolved against the property unless openejb.base is set. Unless set, the value is assigned to the _user.dir_ Java property.
+*  _openejb.base_ - OpenEJB base directory path. If set, the directory pointed by the property is searched for resources before openejb.home.
+*  _openejb.configuration_ - OpenEJB configuration file path.
+*  _openejb.loader_ - OpenEJB loader that's responsible for loading EJBs. There are 3 different loader types:  
+**  _tomcat-webapp_ - set it when inside of Tomcat scoped at just the webapp, aka. [Collapsed EAR](collapsed-ear.html)
+**  _tomcat_ - set it when inside of Tomcat scoped for all webapps to share
+**  _system_ (also: bootstrap)
+**  _embedded_ (also: noload)
+*  _openejb.configurator_ (default: _org.openejb.alt.config.ConfigurationFactory_ ) - a class that builds org.openejb.alt.assembler.classic.OpenEjbConfiguration object; implements the org.openejb.alt.assembler.classic.OpenEjbConfigurationFactory interface
+*  _openejb.descriptors.output_ - possible values: true|false - When set OpenEJB saves deployment descriptors - ejb-jar.xml and openejb-jar.xml
 
 <a name="Configuration-ConfigurationFile"></a>
 ## Configuration File

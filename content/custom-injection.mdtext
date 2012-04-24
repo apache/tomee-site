@@ -29,12 +29,60 @@ available on the download page.
 <a name="CustomInjection-BeanClass"></a>
 ## Bean Class
 
-{snippet:id=code|url=openejb3/examples/custom-injection/src/main/java/org/superbiz/enventries/StratocasterImpl.java|lang=java}
+    @Stateless
+    public class Stratocaster {
+    
+        @Resource(name = "pickups")
+        private List<Pickup> pickups;
+    
+        @Resource(name = "style")
+        private Style style;
+    
+        @Resource(name = "dateCreated")
+        private Date dateCreated;
+    
+        @Resource(name = "guitarStringGuages")
+        private Map<String, Float> guitarStringGuages;
+    
+        @Resource(name = "certificateOfAuthenticity")
+        private File certificateOfAuthenticity;
+    
+        public Date getDateCreated() {
+            return dateCreated;
+        }
+    
+        /**
+         * Gets the guage of the electric guitar strings
+         * used in this guitar.
+         *
+         * @param string
+         * @return
+         */
+        public float getStringGuage(String string) {
+            return guitarStringGuages.get(string);
+        }
+    
+        public List<Pickup> getPickups() {
+            return pickups;
+        }
+    
+        public Style getStyle() {
+            return style;
+        }
+    
+        public File getCertificateOfAuthenticity() {
+            return certificateOfAuthenticity;
+        }
+    }
 
 <a name="CustomInjection-TheMETA-INF/env-entries.propertiesfile"></a>
 ## The META-INF/env-entries.properties file
 
-{snippet:id=code|url=openejb3/examples/custom-injection/src/main/resources/META-INF/env-entries.properties|id=props|lang=none}
+    guitarStringGuages=E1=0.052\nA=0.042\nD=0.030\nG=0.017\nB=0.013\nE=0.010
+    certificateOfAuthenticity=/tmp/strat-certificate.txt
+    dateCreated=1962-03-01
+    pickups=S,S,S
+    style=VINTAGE
 
 <a name="CustomInjection-TheCustomTypeandEditor"></a>
 ## The Custom Type and Editor
@@ -44,25 +92,70 @@ we'd like to allow abbreviated versions of the enum constants to be usable.
  We do this by creating a custom PropertyEditor for our Pickup enum like
 so:
 
-{snippet:id=code|url=openejb3/examples/custom-injection/src/main/java/org/superbiz/enventries/PickupEditor.java|lang=java}
+    public class PickupEditor extends java.beans.PropertyEditorSupport {
+        public void setAsText(String text) throws IllegalArgumentException {
+            text = text.trim();
+    
+            if (text.equalsIgnoreCase("H")) setValue(Pickup.HUMBUCKER);
+            else if (text.equalsIgnoreCase("S")) setValue(Pickup.SINGLE_COIL);
+            else throw new IllegalStateException("H and S are the only supported Pickup aliases");
+        }
+    }
 
 We cleverly install this PropertyEditor in a static block in the Pickup
 class that will be executed should someone actually reference the Pickup
 type.
 
-{snippet:id=code|url=openejb3/examples/custom-injection/src/main/java/org/superbiz/enventries/Pickup.java|lang=java}
+    public enum Pickup {
+    
+        HUMBUCKER,
+        SINGLE_COIL;
+    
+        // Here's the little magic where we register the PickupEditor
+        // which knows how to create this object from a string.
+        // You can add any of your own Property Editors in the same way.
+        static {
+            PropertyEditorManager.registerEditor(Pickup.class, PickupEditor.class);
+        }
+    }
 
 <a name="CustomInjection-TestCase"></a>
 # Test Case
 
-{snippet:id=code|url=openejb3/examples/custom-injection/src/test/java/org/superbiz/enventries/StratocasterTest.java|lang=java}
+    public class StratocasterTest extends TestCase {
+    
+        @EJB
+        private Stratocaster strat;
+    
+        public void test() throws Exception {
+            EJBContainer.createEJBContainer().getContext().bind("inject", this);
+    
+            Date date = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.US).parse("Mar 1, 1962");
+            assertEquals("Strat.getDateCreated()", date, strat.getDateCreated());
+    
+            List<Pickup> pickups = asList(Pickup.SINGLE_COIL, Pickup.SINGLE_COIL, Pickup.SINGLE_COIL);
+            assertEquals("Strat.getPickups()", pickups, strat.getPickups());
+    
+            assertEquals("Strat.getStyle()", Style.VINTAGE, strat.getStyle());
+    
+            assertEquals("Strat.getStringGuage(\"E1\")", 0.052F, strat.getStringGuage("E1"));
+            assertEquals("Strat.getStringGuage(\"A\")", 0.042F, strat.getStringGuage("A"));
+            assertEquals("Strat.getStringGuage(\"D\")", 0.030F, strat.getStringGuage("D"));
+            assertEquals("Strat.getStringGuage(\"G\")", 0.017F, strat.getStringGuage("G"));
+            assertEquals("Strat.getStringGuage(\"B\")", 0.013F, strat.getStringGuage("B"));
+            assertEquals("Strat.getStringGuage(\"E\")", 0.010F, strat.getStringGuage("E"));
+    
+            File file = new File("/tmp/strat-certificate.txt");
+            assertEquals("Strat.getCertificateOfAuthenticity()", file,strat.getCertificateOfAuthenticity());
+    
+    
+        }
+    }
 
 <a name="CustomInjection-Runningit"></a>
 # Running it
 
-Running the example is fairly simple.  In the "custom-injection" directory
-of the [examples zip](openejb:download.html)
-, just run:
+Running the example is fairly simple.  In the "custom-injection" directory of the [examples zip](openejb:download.html), just run:
 
 > $ mvn clean install
 

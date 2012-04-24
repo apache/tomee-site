@@ -8,9 +8,7 @@ openejb deploy - OpenEJB Deploy Tool
 <a name="DeployTool-SYNOPSIS"></a>
 # SYNOPSIS
 
-
-openejb deploy [#options](#options.html)
- <file> \[<file>...\]
+    openejb deploy [#options](#options.html) <file> \[<file>...\]
 
 <a name="DeployTool-NOTE"></a>
 # NOTE
@@ -37,14 +35,12 @@ In Windows, the deploy tool can be executed as follows:
 
 In UNIX, Linux, or Mac OS X, the deploy tool can be executed as follows:
 
-`\[user@host openejb-3.0](user@host-openejb-3.0.html)
-# bin/openejb deploy --help`
+    \[user@host openejb-3.0](user@host-openejb-3.0.html)# bin/openejb deploy --help
 
 Depending on your OpenEJB version, you may need to change execution bits to
 make the scripts executable.  You can do this with the following command.
 
-`\[user@host openejb-3.0](user@host-openejb-3.0.html)
-# chmod 755 bin/openejb`
+    \[user@host openejb-3.0](user@host-openejb-3.0.html)# chmod 755 bin/openejb
 
 From here on out, it will be assumed that you know how to execute the right
 openejb script for your operating system and commands will appear in
@@ -83,26 +79,26 @@ be *Application Client* archives.
 
 
 <table>
-<tr><td>-d, --_debug_ </td><td>Increases the level of detail on validation errors and
+<tr><td>-d, --debug </td><td>Increases the level of detail on validation errors and
 deployment summary.</td></tr>
-<tr><td>--_dir_ </td><td>Sets the destination directory where the app will be deployed. 
+<tr><td>--dir </td><td>Sets the destination directory where the app will be deployed. 
 The default is <OPENEJB_HOME>/apps/ directory.	Note when changing this
 setting make sure the directory is listed in the openejb.xml via a
 <Deployments dir=""/> tag or the app will not be picked up again on
 restart.
 </tr>
-<tr><td>-_conf_ _file_ </td><td>Sets the OpenEJB configuration to the specified file.</td></tr>
-<tr><td>-h, --_help_ </td><td>Lists these options and exit.</td></tr>
-<tr><td>-o, --_offline_</td><td>Deploys the app to an offline server by copying the
+<tr><td>-conf file </td><td>Sets the OpenEJB configuration to the specified file.</td></tr>
+<tr><td>-h, --help </td><td>Lists these options and exit.</td></tr>
+<tr><td>-o, --offline</td><td>Deploys the app to an offline server by copying the
 archive into the server's apps/ directory.  The app will be deployed when
 the server is started.	The default is online.</td></tr>
-<tr><td>-q, --_quiet_	</td><td> Decreases the level of detail on validation and skips the
+<tr><td>-q, --quiet	</td><td> Decreases the level of detail on validation and skips the
 deployment summary.</td></tr>
-<tr><td>-s, --_server-url <url>_ </td><td>   Sets the url of the OpenEJB server to which
+<tr><td>-s, --server-url &lt;url&gt; </td><td>   Sets the url of the OpenEJB server to which
 the app will be deployed.  The value should be the same as the JNDI
 Provider URL used to lookup EJBs.  The default is 'ejbd://localhost:4201'.
 </td></tr>
-<tr><td>-v, --_version_  </td><td>   Prints the OpenEJB version and exits. </td></tr>
+<tr><td>-v, --version</td><td>   Prints the OpenEJB version and exits. </td></tr>
 </table>
 
 
@@ -132,8 +128,7 @@ printed on the console
 
     Application deployed successfully at {0}
     App(id=C:\samples\Calculator-new\hello-addservice.jar)
-        EjbJar(id=hello-addservice.jar,
-path=C:\samples\Calculator-new\hello-addservice.jar)
+        EjbJar(id=hello-addservice.jar, path=C:\samples\Calculator-new\hello-addservice.jar)
     	Ejb(ejb-name=HelloBean, id=HelloBean)
     	    Jndi(name=HelloBean)
     	    Jndi(name=HelloBeanLocal)

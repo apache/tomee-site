@@ -4,22 +4,21 @@ AroundInvoke for EJBs and Interceptors.
 
 For Stateful, Stateless, and MessageDriven, the syntax is as follows:
 
- - @PostConstruct <any-scope> void <method-name>() 
- - @PreDestroy <any-scope> void <method-name>() 
- - @PrePassivate <any-scope> void <method-name>() 
- - @PostActivate <any-scope> void <method-name>() 
+ - @PostConstruct &lt;any-scope&gt; void &lt;method-name&gt;() 
+ - @PreDestroy &lt;any-scope&gt; void &lt;method-name&gt;() 
+ - @PrePassivate &lt;any-scope&gt; void &lt;method-name&gt;() 
+ - @PostActivate &lt;any-scope&gt; void &lt;method-name&gt;() 
 
 For an Interceptor, the syntax includes InvocationContext as follows:
 
- - @PostConstruct <any-scope> void <method-name>(InvocationContext) 
- - @PreDestroy <any-scope> void <method-name>(InvocationContext) 
- - @PrePassivate <any-scope> void <method-name>(InvocationContext) 
- - @PostActivate <any-scope> void <method-name>(InvocationContext) 
+ - @PostConstruct &lt;any-scope&gt; void &lt;method-name&gt;(InvocationContext) 
+ - @PreDestroy &lt;any-scope&gt; void &lt;method-name&gt;(InvocationContext) 
+ - @PrePassivate &lt;any-scope&gt; void &lt;method-name&gt;(InvocationContext) 
+ - @PostActivate &lt;any-scope&gt; void &ltmethod-name&gt;(InvocationContext) 
 
 The AroundInvoke syntax for an EJB or Interceptor is the same:
 
- - @AroundInvoke <any-scope> Object <method-name>(InvocationContext) throws
-Exception
+ - @AroundInvoke &lt;any-scope&gt; Object &lt;method-name&gt;(InvocationContext) throws Exception
 
 
 <a name="Callbacks-Stateless"></a>

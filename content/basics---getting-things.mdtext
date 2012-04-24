@@ -70,9 +70,9 @@ lookups.
 See rule 2 and the above.  Just creating an EJB doesn't cause it to be
 added to java:comp/env.  If a [Container-Managed Component](container-managed-component.html)
  wants to lookup the EJB they must [Declare a Reference|Declaring References]
- to it via the @EJB annotionation or <ejb-local-ref> or <ejb-ref> in xml. 
+ to it via the @EJB annotionation or &lt;ejb-local-ref&gt; or &lt;ejb-ref&gt; in xml. 
 In Java EE 6, however, EJBs will be automatically bound to
-"java:global[/<app-name>]/<module-name>/<bean-name>[!<fully-qualified-interface-name>]"
+"java:global[/&lt;app-name&gt;]/&lt;module-name&gt;/&lt;bean-name&gt;[!&lt;fully-qualified-interface-name&gt;]"
 and can be looked up without declaring a reference first.
 
 - *_"Which InitialContextFactory do I use for java:comp/env?"_*

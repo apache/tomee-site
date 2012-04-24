@@ -27,7 +27,8 @@ common properties used by the various persistence providers out there.
       <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(foreignKeys=true,schemaAction='dropDB,add')"/>
       <!--Resolves the problem with foreign key integrity - joined entities are persisted sometimes in wrong order??? (verify it)-->
       <property name="openjpa.jdbc.SchemaFactory" value="native(foreignKeys=true)" />
-      <!--Create foreign keys--> <property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict"/>
+      <!--Create foreign keys-->
+      <property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict"/>
       <property name="openjpa.Log" value="DefaultLevel=TRACE,SQL=TRACE" />
     </properties>
 
@@ -38,7 +39,6 @@ common properties used by the various persistence providers out there.
 
     <properties>
       <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-      <property name="hibernate.transaction.manager_lookup_class"
-         value="org.apache.openejb.hibernate.TransactionManagerLookup"/>
+      <property name="hibernate.transaction.manager_lookup_class" value="org.apache.openejb.hibernate.TransactionManagerLookup"/>
     </properties>
 

@@ -18,11 +18,12 @@ Title: Apache OpenEJB 3.1.3
 * Apache Geronimo Connector & Transaction 2.1
 
 *binaries*
- * [openejb-3.1.3.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3.zip)
- ([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.md5]
+
+* [openejb-3.1.3.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3.zip)
+ ([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.asc, [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.md5)
 ) 
- * [openejb-3.1.3.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3.tar.gz)
- ([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.md5]
+* [openejb-3.1.3.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3.tar.gz)
+ ([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.md5)
 ) 
 
 <a name="ApacheOpenEJB3.1.3-ApacheOpenEJBforTomcat"></a>
@@ -34,9 +35,9 @@ Title: Apache OpenEJB 3.1.3
 * Apache Geronimo Connector & Transaction 2.1
 
 *binaries*
- * [openejb.war](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb.war)
- ([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb.war.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb.war.md5]
-) 
+
+* [openejb.war](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb.war)
+ ([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb.war.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/openejb.war.md5)) 
 
 <a name="ApacheOpenEJB3.1.3-ApacheTomtom-Pre-bundledTomcat"></a>
 #### Apache Tomtom - Pre-bundled Tomcat
@@ -48,39 +49,28 @@ Title: Apache OpenEJB 3.1.3
 * Apache Geronimo Connector & Transaction 2.1
 
 *binaries*
- * [tomtom-6.0.29.313.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/tomtom-6.0.29.313.zip)
- ([pgp|http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.md5]
-) 
- * [tomtom-6.0.29.313.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/tomtom-6.0.29.313.tar.gz)
 
-([pgp|http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.md5]
+* [tomtom-6.0.29.313.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/tomtom-6.0.29.313.zip)
+ ([pgp](http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.md5)
+) 
+* [tomtom-6.0.29.313.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/tomtom-6.0.29.313.tar.gz) ([pgp](http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.md5)
 ) 
 
 
 <a name="ApacheOpenEJB3.1.3-EJB3.1andotherexamples(sourceincluded)"></a>
 #### EJB 3.1 and other examples (source included) 
- * [openejb-examples-3.1.3.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-examples-3.1.3.tar.gz)
 
-([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.md5]
-) 
- * [openejb-examples-3.1.3.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-examples-3.1.3.zip)
-
-([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.md5]
-) 
+* [openejb-examples-3.1.3.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-examples-3.1.3.tar.gz)([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.md5)
+* [openejb-examples-3.1.3.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-examples-3.1.3.zip) ([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.md5) 
 
 <a name="ApacheOpenEJB3.1.3-SourceCode"></a>
 #### Source Code 
- * [openejb-3.1.3-src.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3-src.zip)
- ([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.md5]
-) 
- * [openejb-3.1.3-src.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3-src.tar.gz)
-
-([pgp|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.md5]
-) 
+* [openejb-3.1.3-src.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3-src.zip) ([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.md5)
+* [openejb-3.1.3-src.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.3/openejb-3.1.3-src.tar.gz) ([pgp](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.asc), [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.md5)
 
 <a name="ApacheOpenEJB3.1.3-ReleaseNotes"></a>
 #### Release Notes
- * [RELEASE-NOTES.txt](http://www.apache.org/dist/openejb/3.1.3/RELEASE-NOTES.txt)
+* [RELEASE-NOTES.txt](http://www.apache.org/dist/openejb/3.1.3/RELEASE-NOTES.txt)
 
 <a name="ApacheOpenEJB3.1.3-TestedOn"></a>
 #  Tested On

@@ -44,14 +44,10 @@ the class files of an application you wish to test could be included in any
 of the following values to the "openejb.deployments.classpath.include"
 property:
     
-      - "file:///Users/dblevins/work/swizzle/swizzle-stream/target/classes/" 
-_(an absolute path)_
-      - "file:///Users/dblevins/work/swizzle/.*"				 
-_(relative)_
-      - ".\*swizzle-stream.\*"						   
-_(very relative)_
-      - ".\*(swizzle-stream|swizzle-jira|acme-rocket-app).\*"		   
-_(including several paths)_
+* "file:///Users/dblevins/work/swizzle/swizzle-stream/target/classes/" _(an absolute path)
+* "file:///Users/dblevins/work/swizzle/.*" _(relative)_
+* ".\*swizzle-stream.\*" _(very relative)_
+* ".\*(swizzle-stream|swizzle-jira|acme-rocket-app).\*" _(including several paths)_
     
 Note the filtering is done on URLs in the classpath, so forward slashes
 should always be used even on OSs using backslash ("\").
@@ -60,8 +56,8 @@ There is an *openejb.deployments.classpath.exclude* property if you wish to
 work in the opposite direction.  The default values for both properties are
 as follows:
     
-      openejb.deployments.classpath.include=""  _//include nothing_
-      openejb.deployments.classpath.exclude=".*"  _//exclude everything_
+      openejb.deployments.classpath.include=""  //include nothing
+      openejb.deployments.classpath.exclude=".*"  //exclude everything
     
 The exclude and the include is applied separately and the results of each
 are combined together to create the list of paths OpenEJB will scrape for

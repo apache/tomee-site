@@ -42,7 +42,7 @@ like so:
 
 
     Properties p = new Properties();
-    p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
+    p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.core.LocalInitialContextFactory");
     
     p.put("log4j.rootLogger", "fatal,C");
     p.put("log4j.category.OpenEJB", "warn");

@@ -4,7 +4,8 @@ deployment descriptors to use for a given environment.	This is focused
 mostly on testing where it is often desirable to use a slightly different
 configuration for a set of tests or even a specific test.
 
-{note:title=When nothing else does the trick}
+# When nothing else does the trick
+
 Note that this approach was added as a catch-all for when one of the
 simpler overriding techniques will not work.  For the common case of
 needing to tweak your persistence.xml, see the [Configuring PersistenceUnits in Tests](configuring-persistenceunits-in-tests.html)
@@ -15,7 +16,6 @@ descriptors, one for production and one for testing.  We aggressively add
 features based on user feedback and questions.	If you are looking for a
 way to solve a problem without duplicating entire descriptors, please let
 us know.  You should never have to go the long way to do something simple.
-{note}
 
 <a name="AlternateDescriptors-openejb.altdd.prefix"></a>
 # openejb.altdd.prefix
