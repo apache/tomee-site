@@ -1,4 +1,5 @@
 Title: Securing a Web Service
+
 Web Services are a very common way to implement a Service Oriented
 Architecture (SOA).
  
@@ -17,21 +18,22 @@ Oasis's WS-Security specification).
 OpenEJB provides two mechanisms to secure webservices - HTTP authentication
 and WS-Security: 
 
-* HTTPS : works at the transport level, enables a point-to-point security.
-It has no impact on developments. It allows you to:
-1. # To secure data over the network with data encrypted during transport
-1. # To identify the end user with SSLv3 with client certificate required
-1. # OpenEJB supports BASIC authentication over HTTP(S), using the configured
+HTTPS : works at the transport level, enables a point-to-point security.
+It has no impact on developments. It allows you :
+
+1. To secure data over the network with data encrypted during transport
+2. To identify the end user with SSLv3 with client certificate required
+3. OpenEJB supports BASIC authentication over HTTP(S), using the configured
 JAAS provider. This will honour any EJB security roles you have setup using
 @RolesAllowed. See the webservice-security example in the OpenEJB codebase [http://svn.apache.org/repos/asf/openejb/trunk/openejb3/examples/](http://svn.apache.org/repos/asf/openejb/trunk/openejb3/examples/)
 
-{warning:title=Warning}
+*Warning:
 Currently only BASIC is the only HTTP authentication mechanism available
 when running OpenEJB standalone or in a unit test, but we hope to support
-DIGEST in the future.
-{warning}
+DIGEST in the future.*
 
-* WS-Security: works at the message (SOAP) level, enables a higher-level
+
+WS-Security: works at the message (SOAP) level, enables a higher-level
 security, 
 Nowadays, SOAP implementations use other protocols than just HTTP so we
 need to apply security to the message itself and not only at the transport
@@ -42,11 +44,14 @@ The Oasis organization has defined a standard (part of well-known WS-*)
 which aims at providing high level features in the context of web services:
 WS-Security. It provides a standard way to secure your services above and
 beyond transport level protocols such as HTTPS. WS-Security relies on other
-standards like XML-Encryption. Main features are:
-* Timestamp a message,
-* Pass credentials (plain text and/or ciphered) between services,
-* Sign messages,
-* Encrypt messages or part of messages.
+standards like XML-Encryption.
+
+Main features are:
+
+1. Timestamp a message,
+2. Pass credentials (plain text and/or ciphered) between services,
+3. Sign messages,
+4. Encrypt messages or part of messages.
 
 Again, JAX-WS doesn't standardize security for web services. OpenEJB
 provides a common and highly configurable way to configure WS-Security in
@@ -55,12 +60,11 @@ OpenEJB integrates Apache WSS4J as the WS-Security implementation. To use
 the integration, you will need to configure WSS4J using the
 *openejb-jar.xml*.
  
-{warning:title=Warning}
+*Warning:
 the proposed WS-Security integration is only used at server side.
 Currently, WS-Security client configuration is not managed by OpenEJB. You
 can use the JAX-WS API to create a stub and then rely on the implementation
-to set up WS-Security properties. 
-{warning} 
+to set up WS-Security properties.* 
 
 This configuration file lets you set up incoming and outgoing security
 parameters. Incoming and outgoing configuration is independent so that you
@@ -77,19 +81,19 @@ with the overall structure of *openejb.xml*. The format for properties is
 the same as if you would use a common java property file.
 
 
-    [...]
+    
     <properties>
       wss4j.in.action = UsernameToken
       wss4j.in.passwordType = PasswordDigest
       wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
     </properties>
-    [...]
+    
 
 
 In order to recover WSS4J properties both for input and output, we use
 naming conventions.
 Each property is made of 
-> *<wss4j>.<in|out>.<wss4j property name>=<wss4j property value>*
+   <wss4j>.<in|out>.<wss4j property name>=<wss4j property value>
 
 For example : *wss4j.in.action = UsernameToken*
 
