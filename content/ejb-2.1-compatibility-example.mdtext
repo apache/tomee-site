@@ -21,8 +21,7 @@ backwards compatibility with older clients or to maintain an older EJB 2.x
 API still being used.  The advantage is that you can turn EJB 2.1 beans
 into EJB 3.0 beans without having to update any code consuming that EJB.
 
-Source available in [svn](http://svn.apache.org/repos/asf/openejb/trunk/openejb/examples/component-interfaces) or [git](https://github.com/apache/openejb/tree/trunk/openejb/examples/component-interfaces). Open a [JIRA](https://issues.apache.org/jira/browse/TOMEE) with patch or pull request*
-
+Source available in [svn](http://svn.apache.org/repos/asf/openejb/trunk/openejb/examples/component-interfaces) or [git](https://github.com/apache/openejb/tree/trunk/openejb/examples/component-interfaces).
 
 ## FriendlyPerson
 
