@@ -1,8 +1,5 @@
 Title: Transaction Annotations
 
-
-# Transaction Annotations
-
 _Also see [Testing Transactions](testing-transactions-example.html)
  for an example of how to use and test EJB transaction attributes_
 
