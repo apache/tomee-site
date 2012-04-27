@@ -267,7 +267,7 @@ other beans.
 ### Pragmatic settings    
 
 A more middle ground setting such as
-"{deploymentId}\{interfaceType.annotationName}" would guarantee that at
+"{deploymentId}/{interfaceType.annotationName}" would guarantee that at
 least one proxy of each interface type is bound to JNDI.  If your bean had
 a legacy EJBObject interface, three business remote interfaces, and two
 business local interfaces, this pattern would result in *three* proxies
@@ -277,11 +277,11 @@ the two business local interfaces.
 
 Similarly pragmatic settings would be    
 <pre>
- - {moduleId}/\{ejbClass}/\{interfaceType.annotationName}    
- - {ejbClass}/\{interfaceType.xmlName}    
- - {ejbClass.simpleName}/\{interfaceType.xmlNameCc}    
- - {interfaceType}/\{ejbName}    
- - {interfaceType}/\{ejbClass}    
+ - {moduleId}/{ejbClass}/{interfaceType.annotationName}    
+ - {ejbClass}/{interfaceType.xmlName}    
+ - {ejbClass.simpleName}/{interfaceType.xmlNameCc}    
+ - {interfaceType}/{ejbName}    
+ - {interfaceType}/{ejbClass}    
 </pre>
 <a name="JNDINames-Optimisticsettings"></a>
 ### Optimistic settings
@@ -306,8 +306,8 @@ Similarly optimistic settings would be:
  - {ejbName}    
  - {ejbClass}    
  - {ejbClass.simpleName}    
- - {moduleId}/\{ejbClass.simpleName}    
- - {moduleId}/\{ejbName}    
+ - {moduleId}/{ejbClass.simpleName}    
+ - {moduleId}/{ejbName}    
 </pre>
 <a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thesimplepart)"></a>
 ### Advanced Details on EJB 3.0 Business Proxies (the simple part)
