@@ -246,6 +246,7 @@ your bean had a legacy EJBObject interface, three business remote
 interfaces, and two business local interfaces, this pattern would result in
 *six* proxies bound into JNDI.
 
+<pre>
 {deploymentId}/{interfaceClass.simpleName}    
 {moduleId}/{ejbName}/{interfaceClass}    
 {ejbName}/{interfaceClass}    
@@ -254,11 +255,13 @@ interfaces, and two business local interfaces, this pattern would result in
 {ejbClass}/{interfaceClass.simpleName}    
 {ejbClass.simpleName}/{interfaceClass.simpleName}    
 {interfaceClass}/{ejbName}    
+</pre>
 
 Bordeline optimistic:    
+<pre>
  - {moduleId}/{interfaceClass}    
  - {interfaceClass}    
-
+</pre>
 The above two settings would work if you the interface wasn't shared by
 other beans.
 
@@ -275,12 +278,13 @@ implementing all three business remote interfaces; one proxy implementing
 the two business local interfaces.
 
 Similarly pragmatic settings would be    
+<pre>
  - {moduleId}/\{ejbClass}/\{interfaceType.annotationName}    
  - {ejbClass}/\{interfaceType.xmlName}    
  - {ejbClass.simpleName}/\{interfaceType.xmlNameCc}    
  - {interfaceType}/\{ejbName}    
  - {interfaceType}/\{ejbClass}    
-
+</pre>
 <a name="JNDINames-Optimisticsettings"></a>
 ### Optimistic settings
 
@@ -300,12 +304,13 @@ cannot be bound to JNDI, tell you which ejb is using that name, and
 continue loading your app.
 
 Similarly optimistic settings would be:    
+<pre>
  - {ejbName}    
  - {ejbClass}    
  - {ejbClass.simpleName}    
  - {moduleId}/\{ejbClass.simpleName}    
  - {moduleId}/\{ejbName}    
-
+</pre>
 <a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thesimplepart)"></a>
 ### Advanced Details on EJB 3.0 Business Proxies (the simple part)
 
