@@ -58,14 +58,12 @@ are also started up and adds up to the start time*
 
     6. In the Servers tab, double click on your server to open up the "Overview" page. Click on the "modules" tab 
 
-    7. Click "Add External Web Module". In the "Add Web Module" dialog, for document base, browse to <tomeeInstallDir>/webapps/openejb. Set Path: to "/openejb". Uncheck "Auto reloading enabled". Click OK. 
+    7. Click "Add External Web Module". In the "Add Web Module" dialog, for document base, browse to <tomeeInstallDir>/webapps/tomee. Set Path: to "/tomee". Uncheck "Auto reloading enabled". Click OK. 
 
     8. Click on the <your web app> module and click the "Edit..." button. Uncheck the "Auto reloading enabled" checkbox and click OK. Then click the save button in eclipse so the server configuration gets saved. 
 
-    9. Copy the openejb.xml and logging.properties files from the <tomeeInstallDir>\conf folder into the folder created in eclipse for your server configuration files (eg. <eclipse_workdir>\Servers\apache-tomee-webprofile-1.0.0-beta-2 at localhost-config). 
+    9. In eclipse, click on your webapp project, then select "Project->clean". Hit OK. This will cause eclipse to clean and rebuild 
 
-    10. In eclipse, click on your webapp project, then select "Project->clean". Hit OK. This will cause eclipse to clean and rebuild the leaguemanager application. 
+    10. In the Servers tab, right click on the server and select "Publish". 
 
-    11. In the Servers tab, right click on the server and select "Publish". 
-
-    13. Start the server.
+    11. Start the server.
