@@ -246,14 +246,14 @@ your bean had a legacy EJBObject interface, three business remote
 interfaces, and two business local interfaces, this pattern would result in
 *six* proxies bound into JNDI.
 
-<pre>{deploymentId}/{interfaceClass.simpleName}
+{deploymentId}/{interfaceClass.simpleName}
 {moduleId}/{ejbName}/{interfaceClass}
 {ejbName}/{interfaceClass}
 {moduleId}/{ejbClass}/{interfaceClass}
 {ejbClass}/{interfaceClass}
 {ejbClass}/{interfaceClass.simpleName}
 {ejbClass.simpleName}/{interfaceClass.simpleName}
-{interfaceClass}/{ejbName}</pre>
+{interfaceClass}/{ejbName}
 
 Bordeline optimistic:    
 <pre>
