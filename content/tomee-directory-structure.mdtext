@@ -27,6 +27,7 @@ The changes are as described below:
 
 (Say you have unzipped in a directory 'tomee')
 
+<pre>
 ####tomee/webapps
  Works the same way as it does for Tomcat. Drop your directories/wars in here! 
 
@@ -39,18 +40,19 @@ The added webapp which brings the “EE” (Read, place where all the magic happ
 
 ####tomee/conf 
 
-Added openejb.xml 
+Added tomee.xml 
 
 Server.xml As in tomcat with one extra listener. (Can configure ports, hosts, engines, threadpools etc)
 
-####tomee/logs
+####logs
 
-Added openejb.log
+Merged with catalina logs
 
 ####tomee/webapps/openejb/lib 
 
 All the new lib jars provided by the server.
 
-####tomee/conf/openejb.xml
+####tomee/conf/tomee.xml
 
 This is where most TomEE configuration happens – This is where global resources are defined.
+</pre>
