@@ -243,9 +243,8 @@ A very conservative setting such as
 
 would guarantee that each and every single interface is bound to JNDI.	If
 your bean had a legacy EJBObject interface, three business remote
-interfaces, and two business local interfaces, this pattern would result in
-*six* proxies bound into JNDI.
-
+interfaces, and two business local interfaces, this pattern would result in    
+*six* proxies bound into JNDI.        
  - {deploymentId}/{interfaceClass.simpleName}    
  - {moduleId}/{ejbName}/{interfaceClass}    
  - {ejbName}/{interfaceClass}    
