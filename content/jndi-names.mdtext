@@ -237,34 +237,36 @@ or
 <a name="JNDINames-Conservativesettings"></a>
 ### Conservative settings
 
-A very conservative setting such as "_\{deploymentId}/\{interfaceClass}_"
+A very conservative setting such as    
+
+ "{deploymentId}/{interfaceClass}"    
+
 would guarantee that each and every single interface is bound to JNDI.	If
 your bean had a legacy EJBObject interface, three business remote
 interfaces, and two business local interfaces, this pattern would result in
 *six* proxies bound into JNDI.
 
-Similarly conservative settings would be:
- - _\{deploymentId}/\{interfaceClass.simpleName}_
- - _\{moduleId}/\{ejbName}/\{interfaceClass}_
- - _\{ejbName}/\{interfaceClass}_
- - _\{moduleId}/\{ejbClass}/\{interfaceClass}_
- - _\{ejbClass}/\{interfaceClass}_
- - _\{ejbClass}/\{interfaceClass.simpleName}_
- - _\{ejbClass.simpleName}/\{interfaceClass.simpleName}_
- - _\{interfaceClass}/\{ejbName}_
+{deploymentId}/{interfaceClass.simpleName}    
+{moduleId}/{ejbName}/{interfaceClass}    
+{ejbName}/{interfaceClass}    
+{moduleId}/{ejbClass}/{interfaceClass}    
+{ejbClass}/{interfaceClass}    
+{ejbClass}/{interfaceClass.simpleName}    
+{ejbClass.simpleName}/{interfaceClass.simpleName}    
+{interfaceClass}/{ejbName}    
 
-Bordeline optimistic:
- - _\{moduleId}/\{interfaceClass}_
- - _\{interfaceClass}_
+Bordeline optimistic:    
+ - {moduleId}/{interfaceClass}    
+ - {interfaceClass}    
 
 The above two settings would work if you the interface wasn't shared by
 other beans.
 
 <a name="JNDINames-Pragmaticsettings"></a>
-### Pragmatic settings
+### Pragmatic settings    
 
 A more middle ground setting such as
-"_\{deploymentId}\{interfaceType.annotationName}_" would guarantee that at
+"{deploymentId}\{interfaceType.annotationName}" would guarantee that at
 least one proxy of each interface type is bound to JNDI.  If your bean had
 a legacy EJBObject interface, three business remote interfaces, and two
 business local interfaces, this pattern would result in *three* proxies
@@ -272,17 +274,17 @@ bound into JNDI: one proxy dedicated to your EJBObject interface; one proxy
 implementing all three business remote interfaces; one proxy implementing
 the two business local interfaces.
 
-Similarly pragmatic settings would be:
- - _\{moduleId}/\{ejbClass}/\{interfaceType.annotationName}_
- - _\{ejbClass}/\{interfaceType.xmlName}_
- - _\{ejbClass.simpleName}/\{interfaceType.xmlNameCc}_
- - _\{interfaceType}/\{ejbName}_
- - _\{interfaceType}/\{ejbClass}_
+Similarly pragmatic settings would be    
+ - {moduleId}/\{ejbClass}/\{interfaceType.annotationName}    
+ - {ejbClass}/\{interfaceType.xmlName}    
+ - {ejbClass.simpleName}/\{interfaceType.xmlNameCc}    
+ - {interfaceType}/\{ejbName}    
+ - {interfaceType}/\{ejbClass}    
 
 <a name="JNDINames-Optimisticsettings"></a>
 ### Optimistic settings
 
-A very optimistic setting such as "_\{deploymentId}_" would guarantee only
+A very optimistic setting such as "{deploymentId}" would guarantee only
 one proxy for the bean will be bound to JNDI.  This would be fine if you
 knew you only had one type of interface in your beans.	For example, only
 business remote interfaces, or only business local interfaces, or only an
@@ -297,12 +299,12 @@ property is set to false, we will simply log an error that the second proxy
 cannot be bound to JNDI, tell you which ejb is using that name, and
 continue loading your app.
 
-Similarly optimistic settings would be:
- - _\{ejbName}_
- - _\{ejbClass}_
- - _\{ejbClass.simpleName}_
- - _\{moduleId}/\{ejbClass.simpleName}_
- - _\{moduleId}/\{ejbName}_
+Similarly optimistic settings would be:    
+ - {ejbName}    
+ - {ejbClass}    
+ - {ejbClass.simpleName}    
+ - {moduleId}/\{ejbClass.simpleName}    
+ - {moduleId}/\{ejbName}    
 
 <a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thesimplepart)"></a>
 ### Advanced Details on EJB 3.0 Business Proxies (the simple part)
@@ -362,4 +364,3 @@ will result in an UndeclaredThrowableException thrown by the VM.
 The only way to guarantee the proxy has the 'doIt() throws RemoteException
 {}' method of InterfaceB is to cut out InterfaceA when we create the proxy
 dedicated to InterfaceB.
-
