@@ -1,8 +1,7 @@
 Title: Simple Stateless Example
+
 <a name="SimpleStatelessExample-Overview"></a>
 # Overview
-{span:style=float: right; margin-left: 20px;}
-{html}
 
 <object width="400" height="250"><param name="movie"
 value="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US"></param><param
@@ -12,21 +11,17 @@ src="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US"
 type="application/x-shockwave-flash" allowscriptaccess="always"
 allowfullscreen="true" width="400" height="250"></embed></object>
 
-{html}
-{span}
-{div}
-
 
 This example shows how to create a Stateless session EJB using annotations.
  As stated in the "JSR 220: Enterprise JavaBeansTM,Version 3.0 - EJB Core
 Contracts and Requirements",
 
-{panel}
+
 "Stateless session beans are session beans whose instances have no
 conversational state. This means that all bean instances are equivalent
 when they are not involved in servicing a client-invoked method. The term
 'stateless' signifies that an instance has no state for a specific client."
-{panel}
+
 
 What this means is quite simply that stateless beans are *shared*.  They do
 in fact have state as you can assign values to the variables, etc. in the
@@ -44,11 +39,7 @@ annotated with the @Remote or @Local annotation the stateless session bean
 implementation, a plain-old-java-object which implements the remote or the
 local business interface and is annotated with the @Stateless annotation
 
-_This example is the "simple-stateless" example located in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
 
-{div}
-{div:style=clear:both;}{div}
 
 <a name="SimpleStatelessExample-TheCode"></a>
 # The Code
@@ -64,8 +55,6 @@ minimum of one business interface is required.
 <a name="SimpleStatelessExample-Bean"></a>
 ## Bean
 
-{snippet:id=code|url=openejb3/examples/simple-stateless/src/main/java/org/superbiz/calculator/CalculatorImpl.java|lang=java}
-
 In EJB 3.0 session beans do not need to implement the javax.ejb.SessionBean
 interface.  You can simply annotate it as @Stateless if you want it to be a
 stateless session bean.
@@ -78,8 +67,6 @@ business interfaces is standard practice for EJB 3.0.
 
 <a name="SimpleStatelessExample-Localbusinessinterface"></a>
 ## Local business interface
-
-{snippet:id=code|url=openejb3/examples/simple-stateless/src/main/java/org/superbiz/calculator/CalculatorLocal.java|lang=java}
 
 Local interfaces in EJB are *pass-by-reference* interfaces.  Meaning that
 *normal java semantics* are used for passing arguments, return values and
@@ -102,8 +89,6 @@ Interface.
 
 <a name="SimpleStatelessExample-Remotebusinessinterface"></a>
 ## Remote business interface
-
-{snippet:id=code|url=openejb3/examples/simple-stateless/src/main/java/org/superbiz/calculator/CalculatorRemote.java|lang=java}
 
 Remote interfaces are *pass-by-value* interfaces.  Meaning that all method
 parameters, return values, and exceptions are *serialized* on every call. 
@@ -136,19 +121,12 @@ and then write our test methods
 <a name="SimpleStatelessExample-setUp"></a>
 ## setUp
 
-{snippet:id=setup|url=openejb3/examples/simple-stateless/src/test/java/org/superbiz/calculator/CalculatorTest.java|lang=java}
-
 <a name="SimpleStatelessExample-Testthelocalbusinessinterface"></a>
 ## Test the local business interface
-
-{snippet:id=local|url=openejb3/examples/simple-stateless/src/test/java/org/superbiz/calculator/CalculatorTest.java|lang=java}
 
 <a name="SimpleStatelessExample-Testtheremotebusinessinterface"></a>
 ## Test the remote business interface
 
-{snippet:id=remote|url=openejb3/examples/simple-stateless/src/test/java/org/superbiz/calculator/CalculatorTest.java|lang=java}
-
-{info:title=JNDI Names}
 Note that JNDI names for Java SE clients are not standardized by the EJB
 spec.  This is unfortunate and something being addressed in EJB 3.1.  The
 default schema that OpenEJB uses is ejbName + interfaceType (i.e. Local,
@@ -158,7 +136,149 @@ default to be absolutely [anything you want](jndi-names.html)
  including interface class name, ejb class name, and more.
 {info}
 
+## CalculatorBean
 
+    package org.superbiz.stateless.basic;
+
+    import javax.ejb.Stateless;
+
+    @Stateless
+    public class CalculatorBean {
+
+        public int add(int a, int b) {
+            return a + b;
+        }
+
+        public int subtract(int a, int b) {
+            return a - b;
+        }
+
+        public int multiply(int a, int b) {
+            return a * b;
+        }
+
+        public int divide(int a, int b) {
+            return a / b;
+        }
+
+        public int remainder(int a, int b) {
+            return a % b;
+        }
+    }
+
+## CalculatorTest
+
+Our `CalculatorBean` can be easily tested using the `EJBContainer` API in EJB 3.1
+
+    package org.superbiz.stateless.basic;
+
+    import junit.framework.TestCase;
+
+    import javax.ejb.embeddable.EJBContainer;
+
+    public class CalculatorTest extends TestCase {
+
+        private CalculatorBean calculator;
+
+        /**
+         * Bootstrap the Embedded EJB Container
+         *
+         * @throws Exception
+         */
+        protected void setUp() throws Exception {
+
+            EJBContainer ejbContainer = EJBContainer.createEJBContainer();
+
+            Object object = ejbContainer.getContext().lookup("java:global/simple-stateless/CalculatorBean");
+
+            assertTrue(object instanceof CalculatorBean);
+
+            calculator = (CalculatorBean) object;
+        }
+
+        /**
+         * Test Add method
+         */
+        public void testAdd() {
+
+            assertEquals(10, calculator.add(4, 6));
+        }
+
+        /**
+         * Test Subtract method
+         */
+        public void testSubtract() {
+
+            assertEquals(-2, calculator.subtract(4, 6));
+        }
+
+        /**
+         * Test Multiply method
+         */
+        public void testMultiply() {
+
+            assertEquals(24, calculator.multiply(4, 6));
+        }
+
+        /**
+         * Test Divide method
+         */
+        public void testDivide() {
+
+            assertEquals(2, calculator.divide(12, 6));
+        }
+
+        /**
+         * Test Remainder method
+         */
+        public void testRemainder() {
+
+            assertEquals(4, calculator.remainder(46, 6));
+        }
+    }
+
+# Running
+
+Running the example should generate output similar to the following
+
+    -------------------------------------------------------
+     T E S T S
+    -------------------------------------------------------
+    Running org.superbiz.stateless.basic.CalculatorTest
+    Apache OpenEJB 4.0.0-beta-1    build: 20111002-04:06
+    http://openejb.apache.org/
+    INFO - openejb.home = /Users/dblevins/examples/simple-stateless
+    INFO - openejb.base = /Users/dblevins/examples/simple-stateless
+    INFO - Using 'javax.ejb.embeddable.EJBContainer=true'
+    INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)
+    INFO - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+    INFO - Found EjbModule in classpath: /Users/dblevins/examples/simple-stateless/target/classes
+    INFO - Beginning load: /Users/dblevins/examples/simple-stateless/target/classes
+    INFO - Configuring enterprise application: /Users/dblevins/examples/simple-stateless
+    INFO - Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+    INFO - Auto-creating a container for bean CalculatorBean: Container(type=STATELESS, id=Default Stateless Container)
+    INFO - Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+    INFO - Auto-creating a container for bean org.superbiz.stateless.basic.CalculatorTest: Container(type=MANAGED, id=Default Managed Container)
+    INFO - Enterprise application "/Users/dblevins/examples/simple-stateless" loaded.
+    INFO - Assembling app: /Users/dblevins/examples/simple-stateless
+    INFO - Jndi(name="java:global/simple-stateless/CalculatorBean!org.superbiz.stateless.basic.CalculatorBean")
+    INFO - Jndi(name="java:global/simple-stateless/CalculatorBean")
+    INFO - Jndi(name="java:global/EjbModule181871104/org.superbiz.stateless.basic.CalculatorTest!org.superbiz.stateless.basic.CalculatorTest")
+    INFO - Jndi(name="java:global/EjbModule181871104/org.superbiz.stateless.basic.CalculatorTest")
+    INFO - Created Ejb(deployment-id=CalculatorBean, ejb-name=CalculatorBean, container=Default Stateless Container)
+    INFO - Created Ejb(deployment-id=org.superbiz.stateless.basic.CalculatorTest, ejb-name=org.superbiz.stateless.basic.CalculatorTest, container=Default Managed Container)
+    INFO - Started Ejb(deployment-id=CalculatorBean, ejb-name=CalculatorBean, container=Default Stateless Container)
+    INFO - Started Ejb(deployment-id=org.superbiz.stateless.basic.CalculatorTest, ejb-name=org.superbiz.stateless.basic.CalculatorTest, container=Default Managed Container)
+    INFO - Deployed Application(path=/Users/dblevins/examples/simple-stateless)
+    INFO - EJBContainer already initialized.  Call ejbContainer.close() to allow reinitialization
+    INFO - EJBContainer already initialized.  Call ejbContainer.close() to allow reinitialization
+    INFO - EJBContainer already initialized.  Call ejbContainer.close() to allow reinitialization
+    INFO - EJBContainer already initialized.  Call ejbContainer.close() to allow reinitialization
+    Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.068 sec
+
+    Results :
+
+    Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 <a name="SimpleStatelessExample-Running"></a>
 #  Running
 
@@ -211,5 +331,4 @@ Application(path=/Users/dblevins/work/openejb-3.0/examples/simple-stateless/targ
     Results :
     
     Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
-
 
