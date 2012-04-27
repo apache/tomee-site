@@ -38,7 +38,8 @@ The Tomcat 7 server adaptor would do just fine. But remember this little trick:
 
     7. Choose the 'Use Tomcat installation' option as shown below:
     
-    <img src="http://people.apache.org/~tveronezi/tomee_eclipse_trick.png" height="90%" width="80%">
+    
+<img src="http://people.apache.org/~tveronezi/tomee_eclipse_trick.png" height="90%" width="80%">
 
 *Though this ensures that the tomee web-app is running, the other apps in your <tomcat>/webapps
 are also started up and adds up to the start time*
