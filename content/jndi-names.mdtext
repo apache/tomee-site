@@ -305,7 +305,7 @@ Similarly optimistic settings would be:
  - _\{moduleId}/\{ejbName}_
 
 <a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thesimplepart)"></a>
-# Advanced Details on EJB 3.0 Business Proxies (the simple part)
+### Advanced Details on EJB 3.0 Business Proxies (the simple part)
 
 If you implement your business interfaces, your life is simple as your
 proxies will also implement your business interfaces of the same type. 
@@ -315,17 +315,16 @@ OpenEJB creates for a business remote interface will also implement your
 other business remote interfaces.
 
 <a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thecomplicatedpart)"></a>
-# Advanced Details on EJB 3.0 Business Proxies (the complicated part)
+### Advanced Details on EJB 3.0 Business Proxies (the complicated part)
 
-{info:Who should read?}
-Read this section of either of these two apply to you:
- - You do not implement your business interfaces in your bean class
- - One or more of your business remote interfaces extend from
-javax.rmi.Remote
+*Who should read?*    
+Read this section of either of these two apply to you:    
+ - You do not implement your business interfaces in your bean class    
+ - One or more of your business remote interfaces extend from javax.rmi.Remote
 
 If neither of these two items describe your apps, then there is no need to
 read further.  Go have fun.
-{info}
+
 <a name="JNDINames-Notimplementingbusinessinterfaces"></a>
 ### Not implementing business interfaces
 
@@ -343,13 +342,13 @@ are thrown from javax.rmi.Remote proxies as java.rmi.RemoteException which
 is not a runtime exception and must be throwable via the proxy as a checked
 exception. The issue is that conflicting throws clauses are actually
 removed for two interfaces sharing the same method signature.  For example
-two methods such as these:
- - InterfaceA: void doIt() throws Foo;
- - InterfaceB: void doIt() throws RemoteException;
+two methods such as these:    
+ - InterfaceA: void doIt() throws Foo;   
+ - InterfaceB: void doIt() throws RemoteException;    
 
 can be implemented by trimming out the conflicting throws clauses as
-follows:
-  - Implementation: void doIt(){}
+follows:    
+  - Implementation: void doIt(){}    
 
 This is fine for a bean class as it does not need to throw the RMI required
 javax.rmi.RemoteException. However if we create a proxy from these two
@@ -363,4 +362,4 @@ will result in an UndeclaredThrowableException thrown by the VM.
 The only way to guarantee the proxy has the 'doIt() throws RemoteException
 {}' method of InterfaceB is to cut out InterfaceA when we create the proxy
 dedicated to InterfaceB.
-{excerpt}
+
