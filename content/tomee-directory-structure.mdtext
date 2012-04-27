@@ -20,16 +20,21 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 
 TomEE directory layout is the same as that of Tomcat, with a few changes as described below.
  
-#### tomeeInstallDir/webapps
-Works the same way as it does for Tomcat. Drop your directories/wars in here! 
-####tomeeInstallDir/webapps/tomee
-The added webapp which brings the “EE” (Read, place where all the magic happens)
-####tomeeInstallDir/bin
- (Untouched)
-####tomeeInstallDir/conf 
-Added tomee.xml 
-Server.xml As in tomcat with one extra listener. (Can configure ports, hosts, engines, threadpools etc)
-####tomeeInstallDir/webapps/tomee/lib 
-All the new lib jars provided by the server.
-####tomeeInstallDir/conf/tomee.xml
-This is where most TomEE configuration happens – This is where global resources are defined.
+*tomeeInstallDir/webapps* :    
+Works the same way as it does for Tomcat. Drop your directories/wars in here!
+     
+*tomeeInstallDir/webapps/tomee*:    
+The added webapp which brings the “EE” (Read, place where all the magic happens)   
+ 
+*tomeeInstallDir/bin*:    
+ (Untouched)    
+
+*tomeeInstallDir/conf*:    
+Added tomee.xml     
+
+Server.xml As in tomcat with one extra listener. (Can configure ports, hosts, engines, threadpools etc)    
+*tomeeInstallDir/webapps/tomee/lib*    
+All the new lib jars provided by the server.   
+ 
+*tomeeInstallDir/conf/tomee.xml*    
+This is where most TomEE configuration happens – This is where global resources are defined.    
