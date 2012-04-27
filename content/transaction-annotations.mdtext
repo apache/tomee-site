@@ -1,8 +1,9 @@
 Title: Transaction Annotations
-<a name="TransactionAnnotations-TransactionAnnotations"></a>
+
+
 # Transaction Annotations
 
-_also see [Testing Transactions](testing-transactions-example.html)
+_Also see [Testing Transactions](testing-transactions-example.html)
  for an example of how to use and test EJB transaction attributes_
 
 The *javax.ejb.TransactionAttribute* annotation (@TransactionAttribute) can
@@ -199,8 +200,7 @@ The following usages of @TransactionAttribute have no effect.
     
         @AroundInvoke
         @TransactionAttribute(TransactionAttributeType.NEVER)
-        public Object invoke(InvocationContext invocationContext) throws
-Exception {
+        public Object invoke(InvocationContext invocationContext) throws Exception {
     	return invocationContext.proceed();
         }
     
