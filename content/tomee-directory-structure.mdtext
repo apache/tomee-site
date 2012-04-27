@@ -27,7 +27,7 @@ The changes are as described below:
 
 (Say you have unzipped in a directory 'tomee')
 
-<pre>
+<span class="label label-info">
 ####tomee/webapps
  Works the same way as it does for Tomcat. Drop your directories/wars in here! 
 
@@ -55,4 +55,4 @@ All the new lib jars provided by the server.
 ####tomee/conf/tomee.xml
 
 This is where most TomEE configuration happens – This is where global resources are defined.
-</pre>
+</span>
