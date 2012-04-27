@@ -1,4 +1,4 @@
-Title:
+Title: 
 Notice:    Licensed to the Apache Software Foundation (ASF) under one
            or more contributor license agreements.  See the NOTICE file
            distributed with this work for additional information
@@ -22,6 +22,49 @@ Using TomEE in eclipse is pretty simple. There are no special plugins required.
 
 The Tomcat 7 server adaptor would do just fine. But remember this little trick:
 
-Double click on your server adaptor to open up the configuration page and choose the highlighted option:
+### Method1:
 
-![Use Tomcat Installation](http://people.apache.org/~tveronezi/tomee_eclipse_trick.png)
+    1. Download and install an Apache TomEE Web Profile server.   
+
+    2. In eclipse, click on the Servers tab, right click and select New->Server. 
+
+    3. Select Apache->Tomcat v7.0 Server and click "Next >" 
+
+    4. Set the "Tomcat installation directory" to the location of your Apache TomEE Web Profile server installation. Click Next. 
+
+    5. Add your webapp to the server. Click "Finish". 
+
+    6. In the Servers tab, double click on your server to open up the "Overview" page. Click on the "modules" tab 
+
+    7. Choose the 'Use Tomcat installation' option as shown below:
+    
+    <img src="http://people.apache.org/~tveronezi/tomee_eclipse_trick.png" height="90%" width="80%">
+
+*Though this ensures that the tomee web-app is running, the other apps in your <tomcat>/webapps
+are also started up and adds up to the start time*
+
+### Method 2:
+
+    1. Download and install an Apache TomEE Web Profile server.   
+
+    2. In eclipse, click on the Servers tab, right click and select New->Server. 
+
+    3. Select Apache->Tomcat v7.0 Server and click "Next >" 
+
+    4. Set the "Tomcat installation directory" to the location of your Apache TomEE Web Profile server installation. Click Next. 
+
+    5. Add your webapp to the server. Click "Finish". 
+
+    6. In the Servers tab, double click on your server to open up the "Overview" page. Click on the "modules" tab 
+
+    7. Click "Add External Web Module". In the "Add Web Module" dialog, for document base, browse to <tomeeInstallDir>/webapps/openejb. Set Path: to "/openejb". Uncheck "Auto reloading enabled". Click OK. 
+
+    8. Click on the <your web app> module and click the "Edit..." button. Uncheck the "Auto reloading enabled" checkbox and click OK. Then click the save button in eclipse so the server configuration gets saved. 
+
+    9. Copy the openejb.xml and logging.properties files from the <tomeeInstallDir>\conf folder into the folder created in eclipse for your server configuration files (eg. <eclipse_workdir>\Servers\apache-tomee-webprofile-1.0.0-beta-2 at localhost-config). 
+
+    10. In eclipse, click on your webapp project, then select "Project->clean". Hit OK. This will cause eclipse to clean and rebuild the leaguemanager application. 
+
+    11. In the Servers tab, right click on the server and select "Publish". 
+
+    13. Start the server.
