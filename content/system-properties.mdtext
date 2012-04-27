@@ -1,6 +1,9 @@
 Title: System Properties
 
 <a name="SystemProperties-Overridingopenejb.xml"></a>
+
+You can find a list of properties [here](properties-listing.html). But read on to understand how these can be used.
+
 #  Overriding openejb.xml
 
 Anything in the openejb.xml file can be overridden via system properties of
@@ -25,9 +28,6 @@ Could be overridden as follows via system properties on the command line:
 > -Dmysql.JdbcUrl=jdbc:mysql://localhost/test -Dmysql.UserName=test
 
 <a name="SystemProperties-OverridingServerServices"></a>
-
-#### Related docs:
-[Properties Listing](properties-listing.html) : A partial list of configurable properties
 
 #  Overriding Server Services
 
