@@ -27,7 +27,7 @@ The changes are as described below:
 
 (Say you have unzipped in a directory 'tomee')
 
-<span class="label label-info">
+<span class="label-info">
 ####tomee/webapps
  Works the same way as it does for Tomcat. Drop your directories/wars in here! 
 
