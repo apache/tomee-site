@@ -1,7 +1,7 @@
-Title: Configuring DataSources
+Title: Configuring DataSources in tomee.xml
 
 <a name="ConfiguringDataSources-ConfiguringDataSourcesinopenejb.xml"></a>
-## Configuring DataSources in tomee.xml
+
 
 The *<Resource>* element is used to configure a *javax.sql.DataSource*. It
 is also used to configure other resources like Timers, Topics, Queues.	We
