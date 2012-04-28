@@ -29,14 +29,13 @@ For example,
 
 is injected with the following resource:
 
-<code>
-<Resource id="moviesDatabase" type="DataSource">
-  JdbcDriver org.hsqldb.jdbcDriver
-  JdbcUrl jdbc:hsqldb:file:data/hsqldb/hsqldb
-  UserName sa
-  Password
-  JtaManaged true
-</Resource>
-</code>
+
+    <Resource id="moviesDatabase" type="DataSource">    
+    JdbcDriver org.hsqldb.jdbcDriver    
+    JdbcUrl jdbc:mysql:localhost:3306/moviesdb    
+    UserName sa    
+    Password secret    
+    JtaManaged true    
+    </Resource>
 
 For more on how to configure, read through [configuring-datasources](/configuring-datasources.html), [containers-and-resources](containers-and-resources.html) docs.
