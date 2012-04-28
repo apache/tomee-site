@@ -1,6 +1,7 @@
 Title: Clients
+
 <a name="Clients-LocalClient(embeddedcontainer)"></a>
-#  Local Client (embedded container)
+###  Local Client (embedded container)
 
 
     Properties p = new Properties();
@@ -12,10 +13,10 @@ Title: Clients
 
 
 <a name="Clients-LocalClient(non-defaultrealmname)"></a>
-#  Local Client (non-default realm name)
+###  Local Client (non-default realm name)
 
 <a name="Clients-Loginconfigurationfile(conf/login.config)"></a>
-## Login configuration file (conf/login.config)
+### Login configuration file (conf/login.config)
 
 
     PropertiesLogin {
@@ -33,7 +34,7 @@ Title: Clients
 
 
 <a name="Clients-Programcode"></a>
-## Program code
+### Code
 
 
     Properties p = new Properties();
@@ -46,7 +47,7 @@ Title: Clients
 
 
 <a name="Clients-RemoteClient(openejbstandalone)"></a>
-#  Remote Client (openejb standalone)
+###  Remote Client (openejb standalone)
 
 
     Properties p = new Properties();
@@ -62,7 +63,7 @@ Title: Clients
 
 
 <a name="Clients-RemoteClientwithHTTP(openejbstandalone)"></a>
-#  Remote Client with HTTP (openejb standalone)
+###  Remote Client with HTTP (openejb standalone)
 
 
     Properties p = new Properties();
@@ -79,7 +80,7 @@ Title: Clients
 
 
 <a name="Clients-RemoteClientwithHTTP(intomcat)"></a>
-#  Remote Client with HTTP (in tomcat)
+###  Remote Client with HTTP (in tomcat)
 
 
     Properties p = new Properties();
