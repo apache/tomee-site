@@ -16,7 +16,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-#Configuring Resources:
+###Configuring Resources:
     
 *    Drivers are dropped into tomeeDir/lib
 *    Resources are configured in tomeeDir/conf/tomee.xml.    
