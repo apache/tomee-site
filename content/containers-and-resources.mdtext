@@ -1,6 +1,6 @@
+Containers and Resources
 <div id="PageContent">
               <p><a name="ContainersandResources-containers"></a></p>
-<h1><a name="ContainersandResources-Containers"></a>Containers</h1>
 <p><a name="ContainersandResources-DefaultCMPContainercontainer"></a></p>
 <h2><a name="ContainersandResources-CMPENTITY"></a>CMP_ENTITY</h2>
 <p>Declarable in tomee.xml via</p>
