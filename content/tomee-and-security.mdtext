@@ -16,7 +16,17 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-*    Uses Tomcat's Security Realm
+Rather than providing its own security implementation, TomEE makes full use of the security features that are part of Tomcat. Any Catalina realm is supported or you can provide your own security module using the login.config file. 
+
+For example, to add some simple security to the [moviefun application](http://openejb.apache.org/examples-trunk/webapps/moviefun/README.html) , all we would need to do is: 
+
+1.    Add some users to the tomcat-users.xml file     
+2.    Add the necessary @DefineRoles and @RolesAllowed annotations on MoviesImpl     
+3.    Add some security config to do HTTP Basic authentication to web.xml Webservice security is also looked after – username/password based security (HTTP basic, or WS-Security) uses the same Tomcat security. Certificate based security is also available.
+
+To put it short,
+
+*    TomEE uses Tomcat's Security Realm
 
 *     Extra TomEE layer adds support for JAAS JACC WS Security
 
@@ -26,10 +36,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 
 *     Alternatively use login.config to provide your own security module
 
-*    Rather than providing its own security implementation, TomEE makes full use of the security features that are part of Tomcat. Any Catalina realm is supported or you can provide your own security module using the login.config file. 
 
-*     For example, to add some simple security to the [moviefun application](http://openejb.apache.org/examples-trunk/webapps/moviefun/README.html) , all we would need to do is: 1. Add some users to the tomcat-users.xml file 2. Add the necessary @DefineRoles and @RolesAllowed annotations on MoviesImpl 3. Add some security config to do HTTP Basic authentication to web.xml Webservice security is also looked after – username/password based security (HTTP basic, or WS-Security) uses the same Tomcat security. Certificate based security is also available.
+####See Also:
 
-See Also:
-
-[TomEE-and-JAAS](tomee-jaas.html) 
+    [TomEE-and-JAAS](tomee-jaas.html) 
