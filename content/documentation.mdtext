@@ -9,7 +9,8 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [Using TomEE with Eclipse](tomee-and-eclipse.html)
 - [Comparison: OpenEJB,TomEE,TomEE+](comparison.html)
 - [TomEE Directory structure](tomee-directory-structure.html)
-- [TomEE and configurations](Configuring-in-tomee.html)
+- [TomEE and Configurations](Configuring-in-tomee.html)
+- [TomEE and Security](tomee-and-security.html)
 - [Deploying in TomEE](deploying-in-tomee.html)
 }
 
