@@ -8,22 +8,22 @@ change based on user feedback.	All comments suggestions welcome.
 # Introduction
 
 The OpenEJB Spring integration makes all Spring defined beans injectable to
-JEE components, and all JEE components can be injected to Spring beans. 
+Java EE components, and all Java EE components can be injected to Spring beans. 
 The injection system supports arbitrarily complex nesting (e.g., Spring
-bean injected into a JEE component, which is then injected into another
+bean injected into a Java EE component, which is then injected into another
 Spring bean), including:
 
  * @Resouce injection of any Spring bean into EJB
- * Injection of any JEE resource into a Spring bean, including:
+ * Injection of any Java EE resource into a Spring bean, including:
    ** EJB 3.0 beans
    ** EJB 3.1 Singleton Bean
    ** JDBC Connector
    ** JMS Connector
    ** JMS Queue and Topic
-   ** Generic JEE Connector (JCA)
+   ** Generic Java EE Connector (JCA)
 
 In addition, the OpenEJB Spring integration add support for discovery and
-deployment of standard JEE packages within a Spring context, including:
+deployment of standard Java EE packages within a Spring context, including:
 
  * EAR
  * EJB Jar

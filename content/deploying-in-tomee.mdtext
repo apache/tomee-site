@@ -41,8 +41,8 @@ no EAR required.
 -Can put the web.xml and ejb-jar.xml in the same archive (the WAR file).
 -EJBs can see Servlet classes and vice versa.
 
-<a name="CollapsedEAR-NotquiteJ2EE(itistrulyJEE6)"></a>
-#### Not quite J2EE (it is truly JEE6)
+<a name="CollapsedEAR-NotquiteJ2EE(itistrulyJava EE6)"></a>
+#### Not quite J2EE (it is truly Java EE6)
 
 This is very different than J2EE or Java EE 5 as there aren't several
 levels of separation and classloader hierarchy.  This is going to take some

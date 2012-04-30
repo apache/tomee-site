@@ -30,11 +30,11 @@ Persistence) and a number of components in each of them:
 
 !http://www.rempl.com/rempl-oss/tikz/architecture-components.png!
 
-Presentation Layer includes JSF (Mojarra), JAX-RS (Jersey), and JEE container (Tomcat). In other words, everything on top of "[Delegates](http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html)
+Presentation Layer includes JSF (Mojarra), JAX-RS (Jersey), and Java EE container (Tomcat). In other words, everything on top of "[Delegates](http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html)
 " in the diagram. Package [com.rempl.oss.delegates|http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html]
  with its classes realize [Business Delegate|http://java.sun.com/blueprints/corej2eepatterns/Patterns/BusinessDelegate.html]
  and [Service Locator|http://java.sun.com/blueprints/corej2eepatterns/Patterns/ServiceLocator.html]
- JEE design patterns. _More about it later..._
+ Java EE design patterns. _More about it later..._
 
 Business Layer includes EJB (OpenEJB), [Brokers](http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/brokers/package-summary.html)
  (Stateless Session Beans), and JPA entities.
