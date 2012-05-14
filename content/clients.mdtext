@@ -80,12 +80,12 @@ Title: Clients
 
 
 <a name="Clients-RemoteClientwithHTTP(intomcat)"></a>
-###  Remote Client with HTTP (in tomcat)
+###  Remote Client with HTTP (in TomEE)
 
 
     Properties p = new Properties();
     p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
-    p.put("java.naming.provider.url", "http://127.0.0.1:8080/openejb/ejb");
+    p.put("java.naming.provider.url", "http://127.0.0.1:8080/tomee/ejb");
     // user and pass optional
     p.put("java.naming.security.principal", "myuser");
     p.put("java.naming.security.credentials", "mypass");
