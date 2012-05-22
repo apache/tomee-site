@@ -7,6 +7,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 {span-one-third
 ### General Guide 
 - [Using TomEE with Eclipse](tomee-and-eclipse.html)
+- [WTP and TomEE logging](tomee-logging-in-eclipse.html)
 - [Comparison: OpenEJB,TomEE,TomEE+](comparison.html)
 - [TomEE Directory structure](tomee-directory-structure.html)
 - [TomEE and Configurations](Configuring-in-tomee.html)
