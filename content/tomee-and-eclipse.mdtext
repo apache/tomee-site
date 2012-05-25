@@ -67,3 +67,24 @@ are also started up and adds up to the start time*
     10. In the Servers tab, right click on the server and select "Publish". 
 
     11. Start the server.
+    
+If jsp changes are not being hot deployed then this is because the jsp servlet is set to development=false in the web.xml file. To allow jsp hot deployment alter this value to true and restart Tomee.
+
+This is the relevant snippet of the web.xml file.
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>fork</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xpoweredBy</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>development</param-name>
+            <param-value>*false*</param-value>
+        </init-param>
+        <load-on-startup>3</load-on-startup>
+    </servlet>
