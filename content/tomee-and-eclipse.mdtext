@@ -72,6 +72,7 @@ If jsp changes are not being hot deployed then this is because the jsp servlet i
 
 This is the relevant snippet of the web.xml file.
 
+
     <servlet>
         <servlet-name>jsp</servlet-name>
         <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
@@ -89,3 +90,4 @@ This is the relevant snippet of the web.xml file.
         </init-param>
         <load-on-startup>3</load-on-startup>
     </servlet>
+
