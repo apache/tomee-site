@@ -1,0 +1,35 @@
+Title: Releasing
+
+If you've never released before, you'll need to create a GPG key to use for signing the binaries.
+
+ - http://maven.apache.org/developers/release/pmc-gpg-keys.html
+
+That key will need to be appended to this file:
+
+ - http://www.apache.org/dist/openejb/KEYS
+
+
+As well, you'll need to ensure you have your `~/.m2/settings.xml` file updated like so:
+
+    <settings>
+      <profiles>
+        <profile>
+          <id>apache-release</id>
+          <properties>
+            <gpg.passphrase>yourGpgPassphrase</gpg.passphrase>
+          </properties>
+        </profile>
+      </profiles>
+      <servers>
+        <server>
+          <id>apache.snapshots.https</id>
+          <username>yourApacheId</username>
+          <password>yourApachePass</password>
+        </server>
+        <server>
+          <id>apache.releases.https</id>
+          <username>yourApacheId</username>
+          <password>yourApachePass</password>
+        </server>
+      </servers>
+    </settings>
