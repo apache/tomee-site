@@ -15,3 +15,11 @@ foreach my $line (split("\n", $content)) {
     next if $line =~ /\.(sha1|md5|jar|pom|xml)|Parent/;
     print $line . "\n";
 }
+print "<pre>";
+foreach (keys %ENV) {
+    print $_;
+    print " = ";
+    print $ENV{$_};
+    print "\n";
+}
+print "</pre>";
