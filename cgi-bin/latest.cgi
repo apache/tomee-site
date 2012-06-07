@@ -5,7 +5,12 @@ use warnings;
 
 print "Content-Type: text/html\n\n";
 
-my $content = `wget -O - -q http://repository.apache.org/snapshots/org/apache/openejb/apache-tomee/1.0.1-SNAPSHOT/`;
+my $artifact = $ENV{PATH_INFO};
+
+$artifact = "/apache-tomee/1.0.1-SNAPSHOT" unless $artifact;
+$artifact =~ s,^([^/]),/$1,;
+
+my $content = `wget -O - http://repository.apache.org/snapshots/org/apache/openejb$artifact`;
 
 $content = join(" ", split("[ \r\n]+", $content));
 $content =~ s/(<tr>)/\n$1/g;
@@ -15,11 +20,3 @@ foreach my $line (split("\n", $content)) {
     next if $line =~ /\.(sha1|md5|jar|pom|xml)|Parent/;
     print $line . "\n";
 }
-print "<pre>";
-foreach (keys %ENV) {
-    print $_;
-    print " = ";
-    print $ENV{$_};
-    print "\n";
-}
-print "</pre>";
