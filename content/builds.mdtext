@@ -1,0 +1,20 @@
+Title: Builds
+
+Builds are available from the CI system and are created daily at 04:05 UTC or on demand
+via the openejb-bot on irc.freenode.net.
+
+When reporting issues with these builds please include the exact version and timestamp of the build.
+
+# Stable builds
+
+ - [Apache TomEE 1.0.1-SNAPSHOT both web profile and plus](http://openejb.apache.org/cgi-bin/builds.cgi/apache-tomee/1.0.1-SNAPSHOT/)
+ - [OpenEJB Standalone Server 4.0.1-SNAPSHOT](http://openejb.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.0.1-SNAPSHOT/)
+ - [Java EE Examples](http://openejb.apache.org/cgi-bin/builds.cgi/examples/4.0.1-SNAPSHOT/)
+ - [Provisioning](http://openejb.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.0.1-SNAPSHOT/)
+
+# Development builds
+
+ - [Apache TomEE 1.1.0-SNAPSHOT both web profile and plus](http://openejb.apache.org/cgi-bin/builds.cgi/apache-tomee/1.1.0-SNAPSHOT/)
+ - [OpenEJB Standalone Server 4.1.0-SNAPSHOT](http://openejb.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.1.0-SNAPSHOT/)
+ - [Java EE Examples](http://openejb.apache.org/cgi-bin/builds.cgi/examples/4.1.0-SNAPSHOT/)
+ - [Provisioning](http://openejb.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.1.0-SNAPSHOT/)
