@@ -10,7 +10,7 @@ my $artifact = $ENV{PATH_INFO};
 $artifact = "/apache-tomee/1.0.1-SNAPSHOT" unless $artifact;
 $artifact =~ s,^([^/]),/$1,;
 
-my $content = `wget -d -O - http://repository.apache.org/snapshots/org/apache/openejb$artifact`;
+my $content = `wget -d -O - http://repository.apache.org/snapshots/org/apache/openejb/apache-tomee/1.0.1-SNAPSHOT`;
 
 $content = join(" ", split("[ \r\n]+", $content));
 $content =~ s/(<tr>)/\n$1/g;
