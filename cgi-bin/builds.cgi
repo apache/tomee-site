@@ -10,7 +10,7 @@ $artifact = $ENV{PATH_INFO} if $ENV{PATH_INFO};
 $artifact = "/$artifact/";
 $artifact =~ s,/+,/,g;
 $artifact =~ s,[^a-zA-Z.[0-9]-],,g;
-$artifact =~ s,../,,g;
+$artifact =~ s,\.\./,,g;
 
 my $content = `wget -q -O - http://repository.apache.org/snapshots/org/apache/openejb$artifact`;
 
