@@ -5,9 +5,11 @@ use warnings;
 
 use LWP;
 
+print "Content-Type: text/html\n\n";
+
 my $ua = LWP::UserAgent->new();
 
-my $content = $ua->get("https://repository.apache.org/content/groups/snapshots/org/apache/openejb/apache-tomee/4.0.0-SNAPSHOT/")->content;
+my $content = $ua->get("http://repository.apache.org/snapshots/org/apache/openejb/apache-tomee/1.0.1-SNAPSHOT/")->content;
 
 $content = join(" ", split("[ \r\n]+", $content));
 $content =~ s/(<tr>)/\n$1/g;
