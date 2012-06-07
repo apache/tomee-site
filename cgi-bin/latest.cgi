@@ -6,6 +6,8 @@ use warnings;
 print "Content-Type: text/html\n\n";
 
 my $a = "apache-tomee/1.0.1-SNAPSHOT/";
+$a = $ENV{PATH_INFO} if $ENV{PATH_INFO};
+
 my $content = `wget -O - -q http://repository.apache.org/snapshots/org/apache/openejb/$a`;
 
 $content = join(" ", split("[ \r\n]+", $content));
