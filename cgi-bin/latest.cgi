@@ -3,13 +3,9 @@
 use strict;
 use warnings;
 
-use LWP;
-
 print "Content-Type: text/html\n\n";
 
-my $ua = LWP::UserAgent->new();
-
-my $content = $ua->get("http://repository.apache.org/snapshots/org/apache/openejb/apache-tomee/1.0.1-SNAPSHOT/")->content;
+my $content = `wget -O - -q http://repository.apache.org/snapshots/org/apache/openejb/apache-tomee/1.0.1-SNAPSHOT/`;
 
 $content = join(" ", split("[ \r\n]+", $content));
 $content =~ s/(<tr>)/\n$1/g;
