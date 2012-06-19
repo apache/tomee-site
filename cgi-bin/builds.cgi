@@ -7,10 +7,8 @@ print "Content-Type: text/html\n\n";
 my $artifact = "/apache-tomee/1.0.1-SNAPSHOT/";
 $artifact = $ENV{PATH_INFO} if $ENV{PATH_INFO};
 
-$artifact = "/$artifact/";
-$artifact =~ s,/+,/,g;
-$artifact =~ s,[^a-zA-Z.[0-9]-],,g;
-$artifact =~ s,\.\./,,g;
+$artifact =~ m,^/?(\w[\w-]+)/(\d[\w\d.-]+)/?$, or die "Detainting regexp failed!";
+$artifact = "/$1/$2/";
 
 my $content = `wget -q -O - http://repository.apache.org/snapshots/org/apache/openejb$artifact`;
 
