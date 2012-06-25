@@ -1,8 +1,13 @@
 Title: Working on the Website
 
-# Editing
+# Online Editing
 
-Easiest is to check out the site source from svn:
+The easiest way to edit is to simply click the blue pencil icon in the upper right.  Have fun!
+
+# Offline Editing
+
+Editing offline can be fantastic for making big changes or documenting while coding.  You simply need to
+ check out the site source from svn:
 
     svn co https://svn.apache.org/repos/asf/openejb/site/trunk website-source
 
