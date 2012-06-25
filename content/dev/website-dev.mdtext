@@ -1,10 +1,8 @@
 Title: Working on the Website
 
-# Online Editing
-
 The easiest way to edit is to simply click the blue pencil icon in the upper right.  Have fun!
 
-# Offline Editing
+## Offline Editing
 
 Editing offline can be fantastic for making big changes or documenting while coding.  You simply need to
  check out the site source from svn:
@@ -19,7 +17,7 @@ For example, `documentation.mdtext` shows up as:
 
 [http://openejb.staging.apache.org/documentation.html]
 
-# Publishing
+## Publishing
 
 Simply visit [https://cms.apache.org/openejb/publish](https://cms.apache.org/openejb/publish)
 
@@ -28,7 +26,7 @@ It will prompt you for user/pass information and make you review the changes.  E
 The login information is cached for a while, so you won't have to enter user/pass information each time.
 
 
-# Building Locally <small>optional</small>
+## Building Locally <small>optional</small>
 
 Should you want to build the site locally, you can do so pretty easily with the right perl modules installed.
 
@@ -52,7 +50,7 @@ install just those things.
 
 All the generated html content will be under `/tmp/site/content`
 
-# Cleaning out old files
+## Cleaning out old files
 
 Currently, if you've used svn directly to delete a file, it won't be deleted from the stanging repo.
 
