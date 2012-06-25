@@ -33,6 +33,18 @@
             overflow: hidden;
             cursor: pointer;
         }
+        .edit-page {
+            display: inline-block;
+            height: 20px;
+            margin: 0 auto 4px;
+            outline: medium none;
+            text-indent: -999em;
+            width: 24px;
+            background-image: url('{{base}}images/edit.png');
+            background-repeat: no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
         .fb-share {
             background-position: 0px -40px;
         }
@@ -72,6 +84,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="{{base}}images/apple-touch-icon-114x114.png">
 
     <script src="{{base}}javascript/prettify.js" type="text/javascript"></script>
+    <script src="{{base}}javascript/bootstrap-modal.js"></script>
     <script src="{{base}}javascript/jquery-latest.js"></script>
     <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
     <script src="{{base}}javascript/common.js"></script>
@@ -121,7 +134,24 @@
     </div>
 
     <div class="container">
+        <div id="edit" class="modal hide fade in" style="display: none; ">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal">x</a>
 
+                <h3>Thank you for contributing to the documention!</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Any help with the documentation is greatly appreciated.</h4>
+                <p>All edits are reviewed before going live, so feel free to do much more than fix typos or links.  If you see a page that could benefit from an entire rewrite, we'd be thrilled to review it.  Don't be surprised if we like it so much we ask you for help with other pages :)</p>
+                <small>NOTICE: unless indicated otherwise on the pages in question, all editable content available from apache.org is presumed to be licensed under the Apache License (AL) version 2.0 and hence all submissions to apache.org treated as formal Contributions under the license terms.</small>
+            </div>
+            <div class="modal-footer">
+                Do you have an Apache ID?
+                <a href="javascript:void(location.href='https://cms.apache.org/redirect?uri='+escape(location.href))" class="btn">Yes</a>
+                <a href="javascript:void(location.href='https://anonymous@cms.apache.org/redirect?uri='+escape(location.href))" class="btn">No</a>
+            </div>
+        </div>
+        <script src="file:///tmp/site/content/javascript/bootstrap-modal.js"></script>
     {% block content %}{{ content|markdown }}{% endblock %}
 
       <footer>
