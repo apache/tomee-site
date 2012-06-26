@@ -26,6 +26,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [Security](security.html)
 - [Clients](clients.html)
 - [JNDI Names](jndi-names.html)
+- [Changing JMS implementations](changing-jms-implementations.html)
 }
 
 {span-one-third

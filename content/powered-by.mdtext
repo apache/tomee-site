@@ -1,6 +1,10 @@
 Title: Powered By
 
 - [Foo][1]
+- [Buzz][2]
+- [Name][3]
 
 
   [1]: http://foo.bar/
+  [2]: http://buzz.foo
+  [3]: http://name
