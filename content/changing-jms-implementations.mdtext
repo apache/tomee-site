@@ -102,6 +102,9 @@ Let's say that the following file lives in the jar at `META-INF/org.superbiz/ser
       </ServiceProvider>
     </ServiceJar>
 
+It is strongly recommended to not leave the values in the service-jar.xml file blank as shown above.  It is 
+possible to setup several sets of defaults in a `service-jar.xml` or via several `service-jar.xml` files.
+
 Once this file is packed in a jar and added to the `<tomee.home>/lib` or  `<openejb.home>/lib` directory, you can 
 then declare and configure "instances" of these things in your `tomee.xml` or `openejb.xml` config file as follows:
 
@@ -111,15 +114,20 @@ then declare and configure "instances" of these things in your `tomee.xml` or `o
     ...
     </Resource>
 
-This is basically the same to all configuration in TomEE/OpenEJB, but with the addition that you must specify the 
-`provider` attribute so the server knows where to look for the `service-jar.xml` file that defines the resource and all its defaults.
+Or in properties like so:
 
-In this example the file is in `META-INF/org.superbiz/service-jar.xml`, so the `provider` attribute should specify `org.superbiz`.  You can use whatever prefix you like for the `provider` id, though for obvious reasons we'd advise not using `org.apache.openejb` or `org.apache.tomee` in the prefix.
+    myGenericAdapter = new://Resource?type=GenericJMSRA&provider=org.superbiz
+    myGenericAdapter.AdapterProperty1 = PropertyValue1
+    myGenericAdapter.AdapterProperty2 = PropertyValue2
 
+This is basically the same as all configuration in TomEE/OpenEJB, but with the addition that you must 
+specify the `provider` attribute so the server knows where to look for the `service-jar.xml` file that 
+defines the resource and all its defaults.
 
+In this example:
 
+ - the file is `META-INF/org.superbiz/service-jar.xml`
+ - so the `provider` attribute is `org.superbiz`
 
-http://osdir.com/ml/users.openejb.apache.org/2010-01/msg00086.html
-
-
+You can use whatever prefix you like for the `provider` id, though for obvious reasons we'd advise not using `org.apache.openejb` or `org.apache.tomee` in the prefix.
 
