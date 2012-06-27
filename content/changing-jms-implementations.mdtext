@@ -108,7 +108,7 @@ possible to setup several sets of defaults in a `service-jar.xml` or via several
 Once this file is packed in a jar and added to the `<tomee.home>/lib` or  `<openejb.home>/lib` directory, you can 
 then declare and configure "instances" of these things in your `tomee.xml` or `openejb.xml` config file as follows:
 
-    <Resource id="My Generic Adapter" type="GenericJMSRA" provider="org.superbiz">
+    <Resource id="My Generic Adapter" type="GenericJMSRA" provider="org.superbiz:genericra">
     AdapterProperty1 PropertyValue1
     AdapterProperty2 PropertyValue2
     ...
