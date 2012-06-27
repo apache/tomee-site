@@ -28,12 +28,12 @@ If the JMS implementation does not have a `.rar` file, there are still some opti
 
 If the JMS implementation does not have a Resource Archive (`.rar` file) that defines a compliant Resource Adapter, the [Generic Resource Adapter for JMS](http://genericjmsra.java.net/) should work fine.
 
-To use this Adapter in TomEE or OpenEJB you'll need to create a `services-jar.xml` file and include that in a jar file and add it to the `<tomee.home>/lib/` directory.
+To use this Adapter in TomEE or OpenEJB you'll need to create a `service-jar.xml` file and include that in a jar file and add it to the `<tomee.home>/lib/` directory.
 Then you can declare `ConnectionFactory`, `Topic`, and `Queue` and more via the `tomee.xml` file.
 
 The one below should be considered boiler plate.  Updating it to contain some useful default values for your JMS implementation would be good.  These values can be overridden in the `tomee.xml` or `openejb.xml`
 
-Let's say that the following file lives in the jar at `META-INF/org.superbiz/services-jar.xml`
+Let's say that the following file lives in the jar at `META-INF/org.superbiz/service-jar.xml`
 
     <?xml version="1.0" encoding="UTF-8"?>
     <ServiceJar>
@@ -116,7 +116,7 @@ then declare and configure "instances" of these things in your `tomee.xml` or `o
 
 Or in properties like so:
 
-    myGenericAdapter = new://Resource?type=GenericJMSRA&provider=org.superbiz
+    myGenericAdapter = new://Resource?type=GenericJMSRA&provider=org.superbiz:genericra
     myGenericAdapter.AdapterProperty1 = PropertyValue1
     myGenericAdapter.AdapterProperty2 = PropertyValue2
 
