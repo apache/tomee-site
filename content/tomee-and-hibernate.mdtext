@@ -3,7 +3,8 @@ Title: TomEE and Hibernate
 Apache TomEE ships with OpenJPA as the default JPA provider, however any valid JPA provider can be used.
 
 The basic steps are:
- 1. Add the provider's jars to `tomee-home/lib/`
+
+ 1. Add the Hibernate jars to `<tomee-home>/lib/`
  2. Configure the webapp or the server to use Hibernate
 
 # Webapp Configuration
