@@ -21,7 +21,7 @@ Cache)
  - An **EntityManagerFactory** creates an EntityManager (and therefore a
 PersistenceContext/Cache)
 
-Comparing `RESOURCE_LOCAL` and `TRANSACTION` persistence contexts
+Comparing `RESOURCE_LOCAL` and `JTA` persistence contexts
 
 With &lt;persistence-unit transaction-type="**RESOURCE_LOCAL**"> **you** are
 responsible for EntityManager (PersistenceContext/Cache) creating and
@@ -43,7 +43,7 @@ PersistenceContexts/Caches.
 an EntityManager in use (don't create a second one unless you've destroyed
 the first)
 
-With &lt;persistence-unit transaction-type="**TRANSACTION**"> the **container**
+With &lt;persistence-unit transaction-type="**JTA**"> the **container**
 will do EntityManager (PersistenceContext/Cache) creating and tracking...
 
 - You **cannot** use the **EntityManagerFactory** to get an EntityManager
@@ -51,7 +51,7 @@ will do EntityManager (PersistenceContext/Cache) creating and tracking...
 - An **EntityManager** can be injected via the **@PersistenceContext**
 annotation only (not @PersistenceUnit)
 - You are **not** allowed to use @PersistenceUnit to refer to a unit of
-type TRANSACTION
+type JTA
 - The **EntityManager** given by the container is a **reference** to the
 PersistenceContext/Cache associated with a JTA Transaction.
 - If no JTA transaction is in progress, the EntityManager **cannot be
@@ -81,7 +81,7 @@ java has to offer.
 Complications can arise when there is more than one
 PersistenceContext/Cache relating the same data in the same transaction. 
 In any given transaction you want exactly one PersistenceContext/Cache for
-a given set of data.  Using a TRANSACTION unit with an EntityManager
+a given set of data.  Using a JTA unit with an EntityManager
 created by the container will always guarantee that this is the case.  With
 a RESOURCE_LOCAL unit and an EntityManagerFactory you should create and use
 exactly one EntityManager instance in your transaction to ensure there is
@@ -97,7 +97,7 @@ object are **not** reflected in the PersistenceContext/Cache.  An object will
 become Detached if it somehow **lives longer** or is **used outside** the scope
 of the PersistenceContext/Cache.  
 
-For a TRANSACTION unit, the PersistenceContext/Cache will live as long as
+For a JTA unit, the PersistenceContext/Cache will live as long as
 the transaction does.  When a transaction completes (commits or rollsback)
 all objects that were in the PersistenceContext/Cache are Detached.  You
 can still use them, but they are no longer associated with a
@@ -173,16 +173,16 @@ And referenced as follows
     }
 
     
-#  Valid TRANSACTION Unit usage
+#  Valid JTA Unit usage
 
-EJBs can use TRANSACTION persistence units through the EntityManager as
+EJBs can use JTA persistence units through the EntityManager as
 follows:
     
     <?xml version="1.0" encoding="UTF-8" ?>
     <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
     
       <!-- Tutorial "unit" -->
-      <persistence-unit name="Tutorial" transaction-type="TRANSACTION">
+      <persistence-unit name="Tutorial" transaction-type="JTA">
         <jta-data-source>myJtaDataSource</jta-data-source>
         <non-jta-data-source>myNonJtaDataSource</non-jta-data-source>
         <class>org.superbiz.jpa.Account</class>
