@@ -26,14 +26,16 @@ and "movieDatabaseUnmanaged" the following persistence.xml would work.
 
     
 Note that as of OpenEJB 3.1 you do not need to set the
-_hibernate.transaction.manager_lookup_class_ as it will be set for you
+`hibernate.transaction.manager_lookup_class` as it will be set for you
 automatically and will overwrite any "org.hibernate.transaction." strategy
 class already set while leaving any custom strategy class you may have
-implemented untouched.	The result is that you can leave your
-_hibernate.transaction.manager_lookup_class_ property configured to your
+implemented untouched.
+
+The result is that you can leave your
+`hibernate.transaction.manager_lookup_class` property configured to your
 production environment and OpenEJB will update it just for the scope
 testing.  On the other hand if you have implemented a custom
-_org.hibernate.transaction.TransactionManagerLookup_ strategy it will
+`org.hibernate.transaction.TransactionManagerLookup` strategy it will
 always be used and never replaced by OpenEJB.
 
 Note that if you need more functionality in this area we are always happy
@@ -42,7 +44,7 @@ to add it.
 # Not using OpenEJB in production?
     
 If you're using OpenEJB 3.0 which does not support the dynamic switching of
-the _hibernate.transaction.manager_lookup_class_ this is one way to achieve
+the `hibernate.transaction.manager_lookup_class` this is one way to achieve
 it.
 
 A custom implementation of Hibernate's *TransactionManagerLookup* strategy
@@ -90,17 +92,3 @@ deployed with your app.
 Then set the Hibernate specific configuration property
 *hibernate.transaction.manager_lookup_class* to the name of the factory
 that you just created.
-
-{info:title=Some useful FYI from a user}
-I tried to use openejb 3.0 together with hibernate 3.2.6ga in a maven
-project. The transitive dependencies of openejb and hibernate collide on
-asm.jar. A similar problem is described here:
-http://blog.springsource.com/main/2007/06/11/asm-version-incompatibilities-using-spring-autowired-with-hibernate/
-or here:
-http://forum.springframework.org/showthread.php?t=26713&highlight=cglib-nodep+hibernate
-http://jira.springframework.org/browse/SPR-3856
-
-The solution is to exclude the dependency on asm and cglib on hibernate and
-to add a dependency on cglib-nodep.
-{info}
-
