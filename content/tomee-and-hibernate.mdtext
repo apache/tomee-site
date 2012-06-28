@@ -1,0 +1,58 @@
+Title: TomEE and Hibernate
+
+Apache TomEE ships with OpenJPA as the default JPA provider, however any valid JPA provider can be used.
+
+The basic steps are:
+ 1. Add the provider's jars to `tomee-home/lib/`
+ 2. Configure the webapp or the server to use Hibernate
+
+# Webapp Configuration
+
+Any webapp can specify the JPA provider it would like to use via the `persistence.xml` file, which can be at any of the following locations in a webapp
+
+ - `WEB-INF/persistence.xml` of the `.war` file
+ - `META-INF/persistence.xml` in any jar located in `WEB-INF/lib/`
+
+A single webapp may have many `persistence.xml` files and each may use whichever JPA provider it needs.
+
+The following is an example of a fairly common `persistence.xml` for Hibernate
+
+    <persistence version="1.0"
+           xmlns="http://java.sun.com/xml/ns/persistence"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+           http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+      <persistence-unit name="movie-unit">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>movieDatabase</jta-data-source>
+        <non-jta-data-source>movieDatabaseUnmanaged</non-jta-data-source>
+
+        <properties>
+          <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+        </properties>
+      </persistence-unit>
+    </persistence>
+
+
+Note, TomEE will automatically add the following property unless it is explicitly configured:
+
+          <property name="hibernate.transaction.manager_lookup_class"
+                    value="org.apache.openejb.hibernate.TransactionManagerLookup"/>
+
+# Server Configuration
+
+The default JPA provider can be changed at the server level to favor Hibernate over OpenJPA.
+
+Using the `<tomee-home>/conf/system.properties` file or any other valid means of setting `java.lang.System.getProperties()`, the following standard properties can set the detault for any `persistence.xml` file.
+
+ - `javax.persistence.provider`
+ - `javax.persistence.transactionType`
+ - `javax.persistence.jtaDataSource`
+ - `javax.persistence.nonJtaDataSource`
+
+So, for example, Hibernate can become the default provider via setting
+
+ `CATALINA_OPTS=-Djavax.persistence.provider=org.hibernate.ejb.HibernatePersistence`
+
+You **must** of course add the Hibernate libraries to `<tomee-home>/lib/` for this to work.
