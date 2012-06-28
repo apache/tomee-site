@@ -27,6 +27,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 - [Clients](clients.html)
 - [JNDI Names](jndi-names.html)
 - [Changing JMS implementations](changing-jms-implementations.html)
+- [Changing JPA to Hibernate](tomee-and-hibernate.html)
 }
 
 {span-one-third
