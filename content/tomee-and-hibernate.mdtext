@@ -60,7 +60,7 @@ You **must** of course add the Hibernate libraries to `<tomee-home>/lib/` for th
 
 # Hibernate libraries
 
-Jars needed for Hibernate 4.x: (below is for 4.1)
+Jars needed for Hibernate 4.x:
 
 Add:
 
@@ -71,8 +71,6 @@ Add:
 - `<tomee-home>/lib/hibernate-entitymanager-4.1.4.Final.jar`
 - `<tomee-home>/lib/hibernate-validator-4.3.0.Final.jar`
 - `<tomee-home>/lib/jboss-logging-3.1.0.GA.jar`
-
-The ehcache jars might be optional, but haven't tried without them.
 
 Remove (optional):
 
@@ -92,7 +90,7 @@ To use Hibernate with Ehcache, add:
 - `<tomee-home>/lib/ehcache-terracotta-2.5.1.jar`
 - `<tomee-home>/lib/terracotta-toolkit-1.4-runtime-4.1.0.jar`
 
-# Infinispan
+# Infinispan (optional)
 
 To use Infinispan cache (default Hibernate 2nd level cache) you need the below jars:
 
