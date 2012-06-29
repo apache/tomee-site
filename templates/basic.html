@@ -132,6 +132,8 @@
     </div>
 
     <div class="container">
+    {% block content %}{{ content|markdown }}{% endblock %}
+
         <div id="edit" class="modal hide fade in" style="display: none; ">
             <div class="modal-header">
                 <a class="close" data-dismiss="modal">x</a>
@@ -155,7 +157,6 @@
             </div>
         </div>
         <script src="{{base}}javascript/bootstrap-modal.js"></script>
-    {% block content %}{{ content|markdown }}{% endblock %}
 
       <footer>
         <p>
