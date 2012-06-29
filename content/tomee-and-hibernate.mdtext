@@ -62,17 +62,40 @@ You **must** of course add the Hibernate libraries to `<tomee-home>/lib/` for th
 
 Jars needed for Hibernate 4.x: (below is for 4.1)
 
-<pre><code>
-    <lib>org.hibernate:hibernate-entitymanager:${hibernate.core.version}</lib>
-    <lib>org.hibernate:hibernate-core:${hibernate.core.version}</lib>
-    <lib>org.jboss.logging:jboss-logging:3.1.0.GA</lib>
-    <lib>antlr:antlr:2.7.7</lib>
-    <lib>dom4j:dom4j:1.6.1</lib>
-    <lib>org.hibernate.common:hibernate-commons-annotations:4.0.1.Final</lib>
-    <lib>org.hibernate:hibernate-validator:4.2.0.Final</lib>
-</code></pre>
+Add:
+
+- `<tomee-home>/lib/antlr-2.7.7.jar`
+- `<tomee-home>/lib/dom4j-1.6.1.jar`
+- `<tomee-home>/lib/hibernate-commons-annotations-4.0.1.Final.jar`
+- `<tomee-home>/lib/hibernate-core-4.1.4.Final.jar`
+- `<tomee-home>/lib/hibernate-entitymanager-4.1.4.Final.jar`
+- `<tomee-home>/lib/hibernate-validator-4.3.0.Final.jar`
+- `<tomee-home>/lib/jboss-logging-3.1.0.GA.jar`
+
+The ehcache jars might be optional, but haven't tried without them.
+
+Remove (optional):
+
+- `<tomee-home>/lib/asm-3.2.jar`
+- `<tomee-home>/lib/bval-core-0.4.jar`
+- `<tomee-home>/lib/bval-jsr303-0.4.jar`
+- `<tomee-home>/lib/commons-lang-2.6.jar`
+- `<tomee-home>/lib/openjpa-2.2.0.jar`
+- `<tomee-home>/lib/serp-1.13.1.jar`
+
+# Ehcache (optional)
+
+To use Hibernate with Ehcache, add:
+
+- `<tomee-home>/lib/hibernate-ehcache-4.1.4.Final.jar`
+- `<tomee-home>/lib/ehcache-core-2.5.1.jar`
+- `<tomee-home>/lib/ehcache-terracotta-2.5.1.jar`
+- `<tomee-home>/lib/terracotta-toolkit-1.4-runtime-4.1.0.jar`
+
+# Infinispan
 
 To use Infinispan cache (default Hibernate 2nd level cache) you need the below jars:
+
 <pre><code>
     <lib>org.infinispan:infinispan-core:5.1.4.FINAL</lib>
     <lib>org.hibernate:hibernate-infinispan:${hibernate.core.version}</lib>
