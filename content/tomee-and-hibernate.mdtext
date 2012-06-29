@@ -57,3 +57,30 @@ So, for example, Hibernate can become the default provider via setting
  `CATALINA_OPTS=-Djavax.persistence.provider=org.hibernate.ejb.HibernatePersistence`
 
 You **must** of course add the Hibernate libraries to `<tomee-home>/lib/` for this to work.
+
+Jars needed for Hibernate 4.x: (below is for 4.1)
+<pre><code>
+						<lib>org.hibernate:hibernate-entitymanager:${hibernate.core.version}</lib>
+						<lib>org.hibernate:hibernate-core:${hibernate.core.version}</lib>
+						<lib>org.jboss.logging:jboss-logging:3.1.0.GA</lib>
+						<lib>antlr:antlr:2.7.7</lib>
+						<lib>dom4j:dom4j:1.6.1</lib>
+						<lib>org.hibernate.common:hibernate-commons-annotations:4.0.1.Final</lib>
+						<lib>org.hibernate:hibernate-validator:4.2.0.Final</lib>
+</code></pre>
+
+To use Infinispan cache (default Hibernate 2nd level cache) you need the below jars:
+<pre><code>
+						<lib>org.infinispan:infinispan-core:5.1.4.FINAL</lib>
+						<lib>org.hibernate:hibernate-infinispan:${hibernate.core.version}</lib>
+						<lib>org.jgroups:jgroups:3.0.9.Final</lib>
+						<lib>org.jboss.marshalling:jboss-marshalling-river:1.3.11.GA:</lib>
+						<lib>org.jboss.marshalling:jboss-marshalling:1.3.11.GA</lib>
+						<lib>org.codehaus.woodstox:woodstox-core-asl:4.1.1</lib>
+						<lib>org.codehaus.woodstox:stax2-api:3.1.1</lib>
+						<lib>org.rhq.helpers:rhq-pluginAnnotations:3.0.4</lib>
+						<lib>org.jboss.logmanager:jboss-logmanager:1.2.2.GA</lib>
+</code></pre>
+
+There is many guides on how to use 2nd level cache with JPA 2.
+You can remove OpenJPA jar so less jars are in Tomee/lib folder. Be sure to put your DB driver in Tomee/lib.
