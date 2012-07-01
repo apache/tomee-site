@@ -1,4 +1,6 @@
 Title: EJB Refs
+
+TomEE complains it doesn't know the container type, so I added type="javax.naming.InitialContext" and it worked (mostly).
 <a name="EJBRefs-Referencingabeaninanotherjar(withannotations)"></a>
 ## Referencing a bean in another jar (with annotations)
 
@@ -126,7 +128,7 @@ In this example we are calling our InitialContext `shoe` for fun.
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <openejb>
 
-      <JndiProvider id="shoe">
+      <JndiProvider id="shoe" type="javax.naming.InitialContext">
         java.naming.provider.url = ejbd://localhost:4201
         java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
       </JndiProvider>
@@ -157,7 +159,7 @@ Note the above also works with the various forms of failover that TomEE supports
 
 If say, there are two servers that have the `OrangeBeanRemote` bean, you could expand the `<JndiProvider>` delcaration like so:
 
-      <JndiProvider id="shoe">
+      <JndiProvider id="shoe" type="javax.naming.InitialContext">
         java.naming.provider.url = failover:ejbd://192.168.1.20:4201,ejbd://192.168.1.30:4201
         java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
       </JndiProvider>
@@ -169,4 +171,3 @@ the scenes using server discovery logic that can function on either UDP or TCP. 
 
  - [Multicast Discovery (UDP)](multicast-discovery.html)
  - [Multipoint Discovery (TCP)](multipoint-discovery.html)
-
