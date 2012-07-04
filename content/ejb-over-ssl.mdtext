@@ -1,0 +1,61 @@
+Title: EJB over SSL
+
+It is possible to setup client/server requests over SSL.  EJB requests from a remote client can happen two different ways:
+
+ - **https** for when an EJB is running in TomEE
+ - **ejbds** for when an EJB is running in OpenEJB Standalone
+
+Note, TomEE can be setup to support **ejbds**.
+
+## https
+
+First, you'll need to setup Tomcat (TomEE) with SSL as described here:
+
+  [http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html](http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html)
+
+Once that is done and the `tomee` webapp can be accessed with `https`, an EJB client can invoke over `https` using the following
+`InitialContext` setup:
+
+
+    Properties p = new Properties();
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
+    p.put("java.naming.provider.url", "http://127.0.0.1:8080/tomee/ejb");
+    // user and pass optional
+    p.put("java.naming.security.principal", "myuser");
+    p.put("java.naming.security.credentials", "mypass");
+
+    InitialContext ctx = new InitialContext(p);
+
+    MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
+
+
+## ejbds
+
+The SSL version of the `ejbd` protocol is called `ejbds` and is enabled and setup in OpenEJB Standalone by default.
+
+Its configuration `conf/ejbds.properties` looks like this:
+
+    server      = org.apache.openejb.server.ejbd.EjbServer
+    bind        = 127.0.0.1
+    port        = 4203
+    disabled    = false
+    threads     = 200
+    backlog     = 200
+    secure      = true
+    discovery   = ejb:ejbds://{bind}:{port}
+
+To access this service from a remote client, the `InitialContext` would be setup like the following:
+
+    Properties p = new Properties();
+    p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
+    p.put("java.naming.provider.url", "ejbd://localhost:4201");
+    // user and pass optional
+    p.put("java.naming.security.principal", "myuser");
+    p.put("java.naming.security.credentials", "mypass");
+
+    InitialContext ctx = new InitialContext(p);
+
+    MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
+
+### Changing the Chipher Suite
+
