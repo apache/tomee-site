@@ -7,7 +7,7 @@ It is possible to setup client/server requests over SSL.  EJB requests from a re
 
 Note, TomEE can be setup to support **ejbds**.
 
-## https
+# https
 
 First, you'll need to setup Tomcat (TomEE) with SSL as described here:
 
@@ -29,7 +29,7 @@ Once that is done and the `tomee` webapp can be accessed with `https`, an EJB cl
     MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 
 
-## ejbds
+# ejbds
 
 The SSL version of the `ejbd` protocol is called `ejbds` and is enabled and setup in OpenEJB Standalone by default.
 
@@ -57,5 +57,5 @@ To access this service from a remote client, the `InitialContext` would be setup
 
     MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 
-### Changing the Chipher Suite
+## Changing the Chipher Suite
 
