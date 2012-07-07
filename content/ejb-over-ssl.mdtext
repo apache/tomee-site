@@ -57,5 +57,28 @@ To access this service from a remote client, the `InitialContext` would be setup
 
     MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 
-## Changing the Chipher Suite
+## Changing the Cipher Suite
+[This is a pending feature](https://issues.apache.org/jira/browse/OPENEJB-1856)
+By default, the ejbds protocol connects with SSL_DH_anon_WITH_RC4_128_MD5. That means your connection is encrypted and the integrity of the transmission is verified. However, this only protects your from eavesdroppers, it offers absolutely zero protection from Man in the Middle attacks. This sort of attack could be pulled off without your knowledge and the attacker has the ability to intercept, monitor, and even modify your messages. If the attacker could control a router on your connection path, this attack could be trivially pulled off with nothing more but the OpenEJB server and client.
 
+To secure your connections against this sort of attack, your client can cryptographically prove it's talking to the correct server before sending any data. To do this, simply select one or more secure cipher suites that your J2SE provider supports from [this listing](http://docs.oracle.com/cd/E19728-01/820-2550/cipher_suites.html).
+
+You must now instruct the client and server to use that suite.
+
+On the server:
+
+    server      = org.apache.openejb.server.ejbd.EjbServer
+    bind        = 127.0.0.1
+    port        = 4203
+    disabled    = false
+    threads     = 200
+    backlog     = 200
+    secure      = true
+    enabledCipherSuites = TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA
+    discovery   = ejb:ejbds://{bind}:{port}
+
+On the client, you must supply a property:
+
+    -Dopenejb.client.enabledCipherSuites=TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA
+
+The final piece is to make sure your server has available a private certificate that the the client can trust. This can be certificate from an authority or a self signed certificate. The javax.net.ssl.trustStore and javax.net.ssl.keyStore JVM properties [are used to set this up.](http://fusesource.com/docs/broker/5.3/security/SSL-SysProps.html)
