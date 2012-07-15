@@ -16,4 +16,21 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-Insert details here
+If you compile your applications on JDK7 you have to run Apache TomEE 1.0 on jdk7
+
+Configuring TomEE to use JDK7
+-------
+If you have multiple JDK installed on your system you should set JAVA_HOME in your stratup scripts.
+For example if your `JAVA_HOME` is `/usr/local/java/current` edit `catalina.sh`
+and add a line
+
+`JAVA_HOME=/usr/local/java/current/bin`
+
+Alternatively, set `JAVA_HOME` as an environment variable prior to calling `<tomee-home>/bin/startup.sh`
+
+Endorsed libraries directory
+-------
+TomEE 1.0 package comes with and "endorsed" direcotry which contains updates for core JDK6 libraries.
+If you are running JDK7 you should remove al files in this directory.
+
+TomEE 1.1  will detect JDK7 and will not load those files
