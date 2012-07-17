@@ -106,6 +106,22 @@ sub basic {
     return ($rendered, 'html', \%args);
 }
 
+sub swizzle_jira {
+    my %args = @_;
+    my $filepath = "content$args{path}";
+
+    $args{content} = `java -jar lib/swizzle-jirareport-1.6.2-SNAPSHOT-dep.jar $filepath`;
+
+    $args{path} =~ s/\.mdtext$/\.html/;
+    $args{base} = _base($args{path});
+    $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
+
+    my $template_path = "templates/$args{template}";
+
+    my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+    return ($rendered, 'html', \%args);
+}
+
 sub apilinks {
     my $dir = shift;
 

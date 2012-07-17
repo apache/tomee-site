@@ -23,6 +23,8 @@ our @patterns = (
 
     [qr!\.md(text)?$!, basic => { template => "doc.html" } ],
 
+    [qr!\.swjira?$!, swizzle_jira => { template => "doc.html" } ],
+
     [qr!sitemap\.html$!, sitemap => { headers => { title => "Sitemap" }} ],
 
     [qr!dev/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
