@@ -113,7 +113,6 @@ sub swizzle_jira {
     read_text_file($filepath, \%args);
 
     $args{content} = `java -jar lib/swizzle-jirareport-1.6.2-SNAPSHOT-dep.jar $filepath`;
-    print $args{content};
     $args{content} =~ s,Title:.*\n,,;
 
     $args{path} =~ s/\.mdtext$/\.html/;
