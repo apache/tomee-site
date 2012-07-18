@@ -28,6 +28,7 @@ our @patterns = (
     [qr!sitemap\.html$!, sitemap => { headers => { title => "Sitemap" }} ],
 
     [qr!dev/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
+    [qr!dev/jira/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
 
     [qr!sitemap.xml$!, sitemapxml => { headers => {  }} ],
 

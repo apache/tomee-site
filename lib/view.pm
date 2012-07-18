@@ -110,7 +110,11 @@ sub swizzle_jira {
     my %args = @_;
     my $filepath = "content$args{path}";
 
+    read_text_file($filepath, \%args);
+
     $args{content} = `java -jar lib/swizzle-jirareport-1.6.2-SNAPSHOT-dep.jar $filepath`;
+    print $args{content};
+    $args{content} =~ s,Title:.*\n,,;
 
     $args{path} =~ s/\.mdtext$/\.html/;
     $args{base} = _base($args{path});
@@ -202,7 +206,7 @@ sub sitemap {
     opendir my $dh, $dir or die "Can't opendir $dir: $!\n";
     my %data;
     for (map "$dir/$_", grep $_ ne "." && $_ ne ".." && $_ ne ".svn", readdir $dh) {
-        if (-f and /\.mdtext$/) {
+        if (-f and /\.(mdtext|swjira)$/) {
             my $file = $_;
             $file =~ s/^content//;
             no warnings 'once';
@@ -211,7 +215,7 @@ sub sitemap {
                 next unless $file =~ $re;
                 my $s = view->can($method) or die "Can't locate method: $method\n";
                 my ($content, $ext, $vars) = $s->(path => $file, %$args);
-                $file =~ s/\.mdtext$/.$ext/;
+                $file =~ s/\.(mdtext|swjira)$/.$ext/;
                 $data{$file} = $vars;
                 last;
             }
