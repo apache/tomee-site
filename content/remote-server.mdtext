@@ -15,6 +15,7 @@ network to the server, you need to specify different JNDI parameters.
 
 Using OpenEJB's default remote server implementation is pretty straight
 forward. You simply need to:
+
 1. Deploy your bean.
 1. Start the server on the IP and Port you want, 25.14.3.92 and 4201 for
 example.
@@ -52,7 +53,8 @@ Create an initial context in your client as such:
 If you don't have any EJBs or clients to run, try the ubiquitous [Hello World](openejbx30:hello-world.html)
  example.
 Add the following library to your clients classpath:
-* openejb-client-x.x.x.jar
 
+* openejb-client-x.x.x.jar
+* javaee-api-x.x.jar
 
 Both can be found in the lib directory where you installed OpenEJB or in Maven repositories.
