@@ -1,6 +1,6 @@
 Title: Unassigned Items
-#set ( $tomee = $rss.fetch("https://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?assignee=Unassigned&&pid=TOMEE&status=Open&tempMax=100&reset=true&decorator=none") )
-#set ( $openejb = $rss.fetch("https://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?assignee=Unassigned&pid=OPENEJB&status=Open&tempMax=100&reset=true&decorator=none") )
+#set ( $tomee = $rss.fetch("https://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?assignee=Unassigned&&pid=TOMEE&status=Open&tempMax=1000&reset=true&decorator=none") )
+#set ( $openejb = $rss.fetch("https://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?assignee=Unassigned&pid=OPENEJB&status=Open&tempMax=1000&reset=true&decorator=none") )
 #set( $issues = $tomee.issues.union( $openejb.issues ) )
 #set( $priorities = $issues.collect("priority").unique("id").sort("id"))
 
