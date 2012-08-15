@@ -26,7 +26,7 @@ and create/deploy your first project is available on YouTube here: [Getting Star
 
 1. Download and install both Apache TomEE and Eclipse.   
 
-1. Start Eclipse and from the main menu go to File - New - Dynamic Web Project 
+1. Start Eclipse and from the main menu go to **File** - **New** - **Dynamic Web Project**
 
 1. Enter a new project name
 
