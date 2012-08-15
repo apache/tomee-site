@@ -73,6 +73,8 @@ sub basic {
     my %args = @_;
     my $filepath = "content$args{path}";
 
+    print "basic $filepath";
+
     read_text_file($filepath, \%args);
 
     $args{path} =~ s/\.mdtext$/\.html/;
@@ -102,7 +104,12 @@ sub basic {
         $args{content} =~ s/{include:$include}/$text/g;
     }
 
+    print " - rendering";
+
     my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+
+    print " - complete\n";
+
     return ($rendered, 'html', \%args);
 }
 
@@ -110,18 +117,30 @@ sub swizzle_jira {
     my %args = @_;
     my $filepath = "content$args{path}";
 
+    print "swizzle_jira $filepath";
+
     read_text_file($filepath, \%args);
+
+    print " - java";
 
     $args{content} = `java -jar lib/swizzle-jirareport-1.6.2-SNAPSHOT-dep.jar $filepath`;
     $args{content} =~ s,Title:.*\n,,;
 
     $args{path} =~ s/\.mdtext$/\.html/;
     $args{base} = _base($args{path});
+
+    print " - breadcrumbs";
+
     $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
 
     my $template_path = "templates/$args{template}";
 
+    print " - rendering";
+
     my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+
+    print " - complete\n";
+
     return ($rendered, 'html', \%args);
 }
 
@@ -163,15 +182,25 @@ sub example {
     my %args = @_;
     my $filepath = "content$args{path}";
 
+    print "example $filepath";
+
     read_text_file($filepath, \%args);
 
     $args{path} =~ s/README\.md(text)?$/index\.html/;
     $args{base} = _base($args{path});
+
+    print " - breadcrumbs";
+
     $args{breadcrumbs} = _breadcrumbs($args{path}, $args{base});
+
+    print " - zipurl";
+
     $args{zipurl} = _zipurl($args{path});
 
     my $dir = $filepath;
     $dir =~ s!/[^/]+$!!;
+
+    print " - apilinks";
 
     $args{apis} = apilinks($dir);
 
@@ -188,8 +217,11 @@ sub example {
     $args{example} = $example;
 
 #    print Dumper( \%args );
+    print " - rendering";
 
     my $rendered = Dotiac::DTL->new($template_path)->render(\%args);
+
+    print " - complete\n";
 
     return ($rendered, 'html', \%args);
 }
