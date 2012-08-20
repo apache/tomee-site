@@ -151,8 +151,7 @@ The 'name' attribute can still use templates if it likes, such as:
 
     <openejb-jar>
       <ejb-deployment ejb-name="FooBean">
-        <jndi name="ejb/{interfaceClass.simpleName}"
-interface="org.superbiz.Foo"/> 
+        <jndi name="ejb/{interfaceClass.simpleName}" interface="org.superbiz.Foo"/> 
       </ejb-deployment>
     </openejb-jar>
 
