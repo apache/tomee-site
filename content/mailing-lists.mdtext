@@ -1,4 +1,5 @@
 Title: Mailing Lists
+
 <a name="MailingLists-UserMailingList"></a>
 # User Mailing List
 
@@ -8,9 +9,9 @@ the pulse of the project.
 
 Medium volume mailing list, dedicated to the  OpenEJB community.
 
-* [users@openejb.apache.org](mailto:users@openejb.apache.org.html)
-* [Subscribe](mailto:users-subscribe@openejb.apache.org.html)
-* [Unsubscribe](mailto:users-unsubscribe@openejb.apache.org.html)
+* [users@openejb.apache.org](mailto:users@openejb.apache.org)
+* [Subscribe](mailto:users-subscribe@openejb.apache.org)
+* [Unsubscribe](mailto:users-unsubscribe@openejb.apache.org)
 
 OpenEJB Users Online Archives/Forums:
 <table>
@@ -32,9 +33,9 @@ Join in on the develpment and planning discussions. Get the scoop on the
 changes that take place in OpenEJB as our team is hard at work in
 developing and refining the OpenEJB container system.
 
-* [dev@openejb.apache.org](mailto:dev@openejb.apache.org.html)
-* [Subscribe](mailto:dev-subscribe@openejb.apache.org.html)
-* [Unsubscribe](mailto:dev-unsubscribe@openejb.apache.org.html)
+* [dev@openejb.apache.org](mailto:dev@openejb.apache.org)
+* [Subscribe](mailto:dev-subscribe@openejb.apache.org)
+* [Unsubscribe](mailto:dev-unsubscribe@openejb.apache.org)
 
 OpenEJB Developers Online Archives/Forums:
 <table>
@@ -56,9 +57,9 @@ perl scripts for cvs email notification as well as added a few features
 that are all new. This new list provides you with as-it-happens information
 regarding OpenEJB development.
 
-* [commits@openejb.apache.org](mailto:commits@openejb.apache.org.html)
-* [Subscribe](mailto:commits-subscribe@openejb.apache.org.html)
-* [Unsubscribe](mailto:commits-unsubscribe@openejb.apache.org.html)
+* [commits@openejb.apache.org](mailto:commits@openejb.apache.org)
+* [Subscribe](mailto:commits-subscribe@openejb.apache.org)
+* [Unsubscribe](mailto:commits-unsubscribe@openejb.apache.org)
 
 OpenEJB Commits Online Archives/Forums:
 <table>
