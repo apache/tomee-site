@@ -25,7 +25,7 @@ conditionally added to the _chain_ if the property
 1. Internally ValidateModules uses the [*AppValidator.validate()* method](https://github.com/apache/openejb/tree/trunk/openejb/container/openejb-core/src/main/java/org/apache/openejb/config/ValidateModules.java)
 
 1. This method then performs validation using a number of rules. _A
-validation rule/s is represented by a class implementing ValidationRule_.
+validation rule/s is represented by a class implementing ValidationRule.
 In fact, all the classes checking the validation rules , extend
 ValidationBase, which further implements ValidationRule.
 
@@ -34,8 +34,6 @@ ValidationBase, which further implements ValidationRule.
 The _list of rules_ being executed can actually be found in the following
 method of [AppValidator](https://github.com/apache/openejb/tree/trunk/openejb/container/openejb-core/src/main/java/org/apache/openejb/config/AppValidator.java)
 1. The above rules are then executed one by one
-{snippet:id=code2|url=openejb3/container/openejb-
-core/src/main/java/org/apache/openejb/config/AppValidator.java|lang=java}
 
 1. Each module has an attached ValidationContext , which maintains a list of
 failures, warnings and errors. As the above rules are being invoked, the
@@ -98,7 +96,7 @@ message key, then that key should exist in the messages.properties file
 
     
    1.    The first thing to note is that we are running the test using our
-own custom runner i.e. @RunWith(ValidationRunner.class). This runner
+own custom runner i.e. `@RunWith(ValidationRunner.class)`. This runner
 ensures that the keys we are testing, actually exist in the
 messages.properties file. It does a lot more, as we shall see later    
     2.    The test method
@@ -120,8 +118,8 @@ then the test fails.
 The test must cause a Validation Failure otherwise the test framework does
 not get invoked. For example, in the above code, a Key of type WARNING is
 being tested, however the test is purposely being failed by putting an
-@AroundInvoke around the method with zero arguments
-{note}
+`@AroundInvoke` around the method with zero arguments
+
 
 1. Once you have written the test and successfully run it, you now need to
 generate the report. Simply invoke the following maven command
@@ -165,4 +163,3 @@ being allowed to run.
 1. Sometimes you want to write a test where you do not want any
 ValidationFailureException to be thrown, in those scenarios, simply
 annotate your test with @Keys and do not specify any @Key in it
-{info}
