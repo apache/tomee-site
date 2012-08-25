@@ -29,7 +29,7 @@ validation rule/s is represented by a class implementing ValidationRule.
 In fact, all the classes checking the validation rules , extend
 ValidationBase, which further implements ValidationRule.
 
-    <img src="images/ClassDiagram.png" alt="" align="center">
+    <img src="../images/ClassDiagram.png" alt="" align="center">
 
 The _list of rules_ being executed can actually be found in the following
 method of [AppValidator](https://github.com/apache/openejb/tree/trunk/openejb/container/openejb-core/src/main/java/org/apache/openejb/config/AppValidator.java)
