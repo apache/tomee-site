@@ -17,7 +17,7 @@ tests using example snippets.
 implementations in the chain is
 `org.apache.openejb.config.ValidateModules`. `ValidateModules` is
 conditionally added to the _chain_ if the property
-`openejb.validation.skip=false`. If this property is false, then
+`openejb.validation.skip=true|false`. If this property is false, then
 `ValidateModules` is used to kick off the Validation Framework
 
 [Configuration Factory](https://github.com/apache/openejb/tree/trunk/openejb/container/openejb-core/src/main/java/org/apache/openejb/config/ConfigurationFactory.java)
@@ -67,9 +67,7 @@ Here is an *example validation message*
     # 4 - EJB Class name
     1.no.busines.method	  No such business method
     2.no.busines.method	  Business method {0} not implemented.
-    3.no.busines.method	  Business method {1} not implemented. The method
-was declared in the {2} interface {3}, but not implemented in the ejb class
-{4}
+    3.no.busines.method	  Business method {1} not implemented. The method was declared in the {2} interface {3}, but not implemented in the ejb class {4}
 
 1. The validation framework does not stop processing on the first validation
 failure, but keeps going and checking for other validation errors and
