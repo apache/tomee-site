@@ -1,5 +1,6 @@
 DirectoryIndex index.html README.html
-Redirect permanent /3.0/apache-tomee.html              http://openejb.apache.org/apache-tomee.html
+Redirect permanent /3.0/tomcat.html             http://openejb.apache.org/apache-tomee.html
+Redirect permanent /3.0/apache-tomee.html       http://openejb.apache.org/apache-tomee.html
 Redirect permanent /3.0/tomee.html              http://openejb.apache.org/apache-tomee.html
 Redirect permanent /download.html               http://openejb.apache.org/downloads.html
 Redirect permanent /3.0/index.html              http://openejb.apache.org/documentation.html
