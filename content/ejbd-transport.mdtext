@@ -20,11 +20,11 @@ Here is the servlet as defined in TomEE webapp:
     </servlet-mapping>
 
 
-You can easily remove if you don't use remote EJBs. Another way is to deactivate the servlet
+You can easily remove it if you don't use remote EJBs. Another way is to deactivate the servlet
 using the "activated" init parameter of the servlet.
 
 Finally you can move this servlet in your own webapp if you want to use a provider url
 containing your webapp context. Simply copy paste the servlet definition in your web.xml
 and set the url mapping to what you want (let say /foo/*). Then use the provider url
-http://&lt;host&gt;:&lt;port&gt;/&lt;webapp context name&lt;/foo
+http://&lt;host&gt;:&lt;port&gt;/&lt;webapp context name&lgt;/foo
 
