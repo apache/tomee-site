@@ -1,0 +1,30 @@
+Title: Ejbd Transport
+
+Ejbd Transport is different using TomEE or OpenEJB.
+
+In OpenEJB it uses openejb http layer and ejbd is configured through ejbd service (same for ejbds).
+So to activate/deactivate them use conf/ejbd(s).properties files. You can set property disabled to true
+if you don't want them to be started.
+
+In TomEE the transport is the Tomcat one. It uses a servlet brought by TomEE webapp.
+Here is the servlet as defined in TomEE webapp:
+
+    <servlet>
+        <servlet-name>ServerServlet</servlet-name>
+        <servlet-class>org.apache.openejb.server.httpd.ServerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServerServlet</servlet-name>
+        <url-pattern>/ejb/*</url-pattern>
+    </servlet-mapping>
+
+
+You can easily remove if you don't use remote EJBs. Another way is to deactivate the servlet
+using the "activated" init parameter of the servlet.
+
+Finally you can move this servlet in your own webapp if you want to use a provider url
+containing your webapp context. Simply copy paste the servlet definition in your web.xml
+and set the url mapping to what you want (let say /foo/*). Then use the provider url
+http://&lt;host&gt;:&lt;port&gt;/&lt;webapp context name&lt;/foo
+
