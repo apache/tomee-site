@@ -5,32 +5,36 @@ We are pleased to announce the release of Apache TomEE 1.5.0. It’s been quite 
 We’ve gotten a lot of feedback and spent a lot of time polishing that new release without forgetting to bring again so many features.
 
 While still supporting the strict Java EE 6 – Web Profile 1.0, this new release enables to add JAX-RS thanks to a specific distribution. To make things clear, three TomEE distributions are at your disposal now:
-1. Web Profile (default),
-2. JAX-RS,
-3. Plus.
+1.  Web Profile (default),
+2.  JAX-RS,
+3.  Plus.
 
 Any doubt about what distribution we provide and what they contain? Go to the comparison page where all is explained!
-*[JL] TODO, check il we can speak about the tck and certification. Add the link to http://tomee.apache.org/comparison.html ???*
+
+**[JL] TODO, check il we can speak about the tck and certification. Add the link to http://tomee.apache.org/comparison.html ???**
 
 If you didn’t get the right distribution, no worries, Apache TomEE is still tight but powerful, you can download another package quickly and make it start even quicker. Even stronger, Apache TomEE can detect some cases and fires a warning advising you to move to another distribution supporting the features you need.
 
 Another great feature is the extended support for database connection pools. Historically, we’ve supported Apache Commons-DBCP and we will still do it. But we are proud to support the native Apache Tomcat connection pool. Forked from Apache Commons-DBCP, it has been reworked to become lighter and more responsive under heavy load. It also pushishes useful statistics under JMX. Because Apache TomEE community is open to any useful request, we also support BoneCP out of the box.
 
 In this release, the community reworked the Arquillian support, to make it even better. No more reason to skip developping test and testing your application.
-*[JM] give some details here?*
+
+**[JM] give some details here?**
 
 In the same area, we’ve decided to provide users with a featureful Maven plugin. The tomee-maven-plugin is now available to get the most from Apache TomEE. Indeed, this plugin can make help you save a lot of time. It’s easy to use and to configure. It allows to choose the TomEE version of course, but also the distribution you wish (plus, jaxrs, or default for the web profile one). You can of course, start/stop Apache TomEE, but you can also deploy/undeploy an archive or check the list of EJBs and edpoints currently deployed.
-*[JL] Add a link to the documentation online*
+
+**[JL] Add a link to the documentation online**
 
 The release 1.5.0 is clearly cloud ready. We went a step forward to cloud deployements. The provisionning package, the remote deployer is are now able to deploy against a single TomEE instance, as well as a cluster of nodes. To make things easier configuration files support place holders.
 
 We’d like to thank again everyone who gave feedback and contibuted to improve Apache TomEE days after days.
 
 Finally, this release got a lot of bug fixes and enhancements. More details are available on the donwload page with release notes.
-*[JL] TODO, update the page with download link and publish openejb+tomee release notes from JIRA*
+
+**[JL] TODO, update the page with download link and publish openejb+tomee release notes from JIRA**
 
 Can’t wait! The download page is up to date and binaries have been freshly updated.
 
 
-*[JL] If needed, we have also the deploy time unhencement for OpenJPA, we support other JPA providers in webapps, we can mock and inject mocks in unit tests, IntelliJ Idea support (not so good for the moment).$
+**[JL] If needed, we have also the deploy time unhencement for OpenJPA, we support other JPA providers in webapps, we can mock and inject mocks in unit tests, IntelliJ Idea support (not so good for the moment).**
 
