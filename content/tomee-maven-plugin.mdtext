@@ -1,0 +1,154 @@
+Title: TomEE Maven Plugin
+
+Inspired by the Jetty Maven Plugin, the TomEE Maven Plugin is a feature-rich
+plugin that allows for:
+
+ - easy provisioning of a TomEE server
+ - server start and stop
+ - application deploy and undeploy
+
+Simply add the following to your `pom.xml`
+
+    <plugin>
+      <groupId>org.apache.openejb.maven</groupId>
+      <artifactId>tomee-maven-plugin</artifactId>
+      <version>1.0.0</version>
+      <configuration>
+        <tomeeVersion>1.5.0</tomeeVersion>
+        <tomeeClassifier>plus</tomeeClassifier>
+      </configuration>
+    </plugin>
+
+The available commands can be discovered running:
+
+    mvn tomee:help
+
+Should print output like the following:
+
+    [INFO] Available commands:
+    [INFO] 	- tomee:run: run and wait for the server
+    [INFO] 	- tomee:debug: run in debug mode and wait for the server (alias of run)
+    [INFO] 	- tomee:start: run the server
+    [INFO] 	- tomee:stop: stop the server (to use with start)
+    [INFO] 	- tomee:configtest: run configtest tomcat command
+    [INFO] 	- tomee:deploy <path>: deploy path archive
+    [INFO] 	- tomee:undeploy <path>: undeploy path archive. Note it should be the same path than the one used in deploy command
+    [INFO] 	- tomee:list: list ejbs deployed
+    [INFO] 	- tomee:build: build tomee but does not start it
+    [INFO] 	- tomee:help: this
+
+
+Available configuration elements:
+
+<table>
+<tbody>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>tomeeShutdownPort</td>
+<td>The http port to use.</td>
+</tr>
+<tr>
+<td>tomeeHttpPort</td>
+<td>The shutdown port to use.</td>
+</tr>
+<tr>
+<td>args</td>
+<td>Additional JVM arguments.</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>Activate remote debugging on TomEE.</td>
+</tr>
+<tr>
+<td>debugPort</td>
+<td>Port to use for remote debugging when debug=true.</td>
+</tr>
+<tr>
+<td>config</td>
+<td>Folder containing your custom configuration (src/main/tomee/conf by default).</td>
+</tr>
+<tr>
+<td>bin</td>
+<td>Folder containing your custom scripts (src/main/tomee/bin by default).</td>
+</tr>
+<tr>
+<td>lib</td>
+<td>Folder containing your custom libraries (src/main/tomee/lib by default).</td>
+</tr>
+<tr>
+<td>systemVariables</td>
+<td>Additional system properties.</td>
+</tr>
+<tr>
+<td>libs</td>
+<td>Additional libraries put in tomee/lib. It understands maven format groupId:artifactId:version</td>
+</tr>
+<tr>
+<td>webapps</td>
+<td>Additional webapps. It understands maven format too.</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>Additional ear or jar/ejbmodule. It understands maven format too.</td>
+</tr>
+<tr>
+<td>warFile</td>
+<td>Path to the webapp, default is using the war of current project.</td>
+</tr>
+<tr>
+<td>removeDefaultWebapps</td>
+<td>Remove or not tomcat webapps (manager, host-manager…) to gain some seconds at startup.</td>
+</tr>
+<tr>
+<td>tomeeVersion</td>
+<td>The version of the TomEE artifact used to deploy the application.</td>
+</tr>
+<tr>
+<td>tomeeGroupId</td>
+<td>The groupId of the TomEE artifact used to deploy the application.</td>
+</tr>
+<tr>
+<td>tomeeArtifactId</td>
+<td>The artifactId of the TomEE artifact used to deploy the application</td>
+</tr>
+<tr>
+<td>tomeeType</td>
+<td>The type of the TomEE artifact used to deploy the application (zip).</td>
+</tr>
+<tr>
+<td>tomeeClassifier</td>
+<td>The classifier of the TomEE artifact used to deploy the application (zip).</td>
+</tr>
+</tbody>
+</table>
+
+
+## Provisioning Example
+
+This plugin is also usable in projects which are not war. For instance you can use it in a pom
+project to setup a TomEE install, add libraries, deploy apps then run the server.
+
+      <plugin>
+        <groupId>org.apache.openejb.maven</groupId>
+        <artifactId>tomee-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <configuration>
+          <tomeeVersion>1.5.0</tomeeVersion>
+          <tomeeClassifier>plus</tomeeClassifier>
+          <debug>false</debug>
+          <debugPort>5005</debugPort>
+          <args>-Dfoo=bar</args>
+          <config>${project.basedir}/src/test/tomee/conf</config>
+          <libs>
+            <lib>mysql:mysql-connector-java:5.1.20</lib>
+          </libs>
+          <webapps>
+             <webapp>org.superbiz:myapp:4.3:war?name=ROOT</webapp>
+             <webapp>org.superbiz:api:1.1:war</webapp>
+          </webapps>
+        </configuration>
+      </plugin>
+
