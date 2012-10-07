@@ -181,7 +181,7 @@ project to setup a TomEE install, add libraries, deploy apps then run the server
           </apps>
           <libs>
               <lib>mysql:mysql-connector-java:5.1.21</lib>
-              <lib>unzip:org.superbiz:hibernate-bundle:4.1.0.Final</lib>
+              <lib>unzip:org.superbiz:hibernate-bundle:4.1.0.Final:zip</lib>
               <lib>remove:openjpa-</lib>
           </libs>
         </configuration>
