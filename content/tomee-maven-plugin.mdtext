@@ -103,6 +103,14 @@ Available configuration elements:
 <td>Remove or not tomcat webapps (manager, host-manager…) to gain some seconds at startup.</td>
 </tr>
 <tr>
+<td>removeTomeeWebapp</td>
+<td>Remove TomEE webapp (Admin GUI + EJbd transport)</td>
+</tr>
+<tr>
+<td>keepServerXmlAsthis</td>
+<td>If a server.xml was provided don't use port configuration to change it (Note: the stopport should match the configured one.)</td>
+</tr>
+<tr>
 <td>tomeeVersion</td>
 <td>The version of the TomEE artifact used to deploy the application.</td>
 </tr>
@@ -122,9 +130,28 @@ Available configuration elements:
 <td>tomeeClassifier</td>
 <td>The classifier of the TomEE artifact used to deploy the application (zip).</td>
 </tr>
+<tr>
+<td>skipCurrentProject</td>
+<td>Don't try to deploy current project even if it is a war. (default to false)</td>
+</tr>
+<tr>
+<td>quickSession</td>
+<td>Use a quick session id generator (Random instead of SecuredRandom - default to true)</td>
+</tr>
 </tbody>
 </table>
 
+## Some more tweak
+
+The lib tag allows to enrich the container with some additional librairies.
+
+It supports some interesting pattern to complete the default maven format.
+
+* remove:&lt;some prefix of jar in lib folder&gt;: remove all jar starting with the specified prefix
+* unzip:&lt;some maven zip&gt;: extract the zip in lib folder
+* ?name=&lt;new-name&gt;: rename the libary once copied in lib folder
+
+Note: the name tweak can be used to rename applications too
 
 ## Provisioning Example
 
@@ -146,9 +173,17 @@ project to setup a TomEE install, add libraries, deploy apps then run the server
             <lib>mysql:mysql-connector-java:5.1.20</lib>
           </libs>
           <webapps>
-             <webapp>org.superbiz:myapp:4.3:war?name=ROOT</webapp>
-             <webapp>org.superbiz:api:1.1:war</webapp>
+             <webapp>org.superbiz:myapp:4.3?name=ROOT</webapp>
+             <webapp>org.superbiz:api:1.1</webapp>
           </webapps>
+          <apps>
+              <app>org.superbiz:mybugapp:3.2:ear</app>
+          </apps>
+          <libs>
+              <lib>mysql:mysql-connector-java:5.1.21</lib>
+              <lib>unzip:org.superbiz:hibernate-bundle:4.1.0.Final</lib>
+              <lib>remove:openjpa-</lib>
+          </libs>
         </configuration>
       </plugin>
 
