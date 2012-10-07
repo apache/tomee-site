@@ -25,6 +25,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Java ServerPages (JSP)</td>
 <td>(/)</td>
@@ -33,15 +34,16 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Java ServerFaces (JSF)</td>
 <td></td>
 <td>(/)</td>
 <td>(/)</td>
 <td>(/)</td>
-<td>(/)</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Java Transaction API (JTA)</td>
 <td></td>
@@ -50,6 +52,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Java Persistence API (JPA)</td>
 <td></td>
@@ -58,6 +61,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Java Contexts and Dependency Injection (CDI)</td>
 <td></td>
@@ -66,6 +70,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Java Authentication and Authorization Service (JAAS)</td>
 <td></td>
@@ -74,6 +79,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Java Authorization Contract for Containers (JACC)</td>
 <td></td>
@@ -82,6 +88,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>JavaMail API</td>
 <td></td>
@@ -90,6 +97,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Bean Validation</td>
 <td></td>
@@ -98,6 +106,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Enterprise JavaBeans</td>
 <td></td>
@@ -106,14 +115,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
-<tr>
-<td>Java API for XML Web Services (JAX-WS)</td>
-<td></td>
-<td></td>
-<td></td>
-<td>(/)</td>
-<td>(/)</td>
-</tr>
+
 <tr>
 <td>Java API for RESTful Web Services (JAX-RS)</td>
 <td></td>
@@ -122,6 +124,16 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
+<tr>
+<td>Java API for XML Web Services (JAX-WS)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>(/)</td>
+<td>(/)</td>
+</tr>
+
 <tr>
 <td>Java EE Connector Architecture</td>
 <td></td>
@@ -130,6 +142,7 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 <tr>
 <td>Java Messaging Service (JMS)</td>
 <td></td>
@@ -138,5 +151,6 @@ Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE
 <td>(/)</td>
 <td>(/)</td>
 </tr>
+
 </table>
 
