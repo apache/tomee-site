@@ -12,7 +12,7 @@ Title: Apache TomEE 1.5.0 Release Notes
     <li><a href="https://issues.apache.org/jira/browse/TOMEE-428">TOMEE-428</a> MyFaces 2.1.9</li>
     <li><a href="https://issues.apache.org/jira/browse/TOMEE-215">TOMEE-215</a> CXF 2.6.2</li>
     <li><a href="https://issues.apache.org/jira/browse/TOMEE-214">TOMEE-214</a> Arquillian 1.0.1</li>
-    <li><a href="https://issues.apache.org/jira/browse/TOMEE-214">TOMEE-458</a> BVal 0.5</li>
+    <li><a href="https://issues.apache.org/jira/browse/TOMEE-458">TOMEE-458</a> BVal 0.5</li>
     <li><a href="https://issues.apache.org/jira/browse/OPENEJB-1894">OPENEJB-1894</a> karaf 2.2.9</li>
 </ul>
 
