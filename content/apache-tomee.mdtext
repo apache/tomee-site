@@ -20,7 +20,7 @@ The Web Profile version of TomEE contains
  - **JTA** - Apache Geronimo Transaction
  - **Servlet** - Apache Tomcat
  - **Javamail** - Apache Geronimo JavaMail
- - **Bean Validation** - Apache Bean Validation
+ - **Bean Validation** - Apache BVal
 
 ## TomEE+
 
