@@ -123,3 +123,133 @@ above resources like so:
     javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
     javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
 
+# MDB ActivationConfig
+
+
+Here, the value for `destination` is the physical name of the desired destination. The value for
+`destinationType` is the class name that defines the type of destination. It should be `javax.jms.Queue` or `javax.jms.Topic`.
+
+The Activation Spec properties that can be configured are:
+
+<TABLE><TBODY>
+<TR>
+<TH> Property Name </TH>
+<TH> Required </TH>
+<TH> Default Value </TH>
+<TH> Description </TH>
+</TR>
+<TR>
+<TD> acknowledgeMode </TD>
+<TD> no </TD>
+<TD> Auto-acknowledge </TD>
+<TD> The JMS Acknowledgement mode to use. Valid values are: Auto-acknowledge or Dups-ok-acknowledge </TD>
+</TR>
+<TR>
+<TD> clientId </TD>
+<TD> no </TD>
+<TD> set in resource adapter </TD>
+<TD> The JMS Client ID to use (only really required for durable topics) </TD>
+</TR>
+<TR>
+<TD> destinationType </TD>
+<TD> yes </TD>
+<TD> null </TD>
+<TD> The type of destination; a queue or topic </TD>
+</TR>
+<TR>
+<TD> destination </TD>
+<TD> yes </TD>
+<TD> null </TD>
+<TD> The destination name (queue or topic name) </TD>
+</TR>
+<TR>
+<TD> enableBatch </TD>
+<TD> no </TD>
+<TD> false </TD>
+<TD> Used to enable transaction batching for increased performance </TD>
+</TR>
+<TR>
+<TD> maxMessagesPerBatch </TD>
+<TD> no </TD>
+<TD> 10 </TD>
+<TD> The number of messages per transaction batch </TD>
+</TR>
+<TR>
+<TD> maxMessagesPerSessions </TD>
+<TD> no </TD>
+<TD> 10 </TD>
+<TD> This is actually the prefetch size for the subscription.  (Yes, badly named). </TD>
+</TR>
+<TR>
+<TD> maxSessions </TD>
+<TD> no </TD>
+<TD> 10 </TD>
+<TD> The maximum number of concurrent sessions to use </TD>
+</TR>
+<TR>
+<TD> messageSelector </TD>
+<TD> no </TD>
+<TD> null </TD>
+<TD>Message Selector</A> to use on the subscription to perform content based routing filtering the messages </TD>
+</TR>
+<TR>
+<TD> noLocal </TD>
+<TD> no </TD>
+<TD> false </TD>
+<TD> Only required for topic subscriptions; indicates if locally published messages should be included in the subscription or not </TD>
+</TR>
+<TR>
+<TD> password </TD>
+<TD> no </TD>
+<TD> set in resource adapter </TD>
+<TD> The password for the JMS connection </TD>
+</TR>
+<TR>
+<TD> subscriptionDurability </TD>
+<TD> no </TD>
+<TD> NonDurable </TD>
+<TD> Whether or not a durable (topic) subscription is required. Valid values are: Durable or NonDurable </TD>
+</TR>
+<TR>
+<TD> subscriptionName </TD>
+<TD> no </TD>
+<TD> null </TD>
+<TD> The name of the durable subscriber. Only used for durable topics and combined with the clientID to uniquely identify the durable topic subscription </TD>
+</TR>
+<TR>
+<TD> userName </TD>
+<TD> no </TD>
+<TD> set in resource adapter </TD>
+<TD> The user for the JMS connection </TD>
+</TR>
+<TR>
+<TD> useRAManagedTransaction </TD>
+<TD> no </TD>
+<TD> false </TD>
+<TD> Typically, a resource adapter delivers messages to an endpoint which is managed by a container.  Normally, this container likes to be the one that wants to control the transaction that the inbound message is being delivered on.  But sometimes, you want to deliver to a simpler container system that will not be controlling the inbound transaction.  In these cases, if you set useRAManagedTransaction to true, the resource adapter will commit the transaction if no exception was generated from the MessageListener and rollback if an exception is thrown. </TD>
+</TR>
+<TR>
+<TD> initialRedeliveryDelay </TD>
+<TD> no </TD>
+<TD> 1000 </TD>
+<TD> The delay before redeliveries start.  Also configurable on the ResourceAdapter </TD>
+</TR>
+<TR>
+<TD> maximumRedeliveries </TD>
+<TD> no </TD>
+<TD> 5 </TD>
+<TD> The maximum number of redeliveries or -1 for no maximum. Also configurable on the ResourceAdapter </TD>
+</TR>
+<TR>
+<TD> redeliveryBackOffMultiplier </TD>
+<TD> no </TD>
+<TD> 5 </TD>
+<TD> The multiplier to use if exponential back off is enabled. Also configurable on the ResourceAdapter </TD>
+</TR>
+<TR>
+<TD> redeliveryUseExponentialBackOff </TD>
+<TD> no </TD>
+<TD> false </TD>
+<TD> To enable exponential backoff. Also configurable on the ResourceAdapter </TD>
+</TR>
+</TBODY></TABLE>
