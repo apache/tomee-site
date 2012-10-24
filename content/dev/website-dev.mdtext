@@ -49,27 +49,3 @@ install just those things.
     ./build_site.pl  --source-base ~/path/to/website-source --target-base /tmp/site
 
 All the generated html content will be under `/tmp/site/content`
-
-## Cleaning out old files
-
-Currently, if you've used svn directly to delete a file, it won't be deleted from the stanging repo.
-
-You can however directly checkout the staging repo and modify its contents.
-
-A little script can help keep the current docs in sync with the generated docs:
-
-    #!/bin/bash
-
-    svn co http://svn.apache.org/repos/asf/openejb/site/trunk/content current
-    svn co https://svn.apache.org/repos/infra/websites/staging/openejb/trunk/content staging
-
-    find staging -name '*.html' | while read n; do
-        x="${n/staging\//current/}"
-        [ -f "$x" ] && continue
-        [ -f "${x/.html/.mdtext}" ] && continue
-        [ -f "${x/.html/.md}" ] && continue
-
-        echo "$n"
-        svn rm "$n"
-    done
-    svn ci -m "cleaning out docs removed from main site source" staging
