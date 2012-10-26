@@ -23,7 +23,7 @@ Deploying in TomEE is quite simple.
 You could deploy your application just like how you would deploy with Tomcat. For an example, [tomee-and-eclipse](tomee-and-eclipse.html) shows
 how to use TomEE along with Eclipse.
 
-Or you could simply package your application as a war/ear and "drop it in" tomee/webapps folder.
+Or you could simply package your application as a war and "drop it in" tomee/webapps folder or as an ear and "drop it in" tomee/apps folder.
 
 On a related note, read on to learn about packaging EJBs in a WAR.
 
