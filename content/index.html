@@ -106,8 +106,13 @@
               }, 700);
             </script>
         </div>
-        <div class="span-one-third" style="width: 250px">
-            <iframe src="https://www.ohloh.net/p/4380/widgets/project_basic_stats.html" scrolling="no" style="height: 200px; width: 250px; border: none;"></iframe>
+        <div class="span-one-third">
+            <style type="text/css">
+	              iframe {
+                       zoom: 80%;
+	              }
+            </style>
+            <script type="text/javascript" src="http://www.ohloh.net/p/4380/widgets/project_basic_stats.js"></script>
         </div>
     </div>
 {% endblock %}
