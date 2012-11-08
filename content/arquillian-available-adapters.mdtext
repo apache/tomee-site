@@ -1,15 +1,13 @@
 Title: TomEE and Arquillian
 
-{info
-See [Arquillian.org](http://arquillian.org) for some great quickstart information on Arquillian itself.
-}
+Check out the [Getting started](arquillian-getting-started.html) page if you are not familiar with Arquillian.
 
 All the Aqruillian Adapters for TomEE support the following configuration options in the arquillian.xml:
 
     <container qualifier="tomee" default="true">
         <configuration>
-            <property name="httpPort">0</property>
-            <property name="stopPort">0</property>
+            <property name="httpPort">-1</property>
+            <property name="stopPort">-1</property>
         </configuration>
     </container>
 
@@ -22,21 +20,26 @@ The above can also be set as system properties rather than via the arquillian.xm
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <systemPropertyVariables>
-              <tomee.httpPort>0</tomee.httpPort>
-              <tomee.stopPort>0</tomee.stopPort>
+              <tomee.httpPort>-1</tomee.httpPort>
+              <tomee.stopPort>-1</tomee.stopPort>
             </systemPropertyVariables>
           </configuration>
         </plugin>
       </plugins>
     </build>
 
-When a port is set to zero, a random port will be chosen.  This is key to avoiding port conflicts on CI systems or for just plain clean testing.
+When a port is set to -1, a random port will be chosen.  This is key to avoiding port conflicts on CI systems or for just plain clean testing.
 
 The TomEE Arquillian adapters will export the actual port chosen back as a system propert using the same name.  The test case can use the property to retrieve the port and contact the server.
 
     URL url = new URL("http://localhost:" + System.getProperty("tomee.httpPort");
     // use the URL to connect to the server
 
+When you are actually using a test on the client side, you can use instead
+
+	@Arquillian private URL url;
+
+The url will get injected by Arquillian. Be careful, that injection only works if your are on the client side (it does not make sense in the server side). So, if for a specific need to need it, just use the system property.
 
 # TomEE Embedded Adapter
 
