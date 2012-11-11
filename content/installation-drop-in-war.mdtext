@@ -16,6 +16,11 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
+<div class="alert-message">
+   <strong>Feedback Welcome!</strong>
+   Please note that the instructions below do not currently work with the 1.5.0 binaries due to a bug, but this has been been resolved in more recent snapshots. If you are using 1.5.0, please follow the manual installation instructions [here](manual-installation.html).
+</div>
+
 If you prefer, TomEE can be setup by deploying a .war file into an existing Tomcat installation, as opposed to using the all-in-one bundle. This guide provides a set of step-by-step instructions to this approach.
 
  - Update $CATALINA_HOME/conf/tomcat-users.xml to add a tomee user to allow access to the console
