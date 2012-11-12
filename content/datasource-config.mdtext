@@ -1,6 +1,5 @@
 Title: DataSource Configuration
 
-
 A DataSource can be declared via xml in the `<tomee-home>/conf/tomee.xml` file or in a `WEB-INF/resources.xml` file using a declaration like the following.  All properties in the element body are optional.
 
     <Resource id="myDataSource" type="javax.sql.DataSource">
@@ -65,6 +64,9 @@ Alternatively, a DataSource can be declared via properties in the `<tomee-home>/
     myDataSource.validationQuery = 
 
 Properties and xml can be mixed.  Properties will override the xml allowing for easy configuration change without the need for ${} style variable substitution.  Properties are not case sensitive.  If a property is specified that is not supported by the declared DataSource a warning will be logged.  If a DataSource is needed by the application and one is not declared, TomEE will create one dynamically using default settings.  Multiple DataSource declarations are allowed.
+
+See the [Common DataSource Configurations](common-datasource-configurations.html) page for examples of configuring datasources for Derby, MySQL, Oracle and other common databases.
+
 # Supported Properties
 <table>
 <tr>
@@ -454,4 +456,3 @@ destroyed and removed from the pool
 NOTE - for a true value to have any effect, the
 timeBetweenEvictionRunsMillis property must be a positive
 number and the ValidationQuery parameter must be set.
-
