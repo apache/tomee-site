@@ -56,6 +56,7 @@ The above information applies purely to remote EJB calls made over a network.  C
 However, **all** EJB invocations to business methods *or* callbacks like `@PostConstruct` are tracked for statistical analysis.
 By default a floating window of 2000 samples are kept.  The time tracked is purely **bean time** which includes 
 interceptors, decorators and the bean itself, but does not include other container services like transactions or security.  
+
 This information is available in JMX.  A sample JMX ObjectName for a `CounterBean` will look like this:
 
     openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean
