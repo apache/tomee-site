@@ -1,7 +1,7 @@
 Title: Common DataSource Configurations
 
-<a name="CommonDataSourceConfigurations-CommonVendors"></a>
-# Common Vendors
+See the [DataSource Configuration](datasource-config.html) for details on all configuration options for DataSources.
+
 <a name="CommonDataSourceConfigurations-HSQLDB"></a>
 ## HSQLDB
 
