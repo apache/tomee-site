@@ -15,6 +15,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            KIND, either express or implied.  See the License for the
            specific language governing permissions and limitations
            under the License.
+
 Both client-side and server-side request logging is supported and includes various invocation times aimed at helping to identify where time
 is going in a request.
 
@@ -53,7 +54,11 @@ The container time and server time are written in the EJB response and visible t
 The above information applies purely to remote EJB calls made over a network.  Calls on `@Remote` or `@Local` interfaces between two components in the same server are not logged.
 
 However, **all** EJB invocations to business methods *or* callbacks like `@PostConstruct` are tracked for statistical analysis.
-By default a floating window of 2000 samples are kept.  The time tracked is purely **bean time** which includes interceptors, decorators and the bean itself, but does not include other container services like transactions or security.  This information is available in JMX.
+By default a floating window of 2000 samples are kept.  The time tracked is purely **bean time** which includes 
+interceptors, decorators and the bean itself, but does not include other container services like transactions or security.  
+This information is available in JMX.  A sample JMX ObjectName for a `CounterBean` will look like this:
+
+    openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean
 
 All beans have the following MBean attributes, listed here in shorthand:
 
@@ -86,4 +91,3 @@ Then for every method there will be these attributes and operations:
  * javax.management.MBeanOperationInfo[description=, name=someMethod().setSampleSize, returnType=void, signature=[javax.management.MBeanParameterInfo[description=, name=p1, type=int, descriptor={}]], impact=unknown, descriptor={}]
  * javax.management.MBeanOperationInfo[description=, name=someMethod().sortedValues, returnType=[D, signature=[], impact=unknown, descriptor={}]
  * javax.management.MBeanOperationInfo[description=, name=someMethod().values, returnType=[D, signature=[], impact=unknown, descriptor={}]
-
