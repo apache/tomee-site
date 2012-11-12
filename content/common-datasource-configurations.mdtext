@@ -1,4 +1,5 @@
 Title: Common DataSource Configurations
+
 <a name="CommonDataSourceConfigurations-CommonVendors"></a>
 # Common Vendors
 <a name="CommonDataSourceConfigurations-HSQLDB"></a>
@@ -60,6 +61,20 @@ database.
         Password	tiger
     </Resource>
 
+<a name="CommonDataSourceConfigurations-OracleXA"></a>
+## OracleXA
+
+
+    <Resource id="OracleXA Database" type="DataSource">
+        #  OracleXA example
+        #
+        #  This connector will not work until you download the driver at:
+        #  http://otn.oracle.com/software/tech/java/sqlj_jdbc/content.html
+        JdbcDriver	oracle.jdbc.xa.client.OracleXADataSource
+        JdbcUrl	jdbc:oracle:thin:@localhost:1521:orcl
+        UserName	scott
+        Password	tiger
+    </Resource>
 
 <a name="CommonDataSourceConfigurations-PosgreSQL"></a>
 ## PosgreSQL
@@ -91,8 +106,6 @@ database.
     </Resource>
 
 
-{info:title=Information}
-Internally, OpenEJB relies on Apache Commons DBCP to manage DataSources. To
-get the full list of available configuration properties, have a look to [Apache Commons DBCP configuration](http://commons.apache.org/dbcp/configuration.html|Apache Commons DBCP configuration)
-.
-{info} 
+
+Internally, from TomEE 1.5.0, JDBC pools are managed via Tomcat-pool. You can still switch back to Apache Commons DBCP by adding the following property: DataSourceCreator dbcp.  To
+get the full list of available configuration properties, have a look to [Apache Commons DBCP configuration](http://commons.apache.org/dbcp/configuration.html).
