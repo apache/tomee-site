@@ -17,6 +17,11 @@ our @patterns = (
       },
     ],
 
+    [qr!^/logo\.html$!, news_page =>
+      {
+      },
+    ],
+
     [qr!^/downloads.html$!, news_page => { } ],
 
     [qr!README\.md(text)?$!, example => { template => "example.html" } ],
