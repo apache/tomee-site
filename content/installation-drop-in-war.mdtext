@@ -34,9 +34,11 @@ If you prefer, TomEE can be setup by deploying a .war file into an existing Tomc
 
  - Copy the .war file to $CATALINA_HOME/webapps/tomee.war (the .war filename is important)
 
+
 	Macintosh:apache-tomcat-7.0.32 jgallimore$ cp ~/Downloads/tomee-plus-webapp-1.5.0.war webapps/tomee.war
 
  - Start Tomcat
+
 
 	Macintosh:apache-tomcat-7.0.32 jgallimore$ cd bin
 	Macintosh:bin jgallimore$ ./catalina.sh run
