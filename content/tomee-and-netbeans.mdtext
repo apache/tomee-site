@@ -91,12 +91,12 @@ section following link
 
 
 
-  [1]: http://4.bp.blogspot.com/-FPdFJETt19o/ULfXFBECmII/AAAAAAAADBw/LYIimweZZZY/s640/serverCreate1.png
-  [2]: http://3.bp.blogspot.com/-U1jdrYY96h0/ULfYln3tlQI/AAAAAAAADB4/IEDsDD1HkGk/s640/serverCreate2.png
-  [3]: http://2.bp.blogspot.com/-iNSh2SpYrN0/ULfdtvxeBlI/AAAAAAAADCI/CdkB8dwhrss/s640/databaseConnection1.png
-  [4]: http://3.bp.blogspot.com/-D9eCTw9SXRs/ULffqR9rX_I/AAAAAAAADCQ/XfW_25IoEaw/s640/entityCreationStep1.png
-  [5]: http://4.bp.blogspot.com/-sUEiVFlvr-0/ULfgs3GbKeI/AAAAAAAADCY/-quDKywCBcY/s640/entityCreationStep2.png
-  [6]: http://1.bp.blogspot.com/-8GBvElm7Fs4/ULfkn51KrnI/AAAAAAAADCo/P1JWSAtkoNU/s640/persistance1.png
-  [7]: http://4.bp.blogspot.com/-FYC0mcs1d2Q/ULfnQ1TKaaI/AAAAAAAADC0/E4m5ZbOHrNU/s640/persistance2.png
-  [8]: http://1.bp.blogspot.com/-E2Z3CCMJm1o/ULfoa5Ws3SI/AAAAAAAADDA/hoTooDnlT4Q/s640/persistance3.png
+  [1]: images/netbeans-serverCreate1.png
+  [2]: images/netbeans-serverCreate2.png
+  [3]: images/netbeans-databaseConnection1.png
+  [4]: images/netbeans-entityCreationStep1.png
+  [5]: images/netbeans-entityCreationStep2.png
+  [6]: images/netbeans-persistance1.png
+  [7]: images/netbeans-persistance2.png
+  [8]: images/netbeans-persistance3.png
   [9]: http://tomee.apache.org/tomee-and-eclipse.html
