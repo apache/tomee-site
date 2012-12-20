@@ -1,4 +1,5 @@
 Title: Unit Testing Transactions
+
 <a name="UnitTestingTransactions-Basicsetup"></a>
 # Basic setup
 
@@ -80,8 +81,7 @@ around JPA that allows us to use enforce various transaction semantics.
     @TransactionAttribute(MANDATORY)
     public class MoviesImpl implements Movies {
     
-        @PersistenceContext(unitName = "movie-unit", type =
-PersistenceContextType.TRANSACTION)
+        @PersistenceContext(unitName = "movie-unit", type = PersistenceContextType.TRANSACTION)
         private EntityManager entityManager;
     
         public void addMovie(Movie movie) throws Exception {
@@ -93,9 +93,8 @@ PersistenceContextType.TRANSACTION)
         }
     
         public List<Movie> getMovies() throws Exception {
-    	Query query = entityManager.createQuery("SELECT m from Movie as
-m");
-    	return query.getResultList();
+    	Query query = entityManager.createQuery("SELECT m from Movie asm");
+        return query.getResultList();
         }
     }
     
@@ -118,17 +117,15 @@ The Callable can be created right in the test method itself.
     
         public void test() throws Exception {
     	Caller transactionBean = (Caller)
-context.lookup("TransactionBeanLocal");
+        context.lookup("TransactionBeanLocal");
     
     	transactionBean.call(new Callable() {
     	    public Object call() throws Exception {
     		Movies movies = (Movies) context.lookup("MoviesLocal");
     
-    		movies.addMovie(new Movie("Quentin Tarantino", "Reservoir
-Dogs", 1992));
+    		movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
     		movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
-    		movies.addMovie(new Movie("Joel Coen", "The Big Lebowski",
-1998));
+    		movies.addMovie(new Movie("Joel Coen", "The Big Lebowski",1998));
     
     		List<Movie> list = movies.getMovies();
     		assertEquals("List.size()", 3, list.size());
@@ -137,8 +134,7 @@ Dogs", 1992));
     		    movies.deleteMovie(movie);
     		}
     
-    		assertEquals("Movies.getMovies()", 0,
-movies.getMovies().size());
+    		assertEquals("Movies.getMovies()", 0,movies.getMovies().size());
     
     		return null;
     	    }
@@ -163,44 +159,39 @@ testing is often a very good way to stomp out dangerous bugs.
         }
     
         private void doWork() throws Exception {
-    	Movies movies = (Movies) context.lookup("MoviesLocal");
+    	      Movies movies = (Movies) context.lookup("MoviesLocal");
     
-    	movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs",
-1992));
-    	movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
-    	movies.addMovie(new Movie("Joel Coen", "The Big Lebowski", 1998));
+    	      movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs",1992));
+              movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
+    	      movies.addMovie(new Movie("Joel Coen", "The Big Lebowski", 1998));
     
-    	List<Movie> list = movies.getMovies();
-    	assertEquals("List.size()", 3, list.size());
+    	      List<Movie> list = movies.getMovies();
+    	      assertEquals("List.size()", 3, list.size());
     
-    	for (Movie movie : list) {
-    	    movies.deleteMovie(movie);
-    	}
+    	      for (Movie movie : list) {
+    	          movies.deleteMovie(movie);
+    	      }
     
-    	assertEquals("Movies.getMovies()", 0, movies.getMovies().size());
+    	      assertEquals("Movies.getMovies()", 0, movies.getMovies().size());
         }
     
         public void testWithTransaction() throws Exception {
-    	Caller transactionBean = (Caller)
-context.lookup("TransactionBeanLocal");
+    	      Caller transactionBean = (Caller)context.lookup("TransactionBeanLocal");
     
-    	transactionBean.call(new Callable(){
-    	    public Object call() throws Exception {
-    		doWork();
-    		return null;
-    	    }
-    	});
+    	      transactionBean.call(new Callable(){
+    	            public Object call() throws Exception {
+    		          doWork();
+    		          return null;
+    	            }
+    	      });
         }
     
         public void testWithoutTransaction() throws Exception {
-    	try {
-    	    doWork();
-    	    fail("The Movies bean should be using
-TransactionAttributeType.MANDATORY");
-    	} catch (javax.transaction.TransactionRequiredException e) {
-    	    // good, our Movies bean is using
-TransactionAttributeType.MANDATORY as we want
-    	}
+    	      try {
+    	            doWork();
+    	            fail("The Movies bean should be using TransactionAttributeType.MANDATORY");
+    	      } catch (javax.transaction.TransactionRequiredException e) {
+    	            // good, our Movies bean is using TransactionAttributeType.MANDATORY as we want
+    	      }
         }
     }
-
