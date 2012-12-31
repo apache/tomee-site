@@ -1,2 +1,16 @@
+with some typos fixes...
 # TomEE versioning policies
+
+TomEE version policy is made of three dot-separated numbers: x.y.z
+
+  - x is the major version. It corresponds to the maximum Java EE specification supported by TomEE, starting  with value 1 for Java EE 6 support. The foreseable major versions are:
+ TomEE 1.y.z supporting Java EE 6, TomEE 2.y.z supporting Java EE 7 and TomEE 3.y.z supporting Java EE8
+
+  - y is the minor version. It corresponds to a features level, starting at 0. Initial TomEE release was 1.0.0, followed by 1.5.0 because of the accumulation of features changes delivered since 1.0.0. Note that features changes must comply with the Java EE specification level given by TomEE's major version.
+
+  - z is the fix level. It corresponds to bug fixes changes without new features, starting at 0. Upgrades of embedded components (Tomcat, OpenEJB, MyFaces, etc.) are normally part of bug fixes releases.
+
+These policies allow an Java EE application to be certified with a given TomEEE version x.y.z and to be compatible with TomEE versions x.y1.* with y1>y and compatible with TomEE version x.y.z1 with z1>z.
+
+
 
