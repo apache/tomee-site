@@ -2,7 +2,7 @@ Title: TomEE and Arquillian
 
 Check out the [Getting started](arquillian-getting-started.html) page if you are not familiar with Arquillian.
 
-All the Aqruillian Adapters for TomEE support the following configuration options in the arquillian.xml:
+All the Arquillian Adapters for TomEE support the following configuration options in the arquillian.xml:
 
     <container qualifier="tomee" default="true">
         <configuration>
