@@ -102,6 +102,8 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 {span-one-third
 ### TomEE Maven Plugin
 - [Getting started](tomee-mp-getting-started.html)
+- [tomee-maven-plugin reference documentation](tomee-maven-plugin.html)
+- [TomEE simple webapp archetype documentation](tomee-webapp-archetype.html)
 }
 
 }
