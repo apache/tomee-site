@@ -170,4 +170,5 @@ This sort of arangement can also happen dynamicall against a list of servers tha
 the scenes using server discovery logic that can function on either UDP or TCP.  See these docs for more details on Failover and Discovery:
 
  - [Multicast Discovery (UDP)](multicast-discovery.html)
+ - [Multipulse Discovery (TCP)](multipulse-discovery.html)
  - [Multipoint Discovery (TCP)](multipoint-discovery.html)

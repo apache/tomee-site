@@ -60,6 +60,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 ### Discovery and Failover
 - [Overview](ejb-failover.html)
 - [Multicast Discovery (UDP)](multicast-discovery.html)
+- [Multipulse Discovery (UDP)](multipulse-discovery.html)
 - [Multipoint Discovery (TCP)](multipoint-discovery.html)
 - [Multipoint Considerations](multipoint-considerations.html)
 - [Multipoint Recommendations](multipoint-recommendations.html)
