@@ -325,6 +325,12 @@ this query MUST be an SQL SELECT statement that returns at
 least one row.
 </td>
 </tr>
+<tr>
+<tdLogSql></td>
+<td>boolean</td>
+<td>false</td>
+<td>Wether SQL queries should be logged or not</td>
+</tr>
 </table>
 
 
