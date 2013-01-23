@@ -3,11 +3,13 @@ use strict;
 use warnings;
 use ASF::Value;
 
+
 # The @patterns array is used to map filepaths to page treatments.  Each
 # element must be an arrayref with 3 elements of its own: a regex pattern for
 # selecting filepaths, the name of the subroutine from view.pm which will be
 # invoked to generate the page, and a hashref of named parameters which will
 # be passed to the view subroutine.
+
 
 our @patterns = (
 
