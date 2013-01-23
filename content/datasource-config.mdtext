@@ -326,7 +326,7 @@ least one row.
 </td>
 </tr>
 <tr>
-<tdLogSql></td>
+<td>LogSql></td>
 <td>boolean</td>
 <td>false</td>
 <td>Wether SQL queries should be logged or not</td>
