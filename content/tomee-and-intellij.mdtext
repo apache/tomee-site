@@ -1,0 +1,30 @@
+Title: TomEE and Intellij
+Notice:    Licensed to the Apache Software Foundation (ASF) under one
+           or more contributor license agreements.  See the NOTICE file
+           distributed with this work for additional information
+           regarding copyright ownership.  The ASF licenses this file
+           to you under the Apache License, Version 2.0 (the
+           "License"); you may not use this file except in compliance
+           with the License.  You may obtain a copy of the License at
+           .
+             http://www.apache.org/licenses/LICENSE-2.0
+           .
+           Unless required by applicable law or agreed to in writing,
+           software distributed under the License is distributed on an
+           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+           KIND, either express or implied.  See the License for the
+           specific language governing permissions and limitations
+           under the License.
+
+Intellij is the preferred editor of most of the developers on Apache TomEE.  It's fast and light and goes out of its way
+to guess what you're thinking and act accordingly in efforts to save you time and increase your enjoyment.  In this regard
+TomEE and Intellij have a lot in common.
+
+While TomEE works with most IDEs via the Tomcat adapter and this covers WAR files, JetBrains has stepped up to the plate
+with a TomEE specific adapter to allow deployment of the full range of archives that TomEE supports.  The evolving
+TomEE/Intellij integration sets the pace for all other IDE integrations.
+[Feature requests very welcome!](http://youtrack.jetbrains.com/issues/IDEA)  TomEE is to Intellij
+what GlassFish is to NetBeans and your feedback is a critcal part of that.
+
+# Getting Started
+
