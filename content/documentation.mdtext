@@ -6,6 +6,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 
 {span-one-third
 ### General Guide 
+- [Using TomEE with Intellij](tomee-and-intellij.html)
 - [Using TomEE with Eclipse](tomee-and-eclipse.html)
 - [Using TomEE with Netbeans](tomee-and-netbeans.html)
 - [WTP and TomEE logging](tomee-logging-in-eclipse.html)
