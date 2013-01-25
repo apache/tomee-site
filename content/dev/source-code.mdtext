@@ -1,13 +1,7 @@
 Title: Source Code
 
-<a name="SourceCode-Browsing"></a>
-# Browsing
-
 You can browse the source code via the [web interface](http://svn.apache.org/viewvc/tomee/tomee/trunk/)
 .
-
-<a name="SourceCode-Downloading"></a>
-# Downloading
 
 You can download (aka checkout) the sources of Apache TomEE with
 Subversion client using the following URL [http://svn.apache.org/repos/asf/tomee/tomee/trunk](http://svn.apache.org/repos/asf/tomee/tomee/trunk)
