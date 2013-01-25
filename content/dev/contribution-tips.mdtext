@@ -2,7 +2,7 @@ Title: Contribution Tips
 <a name="ContributionTips-Firststeps"></a>
 # First steps
 
-1. Subscribe to the [dev list](mailto:dev-subscribe@openejb.apache.org)
+1. Subscribe to the [dev list](mailto:dev-subscribe@tomee.apache.org)
    and say Hi
 1. Get the source code with svn
     - svn https://svn.apache.org/repos/asf/tomee/tomee/trunk

@@ -18,7 +18,7 @@ When reporting issues, let us know:
 
 Note there will be more than one build for a given binary.  Look to the bottom of each build page for the most current.
 
- - [apache-tomee/1.5.1-SNAPSHOT/](http://openejb.apache.org/cgi-bin/builds.cgi/apache-tomee/1.5.1-SNAPSHOT/)
- - [openejb-standalone/4.5.1-SNAPSHOT/](http://openejb.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.5.1-SNAPSHOT/)
- - [provisionning/4.5.1-SNAPSHOT/](http://openejb.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.5.1-SNAPSHOT/)
+ - [apache-tomee/1.5.1-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/apache-tomee/1.5.1-SNAPSHOT/)
+ - [openejb-standalone/4.5.1-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.5.1-SNAPSHOT/)
+ - [provisionning/4.5.1-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.5.1-SNAPSHOT/)
 

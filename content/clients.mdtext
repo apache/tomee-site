@@ -97,5 +97,5 @@ Title: Clients
 <a name="RemoteClientUsingEjbInjection)"></a>
 ### Remote Client using @EJB Injection
 see here:
-<a href="http://openejb.apache.org/ejb-refs.html">ejb-refs</a>
+<a href="http://tomee.apache.org/ejb-refs.html">ejb-refs</a>
 
