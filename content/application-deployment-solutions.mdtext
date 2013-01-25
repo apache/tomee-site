@@ -72,6 +72,6 @@ then run the deployer on all your nodes and that's all!
 If you are using a route to deploy/undeploy your applications
 you can have a look to the proposed camel-openejb component:
 
-* base code: https://svn.apache.org/repos/asf/openejb/trunk/camel/camel-openejb/
+* base code: http://svn.apache.org/repos/asf/tomee/sandbox/camel/camel-openejb/
 * proposed to be added to camel: https://issues.apache.org/jira/browse/CAMEL-4935
 

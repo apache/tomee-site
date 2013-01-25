@@ -18,9 +18,9 @@ mvn release:prepare -Dusername=dblevins -Dassemble
 1. Create a copy of the trunk the branch will be based on.
 
 {code:none}
-svn copy -m "OpenEJB 3.0-beta-1 branch" \
-  https://svn.apache.org/repos/asf/openejb/trunk/openejb3 \
-  https://svn.apache.org/repos/asf/openejb/branches/3.0-beta-1
+svn copy -m "TomEE 1.5.1 branch" \
+  https://svn.apache.org/repos/asf/tomee/tomee/trunk \
+  https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-1.5.1
 
     
 #  Merging things from trunk to the branch
@@ -32,7 +32,7 @@ trunk  to the branch (`{-c 575845`} is the commit number with the fix and
 the url points to a repo the change is in).
     
     {code:none}
-    svn merge -c 575845 https://svn.apache.org/repos/asf/openejb/trunk/openejb3
+    svn merge -c 575845 https://svn.apache.org/repos/asf/tomee/tomee/trunk
 
 
 Here's a little script that can make merging easier
@@ -49,13 +49,13 @@ Here's a little script that can make merging easier
       echo "Merging r$n - http://svn.apache.org/viewvc?rev=$n&view=rev" >> $LOG
       echo "" >> $LOG
       echo "svn merge -r $m:$n
-https://svn.apache.org/repos/asf/openejb/trunk/openejb3 ." >> $LOG
+https://svn.apache.org/repos/asf/tomee/tomee/trunk ." >> $LOG
       echo "" >> $LOG
-      svn log -r$n https://svn.apache.org/repos/asf/openejb/trunk/openejb3 >>
+      svn log -r$n https://svn.apache.org/repos/asf/tomee/tomee/trunk >>
 $LOG
     
       svn merge -r $m:$n
-https://svn.apache.org/repos/asf/openejb/trunk/openejb3 .  &&
+https://svn.apache.org/repos/asf/tomee/tomee/trunk .  &&
       svn ci -F $LOG
       echo "$n merged"
     done

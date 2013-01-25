@@ -16,17 +16,17 @@ properties into an "ObjectRecipe" and call create(). &nbsp;The recipe will
 take the props out, convert them to the right data types,  and construct
 the object using the right constructor and setters.
 
-So our Containers and stuff now use constructors and setters. &nbsp;Same with anything in a &nbsp;[service-jar.xml](http://svn.apache.org/viewvc/openejb/trunk/openejb3/container/openejb-core/src/main/resources/META-INF/org.apache.openejb/service-jar.xml?view=markup)
+So our Containers and stuff now use constructors and setters. &nbsp;Same with anything in a &nbsp;[service-jar.xml](http://svn.apache.org/viewvc/tomee/tomee/trunk/container/openejb-core/src/main/resources/META-INF/org.apache.openejb/service-jar.xml?view=markup)
  file.
 
 <a name="XbeanusageinOpenEJB-Somecoderefs:"></a>
 #### Some code refs:
 
-1. [Assembler.java](http://svn.apache.org/viewvc/openejb/trunk/openejb3/container/openejb-core/src/main/java/org/apache/openejb/assembler/classic/Assembler.java?revision=546308&view=markup)
+1. [Assembler.java](http://svn.apache.org/viewvc/tomee/tomee/trunk/container/openejb-core/src/main/java/org/apache/openejb/assembler/classic/Assembler.java?revision=546308&view=markup)
 We also use it to construct Stateful and Stateless session bean instances.
 
-1. [StatefulInstanceManager.java](http://svn.apache.org/viewvc/openejb/trunk/openejb3/container/openejb-core/src/main/java/org/apache/openejb/core/stateful/StatefulInstanceManager.java?revision=546308&view=markup)
-1. [StatelessInstanceManager.java](http://svn.apache.org/viewvc/openejb/trunk/openejb3/container/openejb-core/src/main/java/org/apache/openejb/core/stateless/StatelessInstanceManager.java?revision=546308&view=markup)
+1. [StatefulInstanceManager.java](http://svn.apache.org/viewvc/tomee/tomee/trunk/container/openejb-core/src/main/java/org/apache/openejb/core/stateful/StatefulInstanceManager.java?revision=546308&view=markup)
+1. [StatelessInstanceManager.java](http://svn.apache.org/viewvc/tomee/tomee/trunk/container/openejb-core/src/main/java/org/apache/openejb/core/stateless/StatelessInstanceManager.java?revision=546308&view=markup)
 
 <a name="XbeanusageinOpenEJB-xbean-finder"></a>
 ## xbean-finder
@@ -41,8 +41,8 @@ it at a couple of places.
 The available commands are in properties files in
 "META-INF/org.openejb.cli/\{name\}", where \{name\} is the name of the
 command. &nbsp;See:
-1. [openejb cli](http://svn.apache.org/viewvc/openejb/trunk/openejb3/container/openejb-core/src/main/resources/META-INF/org.apache.openejb.cli/)
-1. [openejb cli for itests](http://svn.apache.org/viewvc/openejb/trunk/openejb3/itests/openejb-itests-client/src/main/resources/META-INF/org.openejb.cli/)
+1. [openejb cli](http://svn.apache.org/viewvc/tomee/tomee/trunk/container/openejb-core/src/main/resources/META-INF/org.apache.openejb.cli/)
+1. [openejb cli for itests](http://svn.apache.org/viewvc/tomee/tomee/trunk/itests/openejb-itests-client/src/main/resources/META-INF/org.openejb.cli/)
 
 Earlier we had the "test"&nbsp; command hardcoded in a script, but the
 person may have uninstalled&nbsp; the itests? &nbsp;Well now, if you have
@@ -57,7 +57,7 @@ When someone types "java \-jar openejb.jar start" this guy will look&nbsp;
 for "META-INF/org.openejb.cli/start". &nbsp;If he finds it, he'll
 create&nbsp; it and execute it. &nbsp;If he doesn't find it, he'll list the
 available&nbsp; commands by enumerating over all the files he see's in the
-classpath&nbsp; under the "META-INF/org.openejb.cli/" directory. See [MainImpl.java](http://svn.apache.org/viewvc/openejb/trunk/openejb3/container/openejb-core/src/main/java/org/apache/openejb/cli/MainImpl.java?revision=546308&view=markup)
+classpath&nbsp; under the "META-INF/org.openejb.cli/" directory. See [MainImpl.java](http://svn.apache.org/viewvc/tomee/tomee/trunk/container/openejb-core/src/main/java/org/apache/openejb/cli/MainImpl.java?revision=546308&view=markup)
 
 An extra cool thing is that each command has in it's properties a&nbsp;
 "description" property. &nbsp;This is localized, so if the VM locale
@@ -75,10 +75,10 @@ We also use the xbean-finder to create our Server Services (aka.&nbsp;
 protocols). &nbsp;Our ServerService implementations are in properties&nbsp;
 files under "META-INF/org.openejb.server.ServerService/\{protocolName\}.
 See:
-1. [OpenEJB Server - ServerService](http://svn.apache.org/viewvc/openejb/trunk/openejb3/server/openejb-server/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
-1. [OpenEJB ejbd - ServerService](http://svn.apache.org/viewvc/openejb/trunk/openejb3/server/openejb-ejbd/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
-1. [OpenEJB Telnet - ServerService](http://svn.apache.org/viewvc/openejb/trunk/openejb3/server/openejb-telnet/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
-1. [OpenEJB HTTP - ServerService](http://svn.apache.org/viewvc/openejb/trunk/openejb3/server/openejb-http/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
+1. [OpenEJB Server - ServerService](http://svn.apache.org/viewvc/tomee/tomee/trunk/server/openejb-server/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
+1. [OpenEJB ejbd - ServerService](http://svn.apache.org/viewvc/tomee/tomee/trunk/server/openejb-ejbd/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
+1. [OpenEJB Telnet - ServerService](http://svn.apache.org/viewvc/tomee/tomee/trunk/server/openejb-telnet/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
+1. [OpenEJB HTTP - ServerService](http://svn.apache.org/viewvc/tomee/tomee/trunk/server/openejb-http/src/main/resources/META-INF/org.apache.openejb.server.ServerService/)
 
 The very first time a ServerService is constructed, we squirt the&nbsp;
 properties file into the openejb/conf/ directory so the user can edit&nbsp;

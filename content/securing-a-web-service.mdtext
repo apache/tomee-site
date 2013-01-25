@@ -25,7 +25,7 @@ It has no impact on developments. It allows you :
 2. To identify the end user with SSLv3 with client certificate required
 3. OpenEJB supports BASIC authentication over HTTP(S), using the configured
 JAAS provider. This will honour any EJB security roles you have setup using
-@RolesAllowed. See the webservice-security example in the OpenEJB codebase [http://svn.apache.org/repos/asf/openejb/trunk/openejb3/examples/](http://svn.apache.org/repos/asf/openejb/trunk/openejb3/examples/)
+@RolesAllowed. See the webservice-security example in the OpenEJB codebase [http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/](http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/)
 
 *Warning:
 Currently only BASIC is the only HTTP authentication mechanism available

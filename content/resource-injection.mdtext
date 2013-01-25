@@ -28,7 +28,7 @@ annotation.
 The source for this example can be checked out from svn:
 
  $ svn co
-http://svn.apache.org/repos/asf/openejb/trunk/openejb3/examples/injection-of-env-entry
+http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/injection-of-env-entry
 
 To run it change your working directory to the directory
 *injection-of-env-entry* and run the following maven2 commands:

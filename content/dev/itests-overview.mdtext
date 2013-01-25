@@ -17,7 +17,7 @@ work to get them to run as part of the maven build and the itest plugin was
 the result.
 
 Definitely give those a look at: 
-http://svn.apache.org/viewvc/incubator/openejb/trunk/openejb3/itests/
+http://svn.apache.org/viewvc/tomee/tomee/trunk/itests/
 
 <a name="iTestsOverview-Pluggingin"></a>
 #  Plugging in

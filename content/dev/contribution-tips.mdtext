@@ -4,9 +4,8 @@ Title: Contribution Tips
 
 1. Subscribe to the [dev list](mailto:dev-subscribe@openejb.apache.org)
    and say Hi
-1. Get the source code with svn or git
-    - svn https://svn.apache.org/repos/asf/openejb/trunk/openejb
-    - git https://github.com/apache/openejb/tree/trunk/openejb
+1. Get the source code with svn
+    - svn https://svn.apache.org/repos/asf/tomee/tomee/trunk
 1. Build the code (maven 2.2.1 or higher required)
     - mvn clean install
 
