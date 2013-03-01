@@ -123,8 +123,8 @@ sub swizzle_jira {
 
     print " - java";
 
-    $args{content} = `java -jar lib/swizzle-jirareport-1.6.2-SNAPSHOT-dep.jar $filepath`;
-    $args{content} =~ s,Title:.*\n,,;
+#    $args{content} = `java -jar lib/swizzle-jirareport-1.6.2-SNAPSHOT-dep.jar $filepath`;
+#    $args{content} =~ s,Title:.*\n,,;
 
     $args{path} =~ s/\.mdtext$/\.html/;
     $args{base} = _base($args{path});
