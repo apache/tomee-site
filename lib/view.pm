@@ -208,7 +208,7 @@ sub example {
 
     my $svndir = $args{path};
     $svndir =~ s,/index.html,,;
-    $svndir =~ s,/examples-trunk/,trunk/openejb/examples/,;
+    $svndir =~ s,/examples-trunk/,trunk/examples/,;
 
     $args{repo} = $svndir;
 
