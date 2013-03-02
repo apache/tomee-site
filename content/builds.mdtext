@@ -22,10 +22,20 @@ Note there will be more than one build for a given binary.  Look to the bottom o
  - [openejb-standalone/4.5.2-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.5.2-SNAPSHOT/)
  - [provisionning/4.5.2-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.5.2-SNAPSHOT/)
 
+Continuous Integration status:
+
+ - [Linux](http://ci.apache.org/builders/tomee-1.5-ubuntu|http://ci.apache.org/builders/tomee-1.5-ubuntu)
+ - [Windows](http://ci.apache.org/builders/tomee-1.5-win-ibmjdk6)
+
 # 1.6.0-SNAPSHOT Builds
 
 
  - [apache-tomee/1.6.0-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/apache-tomee/1.6.0-SNAPSHOT/)
  - [openejb-standalone/4.6.0-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.6.0-SNAPSHOT/)
  - [provisionning/4.6.0-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.6.0-SNAPSHOT/)
+
+Continuous Integration status:
+
+ - [Linux](http://ci.apache.org/builders/tomee-trunk-ubuntu|http://ci.apache.org/builders/tomee-trunk-ubuntu)
+ - [Windows](http://ci.apache.org/builders/tomee-trunk-win-ibmjdk6)
 
