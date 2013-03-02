@@ -13,12 +13,19 @@ When reporting issues, let us know:
   - that you are using a SNAPSHOT build
   - aproximately when you downloaded it
 
-
-# 1.5.1-SNAPSHOT Builds
-
 Note there will be more than one build for a given binary.  Look to the bottom of each build page for the most current.
 
- - [apache-tomee/1.5.1-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/apache-tomee/1.5.1-SNAPSHOT/)
- - [openejb-standalone/4.5.1-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.5.1-SNAPSHOT/)
- - [provisionning/4.5.1-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.5.1-SNAPSHOT/)
+# 1.5.2-SNAPSHOT Builds
+
+
+ - [apache-tomee/1.5.2-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/apache-tomee/1.5.2-SNAPSHOT/)
+ - [openejb-standalone/4.5.2-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.5.2-SNAPSHOT/)
+ - [provisionning/4.5.2-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.5.2-SNAPSHOT/)
+
+# 1.6.0-SNAPSHOT Builds
+
+
+ - [apache-tomee/1.6.0-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/apache-tomee/1.6.0-SNAPSHOT/)
+ - [openejb-standalone/4.6.0-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-standalone/4.6.0-SNAPSHOT/)
+ - [provisionning/4.6.0-SNAPSHOT/](http://tomee.apache.org/cgi-bin/builds.cgi/openejb-provisionning/4.6.0-SNAPSHOT/)
 
