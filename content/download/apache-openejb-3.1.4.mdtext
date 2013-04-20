@@ -19,8 +19,8 @@ Title: Apache OpenEJB 3.1.4
 
 *binaries*
 
- * [openejb-3.1.4.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb-3.1.4.zip) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.zip.asc), [md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.zip.md5)
- * [openejb-3.1.4.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb-3.1.4.tar.gz) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.tar.gz.asc), [md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.tar.gz.md5)) 
+ * [openejb-3.1.4.zip](http://archive.apache.org/dist/openejb/3.1.4/openejb-3.1.4.zip) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.zip.asc), [md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.zip.md5)
+ * [openejb-3.1.4.tar.gz](http://archive.apache.org/dist/openejb/3.1.4/openejb-3.1.4.tar.gz) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.tar.gz.asc), [md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4.tar.gz.md5))
 
 <a name="ApacheOpenEJB3.1.4-ApacheOpenEJBforTomcat"></a>
 #### Apache OpenEJB for Tomcat
@@ -32,7 +32,7 @@ Title: Apache OpenEJB 3.1.4
 
 *binaries*
 
- * [openejb.war](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb.war) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb.war.asc), [md5](http://www.apache.org/dist/openejb/3.1.4/openejb.war.md5)) 
+ * [openejb.war](http://archive.apache.org/dist/openejb/3.1.4/openejb.war) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb.war.asc), [md5](http://www.apache.org/dist/openejb/3.1.4/openejb.war.md5))
 
 <a name="ApacheOpenEJB3.1.4-ApacheTomEE-Pre-bundledTomcat"></a>
 #### Apache TomEE - Pre-bundled Tomcat
@@ -45,27 +45,27 @@ Title: Apache OpenEJB 3.1.4
 
 *binaries*
 
-* [tomee-6.0.29.314.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/tomee-6.0.29.314.zip) ([pgp](http://www.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.zip.asc),
+* [tomee-6.0.29.314.zip](http://archive.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.zip) ([pgp](http://www.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.zip.asc),
 [md5](http://www.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.zip.md5)) 
-* [tomee-6.0.29.314.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/tomee-6.0.29.314.tar.gz)
+* [tomee-6.0.29.314.tar.gz](http://archive.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.tar.gz)
 ([pgp](http://www.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.tar.gz.asc),
 [md5](http://www.apache.org/dist/openejb/3.1.4/tomee-6.0.29.314.tar.gz.md5)) 
 
 
 <a name="ApacheOpenEJB3.1.4-EJB3.1andotherexamples(sourceincluded)"></a>
 #### EJB 3.1 and other examples (source included) 
-* [openejb-examples-3.1.4.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb-examples-3.1.4.tar.gz)
+* [openejb-examples-3.1.4.tar.gz](http://archive.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.tar.gz)
 ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.tar.gz.asc),
 [md5](http://www.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.tar.gz.md5)) 
-* [openejb-examples-3.1.4.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb-examples-3.1.4.zip)([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.zip.asc),[md5](http://www.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.zip.md5)) 
+* [openejb-examples-3.1.4.zip](http://archive.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.zip)([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.zip.asc),[md5](http://www.apache.org/dist/openejb/3.1.4/openejb-examples-3.1.4.zip.md5))
 
 <a name="ApacheOpenEJB3.1.4-SourceCode"></a>
 #### Source Code 
 
-* [openejb-3.1.4-src.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb-3.1.4-src.zip)
+* [openejb-3.1.4-src.zip](http://archive.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.zip)
  ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.zip.asc),
 [md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.zip.md5)) 
-* [openejb-3.1.4-src.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.1.4/openejb-3.1.4-src.tar.gz) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.tar.gz.asc),[md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.tar.gz.md5)) 
+* [openejb-3.1.4-src.tar.gz](http://archive.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.tar.gz) ([pgp](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.tar.gz.asc),[md5](http://www.apache.org/dist/openejb/3.1.4/openejb-3.1.4-src.tar.gz.md5))
 
 <a name="ApacheOpenEJB3.1.4-ReleaseNotes"></a>
 #### Release Notes

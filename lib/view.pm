@@ -36,6 +36,7 @@ use Dotiac::DTL;
 use ASF::Util qw( read_text_file );
 use OpenEJBSiteDotiacFilter;
 use Data::Dumper;
+use LWP::Simple;
 
 BEGIN { push @Dotiac::DTL::TEMPLATE_DIRS, "templates"; }
 
@@ -63,6 +64,7 @@ sub news_page {
         }
     }
 
+    $args{base} = _base($args{path});
     my $rendered = Dotiac::DTL->new($template)->render(\%args);
     return ($rendered, 'html', \%args);
 }
@@ -102,6 +104,22 @@ sub basic {
         }
 
         $args{content} =~ s/{include:$include}/$text/g;
+    }
+
+    if ($args{headers}{version}) {
+        my $url = "http://repository.apache.org/content/groups/snapshots/org/apache/openejb/apache-tomee/$args{headers}{version}-SNAPSHOT/maven-metadata.xml";
+        my $_ = get($url);
+        s/\n| //g;
+        my ($timestamp, $buildNumber) = m,<timestamp>(.*)</timestamp>.*<buildNumber>(.*)</buildNumber>.*,;
+        $args{headers}{build} = "$timestamp-$buildNumber";
+    }
+
+    if ($args{headers}{oversion}) {
+        my $url = "http://repository.apache.org/content/groups/snapshots/org/apache/openejb/openejb-standalone/$args{headers}{oversion}-SNAPSHOT/maven-metadata.xml";
+        my $_ = get($url);
+        s/\n| //g;
+        my ($timestamp, $buildNumber) = m,<timestamp>(.*)</timestamp>.*<buildNumber>(.*)</buildNumber>.*,;
+        $args{headers}{obuild} = "$timestamp-$buildNumber";
     }
 
     print " - rendering";

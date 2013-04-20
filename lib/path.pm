@@ -26,6 +26,10 @@ our @patterns = (
 
     [qr!^/downloads.html$!, news_page => { } ],
 
+    [qr!^/download/.*.html$!, news_page => { } ],
+
+    [qr!^/download/.*-snapshot.mdtext$!, basic => { template => "snapshot.html" } ],
+
     [qr!README\.md(text)?$!, example => { template => "example.html" } ],
 
     [qr!\.md(text)?$!, basic => { template => "doc.html" } ],

@@ -10,37 +10,37 @@ Title: OpenEJB 3.0
 
 <a name="OpenEJB3.0-OpenEJBStandloneServer"></a>
 #### OpenEJB Standlone Server 
- * [openejb-3.0.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb-3.0.zip)
+ * [openejb-3.0.zip](http://archive.apache.org/dist/openejb/3.0/openejb-3.0.zip)
  ([pgp|http://www.apache.org/dist/openejb/3.0/openejb-3.0.zip.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb-3.0.zip.md5]
 ) 
- * [openejb-3.0.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb-3.0.tar.gz)
+ * [openejb-3.0.tar.gz](http://archive.apache.org/dist/openejb/3.0/openejb-3.0.tar.gz)
  ([pgp|http://www.apache.org/dist/openejb/3.0/openejb-3.0.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb-3.0.tar.gz.md5]
 ) 
 
 <a name="OpenEJB3.0-OpenEJBforTomcat"></a>
 ####  OpenEJB for Tomcat
- * [openejb.war](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb.war)
+ * [openejb.war](http://archive.apache.org/dist/openejb/3.0/openejb.war)
  ([pgp|http://www.apache.org/dist/openejb/3.0/openejb.war.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb.war.md5]
 ) 
 
 
 <a name="OpenEJB3.0-EJB3.0andotherexamples(sourceincluded)"></a>
 #### EJB 3.0 and other examples (source included) 
- * [openejb-examples-3.0.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb-examples-3.0.tar.gz)
+ * [openejb-examples-3.0.tar.gz](http://archive.apache.org/dist/openejb/3.0/openejb-examples-3.0.tar.gz)
 
 ([pgp|http://www.apache.org/dist/openejb/3.0/openejb-examples-3.0.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb-examples-3.0.tar.gz.md5]
 ) 
- * [openejb-examples-3.0.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb-examples-3.0.zip)
+ * [openejb-examples-3.0.zip](http://archive.apache.org/dist/openejb/3.0/openejb-examples-3.0.zip)
 
 ([pgp|http://www.apache.org/dist/openejb/3.0/openejb-examples-3.0.zip.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb-examples-3.0.zip.md5]
 ) 
 
 <a name="OpenEJB3.0-SourceCode"></a>
 #### Source Code 
- * [openejb-3.0-src.zip](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb-3.0-src.zip)
+ * [openejb-3.0-src.zip](http://archive.apache.org/dist/openejb/3.0/openejb-3.0-src.zip)
  ([pgp|http://www.apache.org/dist/openejb/3.0/openejb-3.0-src.zip.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb-3.0-src.zip.md5]
 ) 
- * [openejb-3.0-src.tar.gz](http://www.apache.org/dyn/closer.cgi/openejb/3.0/openejb-3.0-src.tar.gz)
+ * [openejb-3.0-src.tar.gz](http://archive.apache.org/dist/openejb/3.0/openejb-3.0-src.tar.gz)
  ([pgp|http://www.apache.org/dist/openejb/3.0/openejb-3.0-src.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.0/openejb-3.0-src.tar.gz.md5]
 ) 
 
