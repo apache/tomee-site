@@ -112,6 +112,9 @@ sub basic {
         s/\n| //g;
         my ($timestamp, $buildNumber) = m,<timestamp>(.*)</timestamp>.*<buildNumber>(.*)</buildNumber>.*,;
         $args{headers}{build} = "$timestamp-$buildNumber";
+
+        $args{changelog} = `java -jar lib/release-tools-1.0-SNAPSHOT-jar-with-dependencies.jar releasenotes -DtomeeVersion=$args{headers}{version} -DopenejbVersion=$args{headers}{oversion}`;
+        print $args{changelog};
     }
 
     if ($args{headers}{oversion}) {
