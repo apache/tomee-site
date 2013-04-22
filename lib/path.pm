@@ -13,35 +13,44 @@ use ASF::Value;
 
 our @patterns = (
 
-    [qr!^/index\.html$!, news_page =>
-      {
+    [qr!^/index\.html$!, news_page => {
         blog     => ASF::Value::Blogs->new(blog => "openejb", limit=> 3),
-      },
-    ],
+    }],
 
-    [qr!^/logo\.html$!, news_page =>
-      {
-      },
-    ],
+    [qr!^/logo\.html$!, news_page => { }],
+    [qr!^/downloads.html$!, news_page => { }],
+    [qr!^/download/.*.html$!, news_page => { }],
 
-    [qr!^/downloads.html$!, news_page => { } ],
+    [qr!^/download/.*-snapshot.mdtext$!, basic => {
+        template => "snapshot.html"
+    }],
 
-    [qr!^/download/.*.html$!, news_page => { } ],
+    [qr!README\.md(text)?$!, example => {
+        template => "example.html"
+    }],
 
-    [qr!^/download/.*-snapshot.mdtext$!, basic => { template => "snapshot.html" } ],
+    [qr!\.md(text)?$!, basic => {
+        template => "doc.html"
+    }],
 
-    [qr!README\.md(text)?$!, example => { template => "example.html" } ],
+    [qr!\.swjira?$!, swizzle_jira => {
+        template => "doc.html"
+    }],
 
-    [qr!\.md(text)?$!, basic => { template => "doc.html" } ],
+    [qr!sitemap\.html$!, sitemap => {
+        headers => { title => "Sitemap" }
+    }],
 
-    [qr!\.swjira?$!, swizzle_jira => { template => "doc.html" } ],
+    [qr!dev/index\.html$!, sitemap => {
+        headers => { title => "Project Resources" }
+    }],
+    [qr!dev/jira/index\.html$!, sitemap => {
+        headers => { title => "Project Resources" }
+    }],
 
-    [qr!sitemap\.html$!, sitemap => { headers => { title => "Sitemap" }} ],
-
-    [qr!dev/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
-    [qr!dev/jira/index\.html$!, sitemap => { headers => { title => "Project Resources" }} ],
-
-    [qr!sitemap.xml$!, sitemapxml => { headers => {  }} ],
+    [qr!sitemap.xml$!, sitemapxml => {
+        headers => { }
+    }],
 
 
 );
@@ -50,7 +59,6 @@ our @patterns = (
 # upon other pages -- e.g. a sitemap, which depends upon the pages that it
 # links to.  The keys for %dependencies are filepaths, and the values are
 # arrayrefs containing other filepaths.
-
 our %dependencies = (
     "/sitemap.html" => [ grep s!^content!!, glob "content/*.mdtext" ],
     "/sitemap.xml" => [ grep s!^content!!, glob "content/*.mdtext" ],

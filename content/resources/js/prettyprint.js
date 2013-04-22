@@ -1,4 +1,4 @@
 $(document).ready(function() {
-    $('code').addClass('prettyprint');
+    $('code').addClass('codehilite');
     prettyPrint();
 });
