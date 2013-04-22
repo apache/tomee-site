@@ -5,13 +5,13 @@ Title: Contact
 If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate [mailing list](support.html).
 
 
-##Security Issues
-If you would like to report a security issues with Apache Tomcat, please contact <a href="mailto:security.AT.apache.DOT.org">security.AT.apache.DOT.org</a>.
+## Security Issues
+If you would like to report a security issues with Apache TomEE, please contact <a href="mailto:security.AT.apache.DOT.org">security.AT.apache.DOT.org</a>.
 Only security issues should be sent to this address.
 
 
 ## General Apache Issues
-The Tomcat Project is an effort of the <a href="http://www.apache.org">Apache Software Foundation</a>. The address for general ASF correspondence and licensing questions is:
+The TomEE Project is an effort of the <a href="http://www.apache.org">Apache Software Foundation</a>. The address for general ASF correspondence and licensing questions is:
 
 <a href="mailto:apache.AT.apache.DOT.org">apache.AT.apache.DOT.org</a>
 
