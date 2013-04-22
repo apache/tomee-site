@@ -32,7 +32,7 @@ footer {
     outline: medium none;
     text-indent: -999em;
     width: 24px;
-    background-image: url('{{base}}resources/images/sprites.png');
+    background-image: url('../images/sprites.png');
     background-repeat: no-repeat;
     overflow: hidden;
     cursor: pointer;
@@ -45,7 +45,7 @@ footer {
     outline: medium none;
     text-indent: -999em;
     width: 24px;
-    background-image: url('{{base}}resources/images/edit.png');
+    background-image: url('../images/edit.png');
     background-repeat: no-repeat;
     overflow: hidden;
     cursor: pointer;
