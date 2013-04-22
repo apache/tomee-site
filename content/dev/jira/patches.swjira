@@ -1,5 +1,5 @@
 Title: Pending Patches
-#set( $url = "https://issues.apache.org/jira/secure/IssueNavigator.jspa?view=rss&&pid=OPENEJB&pid=TOMEE&status=Open&tempMax=1000&reset=true&decorator=none" )
+#set( $url = "https://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?jqlQuery=project+in+%28OPENEJB%2C+TOMEE%29+AND+status+%3D+Open&tempMax=1000" )
 #set( $jirarss = $rss.fetch( $url ) )
 #set( $issues = $jirarss.fillAttachments() )
 #set( $void = $date.format("yyyy-MM-dd") )
