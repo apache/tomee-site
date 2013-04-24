@@ -14,7 +14,7 @@ use ASF::Value;
 our @patterns = (
 
     [qr!^/index\.html$!, news_page => {
-        blog     => ASF::Value::Blogs->new(blog => "openejb", limit=> 3),
+        blog     => ASF::Value::Blogs->new(blog => "tomee", limit=> 3),
     }],
 
     [qr!^/logo\.html$!, news_page => { }],
