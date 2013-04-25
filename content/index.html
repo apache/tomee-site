@@ -1,6 +1,5 @@
 {% extends "basic.html" %}
 
-
 {% block title %}Apache TomEE & OpenEJB{% endblock %}
 {% block content %}
     <!-- Main hero unit for a primary marketing message or call to action -->
@@ -52,7 +51,12 @@
         <div class="span-two-thirds">
             <h3>Latest News</h3>
 
-            {% for e in blog.list %}
+            {% for e in tomeeBlog.list %}
+            <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>
+            {{ e.content|safe|truncatewords_html:50 }}
+            <hr>
+            {% endfor %}
+            {% for e in openejbBlog.list %}
             <h4><a href="{{ e.url }}">{{ e.title }}</a></h4>
             {{ e.content|safe|truncatewords_html:50 }}
             <hr>
