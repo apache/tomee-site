@@ -91,12 +91,12 @@ section following link
 
 
 
-  [1]: images/netbeans-serverCreate1.png
-  [2]: images/netbeans-serverCreate2.png
-  [3]: images/netbeans-databaseConnection1.png
-  [4]: images/netbeans-entityCreationStep1.png
-  [5]: images/netbeans-entityCreationStep2.png
-  [6]: images/netbeans-persistance1.png
-  [7]: images/netbeans-persistance2.png
-  [8]: images/netbeans-persistance3.png
+  [1]: resources/images/netbeans-serverCreate1.png
+  [2]: resources/images/netbeans-serverCreate2.png
+  [3]: resources/images/netbeans-databaseConnection1.png
+  [4]: resources/images/netbeans-entityCreationStep1.png
+  [5]: resources/images/netbeans-entityCreationStep2.png
+  [6]: resources/images/netbeans-persistance1.png
+  [7]: resources/images/netbeans-persistance2.png
+  [8]: resources/images/netbeans-persistance3.png
   [9]: http://tomee.apache.org/tomee-and-eclipse.html
