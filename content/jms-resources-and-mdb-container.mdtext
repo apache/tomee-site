@@ -70,7 +70,7 @@ Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will a
 
 
 
-# Internal ActiveMQ Broker with activemq.xml
+## Internal ActiveMQ Broker with activemq.xml
 
 The `activemq.xml` file format has a significant number of extra dependencies, such as Spring, and is therefore not included in the distribution by default.
 
