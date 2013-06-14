@@ -1,3 +1,4 @@
+/* handling columns */
 $(function () {
     function init() {
         var pageWidth = $(window).width();
