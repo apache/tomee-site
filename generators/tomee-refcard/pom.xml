@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.tomee</groupId>
+  <artifactId>tomee-refcard</artifactId>
+  <version>1-SNAPSHOT</version>
+  <name>TomEE Reference Card</name>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.asciidoctor</groupId>
+        <artifactId>asciidoctor-maven-plugin</artifactId>
+        <version>0.1.4-SNAPSHOT</version>
+        <configuration>
+          <sourceDocumentName>src/slides/refcard.asciidoc</sourceDocumentName>
+          <outputDirectory>${slides.output}</outputDirectory>
+
+          <synchronizations>
+            <synchronization>
+              <source>${slides.input}/css</source>
+              <target>${slides.output}/css</target>
+            </synchronization>
+            <synchronization>
+              <source>${slides.input}/js</source>
+              <target>${slides.output}/js</target>
+            </synchronization>
+            <synchronization>
+              <source>${slides.input}/images</source>
+              <target>${slides.output}/images</target>
+            </synchronization>
+          </synchronizations>
+
+          <title>TomEE RefCard</title>
+          <home>refcard</home>
+
+          <attributes>
+            <description>RefCard</description>
+            <keywords>refcard</keywords>
+
+            <author>RefCard</author>
+            <email>users@refcard</email>
+            <revdate>${maven.build.timestamp}</revdate>
+            <revnumber>${project.version}</revnumber>
+
+            <highlightjsdir>js</highlightjsdir>
+            <highlightjs-theme>github</highlightjs-theme>
+          </attributes>
+
+
+          <backend>html5</backend>
+          <compact>true</compact>
+          <headerFooter>true</headerFooter>
+          <sourceHighlighter>highlightjs</sourceHighlighter>
+
+          <templateDir>${slides.input}/backend</templateDir>
+          <templateEngine />
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <properties>
+    <slides.input>${project.basedir}/src/slides</slides.input>
+    <slides.output>${project.build.directory}/refcard</slides.output>
+  </properties>
+</project>
+

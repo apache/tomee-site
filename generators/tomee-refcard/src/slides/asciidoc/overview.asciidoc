@@ -1,0 +1,114 @@
+++++
+<div class="horizontal-block" id="Overview">
+<div class="col c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+++++
+
+[options="header", cols="a"]
+|===
+1+| TomEE Philosophy
+|
+Apache TomEE, pronounced "Tommy", is an all-Apache Java EE 6 Web Profile
+certified stack where Tomcat is top dog. Apache TomEE is assembled from
+a vanilla Apache Tomcat zip file. We start with Tomcat, add our jars and zip
+up the rest. The result is Tomcat with added EE features - TomEE.
+
+Its core values are:
+
+- Be Tomcat
+- Be certified
+- Be small
+
+|===
+
+[options="header" cols="a"]
+|===
+1+| TomEE Links
+|
+
+- TomEE Website: link:http://tomee.apache.org[http://tomee.apache.org]
+- TomEE Examples: link:http://tomee.apache.org/examples-trunk/index.html[http://tomee.apache.org/examples-trunk/index.html]
+
+|===
+
+
+++++
+</div></div>
+
+<div class="col c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
+++++
+
+[options="header", cols="a"]
+|===
+| TomEE ClassLoading
+|
+[source]
+----
+   bootstrap ($JAVA_HOME/jre/lib/ext)
+      \|
+    system (bin/boostrap.jar:bin/tomcat-juli.jar)
+      \|
+    common (lib/*.jar)
+    /    \
+webapp1 webapp2
+----
+
+Classloading configuration (properties):
+
+- `openejb.classloader.force-load=<comma separated list of class name prefixes>`: classes to load from the webapp first
+whatever is in the container
+- `openejb.classloader.force-skip=<idem>`: classes to load from the container
+whatever is in the application
+
+|===
+
+++++
+</div></div>
+
+<div class="col c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+++++
+
+[options="header", cols=",m"]
+|===
+2+| TomEE Basic Operation
+| Start and wait Ctrl+C      | ./bin/catalina.sh run
+| Start and forget           | ./bin/catalina.sh start
+| Stop                       | ./bin/catalina.sh stop
+| Deploy manually a webapp   | copy war over webapps/
+| Redeploy manually a webapp | delete exploded war then deploy
+|===
+
+[options="header" cols="a"]
+|===
+1+| TomEE Distributions
+|
+
+- TomEE Web Profile: JavaEE 6 Web profile sever (certified)
+- TomEE JAX-RS: previous one + JAX-RS (certified)
+- TomEE+: previous one + JAXWS + JMS + Connectors
+
+|===
+
+++++
+</div></div>
+
+<div class="col c2-2 c3-1 c4-4 c5-4 c6-4"><div class="blk">
+++++
+
+[options="header", cols="1m,2"]
+|===
+2+| TomEE Directory Layout
+| bin             | contains script to manage (start/stop/...) TomEE
+| conf            | server global configuration
+| endorsed        | override JVM API because too old for JavaEE
+| lib             | server libraries
+| logs            | logs directory (using default configuration)
+| temp            | default tmp directory
+| webapps         | default folder which aims to contain webapps
+| work            | folder used by Tomcat to store "work" binaries (compiled jsp...)
+|===
+
+
+++++
+</div></div>
+</div>
+++++

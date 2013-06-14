@@ -1,0 +1,297 @@
+++++
+<div class="horizontal-block" id="Arquillian">
+<div class="col c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| OpenEJB embedded adapter configuration
+|
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="
+  http://jboss.org/schema/arquillian
+  http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+ <container qualifier="openejb" default="true">
+  <configuration>
+   <!-- container properties (~ conf/system.properties) -->
+   <property name="properties">
+    # you can declare a resource, container...
+    db1 = new://Resource?type=DataSource
+    db1.JdbcUrl = jdbc:hsqldb:mem:db1
+
+    # special hook based on ShrinkWrap
+    # to predeployed some archives at startup
+    # (instead of by test)
+    #
+    # syntax is comma separated list
+    # and multiple archives in the same package
+    # can be aggregated: package.[A1\|A2]
+    openejb.arquillian.predeploy-archives = org.foo.SimpleArchive
+   </property>
+  </configuration>
+ </container>
+</arquillian>
+----
+|===
+
+[options="header" cols="a"]
+|===
+| TomEE Arquillian Adapters
+|
+
+TomEE arquillian adapters support the system property `openejb.arquillian.adapter`
+to select which adapter to use if multiple are at the classpath (Arquillian tolerate a single
+one by default).
+
+This way you can run your test against several OpenEJB/TomEE adapters in the same build (no need
+of any maven profile). A complete sample can be found here:
+link:http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/multiple-arquillian-adapters/[http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/multiple-arquillian-adapters/]).
+
+|===
+
+[options="header" cols="a"]
+|===
+| Simple Arquillian test
+|
+
+[source,java]
+----
+@RunWith(Arquillian.class)
+public class SimpleArquillianTest {
+ @Deployment(name = "archive")
+ public static WebArchive war() {
+  return ShrinkWrap.create(WebArchive.class, "test.war")
+   .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml")
+   .addClasses(MyBean.class);
+  }
+
+  @Inject
+  private MyBean bean;
+
+  @Test
+  public void testRunningInDep1() {
+    assertEquals("foo", bean.foo());
+  }
+}
+----
+
+|===
+
+++++
+</div></div>
+
+<div class="col c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| TomEE embedded adapter configuration
+|
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="
+  http://jboss.org/schema/arquillian
+  http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+ <container qualifier="tomee" default="true">
+  <configuration>
+   <property name="serverXml">conf/server.xml</property>
+
+   <!-- port = -1 means random -->
+   <property name="httpPort">-1</property>
+   <property name="stopPort">-1</property>
+
+   <!-- ssl -->
+   <property name="httpsPort">-1</property>
+   <property name="ssl">false</property>
+   <property name="keystoreFile">keystore-path</property>
+   <property name="keystorePass">changeit</property>
+   <property name="keystoreType">JKS</property>
+   <property name="clientAuth">false</property>
+   <property name="keyAlias">alias</property>
+   <property name="sslProtocol">protocol</property>
+
+   <!-- where to create TomEE files -->
+   <property name="dir">target/tomee-embedded</property>
+
+   <!-- where to dump on disk applications to deploy -->
+   <property name="appWorkingDir">target/working-dir</property>
+
+   <!-- optional - limit the port allowed when random -->
+   <property name="portRange">20001-30000</property>
+
+   <!-- container config -->
+   <property name="properties">
+    # same as embedded case
+   </property>
+  </configuration>
+ </container>
+</arquillian>
+----
+|===
+
+
+++++
+</div></div>
+
+<div class="col c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+++++
+
+
+[options="header" cols="a"]
+|===
+| TomEE remote adapter configuration
+|
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="
+  http://jboss.org/schema/arquillian
+  http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+ <container qualifier="tomee" default="true">
+  <configuration>
+   <property name="serverXml">conf/server.xml</property>
+
+   <!-- tomee zip to use -->
+   <property name="groupId">org.apache.openejb</property>
+   <property name="artifactId">apache-tomee</property>
+   <property name="version">LATEST</property>
+   <property name="type">zip</property>
+
+   <!-- tomee provided files, ignored by default -->
+   <property name="bin">src/test/tomee/bin</property>
+   <property name="conf">src/test/tomee/conf</property>
+   <property name="lib">src/test/tomee/lib</property>
+
+   <!--
+    remote debugging,
+    -Dopenejb.server.debug can activate it too
+   -->
+   <property name="debug">false</property>
+   <property name="debugPort">5005</property>
+
+   <!-- nice one line logging -->
+   <property name="simpleLog">true</property>
+
+   <!-- jvm config -->
+   <property name="catalina_opts">-XX:-UseParallelGC</property>
+
+   <!-- remove if exist -->
+   <property name="cleanOnStartUp">true</property>
+
+   <!-- remove default webapps -->
+   <property name="removeunusedWebapps">true</property>
+
+   <!-- port = -1 means random -->
+   <property name="httpPort">-1</property>
+   <property name="stopPort">-1</property>
+
+   <!-- where to create TomEE -->
+   <property name="dir">target/apache-tomee</property>
+
+   <!-- where to dump on disk applications to deploy -->
+   <property name="appWorkingDir">target/working-dir</property>
+
+   <!-- optional - limit the port allowed when random -->
+   <property name="portRange">20001-30000</property>
+
+   <!-- container config -->
+   <property name="properties">
+    # same as embedded case
+   </property>
+  </configuration>
+ </container>
+</arquillian>
+----
+|===
+
+
+++++
+</div></div>
+
+<div class="col c2-2 c3-2 c4-4 c5-4 c6-4"><div class="blk">
+++++
+
+
+[options="header" cols="a"]
+|===
+| Multiple TomEE with Arquillian
+|
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+ <group qualifier="tomee-cluster">
+  <container qualifier="tomee-1">
+   <configuration>
+    <property name="httpPort">-1</property>
+    <property name="stopPort">-1</property>
+    <property name="ajpPort">-1</property>
+    <property name="dir">target/tomee1</property>
+    <property name="appWorkingDir">target/wd1</property>
+   </configuration>
+  </container>
+  <container qualifier="tomee-2">
+   <configuration>
+    <property name="httpPort">-1</property>
+    <property name="stopPort">-1</property>
+    <property name="ajpPort">-1</property>
+    <property name="dir">target/tomee2</property>
+    <property name="appWorkingDir">target/wd2</property>
+   </configuration>
+  </container>
+ </group>
+</arquillian>
+----
+
+Then in java just declare "as usual" multiple deployments and match them in your test methods:
+
+[source,java]
+----
+@RunWith(Arquillian.class)
+public class MultipleTomEETest {
+ @Deployment(name = "war1", testable = false)
+ @TargetsContainer("tomee-1")
+ public static WebArchive war1() {
+  return /* ... */;
+ }
+
+ @Deployment(name = "war2", testable = false)
+ @TargetsContainer("tomee-2")
+ public static WebArchive war2() {
+  return /* ... */;
+ }
+
+ @Test
+ @OperateOnDeployment("war1")
+ public void testRunningInDep1(
+    @ArquillianResource URL url) {
+   // test on tomee 1, url is contextual
+ }
+
+ @Test
+ @OperateOnDeployment("war2")
+ public void testRunningInDep1(
+    @ArquillianResource URL url) {
+   // test on tomee 1, url is contextual
+ }
+}
+----
+
+|===
+
+++++
+</div></div>
+</div>
+++++

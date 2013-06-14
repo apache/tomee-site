@@ -1,0 +1,392 @@
+++++
+<div class="horizontal-block" id="Configuration">
+<div class="col c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|====
+| Scanning/Loader configuration, conf/catalina.properties
+|
+[source,ini]
+----
+# the main server classloader configuration,
+# JDBC drivers go here in general
+common.loader=${catalina.base}/lib,\
+${catalina.base}/lib/*.jar,\
+${catalina.home}/lib,${catalina.home}/lib/*.jar
+
+# other defaults are generally fine
+----
+|====
+
+[options="header" cols="a"]
+|===
+| TomEE system properties, conf/system.properties
+|
+[source,ini]
+----
+# handle global configuration
+# this file is an alternative
+# to JVM system properties -Dxxxx=yyyy
+
+# check libraries
+openejb.check.classloader = false
+
+# deploy internal application
+# only relevant in dev
+openejb.system.apps = true
+
+# deactivate JMX
+openejb.jmx.active = false
+
+# where to find the TomEE config file
+openejb.conf.file = conf/tomee.xml
+
+# force inclusion/exclusion of packages during classloading
+openejb.classloader.force-load = my.pack1,my.pack2
+openejb.classloader.force-skip = my.pack3,my.pack4
+
+# app ones
+my.system.property.config = my value
+
+# more on http://tomee.apache.org/properties-listing.html
+
+----
+|===
+
+[options="header" cols="a"]
+|===
+| Logging configuration, conf/logging.properties
+|
+[source,ini]
+----
+# available handlers for logging: console, file...
+handlers = 5tomee.org.apache.juli.FileHandler, java.util.logging.ConsoleHandler
+
+# file handler configuration
+# 3 main items: level of the handler, where to log, with wich prefix
+5tomee.org.apache.juli.FileHandler.level = FINEST
+5tomee.org.apache.juli.FileHandler.directory = ${catalina.base}/logs
+5tomee.org.apache.juli.FileHandler.prefix = tomee.
+
+# each category can be configured (ex: OpenEJB)
+## level: FINEST > FINE > INFO > WARNING > SEVERE
+OpenEJB.level = WARNING
+
+## handler
+OpenEJB.handlers = 5tomee.org.apache.juli.FileHandler,\
+java.util.logging.ConsoleHandler
+
+# more on tomcat website:
+# http://tomcat.apache.org/tomcat-7.0-doc/logging.html
+----
+|===
+
+[options="header" cols="a"]
+|===
+| Daemons configuration, conf/conf.d/*.properties
+|
+OpenEJB and TomEE rely on daemons for extensibility.
+
+Typically JAXWS and JAXRS uses this feature to be
+added to the server.
+
+Each daemon can get configuration.
+
+It is configurable through:
+
+- system properties: `<daemon name.<attribute>=value`
+- conf/conf.d/<daemon name>.properties
+
+All daemons have a property `disabled` which can be set to true
+to deactivate it.
+
+|===
+
+++++
+</div></div>
+
+<div class="col c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| Server configuration, conf/server.xml
+|
+[source,xml]
+----
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="8005" shutdown="SHUTDOWN">
+ <!-- TomEE integration with Tomcat -->
+ <Listener className="org.apache.tomee.catalina.ServerListener" />
+
+ <Service name="Catalina">
+
+  <!-- Connectors are entry points (HTTP, AJP...) -->
+  <Connector port="8080" protocol="HTTP/1.1" />
+
+  <Engine name="Catalina" defaultHost="localhost">
+   <!--
+    folder webapps will scanned for webapps
+    and webapps will be deployed on localhost
+   -->
+   <Host name="localhost"  appBase="webapps" />
+  </Engine>
+ </Service>
+</Server>
+----
+|===
+
+[options="header" cols="a"]
+|===
+| JAXWS WS Security configuration
+|
+It basically relies on openejb-jar.xml (in META-INF or WEB-INF):
+
+A complete example can be found within TomEE examples: `webservice-ws-security`.
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
+ <ejb-deployment ejb-name="CalculatorImpl">
+  <properties>
+   # webservice.security.realm
+   # webservice.security.securityRealm
+   # webservice.security.transportGarantee = NONE
+   webservice.security.authMethod = WS-SECURITY
+
+   wss4j.in.action = UsernameToken
+   wss4j.in.passwordType = PasswordText
+   wss4j.in.passwordCallbackClass = org.superbiz.MyPwdHandler
+
+   # automatically added
+   wss4j.in.validator
+   .{http://docs.oasis-open.org/wss/2004/01/oasis-200401
+   -wss-wssecurity-secext-1.0.xsd}UsernameToken =
+   org.apache.openejb.server.cxf.OpenEJBLoginValidator
+  </properties>
+ </ejb-deployment>
+</openejb-jar>
+----
+
+`wss4j.out.*` properties exist too.
+
+|===
+
+[options="header" cols="a"]
+|===
+| Scanning configuration
+|
+Scanning is used to find EE classes (EJB, CDI beans...).
+
+It is common to not scan 'utility libraries' like commons-lang for instance.
+
+TomEE/OpenEJB support two main configurations regarding the scanning:
+
+- `exclusions.list`: can be in WEB-INF or in `<tomee>/conf/`: each line is a jar prefix
+which will not be included in the scanning. Defaults are in `openejb-core/!default.exclusions`.
+If you want to simply add your own exclusion you can use `default-list` which means the whole content of the default file.
+
+- `scan.xml`: in META-INF or WEB-INF it lists the classes/packages to scan. here is a sample:
+
+[source,xml]
+----
+<?xml version="1.0"?>
+<scan>
+ <packages>
+  <package>org.foo1</package>
+  <package>org.foo2</package>
+ </packages>
+ <classes>
+  <class>org.bar.Bar1</class>
+  <class>org.anotherbar.Bar2</class>
+ </classes>
+</scan>
+----
+
+|===
+
+++++
+</div></div>
+
+<div class="col c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| TomEE application configuration, WEB-INF/resources.xml
+|
+[source,xml]
+----
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--
+    mainly a tomee.xml embed in the application
+    (META-INF or WEB-INF)
+  -->
+  <Resource id="name" type="DataSource">
+      JdbcUrl = jdbc:hsqldb:mem:my-ds
+  </Resource>
+</resources>
+----
+|===
+
+[options="header" cols="a"]
+|===
+| JAXRS configuration
+|
+It basically relies on openejb-jar.xml (in META-INF or WEB-INF):
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1">
+ <!--
+ class-name has to be the JAXRS application name
+ or this one if no Application is defined
+ -->
+ <pojo-deployment class-name="jaxrs-application">
+  <properties>
+   cxf.jaxrs.providers = org.foo.BarProvider, id1
+  </properties>
+ </pojo-deployment>
+</openejb-jar>
+----
+
+Values are either a class which will be instantiated (through `new`)
+or an id which will match a `Service` in a  `resources.xml` file:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <Service id="json" class-name="org.foo.bar">
+      Attribute1 = Value1
+      Attribute2 = Value2
+  </Resource>
+</resources>
+----
+
+Here is the full list of available properties configurable in `openejb-jar.xml`
+with the prefix `cxf.jaxrs`:
+
+- properties
+- features
+- in-interceptors
+- out-interceptors
+- in-fault-interceptors
+- out-fault-interceptors
+- databinding
+- providers
+
+NOTE: excepted providers configuration all these configuration are available for CXF endpoints (including JAXWS ones).
+
+|===
+
+++++
+</div></div>
+
+<div class="col c2-2 c3-2 c4-4 c5-4 c6-4"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| TomEE main configuration, conf/tomee.xml
+|
+[source,xml]
+----
+<?xml version="1.0" encoding="utf-8"?>
+<tomee>
+  <!--
+  resources can be declared here
+  To lookup it directly just use openejb:Resource/<id> name
+  -->
+  <Resource id="name" type="DataSource>
+      # here comes the configuration in properties like format
+      JdbcUrl = jdbc:hsqldb:mem:my-ds
+      UserName = SA
+  </Resource>
+
+  <!-- resource can be any class available in the container loader -->
+  <Resource id="foo" class-name="org.foo.MyPojo">
+    pojoAttr1 = value2
+  </Resource>
+
+  <!--
+   if you want to deploy ear/jar,
+   declare it + put the file in apps folder
+  -->
+  <Deployments dir="apps" />
+
+  <!-- more on http://tomee.apache.org/containers-and-resources.html -->
+</tomee>
+----
+|===
+
+[options="header" cols="a"]
+|===
+| Activating JAAS
+|
+NOTE: in the snippets `o.a.o` means `org.aapche.openejb`
+
+Basic JAAS configuration needs:
+
+- the system property:
+
+[source]
+----
+-Djava.security.auth.login.config=<path to login.config>
+----
+
+- the login.config file (see below)
+
+Here is a sample JAAS config file using PropertiesLoginModule:
+
+[source]
+----
+PropertiesLoginModule {
+ o.a.o.core.security.jaas.PropertiesLoginModule
+ required
+ Debug=false
+ UsersFile="users.properties"
+ GroupsFile="groups.properties";
+};
+----
+
+This login module needs 2 properties files, one for group and one for users.
+
+Here is a `users.properties` file (should be in `conf/`):
+
+[source,ini]
+----
+user1=pwd1
+user3=pwd2
+user3=pwd3
+----
+
+Here is a `groups.properties` file (should be in `conf/`):
+
+[source,ini]
+----
+group1=user1
+group2=user2, user3
+----
+
+To integrate JAAS with Tomcat just add/replace the default tomcat realm with:
+
+[source,xml]
+----
+<Realm className="org.apache.catalina.realm.JAASRealm"
+ appName="PropertiesLoginModule"
+ userClassNames="o.a.o.core.security.jaas.UserPrincipal"
+ roleClassNames="o.a.o.core.security.jaas.GroupPrincipal" />
+----
+
+|===
+
+++++
+</div></div>
+</div>
+++++
+
