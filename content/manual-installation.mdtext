@@ -171,22 +171,23 @@ First, copy the OpenEJB JavaAgent jar into the lib directory.
 
 </code></pre>
 
-Simply, add the following text in bold to the
+Simply, add the snippet marked below in
 bin/catalina.bat (Windows) or bin/catalina.sh (Unix) file to enable the
 OpenEJB javaagent:
 
-if not exist "%CATALINA_BASE%\conf\logging.properties" goto noJuli
-set JAVA_OPTS=%JAVA_OPTS%
--Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
--Djava.util.logging.config.file="%CATALINA_BASE%\conf\logging.properties"
-:noJuli
+    if not exist "%CATALINA_BASE%\conf\logging.properties" goto noJuli
+    set JAVA_OPTS=%JAVA_OPTS%
+    -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+    -Djava.util.logging.config.file="%CATALINA_BASE%\conf\logging.properties"
+    :noJuli
 
- ***rem Add OpenEJB javaagent if not exist
- "%CATALINA_BASE%\webapps\openejb\lib\openejb-javaagent.jar" goto
- noOpenEJBJavaagent set
- JAVA_OPTS="-javaagent:%CATALINA_BASE%\webapps\openejb\lib\openejb-javaagent.jar"
- %JAVA_OPTS% :noOpenEJBJavaagent***
-
+     # Start of Snippet to add
+     rem Add OpenEJB javaagent if not exist
+     "%CATALINA_BASE%\webapps\openejb\lib\openejb-javaagent.jar" goto
+     noOpenEJBJavaagent set
+     JAVA_OPTS="-javaagent:%CATALINA_BASE%\webapps\openejb\lib\openejb-javaagent.jar"
+     %JAVA_OPTS% :noOpenEJBJavaagent
+     # End of Snippet to add
 
 
     rem ----- Execute The Requested Command
@@ -204,16 +205,19 @@ set JAVA_OPTS=%JAVA_OPTS%
     "-Djava.util.logging.config.file="$CATALINA_BASE/conf/logging.properties"
     fi
 
- ***if [OPENEJB: -r "$CATALINA_BASE"/webapps/lib/openejb-javaagent.jar ](openejb:--r-"$catalina_base"/webapps/lib/openejb-javaagent.jar-.html)
+ #Start of Snippet to add
+ if [OPENEJB: -r "$CATALINA_BASE"/webapps/lib/openejb-javaagent.jar ](openejb:--r-"$catalina_base"/webapps/lib/openejb-javaagent.jar-.html)
 ; then
 &nbsp;&nbsp;JAVA_OPTS=""-javaagent:$CATALINA_BASE/lib/openejb-javaagent.jar"
 $JAVA_OPTS"
-fi***
+fi
+#End of Snippet to add
 
 
 
 ##Note:
  The example above is an excerpt from the middle of the
 bin/catalina.sh file. Search for the this section and add section text shown in bold
+
 
 
