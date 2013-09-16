@@ -205,13 +205,13 @@ OpenEJB javaagent:
     "-Djava.util.logging.config.file="$CATALINA_BASE/conf/logging.properties"
     fi
 
- #Start of Snippet to add
- if [OPENEJB: -r "$CATALINA_BASE"/webapps/lib/openejb-javaagent.jar ](openejb:--r-"$catalina_base"/webapps/lib/openejb-javaagent.jar-.html)
-; then
-&nbsp;&nbsp;JAVA_OPTS=""-javaagent:$CATALINA_BASE/lib/openejb-javaagent.jar"
-$JAVA_OPTS"
-fi
-#End of Snippet to add
+     #Start of Snippet to add
+     if [OPENEJB: -r "$CATALINA_BASE"/webapps/lib/openejb-javaagent.jar ](openejb:--r-"$catalina_base"/webapps/lib/openejb-javaagent.jar-.html)
+    ; then
+    JAVA_OPTS=""-javaagent:$CATALINA_BASE/lib/openejb-javaagent.jar"
+    $JAVA_OPTS"
+    fi
+    #End of Snippet to add
 
 
 
