@@ -200,7 +200,7 @@ OpenEJB javaagent:
     # Set juli LogManager if it is present
     if [OPENEJB: -r "$CATALINA_BASE"/conf/logging.properties ](openejb:--r-"$catalina_base"/conf/logging.properties-.html)
     ; then
-    &nbsp;&nbsp;JAVA_OPTS="$JAVA_OPTS
+    JAVA_OPTS="$JAVA_OPTS
     "-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager"
     "-Djava.util.logging.config.file="$CATALINA_BASE/conf/logging.properties"
     fi
@@ -217,7 +217,7 @@ OpenEJB javaagent:
 
 ##Note:
  The example above is an excerpt from the middle of the
-bin/catalina.sh file. Search for the this section and add section text shown in bold
+bin/catalina.sh file. Search for the this section and add the snippet shown 
 
 
 
