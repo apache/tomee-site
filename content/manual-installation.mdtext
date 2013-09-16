@@ -1,4 +1,5 @@
 Title: Manual Installation
+
 {composition-setup}
 {composition-setup}
 <a name="ManualInstallation-Overview"></a>
@@ -19,12 +20,12 @@ following:
 script
 
 <a name="ManualInstallation-{anchor:install-openejb}Installopenejb.war"></a>
-# {anchor:install-openejb}Install openejb.war
+#{anchor:install-openejb}Install openejb.war
 
 Once Tomcat has been [installed](tomcat-installation.html)
 , the OpenEJB plugin for Tomcat can be installed.  The war can be obtained
 from the [OpenEJB download page|http://people.apache.org/~dain/openejb-temp]
-.  The commands in this example are executed from within the Tomcat
+. The commands in this example are executed from within the Tomcat
 installation directory.
 
 <a name="ManualInstallation-UnpackOpenEJBTomcatplugininTomcatwebappsdirectory"></a>
@@ -43,48 +44,12 @@ so follow the steps closely.
 
 {deck:id=unpack tomcat}
 {card:label=Windows}{noformat:nopanel=true}
-C:\apache-tomcat-6.0.14>mkdir webapps\openejb
 
-C:\apache-tomcat-6.0.14>cd webapps\openejb
-
-C:\apache-tomcat-6.0.14\webapps\openejb>jar -xvf \openejb.war
-  created: WEB-INF/
-  created: WEB-INF/classes/
-  created: WEB-INF/classes/org/
-  created: WEB-INF/classes/org/apache/
-  created: WEB-INF/classes/org/apache/openejb/
-...snip...
-
-C:\apache-tomcat-6.0.14\webapps\openejb>dir
- Volume in drive C has no label.
- Volume Serial Number is 0000-0000
-
- Directory of C:\apache-tomcat-6.0.14\webapps\openejb
-
-09/21/2007  10:19 AM	<DIR>	       .
-09/21/2007  10:19 AM	<DIR>	       ..
-09/21/2007  10:19 AM		 1,000 index.html
-09/21/2007  10:19 AM	<DIR>	       lib
-09/21/2007  10:19 AM		11,358 LICENSE
-09/21/2007  10:19 AM	<DIR>	       META-INF
-09/21/2007  10:19 AM		11,649 NOTICE
-09/21/2007  10:19 AM		 1,018 openejb.xml
-09/21/2007  10:19 AM		 1,886 README.txt
-09/21/2007  10:19 AM	<DIR>	       tomcat
-09/21/2007  10:19 AM	<DIR>	       WEB-INF
-	       5 File(s)	 26,911 bytes
-	       6 Dir(s)   4,633,796,608 bytes free
-
-C:\apache-tomcat-6.0.14\webapps\openejb>cd ..\..
-
-C:\apache-tomcat-6.0.14>
-
-    {card:label=Unix}{noformat:nopanel=true}
-    apache-tomcat-6.0.14$ mkdir webapps/openejb
+    C:\apache-tomcat-6.0.14>mkdir webapps\openejb
     
-    apache-tomcat-6.0.14$ cd webapps/openejb/
+    C:\apache-tomcat-6.0.14>cd webapps\openejb
     
-    apache-tomcat-6.0.14/webapps/openejb$ jar -xvf path/to/openejb.war 
+    C:\apache-tomcat-6.0.14\webapps\openejb>jar -xvf \openejb.war
       created: WEB-INF/
       created: WEB-INF/classes/
       created: WEB-INF/classes/org/
@@ -92,13 +57,50 @@ C:\apache-tomcat-6.0.14>
       created: WEB-INF/classes/org/apache/openejb/
     ...snip...
     
-    apache-tomcat-6.0.14/webapps/openejb$ ls
-    LICENSE      META-INF/	  NOTICE       README.txt   WEB-INF/	 index.html
-  lib/	       openejb.xml  tomcat/
+    C:\apache-tomcat-6.0.14\webapps\openejb>dir
+     Volume in drive C has no label.
+     Volume Serial Number is 0000-0000
     
-    apache-tomcat-6.0.14/webapps/openejb$ cd ../..
+     Directory of C:\apache-tomcat-6.0.14\webapps\openejb
     
-    apache-tomcat-6.0.14$
+    09/21/2007  10:19 AM	<DIR>	       .
+    09/21/2007  10:19 AM	<DIR>	       ..
+    09/21/2007  10:19 AM		 1,000 index.html
+    09/21/2007  10:19 AM	<DIR>	       lib
+    09/21/2007  10:19 AM		11,358 LICENSE
+    09/21/2007  10:19 AM	<DIR>	       META-INF
+    09/21/2007  10:19 AM		11,649 NOTICE
+    09/21/2007  10:19 AM		 1,018 openejb.xml
+    09/21/2007  10:19 AM		 1,886 README.txt
+    09/21/2007  10:19 AM	<DIR>	       tomcat
+    09/21/2007  10:19 AM	<DIR>	       WEB-INF
+    	       5 File(s)	 26,911 bytes
+    	       6 Dir(s)   4,633,796,608 bytes free
+    
+    C:\apache-tomcat-6.0.14\webapps\openejb>cd ..\..
+    
+    C:\apache-tomcat-6.0.14>
+    
+        {card:label=Unix}{noformat:nopanel=true}
+        apache-tomcat-6.0.14$ mkdir webapps/openejb
+        
+        apache-tomcat-6.0.14$ cd webapps/openejb/
+        
+        apache-tomcat-6.0.14/webapps/openejb$ jar -xvf path/to/openejb.war 
+          created: WEB-INF/
+          created: WEB-INF/classes/
+          created: WEB-INF/classes/org/
+          created: WEB-INF/classes/org/apache/
+          created: WEB-INF/classes/org/apache/openejb/
+        ...snip...
+        
+        apache-tomcat-6.0.14/webapps/openejb$ ls
+        LICENSE      META-INF/	  NOTICE       README.txt   WEB-INF/	 index.html
+      lib/	       openejb.xml  tomcat/
+        
+        apache-tomcat-6.0.14/webapps/openejb$ cd ../..
+        
+        apache-tomcat-6.0.14$
 
 {deck}
 
@@ -110,20 +112,17 @@ loader, so the openejb-loader jar must be copied into the Tomcat lib
 directory.
 
 {deck:id=copy openejb loader}
-{card:label=Windows}{noformat:nopanel=true}
-C:\apache-tomcat-6.0.14>copy
-webapps\openejb\lib\openejb-loader-3.0.0-SNAPSHOT.jar
-lib\openejb-loader.jar
-	1 file(s) copied.
 
-    {card:label=Unix}{noformat:nopanel=true}
-    apache-tomcat-6.0.14$ cp webapps/openejb/lib/openejb-loader-*.jar
-lib/openejb-loader.jar
+    {card:label=Windows}
+        C:\apache-tomcat-6.0.14>copy webapps\openejb\lib\openejb-loader-3.0.0-SNAPSHOT.jar lib\openejb-loader.jar
+    	1 file(s) copied.
+    
+    {card:label=Unix}
+        apache-tomcat-6.0.14$ cp webapps/openejb/lib/openejb-loader-*.jar lib/openejb-loader.jar
 
 {deck}
 
-Add the following {highlight}highlighted lines{highlight} to your
-conf/server.xml file to load the OpenEJB listener:
+Add the following {highlight}highlighted lines{highlight} to your conf/server.xml file to load the OpenEJB listener:
  
 {panel:title=conf/server.xml}
 <!-- Note:  A "Server" is not itself a "Container", so you may not
@@ -173,15 +172,13 @@ the installation of a javaagent into the Tomcat startup process.
 First, copy the OpenEJB JavaAgent jar into the lib directory.
 
 {deck:id=unpack tomcat}
-{card:label=Windows}{noformat:nopanel=true}
-C:\apache-tomcat-6.0.14>copy
-webapps\openejb\lib\openejb-javaagent-3.0.0-SNAPSHOT.jar
-lib\openejb-javaagent.jar
-	1 file(s) copied.
 
-    {card:label=Unix}{noformat:nopanel=true}
-    apache-tomcat-6.0.14$ cp webapps/openejb/lib/openejb-javaagent-*.jar
-lib/openejb-javaagent.jar
+    {card:label=Windows}
+    C:\apache-tomcat-6.0.14>copy webapps\openejb\lib\openejb-javaagent-3.0.0-SNAPSHOT.jar lib\openejb-javaagent.jar
+    	1 file(s) copied.
+    
+    {card:label=Unix}
+    apache-tomcat-6.0.14$ cp webapps/openejb/lib/openejb-javaagent-*.jar lib/openejb-javaagent.jar
 
 {deck}
 
@@ -248,3 +245,6 @@ if [OPENEJB: $have_tty -eq 1 ](openejb:-$have_tty--eq-1-.html)
 *NOTE:* The example above is an excerpt from the middle of the
 bin/catalina.sh file.  Search for "Execute" in the file to locate the
 correct position in the file to add the new lines.
+
+
+
