@@ -4,10 +4,7 @@ Title: JavaAgent
 
 Adding a java agent is done via a vm parameter as follows:
 
-{panel}
-java -javaagent:openejb-javaagent-3.0-beta-2.jar _\[other params...](other-params....html)
-_
-{panel}
+    java -javaagent:openejb-javaagent-4.6.0.jar _\[other params...](other-params....html)
 
 {note:title=Need the JavaAgent?}
 The java agent is only required if using OpenJPA as your persistence
@@ -27,8 +24,8 @@ your pom.xml file:
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <forkMode>pertest</forkMode>
-            <argLine>-javaagent:${basedir}/target/openejb-javaagent-3.0-beta-2.jar</argLine>
-            <workingDirectory>${basedir}/target</workingDirectory>
+            <argLine>-javaagent:${project.basedir}/target/openejb-javaagent-4.6.0.jar</argLine>
+            <workingDirectory>${project.basedir}/target</workingDirectory>
           </configuration>
         </plugin>
 
@@ -49,7 +46,7 @@ your pom.xml file:
                   <artifactItem>
                     <groupId>org.apache.openejb</groupId>
                     <artifactId>openejb-javaagent</artifactId>
-                    <version>3.0-beta-2</version>
+                    <version>4.6.0</version>
                     <outputDirectory>${project.build.directory}</outputDirectory>
                   </artifactItem>
                 </artifactItems>
