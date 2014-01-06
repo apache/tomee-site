@@ -45,31 +45,30 @@ If you prefer, TomEE can be setup by deploying a .war file into an existing Tomc
 
  - Go to the TomEE webapp: http://localhost:8080/tomee and login with the user you added to tomcat-users.xml
 
-![Menu bar](images/dropin_install_title.png)
+![Menu bar](resources/images/dropin_install_title.png)
 
  - Click the "Test your setup" link at the top. This should check that everything is working correctly, and should display like the page below:
 
-![Test page 1](images/dropin_install_testing1.png)
+![Test page 1](resources/images/dropin_install_testing1.png)
 
  - If everything looks ok, click on the 'Continue tests' button. This will run some additional checks:
 
-![Test page 2](images/dropin_install_testing2.png)
+![Test page 2](resources/images/dropin_install_testing2.png)
 
  - If everything has tested ok, click on the Index link at the top and select the '[Optional] Install Listener and JavaAgent' link.
 
  - Confirm that the folders shown are correct for your installation, and click the 'Install' button.
 
-![Install page 1](images/dropin_install_install1.png)
+![Install page 1](resources/images/dropin_install_install1.png)
 
  - TomEE will now make the necessary changes to your Tomcat installation (backing up any files changed). The next screen will show a summary:
 
-![Install page 2](images/dropin_install_install2.png)
+![Install page 2](resources/images/dropin_install_install2.png)
 
  - Restart Tomcat, and refresh the page in your browser. If the installation has been successful you will see the page below:
 
-![Install page 3](images/dropin_install_install3.png)
+![Install page 3](resources/images/dropin_install_install3.png)
 
  - Your TomEE installation is now complete!
-
 
 
