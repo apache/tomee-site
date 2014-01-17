@@ -33,7 +33,7 @@ If you prefer, TomEE can be setup by deploying a .war file into an existing Tomc
  - Download the .war file you wish to use - either the tomee-webapp-1.6.0.war (for the webprofile installation) or tomee-webapp-plus-1.6.0.war (for the plus version).
  - Copy the .war file to $CATALINA_HOME/webapps/tomee.war (the .war filename is important).
  - Start Tomcat.
- - Go to the TomEE installer webapp (http://localhost:8080/tomee) and login with the user you added to tomcat-users.xml.
+ - Go to the TomEE installer webapp (<a href="http://localhost:8080/tomee/">http://localhost:8080/tomee/</a>) and login with the user you added to tomcat-users.xml.
  - Verify the values and click "Confirm".
 
   ![alt text][1]
