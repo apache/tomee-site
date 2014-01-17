@@ -16,10 +16,6 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-<div class="alert-message">
-   Please note that the instructions below do not currently work with the 1.5.0 binaries due to a bug, but this has been been resolved in more recent snapshots. If you are using 1.5.0, please follow the manual installation instructions <a href="manual-installation.html">here</a>.
-</div>
-
 If you prefer, TomEE can be setup by deploying a .war file into an existing Tomcat installation, as opposed to using the all-in-one bundle. This guide provides a set of step-by-step instructions to this approach. Please note that TomEE 1.6.0 does not support Tomcat 7.0.50.
 
  - Download the Apache Tomcat 7.0.42 server. <a href="http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.42/bin/">http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.42/bin/</a>
