@@ -16,41 +16,49 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-You can trick NetBeans and use TomEE as a simple Tomcat server.
-
 We will use one of the existing examples for this demo. Let's import it.
+
   ![alt text][1]
   ![alt text][2]
   ![alt text][3]
   ![alt text][4]
 
 Click 'Open Project'.
+
   ![alt text][5]
   ![alt text][6]
 
 It's time to add our local TomEE server. Click 'Tools' and then 'Servers'.
+
   ![alt text][7]
 
 Select 'Apache Tomcat'.
+
   ![alt text][8]
   
 Select your local TomEE directory.
+
   ![alt text][9]
   ![alt text][10]
   ![alt text][11]
 
 It's time to run it. Click the play button.
+
   ![alt text][12]
 
 Select 'Apache Tomcat'.
+
   ![alt text][13]
 
 Give it some time. It's building your application.
+
   ![alt text][14]
 
 Done. Your server is up and running.
+
   ![alt text][15]
   ![alt text][16]
+
 
   [1]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_01.png
   [2]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_02.png
