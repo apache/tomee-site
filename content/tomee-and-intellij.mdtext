@@ -26,6 +26,7 @@ TomEE/Intellij integration sets the pace for all other IDE integrations.
 [Feature requests very welcome!](http://youtrack.jetbrains.com/issues/IDEA)  TomEE is to Intellij
 what GlassFish is to NetBeans and your feedback is a critcal part of that.
 
+
 # Getting Started
 
 We will use one of the existing examples for this demo. Let's import it.
