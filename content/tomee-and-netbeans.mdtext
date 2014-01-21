@@ -16,87 +16,55 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            specific language governing permissions and limitations
            under the License.
 
-Netbeans and TomEE works great together. You can infact add TomEE as an Apache Tomcat server in Netbeans 
-by following the simple steps given below. 
+You can trick NetBeans and use TomEE as a simple Tomcat server.
 
-Lets assume that you have already downloaded TomEE and you have NetBeans already setup.So to begin 
-lets just create a Java Web project in NetBeans (Assuming you have basic working knowledge 
-with NetBeans and you know how to create and run a web project in NetBeans). In the server screen 
-we can add TomEE like the given screenshot below.
+We will use one of the existing examples for this demo. Let's import it.
+  ![alt text][1]
+  ![alt text][2]
+  ![alt text][3]
+  ![alt text][4]
 
-![alt text][1]
+Click 'Open Project'.
+  ![alt text][5]
+  ![alt text][6]
 
+It's time to add our local TomEE server. Click 'Tools' and then 'Servers'.
+  ![alt text][7]
 
-Now hit next. In the next step you need to select the folder where the TomEE server is present.
+Select 'Apache Tomcat'.
+  ![alt text][8]
+  
+Select your local TomEE directory.
+  ![alt text][9]
+  ![alt text][10]
+  ![alt text][11]
 
-![alt text][2]
+It's time to run it. Click the play button.
+  ![alt text][12]
 
-As soon as you hit finish your work is done. NetBeans would add the manager user in the tomcat 
-server and also you will get back to the project creation window. Continue to the step for choosing 
-your favorite web framework and complete the project creation process. Once the project is created 
-just run it once to see if everything is fine.
+Select 'Apache Tomcat'.
+  ![alt text][13]
 
-**Working with OpenJPA in Netbeans**
+Give it some time. It's building your application.
+  ![alt text][14]
 
-Let us move to the point where we will do the more interesting part. We will configure 
-OpenJPA in Netbeans so that the netbeans Entity generator can nicely work work OpenJPA and TomEE. 
-So to do that you need to first create a connection to a database. Lets assume that we create one 
-for MySQL server as shown in the screenshot below.
+Done. Your server is up and running.
+  ![alt text][15]
+  ![alt text][16]
 
-![alt text][3]
-
-So once this connection is there we are ready to create Entity classes from the selected database.
-To do that follow the menu as shown in the screenshot below.
-![alt text][4]
-
-Once you select "Entity Classes from Database" You will be presented with the follow dialog
-
-![alt text][5]
-
-In this dialog first of all we would select the connection that we created before from the top 
-dropdown. Once you select the connection Netbeans would bring all the tables in 
-"Available Tables" list. You can hit "Add All"  to select all tables for entity class generation.
- Now lets hit "Next" and go to the next screen. And then again hit next and in the next screen 
-hit finish. You can accept all the defaults that are given by the system and finish the Entity 
-creation wizard. With this you are done creating the entities. But as soon as you are done 
-creating the entities  You will get a failed message from TomEE server (In case your TomEE server 
-is running). This is because by default Netbeans generate Entity classes using Eclipselink which
- is not present in TomEE. So to make everybody happy. Next we will configure OpenJPA. To do that 
-you need to open the persistence.xml file from the project (Project explorer -> double click on 
-persistence.xml). This would open the persistence.xml editor window. As shown below
-
-![alt text][6]
-
-Now in this window we will select "New Persistence Library" option from the Persistence Library 
-dropdown. This will open the following dialog box.
-
-![alt text][7]
-
-Here you need to choose the following two jar files from the TomEE installation 
-folder - javaee-api-6.0-4-tomcat.jar and openjpa-asm-shaded-2.2.0.jar. Do make sure that you 
-are choosing the jar files from the same location where your TomEE server is. Once you choose 
-the proper libraries hit Ok to close the dialog and go back to the persistence.xml editor screen 
-of netbeans.
-
-![alt text][8]
-
-Now here from the persistence library choose OpenJPA and save the file as shown in the above 
-screenshot. Now just restart the server once and you are all set to run TomEE with JPA.
-
-Do remember you may need to set your tomcat server in development mode so that your app gets 
-deployed live. to do that you can follow the instructions given in the JSP hot deployment 
-section following link
-
-[TomEE and Eclipse][9]
-
-
-
-  [1]: resources/images/netbeans-serverCreate1.png
-  [2]: resources/images/netbeans-serverCreate2.png
-  [3]: resources/images/netbeans-databaseConnection1.png
-  [4]: resources/images/netbeans-entityCreationStep1.png
-  [5]: resources/images/netbeans-entityCreationStep2.png
-  [6]: resources/images/netbeans-persistance1.png
-  [7]: resources/images/netbeans-persistance2.png
-  [8]: resources/images/netbeans-persistance3.png
-  [9]: http://tomee.apache.org/tomee-and-eclipse.html
+  [1]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_01.png
+  [2]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_02.png
+  [3]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_03.png
+  [4]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_04.png
+  [5]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_05.png
+  [6]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_06.png
+  [7]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_07.png
+  [8]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_08.png
+  [9]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_09.png
+  [10]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_10.png
+  [11]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_11.png
+  [12]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_12.png
+  [13]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_13.png
+  [14]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_14.png
+  [15]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_15.png
+  [16]: http://people.apache.org/~tveronezi/tomee/tomee_site/netbeans_integration/windows8_16.png
