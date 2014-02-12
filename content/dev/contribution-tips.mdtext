@@ -7,7 +7,7 @@ Title: Contribution Tips
    and say Hi
 1. Get the source code with svn
     - svn https://svn.apache.org/repos/asf/tomee/tomee/trunk
-1. Build the code (maven 2.2.1 or higher required)
+1. Build the code (maven 3.0.x or higher required)
     - mvn clean install
 
 Play around with the examples under the examples/ directory.  Some of the
