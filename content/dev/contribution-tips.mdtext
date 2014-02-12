@@ -1,4 +1,5 @@
 Title: Contribution Tips
+
 <a name="ContributionTips-Firststeps"></a>
 # First steps
 
@@ -12,7 +13,7 @@ Title: Contribution Tips
 Play around with the examples under the examples/ directory.  Some of the
 neater ones are (ordered simple to complex):
 
- -  simple-stateless ([see video](http://vimeo.com/6149008.html))
+ -  simple-stateless
  -  simple-stateful
  -  simple-singleton
  -  simple-mdb
