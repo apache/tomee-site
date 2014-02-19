@@ -77,7 +77,7 @@ to adopt the following versionning *major*.*minor*.*patch*[.*security update*]
 * major ([0-9]+): it refers mainly to the Java EE version we implement. 1.x for Java EE 6 for example.
 * minor ([0-9]+): contains features, bugfixes and security fixes (internal or third-party)
 * patch ([0-9]+): only bugfixes applied
-* security update (su[0-9]+)?: security update suffix that makes it possible to easily differentiate security fixes and
+* security update (SEC[0-9]+)?: security update suffix that makes it possible to easily differentiate security fixes and
 to upgrade with a minimal of changes, hence impacts.
 
 The last security update part is optional, and applies when a sub project has been released and was under an
