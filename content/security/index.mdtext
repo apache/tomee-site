@@ -13,8 +13,9 @@ announcement and/or the vulnerability details listed on these pages. These sourc
 wishing to build their own local version of TomEE with just that security patch rather than upgrade.
 
 Lists of security problems fixed in released versions of Apache TomEE are available:
- * [Apache TomEE 1.5 Security Vulnerabilities](security/tomee-1-5.html)
- * [Apache TomEE 1.6 Security Vulnerabilities](security/tomee-1-6.html)
+
+* [Apache TomEE 1.5 Security Vulnerabilities](tomee-1-5.html)
+* [Apache TomEE 1.6 Security Vulnerabilities](tomee-1-6.html)
 
 
 ## Reporting New Security Problems with Apache TomEE
