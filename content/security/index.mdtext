@@ -68,19 +68,31 @@ we will consider packaging a new security update release using the new Tomcat re
 In order to achieve a smoothly migration patch between a TomEE version and a security update, the TomEE team has decided
 to adopt the following versionning *major*.*minor*.*patch*[.*security*]
 
-* major ([0-9]+)
-* minor ([0-9]+)
-* patch ([0-9]+)
-* security update (su[0-9]+)?
+* major ([0-9]+): it refers mainly to the Java EE version we implement. 1.x for Java EE 6 for example.
+* minor ([0-9]+): contains features, bugfixes and security fixes (internal or third-party)
+* patch ([0-9]+): only bugfixes applied
+* security update (su[0-9]+)?: security update suffix that makes it possible to easily differentiate security fixes and
+to upgrade with a minimal of changes, hence impacts.
 
+The last security update part is optional, and applies when a sub project has been released and was under an
+advisory. The TomEE team will just grab the related tag and update the dependency. The release checks are then
+smaller and the community can deliver a fixed version faster.
 
 ## Additional information
 
 ### Secunia
+
+Secunia is an international IT security company specialising in vulnerability management based in Copenhagen, Denmark.
+
+There is an [Apache Software Foundation vendor](http://secunia.com/advisories/vendor/8/) declared so you can follow
+all vulnarabilities related to Apache products. Of course, a Apache TomEE product
+is also available so you can search for know advisories.
+
 
 ### Links
 
 * [http://apache.org/security/](http://apache.org/security/)
 * [http://apache.org/security/projects.html](http://apache.org/security/projects.html)
 * [http://apache.org/security/committers.html](http://apache.org/security/committers.html)
+* [Common Vulnerabilities and Exposures database](http://cve.mitre.org/)
 
