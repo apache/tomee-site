@@ -66,7 +66,7 @@ external projects being fixed. For instance, if Tomcat fixes a security issue in
 we will consider packaging a new security update release using the new Tomcat release.
 
 In order to achieve a smoothly migration patch between a TomEE version and a security update, the TomEE team has decided
-to adopt the following versionning *major*.*minor*.*patch*[.*security*]
+to adopt the following versionning *major*.*minor*.*patch*[.*security update*]
 
 * major ([0-9]+): it refers mainly to the Java EE version we implement. 1.x for Java EE 6 for example.
 * minor ([0-9]+): contains features, bugfixes and security fixes (internal or third-party)
