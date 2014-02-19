@@ -52,9 +52,15 @@ non-linear relationship to the size of inputs.
 
 ## Third-party projects
 
-Apache TomEE depends on a lot of other Apache products like Apache Tomcat, Apache OpenJPA, to name a few. The TomEE
-team will also gather all sub projects security issues (CVE) and list them all on our pages. So that you can check which
-TomEE version will get the security fix into account.
+Apache is built with the following components. Please see the security advisories information for each
+component for more information on the security vulnerabilities and issues that may affect that component.
+
+* Apache Tomcat 7.x: [Tomcat 7 security advisories](http://tomcat.apache.org/security-7.html)
+* Apache OpenJPA
+* Apache CXF: [CXF Security Advisories](http://cxf.apache.org/security-advisories.html)
+* Apache OpenWebBeans
+* Apache MyFaces
+* Apache Bean Validation
 
 By default any regular TomEE releases uses latest sub project releases, so that we can follow all security fixes
 as much as possible.
