@@ -328,7 +328,7 @@ NOTE: excepted providers configuration all these configuration are available for
 |===
 | Activating JAAS
 |
-NOTE: in the snippets `o.a.o` means `org.aapche.openejb`
+NOTE: in the snippets `o.a.o` means `org.apache.openejb`
 
 Basic JAAS configuration needs:
 

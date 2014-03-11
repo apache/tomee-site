@@ -54,9 +54,9 @@ webapp1 webapp2
 
 Classloading configuration (properties):
 
-- `openejb.classloader.force-load=<comma separated list of class name prefixes>`: classes to load from the webapp first
+- `openejb.classloader.forced-load=<comma separated list of class name prefixes>`: classes to load from the webapp first
 whatever is in the container
-- `openejb.classloader.force-skip=<idem>`: classes to load from the container
+- `openejb.classloader.forced-skip=<idem>`: classes to load from the container
 whatever is in the application
 
 |===
