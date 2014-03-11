@@ -43,8 +43,8 @@ openejb.jmx.active = false
 openejb.conf.file = conf/tomee.xml
 
 # force inclusion/exclusion of packages during classloading
-openejb.classloader.force-load = my.pack1,my.pack2
-openejb.classloader.force-skip = my.pack3,my.pack4
+openejb.classloader.forced-load = my.pack1,my.pack2
+openejb.classloader.forced-skip = my.pack3,my.pack4
 
 # app ones
 my.system.property.config = my value

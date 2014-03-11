@@ -15,51 +15,62 @@
       <plugin>
         <groupId>org.asciidoctor</groupId>
         <artifactId>asciidoctor-maven-plugin</artifactId>
-        <version>0.1.4-SNAPSHOT</version>
-        <configuration>
-          <sourceDocumentName>src/slides/refcard.asciidoc</sourceDocumentName>
-          <outputDirectory>${slides.output}</outputDirectory>
+        <version>0.1.4</version>
 
-          <synchronizations>
-            <synchronization>
-              <source>${slides.input}/css</source>
-              <target>${slides.output}/css</target>
-            </synchronization>
-            <synchronization>
-              <source>${slides.input}/js</source>
-              <target>${slides.output}/js</target>
-            </synchronization>
-            <synchronization>
-              <source>${slides.input}/images</source>
-              <target>${slides.output}/images</target>
-            </synchronization>
-          </synchronizations>
+        <executions>
+          <execution>
+            <id>output-html</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
+            <configuration>
+              <sourceDirectory>${basedir}/src/slides</sourceDirectory>
+              <sourceDocumentName>refcard.asciidoc</sourceDocumentName>
+              <outputDirectory>${slides.output}</outputDirectory>
 
-          <title>TomEE RefCard</title>
-          <home>refcard</home>
+              <synchronizations>
+                <synchronization>
+                  <source>${slides.input}/css</source>
+                  <target>${slides.output}/css</target>
+                </synchronization>
+                <synchronization>
+                  <source>${slides.input}/js</source>
+                  <target>${slides.output}/js</target>
+                </synchronization>
+                <synchronization>
+                  <source>${slides.input}/images</source>
+                  <target>${slides.output}/images</target>
+                </synchronization>
+              </synchronizations>
 
-          <attributes>
-            <description>RefCard</description>
-            <keywords>refcard</keywords>
+              <title>TomEE RefCard</title>
+              <home>refcard</home>
 
-            <author>RefCard</author>
-            <email>users@refcard</email>
-            <revdate>${maven.build.timestamp}</revdate>
-            <revnumber>${project.version}</revnumber>
+              <attributes>
+                <description>RefCard</description>
+                <keywords>refcard</keywords>
 
-            <highlightjsdir>js</highlightjsdir>
-            <highlightjs-theme>github</highlightjs-theme>
-          </attributes>
+                <author>RefCard</author>
+                <email>users@refcard</email>
+                <revdate>${maven.build.timestamp}</revdate>
+                <revnumber>${project.version}</revnumber>
+
+                <highlightjsdir>js</highlightjsdir>
+                <highlightjs-theme>github</highlightjs-theme>
+              </attributes>
 
 
-          <backend>html5</backend>
-          <compact>true</compact>
-          <headerFooter>true</headerFooter>
-          <sourceHighlighter>highlightjs</sourceHighlighter>
+              <backend>html5</backend>
+              <compact>true</compact>
+              <headerFooter>true</headerFooter>
+              <sourceHighlighter>highlightjs</sourceHighlighter>
 
-          <templateDir>${slides.input}/backend</templateDir>
-          <templateEngine />
-        </configuration>
+              <templateDir>${slides.input}/backend</templateDir>
+              <templateEngine/>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
