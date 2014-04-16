@@ -31,15 +31,16 @@ can abbreviated to just _DataSource_ as follows:
 
 
 See [Containers and Resources](containers-and-resources.html)
- for a complete list of supported DataSource properties.  See [DataSource Password
-Encryption](datasource-password-encryption.html)
- for information on specifying non-plain-text database passwords in your
-openejb.xml file.  See [Common DataSource Configurations](common-datasource-configurations.html)
+ for a complete list of supported DataSource properties.
+
+See [DataSource Password Encryption](datasource-password-encryption.html)
+ for information on specifying non-plain-text database passwords in your openejb.xml file.
+
+See [Common DataSource Configurations](common-datasource-configurations.html)
  for a list of the commonly used databases and their driver configurations.
 
 You may also need data partitioning per customer or depending on any other
-business criteria. That's also an available feature. See [Dynamic Datasource](dynamic-datasource.html)
- for more details.
+business criteria. That's also an available feature. See [Dynamic Datasource](dynamic-datasource.html) for more details.
 
 <a name="ConfiguringDataSources-JNDInamesforconfiguredDataSources"></a>
 ## JNDI names for configured DataSources
