@@ -7,7 +7,7 @@ The easiest way to edit is to simply click the blue pencil icon in the upper rig
 Editing offline can be fantastic for making big changes or documenting while coding.  You simply need to
  check out the site source from svn:
 
-    svn co https://svn.apache.org/repos/asf/openejb/site/trunk website-source
+    svn co https://svn.apache.org/repos/asf/tomee/site/trunk website-source
 
 All the important source is in the `content` directory.  Just edit
 and check in the `.mdtext` files and they will appear in the staging
@@ -15,11 +15,11 @@ site within seconds.
 
 For example, `documentation.mdtext` shows up as:
 
-[http://openejb.staging.apache.org/documentation.html]
+[http://tomee.staging.apache.org/documentation.html]
 
 ## Publishing
 
-Simply visit [https://cms.apache.org/openejb/publish](https://cms.apache.org/openejb/publish)
+Simply visit [https://cms.apache.org/tomee/publish](https://cms.apache.org/tomee/publish)
 
 It will prompt you for user/pass information and make you review the changes.  Enter the optional log message and click "sumbit", then done!
 
