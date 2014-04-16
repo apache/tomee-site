@@ -34,3 +34,7 @@ Title: Apache TomEE 1.6.0.1 Release Notes
 <li><a href="https://issues.apache.org/jira/browse/TOMEE-1177">TOMEE-1177</a> Include Apache Tomcat Native library 1.1.30</li>
 
 </ul>
+
+To see the full [Changelog](http://tomcat.apache.org/tomcat-7.0-doc/changelog.html) of Apache Tomcat since version 7.0.51 follow this link:
+
+[http://tomcat.apache.org/tomcat-7.0-doc/changelog.html](http://tomcat.apache.org/tomcat-7.0-doc/changelog.html)
