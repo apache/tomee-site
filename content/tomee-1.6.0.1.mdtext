@@ -7,7 +7,7 @@ Complete details of the issue can be found at the following link:
 *Important: Denial of Service* 
 CVE-2014-0050<[http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0050](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0050)> 
 
-It goes without saying that everyone has heard of the Heartbleed issue and we have quickly replaced the included Apache Tomcat Native library with version 1.1.30 for this release, should anyone wish to use it. You can find more information here:
+It goes without saying that everyone has heard of the Heartbleed issue and we have quickly replaced the included Apache Tomcat Native library with version 1.1.30 for this release, should anyone be using it. Note, this is not the default for TomEE and it does not resolve the issue, for that you will still need to update your OpenSSL - It merely enables the use of a more recent OpenSSL version. You can find more information here:
 
 [http://tomcat.apache.org/native-doc/](http://tomcat.apache.org/native-doc/) - You may need to refresh the page if you have been checking the site as it was only recently updated. 
 
