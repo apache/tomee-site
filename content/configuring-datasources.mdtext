@@ -28,7 +28,18 @@ can abbreviated to just _DataSource_ as follows:
     <Resource id="myDerbyDatasource" type="DataSource">
      . . . .
     <Resource>
+	
+It is also possible to specify the path to the drive jar file using a classpath attribute like so:	
 
+	<Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar">
+     . . . .
+    <Resource>
+
+...Or in a [Maven](http://maven.apache.org/) environment like so:
+
+	<Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1">
+     . . . .
+    <Resource>	
 
 See [Containers and Resources](containers-and-resources.html)
  for a complete list of supported DataSource properties.
