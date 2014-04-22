@@ -29,7 +29,7 @@ can abbreviated to just _DataSource_ as follows:
      . . . .
     <Resource>
 	
-It is also possible to specify the path to the drive jar file using a classpath attribute like so:	
+It is also possible to specify the path to the driver jar file using a classpath attribute like so:	
 
 	<Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar">
      . . . .
