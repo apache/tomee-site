@@ -1,9 +1,12 @@
 # Releasing TomEE
 
-	This document is aimed at guiding a release manager through the general release process.
+	This document is aimed at guiding a release manager through the general release process. You will need either a Linux, Mac, or failing that a Linux Virtual on Win. 
 
+## Preparation of The Branch
+	
 Run **ant -f rat.xml > report.txt** on trunk to ensure all licences are in place.
-*   Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
+ - Review the report.txt and update/add missing headers until clean.
+ - *Tip*, search for **Unapproved licenses:** at the beginning the report for a list.
 
 Branch the version to release and ensure it builds and passes all tests.
 
@@ -11,14 +14,17 @@ Branch the TCK.
 
 Update the TCK branch to point to the version branch.
 
-	\tck-1.?\plus.properties
-	\tck-1.?\pom.xml
-	\tck-1.?\webprofile-plus.properties
-	\tck-1.?\webprofile.properties
+	\tckbranch\plus.properties
+	\tckbranch\pom.xml
+	\tckbranch\webprofile-plus.properties
+	\tckbranch\webprofile.properties
 
 Run **ant -f rat.xml > report.txt** on the branch.
-*   Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
+ - Review the report.txt and update/add missing headers until clean.
+ - *Tip*, search for **Unapproved licenses:**.
 
+## Check SVN
+ 
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
 
 	svn mkdir -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
@@ -28,7 +34,7 @@ Pre-authenticate svn repositories to ensure your credentials are cached before u
 	svn mkdir -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 	svn delete -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 
-Ensure you have code signing set up [http://www.apache.org/dev/release-signing.html]
+## Prepare Maven Authentication
 
 Ensure your maven settings.xml correct, and be aware that the tools currently require a clear text password:
 
@@ -51,14 +57,16 @@ Ensure your maven settings.xml correct, and be aware that the tools currently re
 	</server>
 
 	<profiles>
-	<profile>
-	...
-		<repositories>
-			<repository>
-			  <id>apache.dist.https</id>
-			  <url>https://dist.apache.org/repos/dist</url>
-			</repository>
-		  </repositories>
+		<profile>
+		...
+			<repositories>
+				<repository>
+				  <id>apache.dist.https</id>
+				  <url>https://dist.apache.org/repos/dist</url>
+				</repository>
+			  </repositories>
+
+## Build the Release Tools
 
 Checkout the release tools from here [https://svn.apache.org/repos/asf/tomee/sandbox/release-tools]
 
@@ -68,13 +76,35 @@ Build the release tools, *mvn clean install -DskipTests -DfailIfNoTests=false*
 
 Have a look at **run.sh** to see the entry point.
 
-Understand that the release tools are not polished, and you currently may have to edit source and compile.
+Understand that the release tools are not polished, and you currently may have to edit source and re-compile.
 
+## Code Signing Setup
 
-http://www.apache.org/dist/openejb/KEYS
-find / > /dev/null
+If this is your first release then you will have to ensure that you have a code signing key prepared on the machine from which you perform the release. The process is quite intense. You can find information here:
 
-cat KEYS /home/yourname/public_html/AD3424SD.asc > KEYS2
+ - [http://www.apache.org/dev/release-signing.html]
+ - [http://maven.apache.org/developers/release/pmc-gpg-keys.html]
+ 
+However, the basic steps are:
+ - Create a key using **gpg --gen-key**, using size 4096 and answering the questions that command issues.
+ - During the process you will have to generate random entropy, this is best achieved in another console and issuing the command **find / > /dev/null** and waiting a minute.
+ - List the keys using **gpg --list-keys** and take note of the name
+
+Once you have your key then you will need to append it to the key file here:
+
+ - [http://www.apache.org/dist/openejb/KEYS]
+
+That is best done as the file itself explains one you view it in a UTF-8 safe text editor.
+ - Save the KEYS file on your local machine and import it using **gpg --import KEYS**
+ - Then create the new KEYS file using **(gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS**
+ - Check that the new KEYS file contains your key.
+ - Log in to people.apache.org
+ - Make a backup of the remote KEYS file just in case
+ - Overwrite the old /dist/openejb/KEYS file with your new one that now also contains your key.
+ - Go to [http://pgp.mit.edu/] and add your ascii armoured key
+ - Take note of your key fingerprint using **gpg --fingerprint <your name>**
+ - Go to [https://id.apache.org], log in and fill OpenPGP Public Key Primary Fingerprint: with the value of your fingerprint.
+ 
 
 
 
