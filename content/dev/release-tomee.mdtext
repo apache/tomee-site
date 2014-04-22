@@ -1,0 +1,67 @@
+# Releasing TomEE
+
+This document is aimed at guiding a release manager through the general release process.
+
+
+1. Run **ant -f rat.xml > report.txt** on trunk to ensure all licences are in place.
+---* Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
+2. Branch the version to release and ensure it builds and passes all tests.
+3. Branch the TCK.
+---Update the TCK branch to point to the version branch.
+-----* \tck-1.?\plus.properties
+-----* \tck-1.?\pom.xml
+-----* \tck-1.?\webprofile-plus.properties
+-----* \tck-1.?\webprofile.properties
+4. Run **ant -f rat.xml > report.txt** on the branch.
+---* Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
+5. Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
+--- svn mkdir -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+--- svn delete -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+--- svn mkdir -m "Create test dir" https://repository.apache.org/content/repositories/testdir
+--- svn delete -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
+--- svn mkdir -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+--- svn delete -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+6. Ensure you have code signing set up [http://www.apache.org/dev/release-signing.html]
+7. Ensure your maven settings.xml correct, and be aware that the tools currently require a clear text password:
+
+	<server>
+	  <id>apache.snapshots.https</id>
+	  <username>un</username>
+	  <password>pw.in.clear</password>
+	</server>
+
+	<server>
+	  <id>apache.releases.https</id>
+	  <username>un</username>
+	  <password>pw.in.clear</password>
+	</server>
+
+	<server>
+	  <id>apache.dist.https</id>
+	  <username>un</username>
+	  <password>pw.in.clear</password>
+	</server>
+
+	<profiles>
+	<profile>
+	...
+		<repositories>
+			<repository>
+			  <id>apache.dist.https</id>
+			  <url>https://dist.apache.org/repos/dist</url>
+			</repository>
+		  </repositories>
+
+8. Checkout the release tools from here [https://svn.apache.org/repos/asf/tomee/sandbox/release-tools]
+9. Really read the README.mdtext and follow the instructions for building the 3rd party libraries.
+10. Build the release tools, *mvn clean install -DskipTests -DfailIfNoTests=false*
+11. Have a look at **run.sh** to see the entry point.
+12. Understand that the release tools are not polished, and you currently may have to edit source and compile.
+
+
+http://www.apache.org/dist/openejb/KEYS
+find / > /dev/null
+
+
+
+follow steps in task
