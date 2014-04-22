@@ -3,28 +3,30 @@
 	This document is aimed at guiding a release manager through the general release process.
 
 Run **ant -f rat.xml > report.txt** on trunk to ensure all licences are in place.
-  - Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
+*   Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
 
 Branch the version to release and ensure it builds and passes all tests.
 
 Branch the TCK.
 
 Update the TCK branch to point to the version branch.
-   \tck-1.?\plus.properties
-   \tck-1.?\pom.xml
-   \tck-1.?\webprofile-plus.properties
-   \tck-1.?\webprofile.properties
+
+	\tck-1.?\plus.properties
+	\tck-1.?\pom.xml
+	\tck-1.?\webprofile-plus.properties
+	\tck-1.?\webprofile.properties
 
 Run **ant -f rat.xml > report.txt** on the branch.
-  * Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
+*   Review the report.txt and update/add missing headers until clean. *Tip*, search for **Unapproved licenses:**.
 
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
-  svn mkdir -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-  svn delete -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-  svn mkdir -m "Create test dir" https://repository.apache.org/content/repositories/testdir
-  svn delete -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
-  svn mkdir -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
-  svn delete -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+
+	svn mkdir -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+	svn delete -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+	svn mkdir -m "Create test dir" https://repository.apache.org/content/repositories/testdir
+	svn delete -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
+	svn mkdir -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+	svn delete -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 
 Ensure you have code signing set up [http://www.apache.org/dev/release-signing.html]
 
