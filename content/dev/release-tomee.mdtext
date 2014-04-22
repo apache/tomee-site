@@ -2,9 +2,10 @@
 
 	This document is aimed at guiding a release manager through the general release process. You will need either a Linux, Mac, or failing that a Linux Virtual on Win. 
 
-## Preparation of The Branch
+### Preparation of The Branch
 	
 Run **ant -f rat.xml > report.txt** on trunk to ensure all licences are in place.
+
  - Review the report.txt and update/add missing headers until clean.
  - *Tip*, search for **Unapproved licenses:** at the beginning the report for a list.
 
@@ -20,10 +21,11 @@ Update the TCK branch to point to the version branch.
 	\tckbranch\webprofile.properties
 
 Run **ant -f rat.xml > report.txt** on the branch.
+
  - Review the report.txt and update/add missing headers until clean.
  - *Tip*, search for **Unapproved licenses:**.
 
-## Check SVN
+### Check SVN
  
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
 
@@ -34,9 +36,9 @@ Pre-authenticate svn repositories to ensure your credentials are cached before u
 	svn mkdir -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 	svn delete -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 
-## Prepare Maven Authentication
+### Prepare Maven Authentication
 
-Ensure your maven settings.xml correct, and be aware that the tools currently require a clear text password:
+Ensure your maven .m2/settings.xml correct, and be aware that the tools currently require a clear text password:
 
 	<server>
 	  <id>apache.snapshots.https</id>
@@ -66,7 +68,7 @@ Ensure your maven settings.xml correct, and be aware that the tools currently re
 				</repository>
 			  </repositories>
 
-## Build the Release Tools
+### Build the Release Tools
 
 Checkout the release tools from here [https://svn.apache.org/repos/asf/tomee/sandbox/release-tools]
 
@@ -86,6 +88,7 @@ If this is your first release then you will have to ensure that you have a code 
  - [http://maven.apache.org/developers/release/pmc-gpg-keys.html]
  
 However, the basic steps are:
+
  - Create a key using **gpg --gen-key**, using size 4096 and answering the questions that command issues.
  - During the process you will have to generate random entropy, this is best achieved in another console and issuing the command **find / > /dev/null** and waiting a minute.
  - List the keys using **gpg --list-keys** and take note of the name
@@ -95,6 +98,7 @@ Once you have your key then you will need to append it to the key file here:
  - [http://www.apache.org/dist/openejb/KEYS]
 
 That is best done as the file itself explains one you view it in a UTF-8 safe text editor.
+
  - Save the KEYS file on your local machine and import it using **gpg --import KEYS**
  - Then create the new KEYS file using **(gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS**
  - Check that the new KEYS file contains your key.
