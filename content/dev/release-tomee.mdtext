@@ -22,7 +22,9 @@ Basically search for the following line and it should be obvious how to add a ne
 An SVN trigger must be added afterwards. This can only be done by someone with admin permissions, such as any PMC chair or an Infra team member.
 Just drop an email to *infrastructure@apache.org*
 
-Now branch the TCK using the same version as the release branch from here:
+### Create a TCK Branch
+
+Branch the TCK using the same version as the release branch from here:
 
 [https://svn.apache.org/repos/tck/tomee-tck/trunk](https://svn.apache.org/repos/tck/tomee-tck/trunk)
 
@@ -38,7 +40,7 @@ Run **ant -f rat.xml > report.txt** on the branch.
  - Review the report.txt and update/add missing headers until clean.
  - *Tip*, search for **Unapproved licenses:**.
 
-### Check SVN
+### Check SVN Authentication
  
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
 
@@ -177,7 +179,30 @@ Update trunk versions. How you do this is up to you at this point in time.
 
 Create the next version iterations in JIRA.
 
-Resolve all SNAPSHOT dependencies in the branch with release versions.
+Resolve all SNAPSHOT dependencies in the branch against release versions. This includes the modules themselves.
+The reason for this is that an SVN TAG is taken straight off the branch during the next step.
+
+	Note: It is a future goal to either separate OpenEJB from TomEE or unify the versions so the
+	[maven-release-plugin](http://maven.apache.org/maven-release/maven-release-plugin/) can be used.
+
+### Rolling Out The Preview	
+	
+Publish the preview using **./run.sh roll binaries legal releasenotes preview** - You can run these tasks like so, or individually in order.
+It will be likely that this will have to be repeated several times before a successful vote.
+
+	Note: Before running the above ensure you either have:
+
+	 - A valid tomee-release.properties from the last release in your home directory (Speak to the last release manager).
+	 - Or have modified **tomee-release-tools/src/main/java/org/apache/openejb/tools/release/Release.java** with current versions and rebuilt.
+	 	 
+Ensure the TCK passes with preview repositories by editing and ensuring paths are correct in the following files:
+
+	\tckbranch\plus.properties
+	\tckbranch\pom.xml
+	\tckbranch\webprofile-plus.properties
+	\tckbranch\webprofile.properties
+	
+Fire off a build on EC2 from the TCK directory using **./triggerEC2.sh**	
 
 Follow the steps in tasks - In progress...
 
