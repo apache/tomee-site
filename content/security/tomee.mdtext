@@ -12,8 +12,7 @@ Note: Vulnerabilities that are not TomEE vulnerabilities but have either been in
 TomEE or where TomEE provides a workaround are listed bellow in the section "Not a vulnerability".
 
 Please note that binary patches are never provided. If you need to apply a source code patch, use the building
-instructions for the Apache TomEE version that you are using. For TomEE 1.0 those
-are [Building TomEE 1.x](dev/building-tomee-1.html).
+instructions for the Apache TomEE version that you are using. For TomEE 1.x those are [Building TomEE 1.x](dev/building-tomee-1.html).
 
 If you need help on building or configuring TomEE or other help on following the instructions to mitigate the
 known vulnerabilities listed here, please send your questions to the public [Users mailing list](support.html)
@@ -28,9 +27,15 @@ _No CVE has been opened to be fixed on current Apache TomEE project sources._
 
 ## Fixed in Third-party
 
-TODO
-Tomcat and CVE available in 7.0.52 --> TomEE 1.6.0.su1, TomEE 1.5.2.su1
-Check CXF as well
+Provided by [Apache TomEE 1.6.0.1](http://tomee.apache.org/downloads.html)
+
+ - Fixed in Tomcat 7.0.52 *Important: Denial of Service* [CVE-2014-0050](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0050) 
+
+Provided by [Apache TomEE 1.6.0](http://tomee.apache.org/downloads.html)
+ 
+ - [CVE-2013-2160](http://cxf.apache.org/security-advisories.data/CVE-2013-2160.txt.asc?version=1&modificationDate=1372324301000&api=v2) - Denial of Service Attacks on Apache CXF
+ - [Note on CVE-2012-5575](http://cxf.apache.org/cve-2012-5575.html) - XML Encryption backwards compatibility attack on Apache CXF.
+ - [CVE-2013-0239](http://cxf.apache.org/cve-2013-0239.html) - Authentication bypass in the case of WS-SecurityPolicy enabled plaintext UsernameTokens.
 
 ## Not a vulnerability
 

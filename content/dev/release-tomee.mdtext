@@ -202,8 +202,16 @@ Ensure the TCK passes with preview repositories by editing and ensuring paths ar
 	\tckbranch\webprofile-plus.properties
 	\tckbranch\webprofile.properties
 	
-Fire off a build on EC2 from the TCK directory using **./triggerEC2.sh**	
+To fire off a build on EC2 from the TCK directory use **./triggerEC2.sh**	
+
+If the TCK fails then discuss, fix and re-roll.
+
+Publish a [Vote](https://www.apache.org/foundation/voting.html) if, and only if, the TCK passes.
+
+Votes are generally managed and identified using keywords such as [VOTE], [CANCELLED] and [RESULT]
+
+If the vote fails then discuss, fix and re-roll.
+
+TCK test vote binaries
 
 Follow the steps in tasks - In progress...
-
-mvn org.codehaus.mojo:versions-maven-plugin:2.1:
