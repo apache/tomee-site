@@ -95,7 +95,7 @@ See the [Spring EJB and JPA](spring-ejb-and-jpa.html)
 # {anchor:problems} Problems?
 
 If you are having problems with the installation, please send a message to
-the OpenEJB users [mailing list](openejb:mailing-lists.html)
+the OpenEJB users [mailing list](mailing-lists.html)
  containing any error message(s) and the following information:
 
 * OpenEJB Version

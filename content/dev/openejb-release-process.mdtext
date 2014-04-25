@@ -1,4 +1,7 @@
 Title: OpenEJB Release Process
+
+	Note: This information is largely obsolete and remains here for reference only.
+
 {code:none}
 mvn release:prepare -Dusername=dblevins -Dassemble
 
@@ -270,6 +273,6 @@ href="http://openejb.apache.org/">http://openejb.apache.org/</A> </P>
 
 
 {code:none}
-[dblevins@minotaur ~/public_html/stage](dblevins@minotaur-~/public_html/stage.html)
+
 $ mv 3.0 /www/www.apache.org/dist/openejb/
 

@@ -12,10 +12,10 @@ Note: Vulnerabilities that are not TomEE vulnerabilities but have either been in
 TomEE or where TomEE provides a workaround are listed bellow in the section "Not a vulnerability".
 
 Please note that binary patches are never provided. If you need to apply a source code patch, use the building
-instructions for the Apache TomEE version that you are using. For TomEE 1.x those are [Building TomEE 1.x](dev/building-tomee-1.html).
+instructions for the Apache TomEE version that you are using. For TomEE 1.x those are [Building TomEE 1.x](../dev/building-tomee-1.html).
 
 If you need help on building or configuring TomEE or other help on following the instructions to mitigate the
-known vulnerabilities listed here, please send your questions to the public [Users mailing list](support.html)
+known vulnerabilities listed here, please send your questions to the public [Users mailing list](../support.html)
 
 If you have encountered an unlisted security vulnerability or other unexpected behaviour that has security impact,
 or if the descriptions here are incomplete, please report them privately to

@@ -105,7 +105,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 ### TomEE Maven Plugin
 - [Getting started](tomee-mp-getting-started.html)
 - [tomee-maven-plugin reference documentation](tomee-maven-plugin.html)
-- [TomEE simple webapp archetype documentation](tomee-webapp-archetype.html)
+- [TomEE simple webapp archetype documentation](tomee-mp-getting-started.mdtext.html)
 }
 
 }

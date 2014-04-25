@@ -60,7 +60,7 @@ in the instantiated local client object:
 #  Discovery
 
 All EJB modules are scanned for @LocalClient classes, even if those EJB
-Modules are inside .war files as with the [OPENEJB:Collapsed EAR](openejb:collapsed-ear.html)
+Modules are inside .war files as with the [Collapsed EAR](collapsed-ear.html)
 .  As well any modules that contain a META-INF/application-client.xml file
 will be scanned for @LocalClient classes.
 
