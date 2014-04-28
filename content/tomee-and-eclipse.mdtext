@@ -22,7 +22,7 @@ with Eclipse.
 ## Quick Start:
 
 An excellent instructional video with step-by-step instructions on how to install Eclipse, TomEE 
-and create/deploy your first project is available on YouTube here: [Getting Started with Apache TomEE][1].
+and create/deploy your first project is available on YouTube here: [Getting Started with Apache TomEE][1] (Remember to select the 'Generate web.xml descriptor' checkbox during project setup. Otherwise the ejb does not get injected and you will get an error.).
 
 1. Download and install both Apache TomEE and Eclipse.   
 
