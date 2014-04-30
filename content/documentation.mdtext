@@ -21,73 +21,73 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 {span-one-third
 ### Configuration
-- [System Properties](system-properties.html)
-- [Deployments](deployments.html)
-- [Containers and Resources](containers-and-resources.html)
-- [JMS Resources and MDB Container](jms-resources-and-mdb-container.html)
-- [Configuring DataSources](configuring-datasources.html)
-- [Configuring JavaMail](configuring-javamail.html)
-- [Security](security.html)
-- [EJB Clients](clients.html)
-- [EJB over SSL](ejb-over-ssl.html)
-- [JNDI Names](jndi-names.html)
-- [Changing JMS implementations](changing-jms-implementations.html)
-- [Changing JPA to Hibernate](tomee-and-hibernate.html)
+ - [System Properties](system-properties.html)
+ - [Deployments](deployments.html)
+ - [Containers and Resources](containers-and-resources.html)
+ - [JMS Resources and MDB Container](jms-resources-and-mdb-container.html)
+ - [Configuring DataSources](configuring-datasources.html)
+ - [Configuring JavaMail](configuring-javamail.html)
+ - [Security](security.html)
+ - [EJB Clients](clients.html)
+ - [EJB over SSL](ejb-over-ssl.html)
+ - [JNDI Names](jndi-names.html)
+ - [Changing JMS implementations](changing-jms-implementations.html)
+ - [Changing JPA to Hibernate](tomee-and-hibernate.html)
 }
 {span-one-third
 ### Testing Techniques
-- [Application discovery via the classpath](application-discovery-via-the-classpath.html)
-- [Embedded Configuration](embedded-configuration.html)
-- [Configuring DataSources in Tests](configuring-datasources-in-tests.html)
-- [Configuring PersistenceUnits in Tests](configuring-persistenceunits-in-tests.html)
-- [Configuring Containers in Tests](configuring-containers-in-tests.html)
-- [Configuring Logging in Tests](configuring-logging-in-tests.html)
-- [Alternate Descriptors](alternate-descriptors.html)
-- [Unit Testing Transactions](unit-testing-transactions.html)
-- [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
-- [TestCase Injection (@LocalClient)](local-client-injection.html)
+ - [Application discovery via the classpath](application-discovery-via-the-classpath.html)
+ - [Embedded Configuration](embedded-configuration.html)
+ - [Configuring DataSources in Tests](configuring-datasources-in-tests.html)
+ - [Configuring PersistenceUnits in Tests](configuring-persistenceunits-in-tests.html)
+ - [Configuring Containers in Tests](configuring-containers-in-tests.html)
+ - [Configuring Logging in Tests](configuring-logging-in-tests.html)
+ - [Alternate Descriptors](alternate-descriptors.html)
+ - [Unit Testing Transactions](unit-testing-transactions.html)
+ - [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)
+ - [TestCase Injection (@LocalClient)](local-client-injection.html)
 }
 }
 {row
 {span-one-third
 ### Discovery and Failover
-- [Overview](ejb-failover.html)
-- [Multicast Discovery (UDP)](multicast-discovery.html)
-- [Multipulse Discovery (UDP)](multipulse-discovery.html)
-- [Multipoint Discovery (TCP)](multipoint-discovery.html)
-- [Multipoint Considerations](multipoint-considerations.html)
-- [Multipoint Recommendations](multipoint-recommendations.html)
-- [Logging Events](failover-logging.html)
+ - [Overview](ejb-failover.html)
+ - [Multicast Discovery (UDP)](multicast-discovery.html)
+ - [Multipulse Discovery (UDP)](multipulse-discovery.html)
+ - [Multipoint Discovery (TCP)](multipoint-discovery.html)
+ - [Multipoint Considerations](multipoint-considerations.html)
+ - [Multipoint Recommendations](multipoint-recommendations.html)
+ - [Logging Events](failover-logging.html)
 }
 {span-one-third
 
 ### OpenEJB Standalone Server
-- [Understanding the Directory Layout](understanding-the-directory-layout.html)
-- [Startup](startup.html)
-- [Deploy Tool](deploy-tool.html)
-- [Properties Tool](properties-tool.html)
+ - [Understanding the Directory Layout](understanding-the-directory-layout.html)
+ - [Startup](startup.html)
+ - [Deploy Tool](deploy-tool.html)
+ - [Properties Tool](properties-tool.html)
 }
 {span-one-third
 ### Spring
-- [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
-- [Spring and OpenEJB 3.1 and later](spring.html)
-- [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
+ - [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
+ - [Spring and OpenEJB 3.1 and later](spring.html)
+ - [Spring, EJB and JPA example](spring-ejb-and-jpa.html)
 }
 }
 {row
 {span-one-third
 ### Arquillian
-- [Getting started](arquillian-getting-started.html)
-- [Available adapters](arquillian-available-adapters.html) 
+ - [Getting started](arquillian-getting-started.html)
+ - [Available adapters](arquillian-available-adapters.html) 
 }
 {span-one-third
 ### TomEE Maven Plugin
-- [Getting started](tomee-mp-getting-started.html)
-- [tomee-maven-plugin reference documentation](tomee-maven-plugin.html)
-- [TomEE simple webapp archetype documentation](tomee-mp-getting-started.mdtext.html)
+ - [Getting started](tomee-mp-getting-started.html)
+ - [tomee-maven-plugin reference documentation](tomee-maven-plugin.html)
+ - [TomEE simple webapp archetype documentation](tomee-mp-getting-started.mdtext.html)
 }
 {span-one-third
 ### Tips and Tricks
-- [WebLogic Lookup](weblogic.html)
+ - [WebLogic Lookup](weblogic.html)
 }
 }
