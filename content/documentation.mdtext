@@ -17,8 +17,6 @@ See also the [examples page](examples-trunk/index.html)   for downloadable, exec
 [Deploying in TomEE](deploying-in-tomee.html)  
 [The 'tomee' webapp](tomee-webapp.html)  
 [Installing TomEE using the drop-in WAR](installation-drop-in-war.html)  
-
-
 }
 {span-one-third
 ###Configuration
@@ -47,7 +45,6 @@ See also the [examples page](examples-trunk/index.html)   for downloadable, exec
 [Unit Testing Transactions](unit-testing-transactions.html)  
 [TestCase with TestBean inner-class](testcase-with-testbean-inner-class.html)  
 [TestCase Injection (@LocalClient)](local-client-injection.html)  
-
 }
 }
 {row
