@@ -65,7 +65,7 @@ blockquote p {
 
 .span-one-third {
     width: 300px;
-    text-align:left;
+    float: left;
 }
 
 .span-two-thirds {
