@@ -5,7 +5,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 {row
 
 {span-one-third
-### General Guide
+###  General Guide
  - [Using TomEE with Intellij](tomee-and-intellij.html)
  - [Using TomEE with Eclipse](tomee-and-eclipse.html)
  - [Using TomEE with Netbeans](tomee-and-netbeans.html)
@@ -49,6 +49,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 }
 {row
+
 {span-one-third
 ### Discovery and Failover
  - [Overview](ejb-failover.html)
@@ -61,7 +62,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 {span-one-third
 
-### OpenEJB Standalone Server
+###  OpenEJB Standalone Server
  - [Understanding the Directory Layout](understanding-the-directory-layout.html)
  - [Startup](startup.html)
  - [Deploy Tool](deploy-tool.html)
@@ -75,6 +76,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 }
 {row
+
 {span-one-third
 ### Arquillian
  - [Getting started](arquillian-getting-started.html)
