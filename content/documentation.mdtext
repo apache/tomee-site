@@ -4,7 +4,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 
 {row
 
-{span-one-third
+{span-one-third lialign
 ###  General Guide
  - [Using TomEE with Intellij](tomee-and-intellij.html)
  - [Using TomEE with Eclipse](tomee-and-eclipse.html)
@@ -19,7 +19,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
  - [Installing TomEE using the drop-in WAR](installation-drop-in-war.html)
 
 }
-{span-one-third
+{span-one-third lialign
 ### Configuration
  - [System Properties](system-properties.html)
  - [Deployments](deployments.html)
@@ -34,7 +34,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
  - [Changing JMS implementations](changing-jms-implementations.html)
  - [Changing JPA to Hibernate](tomee-and-hibernate.html)
 }
-{span-one-third
+{span-one-third lialign
 ### Testing Techniques
  - [Application discovery via the classpath](application-discovery-via-the-classpath.html)
  - [Embedded Configuration](embedded-configuration.html)
@@ -50,7 +50,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 {row
 
-{span-one-third
+{span-one-third lialign
 ### Discovery and Failover
  - [Overview](ejb-failover.html)
  - [Multicast Discovery (UDP)](multicast-discovery.html)
@@ -60,7 +60,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
  - [Multipoint Recommendations](multipoint-recommendations.html)
  - [Logging Events](failover-logging.html)
 }
-{span-one-third
+{span-one-third lialign
 
 ###  OpenEJB Standalone Server
  - [Understanding the Directory Layout](understanding-the-directory-layout.html)
@@ -68,7 +68,7 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
  - [Deploy Tool](deploy-tool.html)
  - [Properties Tool](properties-tool.html)
 }
-{span-one-third
+{span-one-third lialign
 ### Spring
  - [Spring and OpenEJB 3.0](spring-and-openejb-3.0.html)
  - [Spring and OpenEJB 3.1 and later](spring.html)
@@ -77,18 +77,18 @@ See also the [examples page](examples-trunk/index.html) for downloadable, execut
 }
 {row
 
-{span-one-third
+{span-one-third lialign
 ### Arquillian
  - [Getting started](arquillian-getting-started.html)
  - [Available adapters](arquillian-available-adapters.html) 
 }
-{span-one-third
+{span-one-third lialign
 ### TomEE Maven Plugin
  - [Getting started](tomee-mp-getting-started.html)
  - [tomee-maven-plugin reference documentation](tomee-maven-plugin.html)
  - [TomEE simple webapp archetype documentation](tomee-mp-getting-started.mdtext.html)
 }
-{span-one-third
+{span-one-third lialign
 ### Tips and Tricks
  - [WebLogic Lookup](weblogic.html)
 }
