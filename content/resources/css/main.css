@@ -84,5 +84,3 @@ blockquote p {
 * html .span-one-third li { display:inline; }
 * + html .span-one-third li { display:inline; }
 .span-one-third li > * { display:table; table-layout:fixed; overflow:hidden; }
-* html .lialign li { width:270px; }   /* for IE 6 */
-.lialign li > * { width:270px; }      /* for all other browser */
