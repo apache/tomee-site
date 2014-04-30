@@ -66,6 +66,7 @@ blockquote p {
 .span-one-third {
     width: 300px;
     float: left;
+	overflow:hidden;
 }
 
 .span-two-thirds {
@@ -79,8 +80,3 @@ blockquote p {
 .offset-two-thirds {
     margin-left: 660px;
 }
-
-.span-one-third li {display:-moz-inline-box; -moz-box-orient:vertical; display:inline-block; vertical-align:top; word-wrap:break-word; }
-* html .span-one-third li { display:inline; }
-* + html .span-one-third li { display:inline; }
-.span-one-third li > * { display:table; table-layout:fixed; overflow:hidden; }
