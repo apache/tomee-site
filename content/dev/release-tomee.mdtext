@@ -149,8 +149,6 @@ Once you are happy with the staging you can publish to the real site using:
 
 ### Begin The Release Process
 
-
-
 Ensure TCK is passing all tests, and if so create an SVN tag from the branch.
 
 	Note: It is a future goal to either separate OpenEJB from TomEE or unify the versions so the
@@ -158,11 +156,15 @@ Ensure TCK is passing all tests, and if so create an SVN tag from the branch.
 
 	Because we cannot use the Maven release tools we currently have to create a an SVN tag manually. The best way to do this is to:
 	
-	 - Copy the branch to a staging branch using: svn copy https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]  https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging -m "Staging [version]"
-	 - Checkout the staging branch using: svn co https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging tomee-[version]-staging
+	 - Copy the branch to a staging branch using:  
+	   > svn copy https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]  https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging -m "Staging [version]"
+	 - Checkout the staging branch using:  
+	   > svn co https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging tomee-[version]-staging
 	 - Update all SNAPSHOT versions to the release versions in the local tomee-[version]-staging and commit.
-	 - Create the tag from the staging: svn copy https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging https://svn.apache.org/repos/asf/tomee/tomee/tags/tomee-[version] -m "Tag [version]"
-	 - Delete the staging branch using: svn rm https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging -m "Delete staging"
+	 - Create the tag from the staging:  
+	   > svn copy https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging https://svn.apache.org/repos/asf/tomee/tomee/tags/tomee-[version] -m "Tag [version]"
+	 - Delete the staging branch using:  
+	   > svn rm https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging -m "Delete staging"
 
 Open a console on the release-tools directory.
 
@@ -193,15 +195,12 @@ Update trunk versions. How you do this is up to you at this point in time.
 
 Create the next version iterations in JIRA.
 
-### Rolling Out The Preview	
-	
-Publish the preview using **./run.sh roll binaries legal releasenotes preview** - You can run these tasks like so, or individually in order.
-It will be likely that this will have to be repeated several times before a successful vote.
+### Rolling Out The Preview
 
-	Note: Before running the above ensure you either have:
+	Note: Before running anything below ensure you either have:
 
 	 - A valid tomee-release.properties from the last release in your home directory (Speak to the last release manager).
-	 - Or have modified **tomee-release-tools/src/main/java/org/apache/openejb/tools/release/Release.java** with current versions and rebuilt.
+	 - Or have modified **tomee-release-tools/src/main/java/org/apache/openejb/tools/release/Release.java** with current versions and **mvn clean install**.
 	 	 
 Ensure the TCK passes with preview repositories by editing and ensuring paths are correct in the following files:
 
@@ -210,7 +209,10 @@ Ensure the TCK passes with preview repositories by editing and ensuring paths ar
 	\tckbranch\webprofile-plus.properties
 	\tckbranch\webprofile.properties
 	
-To fire off a build on EC2 from the TCK directory use **./triggerEC2.sh**	
+Publish the preview using **./run.sh roll binaries legal releasenotes preview** - You can run these tasks like so, or individually in order.
+It will be likely that this will have to be repeated several times before a successful vote.
+	
+To fire off a build on EC2 from the TCK directory speak to the last release manager for the **curl** command to use
 
 If the TCK fails then discuss, fix and re-roll.
 

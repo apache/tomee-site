@@ -15,7 +15,7 @@ If you are experiencing problems with errors like "400 Bad Request
 (http://svn.apache.org)", try using:
 > $ svn co [https://svn.apache.org/repos/asf/tomee/tomee/trunk](https://svn.apache.org/repos/asf/tomee/tomee/trunk)
 
-or alternatively with Apache Maven 2 or later:
+or alternatively with Apache Maven 3.0.5 or later:
 
 > mvn scm:checkout
 > -DconnectionUrl=scm:svn:http://svn.apache.org/repos/asf/tomee/tomee/trunk
@@ -26,7 +26,7 @@ scm:checkout checks out the sources non-interactively. It's worth to know
 about the command, though, as it doesn't require the subversion client.
 
 <a name="SourceCode-Continuousintegration"></a>
-# Continuous integration
+###Continuous integration
 
 Apache TomEE continuous integration relies on [Apache Buildbot](http://ci.apache.org/).
 All builders are available [from the page](http://ci.apache.org/builders).
@@ -35,12 +35,19 @@ All builders are available [from the page](http://ci.apache.org/builders).
 * [Apache TomEE under Windows using a Sun/Oracle JDK](http://ci.apache.org/builders/tomee-trunk-win-sunjdk)
 * [Apache TomEE under Windows using an IBM JDK](http://ci.apache.org/builders/tomee-trunk-win-ibmjdk6)
 
-
 <a name="SourceCode-Building"></a>
-# Building
+###Maven
+To build the code, you'll need to grab a copy of [Apache Maven](http://maven.apache.org), version 3.0.5 or later.
+ 
+###Memory Settings
 
-To build the code, you'll need to grab a copy of [Apache Maven](http://maven.apache.org)
- version 3.0 or later.  The standard build command is as follows:
+It is pretty much guaranteed that you will need to give Maven an increase on the available memory.  
+Depending on the OS you are working on the fix can be as easy as `_export MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k`
+on MacOS and Unices or `set MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k` on MS Windows.
+
+###Building
+
+The standard build command is as follows:
 
     $ cd tomee
     $ mvn clean install -DskipTests -DfailIfNoTests=false
@@ -52,23 +59,16 @@ Alternatively, if you've made changes to the code and want to verify them, you c
 
 The output of that command should end with "BUILD SUCCESSFUL"
 
-## Memory Settings
-
-It's likely you run into the infamous `OutOfMemoryError` and the solution is
-to increase the available memory for Apache Maven. Depending on the system
-you're working on, the fix can be as easy as `_export MAVEN_OPTS=-Xmx512m`
-on MacOS and Unices or `set MAVEN_OPTS=-Xmx512m` on MS Windows.
-
-## Binary locations
+###Binary locations
 
 Once built, the TomEE binaries will be located at:
 
     $ ls tomee/apache-tomee/target/*.zip
-    tomee/apache-tomee/target/apache-tomee-jaxrs-1.5.2-SNAPSHOT.zip
-    tomee/apache-tomee/target/apache-tomee-plus-1.5.2-SNAPSHOT.zip
-    tomee/apache-tomee/target/apache-tomee-webprofile-1.5.2-SNAPSHOT.zip
+    tomee/apache-tomee/target/apache-tomee-jaxrs-[version]-SNAPSHOT.zip
+    tomee/apache-tomee/target/apache-tomee-plus-[version]-SNAPSHOT.zip
+    tomee/apache-tomee/target/apache-tomee-webprofile-[version]-SNAPSHOT.zip
 
 The OpenEJB standalone binaries will be located at:
 
     $ ls assembly/openejb-standalone/target/*.zip
-    assembly/openejb-standalone/target/apache-openejb-4.5.2-SNAPSHOT.zip
+    assembly/openejb-standalone/target/apache-openejb-[version]-SNAPSHOT.zip

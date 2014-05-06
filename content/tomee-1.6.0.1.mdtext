@@ -13,8 +13,6 @@ It goes without saying that everyone has heard of the Heartbleed issue and we ha
 
 We would like to thank everyone in the community involved in the reporting, documentation and final resolution of this issue. A very special thank you goes out to Romain Manni-Bucau and Jonathan Gallimore for their tireless efforts in enabling us to provide this release so quickly.
 
-The stability of the continuous integration (CI) build can be seen here: [http://ci.apache.org/builders/tomee-1.6.0.1-ubuntu](http://ci.apache.org/builders/tomee-1.6.0.1-ubuntu)
-
 The Apache TomEE Release 1.6.0.1 files can be found here:
 
 [http://tomee.apache.org/downloads.html](http://tomee.apache.org/downloads.html)

@@ -27,11 +27,18 @@ _No CVE has been opened to be fixed on current Apache TomEE project sources._
 
 ## Fixed in Third-party
 
-Provided by [Apache TomEE 1.6.0.1](http://tomee.apache.org/downloads.html)
+Covered by [Apache TomEE 1.6.0.2](http://tomee.apache.org/downloads.html)
+
+ - [CVE-2014-0109](http://cxf.apache.org/security-advisories.data/CVE-2014-0109.txt.asc?version=1&modificationDate=1398873370740&api=v2): HTML content posted to SOAP endpoint could cause OOM errors
+ - [CVE-2014-0110](http://cxf.apache.org/security-advisories.data/CVE-2014-0110.txt.asc?version=1&modificationDate=1398873378628&api=v2): Large invalid content could cause temporary space to fill
+ - [CVE-2014-0034](http://cxf.apache.org/security-advisories.data/CVE-2014-0034.txt.asc?version=1&modificationDate=1398873385252&api=v2): The SecurityTokenService accepts certain invalid SAML Tokens as valid
+ - [CVE-2014-0035](http://cxf.apache.org/security-advisories.data/CVE-2014-0035.txt.asc?version=1&modificationDate=1398873391788&api=v2): UsernameTokens are sent in plaintext with a Symmetric EncryptBeforeSigning policy
+
+Covered by [Apache TomEE 1.6.0.1](http://tomee.apache.org/downloads.html)
 
  - Fixed in Tomcat 7.0.52 *Important: Denial of Service* [CVE-2014-0050](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0050) 
 
-Provided by [Apache TomEE 1.6.0](http://tomee.apache.org/downloads.html)
+Covered by [Apache TomEE 1.6.0](http://tomee.apache.org/downloads.html)
  
  - [CVE-2013-2160](http://cxf.apache.org/security-advisories.data/CVE-2013-2160.txt.asc?version=1&modificationDate=1372324301000&api=v2) - Denial of Service Attacks on Apache CXF
  - [Note on CVE-2012-5575](http://cxf.apache.org/cve-2012-5575.html) - XML Encryption backwards compatibility attack on Apache CXF.
