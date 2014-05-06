@@ -1,6 +1,7 @@
-Title: Index
+Title: Documentation
 
-See also the [examples page](examples-trunk/index.html)   for downloadable, executable and code-focused view of Java EE and TomEE.
+See also the [examples page](examples-trunk/index.html) for downloadable, executable and code-focused view of Java EE and TomEE.  
+You can also find us on IRC freenode.org #openejb
 
 {row
 
@@ -85,7 +86,7 @@ See also the [examples page](examples-trunk/index.html)   for downloadable, exec
 ###TomEE Maven Plugin
 [Getting started](tomee-mp-getting-started.html)  
 [tomee-maven-plugin reference documentation](tomee-maven-plugin.html)  
-[TomEE simple webapp archetype documentation](tomee-mp-getting-started.mdtext.html)  
+[TomEE simple webapp archetype documentation](tomee-mp-getting-started.html)  
 }
 {span-one-third
 ###Tips and Tricks

@@ -100,7 +100,8 @@ Once you have your key then you will need to append it to the key file here:
 
  - [http://www.apache.org/dist/openejb/KEYS](http://www.apache.org/dist/openejb/KEYS)
 
-That is best done as the file itself explains one you view it in a UTF-8 safe text editor.
+That is best done as the file itself explains, once you open and view it in a UTF-8 safe text editor you will see the description at the top.  
+Just follow the instructions there on how to append your key. The basic steps are also here, please read both before you proceed:
 
  - Save the KEYS file on your local machine and import it using **gpg --import KEYS**
  - Then create the new KEYS file using **(gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS**
@@ -148,9 +149,22 @@ Once you are happy with the staging you can publish to the real site using:
 
 ### Begin The Release Process
 
-Ensure TCK is passing all tests.
 
-Open a console on the release tools directory.
+
+Ensure TCK is passing all tests, and if so create an SVN tag from the branch.
+
+	Note: It is a future goal to either separate OpenEJB from TomEE or unify the versions so the
+	[maven-release-plugin](http://maven.apache.org/maven-release/maven-release-plugin/) can be used.
+
+	Because we cannot use the Maven release tools we currently have to create a an SVN tag manually. The best way to do this is to:
+	
+	 - Copy the branch to a staging branch using: svn copy https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]  https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging -m "Staging [version]"
+	 - Checkout the staging branch using: svn co https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging tomee-[version]-staging
+	 - Update all SNAPSHOT versions to the release versions in the local tomee-[version]-staging and commit.
+	 - Create the tag from the staging: svn copy https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging https://svn.apache.org/repos/asf/tomee/tomee/tags/tomee-[version] -m "Tag [version]"
+	 - Delete the staging branch using: svn rm https://svn.apache.org/repos/asf/tomee/tomee/branches/tomee-[version]-staging -m "Delete staging"
+
+Open a console on the release-tools directory.
 
 Note: Before running any **./run.sh** activity always check the release tools code for the command tomee-release-tools/src/main/java/org/apache/openejb/tools/release/cmd.
 At the moment some of the commands need manually editing to work. Eventually the commands should be re-written.
@@ -161,7 +175,7 @@ All JIRA actions should be performed on the ASF JIRA here:
 
 Ensure JIRAs have been filed for commits using **./run.sh reviewcommits**
 
-Update fixVersions for JIRAs used in SVN commits using **./run.sh updatejiras**
+Update fixVersions for JIRAs used in SVN commits using **./run.sh updatejiras** - *Untested, requires investigation*
 
 Review and bulk Close all JIRAs for the version to be released.
 
@@ -178,12 +192,6 @@ Update branch versions. How you do this is up to you at this point in time.
 Update trunk versions. How you do this is up to you at this point in time.
 
 Create the next version iterations in JIRA.
-
-Resolve all SNAPSHOT dependencies in the branch against release versions. This includes the modules themselves.
-The reason for this is that an SVN TAG is taken straight off the branch during the next step.
-
-	Note: It is a future goal to either separate OpenEJB from TomEE or unify the versions so the
-	[maven-release-plugin](http://maven.apache.org/maven-release/maven-release-plugin/) can be used.
 
 ### Rolling Out The Preview	
 	
