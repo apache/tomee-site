@@ -90,6 +90,7 @@ You can also find us on IRC freenode.org #openejb
 }
 {span-one-third
 ###Tips and Tricks
-[WebLogic Lookup](weblogic.html)  
+[Global Concurrency Management](tip-concurrency.html)  
+[WebLogic Lookup](tip-weblogic.html)  
 }
 }
