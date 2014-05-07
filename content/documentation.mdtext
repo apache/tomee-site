@@ -7,17 +7,17 @@ You can also find us on IRC freenode.org #openejb
 
 {span-one-third
 ###General Guide
-[Using TomEE with Intellij](tomee-and-intellij.html)  
-[Using TomEE with Eclipse](tomee-and-eclipse.html)  
-[Using TomEE with Netbeans](tomee-and-netbeans.html)  
-[WTP and TomEE logging](tomee-logging-in-eclipse.html)  
-[Comparison: OpenEJB,TomEE,TomEE+](comparison.html)  
+[Get started with Intellij](tomee-and-intellij.html)  
+[Get started with Eclipse](tomee-and-eclipse.html)  
+[Get started with Netbeans](tomee-and-netbeans.html)  
+[Eclipse WTP and TomEE logging](tomee-logging-in-eclipse.html)  
+[Comparison: OpenEJB, TomEE, TomEE+](comparison.html)  
 [TomEE Directory structure](tomee-directory-structure.html)  
-[TomEE and Configurations](Configuring-in-tomee.html)  
-[TomEE and Security](tomee-and-security.html)  
+[TomEE Configuration](Configuring-in-tomee.html)  
+[TomEE Security](tomee-and-security.html)  
 [Deploying in TomEE](deploying-in-tomee.html)  
 [The 'tomee' webapp](tomee-webapp.html)  
-[Installing TomEE using the drop-in WAR](installation-drop-in-war.html)  
+[Install TomEE using the drop-in WAR](installation-drop-in-war.html)  
 }
 {span-one-third
 ###Configuration
