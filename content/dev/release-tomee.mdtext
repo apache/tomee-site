@@ -126,7 +126,7 @@ Have a look at **run.sh** to see the entry point.
 Understand that the release tools are not polished, and you currently may have to edit source and re-compile.
 
 ###Site Staging
-
+<a href="#staging"/>
 For some of the release steps you will need to provide documentation on the site. Checkout the site here:
 
 [https://svn.apache.org/repos/asf/tomee/site/trunk](https://svn.apache.org/repos/asf/tomee/site/trunk)
@@ -226,8 +226,19 @@ If the vote fails then discuss, fix and re-roll.
 
 Once the vote has passed then release the binaries on Nexus: [https://repository.apache.org/index.html#welcome](https://repository.apache.org/index.html#welcome)
 
+Update both OpenEJB and TomEE JIRA versions as released (Set the release date).
+
+Copy the binaries to the release location (User rights require a PMC to do this)
+
+	From: https://dist.apache.org/repos/dist/dev/tomee/staging-[stagingId]/tomee-[version]
+	To: https://dist.apache.org/repos/dist/release/tomee/tomee-[version] 
+	
+Commit and publish changes to the site, see [Site Staging](release-tomee.html#staging)	
+
 ###Blog
+
+Announce to the world that TomEE has new bells and whistles!
 
 https://blogs.apache.org/roller-ui/login.rol
 
-Follow the steps in tasks - In progress...
+
