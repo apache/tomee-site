@@ -1,7 +1,8 @@
 Title: Apache TomEE
 
-Apache TomEE, pronounced "Tommy", is an all-Apache stack aimed at *Java EE
-6 Web Profile* certification where Tomcat is top dog.
+Apache TomEE, pronounced "Tommy", is an all-Apache Java EE 6 Web Profile certified stack where Apache Tomcat is top dog. Apache TomEE is assembled from a vanilla Apache Tomcat zip file. We start with Apache Tomcat, add our jars and zip up the rest. The result is Tomcat with added EE features - TomEE.
+
+<a class="btn primary large" href="downloads.html">Download Apache TomEE Now &raquo;</a>&nbsp; and <a href="documentation.html">get started today!</a>
 
 ## TomEE
 
