@@ -21,47 +21,45 @@ Geertjan is a Netbeans evangelist and has an incredible insight into everything 
 
 You can download Netbeans 8 here: [https://netbeans.org/community/releases/80/](https://netbeans.org/community/releases/80/)
 
-Branch		   
-
-We will use one of the existing examples for this demo. Let's import it.
+Here is a quick run through on how to set up TomEE. We will use one of the existing examples for this demo. Let's import it.  
 
   ![Subversion Checkout][1]
   ![Subversion URL][2]
   ![Local Project][3]
   ![alt text][4]
 
-Click 'Open Project'.
+Click 'Open Project'.  
 
   ![alt text][5]
   ![alt text][6]
 
-It's time to add our local TomEE server. Click 'Tools' and then 'Servers'.
+It's time to add our local TomEE server. Click 'Tools' and then 'Servers'.  
 
   ![alt text][7]
 
-Select 'Apache Tomcat'.
+Select 'Apache Tomcat'.  
 
   ![alt text][8]
   
-Select your local TomEE directory.
+Select your local TomEE directory.  
 
   ![alt text][9]
   ![alt text][10]
   ![alt text][11]
 
-It's time to run it. Click the play button.
+It's time to run it. Click the play button.  
 
   ![alt text][12]
 
-Select 'Apache Tomcat'.
+Select 'Apache Tomcat'.  
 
   ![alt text][13]
 
-Give it some time. It's building your application.
+Give it some time. It's building your application.  
 
   ![alt text][14]
 
-Done. Your server is up and running.
+Done. Your server is up and running.  
 
   ![alt text][15]
   ![alt text][16]
