@@ -15,12 +15,19 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
            KIND, either express or implied.  See the License for the
            specific language governing permissions and limitations
            under the License.
+		   
+There is some great information over at [Geertjan's Blog](https://blogs.oracle.com/geertjan/entry/tomee_apache_cxf_and_maven) on how to hit the ground running with Netbeans, CXF and Maven.
+Geertjan is a Netbeans evangelist and has an incredible insight into everything Netbeans.
+
+You can download Netbeans 8 here: [https://netbeans.org/community/releases/80/](https://netbeans.org/community/releases/80/)
+
+Branch		   
 
 We will use one of the existing examples for this demo. Let's import it.
 
-  ![alt text][1]
-  ![alt text][2]
-  ![alt text][3]
+  ![Subversion Checkout][1]
+  ![Subversion URL][2]
+  ![Local Project][3]
   ![alt text][4]
 
 Click 'Open Project'.
