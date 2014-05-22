@@ -45,30 +45,41 @@ It is pretty much guaranteed that you will need to give Maven an increase on the
 Depending on the OS you are working on the fix can be as easy as `_export MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k`
 on MacOS and Unices or `set MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k` on MS Windows.
 
-###Building
+###Full Build
 
-The standard build command is as follows:
+The standard build command is as follows (Skipping all tests):
 
-    $ cd tomee
-    $ mvn clean install -DskipTests -DfailIfNoTests=false
+    cd tomee
+    mvn clean install -DskipTests -DfailIfNoTests=false
 
-Alternatively, if you've made changes to the code and want to verify them, you can run with tests on:
+Alternatively, if you've made changes to the code and want to verify them, you can run with tests on (Takes about 2 hours):
 
-    $ cd tomee
-    $ mvn clean install
+    cd tomee
+    mvn clean install
 
 The output of that command should end with "BUILD SUCCESSFUL"
+
+It is also possible compile and test individual modules.  
+Just change to the module directory and run the same commands as above.
+
+###Quick Build
+
+If you are in a hurry, at let's face it most of us are, you can run a quick build without the examples:
+
+	mvn -Pquick -Dsurefire.useFile=false -DdisableXmlReport=true -DuniqueVersion=false -ff -Dassemble -DskipTests -DfailIfNoTests=false clean install
 
 ###Binary locations
 
 Once built, the TomEE binaries will be located at:
 
-    $ ls tomee/apache-tomee/target/*.zip
+    ls [project]/tomee/apache-tomee/target/*.zip
+	
     tomee/apache-tomee/target/apache-tomee-jaxrs-[version]-SNAPSHOT.zip
     tomee/apache-tomee/target/apache-tomee-plus-[version]-SNAPSHOT.zip
     tomee/apache-tomee/target/apache-tomee-webprofile-[version]-SNAPSHOT.zip
 
 The OpenEJB standalone binaries will be located at:
 
-    $ ls assembly/openejb-standalone/target/*.zip
+    ls [project]/assembly/openejb-standalone/target/*.zip
+	
     assembly/openejb-standalone/target/apache-openejb-[version]-SNAPSHOT.zip
