@@ -64,7 +64,7 @@ Just change to the module directory and run the same commands as above.
 
 ###Quick Build
 
-If you are in a hurry, at let's face it most of us are, you can run a quick build without the examples:
+If you are in a hurry, and let's face it most of us are, you can run a quick build without the examples:
 
 	mvn -Pquick -Dsurefire.useFile=false -DdisableXmlReport=true -DuniqueVersion=false -ff -Dassemble -DskipTests -DfailIfNoTests=false clean install
 
