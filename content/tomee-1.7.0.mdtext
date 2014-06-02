@@ -1,0 +1,21 @@
+# Apache TomEE 1.7.0 Released!
+
+After several months of hard work and dedicated community commitment Apache TomEE is happy to announce the feature release of [Apache TomEE 1.7.0](http://tomee.apache.org/downloads.html) which is based on [Apache Tomcat 7.0.54](http://tomcat.apache.org/tomcat-7.0-doc/index.html). Please do not forget that nearly all of the work that goes into this purely open source project is community driven. Very special thanks go out to all that have dedicated their time to make this release possible.
+
+The 1.7.0 feature release is the final Java 1.6 compatible Oracle J2EE 6 Web Profile Certified branch.
+
+So what's new? Well the most important feature has to be the new PLUME profile, which is basically TomEE PLUS
+
+Complete details of the issues that have been fixed can be found at the following link:
+
+[http://cxf.apache.org/security-advisories.html](http://cxf.apache.org/security-advisories.html)
+
+The stability of the continuous integration (CI) build can be seen here: [http://ci.apache.org/builders/tomee-1.7.0-ubuntu](http://ci.apache.org/builders/tomee-1.7.0-ubuntu)
+
+The Apache TomEE Release 1.7.0 files can be found here:
+
+[http://tomee.apache.org/downloads.html](http://tomee.apache.org/downloads.html)
+
+A complete [Changelog](tomee-1.7.0-release-notes.html) can be viewed here:
+
+[tomee-1.7.0-release-notes.html](tomee-1.7.0-release-notes.html)
