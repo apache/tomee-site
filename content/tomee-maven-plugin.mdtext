@@ -12,9 +12,9 @@ Simply add the following to your `pom.xml`
     <plugin>
       <groupId>org.apache.openejb.maven</groupId>
       <artifactId>tomee-maven-plugin</artifactId>
-      <version>1.0.1</version>
+      <version>1.6.0.2</version>
       <configuration>
-        <tomeeVersion>1.5.0</tomeeVersion>
+        <tomeeVersion>1.6.0.2</tomeeVersion>
         <tomeeClassifier>plus</tomeeClassifier>
       </configuration>
     </plugin>
