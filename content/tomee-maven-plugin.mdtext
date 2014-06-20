@@ -7,7 +7,7 @@ plugin that allows for:
  - Server start and stop
  - Application deployment and undeployment
 
-Simply add the following to your `pom.xml`
+Simply add the following to the <plugins> section of your `pom.xml`
 
     <plugin>
       <groupId>org.apache.openejb.maven</groupId>

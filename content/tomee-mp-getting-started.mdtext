@@ -1,10 +1,25 @@
 Title: TomEE Maven Plugin
 
-#  Generating a TomEE-Project with Maven
+###Add The TomEE Maven Plugin To An Existing Project
 
-TomEE provides a maven-archetype for generating a maven based project. This template-project is preconfigured with `javaee-api` (scope provided) and with the `tomee-maven-plugin` for starting the application with TomEE.
+If you already have a maven project set up then just add the plugin as described [here](tomee-maven-plugin.html)
 
-The current version of the archetype is '1.6.0.2'. So the needed command to generate an application is:
+You will likely need the full Java EE API added to your pom file:
+
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>6.0-6</version>
+      <scope>provided</scope>
+    </dependency>
+	
+The simplest path is to allow Maven to create an example project for you. Even if you have an existing project you can always use the template as a reference.
+
+###Generate a Basic TomEE-Project With Maven
+
+TomEE provides a maven-archetype for generating a template project. This template project is preconfigured with `javaee-api` (scope provided) and with the `tomee-maven-plugin` for starting the application with TomEE.
+
+The current version of the archetype is '1.6.0.2'. So the required command to generate an application would be:
 
     mvn archetype:generate -DarchetypeGroupId=org.apache.openejb.maven -DarchetypeArtifactId=tomee-webapp-archetype -DarchetypeVersion=1.6.0.2
 
@@ -29,7 +44,7 @@ For starting the application you have to change the current directory to the dir
 
     cd tomee-demo
 
-#  Starting a TomEE-Project with Maven
+###Starting a TomEE-Project with Maven
 
 With using the archetype everything you need is in place already. So you just have to start TomEE with:
 
@@ -38,7 +53,7 @@ With using the archetype everything you need is in place already. So you just ha
 The first time you run this command takes a bit longer, because maven has to download e.g. TomEE.
 Once those parts are downloaded, starting maven, deploying and starting the generated application takes less than 10s (depending on your computer).
 
-#  Accessing a started application
+###Accessing a running application
 
 The application gets deployed to `target/apache-tomee/webapps`. If everything worked correctly, you should see a directory ('ROOT') as well as a web-archive ('ROOT.war').
 The context-paths of the deployed application is ROOT. In our example the generated application contains a servlet mapped to '/index'. So you can access it via:
