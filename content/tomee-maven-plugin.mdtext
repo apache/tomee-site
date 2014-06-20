@@ -3,9 +3,9 @@ Title: TomEE Maven Plugin
 Inspired by the Jetty Maven Plugin, the TomEE Maven Plugin is a feature-rich
 plugin that allows for:
 
- - easy provisioning of a TomEE server
- - server start and stop
- - application deploy and undeploy
+ - Easy provisioning of a TomEE server
+ - Server start and stop
+ - Application deployment and undeployment
 
 Simply add the following to your `pom.xml`
 
@@ -19,11 +19,11 @@ Simply add the following to your `pom.xml`
       </configuration>
     </plugin>
 
-The available commands can be discovered running:
+The available commands can be discovered by running:
 
     mvn tomee:help
 
-Should print output like the following:
+Which should print output like the following:
 
     [INFO] Available commands:
     [INFO] 	- tomee:run: run and wait for the server
@@ -327,7 +327,7 @@ project to setup a TomEE install, add libraries, deploy apps then run the server
       </plugin>
 
 
-## Auto Reloading example
+## Auto Reloading Example
 
     <plugin>
       <groupId>org.apache.openejb.maven</groupId>
@@ -343,7 +343,7 @@ project to setup a TomEE install, add libraries, deploy apps then run the server
       </configuration>
     </plugin>
 
-Synchronization block supports the following configuration:
+The Synchronization block supports the following configuration options:
 
 * resourcesDir (default src/main/webapp)
 * binariesDir (default target/classes)
@@ -351,6 +351,6 @@ Synchronization block supports the following configuration:
 * targetResourcesDir (default tomee/webapps/finalName)
 * updateInterval (default 5 - in second)
 * extensions (default html, xhtml, js and css)
-* regex: a regex should match file to takeinto account when updating
+* regex: a regex should match files to take into account when updating
 
-reloadOnUpdate means to reload the context (webapp). It means undeploying/redeploying it.
+reloadOnUpdate means to reload the entire context (webapp). This means undeploying/redeploying the application.
