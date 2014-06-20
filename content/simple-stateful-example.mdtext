@@ -40,7 +40,7 @@ implementation, a plain-old-java-object which implements the remote or the
 local business interface and is annotated with the @Stateful annotation
 
 _This example is the "simple-stateful" example located in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
+ available on the [download page](http://tomee.apache.org/downloads.html)._
 
 
 

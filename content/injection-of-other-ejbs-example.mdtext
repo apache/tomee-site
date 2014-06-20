@@ -20,7 +20,7 @@ API.
 
 _The source for this example is the "injection-of-ejbs" directory located
 in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
+ available on the [download page](http://tomee.apache.org/downloads.html)._
 
 <a name="InjectionofotherEJBsExample-TheCode"></a>
 # The Code

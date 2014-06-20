@@ -18,7 +18,7 @@ See the [Security Annotations](security-annotations.html)
 
 _The source for this example is in the "testing-security" directory located
 in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
+ available on the [download page](http://tomee.apache.org/downloads.html)._
 
 <a name="TestingSecurityExample-TheCode"></a>
 # The Code

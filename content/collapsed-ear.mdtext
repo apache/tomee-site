@@ -39,4 +39,4 @@ is where J2EE "jumps the shark" for a large majority of people's needs.
 If you want to try to work with Servlets/JSP and OpenEJB using Tomcat, see
 the [setup page](openejbx30:tomcat.html)
  and the "/webapps/ejb-examples" section of the [openejb-examples.zip](downloads.html)
- available on the download page.
+ available on the [download page](http://tomee.apache.org/downloads.html).

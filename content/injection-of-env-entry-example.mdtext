@@ -29,7 +29,7 @@ ejb-jar.xml.  See the [Custom Injection](custom-injection.html)
 
 _The source for this example is the "injection-of-env-entry" directory
 located in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
+ available on the [download page](http://tomee.apache.org/downloads.html)._
 
 <a name="Injectionofenv-entryExample-TheCode"></a>
 # The Code

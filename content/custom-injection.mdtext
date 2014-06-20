@@ -21,7 +21,7 @@ for a full list of supported env-entry types.
 
 The source for this example is the "custom-injection" directory located in
 the [openejb-examples.zip](downloads.html)
-available on the download page.
+available on the [download page](http://tomee.apache.org/downloads.html).
 
 <a name="CustomInjection-TheCode"></a>
 # The Code

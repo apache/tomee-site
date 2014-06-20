@@ -22,8 +22,8 @@ code in a JTA *Transaction*.  An EJB 3 @Entity bean is used with the
 EntityManager to create, persist and merge data to a database.
 
 _The source for this example is in the "testing-transactions" directory
-located in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
+located in the [openejb-examples.zip](http://tomee.apache.org/downloads.html)
+ available on the [download page](http://tomee.apache.org/downloads.html)._
 
 <a name="TestingTransactionsExample-TheCode"></a>
 # The Code

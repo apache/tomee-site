@@ -12,9 +12,9 @@ to start with a fresh installation for OpenEJB, the [Tomcat Installation](tomcat
 <a name="TomcatDetailedInstructions-Addopenejb.wartoTomcat"></a>
 ## Add openejb.war to Tomcat
 
-The OpenEJB plugin for Tomcat is distributed as a standalone war file
+The TomEE plugin for Tomcat is distributed as a standalone war file
 containing all of the necessary files and an installer Servlet.  The war
-can be obtained from the [OpenEJB download page](openejb:download.html)
+can be obtained from the [download page](http://tomee.apache.org/downloads.html)
 .  Once downloaded, simply copy the file into the Tomcat webapps directory. 
 
 {deck:id=Copy openejb.war}

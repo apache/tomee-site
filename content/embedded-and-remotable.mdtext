@@ -36,7 +36,7 @@ number of ServerServices are available currently:
 
 _The source for this example is in the "telephone-stateful" directory
 located in the [openejb-examples.zip](openejb:download.html)
- available on the download page._
+ available on the [download page](http://tomee.apache.org/downloads.html)._
 
 {note}
 If your goal is simply to unit test beans with remote interfaces, this is
