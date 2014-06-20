@@ -1,21 +1,23 @@
 # Apache TomEE 1.7.0 Released!
 
-After several months of hard work and dedicated community commitment Apache TomEE is happy to announce the feature release of [Apache TomEE 1.7.0](http://tomee.apache.org/downloads.html) which is based on [Apache Tomcat 7.0.54](http://tomcat.apache.org/tomcat-7.0-doc/index.html). Please do not forget that nearly all of the work that goes into this purely open source project is community driven. Very special thanks go out to all that have dedicated their time to make this release possible.
+After many months of hard work and dedicated community commitment Apache TomEE is happy to finally announce the feature release of [Apache TomEE 1.7.0](http://tomee.apache.org/downloads.html) which is based on [Apache Tomcat 7.0.54](http://tomcat.apache.org/tomcat-7.0-doc/index.html). Please do not forget that nearly all of the work that goes into this purely open source project is community driven. Very special thanks go out to all that have dedicated their time to make this release possible. Anyone active on the mailing lists and/or IRC will know that an extra special thanks for Romain Manni-Bucau is well deserved.
 
-The 1.7.0 feature release is the final Java 1.6 compatible Oracle J2EE 6 Web Profile Certified branch.
+The 1.7.0 feature release is the final Java 1.6 compatible Oracle Java EE 6 Web Profile Certified branch. From this point on the TomEE community will be focusing all it's efforts on TomEE 2.0.0, which will be the Java EE 7 driven.
 
-So what's new? Well the most important feature has to be the new PLUME profile, which is basically TomEE PLUS
+So what's new? Well the most important feature has to be the new PLUME profile, which is basically TomEE PLUS with [Mojarra](https://javaserverfaces.java.net/) and [eclipselink](http://www.eclipse.org/eclipselink/) support.
+This makes the transition to TomEE from a Glassfish environment a lot less painful. So no more excuses, come and join us - We're all yours!
 
-Complete details of the issues that have been fixed can be found at the following link:
+In addition to PLUME there have been a train, plane and truck load of tweaks, improvements and bug fixes to make this release one of the most stable and feature rich versions we have ever released. 
 
-[http://cxf.apache.org/security-advisories.html](http://cxf.apache.org/security-advisories.html)
+[145 TomEE](https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&jqlQuery=project+%3D+TOMEE+AND+fixVersion+%3D+1.7.0) issues addressed
+[237 [OpenEJB](https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&jqlQuery=project+%3D+OPENEJB+AND+fixVersion+%3D+4.7.0) issues addressed (OK, to be fair, some of these were legacy JIRA's stuck in the cobweb)
 
-The stability of the continuous integration (CI) build can be seen here: [http://ci.apache.org/builders/tomee-1.7.0-ubuntu](http://ci.apache.org/builders/tomee-1.7.0-ubuntu)
-
-The Apache TomEE Release 1.7.0 files can be found here:
+The Apache TomEE Release 1.7.0 files can be downloaded here:
 
 [http://tomee.apache.org/downloads.html](http://tomee.apache.org/downloads.html)
 
 A complete [Changelog](tomee-1.7.0-release-notes.html) can be viewed here:
 
 [tomee-1.7.0-release-notes.html](tomee-1.7.0-release-notes.html)
+
+So please feel free to jump in feet first and [get started with TomEE]. You'll always find someone to help you on one of our many [support channels](http://tomee.apache.org/support.html).
