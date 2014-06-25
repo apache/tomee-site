@@ -6,14 +6,14 @@ The 1.7.0 feature release is the final Java SE 6 / Java SE 8 compatible Oracle J
 
 So what is new?
 
-###PLUME
+###PLUME Profile (Mojarra and EclipseLink)
 
 One the most important features has to be the new PLUME profile, which is basically TomEE PLUS with [Mojarra](https://javaserverfaces.java.net/) and [EclipseLink](http://www.eclipse.org/eclipselink/) added support.  
 This makes the transition to TomEE from a Glassfish environment a lot less painful. So no more excuses, come and join us - We're all yours!
 
 ###Java SE 8 Runtime Support
 
-A lot of work has been completed to ensure that Apache TomEE 1.7.x will run within a Java SE 8 environment, yet remain backwards compatible with Java SE 6. Several libraries used have been shaded and patched to achieve this goal and provide users with a stable platform for the transition.
+A lot of work has been completed to ensure that Apache TomEE 1.7.x will run within a [Java SE 8 environment](http://www.oracle.com/technetwork/java/javase/downloads/index.html), yet remain backwards compatible with Java SE 6. Several libraries used have been shaded and patched to achieve this goal and provide users with a stable platform for the transition.
 
 ###Bug Fixes and Improvements
 
@@ -26,7 +26,7 @@ The Apache TomEE 1.7.0 release files can be downloaded from here:
 
 [http://tomee.apache.org/downloads.html](http://tomee.apache.org/downloads.html)
 
-Or just update your maven JavaEE-API, OpenEJB and or TomEE entries to the latest versions:
+Or just update your existing Maven JavaEE-API, OpenEJB and or TomEE entries to point to the latest versions:
 
 	<dependency>
 		<groupId>org.apache.openejb</groupId>
@@ -55,4 +55,4 @@ So please feel free to jump in feet first and [get started with TomEE](http://to
 
 ###Java EE7 and Beyond
 
-From this point on the TomEE community will be focusing most of it's efforts on TomEE 2.0.x, which will be the Java EE 7 driven. It is more than likely that support for Java SE 6 will be dropped so that Java SE 7 features can finally be leveraged during the development process. We will of course continue to maintain the 1.7.x branch.
+From this point on the TomEE community will be focusing most of it's efforts on TomEE 2.0.x, which will be the first TomEE Java EE 7 driven version. It is more than likely that support for Java SE 6 will be dropped so that Java SE 7 features can finally be leveraged during the development process. We will of course continue to maintain the 1.7.x branch for the foreseeable future.
