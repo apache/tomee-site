@@ -7,7 +7,7 @@
 Run **ant -f rat.xml > report.txt** on trunk to ensure all licences are in place.
 
  - Review the report.txt and update/add missing headers until clean.
- - *Tip*, search for **Unapproved licenses:** at the beginning the report for a list.
+ - *Tip*, search for **Unapproved licenses:** at the beginning of the report for a list.
 
 Branch the version to release and ensure it builds and passes all tests.
 

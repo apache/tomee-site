@@ -8,12 +8,12 @@ So what is new?
 
 ###PLUME Profile (Mojarra and EclipseLink)
 
-One the most important features has to be the new PLUME profile, which is basically TomEE PLUS with [Mojarra](https://javaserverfaces.java.net/) and [EclipseLink](http://www.eclipse.org/eclipselink/) added support.  
+One the most important new features has to be the new PLUME profile, which is basically TomEE PLUS with [Mojarra](https://javaserverfaces.java.net/) and [EclipseLink](http://www.eclipse.org/eclipselink/) added support.  
 This makes the transition to TomEE from a Glassfish environment a lot less painful. So no more excuses, come and join us - We're all yours!
 
 ###Java SE 8 Runtime Support
 
-A lot of work has been completed to ensure that Apache TomEE 1.7.x will run within a [Java SE 8 environment](http://www.oracle.com/technetwork/java/javase/downloads/index.html), yet remain backwards compatible with Java SE 6. Several libraries used have been shaded and patched to achieve this goal and provide users with a stable platform for the transition.
+A lot of work has been completed to ensure that Apache TomEE 1.7.x will run within an [Java SE 8 environment](http://www.oracle.com/technetwork/java/javase/downloads/index.html), yet remain backwards compatible with Java SE 6.  Several libraries used have been shaded and patched to achieve this goal and provide users with a stable platform for the transition.
 
 ###Bug Fixes and Improvements
 

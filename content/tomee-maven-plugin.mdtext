@@ -12,9 +12,9 @@ Simply add the following to the <plugins> section of your `pom.xml`
     <plugin>
       <groupId>org.apache.openejb.maven</groupId>
       <artifactId>tomee-maven-plugin</artifactId>
-      <version>1.6.0.2</version>
+      <version>1.7.0</version>
       <configuration>
-        <tomeeVersion>1.6.0.2</tomeeVersion>
+        <tomeeVersion>1.7.0</tomeeVersion>
         <tomeeClassifier>plus</tomeeClassifier>
       </configuration>
     </plugin>
@@ -300,9 +300,9 @@ project to setup a TomEE install, add libraries, deploy apps then run the server
       <plugin>
         <groupId>org.apache.openejb.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>1.6.0.2</version>
+        <version>1.7.0</version>
         <configuration>
-          <tomeeVersion>1.6.0.2</tomeeVersion>
+          <tomeeVersion>1.7.0</tomeeVersion>
           <tomeeClassifier>plus</tomeeClassifier>
           <debug>false</debug>
           <debugPort>5005</debugPort>
@@ -332,7 +332,7 @@ project to setup a TomEE install, add libraries, deploy apps then run the server
     <plugin>
       <groupId>org.apache.openejb.maven</groupId>
       <artifactId>tomee-maven-plugin</artifactId>
-      <version>1.6.0.2</version>
+      <version>1.7.0</version>
       <configuration>
         <synchronization>
           <extensions>
