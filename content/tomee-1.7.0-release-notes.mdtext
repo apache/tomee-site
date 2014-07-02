@@ -133,6 +133,18 @@
 </li>
 <li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1248'>TOMEE-1248</a>] -         Security identity initialized twice when using preemptive mode
 </li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1255'>TOMEE-1255</a>] -         allow TomEE Maven Plugin to specify additional docBase
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1256'>TOMEE-1256</a>] -         allow tomee maven plugin to skip war resources
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1257'>TOMEE-1257</a>] -         undeployment remove all validator/validatorfactory (not only the undeployed app ones)
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1260'>TOMEE-1260</a>] -         allow CDI contructor injections for JAX-RS endpoints
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1261'>TOMEE-1261</a>] -         soap binding annotation not read for ejbs
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1262'>TOMEE-1262</a>] -         JAX RS Autoscanning from Web XML
+</li>
 </ul>
     
 <h2>        Dependency upgrade
@@ -148,7 +160,7 @@
 </li>
 <li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1142'>TOMEE-1142</a>] -         CXF 2.6.14
 </li>
-<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1158'>TOMEE-1158</a>] -         Arquillian 1.1.4.Final
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1158'>TOMEE-1158</a>] -         Arquillian 1.1.5.Final
 </li>
 <li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1193'>TOMEE-1193</a>] -         examples/groovy-spock groovy-all dependency update
 </li>
@@ -311,6 +323,12 @@
 </li>
 <li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1251'>TOMEE-1251</a>] -         Add ability to configure HTTPS port
 </li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1258'>TOMEE-1258</a>] -         allow tomee maven plugin to configure externalRepositories
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1259'>TOMEE-1259</a>] -         add webappDefaultConfig to tomee maven plugin to auto configure the plugin for default webapp dev setup
+</li>
+<li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1263'>TOMEE-1263</a>] -         Add a REST Exception mapper for EJBAccessException
+</li>
 </ul>
                                 
 <h2>        Task
@@ -330,7 +348,6 @@
 <li>[<a href='https://issues.apache.org/jira/browse/TOMEE-1253'>TOMEE-1253</a>] -         add tests based on the test-control module to the deltaspike fullstack example
 </li>
 </ul>
-        
 
         Release Notes - OpenEJB - Version 4.7.0
     

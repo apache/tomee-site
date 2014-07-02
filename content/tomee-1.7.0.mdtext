@@ -19,7 +19,7 @@ A lot of work has been completed to ensure that Apache TomEE 1.7.x will run with
 
 In addition to PLUME and Java 8 support there have been a train, plane and truck load of tweaks, improvements and bug fixes to make this release one of the most stable and feature rich versions we have ever released. Just have a quick look at these lists to get an idea of how much has been achieved. Amazing!
 
-A total of [145 TomEE](https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&jqlQuery=project+%3D+TOMEE+AND+fixVersion+%3D+1.7.0) issues have been addressed.  
+A total of [154 TomEE](https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&jqlQuery=project+%3D+TOMEE+AND+fixVersion+%3D+1.7.0) issues have been addressed.  
 A total of [237 OpenEJB](https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&mode=hide&jqlQuery=project+%3D+OPENEJB+AND+fixVersion+%3D+4.7.0) issues have been addressed (OK, to be fair, some of these were legacy JIRA's stuck in the cobweb)  
 
 The Apache TomEE 1.7.0 release files can be downloaded from here:
