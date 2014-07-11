@@ -22,7 +22,7 @@ Deploying applications in TomEE is as simple as deploying them in Tomcat.
 
 You could deploy your application in Eclipse just like how you would deploy with Tomcat. For an example, [tomee-and-eclipse](tomee-and-eclipse.html) shows how to use TomEE with Eclipse.
 
-Or you can simply package your application as a standard **WAR** file and copy it to the **[[TomEE]]/webapps** folder, or as an **EAR** file and copy it to the **[[TomEE]]/apps** folder.
+Or you can simply package your application as a standard **WAR** file and copy it to the **[TomEE]/webapps** folder, or as an **EAR** file and copy it to the **[TomEE]/apps** folder.
 
 Read on to learn more about packaging EJBs in a WAR file.
 
@@ -32,11 +32,16 @@ Read on to learn more about packaging EJBs in a WAR file.
 <a name="CollapsedEAR-Onearchive"></a>
 #### One archive
 
-The basic idea of this approach is that your Servlets and EJBs are together in your WAR file as one application.  
+The basic idea of this approach is that your Servlets and EJBs are together in your WAR file as one application.
+
  - No classloader boundaries between Servlets and EJBs
+ 
  - EJBs and Servlets can share all third-party libraries (like Spring\!) 
+ 
  - No EAR required.
+ 
  - Can put the web.xml and ejb-jar.xml in the same archive (the WAR file) 
+ 
  - EJBs can see Servlet classes and vice versa 
 
 <a name="CollapsedEAR-NotquiteJ2EE(itistrulyJava EE6)"></a>

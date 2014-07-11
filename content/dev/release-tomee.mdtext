@@ -44,12 +44,12 @@ Run **ant -f rat.xml > report.txt** on the branch.
  
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
 
-	svn mkdir --username [[apacheuser]] --password [[apachepw]] -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-	svn delete --username [[apacheuser]] --password [[apachepw]] -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-	svn mkdir --username [[apacheuser]] --password [[apachepw]] -m "Create test dir" https://repository.apache.org/content/repositories/testdir
-	svn delete --username [[apacheuser]] --password [[apachepw]] -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
-	svn mkdir --username [[apacheuser]] --password [[apachepw]] -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
-	svn delete --username [[apacheuser]] --password [[apachepw]] -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://repository.apache.org/content/repositories/testdir
+	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
+	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 
 ###Prepare Maven Authentication
 
@@ -117,7 +117,8 @@ Just follow the instructions there on how to append your key. The basic steps ar
 
 Checkout the release tools using SVN from here [https://svn.apache.org/repos/asf/tomee/sandbox/release-tools](https://svn.apache.org/repos/asf/tomee/sandbox/release-tools)
 
-Really read the README.mdtext and follow the instructions for building the 3rd party libraries.
+Really read the README.mdtext and follow the instructions for building the 3rd party libraries.  
+Basically SVN checkout and compile [Swizzle](https://svn.codehaus.org/swizzle/trunk) and [Tentacles](https://svn.apache.org/repos/asf/creadur/tentacles/trunk)
 
 Build the release tools, *mvn clean install -DskipTests -DfailIfNoTests=false*
 
