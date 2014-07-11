@@ -44,12 +44,12 @@ Run **ant -f rat.xml > report.txt** on the branch.
  
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
 
-	svn mkdir -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-	svn delete -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-	svn mkdir -m "Create test dir" https://repository.apache.org/content/repositories/testdir
-	svn delete -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
-	svn mkdir -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
-	svn delete -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+	svn mkdir --username [[apacheuser]] --password [[apachepw]] -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+	svn delete --username [[apacheuser]] --password [[apachepw]] -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
+	svn mkdir --username [[apacheuser]] --password [[apachepw]] -m "Create test dir" https://repository.apache.org/content/repositories/testdir
+	svn delete --username [[apacheuser]] --password [[apachepw]] -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
+	svn mkdir --username [[apacheuser]] --password [[apachepw]] -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+	svn delete --username [[apacheuser]] --password [[apachepw]] -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
 
 ###Prepare Maven Authentication
 
