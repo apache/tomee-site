@@ -211,10 +211,11 @@ Ensure the TCK passes with preview repositories by editing and ensuring paths ar
 	\tckbranch\pom.xml
 	\tckbranch\webprofile-plus.properties
 	\tckbranch\webprofile.properties
-	
+
 Publish the preview using **./run.sh roll binaries legal releasenotes preview** - You can run these tasks like so, or individually in order.
 It will be likely that this will have to be repeated several times before a successful vote.
-	
+
+Once the binaries are in place add the staging repository to the corresponding TCK project and fire off a build.
 To fire off a build on EC2 from the TCK directory speak to the last release manager for the **curl** command to use
 
 If the TCK fails then discuss, fix and re-roll.
