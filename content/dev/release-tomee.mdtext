@@ -44,12 +44,12 @@ Run **ant -f rat.xml > report.txt** on the branch.
  
 Pre-authenticate svn repositories to ensure your credentials are cached before using any tools.
 
-	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir
-	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://repository.apache.org/content/repositories/testdir
-	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://repository.apache.org/content/repositories/testdir
-	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
-	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir
+	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir1
+	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://svn.apache.org/repos/asf/tomee/tomee/branches/testdir1
+	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://repository.apache.org/content/repositories/testdir2
+	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://repository.apache.org/content/repositories/testdir2
+	svn mkdir --username [apacheuser] --password [apachepw] -m "Create test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir3
+	svn delete --username [apacheuser] --password [apachepw] -m "Delete test dir" https://dist.apache.org/repos/dist/dev/tomee/testdir3
 
 ###Prepare Maven Authentication
 
@@ -134,7 +134,9 @@ For some of the release steps you will need to provide documentation on the site
 
 Most of the content can be found under 'content' and subdirectories.
 
-When you commit changes the site should be built automatically by the buildbot, but you can force a build on IRC using **tomee-bot: force build tomee-site-staging**
+When you commit changes the site should be built automatically by the buildbot, but you can force a build on IRC using:
+
+    **tomee-bot: force build tomee-site-staging**
 
 The buildbot staging result can be seen here:
 
