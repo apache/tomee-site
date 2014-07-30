@@ -1,6 +1,6 @@
 #Releasing TomEE
 
-	This document is aimed at guiding a release manager through the general release process. You will need either a Linux, Mac, or failing that a Linux Virtual on Win. 
+	This document is aimed at guiding a release manager through the general release process. You will need either a Linux, Mac, or failing that a Linux Virtual (with at least a 50GB Drive) on Win. 
 
 ###Preparation of The Branch
 	
@@ -214,6 +214,17 @@ Ensure the TCK passes with preview repositories by editing and ensuring paths ar
 
 Publish the preview using **./run.sh roll binaries legal releasenotes preview** - You can run these tasks like so, or individually in order.
 It will be likely that this will have to be repeated several times before a successful vote.
+
+The *legal* step will create the legal report files in the /tmp/download/staging-[revision]/legal directory. These need to be added to the staging repo.
+ - Delete the [legal]/repo and [legal]/content directories, as these are no longer required
+    rm -R /tmp/download/staging-[revision]/legal/content
+    rm -R /tmp/download/staging-[revision]/legal/repo
+
+ - Perform a non-recursive checkout of the staging repo and add the legal:
+	svn co -N https://dist.apache.org/repos/dist/dev/tomee/staging-[revision] /tmp/download/staging
+	mv /tmp/download/staging-[revision]/legal /tmp/download/staging
+	cd /tmp/download/staging-[revision]
+	svn add legal
 
 Once the binaries are in place add the staging repository to the corresponding TCK project and fire off a build.
 To fire off a build on EC2 from the TCK directory speak to the last release manager for the **curl** command to use
