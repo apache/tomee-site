@@ -1,0 +1,85 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Apache CXF
+
+
+From: 'an unknown organization'
+  - WSDL4J (http://sf.net/projects/wsdl4j) wsdl4j:wsdl4j:jar:1.6.3
+    License: CPL  (http://www.opensource.org/licenses/cpl1.0.txt)
+
+From: 'Apache Software Foundation' (http://www.apache.org/)
+  - XML Commons Resolver Component (http://xml.apache.org/commons/components/resolver/) xml-resolver:xml-resolver:jar:1.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Codehaus' (http://www.codehaus.org/)
+  - Woodstox (http://woodstox.codehaus.org) org.codehaus.woodstox:woodstox-core-asl:jar:4.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'fasterxml.com' (http://fasterxml.com)
+  - Stax2 API (http://wiki.fasterxml.com/WoodstoxStax2) org.codehaus.woodstox:stax2-api:bundle:3.1.4
+    License: The BSD License  (http://www.opensource.org/licenses/bsd-license.php)
+
+From: 'Internet2' (http://www.internet2.edu/)
+  - OpenSAML-J (http://opensaml.org/) org.opensaml:opensaml:jar:2.6.1
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OpenWS (http://opensaml.org/) org.opensaml:openws:jar:1.5.1
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XMLTooling-J (http://opensaml.org/) org.opensaml:xmltooling:jar:1.4.1
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Joda.org' (http://www.joda.org)
+  - Joda time (http://joda-time.sourceforge.net) joda-time:joda-time:jar:2.2
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'ObjectWeb' (http://www.objectweb.org/)
+  - ASM (http://asm.objectweb.org/asm/asm) asm:asm:jar:3.3.1:compile
+    License: BSD  (http://asm.ow2.org/license.html)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - Simple Logging Facade for Java - API (http://www.slf4j.org/slf4j-api) org.slf4j:slf4j-api:jar:1.7.6:compile
+    License: MIT License  (http://www.slf4j.org/license.html)
+
+From: 'Sun Microsystems' (http://www.sun.com/)
+  - Sun JAXB Reference Implementation Runtime (https://jaxb.dev.java.net/jaxb-impl) com.sun.xml.bind:jaxb-impl:jar:2.1.13:compile
+    License: COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0  (http://www.sun.com/cddl/cddl.html)
+
+From: 'Terracotta, Inc.' (http://www.terracotta.org)
+  - Ehcache Core (http://ehcache.org) net.sf.ehcache:ehcache-core:jar:2.5.1
+    License: The Apache Software License, Version 2.0  (src/assemble/EHCACHE-CORE-LICENSE.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - JavaMail 1.4 (http://geronimo.apache.org/maven/specs/geronimo-javamail_1.4_spec/1.7.1) org.apache.geronimo.specs:geronimo-javamail_1.4_spec:bundle:1.7.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XML Security (http://santuario.apache.org/xmlsec) org.apache.santuario:xmlsec:jar:1.5.6:compile
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Logging (http://commons.apache.org/logging) commons-logging:commons-logging:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF API (http://cxf.apache.org) org.apache.cxf:cxf-api:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime SOAP Binding (http://cxf.apache.org) org.apache.cxf:cxf-rt-bindings-soap:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime XML Binding (http://cxf.apache.org) org.apache.cxf:cxf-rt-bindings-xml:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime Core (http://cxf.apache.org) org.apache.cxf:cxf-rt-core:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime JAXB DataBinding (http://cxf.apache.org) org.apache.cxf:cxf-rt-databinding-jaxb:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime JAX-WS Frontend (http://cxf.apache.org) org.apache.cxf:cxf-rt-frontend-jaxws:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache CXF Runtime Simple Frontend (http://cxf.apache.org) org.apache.cxf:cxf-rt-frontend-simple:jar:2.6.14
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache WSS4J (http://ws.apache.org/wss4j/) org.apache.ws.security:wss4j:bundle:1.6.15
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XmlSchema Core (http://ws.apache.org/commons/xmlschema20/xmlschema-core/) org.apache.ws.xmlschema:xmlschema-core:bundle:2.0.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Xalan Java Serializer (http://xml.apache.org/xalan-j/) xalan:serializer:jar:2.7.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

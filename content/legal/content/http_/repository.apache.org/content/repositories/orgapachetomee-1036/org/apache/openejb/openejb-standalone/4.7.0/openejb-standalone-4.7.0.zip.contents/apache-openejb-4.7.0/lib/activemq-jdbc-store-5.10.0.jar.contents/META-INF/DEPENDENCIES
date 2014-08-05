@@ -1,0 +1,41 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+ActiveMQ :: JDBC Store
+
+
+From: 'Apache Software Foundation' (http://db.apache.org/)
+  - Apache Derby Database Engine and Embedded JDBC Driver (http://db.apache.org/derby/derby/) org.apache.derby:derby:jar:10.10.1.1
+    License: Apache 2  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - J2EE Management 1.1 (http://geronimo.apache.org/specs/geronimo-j2ee-management_1.1_spec) org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JMS 1.1 (http://geronimo.apache.org/specs/geronimo-jms_1.1_spec) org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'FuseSource, Corp.' (http://fusesource.com/)
+  - hawtbuf (http://hawtbuf.fusesource.org/hawtbuf) org.fusesource.hawtbuf:hawtbuf:bundle:1.10
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.5
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Logging (http://commons.apache.org/proper/commons-logging/) commons-logging:commons-logging:jar:1.1.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - ActiveIO :: Core (http://activemq.apache.org/activeio-core/) org.apache.activemq:activeio-core:bundle:3.1.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - ActiveMQ :: Broker (http://activemq.apache.org/activemq-broker) org.apache.activemq:activemq-broker:jar:5.10.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - ActiveMQ :: Client (http://activemq.apache.org/activemq-client) org.apache.activemq:activemq-client:jar:5.10.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - ActiveMQ :: Openwire Legacy Support (http://activemq.apache.org/activemq-openwire-legacy) org.apache.activemq:activemq-openwire-legacy:jar:5.10.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

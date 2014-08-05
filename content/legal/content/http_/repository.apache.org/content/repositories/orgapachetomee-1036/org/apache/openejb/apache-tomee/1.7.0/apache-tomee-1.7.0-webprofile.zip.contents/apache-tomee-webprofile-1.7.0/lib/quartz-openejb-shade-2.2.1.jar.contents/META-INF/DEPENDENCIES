@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+OpenEJB :: Dependencies :: Quartz Shade
+
+
+From: 'Terracotta, Inc.' (http://www.terracotta.org)
+  - quartz (http://www.quartz-scheduler.org/quartz) org.quartz-scheduler:quartz:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - quartz (http://www.quartz-scheduler.org/quartz) org.quartz-scheduler:quartz:jar:2.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

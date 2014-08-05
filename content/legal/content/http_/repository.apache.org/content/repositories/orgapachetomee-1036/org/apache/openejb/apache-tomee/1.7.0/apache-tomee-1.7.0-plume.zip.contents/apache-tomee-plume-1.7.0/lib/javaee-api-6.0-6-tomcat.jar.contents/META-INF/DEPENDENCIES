@@ -1,0 +1,123 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+OpenEJB :: JavaEE Full API (zip and jar files)
+
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - J2EE Deployment 1.1 (http://geronimo.apache.org/specs/geronimo-j2ee-deployment_1.1_spec) org.apache.geronimo.specs:geronimo-j2ee-deployment_1.1_spec:jar:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE Deployment 1.1 (http://geronimo.apache.org/specs/geronimo-j2ee-deployment_1.1_spec) org.apache.geronimo.specs:geronimo-j2ee-deployment_1.1_spec:jar:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE Management 1.1 (http://geronimo.apache.org/specs/geronimo-j2ee-management_1.1_spec) org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE Management 1.1 (http://geronimo.apache.org/specs/geronimo-j2ee-management_1.1_spec) org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:jar:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JMS 1.1 (http://geronimo.apache.org/specs/geronimo-jms_1.1_spec) org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JMS 1.1 (http://geronimo.apache.org/specs/geronimo-jms_1.1_spec) org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JTA 1.1 (http://geronimo.apache.org/specs/geronimo-jta_1.1_spec) org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JTA 1.1 (http://geronimo.apache.org/specs/geronimo-jta_1.1_spec) org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - Activation 1.1 (http://geronimo.apache.org/maven/specs/geronimo-activation_1.1_spec/1.1) org.apache.geronimo.specs:geronimo-activation_1.1_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Activation 1.1 (http://geronimo.apache.org/maven/specs/geronimo-activation_1.1_spec/1.1) org.apache.geronimo.specs:geronimo-activation_1.1_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Annotation 1.1 (http://geronimo.apache.org/maven/specs/geronimo-annotation_1.1_spec/1.0.1) org.apache.geronimo.specs:geronimo-annotation_1.1_spec:bundle:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Annotation 1.1 (http://geronimo.apache.org/maven/specs/geronimo-annotation_1.1_spec/1.0.1) org.apache.geronimo.specs:geronimo-annotation_1.1_spec:bundle:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JSR-330 Spec API (http://geronimo.apache.org/maven/genesis/1.0) org.apache.geronimo.specs:geronimo-atinject_1.0_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JSR-330 Spec API (http://geronimo.apache.org/maven/genesis/1.0) org.apache.geronimo.specs:geronimo-atinject_1.0_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo EJB Spec 3.1 (http://geronimo.apache.org/maven/specs/geronimo-ejb_3.1_spec/1.0.2) org.apache.geronimo.specs:geronimo-ejb_3.1_spec:bundle:1.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo EJB Spec 3.1 (http://geronimo.apache.org/maven/specs/geronimo-ejb_3.1_spec/1.0.2) org.apache.geronimo.specs:geronimo-ejb_3.1_spec:bundle:1.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo Expression Language Spec 2.2 (http://geronimo.apache.org/maven/specs/geronimo-el_2.2_spec/1.0.2) org.apache.geronimo.specs:geronimo-el_2.2_spec:bundle:1.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo Expression Language Spec 2.2 (http://geronimo.apache.org/maven/specs/geronimo-el_2.2_spec/1.0.2) org.apache.geronimo.specs:geronimo-el_2.2_spec:bundle:1.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Interceptor 1.1 (http://geronimo.apache.org/maven/specs/geronimo-interceptor_1.1_spec/1.0) org.apache.geronimo.specs:geronimo-interceptor_1.1_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Interceptor 1.1 (http://geronimo.apache.org/maven/specs/geronimo-interceptor_1.1_spec/1.0) org.apache.geronimo.specs:geronimo-interceptor_1.1_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE Connector 1.6 (http://geronimo.apache.org/maven/specs/geronimo-j2ee-connector_1.6_spec/1.0) org.apache.geronimo.specs:geronimo-j2ee-connector_1.6_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE Connector 1.6 (http://geronimo.apache.org/maven/specs/geronimo-j2ee-connector_1.6_spec/1.0) org.apache.geronimo.specs:geronimo-j2ee-connector_1.6_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE JACC 1.4 (http://geronimo.apache.org/maven/specs/geronimo-jacc_1.4_spec/1.0) org.apache.geronimo.specs:geronimo-jacc_1.4_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - J2EE JACC 1.4 (http://geronimo.apache.org/maven/specs/geronimo-jacc_1.4_spec/1.0) org.apache.geronimo.specs:geronimo-jacc_1.4_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Java Authentication SPI for Containers (http://geronimo.apache.org/maven/specs/geronimo-jaspic_1.0_spec/1.1) org.apache.geronimo.specs:geronimo-jaspic_1.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Java Authentication SPI for Containers (http://geronimo.apache.org/maven/specs/geronimo-jaspic_1.0_spec/1.1) org.apache.geronimo.specs:geronimo-jaspic_1.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache JAXB 2.2 Spec (http://geronimo.apache.org/maven/specs/geronimo-jaxb_2.2_spec/1.0.1) org.apache.geronimo.specs:geronimo-jaxb_2.2_spec:bundle:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache JAXB 2.2 Spec (http://geronimo.apache.org/maven/specs/geronimo-jaxb_2.2_spec/1.0.1) org.apache.geronimo.specs:geronimo-jaxb_2.2_spec:bundle:1.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JAXR 1.0 (http://geronimo.apache.org/maven/specs/geronimo-jaxr_1.0_spec/2.1) org.apache.geronimo.specs:geronimo-jaxr_1.0_spec:bundle:2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JAXR 1.0 (http://geronimo.apache.org/maven/specs/geronimo-jaxr_1.0_spec/2.1) org.apache.geronimo.specs:geronimo-jaxr_1.0_spec:bundle:2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JAXRPC 1.1 (http://geronimo.apache.org/maven/specs/geronimo-jaxrpc_1.1_spec/2.1) org.apache.geronimo.specs:geronimo-jaxrpc_1.1_spec:bundle:2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JAXRPC 1.1 (http://geronimo.apache.org/maven/specs/geronimo-jaxrpc_1.1_spec/2.1) org.apache.geronimo.specs:geronimo-jaxrpc_1.1_spec:bundle:2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JAX-RS 1.1 API (http://geronimo.apache.org/maven/specs/geronimo-jaxrs_1.1_spec/1.0) org.apache.geronimo.specs:geronimo-jaxrs_1.1_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JAX-RS 1.1 API (http://geronimo.apache.org/maven/specs/geronimo-jaxrs_1.1_spec/1.0) org.apache.geronimo.specs:geronimo-jaxrs_1.1_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JAX-WS Spec 2.2 (http://geronimo.apache.org/maven/specs/geronimo-jaxws_2.2_spec/1.1) org.apache.geronimo.specs:geronimo-jaxws_2.2_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JAX-WS Spec 2.2 (http://geronimo.apache.org/maven/specs/geronimo-jaxws_2.2_spec/1.1) org.apache.geronimo.specs:geronimo-jaxws_2.2_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo Java Contexts and Dependency Injection (JSR-299) Spec API (http://geronimo.apache.org/maven/specs/geronimo-jcdi_1.0_spec/1.0) org.apache.geronimo.specs:geronimo-jcdi_1.0_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo Java Contexts and Dependency Injection (JSR-299) Spec API (http://geronimo.apache.org/maven/specs/geronimo-jcdi_1.0_spec/1.0) org.apache.geronimo.specs:geronimo-jcdi_1.0_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JSR-317 JPA 2.0 Spec API (http://geronimo.apache.org/maven/specs/geronimo-jpa_2.0_spec/1.1) org.apache.geronimo.specs:geronimo-jpa_2.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JSR-317 JPA 2.0 Spec API (http://geronimo.apache.org/maven/specs/geronimo-jpa_2.0_spec/1.1) org.apache.geronimo.specs:geronimo-jpa_2.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JSP 2.2 (http://geronimo.apache.org/maven/specs/geronimo-jsp_2.2_spec/1.0) org.apache.geronimo.specs:geronimo-jsp_2.2_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JSP 2.2 (http://geronimo.apache.org/maven/specs/geronimo-jsp_2.2_spec/1.0) org.apache.geronimo.specs:geronimo-jsp_2.2_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Geronimo OSGi-enable spec bundle locator (http://geronimo.apache.org/maven/specs/geronimo-osgi-locator/1.0/geronimo-osgi-locator) org.apache.geronimo.specs:geronimo-osgi-locator:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Geronimo OSGi-enable spec bundle locator (http://geronimo.apache.org/maven/specs/geronimo-osgi-locator/1.0/geronimo-osgi-locator) org.apache.geronimo.specs:geronimo-osgi-locator:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - SAAJ 1.3 (http://geronimo.apache.org/maven/specs/geronimo-saaj_1.3_spec/1.1) org.apache.geronimo.specs:geronimo-saaj_1.3_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - SAAJ 1.3 (http://geronimo.apache.org/maven/specs/geronimo-saaj_1.3_spec/1.1) org.apache.geronimo.specs:geronimo-saaj_1.3_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Servlet 3.0 (http://geronimo.apache.org/maven/specs/geronimo-servlet_3.0_spec/1.0) org.apache.geronimo.specs:geronimo-servlet_3.0_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Servlet 3.0 (http://geronimo.apache.org/maven/specs/geronimo-servlet_3.0_spec/1.0) org.apache.geronimo.specs:geronimo-servlet_3.0_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo STAX Spec 1.2 (http://geronimo.apache.org/maven/specs/geronimo-stax-api_1.2_spec/1.1) org.apache.geronimo.specs:geronimo-stax-api_1.2_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo STAX Spec 1.2 (http://geronimo.apache.org/maven/specs/geronimo-stax-api_1.2_spec/1.1) org.apache.geronimo.specs:geronimo-stax-api_1.2_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JSR-303 Bean Validation Spec API (http://geronimo.apache.org/maven/specs/geronimo-validation_1.0_spec/1.1) org.apache.geronimo.specs:geronimo-validation_1.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Geronimo JSR-303 Bean Validation Spec API (http://geronimo.apache.org/maven/specs/geronimo-validation_1.0_spec/1.1) org.apache.geronimo.specs:geronimo-validation_1.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Web Services Metadata 2.0 (http://geronimo.apache.org/maven/specs/geronimo-ws-metadata_2.0_spec/1.1.3) org.apache.geronimo.specs:geronimo-ws-metadata_2.0_spec:bundle:1.1.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Web Services Metadata 2.0 (http://geronimo.apache.org/maven/specs/geronimo-ws-metadata_2.0_spec/1.1.3) org.apache.geronimo.specs:geronimo-ws-metadata_2.0_spec:bundle:1.1.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

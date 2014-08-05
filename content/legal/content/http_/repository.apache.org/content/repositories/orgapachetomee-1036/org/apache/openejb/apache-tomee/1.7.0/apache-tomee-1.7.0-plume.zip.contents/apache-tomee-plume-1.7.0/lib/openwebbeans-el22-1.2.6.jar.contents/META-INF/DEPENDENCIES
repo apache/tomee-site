@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+EL 2.2 plugin
+
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - Apache Geronimo Expression Language Spec 2.2 (http://geronimo.apache.org/maven/specs/geronimo-el_2.2_spec/1.0.2) org.apache.geronimo.specs:geronimo-el_2.2_spec:bundle:1.0.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Interceptor 1.1 (http://geronimo.apache.org/maven/specs/geronimo-interceptor_1.1_spec/1.0) org.apache.geronimo.specs:geronimo-interceptor_1.1_spec:bundle:1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

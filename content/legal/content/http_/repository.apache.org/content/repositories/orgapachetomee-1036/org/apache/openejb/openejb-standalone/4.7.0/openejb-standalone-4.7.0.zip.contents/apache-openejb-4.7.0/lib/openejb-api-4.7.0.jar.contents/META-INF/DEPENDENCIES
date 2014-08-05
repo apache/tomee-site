@@ -1,0 +1,15 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+OpenEJB :: Container :: API
+
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - OpenEJB :: Container :: MBean Annotation API (http://tomee.apache.org/container/mbean-annotation-api) org.apache.openejb:mbean-annotation-api:jar:4.7.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

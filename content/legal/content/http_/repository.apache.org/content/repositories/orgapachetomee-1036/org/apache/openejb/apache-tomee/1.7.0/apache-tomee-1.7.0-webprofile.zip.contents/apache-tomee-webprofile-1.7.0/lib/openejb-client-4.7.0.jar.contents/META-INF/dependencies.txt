@@ -1,0 +1,2 @@
+geronimo-javamail_1.4_mail-1.8.3.jar (optional)
+javaee-api-6.0-6.jar

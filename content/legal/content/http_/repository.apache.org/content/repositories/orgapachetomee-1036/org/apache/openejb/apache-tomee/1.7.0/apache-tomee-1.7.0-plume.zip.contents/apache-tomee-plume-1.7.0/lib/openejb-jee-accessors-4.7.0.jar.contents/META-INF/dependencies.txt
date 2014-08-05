@@ -1,0 +1,8 @@
+openejb-jee-4.7.0.jar
+ jaxb-impl-2.2.7.jar
+  FastInfoset-1.2.12.jar
+  jaxb-core-2.2.7.jar
+   istack-commons-runtime-2.16.jar
+openejb-loader-4.7.0.jar
+sxc-jaxb-core-0.8.jar
+ sxc-runtime-0.8.jar

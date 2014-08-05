@@ -1,0 +1,35 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Apache Maven Wagon :: Providers :: HTTP Provider
+
+
+From: 'an unknown organization'
+  - Plexus Common Utilities (http://plexus.codehaus.org/plexus-utils) org.codehaus.plexus:plexus-utils:jar:3.0
+    License: Apache Public License 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'Jonathan Hedley' (http://jonathanhedley.com/)
+  - jsoup (http://jsoup.org/) org.jsoup:jsoup:jar:1.6.1
+    License: The MIT License  (http://jsoup.com/license)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Codec (http://commons.apache.org/codec/) commons-codec:commons-codec:jar:1.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons IO (http://commons.apache.org/io/) commons-io:commons-io:jar:2.0.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Logging (http://commons.apache.org/logging) commons-logging:commons-logging:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - HttpClient (http://hc.apache.org/httpcomponents-client) org.apache.httpcomponents:httpclient:jar:4.1.2
+    License: Apache License  (LICENSE.txt)
+  - HttpCore (http://hc.apache.org/httpcomponents-core-ga) org.apache.httpcomponents:httpcore:jar:4.1.2
+    License: Apache License  (LICENSE.txt)
+  - Apache Maven Wagon :: Providers :: HTTP Shared Library 4 (http://maven.apache.org/wagon//wagon-providers/wagon-http-shared4) org.apache.maven.wagon:wagon-http-shared4:jar:2.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Maven Wagon :: API (http://maven.apache.org/wagon//wagon-provider-api) org.apache.maven.wagon:wagon-provider-api:jar:2.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

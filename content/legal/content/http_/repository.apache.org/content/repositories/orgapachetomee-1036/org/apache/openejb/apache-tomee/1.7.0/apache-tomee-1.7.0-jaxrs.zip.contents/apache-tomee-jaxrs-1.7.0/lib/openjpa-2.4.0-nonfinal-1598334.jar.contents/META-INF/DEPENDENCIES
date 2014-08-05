@@ -1,0 +1,51 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+OpenJPA Aggregate Jar
+
+
+From: 'an unknown organization'
+  - JAXB RI (https://jaxb.dev.java.net/) com.sun.xml.bind:jaxb-impl:jar:2.2.1
+    License: CDDL 1.0  (https://glassfish.dev.java.net/public/CDDL+GPL.html)    License: GPL2 w/ CPE  (https://glassfish.dev.java.net/public/CDDL+GPL.html)
+  - JAXB API bundle for GlassFish V3 (https://jaxb.dev.java.net/) javax.xml.bind:jaxb-api:jar:2.2.1
+    License: CDDL 1.0  (https://glassfish.dev.java.net/public/CDDL+GPL.html)    License: GPL2 w/ CPE  (https://glassfish.dev.java.net/public/CDDL+GPL.html)
+  - Streaming API for XML  javax.xml.stream:stax-api:jar:1.0-2
+    License: GNU General Public Library  (http://www.gnu.org/licenses/gpl.txt)    License: COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0  (http://www.sun.com/cddl/cddl.html)
+  - Serp (http://serp.sourceforge.net) net.sourceforge.serp:serp:jar:1.14.1
+    License: BSD  (LICENSE.txt)
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - JMS 1.1 (http://geronimo.apache.org/specs/geronimo-jms_1.1_spec) org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - JTA 1.1 (http://geronimo.apache.org/specs/geronimo-jta_1.1_spec) org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OpenJPA JDBC (http://openjpa.apache.org/openjpa-jdbc) org.apache.openejb.patch:openjpa-jdbc:jar:2.4.0-nonfinal-1598334
+    License: Apache Software License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OpenJPA Kernel (http://openjpa.apache.org/openjpa-kernel) org.apache.openejb.patch:openjpa-kernel:jar:2.4.0-nonfinal-1598334
+    License: Apache Software License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OpenJPA Utilities Library (http://openjpa.apache.org/openjpa-lib) org.apache.openejb.patch:openjpa-lib:jar:2.4.0-nonfinal-1598334
+    License: Apache Software License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OpenJPA Persistence (http://openjpa.apache.org/openjpa-persistence) org.apache.openejb.patch:openjpa-persistence:jar:2.4.0-nonfinal-1598334
+    License: Apache Software License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - OpenJPA Persistence JDBC (http://openjpa.apache.org/openjpa-persistence-jdbc) org.apache.openejb.patch:openjpa-persistence-jdbc:jar:2.4.0-nonfinal-1598334
+    License: Apache Software License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - Apache Geronimo JSR-317 JPA 2.0 Spec API (http://geronimo.apache.org/maven/specs/geronimo-jpa_2.0_spec/1.1) org.apache.geronimo.specs:geronimo-jpa_2.0_spec:bundle:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache XBean :: ASM 5 shaded (repackaged) (http://geronimo.apache.org/maven/xbean/3.17/xbean-asm5-shaded) org.apache.xbean:xbean-asm5-shaded:bundle:3.17
+    License: $license.name  (http://asm.ow2.org/license.html)    License: $license.name  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons Collections (http://commons.apache.org/collections/) commons-collections:commons-collections:jar:3.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Lang (http://commons.apache.org/lang/) commons-lang:commons-lang:jar:2.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons Pool (http://commons.apache.org/pool/) commons-pool:commons-pool:jar:1.5.4
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

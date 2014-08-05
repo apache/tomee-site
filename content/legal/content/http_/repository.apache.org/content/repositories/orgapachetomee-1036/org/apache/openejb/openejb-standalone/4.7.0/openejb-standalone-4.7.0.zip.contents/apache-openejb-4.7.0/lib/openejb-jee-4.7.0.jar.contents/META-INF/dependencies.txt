@@ -1,0 +1,4 @@
+jaxb-impl-2.2.7.jar
+ FastInfoset-1.2.12.jar
+ jaxb-core-2.2.7.jar
+  istack-commons-runtime-2.16.jar

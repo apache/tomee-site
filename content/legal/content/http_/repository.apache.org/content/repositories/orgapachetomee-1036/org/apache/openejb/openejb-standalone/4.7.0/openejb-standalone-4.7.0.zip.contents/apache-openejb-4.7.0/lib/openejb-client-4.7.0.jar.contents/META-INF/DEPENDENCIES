@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+OpenEJB :: Server :: Client
+
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - Geronimo JavaMail 1.4 :: Mail (http://geronimo.apache.org/maven/javamail/geronimo-javamail_1.4_mail/1.8.3/geronimo-javamail_1.4_mail) org.apache.geronimo.javamail:geronimo-javamail_1.4_mail:bundle:1.8.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - OpenEJB :: JavaEE Full API (zip and jar files) (http://www.apache.org/javaee-api/) org.apache.openejb:javaee-api:jar:6.0-6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

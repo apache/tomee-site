@@ -1,0 +1,43 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+OpenEJB :: Container :: JPA Integration
+
+
+From: 'an unknown organization'
+  - AntLR Parser Generator (http://www.antlr.org/) antlr:antlr:jar:2.7.7
+    License: BSD License  (http://www.antlr.org/license.html)
+  - Javassist (http://www.javassist.org/) org.javassist:javassist:bundle:3.18.1-GA
+    License: MPL 1.1  (http://www.mozilla.org/MPL/MPL-1.1.html)    License: LGPL 2.1  (http://www.gnu.org/licenses/lgpl-2.1.html)    License: Apache License 2.0  (http://www.apache.org/licenses/)
+
+From: 'Eclipse.org - EclipseLink Project' (http://www.eclipse.org/eclipselink)
+  - SDO API (http://www.eclipse.org/eclipselink) org.eclipse.persistence:commonj.sdo:jar:2.1.1
+    License: Eclipse Public License v1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: Eclipse Distribution License v. 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - EclipseLink (non-OSGi) (http://www.eclipse.org/eclipselink) org.eclipse.persistence:eclipselink:jar:2.4.2
+    License: Eclipse Public License v1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: Eclipse Distribution License v. 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+  - Javax Persistence (http://www.eclipse.org/eclipselink) org.eclipse.persistence:javax.persistence:jar:2.0.5
+    License: Eclipse Public License v1.0  (http://www.eclipse.org/legal/epl-v10.html)    License: Eclipse Distribution License v. 1.0  (http://www.eclipse.org/org/documents/edl-v10.php)
+
+From: 'Hibernate.org' (http://hibernate.org)
+  - A Hibernate O/RM Module (http://hibernate.org) org.hibernate:hibernate-core:jar:4.2.12.Final
+    License: GNU Lesser General Public License  (http://www.gnu.org/licenses/lgpl-2.1.html)
+  - A Hibernate O/RM Module (http://hibernate.org) org.hibernate:hibernate-entitymanager:jar:4.2.12.Final
+    License: GNU Lesser General Public License  (http://www.gnu.org/licenses/lgpl-2.1.html)
+  - Hibernate Commons Annotations (http://hibernate.org) org.hibernate.common:hibernate-commons-annotations:jar:4.0.2.Final
+    License: GNU LESSER GENERAL PUBLIC LICENSE  (http://www.gnu.org/licenses/lgpl-2.1.html)
+  - JPA 2.0 API (http://hibernate.org) org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final
+    License: $license.name  (license.txt)
+
+From: 'JBoss by Red Hat' (http://www.jboss.org)
+  - Java Transaction API (http://www.jboss.org/jboss-transaction-api_1.1_spec) org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:jar:1.0.1.Final
+    License: Common Development and Distribution License  (http://repository.jboss.org/licenses/cddl.txt)    License: GNU General Public License, Version 2 with the Classpath Exception  (http://repository.jboss.org/licenses/gpl-2.0-ce.txt)
+
+From: 'MetaStuff Ltd.' (http://sourceforge.net/projects/dom4j)
+  - dom4j (http://dom4j.org) dom4j:dom4j:jar:1.6.1
+
+
+
+
+
