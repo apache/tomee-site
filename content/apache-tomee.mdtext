@@ -34,6 +34,11 @@ The TomEE Plus distribution adds the following:
 
 }
 {span10
+<div class="span5" style="float:right" width="350">
+<img src="resources/images/Geek-Choice-Awards-App-Server-100x100-black.png" alt="Geeks Choice Award" style="float:left">
+    <p style="font-size:13px;line-height:18px;">RebelLabs released an annual study with awards to recognize Geeky Excellence for 2014. Tomcat and TomEE were named as one of the 10 Geek Choice Awards winner. For a complete list of winners, check out the report <a target="_blank" href="http://zeroturnaround.com/rebellabs/10-kick-ass-technologies-modern-developers-love/">"10 Kick-Ass Technologies Modern Developers Love"</a>.</p>
+    <p><a class="btn primary"target="_blank" href="http://zeroturnaround.com/rebellabs/10-kick-ass-technologies-modern-developers-love/10/">Read the Report</a></p>
+</div>
 {hero-unit
 <iframe width="460" height="264" src="http://www.youtube.com/embed/eCrtoSTZ2RE" frameborder="0" allowfullscreen></iframe>
 }
