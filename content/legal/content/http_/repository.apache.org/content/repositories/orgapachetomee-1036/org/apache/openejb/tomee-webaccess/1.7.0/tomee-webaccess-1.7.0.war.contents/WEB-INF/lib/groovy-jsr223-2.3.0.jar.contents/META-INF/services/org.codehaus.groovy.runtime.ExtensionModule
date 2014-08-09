@@ -1,4 +1,0 @@
-moduleName=groovy-jsr223
-moduleVersion=2.3.0
-extensionClasses=org.codehaus.groovy.jsr223.ScriptExtensions
-staticExtensionClasses=org.codehaus.groovy.jsr223.ScriptStaticExtensions

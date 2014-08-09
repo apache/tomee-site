@@ -1,8 +1,0 @@
-core-3.2.0.658.jar (optional)
-jaxb-impl-2.1.2.jar (optional)
- jaxb-api-2.1.jar
-  activation-1.1.jar
-jaxb-xjc-2.1.2.jar (optional)
-sxc-core-0.8.jar (optional)
-sxc-runtime-0.8.jar
- stax-api-1.0.1.jar
