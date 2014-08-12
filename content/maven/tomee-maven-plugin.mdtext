@@ -21,48 +21,22 @@ Simply add the following to the <plugins>, and optionally the <pluginManagement>
         </plugin>
     </plugins>
 
-The available commands can be discovered by running:
-<table border="0" class="bodyTable">
-<tr class="a">
-<th>Goal</th>
-<th>Description</th></tr>
-<tr class="b">
-<td>[tomee:build](build-mojo.html)</td>
-<td>Create but not run a TomEE.</td></tr>
-<tr class="a">
-<td>[tomee:configtest](configtest-mojo.html)</td>
-<td>Run configtest Tomcat command.</td></tr>
-<tr class="b">
-<td>[tomee:debug](debug-mojo.html)</td>
-<td>As run but with debug activated.</td></tr>
-<tr class="a">
-<td>[tomee:deploy](deploy-mojo.html)</td>
-<td>Simply deploy an application in a running TomEE</td></tr>
-<tr class="b">
-<td>[tomee:exec](exec-mojo.html)</td>
-<td>No description.</td></tr>
-<tr class="a">
-<td>[tomee:help](help-mojo.html)</td>
-<td>Display help information on tomee-maven-plugin.
+###Available Commands
 
-Call `mvn tomee:help -Ddetail=true
--Dgoal=<goal-name>` to display parameter details.</td></tr>
-<tr class="b">
-<td>[tomee:list](list-mojo.html)</td>
-<td>Highly inspired from openejb command helper but with some different
-data. List deployed EJB in a running TomEE.</td></tr>
-<tr class="a">
-<td>[tomee:run](run-mojo.html)</td>
-<td>Start and Wait TomEE.</td></tr>
-<tr class="b">
-<td>[tomee:start](start-mojo.html)</td>
-<td>Start and forget TomEE.</td></tr>
-<tr class="a">
-<td>[tomee:stop](stop-mojo.html)</td>
-<td>Stop a TomEE started with start command.</td></tr>
-<tr class="b">
-<td>[tomee:undeploy](undeploy-mojo.html)</td>
-<td>Simply undeploy an application in a running TomEE</td></tr></table>
+| [tomee:build](build-mojo.html) 	| Create TomEE, but do not run it. 	|
+|------------------	|--------------------------------------------------------------------------------------------------------------------	|
+| [tomee:configtest](configtest-mojo.html) 	| Run the Apache Tomcat configtest command. 	|
+| [tomee:debug](debug-mojo.html) 	| Same as run but with debug activated on the default or specified port. 	|
+| [tomee:deploy](deploy-mojo.html) 	| Deploy an application in a running TomEE. 	|
+| [tomee:exec](exec-mojo.html) 	| Undocumented. 	|
+| [tomee:help](help-mojo.html) 	| Display help information on tomee-maven-plugin.                                                                                    	|
+|           	|                                                                                                                                    	|
+|           	| Call mvn tomee:help -Ddetail=true -Dgoal=<goal-name> to display parameter details.                                                 	|
+| [tomee:list](list-mojo.html) 	| Largely inspired by the OpenEJB command helper, but with some differences. List deployed EJB's in a running TomEE. 	|
+| [tomee:run](run-mojo.html) 	| Start and wait for TomEE. 	|
+| [tomee:start](start-mojo.html) 	| Start TomEE and continue. 	|
+| [tomee:stop](stop-mojo.html) 	| Stop a TomEE started with start command. 	|
+| [tomee:undeploy](undeploy-mojo.html) 	| Undeploy an application in a running TomEE. 	|
 
 
 Note that for the tomee:deploy and tomee:undeploy goals, the path can either be specified within the <configuration/> section of the `pom.xml` using the <path> parameter, or it can be passed via the user property tomee-plugin.archive. If a relative path is passed for the deploy path archive, this must be relative to the TomEE server.
