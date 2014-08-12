@@ -16,7 +16,7 @@ instrumentation and statistics have also been added generically to all pools and
 monitoring and management.
 
 Other major features include deploy-time enhancement for JPA Entities via Apache OpenJPA, support including JPA providers in webapps,
-ability to mock and inject mocks in unit tests and a powerful new [TomEE Maven Plugin](tomee-maven-plugin.html) which can
+ability to mock and inject mocks in unit tests and a powerful new [TomEE Maven Plugin](maven/index.html) which can
 provision servers, install libraries, deploy webapps and more.
 
 We’d like to thank everyone who gave feedback and contibuted to improve Apache TomEE on a daily basis!

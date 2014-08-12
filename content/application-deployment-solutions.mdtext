@@ -35,7 +35,7 @@ The Deployer is the base of all other solutions
 
 ### Maven plugin
 
-[org.apache.openejb:tomee-maven-plugin](maven/tomee-maven-plugin.html) can be used to deploy/undeploy your application. Once this plugin is added to your pom you have access to the following configuration:
+[org.apache.openejb:tomee-maven-plugin](maven/index.html) can be used to deploy/undeploy your application. Once this plugin is added to your pom you have access to the following configuration:
 
 * tomeeHttpPort
 * tomeeHost

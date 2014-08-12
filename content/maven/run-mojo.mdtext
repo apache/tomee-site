@@ -3,11 +3,11 @@
       
 <p><b>Full name</b>:</p>
       
-<p>org.apache.openejb.maven:tomee-maven-plugin:1.7.0-SNAPSHOT:run</p>
+<p>org.apache.openejb.maven:tomee-maven-plugin:[Current Version]:run</p>
       
 <p><b>Description</b>:</p>
       
-<div>Start and Wait TomEE.</div>
+<div>Start and wait for TomEE.</div>
       
 <p><b>Attributes</b>:</p>
       
