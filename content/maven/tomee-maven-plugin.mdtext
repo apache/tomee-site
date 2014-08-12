@@ -21,7 +21,47 @@ Simply add the following to the <plugins>, and optionally the <pluginManagement>
         </plugin>
     </plugins>
 
-###Available Commands
+###Plugin Goals
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Goal</th>
+<th>Description</th></tr>
+<tr class="b">
+<td><a href="build-mojo.html">tomee:build</a></td>
+<td>Create but not run a TomEE.</td></tr>
+<tr class="a">
+<td><a href="configtest-mojo.html">tomee:configtest</a></td>
+<td>Run configtest Tomcat command.</td></tr>
+<tr class="b">
+<td><a href="debug-mojo.html">tomee:debug</a></td>
+<td>As run but with debug activated.</td></tr>
+<tr class="a">
+<td><a href="deploy-mojo.html">tomee:deploy</a></td>
+<td>Simply deploy an application in a running TomEE</td></tr>
+<tr class="b">
+<td><a href="exec-mojo.html">tomee:exec</a></td>
+<td>No description.</td></tr>
+<tr class="a">
+<td><a href="help-mojo.html">tomee:help</a></td>
+<td>Display help information on tomee-maven-plugin.<br />
+Call <code>mvn tomee:help -Ddetail=true
+-Dgoal=&lt;goal-name&gt;</code> to display parameter details.</td></tr>
+<tr class="b">
+<td><a href="list-mojo.html">tomee:list</a></td>
+<td>Highly inspired from openejb command helper but with some different
+data. List deployed EJB in a running TomEE.</td></tr>
+<tr class="a">
+<td><a href="run-mojo.html">tomee:run</a></td>
+<td>Start and Wait TomEE.</td></tr>
+<tr class="b">
+<td><a href="start-mojo.html">tomee:start</a></td>
+<td>Start and forget TomEE.</td></tr>
+<tr class="a">
+<td><a href="stop-mojo.html">tomee:stop</a></td>
+<td>Stop a TomEE started with start command.</td></tr>
+<tr class="b">
+<td><a href="undeploy-mojo.html">tomee:undeploy</a></td>
+<td>Simply undeploy an application in a running TomEE</td></tr></table>
 
 | [tomee:build](build-mojo.html) 	| Create TomEE, but do not run it. 	|
 |------------------	|--------------------------------------------------------------------------------------------------------------------	|
