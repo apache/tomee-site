@@ -1,7 +1,7 @@
 Title: Downloads
 
 ## Released
-<p>In order to guard against corrupted downloads/installations, it is highly recommended to <a href="http://www.apache.org/dev/release-signing#verifying-signature">verify the signature</a> of the release bundles against the public <a href="http://tomee.staging.apache.org/legal/archives.html">KEYS</a> used by the Apache TomEE developers.</p>
+<p>In order to guard against corrupted downloads/installations, it is highly recommended to <a href="http://www.apache.org/dev/release-signing#verifying-signature">verify the signature</a> of the release bundles against the public <a href="http://www.apache.org/dist/openejb/KEYS">KEYS</a> used by the Apache TomEE developers.</p>
 <table class="table table-striped">
 <tr><th>Version</th><th>Target</th><th>Date</th></tr>
 <tr> <td> <a href="tomee-1.7.0.html">1.7.0</a> </td>  <td> Java EE 6 </td> <td> 2014-08 </td> </tr>
