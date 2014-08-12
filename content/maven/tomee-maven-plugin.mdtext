@@ -78,6 +78,21 @@ data. List deployed EJB in a running TomEE.</td></tr>
 | [tomee:stop](stop-mojo.html) 	| Stop a TomEE started with start command. 	|
 | [tomee:undeploy](undeploy-mojo.html) 	| Undeploy an application in a running TomEE. 	|
 
+| [tomee:build](build-mojo.html) | Create TomEE, but do not run it.                                                                                   |
+|--------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| tomee:configtest               | Run the Apache Tomcat configtest command.                                                                          |
+| tomee:debug                    | Same as run but with debug activated on the default or specified port.                                             |
+| tomee:deploy                   | Deploy an application in a running TomEE.                                                                          |
+| tomee:exec                     | Undocumented.                                                                                                      |
+| tomee:help                     | Display help information on tomee-maven-plugin.                                                                    |
+|                                |                                                                                                                    |
+|                                | Call mvn tomee:help -Ddetail=true -Dgoal=<goal-name> to display parameter details.                                 |
+| tomee:list                     | Largely inspired by the OpenEJB command helper, but with some differences. List deployed EJB's in a running TomEE. |
+| tomee:run                      | Start and wait for TomEE.                                                                                          |
+| tomee:start                    | Start TomEE and continue.                                                                                          |
+| tomee:stop                     | Stop a TomEE started with start command.                                                                           |
+| tomee:undeploy                 | Undeploy an application in a running TomEE.                                                                        |
+
 
 Note that for the tomee:deploy and tomee:undeploy goals, the path can either be specified within the <configuration/> section of the `pom.xml` using the <path> parameter, or it can be passed via the user property tomee-plugin.archive. If a relative path is passed for the deploy path archive, this must be relative to the TomEE server.
 
