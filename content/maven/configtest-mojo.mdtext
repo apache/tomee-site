@@ -3,7 +3,7 @@
       
 <p><b>Full name</b>:</p>
       
-<p>org.apache.openejb.maven:tomee-maven-plugin:1.7.0-SNAPSHOT:configtest</p>
+<p>org.apache.openejb.maven:tomee-maven-plugin[:Current Version]:configtest</p>
       
 <p><b>Description</b>:</p>
       

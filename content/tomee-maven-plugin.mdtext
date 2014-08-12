@@ -13,9 +13,9 @@ Simply add the following to the <plugins>, and optionally the <pluginManagement>
         <plugin>
           <groupId>org.apache.openejb.maven</groupId>
           <artifactId>tomee-maven-plugin</artifactId>
-          <version>1.7.0</version>
+          <version>[Current TomEE Version]</version>
           <configuration>
-            <tomeeVersion>1.7.0</tomeeVersion>
+            <tomeeVersion>[Optional Runtime TomEE Version]</tomeeVersion>
             <tomeeClassifier>plus</tomeeClassifier>
           </configuration>
         </plugin>
