@@ -1,0 +1,196 @@
+## tomee:undeploy<a name="tomee:undeploy"></a>
+
+**Full name**:
+
+org.apache.openejb.maven:tomee-maven-plugin:[Current Version]:undeploy
+
+**Description**:
+
+<div>Simply undeploy an application in a running TomEE</div>
+
+**Attributes**:
+
+*   Requires a Maven project to be executed.
+*   Requires dependency resolution of artifacts in scope: <tt>runtime</tt>.
+*   Requires dependency collection of artifacts in scope: <tt>runtime</tt>.
+
+<div class="section">
+
+### Required Parameters<a name="Required_Parameters"></a>
+
+<table class="bodyTable" border="0">
+
+<tr class="a">
+
+<th>Name</th>
+
+<th>Type</th>
+
+<th>Since</th>
+
+<th>Description</th>
+          </tr>
+
+<tr class="b">
+
+<td>**[path](#path)**</td>
+
+<td><tt>String</tt></td>
+
+<td><tt>-</tt></td>
+
+<td>(no description)
+**User property is**: <tt>tomee-plugin.archive</tt>.</td>
+          </tr>
+        </table>
+      </div>
+
+<div class="section">
+
+### Optional Parameters<a name="Optional_Parameters"></a>
+
+<table class="bodyTable" border="0">
+
+<tr class="a">
+
+<th>Name</th>
+
+<th>Type</th>
+
+<th>Since</th>
+
+<th>Description</th>
+          </tr>
+
+<tr class="b">
+
+<td>**[password](#password)**</td>
+
+<td><tt>String</tt></td>
+
+<td><tt>-</tt></td>
+
+<td>(no description)
+**User property is**: <tt>tomee-plugin.pwd</tt>.</td>
+          </tr>
+
+<tr class="a">
+
+<td>**[realm](#realm)**</td>
+
+<td><tt>String</tt></td>
+
+<td><tt>-</tt></td>
+
+<td>(no description)
+**User property is**: <tt>tomee-plugin.realm</tt>.</td>
+          </tr>
+
+<tr class="b">
+
+<td>**[tomeeHost](#tomeeHost)**</td>
+
+<td><tt>String</tt></td>
+
+<td><tt>-</tt></td>
+
+<td>(no description)
+**Default value is**: <tt>localhost</tt>.
+**User property is**: <tt>tomee-plugin.host</tt>.</td>
+          </tr>
+
+<tr class="a">
+
+<td>**[tomeeHttpPort](#tomeeHttpPort)**</td>
+
+<td><tt>int</tt></td>
+
+<td><tt>-</tt></td>
+
+<td>(no description)
+**Default value is**: <tt>8080</tt>.
+**User property is**: <tt>tomee-plugin.http</tt>.</td>
+          </tr>
+
+<tr class="b">
+
+<td>**[user](#user)**</td>
+
+<td><tt>String</tt></td>
+
+<td><tt>-</tt></td>
+
+<td>(no description)
+**User property is**: <tt>tomee-plugin.user</tt>.</td>
+          </tr>
+        </table>
+      </div>
+
+<div class="section">
+
+### Parameter Details<a name="Parameter_Details"></a>
+
+**<a name="password">password</a>:**
+
+<div>(no description)</div>
+
+*   **Type**: <tt>java.lang.String</tt>
+*   **Required**: <tt>No</tt>
+*   **User Property**: <tt>tomee-plugin.pwd</tt>
+
+* * *
+
+**<a name="path">path</a>:**
+
+<div>(no description)</div>
+
+*   **Type**: <tt>java.lang.String</tt>
+*   **Required**: <tt>Yes</tt>
+*   **User Property**: <tt>tomee-plugin.archive</tt>
+
+* * *
+
+**<a name="realm">realm</a>:**
+
+<div>(no description)</div>
+
+*   **Type**: <tt>java.lang.String</tt>
+*   **Required**: <tt>No</tt>
+*   **User Property**: <tt>tomee-plugin.realm</tt>
+
+* * *
+
+**<a name="tomeeHost">tomeeHost</a>:**
+
+<div>(no description)</div>
+
+*   **Type**: <tt>java.lang.String</tt>
+*   **Required**: <tt>No</tt>
+*   **User Property**: <tt>tomee-plugin.host</tt>
+*   **Default**: <tt>localhost</tt>
+
+* * *
+
+**<a name="tomeeHttpPort">tomeeHttpPort</a>:**
+
+<div>(no description)</div>
+
+*   **Type**: <tt>int</tt>
+*   **Required**: <tt>No</tt>
+*   **User Property**: <tt>tomee-plugin.http</tt>
+*   **Default**: <tt>8080</tt>
+
+* * *
+
+**<a name="user">user</a>:**
+
+<div>(no description)</div>
+
+*   **Type**: <tt>java.lang.String</tt>
+*   **Required**: <tt>No</tt>
+*   **User Property**: <tt>tomee-plugin.user</tt>
+      </div>
+    </div>
+
+      </div>
+    </div>

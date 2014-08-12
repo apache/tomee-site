@@ -63,7 +63,7 @@
 <url><loc>http://tomee.apache.org/arquillian-getting-started.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
 <url><loc>http://tomee.apache.org/arquillian-available-adapters.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
 <url><loc>http://tomee.apache.org/tomee-mp-getting-started.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
-<url><loc>http://tomee.apache.org/tomee-maven-plugin.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
+<url><loc>http://tomee.apache.org/maven/tomee-maven-plugin.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
 <url><loc>http://tomee.apache.org/examples-trunk/simple-singleton/README.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
 <url><loc>http://tomee.apache.org/examples-trunk/simple-stateless/README.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>
 <url><loc>http://tomee.apache.org/examples-trunk/simple-stateless-with-descriptor/README.html</loc><lastmod>2014-03-11T05:46:16+00:00</lastmod><changefreq>weekly</changefreq><priority>0.69</priority></url>

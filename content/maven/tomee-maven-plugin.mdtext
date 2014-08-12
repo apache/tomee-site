@@ -27,41 +27,41 @@ The available commands can be discovered by running:
 <th>Goal</th>
 <th>Description</th></tr>
 <tr class="b">
-<td>[tomee:build](maven/build-mojo.html)</td>
+<td>[tomee:build](build-mojo.html)</td>
 <td>Create but not run a TomEE.</td></tr>
 <tr class="a">
-<td>[tomee:configtest](maven/configtest-mojo.html)</td>
+<td>[tomee:configtest](configtest-mojo.html)</td>
 <td>Run configtest Tomcat command.</td></tr>
 <tr class="b">
-<td>[tomee:debug](maven/debug-mojo.html)</td>
+<td>[tomee:debug](debug-mojo.html)</td>
 <td>As run but with debug activated.</td></tr>
 <tr class="a">
-<td>[tomee:deploy](maven/deploy-mojo.html)</td>
+<td>[tomee:deploy](deploy-mojo.html)</td>
 <td>Simply deploy an application in a running TomEE</td></tr>
 <tr class="b">
-<td>[tomee:exec](maven/exec-mojo.html)</td>
+<td>[tomee:exec](exec-mojo.html)</td>
 <td>No description.</td></tr>
 <tr class="a">
-<td>[tomee:help](maven/help-mojo.html)</td>
+<td>[tomee:help](help-mojo.html)</td>
 <td>Display help information on tomee-maven-plugin.
 
 Call `mvn tomee:help -Ddetail=true
 -Dgoal=<goal-name>` to display parameter details.</td></tr>
 <tr class="b">
-<td>[tomee:list](maven/list-mojo.html)</td>
+<td>[tomee:list](list-mojo.html)</td>
 <td>Highly inspired from openejb command helper but with some different
 data. List deployed EJB in a running TomEE.</td></tr>
 <tr class="a">
-<td>[tomee:run](maven/run-mojo.html)</td>
+<td>[tomee:run](run-mojo.html)</td>
 <td>Start and Wait TomEE.</td></tr>
 <tr class="b">
-<td>[tomee:start](maven/start-mojo.html)</td>
+<td>[tomee:start](start-mojo.html)</td>
 <td>Start and forget TomEE.</td></tr>
 <tr class="a">
-<td>[tomee:stop](maven/stop-mojo.html)</td>
+<td>[tomee:stop](stop-mojo.html)</td>
 <td>Stop a TomEE started with start command.</td></tr>
 <tr class="b">
-<td>[tomee:undeploy](maven/undeploy-mojo.html)</td>
+<td>[tomee:undeploy](undeploy-mojo.html)</td>
 <td>Simply undeploy an application in a running TomEE</td></tr></table>
 
 
