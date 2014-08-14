@@ -10,7 +10,8 @@ If you have an application that uses jersey-client in any way then it may fail w
 
 This is due to the fact that the jersey-core.jar contains some classes that should not be deployed as part of a javaEE application. For example, it contains javax.ws.rs.Path but does not contain javax.ws.rs.core.Configurable, so the jar is usually ignored by TomEE. 
 
-You could switch to using the [Apache CXF Client](http://cxf.apache.org/), but if you really want to keep Jersey then you can use set the following property in your [TomEE]\conf\system.properties
+You could switch to using the [Apache CXF Client](http://cxf.apache.org/), which is what we would recommend.
+If you really want to keep Jersey then you can use set the following property in your *[TomEE]\conf\system.properties*
 
     openejb.api.javax.ws.rs.Path.validation=false
 
