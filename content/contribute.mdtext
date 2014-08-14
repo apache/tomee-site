@@ -21,10 +21,9 @@ The more people we reach the more the project grows.
 Doing these two small things as often as possible are simple and powerful ways to help.  Do your part and watch the project grow grow grow!
 
 ###Edit This Site
-Top right, next to the Twitter symbol, there is an edit symbol <a data-toggle="modal" href="#edit" class="edit-page" title="Contribute to this Page">contribute</a>.  
-Most of the pages on this site can be edited by you. If you find a spelling mistake, or just want to improve the documentation then please do!
+Top right, next to the Twitter symbol, there is an edit symbol <a data-toggle="modal" href="#edit" class="edit-page" title="Contribute to this Page">contribute</a>. Most of the pages on this site can be edited by you. If you find a spelling mistake, or just want to improve the documentation then please do!
 
-If you want to edit the [Examples Documentation](examples-trunk/index.html) then check-out the [Source Code](dev/source-code.html) and edit or create the README.md in the example directory.
+If you want to edit the [Examples Documentation](examples-trunk/index.html) then check-out the [Source Code](dev/source-code.html) and edit or create the README.md in the example directory you want to improve.
 
 ###Committers
 
