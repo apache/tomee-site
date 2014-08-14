@@ -93,5 +93,6 @@ You can also find us on IRC freenode.org #openejb
 ###Tips and Tricks
 [Global Concurrency Management](tip-concurrency.html)  
 [WebLogic Lookup](tip-weblogic.html)  
+[Jersey Client](tip-jersey-client.html)  
 }
 }
