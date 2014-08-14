@@ -6,7 +6,8 @@ Contributing to the project is a great way to support the community.  Some great
 - [Contribution Tips](dev/contribution-tips.html)
 - [Developer Documentation](dev/index.html)
 
-Contributing doesn't always mean code.  If you love the project and want to see it grow, follow it on Facebook and Twitter.
+###Contributing doesn't always mean code.
+If you love the project and want to see it grow, follow it on Facebook and Twitter.
 
 - [http://twitter.com/ApacheTomEE](http://twitter.com/ApacheTomEE)
 - [http://facebook.com/ApacheTomEE](http://facebook.com/ApacheTomEE)
@@ -19,7 +20,13 @@ The more people we reach the more the project grows.
 
 Doing these two small things as often as possible are simple and powerful ways to help.  Do your part and watch the project grow grow grow!
 
-## Committers
+###Edit This Site
+Top right, next to the Twitter symbol, there is an edit symbol <a data-toggle="modal" href="#edit" class="edit-page" title="Contribute to this Page">contribute</a>.  
+Most of the pages on this site can be edited by you. If you find a spelling mistake, or just want to improve the documentation then please do!
+
+If you want to edit the [Examples Documentation](examples-trunk/index.html) then check-out the [Source Code](dev/source-code.html) and edit or create the README.md in the example directory.
+
+###Committers
 
 <TABLE><TBODY>
 <TR>
