@@ -247,8 +247,31 @@ Copy the binaries to the release location (User rights require a PMC to do this)
 
 	From: https://dist.apache.org/repos/dist/dev/tomee/staging-[stagingId]/tomee-[version]
 	To: https://dist.apache.org/repos/dist/release/tomee/tomee-[version] 
-	
-Commit and publish changes to the site, see [Site Staging](release-tomee.html#staging)	
+    
+
+Wait for the binaries to replicate to mirrors. Here is a neat script from David to check the status:
+
+    #!/bin/bash
+
+    RELEASE=${1?Specify a release, such as './mirror_check.sh tomee-1.7.0'}
+
+    function list_mirrors {
+        DYN=http://www.apache.org/dyn/closer.cgi/tomee/$RELEASE/
+        wget -q -O - $DYN | tr '">< ' '\n' | grep "^http.*$RELEASE/" | sort | uniq
+    }
+
+    function status_code {
+        wget -v "$1" 2>&1| grep 'awaiting response' | tr ' ' '\n' | grep "[0-9]"
+    }
+
+    list_mirrors | while read n; do
+        echo "$(status_code $n) $n"
+    done | sort | grep 'http'
+
+Commit and publish changes to the site, see [Site Staging](release-tomee.html#staging)
+
+    https://cms.apache.org/tomee/publish
+
 
 ###Blog
 
