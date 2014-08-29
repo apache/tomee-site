@@ -26,7 +26,7 @@ For example, you have **[TomEE]/lib/tomee-common-1.6.0.2.jar** or **[TomEE]/lib/
 
 This should resolve the detection issue and will not break your installation - Be sure to document the change for yourself as a reminder.
 
-
+###Quickstart
 Check out this video on [How to Consume REST in a Java Client ](https://www.youtube.com/watch?v=HISV7eagogI)
 
 You can download Netbeans 8 here: [https://netbeans.org/community/releases/80/](https://netbeans.org/community/releases/80/)
