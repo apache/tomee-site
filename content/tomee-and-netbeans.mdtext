@@ -22,7 +22,7 @@ There is some great information over at [Geertjan's Blog](https://blogs.oracle.c
 
 Netbeans 8 has a bug in which it fails to find the **tomee-common-[version].jar** in the **[TomEE]/lib** directory. The solution is to simply rename the jar file to an older version.
 
-For example, you have **[TomEE]/lib/tomee-common-1.6.0.2.jar** or **[TomEE]/lib/tomee-common-1.7.0.jar**. Rename these files to **[TomEE]/lib/tomee-common-1.6.0.jar**
+For example, you have **[TomEE]/lib/tomee-common-1.6.0.2.jar** or **[TomEE]/lib/tomee-common-1.7.1.jar**. Rename these files to **[TomEE]/lib/tomee-common-1.6.0.jar**
 
 This should resolve the detection issue and will not break your installation - Be sure to document the change for yourself as a reminder.
 
