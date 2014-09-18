@@ -24,7 +24,8 @@
 
     <script type="text/javascript">
     
-        var t = encodeURIComponent("{{ headers.title }}".replace(/^\s+|\s+$/g,""));
+        //var t = encodeURIComponent("{{ headers.title }}".replace(/^\s+|\s+$/g,""));
+        var t = encodeURIComponent(document.title.replace(/^\s+|\s+$/g,""));
         var u = encodeURIComponent(""+document.URL);
     
       function fbshare () {
