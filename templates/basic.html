@@ -23,26 +23,30 @@
     <link href="{{base}}resources/css/main.css" rel="stylesheet">
 
     <script type="text/javascript">
+    
+        var t = encodeURIComponent("{{ headers.title }}".replace(/^\s+|\s+$/g,""));
+        var u = encodeURIComponent(""+document.URL);
+    
       function fbshare () {
           window.open(
-                  "http://www.facebook.com/sharer/sharer.php?u="+document.URL,
+                  "http://www.facebook.com/sharer/sharer.php?u="+u,
                   'Share on Facebook',
                   'width=640,height=426');
       };
       function gpshare () {
           window.open(
-                  "https://plus.google.com/share?url="+document.URL,
+                  "https://plus.google.com/share?url="+u,
                   'Share on Google+',
                   'width=584,height=385');
       };
       function twshare () {
           window.open(
-                  "https://twitter.com/intent/tweet?url="+document.URL+"&text={{ headers.title }}",
+                  "https://twitter.com/intent/tweet?url="+u+"&text="+t,
                   'Share on Twitter',
                   'width=800,height=526');
       };
       function pinshare () {
-          window.open("//www.pinterest.com/pin/create/button/?url="+document.URL+"&media=http%3A%2F%2Ftomee.apache.org%2Fresources%2Fimages%2Ffeather-logo.png&description={{ headers.title }}",
+          window.open("//www.pinterest.com/pin/create/button/?url="+u+"&media=http%3A%2F%2Ftomee.apache.org%2Fresources%2Fimages%2Ffeather-logo.png&description="+t,
                   'Share on Pinterest',
                   'width=800,height=526');
       };
