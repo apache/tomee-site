@@ -104,7 +104,7 @@ Which should create output like the following.
     -------------------------------------------------------
     Running org.superbiz.injection.MoviesTest
     Apache OpenEJB 3.0    build: 20080408-04:13
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     INFO - openejb.home =
 /Users/dblevins/work/openejb-3.0/examples/injection-of-datasource
     INFO - openejb.base =

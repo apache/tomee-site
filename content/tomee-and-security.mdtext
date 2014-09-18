@@ -18,7 +18,7 @@ Notice:    Licensed to the Apache Software Foundation (ASF) under one
 
 Rather than providing its own security implementation, TomEE makes full use of the security features that are part of Tomcat. Any Catalina realm is supported or you can provide your own security module using the login.config file. 
 
-For example, to add some simple security to the [moviefun application](http://openejb.apache.org/examples-trunk/webapps/moviefun/README.html) , all we would need to do is: 
+For example, to add some simple security to the [moviefun application](http://tomee.apache.org/examples-trunk/webapps/moviefun/README.html) , all we would need to do is: 
 
 1.    Add some users to the tomcat-users.xml file     
 2.    Add the necessary @DefineRoles and @RolesAllowed annotations on MoviesImpl     

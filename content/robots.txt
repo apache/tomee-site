@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-SITEMAP: http://openejb.apache.org/sitemap.xml
+SITEMAP: http://tomee.apache.org/sitemap.xml

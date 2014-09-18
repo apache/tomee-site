@@ -184,7 +184,7 @@ console:
 
     karan@poweredge:~/install/openejb-3.0$ bin/openejb start
     Apache OpenEJB 3.0    build: 20070926-12:34
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     OpenEJB ready.
     [OPENEJB:init]
  OpenEJB Remote Server

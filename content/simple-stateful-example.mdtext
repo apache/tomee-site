@@ -168,7 +168,7 @@ Which should create output like the following.
     -------------------------------------------------------
     Running org.superbiz.counter.CounterImplTest
     Apache OpenEJB 3.0    build: 20080408-04:13
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     INFO - openejb.home =
 /Users/dblevins/work/openejb-3.0/examples/simple-stateful
     INFO - openejb.base =

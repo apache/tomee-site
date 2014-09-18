@@ -173,7 +173,7 @@ $ mvn clean test
     -------------------------------------------------------
     Running org.superbiz.injection.PurchaseOrderBeanTest
     Apache OpenEJB 3.0.0-SNAPSHOT	 build: 20071218-01:41
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     INFO - openejb.home = c:\oss\openejb3\examples\injection-of-env-entry
     INFO - openejb.base = c:\oss\openejb3\examples\injection-of-env-entry
     WARN - Cannot find the configuration file [conf/openejb.xml]

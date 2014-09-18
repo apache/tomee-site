@@ -51,7 +51,7 @@ Title: System Properties Listing
 for a particular level. Color are BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, DEFAULT.  </td></tr>
 </table>
 
-Note: all resources can be configured by properties, see http://openejb.apache.org/embedded-configuration.html and http://openejb.apache.org/properties-tool.html
+Note: all resources can be configured by properties, see http://tomee.apache.org/embedded-configuration.html and http://tomee.apache.org/properties-tool.html
 
 
 # OpenEJB client

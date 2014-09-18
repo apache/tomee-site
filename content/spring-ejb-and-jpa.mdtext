@@ -118,7 +118,7 @@ Which should create output like the following.
 (org.springframework.context.support.ClassPathXmlApplicationContext).
     log4j:WARN Please initialize the log4j system properly.
     Apache OpenEJB 3.1    build: 20081009-03:31
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     INFO - openejb.home =
 /Users/dblevins/work/openejb3/examples/spring-integration
     INFO - openejb.base =

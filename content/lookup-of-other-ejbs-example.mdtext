@@ -111,7 +111,7 @@ Which should create output like the following.
     -------------------------------------------------------
     Running org.superbiz.ejblookup.EjbDependencyTest
     Apache OpenEJB 3.1.5-SNAPSHOT	 build: 20101129-09:51
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     INFO - openejb.home =
 /Users/dblevins/work/openejb-3.1.x/examples/lookup-of-ejbs
     INFO - openejb.base =

@@ -45,7 +45,7 @@ You will get the following message on the console:
 
     D:\openejb-3.0.0-SNAPSHOT>bin\openejb start
     Apache OpenEJB 3.0.0-SNAPSHOT	 build: 20070830-07:53
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     OpenEJB ready.
     [OPENEJB:init]
      OpenEJB Remote Server

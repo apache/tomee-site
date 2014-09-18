@@ -2,13 +2,13 @@ Title: Webadmin
 The Webadmin is a new addition to OpenEJB 1.0 and very innovative in that
 it lets you plug-in your own admin beans.  Here are some screenshots:
 
-- [Main](http://openejb.apache.org/images/webadmin-main.png)
-- [EJB Details](http://openejb.apache.org/images/webadmin-ejbdetails.png)
-- [List Logs](http://openejb.apache.org/images/webadmin-listlogs.png)
-- [System Properties](http://openejb.apache.org/images/webadmin-properties.png)
-- [JNDI Viewer](http://openejb.apache.org/images/webadmin-viewjndi.png)
-- [EJB Viewer](http://openejb.apache.org/images/webadmin-ejbviewer.png)
-- [Object and EJB Invoker](http://openejb.apache.org/images/webadmin-objectinvoker.png)
+- [Main](http://tomee.apache.org/images/webadmin-main.png)
+- [EJB Details](http://tomee.apache.org/images/webadmin-ejbdetails.png)
+- [List Logs](http://tomee.apache.org/images/webadmin-listlogs.png)
+- [System Properties](http://tomee.apache.org/images/webadmin-properties.png)
+- [JNDI Viewer](http://tomee.apache.org/images/webadmin-viewjndi.png)
+- [EJB Viewer](http://tomee.apache.org/images/webadmin-ejbviewer.png)
+- [Object and EJB Invoker](http://tomee.apache.org/images/webadmin-objectinvoker.png)
 
 <a name="Webadmin-EnablingtheWebadminin1.0beta1"></a>
 ## Enabling the Webadmin in 1.0 beta 1

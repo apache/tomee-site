@@ -46,7 +46,7 @@ http://openejb.markmail.org/search/?q=type:development </td></tr>
 <tr><td> (x) </td><td> (x) </td><td> 2006 </td><td>  http://mail-archives.apache.org/mod_mbox/tomee-dev/
 </td></tr>
 <tr><td> (/) </td><td> (/) </td><td> 2006 </td><td>  http://n4.nabble.com/OpenEJB-Dev-f982480.html </td></tr>
-<tr><td> (/) </td><td> (x) </td><td> 2007 </td><td>  http://www.mail-archive.com/dev@openejb.apache.org </td></tr>
+<tr><td> (/) </td><td> (x) </td><td> 2007 </td><td>  http://www.mail-archive.com/dev@tomee.apache.org </td></tr>
 </table>
 
 <a name="MailingLists-CommitMailingList"></a>
@@ -69,6 +69,6 @@ TomEE Commits Online Archives/Forums:
 <tr><td> (x) </td><td> (x) </td><td> 2006 </td><td> 
 http://mail-archives.apache.org/mod_mbox/TomEE-commits/ </td></tr>
 <tr><td> (/) </td><td> (x) </td><td> 2007 </td><td> 
-http://www.mail-archive.com/commits@openejb.apache.org </td></tr>
+http://www.mail-archive.com/commits@tomee.apache.org </td></tr>
 </table>
 

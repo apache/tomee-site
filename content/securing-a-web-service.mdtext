@@ -103,7 +103,7 @@ For example : *wss4j.in.action = UsernameToken*
 #### Excerpt from *openejb-jar.xml*.
 
 
-    <openejb-jar xmlns="http://openejb.apache.org/xml/ns/openejb-jar-2.2">
+    <openejb-jar xmlns="http://tomee.apache.org/xml/ns/openejb-jar-2.2">
         <enterprise-beans>
     	...
     	<session>

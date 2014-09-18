@@ -167,7 +167,7 @@ Which should create output like the following.
     -------------------------------------------------------
     Running org.superbiz.enventries.StratocasterTest
     Apache OpenEJB 3.1-SNAPSHOT    build: 20080409-12:05
-    http://openejb.apache.org/
+    http://tomee.apache.org/
     INFO - openejb.home = /Users/dblevins/work/openejb3/examples/custom-injection
     INFO - openejb.base = /Users/dblevins/work/openejb3/examples/custom-injection
     INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)
