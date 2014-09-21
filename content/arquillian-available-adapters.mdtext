@@ -1,8 +1,8 @@
 Title: TomEE and Arquillian
 
-Check out the [Getting started](arquillian-getting-started.html) page if you are not familiar with Arquillian.
+Check out the [Getting started](arquillian-getting-started.html) page if you are not at all familiar with Arquillian.
 
-All the Arquillian Adapters for TomEE support the following configuration options in the arquillian.xml:
+All the Arquillian Adapters for TomEE support the following configuration options in the **src/test/resources/arquillian.xml**:
 
     <container qualifier="tomee" default="true">
         <configuration>
@@ -11,7 +11,7 @@ All the Arquillian Adapters for TomEE support the following configuration option
         </configuration>
     </container>
 
-The above can also be set as system properties rather than via the arquillian.xml file.
+The above can also be set as system properties rather than via the **src/test/resources/arquillian.xml** file.
 
     <build>
       <plugins>
@@ -59,7 +59,7 @@ To use the TomEE Embedded Arquillian Adapter, simply add this Maven dependency t
       <version>1.0.0</version>
     </dependency>
 
-As mentioned above the Embedded Adapter has the following properties which can be specified in the `arquillian.xml` file:
+As mentioned above the Embedded Adapter has the following properties which can be specified in the **src/test/resources/arquillian.xml** file:
 
  - `httpPort`
  - `stopPort`
@@ -119,7 +119,7 @@ The following shows a typical configuration for testing against TomEE (webprofil
       </dependency>
     </dependencies>
 
-The Remote Adapter has the following properties which can be specified in the `arquillian.xml` file:
+The Remote Adapter has the following properties which can be specified in the **src/test/resources/arquillian.xml** file:
 
  - `httpPort`
  - `stopPort`

@@ -19,6 +19,7 @@ You can also find us on IRC freenode.org #openejb
 [Deploying in TomEE](deploying-in-tomee.html)  
 [The 'tomee' webapp](tomee-webapp.html)  
 [Install TomEE using the drop-in WAR](installation-drop-in-war.html)  
+[TomEE Reference Card](refcard/refcard.html)  
 }
 {span-one-third
 ###Configuration
