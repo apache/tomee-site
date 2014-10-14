@@ -1,13 +1,13 @@
 Title: Documentation
 
 See also the [examples page](examples-trunk/index.html) for downloadable, executable and code-focused view of Java EE and TomEE.  
-You can also find us on IRC freenode.org #openejb
+You can also find us on IRC freenode.org #openejb and #tomee
 
 {row
 
 {span-one-third
-###General Guide
-[Get started with Intellij](tomee-and-intellij.html)  
+###General Guides
+[Get started with Intellij](tomee-and-intellij.html), [Debugging in Intellij](contrib/debug-intellij.html)  
 [Get started with Eclipse](tomee-and-eclipse.html)  
 [Get started with Netbeans](tomee-and-netbeans.html)  
 [Get started with Maven](tomee-mp-getting-started.html)  
@@ -81,8 +81,8 @@ You can also find us on IRC freenode.org #openejb
 
 {span-one-third
 ###Arquillian
-[Getting started](arquillian-getting-started.html)  
-[Available adapters](arquillian-available-adapters.html)   
+[Arquillian Primer - What you need to know](arquillian-getting-started.html)  
+[Using the TomEE Arquillian adapters](arquillian-available-adapters.html)   
 }
 {span-one-third
 ###TomEE Maven Plugin

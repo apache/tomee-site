@@ -52,33 +52,33 @@ Lets prepare our IntelliJ IDEA for the debugging session.
 
 Start IntelliJ IDEA and Click the Import Project link
 
-[![](idea1.png)
+![](idea1.png)
 
 Select the ~/openejb-4.7.1 directory and press OK
 
 Select import project from external model &amp; Maven as the external model.
 
-[![](idea3.png)
+![](idea3.png)
 
 Press Next on this screen.
 
-[![](idea4.png)
+![](idea4.png)
 
 Select the main profile.
 
-[![](idea6.png)
+![](idea6.png)
 
 Select the org.apache.openejb:openejb:4.7.1
 
-[![](idea7.png)
+![](idea7.png)
 
 Select the JDK you want to use with.
 
-[![](idea8.png)
+![](idea8.png)
 
 Give the project a name and press Finish.
 
-[![](idea9.png)
+![](idea9.png)
 
 Now your IDE will load the project.
 
@@ -117,7 +117,7 @@ The terminal should hang with the message **"Listening for transport dt_socket a
 *   Give a name (I gave "TomEE DEBUG") to this new configuration and set the Port to 8000
 *   Click OK.
 
-[![](idea_debug_conf.png)</div>
+![](idea10.png)</div>
 
 To start debugging your TomEE+
 
