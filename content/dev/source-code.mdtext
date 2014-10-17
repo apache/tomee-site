@@ -15,9 +15,13 @@ If you intend to hack on TomEE then it is recommended that you create a [GitHub 
 If you just want to build the source version then you can download (aka clone) the sources of Apache TomEE with a GIT client from the following URL [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git)
 
 Performing the checkout from a command line using the GIT client (recommended) is as easy as executing the following command:
-> git clone [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git) tomee
+> git clone -b develop [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git) tomee
 
-or alternatively with Apache Maven 3.0.5 or later:
+If you want to checkout a specific branch then you can just change that in the command:
+
+> git clone -b tomee-1.7.x [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git) tomee-1.7.x
+
+Or alternatively with Apache Maven 3.0.5 or later:
 
 > mvn scm:checkout
 > -DconnectionUrl=scm:git:[https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git)
@@ -35,7 +39,7 @@ We will be using the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/
 
 The [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow is basically the same as the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) but instead of using *master* everyone should work off the *develop* branch.
 
-Please read our own detailed workflow information [here](git.html)
+**Please read our own detailed workflow information [here](git.html)**
 
 The official Apache Committer documentation can be found [here](https://git-wip-us.apache.org/#committers-getting-started)
 
