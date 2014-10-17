@@ -10,9 +10,9 @@ Probably the best GIT tutorial on the planet can be found here: [https://www.atl
 
 You can browse the source code via the [web interface](http://git-wip-us.apache.org/repos/asf/tomee.git).
 
-If you intend to hack on TomEE then it is recommended that you create a [GitHub Account](https://github.com) and [fork](https://help.github.com/articles/fork-a-repo/) the TomEE repository.
+If you intend to hack on TomEE then it is recommended that you create a [GitHub Account](https://github.com) and [fork](https://help.github.com/articles/fork-a-repo/) the TomEE repository so that you can submit pull requests (See below).
 
-If you just want to build the source version then you can download (aka clone) the sources of Apache TomEE with a GIT client from the following URL [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git)
+If you just want to build the source version then you can download (aka clone) the sources of Apache TomEE with a GIT client from the following URL [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git) - The 'develop' branch is the current development branch.
 
 Performing the checkout from a command line using the GIT client (recommended) is as easy as executing the following command:
 > git clone -b develop [https://git-wip-us.apache.org/repos/asf/tomee.git](https://git-wip-us.apache.org/repos/asf/tomee.git) tomee
@@ -32,14 +32,14 @@ Note: This method does not require the GIT client.
 <a name="SourceCode-Contributors"></a>
 ###GIT Information for TomEE Contributors
 
-<span style="color: rgb(128,0,0);">GIT pull requests will only be accepted on the **develop** branch</span>.
-See [here](https://help.github.com/articles/using-pull-requests/) for information on pull requests. 
+**Please read our own detailed GitFlow workflow information [here](git.html)**
 
 We will be using the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) from day one. Please read and understand how this works.
 
-The [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow is basically the same as the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) but instead of using *master* everyone should work off the *develop* branch.
+<span style="color: rgb(128,0,0);">GIT pull requests will only be accepted on the **develop** branch</span>.
+See [here](https://help.github.com/articles/using-pull-requests/) for information on pull requests. 
 
-**Please read our own detailed workflow information [here](git.html)**
+The [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow is basically the same as the [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) but instead of using *master* everyone should work off the *develop* branch.
 
 The official Apache Committer documentation can be found [here](https://git-wip-us.apache.org/#committers-getting-started)
 
