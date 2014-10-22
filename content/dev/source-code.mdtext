@@ -62,10 +62,10 @@ To build the code, you'll need to grab a copy of [Apache Maven](http://maven.apa
 
 It is pretty much guaranteed that you will need to give Maven an increase on the available memory.  
 Depending on the OS you are working on the fix can be as easy as (Note: *-XX:MaxPermSize=256M* is ignored by Java 8):  
->export MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k
+>export MAVEN_OPTS="-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k"
 
 on MacOS and Unices or 
->set MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k
+>set "MAVEN_OPTS=-Xmx768m -XX:MaxPermSize=256M -XX:ReservedCodeCacheSize=64m -Xss2048k"
   
 on MS Windows.
 

@@ -1,41 +1,34 @@
-Title: Resource Injection
 <a name="ResourceInjection-Overview"></a>
-# Overview
+# @Resource Overview
 
 This example demonstrates the use of the injection of environment entries
-using *@Resource* annotation.
+using <span style="color: #217D18;">**@Resource**</span> annotation.
 
 The EJB 3.0 specification (*EJB Core Contracts and Requirements*) section
 16.2.2 reads:
 
-_A field or method of a bean class may be annotated to request that an entry from the bean's environment be injected. Any of the types of resources or other environment entries[88](88.html)
- described in this chapter may be injected. Injection may also be requested
-using entries in the deployment descriptor corresponding to each of these
-resource types._
+*A field or method of a bean class may be annotated to request that an entry from the bean's environment be injected. Any of the types of resources or other environment entries described in this chapter may be injected. Injection may also be requested using entries in the deployment descriptor corresponding to each of these
+resource types.*
 
-_Environment entries may also be injected into the bean through bean
-methods that follow the naming conventions for JavaBeans properties. The
-annotation is applied to the set method for the property, which is the
-method that is called to inject the environment entry. The JavaBeans
-property name (not the method name) is used as the default JNDI name._
+*Environment entries may also be injected into the bean through bean methods that follow the naming conventions for JavaBeans properties. The annotation is applied to the set method for the property, which is the method that is called to inject the environment entry. The JavaBeans property name (not the method name) is used as the default JNDI name.*
 
-The *PurchaseOrderBean* class shows use of field-level *@Resource*
+The *PurchaseOrderBean* class shows use of field-level **@Resource**
 annotation.
 
-The *InvoiceBean* class shows the use of method-level *@Resource*
+The *InvoiceBean* class shows the use of method-level **@Resource**
 annotation.
 
 The source for this example can be checked out from svn:
 
- $ svn co
+> $ svn co
 http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/injection-of-env-entry
 
 To run it change your working directory to the directory
 *injection-of-env-entry* and run the following maven2 commands:
 
-$ cd injection-of-env-entry
+>$ cd injection-of-env-entry
 
-$ mvn clean install
+>$ mvn clean install
 
 <a name="ResourceInjection-TheCode"></a>
 # The Code
@@ -43,12 +36,7 @@ $ mvn clean install
 <a name="ResourceInjection-Injectionthroughfield(field-levelinjection)"></a>
 ## Injection through field (field-level injection)
 
-The *maxLineItem* field in *PurchaseOrderBean* class is annotated with
-*@Resource* annotation to inform the EJB container _the place_ where in the
-code the injection of a simple environment entry should take place. The
-default value of 10 is assigned. Deployer can modify the value of the
-environment entries at deployment time using deployment descriptor
-(ejb-jar.xml).
+The *maxLineItem* field in *PurchaseOrderBean* class is annotated with **@Resource** annotation to inform the EJB container the location where in the code the injection of a simple environment entry should take place. The default value of 10 is assigned. You can modify the value of the environment entries at deployment time using deployment descriptor (**ejb-jar.xml**).
 
 <a name="ResourceInjection-@Resourceannotationofafield"></a>
 #### @Resource annotation of a field
@@ -68,8 +56,7 @@ can be used as a way to inject environment entry values.
 You could look up the env-entry using JNDI lookup() method and the
 following name:
 
- *
-java:comp/env/org.apache.openejb.examples.resource.InvoiceBean/maxLineItems
+	java:comp/env/org.apache.openejb.examples.resource.InvoiceBean/maxLineItems
 
 The pattern is to combine the fully-qualified class name and the name of a
 instance field (or a name of the setter method without _set_ prefix and the
@@ -86,25 +73,18 @@ first letter lowercased).
 
 
 <a name="ResourceInjection-env-entryinejb-jar.xml"></a>
-#### env-entry in ejb-jar.xml
+#### Using env-entry in ejb-jar.xml
 
     <env-entry>
-         <description>The maximum number of line items per
-invoice.</description>
-        
-<env-entry-name>org.apache.openejb.examples.injection.InvoiceBean/maxLineItems</env-entry-name>
-         <env-entry-type>java.lang.Integer</env-entry-type>
-         <env-entry-value>15</env-entry-value>
+		<description>The maximum number of line items per invoice.</description>        
+		<env-entry-name>org.apache.openejb.examples.injection.InvoiceBean/maxLineItems</env-entry-name>
+		<env-entry-type>java.lang.Integer</env-entry-type>
+		<env-entry-value>15</env-entry-value>
     </env-entry>
 
 
 <a name="ResourceInjection-Using@Resourceannotatedenv-entry"></a>
 #### Using @Resource annotated env-entry
-
-{tip:title=Using @Resource annotated env-entry}
-*maxLineItems* variable is injected by the *setMaxLine* method above. See
-also how env-entry is defined in ejb-jar.xml
-{tip}
 
     public void addLineItem(LineItem item) throws TooManyItemsException {
        if (item == null) {
@@ -115,8 +95,7 @@ also how env-entry is defined in ejb-jar.xml
           items.add(item);
           itemCount++;
        } else {
-          throw new TooManyItemsException("Number of items exceeded the maximum
-limit");
+          throw new TooManyItemsException("Number of items exceeded the maximum limit");
        }
     }
 
@@ -134,10 +113,8 @@ write our test methods.
 
     protected void setUp() throws Exception {
         Properties properties = new Properties();
-        properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-"org.apache.openejb.client.LocalInitialContextFactory");
-        properties.setProperty("openejb.deployments.classpath.include",
-".*resource-injection.*");
+        properties.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
+        properties.setProperty("openejb.deployments.classpath.include", ".*resource-injection.*");
         initialContext = new InitialContext(properties);
     }
 
@@ -146,8 +123,7 @@ write our test methods.
 #### Test methods
 
     public void testAddLineItem() throws Exception {
-        Invoice order = (Invoice)
-initialContext.lookup("InvoiceBeanBusinessRemote");
+        Invoice order = (Invoice)initialContext.lookup("InvoiceBeanBusinessRemote");
         assertNotNull(order);
         LineItem item = new LineItem("ABC-1", "Test Item");
     
@@ -164,8 +140,9 @@ initialContext.lookup("InvoiceBeanBusinessRemote");
 
 Running the example is fairly simple. Just execute the following commands:
 
-$ cd injection-of-env-entry
-$ mvn clean test
+>$ cd injection-of-env-entry
+>
+>$ mvn clean test
 
 
     -------------------------------------------------------
@@ -176,35 +153,21 @@ $ mvn clean test
     http://tomee.apache.org/
     INFO - openejb.home = c:\oss\openejb3\examples\injection-of-env-entry
     INFO - openejb.base = c:\oss\openejb3\examples\injection-of-env-entry
-    WARN - Cannot find the configuration file [conf/openejb.xml]
-.  Will attempt to create one for the beans deployed.
-    INFO - Configuring Service(id=Default Security Service,
-type=SecurityService, provider-id=Default Security Service)
-    INFO - Configuring Service(id=Default Transaction Manager,
-type=TransactionManager, provider-id=Default Transaction Manager)
-    INFO - Configuring Service(id=Default JDK 1.3 ProxyFactory,
-type=ProxyFactory, provider-id=Default JDK 1.3 ProxyFactory)
-    INFO - Found EjbModule in classpath:
-c:\oss\openejb3\examples\injection-of-env-entry\target\classes
-    INFO - Configuring app:
-c:\oss\openejb3\examples\injection-of-env-entry\target\classes
-    INFO - Configuring Service(id=Default Stateful Container, type=Container,
-provider-id=Default Stateful Container)
-    INFO - Auto-creating a container for bean InvoiceBean:
-Container(type=STATEFUL, id=Default Stateful Container)
-    INFO - Loaded Module:
-c:\oss\openejb3\examples\injection-of-env-entry\target\classes
-    INFO - Assembling app:
-c:\oss\openejb3\examples\injection-of-env-entry\target\classes
+    WARN - Cannot find the configuration file [conf/openejb.xml].  Will attempt to create one for the beans deployed.
+    INFO - Configuring Service(id=Default Security Service,type=SecurityService, provider-id=Default Security Service)
+    INFO - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+    INFO - Configuring Service(id=Default JDK 1.3 ProxyFactory, type=ProxyFactory, provider-id=Default JDK 1.3 ProxyFactory)
+    INFO - Found EjbModule in classpath: c:\oss\openejb3\examples\injection-of-env-entry\target\classes
+    INFO - Configuring app: c:\oss\openejb3\examples\injection-of-env-entry\target\classes
+    INFO - Configuring Service(id=Default Stateful Container, type=Container, provider-id=Default Stateful Container)
+    INFO - Auto-creating a container for bean InvoiceBean: Container(type=STATEFUL, id=Default Stateful Container)
+    INFO - Loaded Module: c:\oss\openejb3\examples\injection-of-env-entry\target\classes
+    INFO - Assembling app: c:\oss\openejb3\examples\injection-of-env-entry\target\classes
     INFO - Jndi(name=InvoiceBeanRemote) --> Ejb(deployment-id=InvoiceBean)
-    INFO - Jndi(name=PurchaseOrderBeanRemote) -->
-Ejb(deployment-id=PurchaseOrderBean)
-    INFO - Created Ejb(deployment-id=InvoiceBean, ejb-name=InvoiceBean,
-container=Default Stateful Container)
-    INFO - Created Ejb(deployment-id=PurchaseOrderBean,
-ejb-name=PurchaseOrderBean, container=Default Stateful Container)
-    INFO - Deployed
-Application(path=c:\oss\openejb3\examples\injection-of-env-entry\target\classes)
+    INFO - Jndi(name=PurchaseOrderBeanRemote) --> Ejb(deployment-id=PurchaseOrderBean)
+    INFO - Created Ejb(deployment-id=InvoiceBean, ejb-name=InvoiceBean, container=Default Stateful Container)
+    INFO - Created Ejb(deployment-id=PurchaseOrderBean, ejb-name=PurchaseOrderBean, container=Default Stateful Container)
+    INFO - Deployed Application(path=c:\oss\openejb3\examples\injection-of-env-entry\target\classes)
     INFO - OpenEJB ready.
     OpenEJB ready.
     Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.859 sec
