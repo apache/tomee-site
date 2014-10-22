@@ -37,13 +37,16 @@ The TomEE build builds several distributions (zip &amp; war files) to cater the 
 TomEE+ zip location:
 
 > ~/openejb-4.7.1/tomee/apache-tomee/target/apache-tomee-plus-1.7.1.zip
+
 Unzip the zip into your home directory (or any other location)
 
 > unzip ~/openejb-4.7.1/tomee/apache-tomee/target/apache-tomee-plus-1.7.1.zip -d ~
+
 You will find the directory **apache-tomee-plus-1.7.1** in your home folder. Lets run the TomEE.
 
-> cd ~/apache-tomee-plus-1.7.1/bin
-> ./catalina.sh run
+> cd ~/apache-tomee-plus-1.7.1/bin <br />
+> ./catalina.sh run <br />
+
 "INFO: Server startup in xxxx ms" is the Green light!
 
 ###Prepare your IDE
