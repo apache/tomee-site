@@ -1,15 +1,15 @@
 Title: JavaAgent
+
 <a name="JavaAgent-AddingaJavaAgent"></a>
 #  Adding a JavaAgent
+
+NOTE: The java agent is only required if using OpenJPA as your persistence
+provider or if using CMP.
 
 Adding a java agent is done via a vm parameter as follows:
 
     java -javaagent:openejb-javaagent-4.6.0.jar _\[other params...](other-params....html)
 
-{note:title=Need the JavaAgent?}
-The java agent is only required if using OpenJPA as your persistence
-provider or if using CMP.
-{note}
 <a name="JavaAgent-Maven2"></a>
 ##  Maven2
 
@@ -28,7 +28,6 @@ your pom.xml file:
             <workingDirectory>${project.basedir}/target</workingDirectory>
           </configuration>
         </plugin>
-
         <!-- this tells maven to copy the openejb-javaagent jar into your target/ directory -->
         <!-- where surefire can see it -->
         <plugin>
@@ -54,6 +53,5 @@ your pom.xml file:
             </execution>
           </executions>
         </plugin>
-
       </plugins>
     </build>
