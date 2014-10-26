@@ -72,9 +72,9 @@ Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will a
 
 ## Internal ActiveMQ Broker with activemq.xml
 
-The [activemq.xml](http://activemq.apache.org/xml-configuration.html) file format requires a number of Spring dependencies, and is therefore not included in the distribution by default. This is purley due to the fact that this ActiveMQ file format is parsed using Spring libraries and this is beyond our control. However, the advantage is opening up the door to the huge number of configuration options available found here: [http://activemq.apache.org/xml-configuration.html](http://activemq.apache.org/xml-configuration.html).
+The [activemq.xml](activemq.xml) file format requires a number of Spring dependencies, and is therefore not included in the distribution by default. This is purley due to the fact that this ActiveMQ file format is parsed using Spring libraries and this is beyond our control. However, the advantage is opening up the door to the huge number of configuration options available found here: [http://activemq.apache.org/xml-configuration.html](http://activemq.apache.org/xml-configuration.html).
 
-This support can be enabled by adding the right libraries and creating an `conf/activemq.xml` file.
+This support can be enabled by adding the right libraries and creating an [`[tomee]/conf/activemq.xml`](activemq.xml) file (Click the link for a basic example).
 
 Add the following jars to the `tomee/lib/` directory:
 
@@ -86,7 +86,7 @@ Add the following jars to the `tomee/lib/` directory:
 
 Later versions should work, but have not been tested.
 
-Create an [activemq.xml file](activemq.xml) a in `tomee.home/conf/activemq.xml`.
+Create an [activemq.xml file](activemq.xml) a in `[tomee]/conf/activemq.xml`.
 
 Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
 
