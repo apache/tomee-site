@@ -1,4 +1,5 @@
 Title: Embedded Configuration
+
 <a name="EmbeddedConfiguration-Defaults,OverridesandOrder"></a>
 #  Defaults, Overrides and Order
 
@@ -74,7 +75,7 @@ OpenEJB has many flags that can also be set as properties.  See [OpenEJB Propert
     p.put("log4j.category.OpenEJB.startup.config ", " debug");
     
     // create some resources
-    p.put("movieDatabase = new://Resource?type", "DataSource");
+    p.put("movieDatabase", "new://Resource?type=DataSource");
     p.put("movieDatabase.JdbcDriver ", " org.hsqldb.jdbcDriver");
     p.put("movieDatabase.JdbcUrl ", " jdbc:hsqldb:mem:moviedb");
     
