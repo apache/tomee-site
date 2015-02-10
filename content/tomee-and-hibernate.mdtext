@@ -108,53 +108,49 @@ Also, be sure to put your Database JDBC driver in `<tomee-home>/lib`.
 
 The actual Maven dependencies for your project can be added in the usual way:
 
-```xml
-<!-- Hibernate -->
-
-<dependency>
-<groupId>antlr</groupId>
-<artifactId>antlr</artifactId>
-<version>2.7.7</version>
-</dependency>
-
-<dependency>
-<groupId>dom4j</groupId>
-<artifactId>dom4j</artifactId>
-<version>1.6.1</version>
-</dependency>
-<dependency>
-<groupId>org.hibernate.common</groupId>
-<artifactId>hibernate-commons-annotations</artifactId>
-<version>4.0.5.Final</version>
-</dependency>
-<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-core</artifactId>
-<version>4.2.16.Final</version>
-</dependency>
-<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-ehcache</artifactId>
-<version>4.2.16.Final</version>
-</dependency>
-<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-entitymanager</artifactId>
-<version>4.2.16.Final</version>
-</dependency>
-<dependency>
-<groupId>org.hibernate</groupId>
-<artifactId>hibernate-validator</artifactId>
-<version>4.3.2.Final</version>
-</dependency>
-<dependency>
-<groupId>org.jboss.logging</groupId>
-<artifactId>jboss-logging</artifactId>
-<version>3.1.0.GA</version>
-</dependency>
-<dependency>
-<groupId>org.javassist</groupId>
-<artifactId>javassist</artifactId>
-<version>3.15.0-GA</version>
-</dependency>
-```
+		<!-- Hibernate -->		
+		<dependency>
+			<groupId>antlr</groupId>
+			<artifactId>antlr</artifactId>
+			<version>2.7.7</version>
+		</dependency>		
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>4.0.5.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.2.16.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>4.2.16.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.16.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.3.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.1.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.15.0-GA</version>
+		</dependency>
