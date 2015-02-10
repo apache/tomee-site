@@ -75,11 +75,7 @@ Add:
 Remove (optional):
 
 - `<tomee-home>/lib/asm-3.2.jar`
-- `<tomee-home>/lib/bval-core-0.4.jar`
-- `<tomee-home>/lib/bval-jsr303-0.4.jar`
-- `<tomee-home>/lib/commons-lang-2.6.jar`
 - `<tomee-home>/lib/openjpa-2.2.0.jar`
-- `<tomee-home>/lib/serp-1.13.1.jar`
 
 # Ehcache (optional)
 
@@ -106,5 +102,59 @@ To use Infinispan cache (default Hibernate 2nd level cache) you need the below j
     <lib>org.jboss.logmanager:jboss-logmanager:1.2.2.GA</lib>
 </code></pre>
 
-There is many guides on how to use 2nd level cache with JPA 2.
-You can remove OpenJPA jar so less jars are in `<tomee-home>/lib` folder. Be sure to put your DB driver in `<tomee-home>/lib`.
+There are many guides on how to use 2nd level cache with JPA 2.
+You can remove OpenJPA jar so less jars are in `<tomee-home>/lib` folder.
+Also, be sure to put your Database JDBC driver in `<tomee-home>/lib`.
+
+The actual Maven dependencies for your project can be added in the usual way:
+
+```xml
+<!-- Hibernate -->
+
+<dependency>
+<groupId>antlr</groupId>
+<artifactId>antlr</artifactId>
+<version>2.7.7</version>
+</dependency>
+
+<dependency>
+<groupId>dom4j</groupId>
+<artifactId>dom4j</artifactId>
+<version>1.6.1</version>
+</dependency>
+<dependency>
+<groupId>org.hibernate.common</groupId>
+<artifactId>hibernate-commons-annotations</artifactId>
+<version>4.0.5.Final</version>
+</dependency>
+<dependency>
+<groupId>org.hibernate</groupId>
+<artifactId>hibernate-core</artifactId>
+<version>4.2.16.Final</version>
+</dependency>
+<dependency>
+<groupId>org.hibernate</groupId>
+<artifactId>hibernate-ehcache</artifactId>
+<version>4.2.16.Final</version>
+</dependency>
+<dependency>
+<groupId>org.hibernate</groupId>
+<artifactId>hibernate-entitymanager</artifactId>
+<version>4.2.16.Final</version>
+</dependency>
+<dependency>
+<groupId>org.hibernate</groupId>
+<artifactId>hibernate-validator</artifactId>
+<version>4.3.2.Final</version>
+</dependency>
+<dependency>
+<groupId>org.jboss.logging</groupId>
+<artifactId>jboss-logging</artifactId>
+<version>3.1.0.GA</version>
+</dependency>
+<dependency>
+<groupId>org.javassist</groupId>
+<artifactId>javassist</artifactId>
+<version>3.15.0-GA</version>
+</dependency>
+```
