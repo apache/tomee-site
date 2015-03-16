@@ -491,7 +491,7 @@ can look weird if you don't know properties are used for 2 instances (pool and d
 
 Note: this solution uses the same logic than @DataSourceDefinition factory mecanism.
 
-## Two resource definition
+## Two resources definition
 
 An alternative is to define a resource for the XaDataSource:
 
