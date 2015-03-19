@@ -98,7 +98,7 @@ However, the basic steps are:
 
 Once you have your key then you will need to append it to the key file here:
 
- - [http://www.apache.org/dist/openejb/KEYS](http://www.apache.org/dist/openejb/KEYS)
+ - [http://www.apache.org/dist/tomee/KEYS](http://www.apache.org/dist/tomee/KEYS)
 
 That is best done as the file itself explains, once you open and view it in a UTF-8 safe text editor you will see the description at the top.  
 Just follow the instructions there on how to append your key. The basic steps are also here, please read both before you proceed:
