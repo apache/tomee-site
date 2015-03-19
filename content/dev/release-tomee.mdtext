@@ -106,9 +106,9 @@ Just follow the instructions there on how to append your key. The basic steps ar
  - Save the KEYS file on your local machine and import it using **gpg --import KEYS**
  - Then create the new KEYS file using **(gpg --list-sigs <your name> && gpg --armor --export <your name>) >> KEYS**
  - Check that the new KEYS file contains your key.
- - Log in to people.apache.org and locate /dist/openejb/KEYS
+ - Log in to people.apache.org and locate /dist/tomee/KEYS
  - Make a backup of the remote KEYS file just in case
- - Overwrite the old /dist/openejb/KEYS file with your new one that now also contains your key.
+ - Overwrite the old /dist/tomee/KEYS file with your new one that now also contains your key.
  - Go to [http://pgp.mit.edu/](http://pgp.mit.edu/) and add your ascii armoured key
  - Take note of your key fingerprint using **gpg --fingerprint <your name>**
  - Go to [https://id.apache.org](https://id.apache.org), log in and fill OpenPGP Public Key Primary Fingerprint: with the value of your fingerprint.
