@@ -182,3 +182,7 @@ to your model to modify your application depending it!)
             // do test using injections
         }
     }
+
+## Going further
+
+If you want to learn more about ApplicationComposer see [Advanced](advanced.html) page.
