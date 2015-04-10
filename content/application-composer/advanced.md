@@ -7,13 +7,11 @@
 You can reuse existing file descriptors using `@Descriptors`. The name is the file name
 and the path either a classpath path or a file path:
 
-```java
-// runner if needed etc...
-@Descriptors(@Descriptor(name = "persistence.xml", path = "META-INF/persistence.xml"))
-public class MyTest {
-   //...
-}
-``̀̀
+    // runner if needed etc...
+    @Descriptors(@Descriptor(name = "persistence.xml", path = "META-INF/persistence.xml"))
+    public class MyTest {
+       //...
+    }
 
 Note: this can be put in a `@Module` method as well.
 
@@ -23,13 +21,11 @@ If you want to test a JAXRS or JAXWS service you need to activate these services
 
 To do so just add the needed dependency and use `@EnableServices`:
 
-```java
-// runner if needed etc...
-@EnableService("jaxrs") // jaxws supported as well
-public class MyTest {
-   //...
-}
-``̀̀
+    // runner if needed etc...
+    @EnableService("jaxrs") // jaxws supported as well
+    public class MyTest {
+       //...
+    }
 
 ## Random port
 
@@ -39,13 +35,11 @@ to be able to deploy multiple tests/projects on the same CI platform at the same
 To shortcut all the needed logic you can use `@RandomPort`. It is simply an injection giving
 you either the port (`int`) or the root context (`URL`):
 
-```java
-// runner, services if needed etc...
-public class MyTest {
-   @RandomPort("http")
-   private int port;
-}
-``̀̀
+    // runner, services if needed etc...
+    public class MyTest {
+       @RandomPort("http")
+       private int port;
+    }
 
 Note: you can generate this way multiple ports. The value is the name of the service it will apply on (being said http
 is an alias for httpejbd which is our embedded http layer).
@@ -62,14 +56,12 @@ is an alias for httpejbd which is our embedded http layer).
 
 `@Jars` allows you to add dependencies (scanned) to your application automatically (like CDI libraries):
 
-```java
-@Module
-@Classes(cdi = true, value = { C1.class, C2.class, E1.class })
-@Jars("deltaspike-")
-public WebApp app() {
-    return new WebApp();
-}
-`̀`
+    @Module
+    @Classes(cdi = true, value = { C1.class, C2.class, E1.class })
+    @Jars("deltaspike-")
+    public WebApp app() {
+        return new WebApp();
+    }
 
 ## @Default
 

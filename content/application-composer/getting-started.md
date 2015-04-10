@@ -9,32 +9,27 @@ To start using ApplicationComposer you need to add some dependencies.
 
 The minimum required one is `openejb-core`:
 
-```xml
-<dependency>
-  <groupId>org.apache.openejb</groupId>
-  <artifactId>openejb-core</artifactId>
-  <version>${openejb.version></version>
-</dependency>
-```
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
+      <artifactId>openejb-core</artifactId>
+      <version>${openejb.version></version>
+    </dependency>
 
 If you need JAXRS services you'll add (or replace thanks to transitivity of maven) `openejb-cxf-rs`:
 
-```xml
-<dependency>
-  <groupId>org.apache.openejb</groupId>
-  <artifactId>openejb-cxf-rs</artifactId>
-  <version>${openejb.version></version>
-</dependency>
-```
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
+      <artifactId>openejb-cxf-rs</artifactId>
+      <version>${openejb.version></version>
+    </dependency>
+
 If you need JAXWS services you'll add (or replace thanks to transitivity of maven) `openejb-cxf`:
 
-```xml
-<dependency>
-  <groupId>org.apache.openejb</groupId>
-  <artifactId>openejb-cxf</artifactId>
-  <version>${openejb.version></version>
-</dependency>
-```
+    <dependency>
+      <groupId>org.apache.openejb</groupId>
+      <artifactId>openejb-cxf</artifactId>
+      <version>${openejb.version></version>
+    </dependency>
 
 etc...
 
@@ -49,12 +44,10 @@ To do so you have two cases:
 * before TomEE 2.x: you can only write method(s) decorated with `@Module`
 * since TomEE 2.x: you can skip it and use `@Classes` directly on the ApplicationComposer class as a shortcut for:
 
-```java
-@Module
-public WebApp app() {
-    return new WebApp();
-}
-```
+    @Module
+    public WebApp app() {
+        return new WebApp();
+    }
 
 The expected returned type of these methods are in `org.apache.openejb.jee` package:
 
@@ -71,13 +64,11 @@ The expected returned type of these methods are in `org.apache.openejb.jee` pack
 Note that for easiness `@Classes` was added to be able to describe a module and some scanned classes. For instance the
 following snippet will create a web application with classes C1, C2 as CDI beans and E1 as an EJB automatically:
  
-```java
-@Module
-@Classes(cdi = true, value = { C1.class, C2.class, E1.class })
-public WebApp app() {
-    return new WebApp();
-}
-`̀`
+    @Module
+    @Classes(cdi = true, value = { C1.class, C2.class, E1.class })
+    public WebApp app() {
+        return new WebApp();
+    }
 
 ### @Configuration
 
@@ -91,27 +82,23 @@ In these properties you can reuse OpenEJB/TomEE property syntax for resources.
 
 Here is a sample:
 
-```java
-@Configuration
-public Properties configuration() {
-    return new PropertiesBuilder()
-        .p("db", "new://Resource?type=DataSource")
-        .p("db.JdbcUrld", "jdbc:hsqldb:mem:test")
-        .build();
-}
-`̀`
+    @Configuration
+    public Properties configuration() {
+        return new PropertiesBuilder()
+            .p("db", "new://Resource?type=DataSource")
+            .p("db.JdbcUrld", "jdbc:hsqldb:mem:test")
+            .build();
+    }
 
 Since TomEE 2.x you can also put properties on ApplicationComposer class using `@ContainerProperties` API:
 
-```java
-@ContainerProperties({
-  @ContainerProperties.Property(name = "db", value = "new://Resource?type=DataSource"),
-  @ContainerProperties.Property(name = "db.JdbcUrl", value = "jdbc:hsqldb:mem:test")
-})
-public class MyAppComposer() {
-  // ...
-}
-`̀`
+    @ContainerProperties({
+      @ContainerProperties.Property(name = "db", value = "new://Resource?type=DataSource"),
+      @ContainerProperties.Property(name = "db.JdbcUrl", value = "jdbc:hsqldb:mem:test")
+    })
+    public class MyAppComposer() {
+      // ...
+    }
 
 ### @Component
 
@@ -123,12 +110,10 @@ To do so just write a method decorated with `@Component` returning the instance 
 Components in TomEE are stored in a container Map and the key needs to be a `Class`. This one is deduced from the returned
 type of the `@Component` method:
 
-```java
-@Component
-public SecurityService mockSecurity() {
-    return new MySecurityService();
-}
-`̀`
+    @Component
+    public SecurityService mockSecurity() {
+        return new MySecurityService();
+    }
 
 ## How to run it?
 
@@ -138,21 +123,17 @@ If you use JUnit you have mainly 2 solutions to run you "model" using the Applic
 
 * using `ApplicationComposer` runner:
 
-```java
-@RunWith(ApplicationComposer.class)
-public class MyTest {
-    // ...
-}
-`̀`
+    @RunWith(ApplicationComposer.class)
+    public class MyTest {
+        // ...
+    }
 
 * using `ApplicationComposerRule` rule:
 
-```java
-public class MyTest {
-    @Rule // or @ClassRule if you want the container/application lifecycle be bound to the class and not test methods
-    public final ApplicationComposerRule rule = new ApplicationComposerRule(this);
-}
-`̀`
+    public class MyTest {
+        @Rule // or @ClassRule if you want the container/application lifecycle be bound to the class and not test methods
+        public final ApplicationComposerRule rule = new ApplicationComposerRule(this);
+    }
 
 Tip: since TomEE 2.x ApplicationComposerRule is decomposed in 2 rules if you need: `ContainerRule` and `DeployApplication`.
 Using JUnit `RuleChain` you can chain them to get the samebehavior as `ApplicationComposerRule` or better deploy
@@ -172,15 +153,13 @@ Finally just write TestNG `@Test` method using test class injections as if the t
 Since TomEE 2.x you can also use `ApplicationComposers` to directly run you ApplicationComposer model
 as a standalone application:
 
-```java
-public class MyApp {
-    public static void main(String[] args) {
-        ApplicationComposers.run(MyApp.class, args);
+    public class MyApp {
+        public static void main(String[] args) {
+            ApplicationComposers.run(MyApp.class, args);
+        }
+    
+        // @Module, @Configuration etc...
     }
-
-    // @Module, @Configuration etc...
-}
-`̀̀
 
 Tip: if `MyApp` has `@PostConstruct` methods they will be respected and if `MyApp` has a constructor taking an array
 of String it will be instantiated getting the second parameter as argument (ie you can propagate your main parameter
@@ -188,20 +167,18 @@ to your model to modify your application depending it!)
 
 ## JUnit Sample
 
-```java
-@Classes(cdi = true, value = { MyService.class, MyOtherService.class })
-@ContainerProperties(@ContainerProperties.Property(name = "myDb", value = "new://Resource?type=DataSource"))
-@RunWith(ApplicationComposer.class)
-public class MyTest {
-    @Resource(name = "myDb")
-    private DataSource ds;
-
-    @Inject
-    private MyService service;
-
-    @Test
-    public void myTest() {
-        // do test using injections
+    @Classes(cdi = true, value = { MyService.class, MyOtherService.class })
+    @ContainerProperties(@ContainerProperties.Property(name = "myDb", value = "new://Resource?type=DataSource"))
+    @RunWith(ApplicationComposer.class)
+    public class MyTest {
+        @Resource(name = "myDb")
+        private DataSource ds;
+    
+        @Inject
+        private MyService service;
+    
+        @Test
+        public void myTest() {
+            // do test using injections
+        }
     }
-}
-`̀̀
