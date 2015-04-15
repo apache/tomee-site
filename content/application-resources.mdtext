@@ -1,0 +1,189 @@
+Title: Application Resources
+<a name="ApplicationResources"></a>
+
+# Resources
+
+TomEE provides the means to define resources in the server in the `conf/tomee.xml` file. These resources are created when the server boots up, and can be injected into managed components inside your application.
+
+For example, you can define a JMS queue in `tomee.xml` with the following configuration:
+
+    <tomee>
+        <Resource id="MyQueue" type="javax.jms.Queue"/>
+    </tomee>
+
+And inject it into the field of a class using `@Resource`:
+
+    public class JmsClient {
+	
+	    @Resource(name="MyQueue")
+	    private Queue queue;
+	
+		public void sendMessage() {
+			// implementation here...
+		}
+	
+	}
+	
+# Custom resources
+
+In addition to this, TomEE also allow you to define your own Java classes to use as resources, and these can also be injected into managed components in the same way.
+
+So the following simple resource
+
+    public class Greeter {
+	
+	    public String greet(final String name) {
+		    return "Hello, " + name;
+		}
+	
+	}
+
+Can be defined in `tomee.xml` using the following configuration (note the `class-name` attribute):
+
+    <tomee>
+	    <Resource id="greet" class-name="org.superbiz.Greeter" />
+	</tomee>
+	
+This resource must be available in TomEE's system classpath - i.e. it must be defined in a .jar within the `lib/` directory.
+
+# Application resources
+
+Resources can also be defined within an application, and optionally use classes from the application's classpath. To do define resources in a .war file, include a `WEB-INF/resources.xml`. For an ejb-jar module, use `META-INF/resources.xml`.
+
+The format of `resources.xml` is the same in either case. Notice that the root element of the XML is `<resources>` and not `<tomee>`.
+
+    <resources>
+        <Resource id="MyResource" class-name="org.superbiz.MyClass"/>
+    </resources>
+	
+This mechanism allows you to package your custom resources within your application, alongside your application code, rather than requiring a .jar file in the `lib/` directory.
+
+# Field and properties
+
+Within a `<Resource>` a number of properties can be specified. Where possible, TomEE will attempt to take these values and set the relevant fields on your resource. In the following example, TomEE will attempt to set the value of the `userName` field on `MyClass` to `tomee`. 
+
+    public class MyClass {
+	
+	    private String userName;
+		
+		public String getUserName() {
+		    return userName;
+		}
+		
+		public void setUserName(final String userName) {
+		    this.userName = userName;
+		}
+	
+	}
+
+    <resources>
+        <Resource id="MyResource" class-name="org.superbiz.MyClass">
+		    UserName tomee
+		</Resource>
+    </resources>
+
+You can also add a properties field as shown below, and this will have any used properties from the resource configuration set on it. So as an alternative to the above code, you could do:
+
+    public class MyClass {
+	
+	    private Properties properties;
+		
+		public Properties getProperties() {
+		    return properties;
+		}
+		
+		public void setProperties(final Properties properties) {
+		    this.properties = properties;
+		}
+	
+	}
+
+    <resources>
+        <Resource id="MyResource" type="org.superbiz.MyClass">
+		    UserName tomee
+		</Resource>
+    </resources>
+
+and reference the UserName properties via `MyClass.getProperties().getProperty("UserName");`. This can also be used with factory create() methods (see below).
+
+# Additional resource properties
+
+Resources are typically discovered, created, and bound to JNDI very early on in the deployment process, as other components depend on them. This may lead to problems where the final classpath for the application has not yet been determined, and therefore TomEE is unable to load your custom resource. 
+
+The following properties can be used to change this behavior.
+
+| Property                   | Values           | Description  |
+| -------------------------- | ---------------- | -------------|
+| Lazy                       | true/false       | Creates a proxy that defers the actual instantiation of the resource until the first time it is looked up from JNDI. |
+| UseAppClassLoader          | true/false       | Forces a lazily instantiated resource to use the application classloader, instead of the classloader available when the resources were first processed. |
+| InitializeAfterDeployment  | true/false       | Forces a resource created with the Lazy property to be instantiated once the application has started, as opposed to waiting for it to be looked up. |
+
+By default, if TomEE encounters a custom application resource that cannot be instantiated until the application has started, it will set these three flags to `true`, unless the `Lazy` flag has been explicitly set.
+
+# create() method
+
+In some circumstances, it may be desirable to add some additional logic to the creation process, or to use a factory pattern to create resources. TomEE also provides this facility via the `create` method. The `factory-name` attribute on the resource can reference any no argument method that returns an object on the class specified in the `class-name` attribute.
+
+For example:
+
+    public class Factory {
+	
+	    private Properties properties;
+	
+	    public Object create() {
+		
+		     MyResource resource = new MyResource();
+			 // some custom logic here, maybe using this.properties
+			 
+			 return resource;
+		}
+		
+		public Properties getProperties() {
+		    return properties;
+		}
+		
+		public void setProperties(final Properties properties) {
+		    this.properties = properties;
+		}
+	
+	}
+
+    <resources>
+        <Resource id="MyResource" class-name="org.superbiz.Factory" factory-name="create">
+		    UserName tomee
+		</Resource>
+    </resources>
+
+# @PostConstruct / @PreDestroy
+
+As an alternative to using a factory method, you can use @PostConstruct and @PreDestroy methods within your resource class (note that you cannot use this within a factory class) to manage any additional creation or cleanup activities. TomEE will automatically call these methods when the application is started and destroyed. Using @PostConstruct will effectively force a lazily loaded resource to be instantiated when the application is starting - in the same way that the `InitializeAfterDeployment` property does.
+
+    public class MyClass {
+	
+	    private Properties properties;
+		
+		public Properties getProperties() {
+		    return properties;
+		}
+		
+		public void setProperties(final Properties properties) {
+		    this.properties = properties;
+		}
+		
+		@PostConstruct
+		    public void postConstruct() throws MBeanRegistrationException {
+		        // some custom initialization
+			}
+		}
+	
+	}
+
+
+
+# Examples
+
+The following examples demonstrate including custom resources within your application:
+
+* resources-jmx-example
+* resources-declared-in-webapp
+
