@@ -29,7 +29,7 @@ As an alternative to defining a resource in XML, resources can also be defined u
     MyQueue = new://Resource?type=javax.jms.Queue
 	
 Resources, or attributes for resources specified using system properties will override definitions specified in `tomee.xml`.
-Server-wide resources can be looked up in JNDI under the following name: openejb:Resources/<resource id>.
+Server-wide resources can be looked up in JNDI under the following name: openejb:Resources/resource id.
 
 # Defining Resources
 <a name="DefiningResources"></a>
@@ -57,7 +57,7 @@ The `<Resource>` tag has a number of attributes which control the way that the r
 
 * type
 
-A type that TomEE know. The type is associated with a provider that knows how to create that type, and also any default properties that the resource should have if they are not specified in the resource definition. See <a href="https://github.com/apache/tomee/blob/tomee-1.7.x/tomee/tomee-webapp/src/main/resources/META-INF/org.apache.tomee/service-jar.xml">service-jar.xml</a> for an example of set of service providers that come with TomEE.
+A type that TomEE knows. The type is associated with a provider that knows how to create that type, and also any default properties that the resource should have if they are not specified in the resource definition. See <a href="https://github.com/apache/tomee/blob/tomee-1.7.x/tomee/tomee-webapp/src/main/resources/META-INF/org.apache.tomee/service-jar.xml">service-jar.xml</a> for an example set of service providers that come with TomEE.
 
 * provider
 
@@ -146,7 +146,7 @@ The format of `resources.xml` uses the same `<Resource>` tag as `tomee.xml`. One
 	
 This mechanism allows you to package your custom resources within your application, alongside your application code, rather than requiring a .jar file in the `lib/` directory.
 
-Application resources are bound in JNDI under openejb:Resource/<appname>/<resource id>.
+Application resources are bound in JNDI under openejb:Resource/appname/resource id.
 
 # Additional resource properties
 
