@@ -22,14 +22,14 @@ our @patterns = (
     [qr!^/downloads.html$!, news_page => { }],
     [qr!^/download/.*.html$!, news_page => { }],
 
-    [qr!^/download/.*1.*-snapshot.mdtext$!, basic => {
+    [qr!^/download/tomee-1.*-snapshot.mdtext$!, basic => {
         template => "snapshot.html"
     }],
     [qr!^/download/tomee-2.*-snapshot.mdtext$!, basic => {
-        template => "snapshot.html"
+        template => "snapshot7.html"
     }],
     [qr!^/download/tomee-7.*-snapshot.mdtext$!, basic => {
-        template => "snapshot.html"
+        template => "snapshot7.html"
     }],
 
     [qr!README\.md(text)?$!, example => {
