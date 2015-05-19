@@ -1,0 +1,135 @@
+{% extends "basic.html" %}
+
+{% block title %}Apache TomEE {{ headers.version }}-SNAPSHOT{% endblock %}
+{% block content %}
+<section xmlns="https://www.w3.org/1999/html">
+
+    <div class="alert-message danger">
+      <strong>Caution</strong>
+        Snapshot builds are not supported for production use
+    </div>
+
+    <div>
+        <p>
+            Snapshot builds are provided for the purpose verifying fixes and participating in the development cycle by evaluating new features and improvements and giving feedback.
+            The community will happily support your use of snapshots for development purposes with the mutual understanding all builds are works in progress and subject to change.
+        </p>
+    </div>
+    <div class="row">
+        <div class="span24">&nbsp;</div>
+    </div>
+
+    <div class="page-header">
+        <h1>Apache TomEE {{ headers.version }}-SNAPSHOT
+            <small>Unreleased</small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="span4">
+            <h2>Web Profile</h2>
+
+            <p>Apache TomEE Web Profile delivers Servlets, JSP, JSF, JTA, JPA, CDI, Bean Validation and EJB Lite</p>
+
+            <p><a href="../comparison.html">Comparison &raquo;</a></p>
+            <br>
+            <h2>Plus</h2>
+
+            <p>Apache TomEE Plus delivers all that is in the Web Profile plus EJB Full, Java EE Connector Architecture, JMS and JAX-WS.</p>
+
+            <p><a href="../comparison.html">Comparison &raquo;</a></p>
+
+        </div>
+        <div class="span12">
+            <br>
+            <br>
+            <ul>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=webprofile&p=tar.gz">apache-tomee-{{ headers.version }}-SNAPSHOT-webprofile.tar.gz</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=webprofile&p=tar.gz.md5">md5</a>)
+                </li>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=webprofile&p=zip">apache-tomee-{{ headers.version }}-SNAPSHOT-webprofile.zip</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=webprofile&p=zip.md5">md5</a>)
+                </li>
+            </ul>
+            <br>
+            <br>
+
+            <ul>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=plus&p=tar.gz">apache-tomee-{{ headers.version }}-SNAPSHOT-plus.tar.gz</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=plus&p=tar.gz.md5">md5</a>)
+                </li>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=plus&p=zip">apache-tomee-{{ headers.version }}-SNAPSHOT-plus.zip</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=apache-tomee&v={{ headers.version }}-SNAPSHOT&c=plus&p=zip.md5">md5</a>)
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="span24">&nbsp;</div>
+</div>
+<section>
+    <div class="page-header">
+        <h2>Apache OpenEJB {{ headers.oversion }}-SNAPSHOT
+            <small>Unreleased</small>
+        </h2>
+    </div>
+
+    <div class="row">
+        <div class="span4">
+            <h3>Standalone</h3>
+
+            <p>An "EJB" Server that can be run as a separate, standalone, server process. Contains EJB Full, CDI, JPA, JMS, JAX-WS</p>
+
+            <p><a href="../comparison.html">Comparison &raquo;</a></p>
+        </div>
+        <div class="span12">
+            <h3>&nbsp;</h3>
+            <ul>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=openejb-standalone&v={{ headers.oversion }}-SNAPSHOT&p=tar.gz">openejb-standalone-{{ headers.oversion }}-SNAPSHOT.tar.gz</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=openejb-standalone&v={{ headers.oversion }}-SNAPSHOT&p=tar.gz.md5">md5</a>)
+                </li>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=openejb-standalone&v={{ headers.oversion }}-SNAPSHOT&p=zip">openejb-standalone-{{ headers.oversion }}-SNAPSHOT.zip</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=openejb-standalone&v={{ headers.oversion }}-SNAPSHOT&p=zip.md5">md5</a>)
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span4">
+            <h3>Drop-in WARs</h3>
+
+            <p>A version of Apache TomEE that can be dropped into any Tomcat 7.x install effectively creating your own Apache TomEE Web Profile or Apache TomEE Plus.</p>
+        </div>
+        <div class="span12">
+            <h3>&nbsp;</h3>
+            <ul>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=tomee-webapp&v={{ headers.version }}-SNAPSHOT&p=war">tomee-webapp-{{ headers.version }}-SNAPSHOT.war</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=tomee-webapp&v={{ headers.version }}-SNAPSHOT&p=war.md5">md5</a>)
+                </li>
+                <li><a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=tomee-plus-webapp&v={{ headers.version }}-SNAPSHOT&p=war">tomee-plus-webapp-{{ headers.version }}-SNAPSHOT.war</a>
+                    (<a href="https://repository.apache.org/service/local/artifact/maven/redirect?r=snapshots&g=org.apache.openejb&a=tomee-plus-webapp&v={{ headers.version }}-SNAPSHOT&p=war.md5">md5</a>)
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="span24">&nbsp;</div>
+</div>
+<section>
+    <div class="page-header">
+        <h1>Changelog</h1>
+    </div>
+
+    <div class="row">
+        <div class="span24">
+
+            {{ changelog|safe }}
+
+        </div>
+    </div>
+</section>
+{% endblock %}
