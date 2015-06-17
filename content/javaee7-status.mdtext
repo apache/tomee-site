@@ -119,8 +119,8 @@ This page shows the current implementation status for the Java EE 7 specificatio
         <td>Java Persistence API (JPA)</td>
         <td>2.1</td>
         <td><a href="http://jcp.org/en/jsr/detail?id=338">338</a></td>
-        <td>API updated, most features missing.</td>
-        <td>API updated, most features missing.</td>
+        <td>API 2.1 supported, default provider still 2.0.</td>
+        <td>API 2.1 supported, default provider still 2.0.</td>
     </tr>
 
     <tr>
