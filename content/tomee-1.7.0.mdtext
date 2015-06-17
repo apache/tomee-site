@@ -55,4 +55,4 @@ So please feel free to jump in feet first and [get started with TomEE](http://to
 
 ###Java EE7 and Beyond
 
-From this point on the TomEE community will be focusing most of it's efforts on TomEE 2.0.x, which will be the first TomEE Java EE 7 driven version running on Apache Tomcat 8.x. It is more than likely that support for Java SE 6 will be dropped so that Java SE 7 features can finally be leveraged during the development process. We will of course continue to maintain the 1.7.x branch for the foreseeable future.
+From this point on the TomEE community will be focusing most of it's efforts on TomEE 7.0.x, which will be the first TomEE Java EE 7 driven version running on Apache Tomcat 8.x. It is more than likely that support for Java SE 6 will be dropped so that Java SE 7 features can finally be leveraged during the development process. We will of course continue to maintain the 1.7.x branch for the foreseeable future.
