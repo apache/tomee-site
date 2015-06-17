@@ -2,7 +2,7 @@
 
 The Apache TomEE community is delighted to announce the very first release of [Apache TomEE 7.0.0-M1](http://tomee.apache.org/downloads.html), which is based on [Apache Tomcat 8.0.23](http://tomcat.apache.org/tomcat-8.0-doc/index.html). This version is our first step towards EE7 certification, and is the result of a huge effort from the TomEE developers. We know it has been in the works a while, but please appreciate that most of the work on TomEE is voluntary.
 
-Note that this version is still an EE6 certified product, but contains many usable EE7 features. For a more detailed look check out the [javaee7-status.html](current status page here). It is not yet intended for production use, but please feel free to download and test it. Any feedback via our [support.html](support page) will be greatly appreciated. Have fun!
+Note that this version is still an EE6 certified product, but contains many usable EE7 features. For a more detailed look check out the [current status page here](javaee7-status.html). It is not yet intended for production use, but please feel free to download and test it. Any feedback via our [support page](support.html) will be greatly appreciated. Have fun!
 
 The Apache TomEE 7.0.0-M1 release files can be downloaded from here:
 
