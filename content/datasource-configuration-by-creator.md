@@ -11,7 +11,7 @@ align the most common entries to the historical configuration (ie DBCP).
 Here are a more detailled list of accepted properties by creator.
 
 
-== DBCP
+## DBCP
 
 Note: details are http://tomee.apache.org/containers-and-resources.html
 (note: http://commons.apache.org/proper/commons-dbcp/configuration.html uses the last version of DBCP but we didnt upgrade yet).
@@ -53,7 +53,7 @@ Note: details are http://tomee.apache.org/containers-and-resources.html
 - ValidationQuery
 - ValidationQueryTimeout
 
-== Tomcat JDBC
+## Tomcat JDBC
 
 Note: details are https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html
 
