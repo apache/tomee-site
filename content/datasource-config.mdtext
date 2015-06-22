@@ -4,6 +4,7 @@ A DataSource can be declared via xml in the `<tomee-home>/conf/tomee.xml` file o
 
     <Resource id="myDataSource" type="javax.sql.DataSource">
         accessToUnderlyingConnectionAllowed = false
+        alternateUsernameAllowed = false
         connectionProperties = 
         defaultAutoCommit = true
         defaultReadOnly = 
@@ -36,6 +37,7 @@ Alternatively, a DataSource can be declared via properties in the `<tomee-home>/
 
     myDataSource = new://Resource?type=javax.sql.DataSource
     myDataSource.accessToUnderlyingConnectionAllowed = false
+    myDataSource.alternateUsernameAllowed = false
     myDataSource.connectionProperties = 
     myDataSource.defaultAutoCommit = true
     myDataSource.defaultReadOnly = 
@@ -81,7 +83,16 @@ See the [Common DataSource Configurations](common-datasource-configurations.html
   <td>false</td>
   <td>
 If true the raw physical connection to the database can be
-accessed using the following construct:
+accessed
+</td>
+</tr>
+</tr>
+<tr>
+  <td><a href="#alternateUsernameAllowed">alternateUsernameAllowed</a></td>
+  <td>boolean</td>
+  <td>false</td>
+  <td>
+If true allow an alternate username and password to be specified on the connection, rather than those specified in the DataSource definition..
 </td>
 </tr>
 <tr>
