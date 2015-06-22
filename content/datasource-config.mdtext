@@ -528,5 +528,7 @@ For TomEE 1.7.0/1.7.1 you can need to add the property:
 in resource properties to ensure the resource is pooled.
 
 
+## Details about DataSource and their factories (advanced configuration)
 
 
+[Configuration by creator](datasource-configuration-by-creator.html)
