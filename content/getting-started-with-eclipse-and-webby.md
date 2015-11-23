@@ -1,6 +1,7 @@
 # TomEE and Eclipse using Webby
 
-If you want to use Eclipse and WTP (the classic way), please read this : [http://openejb.apache.org/tomee-and-eclipse.html]
+If you want to use Eclipse and WTP (the classic way), please read this [docs](http://openejb.apache.org/tomee-and-eclipse.html).
+
 If you intends to run a Maven WAR project, you can adopt [m2eclipse-webby](https://github.com/tesla/m2eclipse-webby), because it will be more efficient. In this case, follow this docs.
 
 ## Prerequisite
@@ -11,7 +12,7 @@ The next thing you need is [m2eclipse](http://www.eclipse.org/m2e/) plugin.
 If you doesn't have it in your eclipse package, install it like another plugin.
 
 ### Webby
-Then you need to install [m2eclipse-webby](https://github.com/tesla/m2eclipse-webby) :
+0. Then you need to install [m2eclipse-webby](https://github.com/tesla/m2eclipse-webby)
 1. In eclipse, select menu "Help" / "Install new software", and type this URL : https://repository.takari.io/content/sites/m2e.extras/m2eclipse-webby/0.2.2/N/LATEST/
 2. Select Web Application Launcher for M2Eclipse / Webby Core
 3. Click Finish and continue the classic installation way.
