@@ -176,6 +176,9 @@
     <loc>http://tomee.apache.org/downloads.html</loc>
   </url>
   <url>
+    <loc>http://tomee.apache.org/downloads7.html</loc>
+  </url>
+  <url>
     <loc>http://tomee.apache.org/</loc>
   </url>
   <url>
@@ -213,6 +216,12 @@
   </url>
   <url>
     <loc>http://tomee.apache.org/download/tomee-1.7.1.html</loc>
+  </url>
+  <url>
+    <loc>http://tomee.apache.org/download/tomee-1.7.3.html</loc>
+  </url>
+  <url>
+    <loc>http://tomee.apache.org/download/tomee-7.0.0-M1.html</loc>
   </url>
   <url>
     <loc>http://tomee.apache.org/security/tomee.html</loc>
