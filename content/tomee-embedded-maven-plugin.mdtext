@@ -952,10 +952,5 @@ It also allows to use a flat classpath deployment which is often use with micros
 <li><b>Default</b>: <tt>${project.build.directory}/tomee-embedded-work</tt></li>
         </ul>
       </div>
-    </div>
   
-
-      </div>
-    </div>
-
 
