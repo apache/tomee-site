@@ -1,6 +1,6 @@
 # Apache TomEE 7.0.0-M1 released, Dec 11th 2015
 
-The Apache TomEE community is proud to announce the release of [Apache TomEE 7.0.0-M1](downloads-seven.html), which is based on [Apache Tomcat 8.0.30](http://tomcat.apache.org/tomcat-8.0-doc/index.html) and is our first milestone release towards EE7.
+The Apache TomEE community is proud to announce the release of [Apache TomEE 7.0.0-M1](download/tomee-7.0.0-M1.html), which is based on [Apache Tomcat 8.0.30](http://tomcat.apache.org/tomcat-8.0-doc/index.html) and is our first milestone release towards EE7.
 We know this has been a long time coming, so we thank you for your patience and support.
 
 Please feel free to check out and [contribute to the developer branch](contribute.html) - We are always interested in any help from the community that we can get.
@@ -9,7 +9,7 @@ This version is not certified and is provided to the community as a milestone pr
 
 The Apache TomEE 7.0.0-M1 release files can be downloaded from here:
 
-[http://tomee.apache.org/downloads-seven.html](downloads-seven.html)
+[http://tomee.apache.org/download/tomee-7.0.0-M1.html](download/tomee-7.0.0-M1.html)
 
 ###Update Maven POM Files - The OpenEJB version and groupId have been aligned
 
