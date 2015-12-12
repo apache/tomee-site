@@ -9,7 +9,7 @@ This version is not certified and is provided to the community as a milestone pr
 
 The Apache TomEE 7.0.0-M1 release files can be downloaded from here:
 
-[http://tomee.apache.org/downloads-seven.html](downloads7.html)
+[http://tomee.apache.org/downloads-seven.html](downloads-seven.html)
 
 ###Update Maven POM Files - The OpenEJB version and groupId have been aligned
 
