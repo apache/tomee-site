@@ -1,6 +1,6 @@
 # TomEE and Eclipse using Webby
 
-If you want to use Eclipse and WTP (the classic way), please read this [docs](http://openejb.apache.org/tomee-and-eclipse.html).
+If you want to use Eclipse and WTP (the classic way), please read this [docs](http://tomee.apache.org/tomee-and-eclipse.html).
 
 If you intends to run a Maven WAR project, you can adopt [m2eclipse-webby](https://github.com/tesla/m2eclipse-webby), because it will be more efficient. In this case, follow this docs.
 
