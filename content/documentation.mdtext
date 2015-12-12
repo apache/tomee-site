@@ -89,6 +89,7 @@ You can also find us on IRC freenode.org #openejb and #tomee
 ###TomEE Maven Plugin
 [Getting started](tomee-mp-getting-started.html)
 [tomee-maven-plugin reference documentation](maven/index.html)
+[tomee-embedded-maven-plugin reference documentation](tomee-embedded-maven-plugin.html)
 [TomEE simple webapp archetype documentation](tomee-mp-getting-started.html)
 }
 {span-one-third
