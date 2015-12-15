@@ -29,7 +29,7 @@ Simply update your existing Maven JavaEE-API, OpenEJB and or TomEE pom.xml entri
 	</dependency>
 	
 	<dependency>
-		<groupId>org.apache.openejb</groupId>
+		<groupId>org.apache.tomee</groupId>
 		<artifactId>tomee</artifactId>
 		<version>7.0.0-M1</version>
 	</dependency>
