@@ -21,9 +21,22 @@ If you have encountered an unlisted security vulnerability or other unexpected b
 or if the descriptions here are incomplete, please report them privately to
 the [Apache Security Team](http://www.apache.org/security). Thank you.
 
-## Fixed in Apache TomEE xxx
+## Fixed in Apache TomEE 7.0.0-M3 and 1.7.4
 
-_No CVE has been opened to be fixed on current Apache TomEE project sources._
+TomEE was subject until versions 1.7.3 and 7.0.0-M1 included to the 0-day vulnerability. Note
+that even if fixed in 7.0.0-M2 we recommand you to upgrade to the 7.0.0-M3 which includes a better fix for that (better defaults).
+
+This issue only affects you if you rely on EJBd protocol (proprietary remote EJB protocol). This one one is not activated by default on the 7.x series
+but it was on the 1.x ones.
+
+The related CVE number is *CVE-2016-0779*: the EJBd protocol provided by TomEE can exploit the 0-day vulnerability.
+This has been fixed in commit 58cdbbef9c77ab2b44870f9d606593b49cde76d9.
+
+Check [properties configuration](/properties-listing.html) for more details (tomee.serialization.class.* and tomee.remote.support).
+
+### Credit
+
+We would like to thank cpnrodzc7 who discovered it working with HP's Zero Day Initiative
 
 ## Fixed in Third-party
 
