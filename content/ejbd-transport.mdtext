@@ -29,7 +29,7 @@ using the "activated" init parameter of the servlet.
 Finally you can move this servlet in your own webapp if you want to use a provider url
 containing your webapp context. Simply copy paste the servlet definition in your web.xml
 and set the url mapping to what you want (let say /foo/*). Then use the provider url
-http://&lt;host&gt;:&lt;port&gt;/&lt;webapp context name&lgt;/foo
+http://&lt;host&gt;:&lt;port&gt;/&lt;webapp context name&gt;/foo
 
 ### Remote communication and serialization
 
@@ -73,6 +73,20 @@ If you trust all classes in the package `foo` except the class `foo.Bar` you hav
 
     tomee.serialization.class.whitelist = foo.
     tomee.serialization.class.blacklist = foo.Bar
+
+#### Revert to behavior of TomEE 1.7.3
+
+You can configure these properties so that the Ejbd transport will behave in the same way it did with TomEE 1.7.3:
+
+    tomee.serialization.class.whitelist = 
+    tomee.serialization.class.blacklist = org.codehaus.groovy.runtime.,org.apache.commons.collections.functors.,org.apache.xalan,java.lang.Process
+
+Please note that with this configuration your server is vulnerable to Java serialization attacks again in particular when the system is exposed to the internet.
+
+As Ejbd transport is tunneled over HTTP please make sure that the `ServerServlet` is not publicly accessible.
+When the applications running on TomEE do not package the `ServerServlet` themselves ensure that the URL http://&lt;host&gt;:&lt;port&gt;/tomee/ejb is not accessible from untrusted sources.
+
+If your applications package declare it in their own web.xml make sure that the respective URL is not accessible from untrusted sources.
 
 #### Remote communication and Arquillian tests
 

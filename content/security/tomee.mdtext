@@ -29,10 +29,10 @@ that even if fixed in 7.0.0-M2 we recommand you to upgrade to the 7.0.0-M3 which
 This issue only affects you if you rely on EJBd protocol (proprietary remote EJB protocol). This one one is not activated by default on the 7.x series
 but it was on the 1.x ones.
 
-The related CVE number is *CVE-2016-0779*: the EJBd protocol provided by TomEE can exploit the 0-day vulnerability.
+The related CVE number is [CVE-2016-0779](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0779): the EJBd protocol provided by TomEE can exploit the 0-day vulnerability.
 This has been fixed in commit 58cdbbef9c77ab2b44870f9d606593b49cde76d9.
 
-Check [properties configuration](/properties-listing.html) for more details (tomee.serialization.class.* and tomee.remote.support).
+Check [properties configuration](/properties-listing.html) and [Ejbd transport](/ejbd-transport.html) for more details (tomee.serialization.class.* and tomee.remote.support).
 
 ### Credit
 
