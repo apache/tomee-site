@@ -93,3 +93,6 @@ blockquote p {
     background-color: #222222;
     color: #e6e7e8;
 }
+.text-center {
+    text-align: center;
+}
