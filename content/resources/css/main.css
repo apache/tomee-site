@@ -89,7 +89,7 @@ blockquote p {
     color: #0c0;
 }
 
-#contrast.table thead th {
+#contrast table thead th {
     background-color: #222222;
     color: #e6e7e8;
 }
