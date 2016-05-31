@@ -102,6 +102,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/ng/developer/json/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/ng/developer/testing/applicationcomposer/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
