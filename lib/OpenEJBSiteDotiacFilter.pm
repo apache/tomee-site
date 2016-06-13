@@ -16,7 +16,7 @@ sub markdown_filter {
     # string()) so that we can embed html in our .mdtext documents.
     my $raw  = $value->repr;
 
-    $raw =~ s,\(/\),<IMG class="emoticon" src="http://tomee.staging.apache.org/resources/images/check.png" height="16" width="16" align="absmiddle" alt="" border="0">,g;
+    $raw =~ s,\(/\),<IMG class="emoticon" src="http://tomee.apache.org/resources/images/check.png" height="16" width="16" align="absmiddle" alt="" border="0">,g;
     $raw =~ s,\(x\),<IMG class="emoticon" src="http://tomee.apache.org/resources/images/error.png" height="16" width="16" align="absmiddle" alt="" border="0">,g;
 
 
