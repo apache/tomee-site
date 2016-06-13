@@ -7,6 +7,8 @@ Apache OpenEJB and Apache TomEE are born from the same project and community.  T
 
 Effectively, TomEE is a superset of OpenEJB.  They share the same code and TomEE grew out of OpenEJB.
 
+Note: this table is for TomEE 1.x, TomEE 7 comments are under it.
+
 <table>
 <tr>
 <th></th>
