@@ -1,6 +1,6 @@
-Title: Apache TomEE 1.x
+Title: Apache TomEE
 
-## Apache TomEE 1.x vulnerabilities
+## Apache TomEE vulnerabilities
 
 This page lists all security vulnerabilities fixed in maintenance releases or interim builds of Apache TomEE 1.x.
 Each vulnerability is given a security impact rating by either the Apache TomEE team or by the dependent project
@@ -20,6 +20,10 @@ known vulnerabilities listed here, please send your questions to the public [Use
 If you have encountered an unlisted security vulnerability or other unexpected behaviour that has security impact,
 or if the descriptions here are incomplete, please report them privately to
 the [Apache Security Team](http://www.apache.org/security). Thank you.
+
+## Fixed in Apache TomEE 7.0.1
+
+* [CVE-2016-3092](http://mail-archives.us.apache.org/mod_mbox/www-announce/201606.mbox/%3C45A20804-ABFF-4FED-A297-69AC95AB9A3F@apache.org%3E) Apache Tomcat Denial of Service
 
 ## Fixed in Apache TomEE 7.0.0-M3 and 1.7.4
 
