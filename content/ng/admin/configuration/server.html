@@ -122,7 +122,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">.bind, &lt;service prefix&gt;.port, &lt;service prefix&gt;.disabled, &lt;service prefix&gt;.threads</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">host or IP, port, bool</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">override the host. Available for ejbd and httpejbd services (used by jaxws and jaxrs), number of thread to maneg requests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override the host. Available for ejbd and httpejbd services (used by jaxws and jaxrs), number of thread to manage requests</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">openejb.embedded.initialcontext.close</p></td>
@@ -270,119 +270,129 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">composition of {ejbJarId}, ejbDeploymentId, ejbType, ejbClass, ejbClass.simpleName, ejbName, portComponentName, wsdlPort, wsdlService	default /{ejbDeploymentId}. The WS name format.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.openejb.server.webservices.saaj.provider	axis2, sun or null	specified the saaj configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org.apache.openejb.server.webservices.saaj.provider</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">axis2, sun or null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">specified the saaj configuration</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[&lt;uppercase service name&gt;.]&lt;service id&gt;.&lt;name&gt; or [&lt;uppercase service name&gt;.]&lt;service id&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">whatever is supported (generally string, int &#8230;&#8203;)</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">set this value to the corresponding service. example: [EnterpriseBean.]&lt;ejb-name&gt;.activation.&lt;property&gt;, [PERSISTENCEUNIT.]&lt;persistence unit name&gt;.&lt;property&gt;, [RESOURCE.]&lt;name&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">log4j.category.OpenEJB.options	DEBUG, INFO, &#8230;&#8203;	active one OpenEJB log level. need log4j in the classpath</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.jmx.active</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4j.category.OpenEJB.options</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEBUG, INFO, &#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">active one OpenEJB log level. need log4j in the classpath</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.jmx.active</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">activate (by default) or not the OpenEJB JMX MBeans</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.nobanner</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.nobanner</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">activate or not the OpenEJB banner (activated by default)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.check.classloader</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.check.classloader</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">if true print some information about duplicated classes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.check.classloader.verbose</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.check.classloader.verbose</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">if true print classes intersections</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.additional.exclude</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.additional.exclude</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string separated by comma</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">list of prefixes you want to exclude and are not in the default list of exclusion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.additional.include</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.additional.include</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string separated by comma</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">list of prefixes you want to remove from thedefault list of exclusion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.offline</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.offline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">if true can create datasources and containers automatically</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.exclude-include.order</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.exclude-include.order</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">include-exclude or exclude-include</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">if the inclusion/exclusion should win on conflicts (intersection)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.log.color</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.log.color</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">activate or not the color in the console in embedded mode</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.log.color.&lt;level in lowercase&gt;</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.log.color.&lt;level in lowercase&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">color in uppercase</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">set a color for a particular level. Color are BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, DEFAULT.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.serialization.class.blacklist</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.serialization.class.blacklist</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">default list of packages/classnames excluded for EJBd deserialization (needs to be set on server and client sides). Please see the description of Ejbd Transport for details.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.serialization.class.whitelist</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.serialization.class.whitelist</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">default list of packages/classnames allowed for EJBd deserialization (blacklist wins over whitelist, needs to be set on server and client sides). Please see the description of Ejbd Transport for details.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.remote.support</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.remote.support</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">if true /tomee webapp is auto-deployed and EJBd is active (true by default for 1.x, false for 7.x excepted for tomee maven plugin and arquillian)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.crosscontext</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.crosscontext</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">set the cross context property on tomcat context (can be done in the traditionnal way if the deployment is don through the webapp discovery and not the OpenEJB Deployer EJB)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.jsessionid-support</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.jsessionid-support</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">remove URL from session tracking modes for this context (see javax.servlet.SessionTrackingMode)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.myfaces.disable-default-values</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.myfaces.disable-default-values</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">by default TomEE will initialize myfaces with some its default values to avoid useless logging</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.web.xml.major</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.web.xml.major</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">major version of web.xml. Can be useful to force tomcat to scan servlet 3 annotatino when deploying with a servlet 2.x web.xml</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.jaxws.subcontext</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.jaxws.subcontext</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sub context used to bind jaxws web services, default is webservices</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.servicemanager.enabled</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.servicemanager.enabled</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">run all services detected or only known available services (WS and RS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.jaxws.oldsubcontext</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tomee.jaxws.oldsubcontext</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">wether or not activate old way to bind jaxws webservices directly on root context</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.modulename.useHash</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">openejb.modulename.useHash</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bool</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add a hash after the module name of the webmodule if it is generated from the webmodule location, it avoids conflicts between multiple deployment (through ear) of the same webapp. Note: it disactivated by default since names are less nice this way.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">openejb.session.manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">qualified name (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">configure a session managaer to use for all contexts</p></td>
 </tr>
 </tbody>
 </table>
