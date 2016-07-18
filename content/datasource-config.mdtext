@@ -144,7 +144,7 @@ will need a lot of properties but allow to not set some values
   <td>int</td>
   <td>0</td>
   <td>
-The default TransactionIsolation state of new connections.
+The size to reach when creating the datasource.
 </td>
 </tr>
 <tr>
@@ -380,8 +380,9 @@ NOTE - The "user" and "password" properties will be passed
 explicitly, so they do not need to be included here.
 
 
-<a name="initialSize"></a>
-## initialSize
+<a name="TransactionIsolation"></a>
+## TransactionIsolation
+
 
 The default TransactionIsolation state of new connections.
 
@@ -396,9 +397,11 @@ be called. The allowed values for this property are:
 
 Note: Most JDBC drivers do not support all isolation levels
 DefaultTransactionIsolation
-The initial number of connections that are created when the
-pool is started
 
+<a name="initialSize"></a>
+## initialSize
+
+The initial size to initialize the pool of connections.
 
 <a name="jtaManaged"></a>
 ## jtaManaged
