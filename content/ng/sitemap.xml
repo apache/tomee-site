@@ -97,6 +97,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/ng/developer/configuration/cxf.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/ng/developer/ide/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
