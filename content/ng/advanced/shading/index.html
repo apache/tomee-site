@@ -123,7 +123,7 @@
         &lt;dependencyReducedPomLocation&gt;${project.build.directory}/reduced-pom.xml&lt;/dependencyReducedPomLocation&gt;
         &lt;transformers&gt;
           &lt;transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"&gt;
-            &lt;mainClass&gt;org.apache.tomee.embedded.Main&lt;/mainClass&gt;
+            &lt;mainClass&gt;org.apache.tomee.embedded.FatApp&lt;/mainClass&gt;
           &lt;/transformer&gt;
           &lt;transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer"&gt;
             &lt;resource&gt;META-INF/cxf/bus-extensions.txt&lt;/resource&gt;
@@ -207,7 +207,7 @@ which can be skipped in this operation since it is there only as a marker for ja
 </div>
 </div>
 <div class="sect1">
-<h2 id="_fat_jars_witrh_gradle">Fat Jars witrh Gradle</h2>
+<h2 id="_fat_jars_with_gradle">Fat Jars with Gradle</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>With gradle you can rely on either jar plugin, fatjar plugin or shadowjar plugin. Last one is likely the closer to maven shade plugin
@@ -322,7 +322,7 @@ shadowJar {
 
     // ensure we define the expected Main (if you wrap tomee main use your own class)
     manifest {
-        attributes 'Main-Class': 'org.apache.tomee.embedded.Main'
+        attributes 'Main-Class': 'org.apache.tomee.embedded.FatApp'
     }
 }</code></pre>
 </div>
