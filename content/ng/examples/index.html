@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apache TomEE</title>
+	<meta name="description" content="Apache TomEE is a light JavaEE server with a lot tooling" />
+	<meta name="keywords" content="tomee,asf,apache,javaee,jee,shade,embedded,test,junit,applicationcomposer,maven,arquillian" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<link rel="icon" href="../favicon.ico">
+	<link rel="icon"  type="image/png" href="../favicon.png">
+	<meta name="msapplication-TileColor" content="#80287a">
+	<meta name="theme-color" content="#80287a">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/owl.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="../css/jqtree.css">
+	<link rel="stylesheet" type="text/css" href="../css/idea.css">
+	<link rel="stylesheet" type="text/css" href="../css/cardio.css">
+
+	<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2717626-1']);
+      _gaq.push(['_setDomainName', 'apache.org']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+		<img src="../img/loader.gif" alt="Preloader image">
+	</div>
+    <nav class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="..//#">
+				    <span>
+
+				    
+                        <img src="../img/logo-active.png">
+                    
+
+                    </span>
+				    Apache TomEE
+                </a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="../developer/index.html">Developer</a></li>
+					<li><a href="../admin/index.html">Admin</a></li>
+					<li><a href="../advanced/index.html">Advanced</a></li>
+					<li><a href="../security/index.html">Security</a></li>
+					<li><a href="../examples/index.html">Examples</a></li>
+					<li><a href="../blog/index.html">Blog</a></li>
+					<li><a href="../community/index.html">Community</a></li>
+                    <li><a href="../download.html">Downloads</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+<div id="main-block" class="container section-padded">
+<div class="row title">
+  <div class='page-header'>
+    
+    <div class='btn-toolbar pull-right'>
+      <div class='btn-group'>
+        <a class="btn" href="../examples/index.pdf"><i class="fa fa-file-pdf-o"></i> Download as PDF</a>
+      </div>
+    </div>
+    
+    <h2>Examples</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 contributors">
+    <ul>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/access-timeout">access-timeout</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/access-timeout-meta">access-timeout-meta</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/alternate-descriptors">alternate-descriptors</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/applet">applet</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/application-composer">application-composer</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/applicationcomposer-jaxws-cdi">applicationcomposer-jaxws-cdi</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/applicationexception">applicationexception</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/arquillian-jpa">arquillian-jpa</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/async-methods">async-methods</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/async-postconstruct">async-postconstruct</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/bean-validation-design-by-contract">bean-validation-design-by-contract</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/bval-evaluation-redeployment">bval-evaluation-redeployment</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-alternative-and-stereotypes">cdi-alternative-and-stereotypes</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-application-scope">cdi-application-scope</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-basic">cdi-basic</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-ejbcontext-jaas">cdi-ejbcontext-jaas</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-events">cdi-events</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-interceptors">cdi-interceptors</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-produces-disposes">cdi-produces-disposes</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-produces-field">cdi-produces-field</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-realm">cdi-realm</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-request-scope">cdi-request-scope</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cdi-session-scope">cdi-session-scope</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/change-jaxws-url">change-jaxws-url</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/client-resource-lookup-preview">client-resource-lookup-preview</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/component-interfaces">component-interfaces</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/cucumber-jvm">cucumber-jvm</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/custom-injection">custom-injection</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/datasource-ciphered-password">datasource-ciphered-password</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/datasource-definition">datasource-definition</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/datasource-versioning">datasource-versioning</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/decorators">decorators</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/deltaspike-configproperty">deltaspike-configproperty</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/deltaspike-exception-handling">deltaspike-exception-handling</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/deltaspike-fullstack">deltaspike-fullstack</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/deltaspike-i18n">deltaspike-i18n</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/dynamic-dao-implementation">dynamic-dao-implementation</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/dynamic-datasource-routing">dynamic-datasource-routing</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/dynamic-implementation">dynamic-implementation</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/dynamic-proxy-to-access-mbean">dynamic-proxy-to-access-mbean</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/ear-testing">ear-testing</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/ejb-examples">ejb-examples</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/ejb-webservice">ejb-webservice</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/groovy-cdi">groovy-cdi</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/groovy-jpa">groovy-jpa</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/groovy-spock">groovy-spock</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/helloworld-weblogic">helloworld-weblogic</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/injection-of-connectionfactory">injection-of-connectionfactory</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/injection-of-datasource">injection-of-datasource</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/injection-of-ejbs">injection-of-ejbs</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/injection-of-entitymanager">injection-of-entitymanager</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/injection-of-env-entry">injection-of-env-entry</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/interceptors">interceptors</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/javamail">javamail</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/jpa-eclipselink">jpa-eclipselink</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/jpa-enumerated">jpa-enumerated</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/jpa-hibernate">jpa-hibernate</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/jsf-cdi-and-ejb">jsf-cdi-and-ejb</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/jsf-managedBean-and-ejb">jsf-managedBean-and-ejb</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/lookup-of-ejbs">lookup-of-ejbs</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/lookup-of-ejbs-with-descriptor">lookup-of-ejbs-with-descriptor</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/mbean-auto-registration">mbean-auto-registration</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/moviefun">moviefun</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/moviefun-rest">moviefun-rest</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/movies-complete">movies-complete</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/movies-complete-meta">movies-complete-meta</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/mtom">mtom</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/multi-jpa-provider-testing">multi-jpa-provider-testing</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/multiple-arquillian-adapters">multiple-arquillian-adapters</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/multiple-tomee-arquillian">multiple-tomee-arquillian</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/myfaces-codi-demo">myfaces-codi-demo</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/persistence-fragment">persistence-fragment</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/pojo-webservice">pojo-webservice</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/polling-parent">polling-parent</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/projectstage-demo">projectstage-demo</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/quartz-app">quartz-app</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/realm-in-tomee">realm-in-tomee</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/reload-persistence-unit-properties">reload-persistence-unit-properties</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/resources-declared-in-webapp">resources-declared-in-webapp</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/resources-jmx-example">resources-jmx-example</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-applicationcomposer">rest-applicationcomposer</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-applicationcomposer-mockito">rest-applicationcomposer-mockito</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-cdi">rest-cdi</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-example">rest-example</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-example-with-application">rest-example-with-application</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-jaas">rest-jaas</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-on-ejb">rest-on-ejb</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/rest-xml-json">rest-xml-json</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/scala-basic">scala-basic</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/schedule-events">schedule-events</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/schedule-expression">schedule-expression</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/schedule-methods">schedule-methods</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/schedule-methods-meta">schedule-methods-meta</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/server-events">server-events</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-cdi-interceptor">simple-cdi-interceptor</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-cmp2">simple-cmp2</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-mdb">simple-mdb</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-mdb-and-cdi">simple-mdb-and-cdi</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-mdb-with-descriptor">simple-mdb-with-descriptor</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-rest">simple-rest</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-singleton">simple-singleton</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-stateful">simple-stateful</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-stateful-callbacks">simple-stateful-callbacks</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-stateless">simple-stateless</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-stateless-callbacks">simple-stateless-callbacks</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-stateless-with-descriptor">simple-stateless-with-descriptor</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-webservice">simple-webservice</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/simple-webservice-without-interface">simple-webservice-without-interface</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/spring-data-proxy">spring-data-proxy</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/spring-data-proxy-meta">spring-data-proxy-meta</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/struts">struts</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/telephone-stateful">telephone-stateful</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testcase-injection">testcase-injection</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-security">testing-security</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-security-2">testing-security-2</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-security-3">testing-security-3</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-security-4">testing-security-4</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-security-meta">testing-security-meta</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-transactions">testing-transactions</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/testing-transactions-bmt">testing-transactions-bmt</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/tomee-jersey-eclipselink">tomee-jersey-eclipselink</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/transaction-rollback">transaction-rollback</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/troubleshooting">troubleshooting</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-attachments">webservice-attachments</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-handlerchain">webservice-handlerchain</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-holder">webservice-holder</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-inheritance">webservice-inheritance</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-security">webservice-security</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-ws-security">webservice-ws-security</a></li>
+      
+      <li><a href="https://github.com/apache/tomee/tree/master/examples/webservice-ws-with-resources-config">webservice-ws-with-resources-config</a></li>
+      
+    </ul>
+  </div>
+</div>
+</div>
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Apache TomEE the little great server.</h3>
+					<h5 class="light regular light-white">"A good application in a good server"</h5>
+					<ul class="social-footer">
+						<li><a href="https://fr-fr.facebook.com/ApacheTomEE/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/apachetomee"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/communities/105208241852045684449"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 text-center-mobile">
+					<div class="row opening-hours">
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../admin/index.html" class="white">Administration</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../admin/cluster/index.html" class="regular light-white">Cluster</a></li>
+								<li><a href="../admin/configuration/index.html" class="regular light-white">Configuration</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../developer/index.html" class="white">Developer</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../developer/classloading/index.html" class="regular light-white">Classloading</a></li>
+								<li><a href="../developer/ide/index.html" class="regular light-white">IDE</a></li>
+								<li><a href="../developer/testing/index.html" class="regular light-white">Testing</a></li>
+								<li><a href="../developer/tools/index.html" class="regular light-white">Tools</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../advanced/index.html" class="white">Advanced</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../advanced/applicationcomposer/index.html" class="regular light-white">Application Composer</a></li>
+								<li><a href="../advanced/setup/index.html" class="regular light-white">Setup</a></li>
+								<li><a href="../advanced/shading/index.html" class="regular light-white">Shading</a></li>
+								<li><a href="../advanced/tomee-embedded/index.html" class="regular light-white">TomEE Embedded</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../community/index.html" class="white">Community</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../community/contributors.html" class="regular light-white">Contributors</a></li>
+								<li><a href="../community/social.html" class="regular light-white">Social</a></li>
+								<li><a href="../community/sources.html" class="regular light-white">Sources</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-12 light-white">
+					<p>Copyright &copy; 1999-2016 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. Apache TomEE, TomEE, Apache, the Apache feather logo, and the Apache TomEE project logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Scripts -->
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/wow.min.js"></script>
+	<script src="../js/typewriter.js"></script>
+	<script src="../js/jquery.onepagenav.js"></script>
+	<script src="../js/tree.jquery.js"></script>
+	<script src="../js/highlight.pack.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
+
