@@ -457,25 +457,16 @@ public class UserServiceImpl implements UserService {
 <div class="sect1">
 <h2 id="_persistence_xml">persistence.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;/persistence-unit&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  --&gt;
-&lt;/persistence&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_struts_xml">struts.xml</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;struts&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;/persistence-unit&gt;
+
+  --&gt;
+&lt;/persistence&gt;
+
+## struts.xml
+
+&lt;struts&gt;
   &lt;constant name="struts.devMode" value="true"&gt;&lt;/constant&gt;
   &lt;package name="default" namespace="/" extends="struts-default"&gt;
     &lt;action name="addUserForm" class="org.superbiz.struts.AddUserForm"&gt;
@@ -494,37 +485,22 @@ public class UserServiceImpl implements UserService {
     &lt;/action&gt;
     &lt;action name="listAllUsers" class="org.superbiz.struts.ListAllUsers"&gt;
       &lt;result&gt;/displayUsers.jsp&lt;/result&gt;
-    &lt;/action&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;/package&gt;
-&lt;/struts&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_decorators_xml">decorators.xml</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;decorators defaultdir="/decorators"&gt;
+    &lt;/action&gt;
+
+  &lt;/package&gt;
+&lt;/struts&gt;
+
+## decorators.xml
+
+&lt;decorators defaultdir="/decorators"&gt;
   &lt;decorator name="main" page="layout.jsp"&gt;
     &lt;pattern&gt;/*&lt;/pattern&gt;
   &lt;/decorator&gt;
-&lt;/decorators&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_web_xml">web.xml</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+&lt;/decorators&gt;
+
+## web.xml
+
+&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5"&gt;
   &lt;display-name&gt;Learn EJB3 and Struts2&lt;/display-name&gt;
@@ -566,7 +542,7 @@ public class UserServiceImpl implements UserService {
       &lt;include-prelude&gt;/prelude.jspf&lt;/include-prelude&gt;
     &lt;/jsp-property-group&gt;
   &lt;/jsp-config&gt;
-&lt;/web-app&gt;</pre>
+&lt;/web-app&gt;</code></pre>
 </div>
 </div>
 </div>

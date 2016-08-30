@@ -148,9 +148,9 @@ public class Calculator implements CalculatorWs {
 <div class="paragraph">
 <p>The above JAX-WS <code>@WebService</code> component results in the folliwing WSDL that will be created automatically.  Note the <code>sumAndMultiplyResponse</code> complext type returns two elements.  These match the <code>@WebParam</code> declarations and our two <code>Holder&lt;Integer&gt;</code> params.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
                   name="CalculatorService"
                   targetNamespace="http://superbiz.org/wsdl"
@@ -207,7 +207,7 @@ public class Calculator implements CalculatorWs {
       &lt;soap:address location="http://127.0.0.1:4204/Calculator?wsdl"/&gt;
     &lt;/wsdl:port&gt;
   &lt;/wsdl:service&gt;
-&lt;/wsdl:definitions&gt;</pre>
+&lt;/wsdl:definitions&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -278,9 +278,9 @@ public class CalculatorTest {
 </div>
 <div class="sect2">
 <h3 id="_soap_sumandmultiply_small_client_request_small">SOAP sumAndMultiply &lt;small&gt;client request&lt;/small&gt;</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:sumAndMultiply xmlns:ns1="http://superbiz.org/wsdl"&gt;
@@ -288,15 +288,15 @@ public class CalculatorTest {
       &lt;arg1&gt;6&lt;/arg1&gt;
     &lt;/ns1:sumAndMultiply&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_soap_sumandmultiplyresponse_small_server_response_small">SOAP sumAndMultiplyResponse &lt;small&gt;server response&lt;/small&gt;</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:sumAndMultiplyResponse xmlns:ns1="http://superbiz.org/wsdl"&gt;
@@ -304,7 +304,7 @@ public class CalculatorTest {
       &lt;multiply&gt;24&lt;/multiply&gt;
     &lt;/ns1:sumAndMultiplyResponse&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 </div>

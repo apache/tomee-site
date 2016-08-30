@@ -109,7 +109,7 @@
 and display the results to the user. The EJB is injected in the managed bean using @Inject annotation.</p>
 </div>
 <div class="paragraph">
-<p>You could run this in the latest Apache TomEE [snapshot](<a href="https://repository.apache.org/content/repositories/snapshots/org/apache/openejb/apache-tomee/" class="bare">https://repository.apache.org/content/repositories/snapshots/org/apache/openejb/apache-tomee/</a>)</p>
+<p>You could run this in the latest Apache TomEE <a href="https://repository.apache.org/content/repositories/snapshots/org/apache/openejb/apache-tomee/">snapshot</a></p>
 </div>
 <div class="paragraph">
 <p>The complete source code is below but lets break down to look at some smaller snippets and see  how it works.</p>
@@ -313,121 +313,103 @@ public class Calculator{
 <div class="literalblock">
 <div class="content">
 <pre>&lt;!-- Faces Servlet --&gt;
-&lt;servlet&gt;
-  &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
-  &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-&lt;/servlet&gt;</pre>
+&lt;servlet&gt;</pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;!-- Faces Servlet Mapping --&gt;
-&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;!-- Welcome files --&gt;
-&lt;welcome-file-list&gt;
-  &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
-  &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
-&lt;/welcome-file-list&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;/web-app&gt;</p>
-</div>
-<h1 id="_calculator_xhtml" class="sect0">Calculator.xhtml</h1>
-<div class="paragraph">
-<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+&lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+
+  &lt;!-- Faces Servlet Mapping --&gt;
+  &lt;servlet-mapping&gt;
+&lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+&lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;!-- Welcome files --&gt;
+  &lt;welcome-file-list&gt;
+&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+&lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+  &lt;/welcome-file-list&gt;
+
+&lt;/web-app&gt;
+
+
+#Calculator.xhtml
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;h:body bgcolor="white"&gt;
-    &lt;f:view&gt;
-        &lt;h:form&gt;
-            &lt;h:panelGrid columns="2"&gt;
-                &lt;h:outputText value='Enter first number'/&gt;
-                &lt;h:inputText value='<mark>{calculatorBean.x}'/&gt;
-                &lt;h:outputText value='Enter second number'/&gt;
-                &lt;h:inputText value='</mark>{calculatorBean.y}'/&gt;
-                &lt;h:commandButton action="#{calculatorBean.add}" value="Add"/&gt;
-            &lt;/h:panelGrid&gt;
-        &lt;/h:form&gt;
-    &lt;/f:view&gt;
-&lt;/h:body&gt;
-&lt;/html&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>#Result.xhtml</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"&gt;</p>
-</div>
-<div class="paragraph">
-<p>&lt;h:body&gt;
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"&gt;
+
+
+&lt;h:body bgcolor="white"&gt;
 &lt;f:view&gt;
-    &lt;h:form id="mainForm"&gt;
-        &lt;h2&gt;&lt;h:outputText value="Result of adding #{calculatorBean.x} and #{calculatorBean.y} is #{calculatorBean.result }"/&gt;&lt;/h2&gt;
-        &lt;h:commandLink action="back"&gt;
-            &lt;h:outputText value="Home"/&gt;
-        &lt;/h:commandLink&gt;
+    &lt;h:form&gt;
+        &lt;h:panelGrid columns="2"&gt;
+            &lt;h:outputText value='Enter first number'/&gt;
+            &lt;h:inputText value='#{calculatorBean.x}'/&gt;
+            &lt;h:outputText value='Enter second number'/&gt;
+            &lt;h:inputText value='#{calculatorBean.y}'/&gt;
+            &lt;h:commandButton action="#{calculatorBean.add}" value="Add"/&gt;
+        &lt;/h:panelGrid&gt;
     &lt;/h:form&gt;
 &lt;/f:view&gt;
 &lt;/h:body&gt;
-&lt;/html&gt;</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>#faces-config.xml</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
-&lt;faces-config xmlns="http://java.sun.com/xml/ns/javaee"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-      http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
-              version="2.0"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;navigation-rule&gt;
-  &lt;from-view-id&gt;/calculator.xhtml&lt;/from-view-id&gt;
-  &lt;navigation-case&gt;
-    &lt;from-outcome&gt;success&lt;/from-outcome&gt;
-    &lt;to-view-id&gt;/result.xhtml&lt;/to-view-id&gt;
-  &lt;/navigation-case&gt;
-&lt;/navigation-rule&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;navigation-rule&gt;
-    &lt;from-view-id&gt;/result.xhtml&lt;/from-view-id&gt;
-    &lt;navigation-case&gt;
-      &lt;from-outcome&gt;back&lt;/from-outcome&gt;
-      &lt;to-view-id&gt;/calculator.xhtml&lt;/to-view-id&gt;
-    &lt;/navigation-case&gt;
-  &lt;/navigation-rule&gt;
-&lt;/faces-config&gt;</pre>
+&lt;/html&gt;
+
+
+ #Result.xhtml
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"&gt;
+
+&lt;h:body&gt;
+&lt;f:view&gt;
+&lt;h:form id="mainForm"&gt;
+    &lt;h2&gt;&lt;h:outputText value="Result of adding #{calculatorBean.x} and #{calculatorBean.y} is #{calculatorBean.result }"/&gt;&lt;/h2&gt;
+    &lt;h:commandLink action="back"&gt;
+        &lt;h:outputText value="Home"/&gt;
+    &lt;/h:commandLink&gt;
+&lt;/h:form&gt;
+&lt;/f:view&gt;
+&lt;/h:body&gt;
+&lt;/html&gt;
+
+ #faces-config.xml
+
+ &lt;?xml version="1.0"?&gt;
+ &lt;faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+   http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+           version="2.0"&gt;
+
+   &lt;navigation-rule&gt;
+ &lt;from-view-id&gt;/calculator.xhtml&lt;/from-view-id&gt;
+ &lt;navigation-case&gt;
+   &lt;from-outcome&gt;success&lt;/from-outcome&gt;
+   &lt;to-view-id&gt;/result.xhtml&lt;/to-view-id&gt;
+ &lt;/navigation-case&gt;
+   &lt;/navigation-rule&gt;
+
+   &lt;navigation-rule&gt;
+ &lt;from-view-id&gt;/result.xhtml&lt;/from-view-id&gt;
+ &lt;navigation-case&gt;
+   &lt;from-outcome&gt;back&lt;/from-outcome&gt;
+   &lt;to-view-id&gt;/calculator.xhtml&lt;/to-view-id&gt;
+ &lt;/navigation-case&gt;
+   &lt;/navigation-rule&gt;
+ &lt;/faces-config&gt;</code></pre>
 </div>
 </div>
             </div>

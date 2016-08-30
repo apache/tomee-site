@@ -118,7 +118,7 @@ and display the results to the user. The EJB is injected in the managed bean usi
 <h2 id="_a_little_note_on_the_setup">A little note on the setup:</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You could run this in the latest Apache TomEE [snapshot](<a href="https://repository.apache.org/content/repositories/snapshots/org/apache/openejb/apache-tomee/" class="bare">https://repository.apache.org/content/repositories/snapshots/org/apache/openejb/apache-tomee/</a>)</p>
+<p>You could run this in the latest Apache TomEE <a href="https://repository.apache.org/content/repositories/snapshots/org/apache/openejb/apache-tomee/">snapshot</a></p>
 </div>
 <div class="paragraph">
 <p>As for the libraries, myfaces-api and myfaces-impl are provided in tomee/lib and hence they should not be a part of the
@@ -127,127 +127,88 @@ war. In maven terms, they would be with scope 'provided'</p>
 <div class="paragraph">
 <p>Also note that we use servlet 2.5 declaration in web.xml</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-version="2.5"&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And we use 2.0 version of faces-config</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;faces-config xmlns="http://java.sun.com/xml/ns/javaee"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-      http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
-              version="2.0"&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The complete source code is provided below but let&#8217;s break down to look at some smaller snippets and see  how it works.</p>
-</div>
-<div class="paragraph">
-<p>We&#8217;ll first declare the <code>FacesServlet</code> in the <code>web.xml</code></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
-  &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>FacesServlet</code> acts as the master controller.</p>
-</div>
-<div class="paragraph">
-<p>We&#8217;ll then create the <code>calculator.xhtml</code> file.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;h:outputText value='Enter first number'/&gt;
-&lt;h:inputText value='#{calculatorBean.x}'/&gt;
-&lt;h:outputText value='Enter second number'/&gt;
-&lt;h:inputText value='#{calculatorBean.y}'/&gt;
-&lt;h:commandButton action="#{calculatorBean.add}" value="Add"/&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Notice how we&#8217;ve use the bean here.
-By default it is the simple class name of the managed bean.</p>
-</div>
-<div class="paragraph">
-<p>When a request comes in, the bean is instantiated and placed in the appropriate scope.
-By default, the bean is placed in the request scope.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;h:inputText value='#{calculatorBean.x}'/&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Here, getX() method of calculatorBean is invoked and the resulting value is displayed.
-x being a Double, we rightly should see 0.0 displayed.</p>
-</div>
-<div class="paragraph">
-<p>When you change the value and submit the form, these entered values are bound using the setters
-in the bean and then the commandButton-action method is invoked.</p>
-</div>
-<div class="paragraph">
-<p>In this case, <code>CalculatorBean#add()</code> is invoked.</p>
-</div>
-<div class="paragraph">
-<p><code>Calculator#add()</code> delegates the work to the ejb, gets the result, stores it
-and then instructs what view is to be rendered.</p>
-</div>
-<div class="paragraph">
-<p>You&#8217;re right. The return value "success" is checked up in faces-config navigation-rules
-and the respective page is rendered.</p>
-</div>
-<div class="paragraph">
-<p>In our case, <code>result.xhtml</code> page is rendered.</p>
-</div>
-<div class="paragraph">
-<p>The request scoped <code>calculatorBean</code> is available here, and we use EL to display the values.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_source">Source</h2>
-<div class="sectionbody">
+version="2.5"&gt;
 
-</div>
-</div>
-<div class="sect1">
-<h2 id="_calculator">Calculator</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">package org.superbiz.jsf;
+And we use 2.0 version of faces-config
+
+ &lt;faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+   http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+           version="2.0"&gt;
+
+
+The complete source code is provided below but let's break down to look at some smaller snippets and see  how it works.
+
+We'll first declare the `FacesServlet` in the `web.xml`
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+
+`FacesServlet` acts as the master controller.
+
+We'll then create the `calculator.xhtml` file.
+
+       &lt;h:outputText value='Enter first number'/&gt;
+       &lt;h:inputText value='#{calculatorBean.x}'/&gt;
+       &lt;h:outputText value='Enter second number'/&gt;
+       &lt;h:inputText value='#{calculatorBean.y}'/&gt;
+       &lt;h:commandButton action="#{calculatorBean.add}" value="Add"/&gt;
+
+
+Notice how we've use the bean here.
+By default it is the simple class name of the managed bean.
+
+When a request comes in, the bean is instantiated and placed in the appropriate scope.
+By default, the bean is placed in the request scope.
+
+        &lt;h:inputText value='#{calculatorBean.x}'/&gt;
+
+Here, getX() method of calculatorBean is invoked and the resulting value is displayed.
+x being a Double, we rightly should see 0.0 displayed.
+
+When you change the value and submit the form, these entered values are bound using the setters
+in the bean and then the commandButton-action method is invoked.
+
+In this case, `CalculatorBean#add()` is invoked.
+
+`Calculator#add()` delegates the work to the ejb, gets the result, stores it
+and then instructs what view is to be rendered.
+
+You're right. The return value "success" is checked up in faces-config navigation-rules
+and the respective page is rendered.
+
+In our case, `result.xhtml` page is rendered.
+
+The request scoped `calculatorBean` is available here, and we use EL to display the values.
+
+## Source
+
+## Calculator
+
+package org.superbiz.jsf;
 
 import javax.ejb.Local;
 
 @Local
 public interface Calculator {
     public double add(double x, double y);
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_calculatorbean">CalculatorBean</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">package org.superbiz.jsf;
+}
+
+
+## CalculatorBean
+
+package org.superbiz.jsf;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
@@ -288,17 +249,11 @@ public class CalculatorBean {
         result = calculator.add(x, y);
         return "success";
     }
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_calculatorimpl">CalculatorImpl</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="prettyprint highlight"><code class="language-java" data-lang="java">package org.superbiz.jsf;
+}
+
+## CalculatorImpl
+
+package org.superbiz.jsf;
 
 import javax.ejb.Stateless;
 
@@ -308,77 +263,59 @@ public class CalculatorImpl implements Calculator {
     public double add(double x, double y) {
         return x + y;
     }
-}</code></pre>
+}
+
+
+# web.xml
+
+&lt;?xml version="1.0"?&gt;
+
+    &lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5"&gt;
+
+    &lt;description&gt;MyProject web.xml&lt;/description&gt;
+
+    &lt;!-- Faces Servlet --&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+
+    &lt;!-- Faces Servlet Mapping --&gt;
+    &lt;servlet-mapping&gt;
+       &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+
+    &lt;!-- Welcome files --&gt;
+    &lt;welcome-file-list&gt;
+       &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+       &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+    &lt;/welcome-file-list&gt;
+    &lt;/web-app&gt;</code></pre>
 </div>
 </div>
-</div>
-</div>
-<h1 id="_web_xml" class="sect0">web.xml</h1>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;?xml version="1.0"?&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-version="2.5"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;MyProject web.xml&lt;/description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;!-- Faces Servlet --&gt;
-&lt;servlet&gt;
-    &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
-    &lt;servlet-class&gt;javax.faces.webapp.FacesServlet&lt;/servlet-class&gt;
-    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;!-- Faces Servlet Mapping --&gt;
-&lt;servlet-mapping&gt;
-   &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
-    &lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;!-- Welcome files --&gt;
-&lt;welcome-file-list&gt;
-   &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
-   &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
-&lt;/welcome-file-list&gt;
-&lt;/web-app&gt;</pre>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_calculator_xhtml">Calculator.xhtml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"
 xmlns:f="http://java.sun.com/jsf/core"
-xmlns:h="http://java.sun.com/jsf/html"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;h:body bgcolor="white"&gt;
+xmlns:h="http://java.sun.com/jsf/html"&gt;
+
+
+&lt;h:body bgcolor="white"&gt;
     &lt;f:view&gt;
         &lt;h:form&gt;
             &lt;h:panelGrid columns="2"&gt;
@@ -391,27 +328,19 @@ xmlns:h="http://java.sun.com/jsf/html"&gt;</pre>
         &lt;/h:form&gt;
    &lt;/f:view&gt;
 &lt;/h:body&gt;
-&lt;/html&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_result_xhtml">Result.xhtml</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;/html&gt;
+
+
+##Result.xhtml
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"
 xmlns:f="http://java.sun.com/jsf/core"
-xmlns:h="http://java.sun.com/jsf/html"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;h:body&gt;
+xmlns:h="http://java.sun.com/jsf/html"&gt;
+
+&lt;h:body&gt;
     &lt;f:view&gt;
         &lt;h:form id="mainForm"&gt;
             &lt;h2&gt;&lt;h:outputText value="Result of adding #{calculatorBean.x} and #{calculatorBean.y} is #{calculatorBean.result }"/&gt;&lt;/h2&gt;
@@ -421,43 +350,35 @@ xmlns:h="http://java.sun.com/jsf/html"&gt;</pre>
         &lt;/h:form&gt;
     &lt;/f:view&gt;
 &lt;/h:body&gt;
-&lt;/html&gt;</pre>
-</div>
-</div>
-</div>
-</div>
-<h1 id="_faces_config_xml" class="sect0">faces-config.xml</h1>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
+&lt;/html&gt;
+
+#faces-config.xml
+
+&lt;?xml version="1.0"?&gt;
 &lt;faces-config xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
-version="2.0"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;navigation-rule&gt;
+version="2.0"&gt;
+
+&lt;navigation-rule&gt;
     &lt;from-view-id&gt;/calculator.xhtml&lt;/from-view-id&gt;
     &lt;navigation-case&gt;
         &lt;from-outcome&gt;success&lt;/from-outcome&gt;
         &lt;to-view-id&gt;/result.xhtml&lt;/to-view-id&gt;
     &lt;/navigation-case&gt;
-&lt;/navigation-rule&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;navigation-rule&gt;
+&lt;/navigation-rule&gt;
+
+&lt;navigation-rule&gt;
     &lt;from-view-id&gt;/result.xhtml&lt;/from-view-id&gt;
     &lt;navigation-case&gt;
         &lt;from-outcome&gt;back&lt;/from-outcome&gt;
         &lt;to-view-id&gt;/calculator.xhtml&lt;/to-view-id&gt;
     &lt;/navigation-case&gt;
 &lt;/navigation-rule&gt;
-&lt;/faces-config&gt;</pre>
+&lt;/faces-config&gt;</code></pre>
+</div>
+</div>
 </div>
 </div>
             </div>

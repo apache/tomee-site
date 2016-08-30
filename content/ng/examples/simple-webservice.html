@@ -169,9 +169,9 @@ public interface CalculatorWs {
 <div class="paragraph">
 <p>The wsdl for our service is autmatically created for us and available at <code><a href="http://127.0.0.1:4204/Calculator?wsdl" class="bare">http://127.0.0.1:4204/Calculator?wsdl</a></code>.  In TomEE or Tomcat this would be at <code><a href="http://127.0.0.1:8080/simple-webservice/Calculator?wsdl" class="bare">http://127.0.0.1:8080/simple-webservice/Calculator?wsdl</a></code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="CalculatorService"
                   targetNamespace="http://superbiz.org/wsdl"
                   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
@@ -256,7 +256,7 @@ public interface CalculatorWs {
       &lt;soap:address location="http://127.0.0.1:4204/Calculator?wsdl"/&gt;
     &lt;/wsdl:port&gt;
   &lt;/wsdl:service&gt;
-&lt;/wsdl:definitions&gt;</pre>
+&lt;/wsdl:definitions&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -410,9 +410,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 <div class="paragraph">
 <p>Request SOAP message:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:sum xmlns:ns1="http://superbiz.org/wsdl"&gt;
@@ -420,22 +420,22 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
       &lt;arg1&gt;6&lt;/arg1&gt;
     &lt;/ns1:sum&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Response SOAP message:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:sumResponse xmlns:ns1="http://superbiz.org/wsdl"&gt;
       &lt;return&gt;10&lt;/return&gt;
     &lt;/ns1:sumResponse&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -444,9 +444,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 <div class="paragraph">
 <p>Request SOAP message:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:multiply xmlns:ns1="http://superbiz.org/wsdl"&gt;
@@ -454,22 +454,22 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
       &lt;arg1&gt;4&lt;/arg1&gt;
     &lt;/ns1:multiply&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Response SOAP message:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:multiplyResponse xmlns:ns1="http://superbiz.org/wsdl"&gt;
       &lt;return&gt;12&lt;/return&gt;
     &lt;/ns1:multiplyResponse&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 </div>

@@ -148,7 +148,7 @@ are limited to the following:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>See also the [Custom Injection](../custom-injection) exmaple for a TomEE and OpenEJB feature that will let you
+<p>See also the <a href="../custom-injection">Custom Injection</a> exmaple for a TomEE and OpenEJB feature that will let you
 use more than just the above types as well as declare <code>&lt;env-entry&gt;</code> items with a plain properties file.</p>
 </div>
 </div>
@@ -231,9 +231,9 @@ public class Configuration {
 <p>The values for our <code>color</code>, <code>shape</code>, <code>strategy</code> and <code>date</code> properties are supplied via <code>&lt;env-entry&gt;</code> elements in the <code>ejb-jar.xml</code> file or the
 <code>web.xml</code> file like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0" metadata-complete="false"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0" metadata-complete="false"&gt;
   &lt;enterprise-beans&gt;
     &lt;session&gt;
       &lt;ejb-name&gt;Configuration&lt;/ejb-name&gt;
@@ -260,7 +260,7 @@ public class Configuration {
       &lt;/env-entry&gt;
     &lt;/session&gt;
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="sect2">

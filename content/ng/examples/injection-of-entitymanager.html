@@ -186,26 +186,20 @@ public class Movie {
 <p>The above <code>Movie</code> entity can be created, removed, updated or deleted via an <code>EntityManager</code> object.  The <code>EntityManager</code> itself is
 configured via a <code>META-INF/persistence.xml</code> file that is placed in the same jar as the <code>Movie</code> entity.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;persistence-unit name="movie-unit"&gt;
-  &lt;jta-data-source&gt;movieDatabase&lt;/jta-data-source&gt;
-  &lt;non-jta-data-source&gt;movieDatabaseUnmanaged&lt;/non-jta-data-source&gt;
-  &lt;class&gt;org.superbiz.injection.jpa.Movie&lt;/class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    &lt;properties&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+
+  &lt;persistence-unit name="movie-unit"&gt;
+    &lt;jta-data-source&gt;movieDatabase&lt;/jta-data-source&gt;
+    &lt;non-jta-data-source&gt;movieDatabaseUnmanaged&lt;/non-jta-data-source&gt;
+    &lt;class&gt;org.superbiz.injection.jpa.Movie&lt;/class&gt;
+
+    &lt;properties&gt;
       &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -262,7 +256,7 @@ is created when the <code>@Stateful</code> bean is created and destroyed when th
 data in the <code>EntityManager</code> is cached for the lifetime of the <code>@Stateful</code> bean.</p>
 </div>
 <div class="paragraph">
-<p>The use of <code>EXTENDED</code> persistence contexts is <strong>only</strong> available to <code>@Stateful</code> beans.  See the [JPA Concepts](../../jpa-concepts.html) page for an high level explanation of what a "persistence context" really is and how it is significant to JPA.</p>
+<p>The use of <code>EXTENDED</code> persistence contexts is <strong>only</strong> available to <code>@Stateful</code> beans.  See the <a href="../../jpa-concepts.html">JPA Concepts</a> page for an high level explanation of what a "persistence context" really is and how it is significant to JPA.</p>
 </div>
 </div>
 </div>

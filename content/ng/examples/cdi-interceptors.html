@@ -198,16 +198,16 @@ public class BookForAShowOneInterceptorApplied implements Serializable {
 <div class="paragraph">
 <p>Lets quickly put up a <code>beans.xml</code> file like the following in <code>src/main/resources/META-INF/beans.xml</code>:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;beans&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;beans&gt;
   &lt;interceptors&gt;
     &lt;class&gt;org.superbiz.cdi.bookshow.interceptors.BookForAShowLoggingInterceptor
     &lt;/class&gt;
     &lt;class&gt;org.superbiz.cdi.bookshow.interceptors.TimeBasedRestrictingInterceptor
     &lt;/class&gt;
   &lt;/interceptors&gt;
-&lt;/beans&gt;</pre>
+&lt;/beans&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">

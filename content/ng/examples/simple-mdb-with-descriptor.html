@@ -189,76 +189,52 @@ public class ChatBean implements MessageListener {
 <div class="sect1">
 <h2 id="_ejb_jar_xml">ejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" metadata-complete="true"&gt;
-  &lt;enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;message-driven&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-name&gt;ChatBean&lt;/ejb-name&gt;
-&lt;ejb-class&gt;org.superbiz.mdbdesc.ChatBean&lt;/ejb-class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;messaging-type&gt;javax.jms.MessageListener&lt;/messaging-type&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;activation-config&gt;
-  &lt;activation-config-property&gt;
-    &lt;activation-config-property-name&gt;destination&lt;/activation-config-property-name&gt;
-    &lt;activation-config-property-value&gt;ChatBean&lt;/activation-config-property-value&gt;
-  &lt;/activation-config-property&gt;
-  &lt;activation-config-property&gt;
-    &lt;activation-config-property-name&gt;destinationType&lt;/activation-config-property-name&gt;
-    &lt;activation-config-property-value&gt;javax.jms.Queue&lt;/activation-config-property-value&gt;
-  &lt;/activation-config-property&gt;
-&lt;/activation-config&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;resource-ref&gt;
-  &lt;res-ref-name&gt;java:comp/env/org.superbiz.mdbdesc.ChatBean/connectionFactory&lt;/res-ref-name&gt;
-  &lt;res-type&gt;javax.jms.ConnectionFactory&lt;/res-type&gt;
-  &lt;injection-target&gt;
-    &lt;injection-target-class&gt;org.superbiz.mdbdesc.ChatBean&lt;/injection-target-class&gt;
-    &lt;injection-target-name&gt;connectionFactory&lt;/injection-target-name&gt;
-  &lt;/injection-target&gt;
-&lt;/resource-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;resource-env-ref&gt;
-  &lt;resource-env-ref-name&gt;java:comp/env/AnswerQueue&lt;/resource-env-ref-name&gt;
-  &lt;resource-env-ref-type&gt;javax.jms.Queue&lt;/resource-env-ref-type&gt;
-  &lt;mapped-name&gt;AnswerQueue&lt;/mapped-name&gt;
-  &lt;injection-target&gt;
-    &lt;injection-target-class&gt;org.superbiz.mdbdesc.ChatBean&lt;/injection-target-class&gt;
-    &lt;injection-target-name&gt;answerQueue&lt;/injection-target-name&gt;
-  &lt;/injection-target&gt;
-&lt;/resource-env-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/message-driven&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" metadata-complete="true"&gt;
+  &lt;enterprise-beans&gt;
+
+    &lt;message-driven&gt;
+
+      &lt;ejb-name&gt;ChatBean&lt;/ejb-name&gt;
+      &lt;ejb-class&gt;org.superbiz.mdbdesc.ChatBean&lt;/ejb-class&gt;
+
+      &lt;messaging-type&gt;javax.jms.MessageListener&lt;/messaging-type&gt;
+
+      &lt;activation-config&gt;
+        &lt;activation-config-property&gt;
+          &lt;activation-config-property-name&gt;destination&lt;/activation-config-property-name&gt;
+          &lt;activation-config-property-value&gt;ChatBean&lt;/activation-config-property-value&gt;
+        &lt;/activation-config-property&gt;
+        &lt;activation-config-property&gt;
+          &lt;activation-config-property-name&gt;destinationType&lt;/activation-config-property-name&gt;
+          &lt;activation-config-property-value&gt;javax.jms.Queue&lt;/activation-config-property-value&gt;
+        &lt;/activation-config-property&gt;
+      &lt;/activation-config&gt;
+
+      &lt;resource-ref&gt;
+        &lt;res-ref-name&gt;java:comp/env/org.superbiz.mdbdesc.ChatBean/connectionFactory&lt;/res-ref-name&gt;
+        &lt;res-type&gt;javax.jms.ConnectionFactory&lt;/res-type&gt;
+        &lt;injection-target&gt;
+          &lt;injection-target-class&gt;org.superbiz.mdbdesc.ChatBean&lt;/injection-target-class&gt;
+          &lt;injection-target-name&gt;connectionFactory&lt;/injection-target-name&gt;
+        &lt;/injection-target&gt;
+      &lt;/resource-ref&gt;
+
+      &lt;resource-env-ref&gt;
+        &lt;resource-env-ref-name&gt;java:comp/env/AnswerQueue&lt;/resource-env-ref-name&gt;
+        &lt;resource-env-ref-type&gt;javax.jms.Queue&lt;/resource-env-ref-type&gt;
+        &lt;mapped-name&gt;AnswerQueue&lt;/mapped-name&gt;
+        &lt;injection-target&gt;
+          &lt;injection-target-class&gt;org.superbiz.mdbdesc.ChatBean&lt;/injection-target-class&gt;
+          &lt;injection-target-name&gt;answerQueue&lt;/injection-target-name&gt;
+        &lt;/injection-target&gt;
+      &lt;/resource-env-ref&gt;
+
+    &lt;/message-driven&gt;
+
+  &lt;/enterprise-beans&gt;
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>

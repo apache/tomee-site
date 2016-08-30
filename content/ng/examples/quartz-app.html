@@ -149,52 +149,37 @@ quartz-app/quartz-ra/src/main/resources/META-INF/ra.xml</pre>
 <div class="paragraph">
 <p>the outbound Resource Adapter, <code>QuartzResourceAdapter</code>, can be injected into any component via <code>@Resource</code> and used to originate and send messages or events.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;connector xmlns="http://java.sun.com/xml/ns/j2ee"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;connector xmlns="http://java.sun.com/xml/ns/j2ee"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
            http://java.sun.com/xml/ns/j2ee/connector_1_5.xsd"
-           version="1.5"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;description&gt;Quartz ResourceAdapter&lt;/description&gt;
-&lt;display-name&gt;Quartz ResourceAdapter&lt;/display-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;vendor-name&gt;OpenEJB&lt;/vendor-name&gt;
-&lt;eis-type&gt;Quartz Adapter&lt;/eis-type&gt;
-&lt;resourceadapter-version&gt;1.0&lt;/resourceadapter-version&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;resourceadapter id="QuartzResourceAdapter"&gt;
-  &lt;resourceadapter-class&gt;org.apache.openejb.resource.quartz.QuartzResourceAdapter&lt;/resourceadapter-class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;inbound-resourceadapter&gt;
-  &lt;messageadapter&gt;
-    &lt;messagelistener&gt;
-      &lt;messagelistener-type&gt;org.quartz.Job&lt;/messagelistener-type&gt;
-      &lt;activationspec&gt;
-        &lt;activationspec-class&gt;org.apache.openejb.resource.quartz.JobSpec&lt;/activationspec-class&gt;
-      &lt;/activationspec&gt;
-    &lt;/messagelistener&gt;
-  &lt;/messageadapter&gt;
-&lt;/inbound-resourceadapter&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;/resourceadapter&gt;
-&lt;/connector&gt;</pre>
+           version="1.5"&gt;
+
+  &lt;description&gt;Quartz ResourceAdapter&lt;/description&gt;
+  &lt;display-name&gt;Quartz ResourceAdapter&lt;/display-name&gt;
+
+  &lt;vendor-name&gt;OpenEJB&lt;/vendor-name&gt;
+  &lt;eis-type&gt;Quartz Adapter&lt;/eis-type&gt;
+  &lt;resourceadapter-version&gt;1.0&lt;/resourceadapter-version&gt;
+
+  &lt;resourceadapter id="QuartzResourceAdapter"&gt;
+    &lt;resourceadapter-class&gt;org.apache.openejb.resource.quartz.QuartzResourceAdapter&lt;/resourceadapter-class&gt;
+
+    &lt;inbound-resourceadapter&gt;
+      &lt;messageadapter&gt;
+        &lt;messagelistener&gt;
+          &lt;messagelistener-type&gt;org.quartz.Job&lt;/messagelistener-type&gt;
+          &lt;activationspec&gt;
+            &lt;activationspec-class&gt;org.apache.openejb.resource.quartz.JobSpec&lt;/activationspec-class&gt;
+          &lt;/activationspec&gt;
+        &lt;/messagelistener&gt;
+      &lt;/messageadapter&gt;
+    &lt;/inbound-resourceadapter&gt;
+
+  &lt;/resourceadapter&gt;
+&lt;/connector&gt;</code></pre>
 </div>
 </div>
 </div>

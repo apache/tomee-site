@@ -145,7 +145,7 @@ out of curiosity and are not familiar with CMP2 or EJB 2.x, each CMP2 Entity is 
 <p><strong>A Home interface</strong> which has data access methods like "find", "create", and "remove".  This is essentially
 what people use <code>@Stateless</code> beans for today, but with difference that you do not need to supply
 the implementation of the interface&#8201;&#8212;&#8201;the container will generate one for you.  This is partly what inspired
-the creation of the OpenEJB-specific [Dynamic DAO](../dynamic-dao-implementation/README.html) feature.</p>
+the creation of the OpenEJB-specific <a href="dynamic-dao-implementation.html">Dynamic DAO</a> feature.</p>
 </li>
 <li>
 <p><strong>An abstract EntityBean class</strong> which declares the persistent "properties" of the entity without actually
@@ -243,9 +243,9 @@ interface Movies extends javax.ejb.EJBLocalHome {
 <div class="sect1">
 <h2 id="_cmp2_mapping_in_ejb_jar_xml">CMP2 mapping in ejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar&gt;
   &lt;enterprise-beans&gt;
     &lt;entity&gt;
       &lt;ejb-name&gt;MovieBean&lt;/ejb-name&gt;
@@ -288,7 +288,7 @@ interface Movies extends javax.ejb.EJBLocalHome {
       &lt;/query&gt;
     &lt;/entity&gt;
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -296,9 +296,9 @@ interface Movies extends javax.ejb.EJBLocalHome {
 <div class="sect1">
 <h2 id="_openejb_jar_xml">openejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar xmlns="http://www.openejb.org/xml/ns/openejb-jar-2.1"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar xmlns="http://www.openejb.org/xml/ns/openejb-jar-2.1"&gt;
   &lt;enterprise-beans&gt;
     &lt;entity&gt;
       &lt;ejb-name&gt;MovieBean&lt;/ejb-name&gt;
@@ -307,7 +307,7 @@ interface Movies extends javax.ejb.EJBLocalHome {
       &lt;/key-generator&gt;
     &lt;/entity&gt;
   &lt;/enterprise-beans&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -441,9 +441,9 @@ p.put("openejb.descriptors.output", "true");</pre>
 <div class="sect1">
 <h2 id="_cmp2_to_jpa_generated_persistence_xml_file">CMP2 to JPA generated persistence.xml file</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
     &lt;persistence-unit name="cmp" transaction-type="JTA"&gt;
         &lt;jta-data-source&gt;movieDatabase&lt;/jta-data-source&gt;
@@ -456,7 +456,7 @@ p.put("openejb.descriptors.output", "true");</pre>
             &lt;property name="openjpa.Log" value="DefaultLevel=INFO"/&gt;
         &lt;/properties&gt;
     &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -472,9 +472,9 @@ p.put("openejb.descriptors.output", "true");</pre>
 to rename this file to whatever name you prefer, just make sure to update the <code>&lt;mapping-file&gt;</code> element of the <code>cmp</code> persistence unit
 accordingly.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
 &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
     &lt;entity class="openejb.org.superbiz.cmp2.MovieBean" name="MovieBean"&gt;
         &lt;description&gt;simple-cmp2#MovieBean&lt;/description&gt;
@@ -494,7 +494,7 @@ accordingly.</p>
             &lt;basic name="title"/&gt;
         &lt;/attributes&gt;
     &lt;/entity&gt;
-&lt;/entity-mappings&gt;</pre>
+&lt;/entity-mappings&gt;</code></pre>
 </div>
 </div>
 </div>

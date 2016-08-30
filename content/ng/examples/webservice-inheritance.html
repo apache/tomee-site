@@ -346,9 +346,9 @@ public abstract class Wearable extends Item {
 <div class="sect1">
 <h2 id="_ejb_jar_xml">ejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar/&gt;</pre>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar/&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -356,42 +356,27 @@ public abstract class Wearable extends Item {
 <div class="sect1">
 <h2 id="_persistence_xml">persistence.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;persistence-unit name="wakeboard-unit"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;jta-data-source&gt;wakeBoardDatabase&lt;/jta-data-source&gt;
-&lt;non-jta-data-source&gt;wakeBoardDatabaseUnmanaged&lt;/non-jta-data-source&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;class&gt;org.superbiz.inheritance.Item&lt;/class&gt;
-&lt;class&gt;org.superbiz.inheritance.Tower&lt;/class&gt;
-&lt;class&gt;org.superbiz.inheritance.Wakeboard&lt;/class&gt;
-&lt;class&gt;org.superbiz.inheritance.WakeboardBinding&lt;/class&gt;
-&lt;class&gt;org.superbiz.inheritance.Wearable&lt;/class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;properties&gt;
-  &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
-&lt;/properties&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+
+  &lt;persistence-unit name="wakeboard-unit"&gt;
+
+    &lt;jta-data-source&gt;wakeBoardDatabase&lt;/jta-data-source&gt;
+    &lt;non-jta-data-source&gt;wakeBoardDatabaseUnmanaged&lt;/non-jta-data-source&gt;
+
+    &lt;class&gt;org.superbiz.inheritance.Item&lt;/class&gt;
+    &lt;class&gt;org.superbiz.inheritance.Tower&lt;/class&gt;
+    &lt;class&gt;org.superbiz.inheritance.Wakeboard&lt;/class&gt;
+    &lt;class&gt;org.superbiz.inheritance.WakeboardBinding&lt;/class&gt;
+    &lt;class&gt;org.superbiz.inheritance.Wearable&lt;/class&gt;
+
+    &lt;properties&gt;
+      &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
+    &lt;/properties&gt;
+
+  &lt;/persistence-unit&gt;
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 </div>

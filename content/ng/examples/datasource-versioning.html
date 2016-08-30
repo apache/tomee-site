@@ -117,38 +117,29 @@ two completely different driver files for this example.</p>
 </div>
 <h1 id="_alternatedatasourcetest_java" class="sect0">AlternateDataSourceTest.java</h1>
 <div class="paragraph">
-<p>This test utilizes the Arquillian testing framework. See [here](<a href="http://tomee.apache.org/arquillian-available-adapters.html" class="bare">http://tomee.apache.org/arquillian-available-adapters.html</a>) for more details.</p>
+<p>This test utilizes the Arquillian testing framework. See <a href="http://tomee.apache.org/arquillian-available-adapters.html">here</a> for more details.</p>
 </div>
 <div class="paragraph">
 <p>The example uses src/test/resources/arquillian.xml and src/test/conf/tomee.xml to define the DataSources.
 Note the differing driver version paths, yet still using the same provider (org.apache.derby.jdbc.EmbeddedDriver):</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomee&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;Resource id="DatabaseOne" type="DataSource" classpath="${catalina.base}/../../drivers/derby-10.10.1.1.jar"&gt;
-  JdbcDriver org.apache.derby.jdbc.EmbeddedDriver
-  JdbcUrl jdbc:derby:databaseOne;create=true
-  UserName SA
-&lt;/Resource&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;Resource id="DatabaseTwo" type="DataSource" classpath="${catalina.base}/../../drivers/derby-10.9.1.0.jar"&gt;
-  JdbcDriver org.apache.derby.jdbc.EmbeddedDriver
-  JdbcUrl jdbc:derby:databaseTwo;create=true
-  UserName SA
-&lt;/Resource&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/tomee&gt;</pre>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
+
+  &lt;Resource id="DatabaseOne" type="DataSource" classpath="${catalina.base}/../../drivers/derby-10.10.1.1.jar"&gt;
+    JdbcDriver org.apache.derby.jdbc.EmbeddedDriver
+    JdbcUrl jdbc:derby:databaseOne;create=true
+    UserName SA
+  &lt;/Resource&gt;
+
+  &lt;Resource id="DatabaseTwo" type="DataSource" classpath="${catalina.base}/../../drivers/derby-10.9.1.0.jar"&gt;
+    JdbcDriver org.apache.derby.jdbc.EmbeddedDriver
+    JdbcUrl jdbc:derby:databaseTwo;create=true
+    UserName SA
+  &lt;/Resource&gt;
+
+&lt;/tomee&gt;</code></pre>
 </div>
 </div>
 <h1 id="_developer_information" class="sect0">Developer Information</h1>

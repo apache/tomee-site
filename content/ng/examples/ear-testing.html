@@ -147,35 +147,23 @@ ear-testing/pom.xml</pre>
 <div class="paragraph">
 <p>The parent pom, trimmed to the minimum, looks like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-&lt;groupId&gt;org.superbiz&lt;/groupId&gt;
-&lt;artifactId&gt;myear&lt;/artifactId&gt;
-&lt;version&gt;1.1.0-SNAPSHOT&lt;/version&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;packaging&gt;pom&lt;/packaging&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;modules&gt;
-  &lt;module&gt;business-model&lt;/module&gt;
-  &lt;module&gt;business-logic&lt;/module&gt;
-&lt;/modules&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;dependencyManagement&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;org.superbiz&lt;/groupId&gt;
+  &lt;artifactId&gt;myear&lt;/artifactId&gt;
+  &lt;version&gt;1.1.0-SNAPSHOT&lt;/version&gt;
+
+  &lt;packaging&gt;pom&lt;/packaging&gt;
+
+  &lt;modules&gt;
+    &lt;module&gt;business-model&lt;/module&gt;
+    &lt;module&gt;business-logic&lt;/module&gt;
+  &lt;/modules&gt;
+
+  &lt;dependencyManagement&gt;
     &lt;dependencies&gt;
       &lt;dependency&gt;
         &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
@@ -189,85 +177,61 @@ ear-testing/pom.xml</pre>
       &lt;/dependency&gt;
     &lt;/dependencies&gt;
   &lt;/dependencyManagement&gt;
-&lt;/project&gt;</pre>
+&lt;/project&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The <code>business-model/pom.xml</code> as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
   &lt;parent&gt;
     &lt;groupId&gt;org.superbiz&lt;/groupId&gt;
     &lt;artifactId&gt;myear&lt;/artifactId&gt;
     &lt;version&gt;1.1.0-SNAPSHOT&lt;/version&gt;
-  &lt;/parent&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;artifactId&gt;business-model&lt;/artifactId&gt;
-&lt;packaging&gt;jar&lt;/packaging&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;dependencies&gt;
-  &lt;dependency&gt;
-    &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
-    &lt;artifactId&gt;javaee-api&lt;/artifactId&gt;
-    &lt;scope&gt;provided&lt;/scope&gt;
-  &lt;/dependency&gt;
-  &lt;dependency&gt;
-    &lt;groupId&gt;junit&lt;/groupId&gt;
-    &lt;artifactId&gt;junit&lt;/artifactId&gt;
-    &lt;scope&gt;test&lt;/scope&gt;
-  &lt;/dependency&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/dependencies&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/project&gt;</pre>
+  &lt;/parent&gt;
+
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;artifactId&gt;business-model&lt;/artifactId&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
+      &lt;artifactId&gt;javaee-api&lt;/artifactId&gt;
+      &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;/groupId&gt;
+      &lt;artifactId&gt;junit&lt;/artifactId&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>And finally, the <code>business-logic/pom.xml</code> which is setup to support embedded testing with OpenEJB:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
   &lt;parent&gt;
     &lt;groupId&gt;org.superbiz&lt;/groupId&gt;
     &lt;artifactId&gt;myear&lt;/artifactId&gt;
     &lt;version&gt;1.1.0-SNAPSHOT&lt;/version&gt;
-  &lt;/parent&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;artifactId&gt;business-logic&lt;/artifactId&gt;
-&lt;packaging&gt;jar&lt;/packaging&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;dependencies&gt;
+  &lt;/parent&gt;
+
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;artifactId&gt;business-logic&lt;/artifactId&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;dependencies&gt;
     &lt;dependency&gt;
       &lt;groupId&gt;org.superbiz&lt;/groupId&gt;
       &lt;artifactId&gt;business-model&lt;/artifactId&gt;
@@ -294,7 +258,7 @@ ear-testing/pom.xml</pre>
       &lt;scope&gt;test&lt;/scope&gt;
     &lt;/dependency&gt;
   &lt;/dependencies&gt;
-&lt;/project&gt;</pre>
+&lt;/project&gt;</code></pre>
 </div>
 </div>
 <h1 id="_testcode" class="sect0">TestCode</h1>

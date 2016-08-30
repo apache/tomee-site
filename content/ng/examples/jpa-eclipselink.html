@@ -178,7 +178,7 @@ public class Movie {
 <div class="sectionbody">
 <div class="paragraph">
 <p>This is the bean responsible for database operations; it allows us to persist or delete entities.
-For more information we recommend you to see [injection-of-entitymanager](<a href="http://tomee.apache.org/examples-trunk/injection-of-entitymanager/README.html" class="bare">http://tomee.apache.org/examples-trunk/injection-of-entitymanager/README.html</a>)</p>
+For more information we recommend you to see <a href="http://tomee.apache.org/examples-trunk/injection-of-entitymanager/README.html">injection-of-entitymanager</a></p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -220,11 +220,11 @@ public class Movies {
 <div class="paragraph">
 <p>This operation is too easy, just set the <code>provider</code> to <code>org.eclipse.persistence.jpa.PersistenceProvider</code> and add additional properties to the persistence unit.
 The example has followed a strategy that allows the creation of tables in a HSQL database.
-For a complete list of persistence unit properties see [here](<a href="http://www.eclipse.org/eclipselink/api/2.4/org/eclipse/persistence/config/PersistenceUnitProperties.html" class="bare">http://www.eclipse.org/eclipselink/api/2.4/org/eclipse/persistence/config/PersistenceUnitProperties.html</a>)</p>
+For a complete list of persistence unit properties see <a href="http://www.eclipse.org/eclipselink/api/2.4/org/eclipse/persistence/config/PersistenceUnitProperties.html">here</a></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence version="1.0"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;persistence version="1.0"
              xmlns="http://java.sun.com/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"&gt;
@@ -238,7 +238,7 @@ For a complete list of persistence unit properties see [here](<a href="http://ww
       &lt;property name="eclipselink.ddl-generation.output-mode" value="database"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 </div>

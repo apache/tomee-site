@@ -176,9 +176,9 @@ public class Calculator implements CalculatorWs {
 <div class="paragraph">
 <p>With this file we declare and <strong>order</strong> our handler chain.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;handler-chains xmlns="http://java.sun.com/xml/ns/javaee"&gt;
   &lt;handler-chain&gt;
     &lt;handler&gt;
@@ -190,7 +190,7 @@ public class Calculator implements CalculatorWs {
       &lt;handler-class&gt;org.superbiz.calculator.wsh.Increment&lt;/handler-class&gt;
     &lt;/handler&gt;
   &lt;/handler-chain&gt;
-&lt;/handler-chains&gt;</pre>
+&lt;/handler-chains&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -377,9 +377,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 </div>
 <div class="sect2">
 <h3 id="_calculator_wsdl">Calculator wsdl</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
                   name="CalculatorService" targetNamespace="http://superbiz.org/wsdl"
                   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
@@ -472,7 +472,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
       &lt;soap:address location="http://127.0.0.1:4204/Calculator?wsdl"/&gt;
     &lt;/wsdl:port&gt;
   &lt;/wsdl:service&gt;
-&lt;/wsdl:definitions&gt;</pre>
+&lt;/wsdl:definitions&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -481,9 +481,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 <div class="paragraph">
 <p>Request:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:sum xmlns:ns1="http://superbiz.org/wsdl"&gt;
@@ -491,22 +491,22 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
       &lt;arg1&gt;6&lt;/arg1&gt;
     &lt;/ns1:sum&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Response:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:sumResponse xmlns:ns1="http://superbiz.org/wsdl"&gt;
       &lt;return&gt;10001&lt;/return&gt;
     &lt;/ns1:sumResponse&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -515,9 +515,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 <div class="paragraph">
 <p>Request:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:multiply xmlns:ns1="http://superbiz.org/wsdl"&gt;
@@ -525,22 +525,22 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
       &lt;arg1&gt;4&lt;/arg1&gt;
     &lt;/ns1:multiply&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Response:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
   &lt;soap:Body&gt;
     &lt;ns1:multiplyResponse xmlns:ns1="http://superbiz.org/wsdl"&gt;
       &lt;return&gt;12001&lt;/return&gt;
     &lt;/ns1:multiplyResponse&gt;
   &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;</pre>
+&lt;/soap:Envelope&gt;</code></pre>
 </div>
 </div>
 </div>

@@ -310,9 +310,9 @@ Connection: close
 Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)</pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;response&gt;&lt;value&gt;Hi REST!&lt;/value&gt;&lt;/response&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;response&gt;&lt;value&gt;Hi REST!&lt;/value&gt;&lt;/response&gt;
 INFO - Undeploying app: /opt/dev/openejb/openejb-trunk/examples/GreetingServiceTest
 INFO - Stopping network services
 INFO - Stopping server services
@@ -362,29 +362,20 @@ Connection=keep-alive
 Accept=application/xml
 Content-Type=application/xml
 Pragma=no-cache
-Cache-Control=no-cache</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;request&gt;&lt;value&gt;Hi REST!&lt;/value&gt;&lt;/request&gt;
-**********************************************</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>FINE - HTTP/1.1 200 OK
+Cache-Control=no-cache
+
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;request&gt;&lt;value&gt;Hi REST!&lt;/value&gt;&lt;/request&gt;
+**********************************************
+
+FINE - HTTP/1.1 200 OK
 Date: Fri, 09 Nov 2012 11:59:00 GMT
 Content-Length: 44
 Set-Cookie: EJBSESSIONID=7cb2246d-5738-4a85-aac5-c0fb5340d36a; Path=/
 Content-Type: application/xml
 Connection: close
-Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;response&gt;&lt;value&gt;hi rest!&lt;/value&gt;&lt;/response&gt;
+Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)
+
+&lt;response&gt;&lt;value&gt;hi rest!&lt;/value&gt;&lt;/response&gt;
 INFO - Undeploying app: /opt/dev/openejb/openejb-trunk/examples/GreetingServiceTest
 INFO - Stopping network services
 INFO - Stopping server services
@@ -433,28 +424,20 @@ Connection=keep-alive
 Accept=application/json
 Content-Type=*/*
 Pragma=no-cache
-Cache-Control=no-cache</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>**********************************************</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>FINE - HTTP/1.1 200 OK
+Cache-Control=no-cache
+
+
+**********************************************
+
+FINE - HTTP/1.1 200 OK
 Date: Fri, 09 Nov 2012 11:59:00 GMT
 Content-Length: 33
 Set-Cookie: EJBSESSIONID=7112a057-fc4c-4f52-a556-1617320d2275; Path=/
 Content-Type: application/json
 Connection: close
-Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>{"response":{"value":"Hi REST!"}}
+Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)
+
+{"response":{"value":"Hi REST!"}}
 INFO - Undeploying app: /opt/dev/openejb/openejb-trunk/examples/GreetingServiceTest
 INFO - Stopping network services
 INFO - Stopping server services
@@ -504,32 +487,23 @@ Connection=keep-alive
 Accept=application/json
 Content-Type=application/xml
 Pragma=no-cache
-Cache-Control=no-cache</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;request&gt;&lt;value&gt;Hi REST!&lt;/value&gt;&lt;/request&gt;
-**********************************************</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>FINE - HTTP/1.1 200 OK
+Cache-Control=no-cache
+
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;request&gt;&lt;value&gt;Hi REST!&lt;/value&gt;&lt;/request&gt;
+**********************************************
+
+FINE - HTTP/1.1 200 OK
 Date: Fri, 09 Nov 2012 11:59:01 GMT
 Content-Length: 33
 Set-Cookie: EJBSESSIONID=50cf1d2b-a940-4afb-8993-fff7f9cc6d83; Path=/
 Content-Type: application/json
 Connection: close
-Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>{"response":{"value":"hi rest!"}}
+Server: OpenEJB/4.5.1 Linux/3.2.0-23-generic (amd64)
+
+{"response":{"value":"hi rest!"}}
 INFO - Undeploying app: /opt/dev/openejb/openejb-trunk/examples/GreetingServiceTest
 INFO - Stopping network services
-INFO - Stopping server services</pre>
+INFO - Stopping server services</code></pre>
 </div>
 </div>
             </div>

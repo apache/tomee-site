@@ -174,14 +174,14 @@ public class Movie {
 <div class="sect1">
 <h2 id="_persistence_fragment_xml">persistence-fragment.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence-fragment version="2.0"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;persistence-fragment version="2.0"&gt;
   &lt;persistence-unit-fragment name="movie-unit"&gt;
     &lt;class&gt;org.superbiz.injection.jpa.Movie&lt;/class&gt;
     &lt;exclude-unlisted-classes&gt;true&lt;/exclude-unlisted-classes&gt;
   &lt;/persistence-unit-fragment&gt;
-&lt;/persistence-fragment&gt;</pre>
+&lt;/persistence-fragment&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -231,9 +231,9 @@ public class MoviesTest {
 <div class="sect1">
 <h2 id="_persistence_xml">persistence.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence version="2.0"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;persistence version="2.0"
              xmlns="http://java.sun.com/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
@@ -245,7 +245,7 @@ public class MoviesTest {
       &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 </div>

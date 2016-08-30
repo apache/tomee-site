@@ -1023,22 +1023,19 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_persistence_xml">persistence.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
   &lt;persistence-unit transaction-type="RESOURCE_LOCAL" name="jpa-example"&gt;
     &lt;jta-data-source&gt;java:openejb/Connector/Default JDBC Database&lt;/jta-data-source&gt;
     &lt;non-jta-data-source&gt;java:openejb/Connector/Default Unmanaged JDBC Database&lt;/non-jta-data-source&gt;
-    &lt;class&gt;org.superbiz.servlet.JpaBean&lt;/class&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    &lt;properties&gt;
+    &lt;class&gt;org.superbiz.servlet.JpaBean&lt;/class&gt;
+
+    &lt;properties&gt;
       &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1046,16 +1043,16 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_client_handlers_xml">client-handlers.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;jws:handler-chains xmlns:jws="http://java.sun.com/xml/ns/javaee"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;jws:handler-chains xmlns:jws="http://java.sun.com/xml/ns/javaee"&gt;
   &lt;jws:handler-chain&gt;
     &lt;jws:handler&gt;
       &lt;jws:handler-name&gt;ClientHandler&lt;/jws:handler-name&gt;
       &lt;jws:handler-class&gt;org.superbiz.servlet.ClientHandler&lt;/jws:handler-class&gt;
     &lt;/jws:handler&gt;
   &lt;/jws:handler-chain&gt;
-&lt;/jws:handler-chains&gt;</pre>
+&lt;/jws:handler-chains&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1063,16 +1060,16 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_server_handlers_xml">server-handlers.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;jws:handler-chains xmlns:jws="http://java.sun.com/xml/ns/javaee"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;jws:handler-chains xmlns:jws="http://java.sun.com/xml/ns/javaee"&gt;
   &lt;jws:handler-chain&gt;
     &lt;jws:handler&gt;
       &lt;jws:handler-name&gt;ServerHandler&lt;/jws:handler-name&gt;
       &lt;jws:handler-class&gt;org.superbiz.servlet.ServerHandler&lt;/jws:handler-class&gt;
     &lt;/jws:handler&gt;
   &lt;/jws:handler-chain&gt;
-&lt;/jws:handler-chains&gt;</pre>
+&lt;/jws:handler-chains&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1080,35 +1077,29 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_context_xml">context.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Context&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;Context&gt;
   &lt;!-- This only works if the context is installed under the correct name --&gt;
   &lt;Realm className="org.apache.catalina.realm.MemoryRealm"
-         pathname="webapps/ejb-examples-1.0-SNAPSHOT/WEB-INF/tomcat-users.xml"/&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;Environment
-    name="context.xml/environment"
-    value="ContextString"
-    type="java.lang.String"/&gt;
-&lt;Resource
-    name="context.xml/resource"
-    auth="Container"
-    type="org.superbiz.servlet.ResourceBean"
-    factory="org.apache.naming.factory.BeanFactory"
-    value="ContextResource"/&gt;
-&lt;ResourceLink
-    name="context.xml/resource-link"
-    global="server.xml/environment"
-    type="java.lang.String"/&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;!-- web.xml resources --&gt;
+         pathname="webapps/ejb-examples-1.0-SNAPSHOT/WEB-INF/tomcat-users.xml"/&gt;
+
+  &lt;Environment
+      name="context.xml/environment"
+      value="ContextString"
+      type="java.lang.String"/&gt;
+  &lt;Resource
+      name="context.xml/resource"
+      auth="Container"
+      type="org.superbiz.servlet.ResourceBean"
+      factory="org.apache.naming.factory.BeanFactory"
+      value="ContextResource"/&gt;
+  &lt;ResourceLink
+      name="context.xml/resource-link"
+      global="server.xml/environment"
+      type="java.lang.String"/&gt;
+
+  &lt;!-- web.xml resources --&gt;
   &lt;Resource
       name="web.xml/resource-env-ref"
       auth="Container"
@@ -1125,7 +1116,7 @@ public class WebserviceServlet extends HttpServlet {
       name="web.xml/resource-link"
       global="server.xml/environment"
       type="java.lang.String"/&gt;
-&lt;/Context&gt;</pre>
+&lt;/Context&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1133,9 +1124,9 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_jetty_web_xml">jetty-web.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Configure class="org.eclipse.jetty.webapp.WebAppContext"&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;Configure class="org.eclipse.jetty.webapp.WebAppContext"&gt;
   &lt;Get name="securityHandler"&gt;
     &lt;Set name="loginService"&gt;
       &lt;New class="org.eclipse.jetty.security.HashLoginService"&gt;
@@ -1145,7 +1136,7 @@ public class WebserviceServlet extends HttpServlet {
       &lt;/New&gt;
     &lt;/Set&gt;
   &lt;/Get&gt;
-&lt;/Configure&gt;</pre>
+&lt;/Configure&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1153,12 +1144,12 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_tomcat_users_xml">tomcat-users.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomcat-users&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;tomcat-users&gt;
   &lt;user name="manager" password="manager" roles="manager,user"/&gt;
   &lt;user name="user" password="user" roles="user"/&gt;
-&lt;/tomcat-users&gt;</pre>
+&lt;/tomcat-users&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -1166,230 +1157,153 @@ public class WebserviceServlet extends HttpServlet {
 <div class="sect1">
 <h2 id="_web_xml">web.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          metadata-complete="false"
-         version="2.5"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;display-name&gt;OpenEJB Servlet Examples&lt;/display-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;AnnotatedServlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.AnnotatedServlet&lt;/servlet-class&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;AnnotatedServlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/annotated/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;JpaServlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.JpaServlet&lt;/servlet-class&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;JpaServlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/jpa/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;JndiServlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.JndiServlet&lt;/servlet-class&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;JndiServlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/jndi/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;RunAsServlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.RunAsServlet&lt;/servlet-class&gt;
-  &lt;run-as&gt;
-    &lt;role-name&gt;fake&lt;/role-name&gt;
-  &lt;/run-as&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;RunAsServlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/runas/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;SecureServlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.SecureServlet&lt;/servlet-class&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;SecureServlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/secure/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-constraint&gt;
-  &lt;web-resource-collection&gt;
-    &lt;web-resource-name&gt;Secure Area&lt;/web-resource-name&gt;
-    &lt;url-pattern&gt;/secure/*&lt;/url-pattern&gt;
+         version="2.5"&gt;
+
+  &lt;display-name&gt;OpenEJB Servlet Examples&lt;/display-name&gt;
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;AnnotatedServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.AnnotatedServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;AnnotatedServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/annotated/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;JpaServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.JpaServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;JpaServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/jpa/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;JndiServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.JndiServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;JndiServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/jndi/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;RunAsServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.RunAsServlet&lt;/servlet-class&gt;
+    &lt;run-as&gt;
+      &lt;role-name&gt;fake&lt;/role-name&gt;
+    &lt;/run-as&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;RunAsServlet&lt;/servlet-name&gt;
     &lt;url-pattern&gt;/runas/*&lt;/url-pattern&gt;
-  &lt;/web-resource-collection&gt;
-  &lt;auth-constraint&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;SecureServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.SecureServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;SecureServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/secure/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;security-constraint&gt;
+    &lt;web-resource-collection&gt;
+      &lt;web-resource-name&gt;Secure Area&lt;/web-resource-name&gt;
+      &lt;url-pattern&gt;/secure/*&lt;/url-pattern&gt;
+      &lt;url-pattern&gt;/runas/*&lt;/url-pattern&gt;
+    &lt;/web-resource-collection&gt;
+    &lt;auth-constraint&gt;
+      &lt;role-name&gt;user&lt;/role-name&gt;
+    &lt;/auth-constraint&gt;
+  &lt;/security-constraint&gt;
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;WebserviceServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.WebserviceServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;WebserviceServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/webservice/*&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;HelloPojoService&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.superbiz.servlet.HelloPojoService&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;HelloPojoService&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;login-config&gt;
+    &lt;auth-method&gt;BASIC&lt;/auth-method&gt;
+  &lt;/login-config&gt;
+
+  &lt;security-role&gt;
+    &lt;role-name&gt;manager&lt;/role-name&gt;
+  &lt;/security-role&gt;
+
+  &lt;security-role&gt;
     &lt;role-name&gt;user&lt;/role-name&gt;
-  &lt;/auth-constraint&gt;
-&lt;/security-constraint&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;WebserviceServlet&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.WebserviceServlet&lt;/servlet-class&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;WebserviceServlet&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/webservice/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet&gt;
-  &lt;servlet-name&gt;HelloPojoService&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.superbiz.servlet.HelloPojoService&lt;/servlet-class&gt;
-&lt;/servlet&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;HelloPojoService&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;login-config&gt;
-  &lt;auth-method&gt;BASIC&lt;/auth-method&gt;
-&lt;/login-config&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role&gt;
-  &lt;role-name&gt;manager&lt;/role-name&gt;
-&lt;/security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;security-role&gt;
-  &lt;role-name&gt;user&lt;/role-name&gt;
-&lt;/security-role&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;env-entry&gt;
-  &lt;env-entry-name&gt;web.xml/env-entry&lt;/env-entry-name&gt;
-  &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;
-  &lt;env-entry-value&gt;WebValue&lt;/env-entry-value&gt;
-&lt;/env-entry&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;resource-ref&gt;
-  &lt;res-ref-name&gt;web.xml/Data Source&lt;/res-ref-name&gt;
-  &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
-  &lt;res-auth&gt;Container&lt;/res-auth&gt;
-&lt;/resource-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;resource-env-ref&gt;
-  &lt;resource-env-ref-name&gt;web.xml/Queue&lt;/resource-env-ref-name&gt;
-  &lt;resource-env-ref-type&gt;javax.jms.Queue&lt;/resource-env-ref-type&gt;
-&lt;/resource-env-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-ref&gt;
-  &lt;ejb-ref-name&gt;web.xml/EjbRemote&lt;/ejb-ref-name&gt;
-  &lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
-  &lt;remote&gt;org.superbiz.servlet.AnnotatedEJBRemote&lt;/remote&gt;
-&lt;/ejb-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-local-ref&gt;
-  &lt;ejb-ref-name&gt;web.xml/EjLocal&lt;/ejb-ref-name&gt;
-  &lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
-  &lt;local&gt;org.superbiz.servlet.AnnotatedEJBLocal&lt;/local&gt;
-&lt;/ejb-local-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;persistence-unit-ref&gt;
-  &lt;persistence-unit-ref-name&gt;web.xml/PersistenceUnit&lt;/persistence-unit-ref-name&gt;
-  &lt;persistence-unit-name&gt;jpa-example&lt;/persistence-unit-name&gt;
-&lt;/persistence-unit-ref&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;persistence-context-ref&gt;
+  &lt;/security-role&gt;
+
+  &lt;env-entry&gt;
+    &lt;env-entry-name&gt;web.xml/env-entry&lt;/env-entry-name&gt;
+    &lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;
+    &lt;env-entry-value&gt;WebValue&lt;/env-entry-value&gt;
+  &lt;/env-entry&gt;
+
+  &lt;resource-ref&gt;
+    &lt;res-ref-name&gt;web.xml/Data Source&lt;/res-ref-name&gt;
+    &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
+    &lt;res-auth&gt;Container&lt;/res-auth&gt;
+  &lt;/resource-ref&gt;
+
+  &lt;resource-env-ref&gt;
+    &lt;resource-env-ref-name&gt;web.xml/Queue&lt;/resource-env-ref-name&gt;
+    &lt;resource-env-ref-type&gt;javax.jms.Queue&lt;/resource-env-ref-type&gt;
+  &lt;/resource-env-ref&gt;
+
+  &lt;ejb-ref&gt;
+    &lt;ejb-ref-name&gt;web.xml/EjbRemote&lt;/ejb-ref-name&gt;
+    &lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+    &lt;remote&gt;org.superbiz.servlet.AnnotatedEJBRemote&lt;/remote&gt;
+  &lt;/ejb-ref&gt;
+
+  &lt;ejb-local-ref&gt;
+    &lt;ejb-ref-name&gt;web.xml/EjLocal&lt;/ejb-ref-name&gt;
+    &lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+    &lt;local&gt;org.superbiz.servlet.AnnotatedEJBLocal&lt;/local&gt;
+  &lt;/ejb-local-ref&gt;
+
+  &lt;persistence-unit-ref&gt;
+    &lt;persistence-unit-ref-name&gt;web.xml/PersistenceUnit&lt;/persistence-unit-ref-name&gt;
+    &lt;persistence-unit-name&gt;jpa-example&lt;/persistence-unit-name&gt;
+  &lt;/persistence-unit-ref&gt;
+
+  &lt;persistence-context-ref&gt;
     &lt;persistence-context-ref-name&gt;web.xml/PersistenceContext&lt;/persistence-context-ref-name&gt;
     &lt;persistence-unit-name&gt;jpa-example&lt;/persistence-unit-name&gt;
     &lt;persistence-context-type&gt;Transactional&lt;/persistence-context-type&gt;
   &lt;/persistence-context-ref&gt;
-&lt;/web-app&gt;</pre>
+&lt;/web-app&gt;</code></pre>
 </div>
 </div>
 </div>

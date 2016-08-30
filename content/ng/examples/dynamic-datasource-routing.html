@@ -260,26 +260,20 @@ you can find in META-INF/org.router/ and called service-jar.xml
 <div class="paragraph">
 <p>It contains the following code:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ServiceJar&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ServiceJar&gt;
   &lt;ServiceProvider id="DeterminedRouter" &lt;!-- the name you want to use --&gt;
       service="Resource"
       type="org.apache.openejb.resource.jdbc.Router"
-      class-name="org.superbiz.dynamicdatasourcerouting.DeterminedRouter"&gt; &lt;!-- implementation class --&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre># the parameters</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    DataSourceNames
+      class-name="org.superbiz.dynamicdatasourcerouting.DeterminedRouter"&gt; &lt;!-- implementation class --&gt;
+
+    # the parameters
+
+    DataSourceNames
     DefaultDataSourceName
   &lt;/ServiceProvider&gt;
-&lt;/ServiceJar&gt;</pre>
+&lt;/ServiceJar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -377,42 +371,54 @@ public class RoutedPersister {
 <div class="paragraph">
 <p>The testcase above uses properties for configuration.  The identical way to do it via the <code>conf/openejb.xml</code> is as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;!-- Router and datasource --&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;!-- Router and datasource --&gt;
 &lt;Resource id="My Router" type="org.apache.openejb.router.test.DynamicDataSourceTest$DeterminedRouter" provider="org.routertest:DeterminedRouter"&gt;
     DatasourceNames = database1 database2 database3
     DefaultDataSourceName = database1
-&lt;/Resource&gt;
-&lt;Resource id="Routed Datasource" type="org.apache.openejb.resource.jdbc.Router" provider="RoutedDataSource"&gt;
-    Router = My Router
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;!-- real datasources --&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Routed Datasource" type="org.apache.openejb.resource.jdbc.Router" provider="RoutedDataSource"&gt;
+    Router = My Router
+&lt;/Resource&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;!-- real datasources --&gt;
 &lt;Resource id="database1" type="DataSource"&gt;
     JdbcDriver = org.hsqldb.jdbcDriver
     JdbcUrl = jdbc:hsqldb:mem:db1
     UserName = sa
     Password
     JtaManaged = true
-&lt;/Resource&gt;
-&lt;Resource id="database2" type="DataSource"&gt;
+&lt;/Resource&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="database2" type="DataSource"&gt;
     JdbcDriver = org.hsqldb.jdbcDriver
     JdbcUrl = jdbc:hsqldb:mem:db2
     UserName = sa
     Password
     JtaManaged = true
-&lt;/Resource&gt;
-&lt;Resource id="database3" type="DataSource"&gt;
+&lt;/Resource&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="database3" type="DataSource"&gt;
     JdbcDriver = org.hsqldb.jdbcDriver
     JdbcUrl = jdbc:hsqldb:mem:db3
     UserName = sa
     Password
     JtaManaged = true
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="sect1">

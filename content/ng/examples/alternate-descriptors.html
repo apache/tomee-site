@@ -105,7 +105,7 @@
 <p>Example alternate-descriptors can be browsed at <a href="https://github.com/apache/tomee/tree/master/examples/alternate-descriptors" class="bare">https://github.com/apache/tomee/tree/master/examples/alternate-descriptors</a></p>
 </div>
 <div class="paragraph">
-<p>See the [Alternate Descriptors](../../alternate-descriptors.html) page for the full details of how this feature works.</p>
+<p>See the <a href="../../alternate-descriptors.html">Alternate Descriptors</a> page for the full details of how this feature works.</p>
 </div>
 <div class="paragraph">
 <p>For our example we&#8217;ll use the standard "moviefun" code which contains a <code>Movie</code> entity and <code>Movies</code> session bean.  To add a twist
@@ -138,9 +138,9 @@ for testing and demonstrate alternate descriptors, we will create an interceptor
 <div class="paragraph">
 <p>The normal <code>ejb-jar.xml</code> simply contains <code>&lt;ejb-jar/&gt;</code>, however the <code>test.ejb-jar.xml</code> we add an extra interceptor:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
 &lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"&gt;
   &lt;assembly-descriptor&gt;
     &lt;interceptor-binding&gt;
@@ -148,7 +148,7 @@ for testing and demonstrate alternate descriptors, we will create an interceptor
       &lt;interceptor-class&gt;org.superbiz.altdd.MoviesTest$Interceptor&lt;/interceptor-class&gt;
     &lt;/interceptor-binding&gt;
   &lt;/assembly-descriptor&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -282,7 +282,7 @@ public Object invoke(InvocationContext context) throws Exception {</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>As noted in [the documentation](../../alternate-descriptors.html), several prefixes can be used at once.</p>
+<p>As noted in <a href="../../alternate-descriptors.html">the documentation</a>, several prefixes can be used at once.</p>
 </div>
 </div>
 </div>

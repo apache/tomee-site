@@ -199,58 +199,43 @@ public class RedBean implements Friend {
 <div class="sect1">
 <h2 id="_ejb_jar_xml">ejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;!-- Notice this changes the global jndi name --&gt;
-&lt;module-name&gt;wombat&lt;/module-name&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;BlueBean&lt;/ejb-name&gt;
-  &lt;business-local&gt;org.superbiz.ejblookup.Friend&lt;/business-local&gt;
-  &lt;ejb-class&gt;org.superbiz.ejblookup.BlueBean&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-  &lt;ejb-local-ref&gt;
-    &lt;ejb-ref-name&gt;myFriend&lt;/ejb-ref-name&gt;
-    &lt;local&gt;org.superbiz.ejblookup.Friend&lt;/local&gt;
-    &lt;ejb-link&gt;RedBean&lt;/ejb-link&gt;
-  &lt;/ejb-local-ref&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;RedBean&lt;/ejb-name&gt;
-  &lt;business-local&gt;org.superbiz.ejblookup.Friend&lt;/business-local&gt;
-  &lt;ejb-class&gt;org.superbiz.ejblookup.RedBean&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-  &lt;ejb-local-ref&gt;
-    &lt;ejb-ref-name&gt;myFriend&lt;/ejb-ref-name&gt;
-    &lt;local&gt;org.superbiz.ejblookup.Friend&lt;/local&gt;
-    &lt;ejb-link&gt;BlueBean&lt;/ejb-link&gt;
-  &lt;/ejb-local-ref&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee"&gt;
+
+  &lt;!-- Notice this changes the global jndi name --&gt;
+  &lt;module-name&gt;wombat&lt;/module-name&gt;
+
+  &lt;enterprise-beans&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;BlueBean&lt;/ejb-name&gt;
+      &lt;business-local&gt;org.superbiz.ejblookup.Friend&lt;/business-local&gt;
+      &lt;ejb-class&gt;org.superbiz.ejblookup.BlueBean&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+      &lt;ejb-local-ref&gt;
+        &lt;ejb-ref-name&gt;myFriend&lt;/ejb-ref-name&gt;
+        &lt;local&gt;org.superbiz.ejblookup.Friend&lt;/local&gt;
+        &lt;ejb-link&gt;RedBean&lt;/ejb-link&gt;
+      &lt;/ejb-local-ref&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;RedBean&lt;/ejb-name&gt;
+      &lt;business-local&gt;org.superbiz.ejblookup.Friend&lt;/business-local&gt;
+      &lt;ejb-class&gt;org.superbiz.ejblookup.RedBean&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+      &lt;ejb-local-ref&gt;
+        &lt;ejb-ref-name&gt;myFriend&lt;/ejb-ref-name&gt;
+        &lt;local&gt;org.superbiz.ejblookup.Friend&lt;/local&gt;
+        &lt;ejb-link&gt;BlueBean&lt;/ejb-link&gt;
+      &lt;/ejb-local-ref&gt;
+    &lt;/session&gt;
+
+  &lt;/enterprise-beans&gt;
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>

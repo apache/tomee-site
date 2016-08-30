@@ -310,9 +310,9 @@ public class CalculatorSecurity implements Calculator {
 <div class="sect1">
 <h2 id="_beans_xml">beans.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;beans&gt;
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;beans&gt;
   &lt;!--
   Explicitly declaring decorators is required by the CDI specification.
   The order decorators are listed in the xml is the order in which they are invoked.
@@ -321,7 +321,7 @@ public class CalculatorSecurity implements Calculator {
     &lt;class&gt;org.superbiz.cdi.decorators.CalculatorSecurity&lt;/class&gt;
     &lt;class&gt;org.superbiz.cdi.decorators.CalculatorLogging&lt;/class&gt;
   &lt;/decorators&gt;
-&lt;/beans&gt;</pre>
+&lt;/beans&gt;</code></pre>
 </div>
 </div>
 </div>

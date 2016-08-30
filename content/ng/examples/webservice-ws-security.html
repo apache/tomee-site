@@ -201,125 +201,89 @@ public interface CalculatorWs {
 <div class="sect1">
 <h2 id="_ejb_jar_xml">ejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd"
-         version="3.0" id="simple" metadata-complete="false"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplTimestamp1way&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplTimestamp2ways&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplUsernameTokenPlainPassword&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplUsernameTokenHashedPassword&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplSign&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplEncrypt2ways&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplSign2ways&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;session&gt;
-  &lt;ejb-name&gt;CalculatorImplEncryptAndSign2ways&lt;/ejb-name&gt;
-  &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
-  &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
-  &lt;session-type&gt;Stateless&lt;/session-type&gt;
-  &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
-&lt;/session&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/enterprise-beans&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/ejb-jar&gt;</pre>
+         version="3.0" id="simple" metadata-complete="false"&gt;
+
+  &lt;enterprise-beans&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplTimestamp1way&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplTimestamp2ways&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplUsernameTokenPlainPassword&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplUsernameTokenHashedPassword&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplSign&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplEncrypt2ways&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplSign2ways&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+    &lt;session&gt;
+      &lt;ejb-name&gt;CalculatorImplEncryptAndSign2ways&lt;/ejb-name&gt;
+      &lt;service-endpoint&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint&gt;
+      &lt;ejb-class&gt;org.superbiz.calculator.CalculatorImpl&lt;/ejb-class&gt;
+      &lt;session-type&gt;Stateless&lt;/session-type&gt;
+      &lt;transaction-type&gt;Container&lt;/transaction-type&gt;
+    &lt;/session&gt;
+
+  &lt;/enterprise-beans&gt;
+
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -327,81 +291,72 @@ public interface CalculatorWs {
 <div class="sect1">
 <h2 id="_openejb_jar_xml">openejb-jar.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;ejb-deployment ejb-name="CalculatorImpl"&gt;
-  &lt;properties&gt;
-    # webservice.security.realm
-    # webservice.security.securityRealm
-    # webservice.security.transportGarantee = NONE
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = UsernameToken
-    wss4j.in.passwordType = PasswordText
-    wss4j.in.passwordCallbackClass = org.superbiz.calculator.CustomPasswordHandler</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    # automatically added
-    wss4j.in.validator.{http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd}UsernameToken = org.apache.openejb.server.cxf.OpenEJBLoginValidator
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;
-&lt;ejb-deployment ejb-name="CalculatorImplTimestamp1way"&gt;
-  &lt;properties&gt;
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = Timestamp
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;
-&lt;ejb-deployment ejb-name="CalculatorImplTimestamp2ways"&gt;
-  &lt;properties&gt;
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = Timestamp
-    wss4j.out.action = Timestamp
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;
-&lt;ejb-deployment ejb-name="CalculatorImplUsernameTokenPlainPassword"&gt;
-  &lt;properties&gt;
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = UsernameToken
-    wss4j.in.passwordType = PasswordText
-    wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;
-&lt;ejb-deployment ejb-name="CalculatorImplUsernameTokenHashedPassword"&gt;
-  &lt;properties&gt;
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = UsernameToken
-    wss4j.in.passwordType = PasswordDigest
-    wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;
-&lt;ejb-deployment ejb-name="CalculatorImplUsernameTokenPlainPasswordEncrypt"&gt;
-  &lt;properties&gt;
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = UsernameToken Encrypt
-    wss4j.in.passwordType = PasswordText
-    wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
-    wss4j.in.decryptionPropFile = META-INF/CalculatorImplUsernameTokenPlainPasswordEncrypt-server.properties
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;
-&lt;ejb-deployment ejb-name="CalculatorImplSign"&gt;
-  &lt;properties&gt;
-    webservice.security.authMethod = WS-SECURITY
-    wss4j.in.action = Signature
-    wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
-    wss4j.in.signaturePropFile = META-INF/CalculatorImplSign-server.properties
-  &lt;/properties&gt;
-&lt;/ejb-deployment&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/openejb-jar&gt;</pre>
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1"&gt;
+
+  &lt;ejb-deployment ejb-name="CalculatorImpl"&gt;
+    &lt;properties&gt;
+      # webservice.security.realm
+      # webservice.security.securityRealm
+      # webservice.security.transportGarantee = NONE
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = UsernameToken
+      wss4j.in.passwordType = PasswordText
+      wss4j.in.passwordCallbackClass = org.superbiz.calculator.CustomPasswordHandler
+
+      # automatically added
+      wss4j.in.validator.{http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd}UsernameToken = org.apache.openejb.server.cxf.OpenEJBLoginValidator
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+  &lt;ejb-deployment ejb-name="CalculatorImplTimestamp1way"&gt;
+    &lt;properties&gt;
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = Timestamp
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+  &lt;ejb-deployment ejb-name="CalculatorImplTimestamp2ways"&gt;
+    &lt;properties&gt;
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = Timestamp
+      wss4j.out.action = Timestamp
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+  &lt;ejb-deployment ejb-name="CalculatorImplUsernameTokenPlainPassword"&gt;
+    &lt;properties&gt;
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = UsernameToken
+      wss4j.in.passwordType = PasswordText
+      wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+  &lt;ejb-deployment ejb-name="CalculatorImplUsernameTokenHashedPassword"&gt;
+    &lt;properties&gt;
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = UsernameToken
+      wss4j.in.passwordType = PasswordDigest
+      wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+  &lt;ejb-deployment ejb-name="CalculatorImplUsernameTokenPlainPasswordEncrypt"&gt;
+    &lt;properties&gt;
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = UsernameToken Encrypt
+      wss4j.in.passwordType = PasswordText
+      wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
+      wss4j.in.decryptionPropFile = META-INF/CalculatorImplUsernameTokenPlainPasswordEncrypt-server.properties
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+  &lt;ejb-deployment ejb-name="CalculatorImplSign"&gt;
+    &lt;properties&gt;
+      webservice.security.authMethod = WS-SECURITY
+      wss4j.in.action = Signature
+      wss4j.in.passwordCallbackClass=org.superbiz.calculator.CustomPasswordHandler
+      wss4j.in.signaturePropFile = META-INF/CalculatorImplSign-server.properties
+    &lt;/properties&gt;
+  &lt;/ejb-deployment&gt;
+
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -409,64 +364,58 @@ public interface CalculatorWs {
 <div class="sect1">
 <h2 id="_webservices_xml">webservices.xml</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;webservices xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<pre class="prettyprint highlight"><code class="language-xml" data-lang="xml">&lt;webservices xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
 http://www.ibm.com/webservices/xsd/j2ee_web_services_1_1.xsd"
-             xmlns:ger="http://ciaows.org/wsdl" version="1.1"&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;webservice-description&gt;
-  &lt;webservice-description-name&gt;CalculatorWsService&lt;/webservice-description-name&gt;
-  &lt;port-component&gt;
-    &lt;port-component-name&gt;CalculatorImplTimestamp1way&lt;/port-component-name&gt;
-    &lt;wsdl-port&gt;CalculatorImplTimestamp1way&lt;/wsdl-port&gt;
-    &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
-    &lt;service-impl-bean&gt;
-      &lt;ejb-link&gt;CalculatorImplTimestamp1way&lt;/ejb-link&gt;
-    &lt;/service-impl-bean&gt;
-  &lt;/port-component&gt;
-  &lt;port-component&gt;
-    &lt;port-component-name&gt;CalculatorImplTimestamp2ways&lt;/port-component-name&gt;
-    &lt;wsdl-port&gt;CalculatorImplTimestamp2ways&lt;/wsdl-port&gt;
-    &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
-    &lt;service-impl-bean&gt;
-      &lt;ejb-link&gt;CalculatorImplTimestamp2ways&lt;/ejb-link&gt;
-    &lt;/service-impl-bean&gt;
-  &lt;/port-component&gt;
-  &lt;port-component&gt;
-    &lt;port-component-name&gt;CalculatorImplUsernameTokenPlainPassword&lt;/port-component-name&gt;
-    &lt;wsdl-port&gt;CalculatorImplUsernameTokenPlainPassword&lt;/wsdl-port&gt;
-    &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
-    &lt;service-impl-bean&gt;
-      &lt;ejb-link&gt;CalculatorImplUsernameTokenPlainPassword&lt;/ejb-link&gt;
-    &lt;/service-impl-bean&gt;
-  &lt;/port-component&gt;
-  &lt;port-component&gt;
-    &lt;port-component-name&gt;CalculatorImplUsernameTokenHashedPassword&lt;/port-component-name&gt;
-    &lt;wsdl-port&gt;CalculatorImplUsernameTokenHashedPassword&lt;/wsdl-port&gt;
-    &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
-    &lt;service-impl-bean&gt;
-      &lt;ejb-link&gt;CalculatorImplUsernameTokenHashedPassword&lt;/ejb-link&gt;
-    &lt;/service-impl-bean&gt;
-  &lt;/port-component&gt;
-  &lt;port-component&gt;
-    &lt;port-component-name&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/port-component-name&gt;
-    &lt;wsdl-port&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/wsdl-port&gt;
-    &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
-    &lt;service-impl-bean&gt;
-      &lt;ejb-link&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/ejb-link&gt;
-    &lt;/service-impl-bean&gt;
-  &lt;/port-component&gt;
-&lt;/webservice-description&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;/webservices&gt;</pre>
+             xmlns:ger="http://ciaows.org/wsdl" version="1.1"&gt;
+
+  &lt;webservice-description&gt;
+    &lt;webservice-description-name&gt;CalculatorWsService&lt;/webservice-description-name&gt;
+    &lt;port-component&gt;
+      &lt;port-component-name&gt;CalculatorImplTimestamp1way&lt;/port-component-name&gt;
+      &lt;wsdl-port&gt;CalculatorImplTimestamp1way&lt;/wsdl-port&gt;
+      &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
+      &lt;service-impl-bean&gt;
+        &lt;ejb-link&gt;CalculatorImplTimestamp1way&lt;/ejb-link&gt;
+      &lt;/service-impl-bean&gt;
+    &lt;/port-component&gt;
+    &lt;port-component&gt;
+      &lt;port-component-name&gt;CalculatorImplTimestamp2ways&lt;/port-component-name&gt;
+      &lt;wsdl-port&gt;CalculatorImplTimestamp2ways&lt;/wsdl-port&gt;
+      &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
+      &lt;service-impl-bean&gt;
+        &lt;ejb-link&gt;CalculatorImplTimestamp2ways&lt;/ejb-link&gt;
+      &lt;/service-impl-bean&gt;
+    &lt;/port-component&gt;
+    &lt;port-component&gt;
+      &lt;port-component-name&gt;CalculatorImplUsernameTokenPlainPassword&lt;/port-component-name&gt;
+      &lt;wsdl-port&gt;CalculatorImplUsernameTokenPlainPassword&lt;/wsdl-port&gt;
+      &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
+      &lt;service-impl-bean&gt;
+        &lt;ejb-link&gt;CalculatorImplUsernameTokenPlainPassword&lt;/ejb-link&gt;
+      &lt;/service-impl-bean&gt;
+    &lt;/port-component&gt;
+    &lt;port-component&gt;
+      &lt;port-component-name&gt;CalculatorImplUsernameTokenHashedPassword&lt;/port-component-name&gt;
+      &lt;wsdl-port&gt;CalculatorImplUsernameTokenHashedPassword&lt;/wsdl-port&gt;
+      &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
+      &lt;service-impl-bean&gt;
+        &lt;ejb-link&gt;CalculatorImplUsernameTokenHashedPassword&lt;/ejb-link&gt;
+      &lt;/service-impl-bean&gt;
+    &lt;/port-component&gt;
+    &lt;port-component&gt;
+      &lt;port-component-name&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/port-component-name&gt;
+      &lt;wsdl-port&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/wsdl-port&gt;
+      &lt;service-endpoint-interface&gt;org.superbiz.calculator.CalculatorWs&lt;/service-endpoint-interface&gt;
+      &lt;service-impl-bean&gt;
+        &lt;ejb-link&gt;CalculatorImplUsernameTokenPlainPasswordEncrypt&lt;/ejb-link&gt;
+      &lt;/service-impl-bean&gt;
+    &lt;/port-component&gt;
+  &lt;/webservice-description&gt;
+
+&lt;/webservices&gt;</code></pre>
 </div>
 </div>
 </div>
