@@ -49,6 +49,9 @@ See [DataSource Password Encryption](datasource-password-encryption.html)
 
 See [Common DataSource Configurations](common-datasource-configurations.html)
  for a list of the commonly used databases and their driver configurations.
+ 
+See [DataSource Configuration by Creator](datasource-configuration-by-creator.html)
+ for a list of the different properties supported for each data source creator.
 
 You may also need data partitioning per customer or depending on any other
 business criteria. That's also an available feature. See [Dynamic Datasource](dynamic-datasource.html) for more details.
