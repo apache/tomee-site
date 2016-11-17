@@ -23,7 +23,6 @@ Note: details are http://tomee.apache.org/containers-and-resources.html
 - DefaultCatalog
 - DefaultReadOnly
 - DefaultTransactionIsolation
-- DefaultTransactionIsolation
 - Delegate
 - InitialSize
 - JdbcDriver
@@ -34,7 +33,6 @@ Note: details are http://tomee.apache.org/containers-and-resources.html
 - MaxActive
 - MaxIdle
 - MaxOpenPreparedStatements
-- MaxWait
 - MaxWait
 - MinEvictableIdleTimeMillis
 - MinIdle
@@ -111,3 +109,44 @@ Note: details are https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html
 - ValidationQueryTimeout
 - Validator
 - ValidatorClassName
+
+## DBCP2 (TomEE 7.x)
+
+Note: details are http://tomee.apache.org/containers-and-resources.html
+(note: http://commons.apache.org/proper/commons-dbcp/configuration.html uses the last version of DBCP but we didnt upgrade yet).
+
+- AccessToUnderlyingConnectionAllowed
+- ConnectionInitSqls
+- ConnectionProperties
+- DefaultAutoCommit
+- DefaultCatalog
+- DefaultReadOnly
+- DefaultTransactionIsolation
+- Delegate
+- InitialSize
+- JdbcDriver
+- JdbcUrl
+- LogAbandoned
+- LogWriter
+- LoginTimeout
+- MaxTotal
+- MaxIdle
+- MaxOpenPreparedStatements
+- MaxWait
+- MinEvictableIdleTimeMillis
+- MinIdle
+- Name
+- NumTestsPerEvictionRun
+- Password
+- PasswordCipher
+- PoolPreparedStatements
+- RemoveAbandonedOnBorrow
+- RemoveAbandonedOnMaintenance
+- RemoveAbandonedTimeout
+- TestOnBorrow
+- TestOnReturn
+- TestWhileIdle
+- TimeBetweenEvictionRunsMillis
+- UserName
+- ValidationQuery
+- ValidationQueryTimeout
