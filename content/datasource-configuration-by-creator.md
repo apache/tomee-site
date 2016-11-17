@@ -11,10 +11,10 @@ align the most common entries to the historical configuration (ie DBCP).
 Here are a more detailled list of accepted properties by creator.
 
 
-## DBCP
+## DBCP (TomEE 1.7.x)
 
-Note: details are http://tomee.apache.org/containers-and-resources.html
-(note: http://commons.apache.org/proper/commons-dbcp/configuration.html uses the last version of DBCP but we didnt upgrade yet).
+Note: details are at http://tomee.apache.org/containers-and-resources.html
+(note: http://commons.apache.org/proper/commons-dbcp/configuration.html uses the latest version of DBCP but TomEE 1.7.x is not using this version).
 
 - AccessToUnderlyingConnectionAllowed
 - ConnectionInitSqls
@@ -53,7 +53,7 @@ Note: details are http://tomee.apache.org/containers-and-resources.html
 
 ## Tomcat JDBC
 
-Note: details are https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html
+Note: details are at https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html
 
 - AbandonWhenPercentageFull
 - AccessToUnderlyingConnectionAllowed
@@ -112,8 +112,7 @@ Note: details are https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html
 
 ## DBCP2 (TomEE 7.x)
 
-Note: details are http://tomee.apache.org/containers-and-resources.html
-(note: http://commons.apache.org/proper/commons-dbcp/configuration.html uses the last version of DBCP but we didnt upgrade yet).
+Note: details are at http://commons.apache.org/proper/commons-dbcp/configuration.html
 
 - AccessToUnderlyingConnectionAllowed
 - ConnectionInitSqls
