@@ -857,6 +857,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/examples/index-ng.html</loc>
+    	<lastmod>2016-08-30</lastmod>
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/examples/index.html</loc>
     	<lastmod>2016-08-30</lastmod>
     </url>
