@@ -2,7 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/advanced/client/jndi.html</loc>
+    	<loc>http://tomee.apache.org/developer/migration/tomee-1-to-7.html</loc>
+    	<lastmod>2017-06-17</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/jms/jms-configuration.html</loc>
+    	<lastmod>2017-02-22</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/client/index.html</loc>
+    	<lastmod>2016-10-14</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/client/jndi.html</loc>
     	<lastmod>2016-10-14</lastmod>
     </url>
 
@@ -657,8 +672,73 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/developer/tools/gradle-plugins.html</loc>
+    	<loc>http://tomee.apache.org/developer/tools/gradle-plugins.html</loc>
     	<lastmod>2016-05-31</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/cluster/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/configuration/application.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/configuration/containers.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/configuration/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/configuration/resources.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/configuration/server.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/file-layout.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/admin/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/applicationcomposer/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/setup/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/shading/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/advanced/tomee-embedded/index.html</loc>
+    	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
@@ -682,127 +762,72 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/cluster/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/classloading/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/configuration/application.html</loc>
+    	<loc>http://tomee.apache.org/developer/configuration/cxf.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/configuration/containers.html</loc>
+    	<loc>http://tomee.apache.org/developer/ide/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/configuration/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/configuration/resources.html</loc>
+    	<loc>http://tomee.apache.org/developer/json/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/configuration/server.html</loc>
+    	<loc>http://tomee.apache.org/developer/testing/applicationcomposer/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/admin/directory-structure.html</loc>
+    	<loc>http://tomee.apache.org/developer/testing/arquillian/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/advanced/applicationcomposer/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/testing/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/advanced/setup/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/testing/other/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/advanced/shading/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/tools/index.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/advanced/tomee-embedded/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/tools/maven/applicationcomposer.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/developer/classloading/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/tools/maven/embedded.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/developer/configuration/cxf.html</loc>
+    	<loc>http://tomee.apache.org/developer/tools/maven/tomee.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/documentation/developer/ide/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/json/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/testing/applicationcomposer/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/testing/arquillian/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/testing/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/testing/other/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/tools/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/tools/maven/applicationcomposer.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/tools/maven/embedded.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/tools/maven/tomee.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/developer/tools/maven-plugins.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/documentation/index.html</loc>
+    	<loc>http://tomee.apache.org/developer/tools/maven-plugins.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
@@ -817,7 +842,7 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/downloads/download-ng.html</loc>
+    	<loc>http://tomee.apache.org/download-ng.html</loc>
     	<lastmod>2015-04-05</lastmod>
     </url>
 
