@@ -12,16 +12,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/advanced/client/index.html</loc>
-    	<lastmod>2016-10-14</lastmod>
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/advanced/client/jndi.html</loc>
-    	<lastmod>2016-10-14</lastmod>
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/examples/access-timeout-meta.html</loc>
     	<lastmod>2016-09-06</lastmod>
     </url>
@@ -677,11 +667,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/admin/cluster/index.html</loc>
-    	<lastmod>2016-03-16</lastmod>
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/admin/configuration/application.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
@@ -828,6 +813,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/developer/tools/maven-plugins.html</loc>
+    	<lastmod>2016-03-16</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/docs.html</loc>
     	<lastmod>2016-03-16</lastmod>
     </url>
 
