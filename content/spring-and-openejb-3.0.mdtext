@@ -109,7 +109,7 @@ OrangeUnitFactoryBean.java
 
         public Object getObject() {
             try {
-                ResourceLocal bean = (ResourceLocal) context.lookup("OrangeUnitBeanLocal");
+                OrangeUnitLocal bean = (OrangeUnitLocal) context.lookup("OrangeUnitBeanLocal");
                 return bean.getEntityManager();
             } catch (NamingException e) {
                 throw new RuntimeException(e);
@@ -120,7 +120,7 @@ OrangeUnitFactoryBean.java
             return EntityManager.class;
         }
 
-        boolean isSingleton() {
+        public boolean isSingleton() {
             return true;
         }
     }
