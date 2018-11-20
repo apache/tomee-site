@@ -4,19 +4,19 @@ Writing an example is easy.  Any example is a good one.  The more the better.
 
 Writing examples that can be used in a presentations is hard.
 
-Some basic guideliness of writing examples:
+Some basic guidelines of writing examples:
 
  - focus on one idea per example
  - keep examples short
     - one test case
     - minimal code to make the point
  - avoid showing an entire API in one example, if possible
- - be concious of the cost of "setting the stage"
+ - be conscious of the cost of "setting the stage"
  - if examples get too big, split it
 
 # Noise vs signal
 
-It takes time to learn the example scenario (noise).  You need to learn the scenario before you can start to see the imporant parts (signal).
+It takes time to learn the example scenario (noise).  You need to learn the scenario before you can start to see the important parts (signal).
 
 Be very mindful of your noise to signal ratio.
 
@@ -28,7 +28,7 @@ You should be able to explain the entire example in two minutes.
 
 If there are five ways to do the same thing, avoid making five different scenarios.  Copy the example to a new directory, and tweak it to show the variation.
 
-So say you used objects `Green`, `Square` and `Checkers` to show the basic concept and you wish to show the next variation of that same concecpt.  It is tempting to add to the same
+So say you used objects `Green`, `Square` and `Checkers` to show the basic concept and you wish to show the next variation of that same concept.  It is tempting to add to the same
 example objects `Yellow`, `Triangle` and `PolkaDots`.
 
 Avoid that.  Copy `Green`, `Square` and `Checkers` to a new example, change the package name, and update the few lines needed to show the difference.
