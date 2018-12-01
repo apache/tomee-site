@@ -1,12 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
-body {
-	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	overflow-x: hidden;
-	color: #2a3237;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
 
 .parallax {
 	position: absolute;
@@ -50,41 +42,6 @@ body {
 	font-size: 18px;
 	line-height: 1.5;
 	color: #80287a;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
-	position: relative;
-	margin: 10px 0;
-}
-
-h1 {
-	font-size: 60px;
-}
-
-h2 {
-	font-size: 48px;
-}
-
-h3 {
-	font-size: 30px;
-}
-
-h4 {
-	font-size: 24px;
-}
-
-h5 {
-	font-size: 18px;
-}
-
-h6 {
-	font-size: 16px;
 }
 
 ul.white-list {
@@ -152,12 +109,57 @@ header .typed-cursor {
 	animation-iteration-count: infinite;
 }
 
-a {
-	text-decoration: none;
-	color: #80287a;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+
+pre {
+	border: 0px solid #ccc;
+	margin: 0 0 20px;
 }
+code {
+	color: #8a6d3b;
+	background-color: #f5f5f5;
+}
+p {
+    margin: 0px 0 20px;
+}
+td p {
+    margin: 0px;
+}
+
+body {
+    font-size: 17px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4,  {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 300;
+}
+h5, .h5, h6, .h6 {
+    margin-top: 25px;
+    font-weight: 600;
+}
+.page-header h1 {
+	font-weight: 500;
+}
+.page-header {
+    margin: 40px 0 20px;
+}
+li {
+	margin-bottom: 10px;
+}
+
+.nav > li {
+	margin: 0px;
+}
+/*a {*/
+	/*text-decoration: none;*/
+	/*color: #80287a;*/
+	/*-webkit-transition: all 0.3s ease;*/
+	/*transition: all 0.3s ease;*/
+/*}*/
 /* Navigation Bar ( Navbar ) */
 
 nav.navbar {
@@ -401,6 +403,16 @@ section {
 	width: 100%;
 	height: 300px;
 	margin: 20px 0;
+}
+
+header h2 {
+	font-size: 48px;
+	font-weight: 500;
+}
+
+section h5 {
+	font-weight: 500;
+	font-size: 20px;
 }
 
 .intro-tables .intro-table .heading {
@@ -1170,4 +1182,108 @@ h2 { /*ensure downlooad as PDF are clickable*/
 }
 vspace {
     height: 1em;
+}
+
+.admonitionblock td.content > .title, .exampleblock > .title, .imageblock > .title, .videoblock > .title, .listingblock > .title, .literalblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, .sidebarblock > .title, .tableblock > .title, .verseblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-align: left; font-weight: bold; }
+
+.tableblock > caption { text-align: left; font-weight: bold; white-space: nowrap; overflow: visible; max-width: 0; }
+
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+
+.admonitionblock > table {
+	border: 0;
+	background: none;
+	width: 100%;
+	margin: 0px 0px 20px;
+}
+
+.admonitionblock > table td.icon {
+	text-align: center;
+	width: 80px;
+}
+
+.admonitionblock > table td.icon img {
+	max-width: none;
+}
+
+.admonitionblock > table td.icon .title {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.admonitionblock > table td.content {
+	padding-left: 1.125em;
+	padding-right: 1.25em;
+	border-left: 1px solid #dddddd;
+	color: #6f6f6f;
+	font-size: 15px;
+}
+
+.admonitionblock > table td.content > :last-child > :last-child {
+	margin-bottom: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
+
+.admonitionblock td.icon [class^="fa icon-"]:before {
+	font-size: 2.5em;
+	text-shadow: 1px 1px 2px #e6e6e6;
+	cursor: default; /* -webkit-font-smoothing: antialiased; */
+}
+
+.admonitionblock td.icon .icon-note:before {
+	content: "\f05a";
+	color: #005498;
+	color: #80a8c7;
+}
+
+.admonitionblock td.icon .icon-tip:before {
+	content: "\f0eb";
+	text-shadow: 1px 1px 2px rgba(222, 222, 68, 0.8);
+	color: #c7ba71;
+}
+
+.admonitionblock td.icon .icon-warning:before {
+	content: "\f071";
+	color: #da8f33;
+}
+
+.admonitionblock td.icon .icon-caution:before {
+	content: "\f06d";
+	color: #af5e40;
+}
+
+.admonitionblock td.icon .icon-important:before {
+	content: "\f06a";
+	color: #bd5a5a;
+}
+
+/* Markdown table */
+.mdtable {
+	border: 1px solid #ddd;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+.mdtable > thead > tr > th, .mdtable > thead > tr > td {
+    border-bottom-width: 2px;
+}
+.mdtable > thead > tr > th, .mdtable > tbody > tr > th, .mdtable > tfoot > tr > th, .mdtable > thead > tr > td, .mdtable > tbody > tr > td, .mdtable > tfoot > tr > td {
+    border: 1px solid #ddd;
+}
+.mdtable > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+.mdtable > thead > tr > th, .mdtable > tbody > tr > th, .mdtable > tfoot > tr > th, .mdtable > thead > tr > td, .mdtable > tbody > tr > td, .mdtable > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
 }
