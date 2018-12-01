@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apache TomEE</title>
+	<meta name="description"
+		  content="Apache TomEE is a lightweight, yet powerful, JavaEE Application server with feature rich tooling." />
+	<meta name="keywords" content="tomee,asf,apache,javaee,jee,shade,embedded,test,junit,applicationcomposer,maven,arquillian" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<link rel="icon" href="../../favicon.ico">
+	<link rel="icon"  type="image/png" href="../../favicon.png">
+	<meta name="msapplication-TileColor" content="#80287a">
+	<meta name="theme-color" content="#80287a">
+	<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../css/owl.css">
+	<link rel="stylesheet" type="text/css" href="../../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jqtree.css">
+	<link rel="stylesheet" type="text/css" href="../../css/idea.css">
+	<link rel="stylesheet" type="text/css" href="../../css/cardio.css">
+
+	<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2717626-1']);
+      _gaq.push(['_setDomainName', 'apache.org']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+		<img src="../../img/loader.gif" alt="Preloader image">
+	</div>
+	    <nav class="navbar">
+		<div class="container">
+		  <div class="row">          <div class="col-md-12">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">
+				    <span>
+
+				    
+                        <img src="../../img/logo-active.png">
+                    
+
+                    </span>
+				    Apache TomEE
+                </a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="../../docs.html">Documentation</a></li>
+					<li><a href="../../community/index.html">Community</a></li>
+					<li><a href="../../security/index.html">Security</a></li>
+					<li><a href="../../download-ng.html">Downloads</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		   </div></div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+    <div id="main-block" class="container section-padded">
+        <div class="row title">
+          <div class="col-md-12">
+            <div class='page-header'>
+              
+              <h1>Examples</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="ulist">
+<ul>
+<li>
+<p><a href="access-timeout.html">access-timeout</a></p>
+</li>
+<li>
+<p><a href="access-timeout-meta.html">access-timeout-meta</a></p>
+</li>
+<li>
+<p><a href="alternate-descriptors.html">alternate-descriptors</a></p>
+</li>
+<li>
+<p><a href="applet.html">applet</a></p>
+</li>
+<li>
+<p><a href="application-composer.html">application-composer</a></p>
+</li>
+<li>
+<p><a href="applicationexception.html">applicationexception</a></p>
+</li>
+<li>
+<p><a href="arquillian-jpa.html">arquillian-jpa</a></p>
+</li>
+<li>
+<p><a href="async-methods.html">async-methods</a></p>
+</li>
+<li>
+<p><a href="async-postconstruct.html">async-postconstruct</a></p>
+</li>
+<li>
+<p><a href="bean-validation-design-by-contract.html">bean-validation-design-by-contract</a></p>
+</li>
+<li>
+<p><a href="bval-evaluation-redeployment.html">bval-evaluation-redeployment</a></p>
+</li>
+<li>
+<p><a href="cdi-alternative-and-stereotypes.html">cdi-alternative-and-stereotypes</a></p>
+</li>
+<li>
+<p><a href="cdi-application-scope.html">cdi-application-scope</a></p>
+</li>
+<li>
+<p><a href="cdi-basic.html">cdi-basic</a></p>
+</li>
+<li>
+<p><a href="cdi-events.html">cdi-events</a></p>
+</li>
+<li>
+<p><a href="cdi-interceptors.html">cdi-interceptors</a></p>
+</li>
+<li>
+<p><a href="cdi-produces-disposes.html">cdi-produces-disposes</a></p>
+</li>
+<li>
+<p><a href="cdi-produces-field.html">cdi-produces-field</a></p>
+</li>
+<li>
+<p><a href="cdi-request-scope.html">cdi-request-scope</a></p>
+</li>
+<li>
+<p><a href="change-jaxws-url.html">change-jaxws-url</a></p>
+</li>
+<li>
+<p><a href="component-interfaces.html">component-interfaces</a></p>
+</li>
+<li>
+<p><a href="connector-war.html">connector-war</a></p>
+</li>
+<li>
+<p><a href="custom-injection.html">custom-injection</a></p>
+</li>
+<li>
+<p><a href="datasource-ciphered-password.html">datasource-ciphered-password</a></p>
+</li>
+<li>
+<p><a href="datasource-versioning.html">datasource-versioning</a></p>
+</li>
+<li>
+<p><a href="decorators.html">decorators</a></p>
+</li>
+<li>
+<p><a href="deltaspike-fullstack.html">deltaspike-fullstack</a></p>
+</li>
+<li>
+<p><a href="dynamic-dao-implementation.html">dynamic-dao-implementation</a></p>
+</li>
+<li>
+<p><a href="dynamic-datasource-routing.html">dynamic-datasource-routing</a></p>
+</li>
+<li>
+<p><a href="dynamic-implementation.html">dynamic-implementation</a></p>
+</li>
+<li>
+<p><a href="dynamic-proxy-to-access-mbean.html">dynamic-proxy-to-access-mbean</a></p>
+</li>
+<li>
+<p><a href="ear-testing.html">ear-testing</a></p>
+</li>
+<li>
+<p><a href="ejb-examples.html">ejb-examples</a></p>
+</li>
+<li>
+<p><a href="ejb-webservice.html">ejb-webservice</a></p>
+</li>
+<li>
+<p><a href="helloworld-weblogic.html">helloworld-weblogic</a></p>
+</li>
+<li>
+<p><a href="injection-of-connectionfactory.html">injection-of-connectionfactory</a></p>
+</li>
+<li>
+<p><a href="injection-of-datasource.html">injection-of-datasource</a></p>
+</li>
+<li>
+<p><a href="injection-of-ejbs.html">injection-of-ejbs</a></p>
+</li>
+<li>
+<p><a href="injection-of-entitymanager.html">injection-of-entitymanager</a></p>
+</li>
+<li>
+<p><a href="injection-of-env-entry.html">injection-of-env-entry</a></p>
+</li>
+<li>
+<p><a href="interceptors.html">interceptors</a></p>
+</li>
+<li>
+<p><a href="javamail.html">javamail</a></p>
+</li>
+<li>
+<p><a href="jpa-eclipselink.html">jpa-eclipselink</a></p>
+</li>
+<li>
+<p><a href="jpa-enumerated.html">jpa-enumerated</a></p>
+</li>
+<li>
+<p><a href="jpa-hibernate.html">jpa-hibernate</a></p>
+</li>
+<li>
+<p><a href="jsf-cdi-and-ejb.html">jsf-cdi-and-ejb</a></p>
+</li>
+<li>
+<p><a href="jsf-managedBean-and-ejb.html">jsf-managedBean-and-ejb</a></p>
+</li>
+<li>
+<p><a href="lookup-of-ejbs.html">lookup-of-ejbs</a></p>
+</li>
+<li>
+<p><a href="lookup-of-ejbs-with-descriptor.html">lookup-of-ejbs-with-descriptor</a></p>
+</li>
+<li>
+<p><a href="mbean-auto-registration.html">mbean-auto-registration</a></p>
+</li>
+<li>
+<p><a href="moviefun.html">moviefun</a></p>
+</li>
+<li>
+<p><a href="movies-complete.html">movies-complete</a></p>
+</li>
+<li>
+<p><a href="movies-complete-meta.html">movies-complete-meta</a></p>
+</li>
+<li>
+<p><a href="mp-metrics-counted.html">mp-metrics-counted</a></p>
+</li>
+<li>
+<p><a href="mp-metrics-timed.html">mp-metrics-timed</a></p>
+</li>
+<li>
+<p><a href="mtom.html">mtom</a></p>
+</li>
+<li>
+<p><a href="myfaces-codi-demo.html">myfaces-codi-demo</a></p>
+</li>
+<li>
+<p><a href="persistence-fragment.html">persistence-fragment</a></p>
+</li>
+<li>
+<p><a href="polling-parent.html">polling-parent</a></p>
+</li>
+<li>
+<p><a href="quartz-app.html">quartz-app</a></p>
+</li>
+<li>
+<p><a href="realm-in-tomee.html">realm-in-tomee</a></p>
+</li>
+<li>
+<p><a href="reload-persistence-unit-properties.html">reload-persistence-unit-properties</a></p>
+</li>
+<li>
+<p><a href="resources-declared-in-webapp.html">resources-declared-in-webapp</a></p>
+</li>
+<li>
+<p><a href="resources-jmx-example.html">resources-jmx-example</a></p>
+</li>
+<li>
+<p><a href="rest-cdi.html">rest-cdi</a></p>
+</li>
+<li>
+<p><a href="rest-example.html">rest-example</a></p>
+</li>
+<li>
+<p><a href="rest-example-with-application.html">rest-example-with-application</a></p>
+</li>
+<li>
+<p><a href="rest-mp-jwt.html">rest-mp-jwt</a></p>
+</li>
+<li>
+<p><a href="rest-on-ejb.html">rest-on-ejb</a></p>
+</li>
+<li>
+<p><a href="rest-xml-json.html">rest-xml-json</a></p>
+</li>
+<li>
+<p><a href="schedule-events.html">schedule-events</a></p>
+</li>
+<li>
+<p><a href="schedule-expression.html">schedule-expression</a></p>
+</li>
+<li>
+<p><a href="schedule-methods.html">schedule-methods</a></p>
+</li>
+<li>
+<p><a href="schedule-methods-meta.html">schedule-methods-meta</a></p>
+</li>
+<li>
+<p><a href="simple-cdi-interceptor.html">simple-cdi-interceptor</a></p>
+</li>
+<li>
+<p><a href="simple-cmp2.html">simple-cmp2</a></p>
+</li>
+<li>
+<p><a href="simple-mdb.html">simple-mdb</a></p>
+</li>
+<li>
+<p><a href="simple-mdb-and-cdi.html">simple-mdb-and-cdi</a></p>
+</li>
+<li>
+<p><a href="simple-mdb-with-descriptor.html">simple-mdb-with-descriptor</a></p>
+</li>
+<li>
+<p><a href="simple-rest.html">simple-rest</a></p>
+</li>
+<li>
+<p><a href="simple-singleton.html">simple-singleton</a></p>
+</li>
+<li>
+<p><a href="simple-stateful.html">simple-stateful</a></p>
+</li>
+<li>
+<p><a href="simple-stateful-callbacks.html">simple-stateful-callbacks</a></p>
+</li>
+<li>
+<p><a href="simple-stateless.html">simple-stateless</a></p>
+</li>
+<li>
+<p><a href="simple-stateless-callbacks.html">simple-stateless-callbacks</a></p>
+</li>
+<li>
+<p><a href="simple-stateless-with-descriptor.html">simple-stateless-with-descriptor</a></p>
+</li>
+<li>
+<p><a href="simple-webservice.html">simple-webservice</a></p>
+</li>
+<li>
+<p><a href="simple-webservice-without-interface.html">simple-webservice-without-interface</a></p>
+</li>
+<li>
+<p><a href="spring-data-proxy.html">spring-data-proxy</a></p>
+</li>
+<li>
+<p><a href="spring-data-proxy-meta.html">spring-data-proxy-meta</a></p>
+</li>
+<li>
+<p><a href="struts.html">struts</a></p>
+</li>
+<li>
+<p><a href="telephone-stateful.html">telephone-stateful</a></p>
+</li>
+<li>
+<p><a href="testcase-injection.html">testcase-injection</a></p>
+</li>
+<li>
+<p><a href="testing-security.html">testing-security</a></p>
+</li>
+<li>
+<p><a href="testing-security-2.html">testing-security-2</a></p>
+</li>
+<li>
+<p><a href="testing-security-3.html">testing-security-3</a></p>
+</li>
+<li>
+<p><a href="testing-security-meta.html">testing-security-meta</a></p>
+</li>
+<li>
+<p><a href="testing-transactions.html">testing-transactions</a></p>
+</li>
+<li>
+<p><a href="testing-transactions-bmt.html">testing-transactions-bmt</a></p>
+</li>
+<li>
+<p><a href="transaction-rollback.html">transaction-rollback</a></p>
+</li>
+<li>
+<p><a href="troubleshooting.html">troubleshooting</a></p>
+</li>
+<li>
+<p><a href="webservice-attachments.html">webservice-attachments</a></p>
+</li>
+<li>
+<p><a href="webservice-handlerchain.html">webservice-handlerchain</a></p>
+</li>
+<li>
+<p><a href="webservice-holder.html">webservice-holder</a></p>
+</li>
+<li>
+<p><a href="webservice-inheritance.html">webservice-inheritance</a></p>
+</li>
+<li>
+<p><a href="webservice-security.html">webservice-security</a></p>
+</li>
+<li>
+<p><a href="webservice-ws-security.html">webservice-ws-security</a></p>
+</li>
+<li>
+<p><a href="websocket-tls-basic-auth.html">websocket-tls-basic-auth</a></p>
+</li>
+</ul>
+</div>
+            </div>
+            
+        </div>
+    </div>
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Be simple.  Be certified. Be Tomcat.</h3>
+					<h5 class="light regular light-white">"A good application in a good server"</h5>
+					<ul class="social-footer">
+						<li><a href="https://www.facebook.com/ApacheTomEE/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/apachetomee"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/communities/105208241852045684449"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 text-center-mobile">
+					<div class="row opening-hours">
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../latest/docs/documentation.html" class="white">Documentation</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../../latest/docs/admin/configuration/index.html" class="regular light-white">How to configure</a></li>
+								<li><a href="../../latest/docs/admin/file-layout.html" class="regular light-white">Dir. Structure</a></li>
+								<li><a href="../../latest/docs/developer/testing/index.html" class="regular light-white">Testing</a></li>
+								<li><a href="../../latest/docs/admin/cluster/index.html" class="regular light-white">Clustering</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../examples.html" class="white">Examples</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../../latest/examples/simple-cdi-interceptor.html" class="regular light-white">CDI Interceptor</a></li>
+								<li><a href="../../latest/examples/rest-cdi.html" class="regular light-white">REST with CDI</a></li>
+								<li><a href="../../latest/examples/ejb-examples.html" class="regular light-white">EJB</a></li>
+								<li><a href="../../latest/examples/jsf-managedBean-and-ejb.html" class="regular light-white">JSF</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../community/index.html" class="white">Community</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../../community/contributors.html" class="regular light-white">Contributors</a></li>
+								<li><a href="../../community/social.html" class="regular light-white">Social</a></li>
+								<li><a href="../../community/sources.html" class="regular light-white">Sources</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../security/index.html" class="white">Security</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="http://apache.org/security" target="_blank" class="regular light-white">Apache Security</a></li>
+								<li><a href="http://apache.org/security/projects.html" target="_blank" class="regular light-white">Security Projects</a></li>
+								<li><a href="http://cve.mitre.org" target="_blank" class="regular light-white">CVE</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-12 light-white">
+					<p>Copyright &copy; 1999-2016 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. Apache TomEE, TomEE, Apache, the Apache feather logo, and the Apache TomEE project logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+        <ul>
+          <li><a hef="../../latest/docs/admin/index.html">Administrators</a>
+          <li><a hef="../../latest/docs/developer/index.html">Developers</a>
+          <li><a hef="../../latest/docs/advanced/index.html">Advanced</a>
+          <li><a hef="../../community/index.html">Community</a>
+        </ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Scripts -->
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/owl.carousel.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/typewriter.js"></script>
+	<script src="../../js/jquery.onepagenav.js"></script>
+	<script src="../../js/tree.jquery.js"></script>
+	<script src="../../js/highlight.pack.js"></script>
+    <script src="../../js/main.js"></script>
+		</body>
+
+</html>
+

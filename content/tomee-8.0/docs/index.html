@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apache TomEE</title>
+	<meta name="description"
+		  content="Apache TomEE is a lightweight, yet powerful, JavaEE Application server with feature rich tooling." />
+	<meta name="keywords" content="tomee,asf,apache,javaee,jee,shade,embedded,test,junit,applicationcomposer,maven,arquillian" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<link rel="icon" href="../../favicon.ico">
+	<link rel="icon"  type="image/png" href="../../favicon.png">
+	<meta name="msapplication-TileColor" content="#80287a">
+	<meta name="theme-color" content="#80287a">
+	<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../css/owl.css">
+	<link rel="stylesheet" type="text/css" href="../../css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/eleganticons/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="../../css/jqtree.css">
+	<link rel="stylesheet" type="text/css" href="../../css/idea.css">
+	<link rel="stylesheet" type="text/css" href="../../css/cardio.css">
+
+	<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2717626-1']);
+      _gaq.push(['_setDomainName', 'apache.org']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</head>
+
+<body>
+    <div class="preloader">
+		<img src="../../img/loader.gif" alt="Preloader image">
+	</div>
+	    <nav class="navbar">
+		<div class="container">
+		  <div class="row">          <div class="col-md-12">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">
+				    <span>
+
+				    
+                        <img src="../../img/logo-active.png">
+                    
+
+                    </span>
+				    Apache TomEE
+                </a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="../../docs.html">Documentation</a></li>
+					<li><a href="../../community/index.html">Community</a></li>
+					<li><a href="../../security/index.html">Security</a></li>
+					<li><a href="../../download-ng.html">Downloads</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		   </div></div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+    <div id="main-block" class="container section-padded">
+        <div class="row title">
+          <div class="col-md-12">
+            <div class='page-header'>
+              
+              <h1>Documentation</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="paragraph">
+<p>Documentation</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="activemqresourceadapter-config.html">activemqresourceadapter-config</a></p>
+</li>
+<li>
+<p><a href="admin/cluster/index.html">admin/cluster/index</a></p>
+</li>
+<li>
+<p><a href="admin/configuration/application.html">admin/configuration/application</a></p>
+</li>
+<li>
+<p><a href="admin/configuration/containers.html">admin/configuration/containers</a></p>
+</li>
+<li>
+<p><a href="admin/configuration/index.html">admin/configuration/index</a></p>
+</li>
+<li>
+<p><a href="admin/configuration/resources.html">admin/configuration/resources</a></p>
+</li>
+<li>
+<p><a href="admin/configuration/server.html">admin/configuration/server</a></p>
+</li>
+<li>
+<p><a href="admin/file-layout.html">admin/file-layout</a></p>
+</li>
+<li>
+<p><a href="admin/index.html">admin/index</a></p>
+</li>
+<li>
+<p><a href="advanced/applicationcomposer/index.html">advanced/applicationcomposer/index</a></p>
+</li>
+<li>
+<p><a href="advanced/client/jndi.html">advanced/client/jndi</a></p>
+</li>
+<li>
+<p><a href="advanced/index.html">advanced/index</a></p>
+</li>
+<li>
+<p><a href="advanced/jms/jms-configuration.html">advanced/jms/jms-configuration</a></p>
+</li>
+<li>
+<p><a href="advanced/setup/index.html">advanced/setup/index</a></p>
+</li>
+<li>
+<p><a href="advanced/shading/index.html">advanced/shading/index</a></p>
+</li>
+<li>
+<p><a href="advanced/tomee-embedded/index.html">advanced/tomee-embedded/index</a></p>
+</li>
+<li>
+<p><a href="alternate-descriptors.html">alternate-descriptors</a></p>
+</li>
+<li>
+<p><a href="annotations,-xml-and-defaults.html">annotations,-xml-and-defaults</a></p>
+</li>
+<li>
+<p><a href="app-clients-and-jndi.html">app-clients-and-jndi</a></p>
+</li>
+<li>
+<p><a href="application-composer/advanced.html">application-composer/advanced</a></p>
+</li>
+<li>
+<p><a href="application-composer/getting-started.html">application-composer/getting-started</a></p>
+</li>
+<li>
+<p><a href="application-composer/history.html">application-composer/history</a></p>
+</li>
+<li>
+<p><a href="application-composer/index.html">application-composer/index</a></p>
+</li>
+<li>
+<p><a href="application-deployment-solutions.html">application-deployment-solutions</a></p>
+</li>
+<li>
+<p><a href="application-discovery-via-the-classpath.html">application-discovery-via-the-classpath</a></p>
+</li>
+<li>
+<p><a href="application-resources.html">application-resources</a></p>
+</li>
+<li>
+<p><a href="arquillian-available-adapters.html">arquillian-available-adapters</a></p>
+</li>
+<li>
+<p><a href="arquillian-getting-started.html">arquillian-getting-started</a></p>
+</li>
+<li>
+<p><a href="basics---getting-things.html">basics---getting-things</a></p>
+</li>
+<li>
+<p><a href="basics---security.html">basics---security</a></p>
+</li>
+<li>
+<p><a href="basics---transactions.html">basics---transactions</a></p>
+</li>
+<li>
+<p><a href="bmpentitycontainer-config.html">bmpentitycontainer-config</a></p>
+</li>
+<li>
+<p><a href="bouncy-castle.html">bouncy-castle</a></p>
+</li>
+<li>
+<p><a href="built-in-type-converters.html">built-in-type-converters</a></p>
+</li>
+<li>
+<p><a href="callbacks.html">callbacks</a></p>
+</li>
+<li>
+<p><a href="changing-jms-implementations.html">changing-jms-implementations</a></p>
+</li>
+<li>
+<p><a href="client-server-transports.html">client-server-transports</a></p>
+</li>
+<li>
+<p><a href="clients.html">clients</a></p>
+</li>
+<li>
+<p><a href="cmpentitycontainer-config.html">cmpentitycontainer-config</a></p>
+</li>
+<li>
+<p><a href="collapsed-ear.html">collapsed-ear</a></p>
+</li>
+<li>
+<p><a href="common-datasource-configurations.html">common-datasource-configurations</a></p>
+</li>
+<li>
+<p><a href="common-errors.html">common-errors</a></p>
+</li>
+<li>
+<p><a href="common-persistenceprovider-properties.html">common-persistenceprovider-properties</a></p>
+</li>
+<li>
+<p><a href="comparison.html">comparison</a></p>
+</li>
+<li>
+<p><a href="concepts.html">concepts</a></p>
+</li>
+<li>
+<p><a href="configuration.html">configuration</a></p>
+</li>
+<li>
+<p><a href="configuring-containers-in-tests.html">configuring-containers-in-tests</a></p>
+</li>
+<li>
+<p><a href="configuring-datasources-in-tests.html">configuring-datasources-in-tests</a></p>
+</li>
+<li>
+<p><a href="configuring-datasources.html">configuring-datasources</a></p>
+</li>
+<li>
+<p><a href="configuring-durations.html">configuring-durations</a></p>
+</li>
+<li>
+<p><a href="Configuring-in-tomee.html">Configuring-in-tomee</a></p>
+</li>
+<li>
+<p><a href="configuring-javamail.html">configuring-javamail</a></p>
+</li>
+<li>
+<p><a href="configuring-logging-in-tests.html">configuring-logging-in-tests</a></p>
+</li>
+<li>
+<p><a href="configuring-persistenceunits-in-tests.html">configuring-persistenceunits-in-tests</a></p>
+</li>
+<li>
+<p><a href="constructor-injection.html">constructor-injection</a></p>
+</li>
+<li>
+<p><a href="containers-and-resources.html">containers-and-resources</a></p>
+</li>
+<li>
+<p><a href="contrib/debug/debug-intellij.html">contrib/debug/debug-intellij</a></p>
+</li>
+<li>
+<p><a href="custom-injection.html">custom-injection</a></p>
+</li>
+<li>
+<p><a href="datasource-config.html">datasource-config</a></p>
+</li>
+<li>
+<p><a href="datasource-configuration-by-creator.html">datasource-configuration-by-creator</a></p>
+</li>
+<li>
+<p><a href="datasource-password-encryption.html">datasource-password-encryption</a></p>
+</li>
+<li>
+<p><a href="deamon/lin-service.html">deamon/lin-service</a></p>
+</li>
+<li>
+<p><a href="deamon/win-service.html">deamon/win-service</a></p>
+</li>
+<li>
+<p><a href="declaring-references.html">declaring-references</a></p>
+</li>
+<li>
+<p><a href="deploy-tool.html">deploy-tool</a></p>
+</li>
+<li>
+<p><a href="deploying-in-tomee.html">deploying-in-tomee</a></p>
+</li>
+<li>
+<p><a href="deployment-id.html">deployment-id</a></p>
+</li>
+<li>
+<p><a href="deployments.html">deployments</a></p>
+</li>
+<li>
+<p><a href="details-on-openejb-jar.html">details-on-openejb-jar</a></p>
+</li>
+<li>
+<p><a href="developer/classloading/index.html">developer/classloading/index</a></p>
+</li>
+<li>
+<p><a href="developer/configuration/cxf.html">developer/configuration/cxf</a></p>
+</li>
+<li>
+<p><a href="developer/ide/index.html">developer/ide/index</a></p>
+</li>
+<li>
+<p><a href="developer/index.html">developer/index</a></p>
+</li>
+<li>
+<p><a href="developer/json/index.html">developer/json/index</a></p>
+</li>
+<li>
+<p><a href="developer/migration/tomee-1-to-7.html">developer/migration/tomee-1-to-7</a></p>
+</li>
+<li>
+<p><a href="developer/testing/applicationcomposer/index.html">developer/testing/applicationcomposer/index</a></p>
+</li>
+<li>
+<p><a href="developer/testing/arquillian/index.html">developer/testing/arquillian/index</a></p>
+</li>
+<li>
+<p><a href="developer/testing/index.html">developer/testing/index</a></p>
+</li>
+<li>
+<p><a href="developer/testing/other/index.html">developer/testing/other/index</a></p>
+</li>
+<li>
+<p><a href="developer/tools/gradle-plugins.html">developer/tools/gradle-plugins</a></p>
+</li>
+<li>
+<p><a href="developer/tools/index.html">developer/tools/index</a></p>
+</li>
+<li>
+<p><a href="developer/tools/maven/applicationcomposer.html">developer/tools/maven/applicationcomposer</a></p>
+</li>
+<li>
+<p><a href="developer/tools/maven/embedded.html">developer/tools/maven/embedded</a></p>
+</li>
+<li>
+<p><a href="developer/tools/maven/tomee.html">developer/tools/maven/tomee</a></p>
+</li>
+<li>
+<p><a href="developer/tools/maven-plugins.html">developer/tools/maven-plugins</a></p>
+</li>
+<li>
+<p><a href="docs.html">docs</a></p>
+</li>
+<li>
+<p><a href="documentation.html">documentation</a></p>
+</li>
+<li>
+<p><a href="documentation.old.html">documentation.old</a></p>
+</li>
+<li>
+<p><a href="dynamic-datasource.html">dynamic-datasource</a></p>
+</li>
+<li>
+<p><a href="eclipse-plugin.html">eclipse-plugin</a></p>
+</li>
+<li>
+<p><a href="ejb-failover.html">ejb-failover</a></p>
+</li>
+<li>
+<p><a href="ejb-local-ref.html">ejb-local-ref</a></p>
+</li>
+<li>
+<p><a href="ejb-over-ssl.html">ejb-over-ssl</a></p>
+</li>
+<li>
+<p><a href="ejb-ref.html">ejb-ref</a></p>
+</li>
+<li>
+<p><a href="ejb-refs.html">ejb-refs</a></p>
+</li>
+<li>
+<p><a href="ejb-request-logging.html">ejb-request-logging</a></p>
+</li>
+<li>
+<p><a href="ejbd-transport.html">ejbd-transport</a></p>
+</li>
+<li>
+<p><a href="embedded-and-remotable.html">embedded-and-remotable</a></p>
+</li>
+<li>
+<p><a href="embedded-configuration.html">embedded-configuration</a></p>
+</li>
+<li>
+<p><a href="embedding.html">embedding</a></p>
+</li>
+<li>
+<p><a href="failover-logging.html">failover-logging</a></p>
+</li>
+<li>
+<p><a href="faq.html">faq</a></p>
+</li>
+<li>
+<p><a href="features.html">features</a></p>
+</li>
+<li>
+<p><a href="from-glassfish-to-tomee.html">from-glassfish-to-tomee</a></p>
+</li>
+<li>
+<p><a href="functional-testing-with-openejb,-jetty-and-selenium.html">functional-testing-with-openejb,-jetty-and-selenium</a></p>
+</li>
+<li>
+<p><a href="generating-ejb-3-annotations.html">generating-ejb-3-annotations</a></p>
+</li>
+<li>
+<p><a href="getting-started.html">getting-started</a></p>
+</li>
+<li>
+<p><a href="hello-world.html">hello-world</a></p>
+</li>
+<li>
+<p><a href="hibernate.html">hibernate</a></p>
+</li>
+<li>
+<p><a href="initialcontext-config.html">initialcontext-config</a></p>
+</li>
+<li>
+<p><a href="installation-drop-in-war.html">installation-drop-in-war</a></p>
+</li>
+<li>
+<p><a href="installation.html">installation</a></p>
+</li>
+<li>
+<p><a href="installing-tomee.html">installing-tomee</a></p>
+</li>
+<li>
+<p><a href="java7.html">java7</a></p>
+</li>
+<li>
+<p><a href="javaagent-with-maven-surefire.html">javaagent-with-maven-surefire</a></p>
+</li>
+<li>
+<p><a href="javaagent.html">javaagent</a></p>
+</li>
+<li>
+<p><a href="javaee7-status.html">javaee7-status</a></p>
+</li>
+<li>
+<p><a href="javamailsession-config.html">javamailsession-config</a></p>
+</li>
+<li>
+<p><a href="jms-resources-and-mdb-container.html">jms-resources-and-mdb-container</a></p>
+</li>
+<li>
+<p><a href="jmsconnectionfactory-config.html">jmsconnectionfactory-config</a></p>
+</li>
+<li>
+<p><a href="jndi-names.html">jndi-names</a></p>
+</li>
+<li>
+<p><a href="jpa-concepts.html">jpa-concepts</a></p>
+</li>
+<li>
+<p><a href="jpa-usage.html">jpa-usage</a></p>
+</li>
+<li>
+<p><a href="local-client-injection.html">local-client-injection</a></p>
+</li>
+<li>
+<p><a href="local-server.html">local-server</a></p>
+</li>
+<li>
+<p><a href="lookup-of-other-ejbs-example.html">lookup-of-other-ejbs-example</a></p>
+</li>
+<li>
+<p><a href="managedcontainer-config.html">managedcontainer-config</a></p>
+</li>
+<li>
+<p><a href="manual-installation.html">manual-installation</a></p>
+</li>
+<li>
+<p><a href="maven/build-mojo.html">maven/build-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/configtest-mojo.html">maven/configtest-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/debug-mojo.html">maven/debug-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/deploy-mojo.html">maven/deploy-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/exec-mojo.html">maven/exec-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/help-mojo.html">maven/help-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/index.html">maven/index</a></p>
+</li>
+<li>
+<p><a href="maven/list-mojo.html">maven/list-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/run-mojo.html">maven/run-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/start-mojo.html">maven/start-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/stop-mojo.html">maven/stop-mojo</a></p>
+</li>
+<li>
+<p><a href="maven/undeploy-mojo.html">maven/undeploy-mojo</a></p>
+</li>
+<li>
+<p><a href="maven.html">maven</a></p>
+</li>
+<li>
+<p><a href="messagedrivencontainer-config.html">messagedrivencontainer-config</a></p>
+</li>
+<li>
+<p><a href="multicast-discovery.html">multicast-discovery</a></p>
+</li>
+<li>
+<p><a href="multiple-business-interface-hazzards.html">multiple-business-interface-hazzards</a></p>
+</li>
+<li>
+<p><a href="multipoint-considerations.html">multipoint-considerations</a></p>
+</li>
+<li>
+<p><a href="multipoint-discovery.html">multipoint-discovery</a></p>
+</li>
+<li>
+<p><a href="multipoint-recommendations.html">multipoint-recommendations</a></p>
+</li>
+<li>
+<p><a href="multipulse-discovery.html">multipulse-discovery</a></p>
+</li>
+<li>
+<p><a href="new-in-openejb-3.0.html">new-in-openejb-3.0</a></p>
+</li>
+<li>
+<p><a href="openejb-3.html">openejb-3</a></p>
+</li>
+<li>
+<p><a href="openejb-binaries.html">openejb-binaries</a></p>
+</li>
+<li>
+<p><a href="openejb-eclipse-plugin.html">openejb-eclipse-plugin</a></p>
+</li>
+<li>
+<p><a href="openejb-jsr-107-integration.html">openejb-jsr-107-integration</a></p>
+</li>
+<li>
+<p><a href="openejb.xml.html">openejb.xml</a></p>
+</li>
+<li>
+<p><a href="openjpa.html">openjpa</a></p>
+</li>
+<li>
+<p><a href="orb-config.html">orb-config</a></p>
+</li>
+<li>
+<p><a href="persistence-context.html">persistence-context</a></p>
+</li>
+<li>
+<p><a href="persistence-unit-ref.html">persistence-unit-ref</a></p>
+</li>
+<li>
+<p><a href="properties-listing.html">properties-listing</a></p>
+</li>
+<li>
+<p><a href="properties-tool.html">properties-tool</a></p>
+</li>
+<li>
+<p><a href="property-overriding.html">property-overriding</a></p>
+</li>
+<li>
+<p><a href="provisioning.html">provisioning</a></p>
+</li>
+<li>
+<p><a href="proxyfactory-config.html">proxyfactory-config</a></p>
+</li>
+<li>
+<p><a href="queue-config.html">queue-config</a></p>
+</li>
+<li>
+<p><a href="quickstart.html">quickstart</a></p>
+</li>
+<li>
+<p><a href="refcard/refcard.html">refcard/refcard</a></p>
+</li>
+<li>
+<p><a href="remote-server.html">remote-server</a></p>
+</li>
+<li>
+<p><a href="resource-injection.html">resource-injection</a></p>
+</li>
+<li>
+<p><a href="resource-ref-for-datasource.html">resource-ref-for-datasource</a></p>
+</li>
+<li>
+<p><a href="running-a-standalone-openejb-server.html">running-a-standalone-openejb-server</a></p>
+</li>
+<li>
+<p><a href="securing-a-web-service.html">securing-a-web-service</a></p>
+</li>
+<li>
+<p><a href="security-annotations.html">security-annotations</a></p>
+</li>
+<li>
+<p><a href="security.html">security</a></p>
+</li>
+<li>
+<p><a href="securityservice-config.html">securityservice-config</a></p>
+</li>
+<li>
+<p><a href="service-locator.html">service-locator</a></p>
+</li>
+<li>
+<p><a href="services.html">services</a></p>
+</li>
+<li>
+<p><a href="singleton-beans.html">singleton-beans</a></p>
+</li>
+<li>
+<p><a href="singleton-ejb.html">singleton-ejb</a></p>
+</li>
+<li>
+<p><a href="singletoncontainer-config.html">singletoncontainer-config</a></p>
+</li>
+<li>
+<p><a href="spring-and-openejb-3.0.html">spring-and-openejb-3.0</a></p>
+</li>
+<li>
+<p><a href="spring-ejb-and-jpa.html">spring-ejb-and-jpa</a></p>
+</li>
+<li>
+<p><a href="spring.html">spring</a></p>
+</li>
+<li>
+<p><a href="ssh.html">ssh</a></p>
+</li>
+<li>
+<p><a href="standalone-server.html">standalone-server</a></p>
+</li>
+<li>
+<p><a href="startup.html">startup</a></p>
+</li>
+<li>
+<p><a href="statefulcontainer-config.html">statefulcontainer-config</a></p>
+</li>
+<li>
+<p><a href="statelesscontainer-config.html">statelesscontainer-config</a></p>
+</li>
+<li>
+<p><a href="system-properties-files.html">system-properties-files</a></p>
+</li>
+<li>
+<p><a href="system-properties.html">system-properties</a></p>
+</li>
+<li>
+<p><a href="telnet-console.html">telnet-console</a></p>
+</li>
+<li>
+<p><a href="tip-concurrency.html">tip-concurrency</a></p>
+</li>
+<li>
+<p><a href="tip-jersey-client.html">tip-jersey-client</a></p>
+</li>
+<li>
+<p><a href="tip-weblogic.html">tip-weblogic</a></p>
+</li>
+<li>
+<p><a href="tomcat-object-factory.html">tomcat-object-factory</a></p>
+</li>
+<li>
+<p><a href="tomee-and-eclipse.html">tomee-and-eclipse</a></p>
+</li>
+<li>
+<p><a href="tomee-and-hibernate.html">tomee-and-hibernate</a></p>
+</li>
+<li>
+<p><a href="tomee-and-intellij.html">tomee-and-intellij</a></p>
+</li>
+<li>
+<p><a href="tomee-and-netbeans.html">tomee-and-netbeans</a></p>
+</li>
+<li>
+<p><a href="tomee-and-security.html">tomee-and-security</a></p>
+</li>
+<li>
+<p><a href="tomee-and-webspheremq.html">tomee-and-webspheremq</a></p>
+</li>
+<li>
+<p><a href="tomee-directory-structure.html">tomee-directory-structure</a></p>
+</li>
+<li>
+<p><a href="tomee-embedded-maven-plugin.html">tomee-embedded-maven-plugin</a></p>
+</li>
+<li>
+<p><a href="tomee-jaas.html">tomee-jaas</a></p>
+</li>
+<li>
+<p><a href="tomee-logging-in-eclipse.html">tomee-logging-in-eclipse</a></p>
+</li>
+<li>
+<p><a href="tomee-logging.html">tomee-logging</a></p>
+</li>
+<li>
+<p><a href="tomee-maven-plugin.html">tomee-maven-plugin</a></p>
+</li>
+<li>
+<p><a href="tomee-mp-getting-started.html">tomee-mp-getting-started</a></p>
+</li>
+<li>
+<p><a href="tomee-version-policies.html">tomee-version-policies</a></p>
+</li>
+<li>
+<p><a href="tomee-webaccess.html">tomee-webaccess</a></p>
+</li>
+<li>
+<p><a href="tomee-webapp.html">tomee-webapp</a></p>
+</li>
+<li>
+<p><a href="topic-config.html">topic-config</a></p>
+</li>
+<li>
+<p><a href="transaction-annotations.html">transaction-annotations</a></p>
+</li>
+<li>
+<p><a href="transactionmanager-config.html">transactionmanager-config</a></p>
+</li>
+<li>
+<p><a href="understanding-callbacks.html">understanding-callbacks</a></p>
+</li>
+<li>
+<p><a href="understanding-the-directory-layout.html">understanding-the-directory-layout</a></p>
+</li>
+<li>
+<p><a href="unix-daemon.html">unix-daemon</a></p>
+</li>
+<li>
+<p><a href="validation-tool.html">validation-tool</a></p>
+</li>
+<li>
+<p><a href="version-checker.html">version-checker</a></p>
+</li>
+</ul>
+</div>
+            </div>
+            
+        </div>
+    </div>
+<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Be simple.  Be certified. Be Tomcat.</h3>
+					<h5 class="light regular light-white">"A good application in a good server"</h5>
+					<ul class="social-footer">
+						<li><a href="https://www.facebook.com/ApacheTomEE/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/apachetomee"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://plus.google.com/communities/105208241852045684449"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 text-center-mobile">
+					<div class="row opening-hours">
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../latest/docs/documentation.html" class="white">Documentation</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../../latest/docs/admin/configuration/index.html" class="regular light-white">How to configure</a></li>
+								<li><a href="../../latest/docs/admin/file-layout.html" class="regular light-white">Dir. Structure</a></li>
+								<li><a href="../../latest/docs/developer/testing/index.html" class="regular light-white">Testing</a></li>
+								<li><a href="../../latest/docs/admin/cluster/index.html" class="regular light-white">Clustering</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../examples.html" class="white">Examples</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../../latest/examples/simple-cdi-interceptor.html" class="regular light-white">CDI Interceptor</a></li>
+								<li><a href="../../latest/examples/rest-cdi.html" class="regular light-white">REST with CDI</a></li>
+								<li><a href="../../latest/examples/ejb-examples.html" class="regular light-white">EJB</a></li>
+								<li><a href="../../latest/examples/jsf-managedBean-and-ejb.html" class="regular light-white">JSF</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../community/index.html" class="white">Community</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="../../community/contributors.html" class="regular light-white">Contributors</a></li>
+								<li><a href="../../community/social.html" class="regular light-white">Social</a></li>
+								<li><a href="../../community/sources.html" class="regular light-white">Sources</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-3 text-center-mobile">
+							<h5><a href="../../security/index.html" class="white">Security</a></h5>
+							<ul class="list-unstyled">
+								<li><a href="http://apache.org/security" target="_blank" class="regular light-white">Apache Security</a></li>
+								<li><a href="http://apache.org/security/projects.html" target="_blank" class="regular light-white">Security Projects</a></li>
+								<li><a href="http://cve.mitre.org" target="_blank" class="regular light-white">CVE</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-12 light-white">
+					<p>Copyright &copy; 1999-2016 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. Apache TomEE, TomEE, Apache, the Apache feather logo, and the Apache TomEE project logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+        <ul>
+          <li><a hef="../../latest/docs/admin/index.html">Administrators</a>
+          <li><a hef="../../latest/docs/developer/index.html">Developers</a>
+          <li><a hef="../../latest/docs/advanced/index.html">Advanced</a>
+          <li><a hef="../../community/index.html">Community</a>
+        </ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Scripts -->
+	<script src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="../../js/owl.carousel.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/wow.min.js"></script>
+	<script src="../../js/typewriter.js"></script>
+	<script src="../../js/jquery.onepagenav.js"></script>
+	<script src="../../js/tree.jquery.js"></script>
+	<script src="../../js/highlight.pack.js"></script>
+    <script src="../../js/main.js"></script>
+		</body>
+
+</html>
+
