@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
+    	<loc>http://tomee.apache.org/community/contributorsguides/tomee.html</loc>
+    	<lastmod>2018-11-29</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/community/contributorsguides/website.html</loc>
+    	<lastmod>2018-11-29</lastmod>
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/docs/developer/migration/tomee-1-to-7.html</loc>
     	<lastmod>2017-06-17</lastmod>
     </url>
