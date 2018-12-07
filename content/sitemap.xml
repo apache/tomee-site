@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-    	<loc>http://tomee.apache.org/community/contributorsguides/tomee.html</loc>
-    	<lastmod>2018-11-29</lastmod>
+    	<loc>http://tomee.apache.org/community/contributing/contribution-tips.html</loc>
+    	<lastmod>2018-12-04</lastmod>
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/community/contributorsguides/website.html</loc>
+    	<loc>http://tomee.apache.org/community/contributing/website.html</loc>
     	<lastmod>2018-11-29</lastmod>
     </url>
 
@@ -1647,6 +1647,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/java-modules.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/javamail.html</loc>
     	
     </url>
@@ -3118,6 +3123,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/interceptors.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/java-modules.html</loc>
     	
     </url>
 
@@ -5643,6 +5653,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/interceptors.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/java-modules.html</loc>
     	
     </url>
 
