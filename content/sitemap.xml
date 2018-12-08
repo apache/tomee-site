@@ -2,6 +2,2736 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
+    	<loc>http://tomee.apache.org/latest/docs/Configuring-in-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/activemqresourceadapter-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/admin/cluster/index.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/advanced/client/jndi.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/alternate-descriptors.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/annotations,-xml-and-defaults.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/app-clients-and-jndi.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/application-deployment-solutions.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/application-discovery-via-the-classpath.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/application-resources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/arquillian-available-adapters.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/arquillian-getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/basics---getting-things.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/basics---security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/basics---transactions.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/bmpentitycontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/bouncy-castle.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/built-in-type-converters.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/callbacks.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/changing-jms-implementations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/client-server-transports.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/clients.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/cmpentitycontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/collapsed-ear.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/common-datasource-configurations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/common-errors.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/common-persistenceprovider-properties.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/comparison.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/concepts.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-containers-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-datasources-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-datasources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-durations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-javamail.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-logging-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/configuring-persistenceunits-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/constructor-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/containers-and-resources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/contrib/debug/debug-intellij.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/custom-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/datasource-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/datasource-configuration-by-creator.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/datasource-password-encryption.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/deamon/lin-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/deamon/win-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/declaring-references.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/deploy-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/deploying-in-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/deployment-id.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/deployments.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/details-on-openejb-jar.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/documentation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/dynamic-datasource.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/eclipse-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejb-failover.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejb-local-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejb-over-ssl.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejb-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejb-refs.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejb-request-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ejbd-transport.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/embedded-and-remotable.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/embedded-configuration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/embedding.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/failover-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/faq.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/features.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/from-glassfish-to-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/functional-testing-with-openejb,-jetty-and-selenium.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/generating-ejb-3-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/hello-world.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/hibernate.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/initialcontext-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/installation-drop-in-war.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/installation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/installing-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/java7.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/javaagent-with-maven-surefire.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/javaagent.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/javaee7-status.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/javamailsession-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/jms-resources-and-mdb-container.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/jmsconnectionfactory-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/jndi-names.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/jpa-concepts.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/jpa-usage.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/local-client-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/local-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/lookup-of-other-ejbs-example.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/managedcontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/manual-installation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/build-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/configtest-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/debug-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/deploy-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/exec-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/help-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/index.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/list-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/run-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/start-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/stop-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven/undeploy-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/maven.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/messagedrivencontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/multicast-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/multiple-business-interface-hazzards.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/multipoint-considerations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/multipoint-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/multipoint-recommendations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/multipulse-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/new-in-openejb-3.0.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/openejb-3.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/openejb-binaries.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/openejb-eclipse-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/openejb-jsr-107-integration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/openejb.xml.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/openjpa.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/orb-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/persistence-context.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/persistence-unit-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/properties-listing.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/properties-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/property-overriding.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/provisioning.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/proxyfactory-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/queue-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/quickstart.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/remote-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/resource-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/resource-ref-for-datasource.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/running-a-standalone-openejb-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/securing-a-web-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/security-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/securityservice-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/service-locator.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/services.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/singleton-beans.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/singleton-ejb.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/singletoncontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/spring-and-openejb-3.0.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/spring-ejb-and-jpa.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/spring.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/ssh.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/standalone-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/startup.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/statefulcontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/statelesscontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/system-properties-files.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/system-properties.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/telnet-console.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tip-concurrency.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tip-jersey-client.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tip-weblogic.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomcat-object-factory.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-and-eclipse.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-and-hibernate.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-and-intellij.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-and-netbeans.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-and-security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-and-webspheremq.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-directory-structure.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-embedded-maven-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-jaas.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-logging-in-eclipse.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-maven-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-mp-getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-version-policies.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-webaccess.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/tomee-webapp.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/topic-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/transaction-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/transactionmanager-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/understanding-callbacks.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/understanding-the-directory-layout.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/unix-daemon.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/validation-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/docs/version-checker.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/Configuring-in-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/activemqresourceadapter-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/admin/cluster/index.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/advanced/client/jndi.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/alternate-descriptors.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/annotations,-xml-and-defaults.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/app-clients-and-jndi.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/application-deployment-solutions.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/application-discovery-via-the-classpath.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/application-resources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/arquillian-available-adapters.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/arquillian-getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/basics---getting-things.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/basics---security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/basics---transactions.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/bmpentitycontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/bouncy-castle.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/built-in-type-converters.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/callbacks.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/changing-jms-implementations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/client-server-transports.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/clients.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/cmpentitycontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/collapsed-ear.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/common-datasource-configurations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/common-errors.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/common-persistenceprovider-properties.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/comparison.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/concepts.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-containers-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-datasources-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-datasources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-durations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-javamail.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-logging-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/configuring-persistenceunits-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/constructor-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/containers-and-resources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/contrib/debug/debug-intellij.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/custom-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/datasource-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/datasource-configuration-by-creator.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/datasource-password-encryption.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/deamon/lin-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/deamon/win-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/declaring-references.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/deploy-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/deploying-in-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/deployment-id.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/deployments.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/details-on-openejb-jar.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/documentation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/dynamic-datasource.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/eclipse-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejb-failover.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejb-local-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejb-over-ssl.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejb-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejb-refs.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejb-request-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ejbd-transport.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/embedded-and-remotable.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/embedded-configuration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/embedding.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/failover-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/faq.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/features.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/from-glassfish-to-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/functional-testing-with-openejb,-jetty-and-selenium.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/generating-ejb-3-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/hello-world.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/hibernate.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/initialcontext-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/installation-drop-in-war.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/installation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/installing-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/java7.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/javaagent-with-maven-surefire.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/javaagent.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/javaee7-status.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/javamailsession-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/jms-resources-and-mdb-container.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/jmsconnectionfactory-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/jndi-names.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/jpa-concepts.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/jpa-usage.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/local-client-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/local-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/lookup-of-other-ejbs-example.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/managedcontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/manual-installation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/build-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/configtest-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/debug-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/deploy-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/exec-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/help-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/index.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/list-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/run-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/start-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/stop-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven/undeploy-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/maven.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/messagedrivencontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/multicast-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/multiple-business-interface-hazzards.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/multipoint-considerations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/multipoint-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/multipoint-recommendations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/multipulse-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/new-in-openejb-3.0.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/openejb-3.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/openejb-binaries.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/openejb-eclipse-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/openejb-jsr-107-integration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/openejb.xml.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/openjpa.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/orb-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/persistence-context.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/persistence-unit-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/properties-listing.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/properties-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/property-overriding.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/provisioning.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/proxyfactory-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/queue-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/quickstart.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/remote-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/resource-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/resource-ref-for-datasource.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/running-a-standalone-openejb-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/securing-a-web-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/security-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/securityservice-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/service-locator.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/services.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/singleton-beans.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/singleton-ejb.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/singletoncontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/spring-and-openejb-3.0.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/spring-ejb-and-jpa.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/spring.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/ssh.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/standalone-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/startup.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/statefulcontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/statelesscontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/system-properties-files.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/system-properties.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/telnet-console.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tip-concurrency.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tip-jersey-client.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tip-weblogic.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomcat-object-factory.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-and-eclipse.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-and-hibernate.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-and-intellij.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-and-netbeans.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-and-security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-and-webspheremq.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-directory-structure.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-embedded-maven-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-jaas.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-logging-in-eclipse.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-maven-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-mp-getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-version-policies.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-webaccess.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/tomee-webapp.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/topic-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/transaction-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/transactionmanager-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/understanding-callbacks.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/understanding-the-directory-layout.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/unix-daemon.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/validation-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/docs/version-checker.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/Configuring-in-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/activemqresourceadapter-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/admin/cluster/index.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/advanced/client/jndi.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/alternate-descriptors.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/annotations,-xml-and-defaults.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/app-clients-and-jndi.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/application-deployment-solutions.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/application-discovery-via-the-classpath.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/application-resources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/arquillian-available-adapters.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/arquillian-getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/basics---getting-things.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/basics---security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/basics---transactions.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/bmpentitycontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/bouncy-castle.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/built-in-type-converters.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/callbacks.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/changing-jms-implementations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/client-server-transports.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/clients.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/cmpentitycontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/collapsed-ear.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/common-datasource-configurations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/common-errors.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/common-persistenceprovider-properties.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/comparison.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/concepts.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-containers-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-datasources-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-datasources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-durations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-javamail.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-logging-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-persistenceunits-in-tests.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/constructor-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/containers-and-resources.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/contrib/debug/debug-intellij.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/custom-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/datasource-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/datasource-configuration-by-creator.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/datasource-password-encryption.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/deamon/lin-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/deamon/win-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/declaring-references.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/deploy-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/deploying-in-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/deployment-id.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/deployments.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/details-on-openejb-jar.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/documentation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/dynamic-datasource.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/eclipse-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-failover.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-local-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-over-ssl.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-refs.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-request-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejbd-transport.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/embedded-and-remotable.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/embedded-configuration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/embedding.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/failover-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/faq.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/features.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/from-glassfish-to-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/functional-testing-with-openejb,-jetty-and-selenium.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/generating-ejb-3-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/hello-world.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/hibernate.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/initialcontext-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/installation-drop-in-war.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/installation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/installing-tomee.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/java7.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/javaagent-with-maven-surefire.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/javaagent.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/javaee7-status.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/javamailsession-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/jms-resources-and-mdb-container.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/jmsconnectionfactory-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/jndi-names.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/jpa-concepts.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/jpa-usage.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/local-client-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/local-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/lookup-of-other-ejbs-example.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/managedcontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/manual-installation.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/build-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/configtest-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/debug-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/deploy-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/exec-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/help-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/index.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/list-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/run-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/start-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/stop-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/undeploy-mojo.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/messagedrivencontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/multicast-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/multiple-business-interface-hazzards.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipoint-considerations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipoint-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipoint-recommendations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipulse-discovery.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/new-in-openejb-3.0.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-3.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-binaries.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-eclipse-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-jsr-107-integration.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb.xml.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/openjpa.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/orb-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/persistence-context.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/persistence-unit-ref.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/properties-listing.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/properties-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/property-overriding.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/provisioning.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/proxyfactory-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/queue-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/quickstart.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/remote-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/resource-injection.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/resource-ref-for-datasource.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/running-a-standalone-openejb-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/securing-a-web-service.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/security-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/securityservice-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/service-locator.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/services.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/singleton-beans.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/singleton-ejb.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/singletoncontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/spring-and-openejb-3.0.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/spring-ejb-and-jpa.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/spring.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/ssh.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/standalone-server.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/startup.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/statefulcontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/statelesscontainer-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/system-properties-files.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/system-properties.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/telnet-console.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tip-concurrency.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tip-jersey-client.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tip-weblogic.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomcat-object-factory.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-eclipse.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-hibernate.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-intellij.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-netbeans.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-security.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-webspheremq.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-directory-structure.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-embedded-maven-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-jaas.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-logging-in-eclipse.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-logging.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-maven-plugin.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-mp-getting-started.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-version-policies.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-webaccess.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-webapp.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/topic-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/transaction-annotations.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/transactionmanager-config.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/understanding-callbacks.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/understanding-the-directory-layout.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/unix-daemon.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/validation-tool.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/docs/version-checker.html</loc>
+    	<lastmod>2018-12-05</lastmod>
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/community/contributing/contribution-tips.html</loc>
     	<lastmod>2018-12-04</lastmod>
     </url>
@@ -512,41 +3242,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/latest/docs/Configuring-in-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/activemqresourceadapter-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/admin/cluster/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/advanced/client/jndi.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/alternate-descriptors.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/annotations,-xml-and-defaults.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/app-clients-and-jndi.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/latest/docs/application-composer/advanced.html</loc>
     	
     </url>
@@ -563,881 +3258,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/docs/application-composer/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/application-deployment-solutions.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/application-discovery-via-the-classpath.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/application-resources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/arquillian-available-adapters.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/arquillian-getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/basics---getting-things.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/basics---security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/basics---transactions.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/bmpentitycontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/bouncy-castle.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/built-in-type-converters.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/callbacks.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/changing-jms-implementations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/client-server-transports.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/clients.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/cmpentitycontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/collapsed-ear.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/common-datasource-configurations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/common-errors.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/common-persistenceprovider-properties.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/comparison.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/concepts.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-containers-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-datasources-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-datasources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-durations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-javamail.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-logging-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/configuring-persistenceunits-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/constructor-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/containers-and-resources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/contrib/debug/debug-intellij.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/custom-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/datasource-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/datasource-configuration-by-creator.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/datasource-password-encryption.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/deamon/lin-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/deamon/win-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/declaring-references.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/deploy-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/deploying-in-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/deployment-id.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/deployments.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/details-on-openejb-jar.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/documentation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/dynamic-datasource.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/eclipse-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejb-failover.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejb-local-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejb-over-ssl.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejb-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejb-refs.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejb-request-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ejbd-transport.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/embedded-and-remotable.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/embedded-configuration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/embedding.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/failover-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/faq.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/features.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/from-glassfish-to-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/functional-testing-with-openejb,-jetty-and-selenium.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/generating-ejb-3-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/hello-world.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/hibernate.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/initialcontext-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/installation-drop-in-war.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/installation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/installing-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/java7.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/javaagent-with-maven-surefire.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/javaagent.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/javaee7-status.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/javamailsession-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/jms-resources-and-mdb-container.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/jmsconnectionfactory-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/jndi-names.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/jpa-concepts.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/jpa-usage.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/local-client-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/local-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/lookup-of-other-ejbs-example.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/managedcontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/manual-installation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/build-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/configtest-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/debug-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/deploy-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/exec-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/help-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/list-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/run-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/start-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/stop-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven/undeploy-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/maven.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/messagedrivencontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/multicast-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/multiple-business-interface-hazzards.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/multipoint-considerations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/multipoint-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/multipoint-recommendations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/multipulse-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/new-in-openejb-3.0.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/openejb-3.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/openejb-binaries.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/openejb-eclipse-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/openejb-jsr-107-integration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/openejb.xml.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/openjpa.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/orb-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/persistence-context.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/persistence-unit-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/properties-listing.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/properties-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/property-overriding.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/provisioning.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/proxyfactory-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/queue-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/quickstart.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/remote-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/resource-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/resource-ref-for-datasource.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/running-a-standalone-openejb-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/securing-a-web-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/security-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/securityservice-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/service-locator.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/services.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/singleton-beans.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/singleton-ejb.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/singletoncontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/spring-and-openejb-3.0.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/spring-ejb-and-jpa.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/spring.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/ssh.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/standalone-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/startup.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/statefulcontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/statelesscontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/system-properties-files.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/system-properties.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/telnet-console.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tip-concurrency.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tip-jersey-client.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tip-weblogic.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomcat-object-factory.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-and-eclipse.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-and-hibernate.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-and-intellij.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-and-netbeans.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-and-security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-and-webspheremq.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-directory-structure.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-embedded-maven-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-jaas.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-logging-in-eclipse.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-maven-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-mp-getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-version-policies.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-webaccess.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/tomee-webapp.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/topic-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/transaction-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/transactionmanager-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/understanding-callbacks.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/understanding-the-directory-layout.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/unix-daemon.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/validation-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/docs/version-checker.html</loc>
     	
     </url>
 
@@ -1712,6 +3532,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-faulttolerance-retry.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-metrics-counted.html</loc>
     	
     </url>
@@ -1723,6 +3548,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/mtom.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mvc-cxf.html</loc>
     	
     </url>
 
@@ -1992,41 +3822,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/master/docs/Configuring-in-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/activemqresourceadapter-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/admin/cluster/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/advanced/client/jndi.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/alternate-descriptors.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/annotations,-xml-and-defaults.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/app-clients-and-jndi.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/master/docs/application-composer/advanced.html</loc>
     	
     </url>
@@ -2043,881 +3838,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/docs/application-composer/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/application-deployment-solutions.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/application-discovery-via-the-classpath.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/application-resources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/arquillian-available-adapters.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/arquillian-getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/basics---getting-things.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/basics---security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/basics---transactions.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/bmpentitycontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/bouncy-castle.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/built-in-type-converters.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/callbacks.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/changing-jms-implementations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/client-server-transports.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/clients.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/cmpentitycontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/collapsed-ear.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/common-datasource-configurations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/common-errors.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/common-persistenceprovider-properties.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/comparison.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/concepts.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-containers-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-datasources-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-datasources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-durations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-javamail.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-logging-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/configuring-persistenceunits-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/constructor-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/containers-and-resources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/contrib/debug/debug-intellij.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/custom-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/datasource-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/datasource-configuration-by-creator.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/datasource-password-encryption.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/deamon/lin-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/deamon/win-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/declaring-references.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/deploy-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/deploying-in-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/deployment-id.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/deployments.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/details-on-openejb-jar.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/documentation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/dynamic-datasource.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/eclipse-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejb-failover.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejb-local-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejb-over-ssl.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejb-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejb-refs.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejb-request-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ejbd-transport.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/embedded-and-remotable.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/embedded-configuration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/embedding.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/failover-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/faq.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/features.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/from-glassfish-to-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/functional-testing-with-openejb,-jetty-and-selenium.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/generating-ejb-3-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/hello-world.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/hibernate.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/initialcontext-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/installation-drop-in-war.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/installation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/installing-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/java7.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/javaagent-with-maven-surefire.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/javaagent.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/javaee7-status.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/javamailsession-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/jms-resources-and-mdb-container.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/jmsconnectionfactory-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/jndi-names.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/jpa-concepts.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/jpa-usage.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/local-client-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/local-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/lookup-of-other-ejbs-example.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/managedcontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/manual-installation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/build-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/configtest-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/debug-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/deploy-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/exec-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/help-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/list-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/run-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/start-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/stop-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven/undeploy-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/maven.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/messagedrivencontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/multicast-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/multiple-business-interface-hazzards.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/multipoint-considerations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/multipoint-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/multipoint-recommendations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/multipulse-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/new-in-openejb-3.0.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/openejb-3.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/openejb-binaries.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/openejb-eclipse-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/openejb-jsr-107-integration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/openejb.xml.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/openjpa.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/orb-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/persistence-context.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/persistence-unit-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/properties-listing.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/properties-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/property-overriding.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/provisioning.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/proxyfactory-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/queue-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/quickstart.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/remote-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/resource-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/resource-ref-for-datasource.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/running-a-standalone-openejb-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/securing-a-web-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/security-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/securityservice-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/service-locator.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/services.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/singleton-beans.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/singleton-ejb.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/singletoncontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/spring-and-openejb-3.0.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/spring-ejb-and-jpa.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/spring.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/ssh.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/standalone-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/startup.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/statefulcontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/statelesscontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/system-properties-files.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/system-properties.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/telnet-console.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tip-concurrency.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tip-jersey-client.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tip-weblogic.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomcat-object-factory.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-and-eclipse.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-and-hibernate.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-and-intellij.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-and-netbeans.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-and-security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-and-webspheremq.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-directory-structure.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-embedded-maven-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-jaas.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-logging-in-eclipse.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-maven-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-mp-getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-version-policies.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-webaccess.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/tomee-webapp.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/topic-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/transaction-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/transactionmanager-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/understanding-callbacks.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/understanding-the-directory-layout.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/unix-daemon.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/validation-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/docs/version-checker.html</loc>
     	
     </url>
 
@@ -3192,6 +4112,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-faulttolerance-retry.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/mp-metrics-counted.html</loc>
     	
     </url>
@@ -3203,6 +4128,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/mtom.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mvc-cxf.html</loc>
     	
     </url>
 
@@ -4522,41 +5452,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/Configuring-in-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/activemqresourceadapter-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/admin/cluster/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/advanced/client/jndi.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/alternate-descriptors.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/annotations,-xml-and-defaults.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/app-clients-and-jndi.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/docs/application-composer/advanced.html</loc>
     	
     </url>
@@ -4573,881 +5468,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/docs/application-composer/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/application-deployment-solutions.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/application-discovery-via-the-classpath.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/application-resources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/arquillian-available-adapters.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/arquillian-getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/basics---getting-things.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/basics---security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/basics---transactions.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/bmpentitycontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/bouncy-castle.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/built-in-type-converters.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/callbacks.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/changing-jms-implementations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/client-server-transports.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/clients.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/cmpentitycontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/collapsed-ear.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/common-datasource-configurations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/common-errors.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/common-persistenceprovider-properties.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/comparison.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/concepts.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-containers-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-datasources-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-datasources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-durations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-javamail.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-logging-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/configuring-persistenceunits-in-tests.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/constructor-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/containers-and-resources.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/contrib/debug/debug-intellij.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/custom-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/datasource-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/datasource-configuration-by-creator.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/datasource-password-encryption.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/deamon/lin-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/deamon/win-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/declaring-references.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/deploy-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/deploying-in-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/deployment-id.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/deployments.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/details-on-openejb-jar.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/documentation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/dynamic-datasource.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/eclipse-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-failover.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-local-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-over-ssl.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-refs.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejb-request-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ejbd-transport.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/embedded-and-remotable.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/embedded-configuration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/embedding.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/failover-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/faq.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/features.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/from-glassfish-to-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/functional-testing-with-openejb,-jetty-and-selenium.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/generating-ejb-3-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/hello-world.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/hibernate.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/initialcontext-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/installation-drop-in-war.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/installation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/installing-tomee.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/java7.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/javaagent-with-maven-surefire.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/javaagent.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/javaee7-status.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/javamailsession-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/jms-resources-and-mdb-container.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/jmsconnectionfactory-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/jndi-names.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/jpa-concepts.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/jpa-usage.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/local-client-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/local-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/lookup-of-other-ejbs-example.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/managedcontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/manual-installation.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/build-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/configtest-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/debug-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/deploy-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/exec-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/help-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/list-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/run-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/start-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/stop-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven/undeploy-mojo.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/maven.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/messagedrivencontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/multicast-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/multiple-business-interface-hazzards.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipoint-considerations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipoint-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipoint-recommendations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/multipulse-discovery.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/new-in-openejb-3.0.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-3.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-binaries.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-eclipse-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb-jsr-107-integration.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/openejb.xml.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/openjpa.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/orb-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/persistence-context.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/persistence-unit-ref.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/properties-listing.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/properties-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/property-overriding.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/provisioning.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/proxyfactory-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/queue-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/quickstart.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/remote-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/resource-injection.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/resource-ref-for-datasource.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/running-a-standalone-openejb-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/securing-a-web-service.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/security-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/securityservice-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/service-locator.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/services.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/singleton-beans.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/singleton-ejb.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/singletoncontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/spring-and-openejb-3.0.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/spring-ejb-and-jpa.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/spring.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/ssh.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/standalone-server.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/startup.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/statefulcontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/statelesscontainer-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/system-properties-files.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/system-properties.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/telnet-console.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tip-concurrency.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tip-jersey-client.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tip-weblogic.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomcat-object-factory.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-eclipse.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-hibernate.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-intellij.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-netbeans.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-security.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-and-webspheremq.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-directory-structure.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-embedded-maven-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-jaas.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-logging-in-eclipse.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-logging.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-maven-plugin.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-mp-getting-started.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-version-policies.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-webaccess.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/tomee-webapp.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/topic-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/transaction-annotations.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/transactionmanager-config.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/understanding-callbacks.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/understanding-the-directory-layout.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/unix-daemon.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/validation-tool.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/docs/version-checker.html</loc>
     	
     </url>
 
@@ -5722,6 +5742,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-faulttolerance-retry.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-metrics-counted.html</loc>
     	
     </url>
@@ -5733,6 +5758,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mtom.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mvc-cxf.html</loc>
     	
     </url>
 
