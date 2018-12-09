@@ -100,10 +100,10 @@
 or in a <code>WEB-INF/resources.xml</code> file using a declaration like the
 following. All properties in the element body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myORB" type="org.omg.CORBA.ORB"&gt;
-&lt;/Resource&gt;</pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myORB" type="org.omg.CORBA.ORB"&gt;
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -112,9 +112,9 @@ following. All properties in the element body are optional.</p>
 <code>-D</code> properties. The properties can also be used when embedding TomEE
 via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myORB = new://Resource?type=org.omg.CORBA.ORB</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">myORB = new://Resource?type=org.omg.CORBA.ORB</code></pre>
 </div>
 </div>
 <div class="paragraph">

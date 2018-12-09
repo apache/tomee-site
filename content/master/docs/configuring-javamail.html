@@ -104,16 +104,16 @@ javax.mail.Session.getDefaultInstance(Properties props).</p>
 <div class="paragraph">
 <p>Here might be some example properties.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="SuperbizMail" type="javax.mail.Session"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="SuperbizMail" type="javax.mail.Session"&gt;
    mail.smtp.host=mail.superbiz.org
    mail.smtp.port=25
    mail.transport.protocol=smtp
    mail.smtp.auth=true
    mail.smtp.user=someuser
    password=mypassword
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -134,9 +134,9 @@ values before attempting to use them.</p>
 <p>If you wanted to do a System property or InitialContext property
 override of the above example mail session, you could do so like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>java ... -DSuperbizMail.mail.smtp.host=localhost</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">java ... -DSuperbizMail.mail.smtp.host=localhost</code></pre>
 </div>
 </div>
 </div>

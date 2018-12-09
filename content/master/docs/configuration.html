@@ -148,9 +148,9 @@ OpenEJB saves deployment descriptors - ejb-jar.xml and openejb-jar.xml</p>
 <div class="paragraph">
 <p>Show a config file with the elements hyperlinked.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
 &lt;openejb&gt;
   &lt;Container id="Default CMP Container" ctype="CMP_ENTITY"&gt;
     Global_TX_Database  c:/my/app/conf/postgresql.cmp_global_database.xml
@@ -166,7 +166,7 @@ OpenEJB saves deployment descriptors - ejb-jar.xml and openejb-jar.xml</p>
   &lt;TransactionService id="Default Transaction Manager"/&gt;
   &lt;Deployments jar="c:/my/app/employee.jar"/&gt;
   &lt;Deployments dir="beans/" /&gt;
-&lt;/openejb&gt;</pre>
+&lt;/openejb&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -227,14 +227,14 @@ openejb.home are added to the classpath.</p>
 <div class="paragraph">
 <p>A summary of the above in a different notation:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>openejb.home = user.dir (can be set explicitly)
+<pre class="highlight"><code class="language-properties" data-lang="properties">openejb.home = user.dir (can be set explicitly)
 openejb.base = openejb.home (can be set explicitly)
 openejb.conf = openejb.base/conf/openejb.conf (can be set explicitly)
 logging.conf = openejb.base/conf/logging.conf (can be set explicitly)
 deployments  = paths listed in openejb.conf (relative paths resolved from openejb.base)
-Classpath includes openejb.home/lib and openejb.home/dist</pre>
+Classpath includes openejb.home/lib and openejb.home/dist</code></pre>
 </div>
 </div>
 </div>
@@ -248,9 +248,9 @@ jars by name (abc-ejbs.jar and xyz-ejbs.jar).</p>
 <div class="paragraph">
 <p>An example layout:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>/usr/local/openejb  (openejb.home)
+<pre class="highlight"><code class="language-java" data-lang="java">/usr/local/openejb  (openejb.home)
 /usr/local/openejb/lib  (in classpath)
 /usr/local/openejb/dist (in classpath)
 /home/jsmith/foo_app  (openejb.base)
@@ -258,7 +258,7 @@ jars by name (abc-ejbs.jar and xyz-ejbs.jar).</p>
 /home/jsmith/foo_app/conf/logging.conf
 /home/jsmith/foo_app/abc-ejbs.jar (Deployment entry in openejb.conf)
 /home/jsmith/foo_app/xyz-ejbs.jar (Deployment entry in openejb.conf)
-/home/jsmith/foo_app/logs/</pre>
+/home/jsmith/foo_app/logs/</code></pre>
 </div>
 </div>
 </div>
@@ -271,9 +271,9 @@ explicit paths for the openejb and log4j configuration files.</p>
 <div class="paragraph">
 <p>An example layout:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>/usr/local/openejb  (openejb.home)
+<pre class="highlight"><code class="language-java" data-lang="java">/usr/local/openejb  (openejb.home)
 /usr/local/openejb/lib  (in classpath)
 /usr/local/openejb/dist (in classpath)
 /home/jsmith/foo_app  (openejb.base)
@@ -281,7 +281,7 @@ explicit paths for the openejb and log4j configuration files.</p>
 /home/jsmith/foo_app/abc-ejbs.jar (Deployment entry in openejb.xml)
 /home/jsmith/foo_app/xyz-ejbs.jar (Deployment entry in openejb.xml)
 /home/jsmith/foo_app/log4j.conf  (log4j.configuration)
-/home/jsmith/foo_app/mylogs/  (logging dir as defined in log4j.conf)</pre>
+/home/jsmith/foo_app/mylogs/  (logging dir as defined in log4j.conf)</code></pre>
 </div>
 </div>
 </div>

@@ -153,14 +153,14 @@ app like this:</p>
 <div class="paragraph">
 <p>Just initialize your test case like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> Properties properties = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java"> Properties properties = new Properties();
  properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,
       "org.apache.openejb.client.LocalInitialContextFactory");
  properties.setProperty("openejb.altdd.prefix", "test");
 
- InitialContext initialContext = new InitialContext(properties);</pre>
+ InitialContext initialContext = new InitialContext(properties);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -227,12 +227,12 @@ both have their own ejb-jar.xml files:</p>
 <div class="paragraph">
 <p>The "foo" test case could set the <em>openejb.altdd.prefix</em> as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> //...
+<pre class="highlight"><code class="language-java" data-lang="java"> //...
  properties.setProperty("openejb.altdd.prefix", "footest, test");
 
- InitialContext initialContext = new InitialContext(properties);</pre>
+ InitialContext initialContext = new InitialContext(properties);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -254,12 +254,12 @@ both have their own ejb-jar.xml files:</p>
 <div class="paragraph">
 <p>And the "bar" test case could set the <em>openejb.altdd.prefix</em> as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> //...
+<pre class="highlight"><code class="language-java" data-lang="java"> //...
  properties.setProperty("openejb.altdd.prefix", "footest, test");
 
- InitialContext initialContext = new InitialContext(properties);</pre>
+ InitialContext initialContext = new InitialContext(properties);</code></pre>
 </div>
 </div>
 <div class="paragraph">

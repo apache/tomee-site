@@ -103,7 +103,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;TransactionManager id="myTransactionManager" type="TransactionManager"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;TransactionManager id="myTransactionManager" type="TransactionManager"&gt;
     adler32Checksum = true
     bufferSizeKb = 32
     checksumEnabled = true
@@ -130,7 +130,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myTransactionManager = new://TransactionManager?type=TransactionManager
+<pre class="highlight"><code class="language-properties" data-lang="properties">myTransactionManager = new://TransactionManager?type=TransactionManager
 myTransactionManager.adler32Checksum = true
 myTransactionManager.bufferSizeKb = 32
 myTransactionManager.checksumEnabled = true

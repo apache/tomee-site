@@ -95,9 +95,9 @@
         <div class="row">
             
             <div class="col-md-12">
-                <div class="paragraph">
-<p>###Add The TomEE Maven Plugin To An Existing Project</p>
-</div>
+                <div class="sect1">
+<h2 id="_add_the_tomee_maven_plugin_to_an_existing_project">Add The TomEE Maven Plugin To An Existing Project</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you already have a maven project set up then just add the plugin as
 described <a href="maven/index.html">here</a></p>
@@ -105,14 +105,14 @@ described <a href="maven/index.html">here</a></p>
 <div class="paragraph">
 <p>You will likely need the full Java EE API added to your pom file:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;dependency&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
   &lt;artifactId&gt;javaee-api&lt;/artifactId&gt;
   &lt;version&gt;6.0-6&lt;/version&gt;
   &lt;scope&gt;provided&lt;/scope&gt;
-&lt;/dependency&gt;</pre>
+&lt;/dependency&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -120,9 +120,11 @@ described <a href="maven/index.html">here</a></p>
 you. Even if you have an existing project you can always use the
 template as a reference.</p>
 </div>
-<div class="paragraph">
-<p>###Generate a Basic TomEE-Project With Maven</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_generate_a_basic_tomee_project_with_maven">Generate a Basic TomEE-Project With Maven</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>TomEE provides a maven-archetype for generating a template project. This
 template project is preconfigured with <code>javaee-api</code> (scope provided) and
@@ -133,9 +135,9 @@ application with TomEE.</p>
 <p>For example, if current version of the archetype is '1.7.1', then the
 required command to generate an application would be:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>mvn archetype:generate -DarchetypeGroupId=org.apache.openejb.maven -DarchetypeArtifactId=tomee-webapp-archetype -DarchetypeVersion=1.7.1</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">mvn archetype:generate -DarchetypeGroupId=org.apache.openejb.maven -DarchetypeArtifactId=tomee-webapp-archetype -DarchetypeVersion=1.7.1</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -146,9 +148,9 @@ application. If you are using 'tomee' as groupId, 'tomee-demo' as
 artifactId, '1.0' as version and 'myapp' as package, your console should
 show something like:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Define value for property 'groupId': : tomee
+<pre class="highlight"><code class="language-properties" data-lang="properties">Define value for property 'groupId': : tomee
 Define value for property 'artifactId': : tomee-demo
 Define value for property 'version':  1.0-SNAPSHOT: : 1.0
 Define value for property 'package':  tomee: : myapp
@@ -159,7 +161,7 @@ version: 1.0
 package: myapp
 ...
 [INFO] BUILD SUCCESS
-...</pre>
+...</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -168,21 +170,23 @@ artifactId (in the previous example 'tomee-demo'). For starting the
 application you have to change the current directory to the directory of
 the generated application:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>cd tomee-demo</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd tomee-demo</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>###Starting a TomEE-Project with Maven</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_starting_a_tomee_project_with_maven">Starting a TomEE-Project with Maven</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>With using the archetype everything you need is in place already. So you
 just have to start TomEE with:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>mvn package tomee:run</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">mvn package tomee:run</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -191,9 +195,11 @@ has to download e.g. TomEE. Once those parts are downloaded, starting
 maven, deploying and starting the generated application takes less than
 10s (depending on your computer).</p>
 </div>
-<div class="paragraph">
-<p>###Accessing a running application</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_accessing_a_running_application">Accessing a running application</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The application gets deployed to <code>target/apache-tomee/webapps</code>. If
 everything worked correctly, you should see a directory ('ROOT') as well
@@ -201,9 +207,11 @@ as a web-archive ('ROOT.war'). The context-paths of the deployed
 application is ROOT. In our example the generated application contains a
 servlet mapped to '/index'. So you can access it via:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>http://localhost:8080/index</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">http://localhost:8080/index</code></pre>
+</div>
+</div>
 </div>
 </div>
             </div>

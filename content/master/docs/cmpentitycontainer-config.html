@@ -101,11 +101,11 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Container id="myCmpEntityContainer" type="CMP_ENTITY"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myCmpEntityContainer" type="CMP_ENTITY"&gt;
     cmpEngineFactory = org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory
-&lt;/Container&gt;</pre>
+&lt;/Container&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -115,10 +115,10 @@ VirtualMachine <code>-D</code> properties. The properties can also be used when
 embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myCmpEntityContainer = new://Container?type=CMP_ENTITY
-myCmpEntityContainer.cmpEngineFactory = org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">myCmpEntityContainer = new://Container?type=CMP_ENTITY
+myCmpEntityContainer.cmpEngineFactory = org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory</code></pre>
 </div>
 </div>
 <div class="paragraph">

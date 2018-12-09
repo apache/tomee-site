@@ -105,7 +105,7 @@ with a 'jar' attribute pointing to the jar file on the file system.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb&gt;
 ...
 &lt;Deployments jar="c:\my\app\superEjbs.jar" /&gt;
 &lt;Deployments jar="c:\someplace\purchasing.jar" /&gt;
@@ -132,7 +132,7 @@ attribute pointing to the directory containing the jar files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb&gt;
 ...
 
 &lt;Deployments dir="c:\my\app\beans\" /&gt;
@@ -188,7 +188,7 @@ set to 'C:' as shown below.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb&gt;
 ...
 
 &lt;Deployments dir="c:\myapp\acmeEjbs" /&gt;
@@ -217,7 +217,7 @@ following (1.x and higher only):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">INFO :  Loaded EJBs from
+<pre class="highlight"><code class="language-properties" data-lang="properties">INFO :  Loaded EJBs from
 /usr/local/openejb-1.0-beta1/beans/openejb-itests-beans.jar
 INFO :  Loaded EJBs from
 /usr/local/openejb-1.0-beta1/beans/openejb-webadmin-clienttools.jar</code></pre>
@@ -229,7 +229,7 @@ following.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">WARN :  Jar not loaded. /usr/local/openejb-1.0-beta1/beans/helloworld.jar.
+<pre class="highlight"><code class="language-properties" data-lang="properties">WARN :  Jar not loaded. /usr/local/openejb-1.0-beta1/beans/helloworld.jar.
 Jar failed validation.  Use the validation tool for more details</code></pre>
 </div>
 </div>
@@ -241,7 +241,7 @@ beans listed below are from our test suite.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">DEBUG:  Deployments   : 19
+<pre class="highlight"><code class="language-properties" data-lang="properties">DEBUG:  Deployments   : 19
 DEBUG:  Type        Deployment ID
 DEBUG:     CMP_ENTITY  client/tests/entity/cmp/RMI-over-IIOP/EJBHome
 DEBUG:     STATEFUL    client/tests/stateful/EncBean

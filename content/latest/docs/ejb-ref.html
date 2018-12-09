@@ -98,12 +98,12 @@
                 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>#
+<p>=
 Via annotation</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.superbiz.refs;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.superbiz.refs;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -124,7 +124,7 @@ public class MyEjbRemoteRefBean implements MyBeanInterface {
         FooRemote fooRemote = (FooRemote) context.lookup("java:comp/env/myFooEjb");
         BarRemote barRemote = (BarRemote) context.lookup("java:comp/env/org.superbiz.refs.MyEjbRemoteRefBean/myBarEjb");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -133,9 +133,9 @@ public class MyEjbRemoteRefBean implements MyBeanInterface {
 <div class="paragraph">
 <p>The above @EJB annotation usage is 100% equivalent to the following xml.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-ref&gt;
     &lt;ejb-ref-name&gt;myFooEjb&lt;/ejb-ref-name&gt;
     &lt;remote&gt;org.superbiz.refs.FooRemote&lt;/remote&gt;
 &lt;/ejb-ref&gt;
@@ -147,7 +147,7 @@ public class MyEjbRemoteRefBean implements MyBeanInterface {
       &lt;injection-target-class&gt;org.superbiz.refs.MyEjbRemoteRefBean&lt;/injection-target-class&gt;
       &lt;injection-target-name&gt;myBarEjb&lt;/injection-target-name&gt;
     &lt;/injection-target&gt;
-&lt;/ejb-ref&gt;</pre>
+&lt;/ejb-ref&gt;</code></pre>
 </div>
 </div>
             </div>

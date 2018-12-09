@@ -103,9 +103,9 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Container id="myStatelessContainer" type="STATELESS"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myStatelessContainer" type="STATELESS"&gt;
     accessTimeout = 30 seconds
     callbackThreads = 5
     closeTimeout = 5 minutes
@@ -119,7 +119,7 @@ body are optional.</p>
     replaceFlushed = false
     strictPooling = true
     sweepInterval = 5 minutes
-&lt;/Container&gt;</pre>
+&lt;/Container&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -129,9 +129,9 @@ VirtualMachine <code>-D</code> properties. The properties can also be used when
 embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myStatelessContainer = new://Container?type=STATELESS
+<pre class="highlight"><code class="language-properties" data-lang="properties">myStatelessContainer = new://Container?type=STATELESS
 myStatelessContainer.accessTimeout = 30 seconds
 myStatelessContainer.callbackThreads = 5
 myStatelessContainer.closeTimeout = 5 minutes
@@ -144,7 +144,7 @@ myStatelessContainer.minSize = 0
 myStatelessContainer.replaceAged = true
 myStatelessContainer.replaceFlushed = false
 myStatelessContainer.strictPooling = true
-myStatelessContainer.sweepInterval = 5 minutes</pre>
+myStatelessContainer.sweepInterval = 5 minutes</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -485,12 +485,12 @@ is used in creating the offset and allows the spreading to push the
 initial ages into the future or into the past. The pool is filled at
 startup as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>for (int i = 0; i &lt; poolMin; i++) {
+<pre class="highlight"><code class="language-java" data-lang="java">for (int i = 0; i &lt; poolMin; i++) {
     long ageOffset = (maxAge / poolMin * i * maxAgeOffset) % maxAge;
     pool.add(new Bean(), ageOffset));
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -611,9 +611,9 @@ instances.</p>
 and calling <code>flush()</code>. See <code>SweepInterval</code> for details on how flush is
 performed.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.annotation.Resource;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.annotation.Resource;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import java.io.Flushable;
@@ -627,7 +627,7 @@ public class MyBean {
 
         ((Flushable) sessionContext).flush();
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>

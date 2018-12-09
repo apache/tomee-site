@@ -103,9 +103,9 @@
 <div class="paragraph">
 <p>An example of working <code>persistence.xml</code> for OpenJPA:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
 
   &lt;persistence-unit name="movie-unit"&gt;
     &lt;jta-data-source&gt;movieDatabase&lt;/jta-data-source&gt;
@@ -116,16 +116,16 @@
       &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Where the datasources above are configured in your openejb.xml as
 follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="movieDatabase" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="movieDatabase" type="DataSource"&gt;
   JdbcDriver = org.hsqldb.jdbcDriver
   JdbcUrl = jdbc:hsqldb:mem:moviedb
 &lt;/Resource&gt;
@@ -134,22 +134,22 @@ follows:</p>
   JdbcDriver = org.hsqldb.jdbcDriver
   JdbcUrl = jdbc:hsqldb:mem:moviedb
   JtaManaged = false
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or in properties as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>p.put("movieDatabase", "new://Resource?type=DataSource");
+<pre class="highlight"><code class="language-java" data-lang="java">p.put("movieDatabase", "new://Resource?type=DataSource");
 p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
 p.put("movieDatabase.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
 
 p.put("movieDatabaseUnmanaged", "new://Resource?type=DataSource");
 p.put("movieDatabaseUnmanaged.JdbcDriver", "org.hsqldb.jdbcDriver");
 p.put("movieDatabaseUnmanaged.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
-p.put("movieDatabaseUnmanaged.JtaManaged", "false");</pre>
+p.put("movieDatabaseUnmanaged.JtaManaged", "false");</code></pre>
 </div>
 </div>
 </div>
@@ -168,9 +168,9 @@ objects. If you add the <em>openjpa.jdbc.SynchronizeMappings</em> property as
 shown below OpenJPA will auto-create all your tables, all your primary
 keys and all foreign keys exactly to match your objects.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
 
  &lt;persistence-unit name="movie-unit"&gt;
    &lt;!-- your other stuff --&gt;
@@ -179,7 +179,7 @@ keys and all foreign keys exactly to match your objects.</p>
      &lt;property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/&gt;
    &lt;/properties&gt;
  &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -201,31 +201,31 @@ keys and all foreign keys exactly to match your objects.</p>
 <div class="paragraph">
 <p>Using a EXTENDED persistence context &#8230;&#8203;</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@PersistenceContext(unitName = "movie-unit", type = PersistenceContextType.EXTENDED)
-EntityManager entityManager;</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">@PersistenceContext(unitName = "movie-unit", type = PersistenceContextType.EXTENDED)
+EntityManager entityManager;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>on a persistence unit setup as RESOURCE_LOCAL &#8230;&#8203;</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence-unit name="movie-unit" transaction-type="RESOURCE_LOCAL"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence-unit name="movie-unit" transaction-type="RESOURCE_LOCAL"&gt;
   ...
-&lt;/persistence-unit&gt;</pre>
+&lt;/persistence-unit&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>inside of a transaction.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@TransactionAttribute(TransactionAttributeType.REQUIRED)
+<pre class="highlight"><code class="language-java" data-lang="java">@TransactionAttribute(TransactionAttributeType.REQUIRED)
 public void addMovie(Movie movie) throws Exception {
     entityManager.persist(movie);
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -146,9 +146,9 @@ whichever JPA provider it needs.</p>
 <p>The following is an example of a fairly common <code>persistence.xml</code> for
 Hibernate</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence version="1.0"
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence version="1.0"
        xmlns="http://java.sun.com/xml/ns/persistence"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
@@ -163,17 +163,17 @@ Hibernate</p>
       &lt;property name="hibernate.hbm2ddl.auto" value="create-drop"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Note, TomEE will automatically add the following property unless it is
 explicitly configured:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>      &lt;property name="hibernate.transaction.manager_lookup_class"
-                value="org.apache.openejb.hibernate.TransactionManagerLookup"/&gt;</pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">      &lt;property name="hibernate.transaction.manager_lookup_class"
+                value="org.apache.openejb.hibernate.TransactionManagerLookup"/&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -307,9 +307,9 @@ be sure to put your Database JDBC driver in <code>&lt;tomee-home&gt;/lib</code>.
 <p>The actual Maven dependencies for your project can be added in the usual
 way:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    &lt;!-- Hibernate --&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;!-- Hibernate --&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;antlr&lt;/groupId&gt;
         &lt;artifactId&gt;antlr&lt;/artifactId&gt;
@@ -354,7 +354,7 @@ way:</p>
         &lt;groupId&gt;org.javassist&lt;/groupId&gt;
         &lt;artifactId&gt;javassist&lt;/artifactId&gt;
         &lt;version&gt;3.15.0-GA&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
+    &lt;/dependency&gt;</code></pre>
 </div>
 </div>
 </div>

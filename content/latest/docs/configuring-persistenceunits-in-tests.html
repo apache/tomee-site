@@ -135,9 +135,9 @@ properties or the initial context properties. The format is:</p>
 <div class="paragraph">
 <p>So for example with the following persistence.xml:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence&gt;
   &lt;persistence-unit name="movie-unit"&gt;
     &lt;provider&gt;org.hibernate.ejb.HibernatePersistence&lt;/provider&gt;
     &lt;jta-data-source&gt;movieDatabase&lt;/jta-data-source&gt;
@@ -147,7 +147,7 @@ properties or the initial context properties. The format is:</p>
       &lt;property name="hibernate.max_fetch_depth" value="3"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -155,15 +155,15 @@ properties or the initial context properties. The format is:</p>
 There are currently no facilities for removing them (if you have a need
 for that let us know&#8201;&#8212;&#8201;it hasn&#8217;t really come up so far).</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
 
 p.put("movie-unit.hibernate.hbm2ddl.auto", "update");
 p.put("movie-unit.hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
 
-context = new InitialContext(p);</pre>
+context = new InitialContext(p);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -221,15 +221,15 @@ below.</p>
 <p>Note that you <strong>must</strong> use the <strong>unit name</strong> as the prefix. This will not
 work:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">    Properties p = new Properties();
     p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
 
     p.put("hibernate.hbm2ddl.auto", "update");
     p.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
 
-    context = new InitialContext(p);</pre>
+    context = new InitialContext(p);</code></pre>
 </div>
 </div>
 <div class="paragraph">

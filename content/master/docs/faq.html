@@ -98,7 +98,7 @@
                 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>##
+<p>==
  General</p>
 </div>
 <div class="literalblock">
@@ -184,19 +184,19 @@ classpath. For maven, something that winds up directly under
 "target/classes/" or "target/test-classes/" will work just fine. Then in
 your test case do this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>   protected void setUp() throws Exception {
+<pre class="highlight"><code class="language-java" data-lang="java">   protected void setUp() throws Exception {
        Properties properties = new Properties();
-       properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,</pre>
+       properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>"org.apache.openejb.client.LocalInitialContextFactory");</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>       URL config =</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">       URL config =</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -204,10 +204,10 @@ your test case do this:</p>
 properties.setProperty("openejb.configuration",
 config.toExternalForm());</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>       initialContext = new InitialContext(properties);
-   }</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">       initialContext = new InitialContext(properties);
+   }</code></pre>
 </div>
 </div>
 <div class="paragraph">

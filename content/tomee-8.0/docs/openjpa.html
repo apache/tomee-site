@@ -105,7 +105,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
 
   &lt;persistence-unit name="movie-unit"&gt;
     &lt;jta-data-source&gt;movieDatabase&lt;/jta-data-source&gt;
@@ -125,7 +125,7 @@ follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="movieDatabase" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="movieDatabase" type="DataSource"&gt;
   JdbcDriver = org.hsqldb.jdbcDriver
   JdbcUrl = jdbc:hsqldb:mem:moviedb
 &lt;/Resource&gt;
@@ -170,7 +170,7 @@ keys and all foreign keys exactly to match your objects.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
 
  &lt;persistence-unit name="movie-unit"&gt;
    &lt;!-- your other stuff --&gt;
@@ -212,7 +212,7 @@ EntityManager entityManager;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;persistence-unit name="movie-unit" transaction-type="RESOURCE_LOCAL"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence-unit name="movie-unit" transaction-type="RESOURCE_LOCAL"&gt;
   ...
 &lt;/persistence-unit&gt;</code></pre>
 </div>

@@ -103,7 +103,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myJmsConnectionFactory" type="javax.jms.ConnectionFactory"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myJmsConnectionFactory" type="javax.jms.ConnectionFactory"&gt;
     connectionMaxIdleTime = 15 Minutes
     connectionMaxWaitTime = 5 seconds
     poolMaxSize = 10
@@ -122,7 +122,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myJmsConnectionFactory = new://Resource?type=javax.jms.ConnectionFactory
+<pre class="highlight"><code class="language-properties" data-lang="properties">myJmsConnectionFactory = new://Resource?type=javax.jms.ConnectionFactory
 myJmsConnectionFactory.connectionMaxIdleTime = 15 Minutes
 myJmsConnectionFactory.connectionMaxWaitTime = 5 seconds
 myJmsConnectionFactory.poolMaxSize = 10

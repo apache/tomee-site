@@ -106,22 +106,22 @@ and its services such as transaction, security, and data sources.</p>
 <p>The format is a mix of xml and properties inspired by the format of the
 httpd configuration file. Basically:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tag id=""&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tag id=""&gt;
   ...properties...
-&lt;/tag&gt;</pre>
+&lt;/tag&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Such as:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="MyDataSource" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="MyDataSource" type="DataSource"&gt;
   username foo
   password bar
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -129,12 +129,12 @@ httpd configuration file. Basically:</p>
 any java properties file (along with semi-colon). So the above is
 equivalent to:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="MyDataSource" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="MyDataSource" type="DataSource"&gt;
   username = foo
   password = bar
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">

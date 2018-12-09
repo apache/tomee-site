@@ -102,7 +102,7 @@ following. All properties in the element body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myTopic" type="javax.jms.Topic"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myTopic" type="javax.jms.Topic"&gt;
     destination =
 &lt;/Resource&gt;</code></pre>
 </div>
@@ -115,7 +115,7 @@ via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialConte
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myTopic = new://Resource?type=javax.jms.Topic
+<pre class="highlight"><code class="language-properties" data-lang="properties">myTopic = new://Resource?type=javax.jms.Topic
 myTopic.destination =</code></pre>
 </div>
 </div>

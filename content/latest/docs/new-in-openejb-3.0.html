@@ -178,9 +178,9 @@ a JavaBeans PropertyEditor. We include several built-in PropertyEditors
 already such as Date, InetAddress, Class, File, URL, URI, Map, List and
 more.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import java.net.URI;
+<pre class="highlight"><code class="language-java" data-lang="java">import java.net.URI;
 import java.io.File;
 import java.util.Date;
 
@@ -189,7 +189,7 @@ public class MyBean {
     @Resource URI blog;
     @Resource Date birthday;
     @Resource File homeDirectory;
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -217,11 +217,11 @@ things that need injection that are not container controlled resources
 via a properties file and skip the need for an ejb-jar.xml and it&#8217;s 5
 lines per property madness.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>blog = http://acme.org/myblog
+<pre class="highlight"><code class="language-properties" data-lang="properties">blog = http://acme.org/myblog
 birthday = locale=en_US style=MEDIUM Mar 1, 1954
-homeDirectory = /home/esmith/</pre>
+homeDirectory = /home/esmith/</code></pre>
 </div>
 </div>
 </div>
@@ -297,9 +297,9 @@ Embedding <mark> Tomcat 6 Support </mark> Business locals remotable</p>
 <p>If you want to make business local interfaces remotable, you can set
 this property:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  openejb.remotable.businessLocals=true</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">  openejb.remotable.businessLocals=true</code></pre>
 </div>
 </div>
 <div class="paragraph">

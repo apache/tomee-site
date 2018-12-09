@@ -300,7 +300,7 @@ hot deployment alter this value to true and restart Tomee.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;servlet&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;servlet&gt;
     &lt;servlet-name&gt;jsp&lt;/servlet-name&gt;
     &lt;servlet-class&gt;org.apache.jasper.servlet.JspServlet&lt;/servlet-class&gt;
     ....
@@ -325,7 +325,7 @@ is to add these properties manually:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">-Djava.util.logging.config.file="&lt;tomee&gt;/conf/logging.properties"
+<pre class="highlight"><code class="language-properties" data-lang="properties">-Djava.util.logging.config.file="&lt;tomee&gt;/conf/logging.properties"
 -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager</code></pre>
 </div>
 </div>

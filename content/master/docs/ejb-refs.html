@@ -110,24 +110,24 @@ the ejb-jar.xml of the referring bean.</p>
 <div class="paragraph">
 <p>So in ejb app A colorsApp.jar you have this bean:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package com.foo.colors;
+<pre class="highlight"><code class="language-java" data-lang="java">package com.foo.colors;
 
 import javax.ejb.Stateless;
 
 @Stateless
 public class OrangeBean implements OrangeRemote {
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Then in ejb app B shapesApp.jar you have this bean with a reference to
 OrangeRemote:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package com.foo.shapes;
+<pre class="highlight"><code class="language-java" data-lang="java">package com.foo.shapes;
 
 import javax.ejb.Stateless;
 import com.foo.colors.OrangeRemote;
@@ -135,16 +135,16 @@ import com.foo.colors.OrangeRemote;
 @Stateless
 public class SquareBean implements SquareRemote {
     @EJB OrangeRemote orangeRemote;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>To hook this reference up you need to override this ref and add more
 info in the ejb-jar.xml of shapesApp.jar as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar&gt;
   &lt;enterprise-beans&gt;
 
     &lt;session&gt;
@@ -156,7 +156,7 @@ info in the ejb-jar.xml of shapesApp.jar as follows:</p>
     &lt;/session&gt;
 
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -171,23 +171,23 @@ possible, however more information must be described in the xml.</p>
 <div class="paragraph">
 <p>In ejb app A colorsApp.jar you have this bean:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package com.foo.colors;
+<pre class="highlight"><code class="language-java" data-lang="java">package com.foo.colors;
 
 import javax.ejb.Stateless;
 
 @Stateless
 public class OrangeBean implements OrangeRemote {
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Then in ejb app B shapesApp.jar&#8201;&#8212;&#8201;note there is no @EJB annotation:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package com.foo.shapes;
+<pre class="highlight"><code class="language-java" data-lang="java">package com.foo.shapes;
 
 import javax.ejb.Stateless;
 import com.foo.colors.OrangeRemote;
@@ -195,7 +195,7 @@ import com.foo.colors.OrangeRemote;
 @Stateless
 public class SquareBean implements SquareRemote {
     OrangeRemote orangeRemote;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -203,9 +203,9 @@ public class SquareBean implements SquareRemote {
 just xml. The following would be added to the ejb-jar.xml of
 shapesApp.jar:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar&gt;
   &lt;enterprise-beans&gt;
 
     &lt;session&gt;
@@ -223,7 +223,7 @@ shapesApp.jar:</p>
     &lt;/session&gt;
 
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -246,9 +246,9 @@ to satisfy the lookup to the other server.</p>
 <div class="paragraph">
 <p>In this example we are calling our InitialContext <code>shoe</code> for fun.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
 &lt;openejb&gt;
 
   &lt;JndiProvider id="shoe" type="javax.naming.InitialContext"&gt;
@@ -256,16 +256,16 @@ to satisfy the lookup to the other server.</p>
     java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
   &lt;/JndiProvider&gt;
 
-&lt;/openejb&gt;</pre>
+&lt;/openejb&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Declaring the <code>@EJB</code> reference is then done using a <code>mappedName</code> that
 references the named <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class BlueBean implements BlueRemote {
+<pre class="highlight"><code class="language-java" data-lang="java">public class BlueBean implements BlueRemote {
 
     @EJB(mappedName = "jndi:ext://shoe/OrangeBeanRemote")
     private OrangeRemote orangeRemote;
@@ -274,7 +274,7 @@ references the named <code>InitialContext</code></p>
         Assert.assertNotNull("orangeRemote is null", orangeRemote);
         assertEquals("olleh", orangeRemote.echo("hello"));
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -297,12 +297,12 @@ supports.</p>
 <p>If say, there are two servers that have the <code>OrangeBeanRemote</code> bean, you
 could expand the <code>&lt;JndiProvider&gt;</code> delcaration like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  &lt;JndiProvider id="shoe" type="javax.naming.InitialContext"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;JndiProvider id="shoe" type="javax.naming.InitialContext"&gt;
     java.naming.provider.url = failover:ejbd://192.168.1.20:4201,ejbd://192.168.1.30:4201
     java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
-  &lt;/JndiProvider&gt;</pre>
+  &lt;/JndiProvider&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -135,11 +135,11 @@ time is going in a request.</p>
 <code>FINEST</code> level in category <code>OpenEJB.client</code>. The code is similar to the
 following:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>final long time = System.nanoTime() - start;
+<pre class="highlight"><code class="language-java" data-lang="java">final long time = System.nanoTime() - start;
 final String message = String.format("Invocation %sns - %s - Request(%s) - Response(%s)", time, conn.getURI(), req, res);
-logger.log(Level.FINEST, message);</pre>
+logger.log(Level.FINEST, message);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -156,9 +156,9 @@ performance reasons, so it must be set at VM startup.</p>
 in category`"OpenEJB.server.remote.ejb`. The code for that is similar to
 this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>logger.fine("EJB REQUEST: " + req + " -- RESPONSE: " + res);</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">logger.fine("EJB REQUEST: " + req + " -- RESPONSE: " + res);</code></pre>
 </div>
 </div>
 </div>
@@ -218,9 +218,9 @@ security.</p>
 <p>This information is available in JMX. A sample JMX ObjectName for a
 <code>CounterBean</code> will look like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean</code></pre>
 </div>
 </div>
 <div class="paragraph">

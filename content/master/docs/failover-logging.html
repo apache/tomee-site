@@ -99,59 +99,59 @@
 <p>Setting the following logging category to "debug" will open up some new
 logging information.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>log4j.category.OpenEJB.server.discovery = debug</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">log4j.category.OpenEJB.server.discovery = debug</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or more specifically as:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>log4j.category.OpenEJB.server.discovery.multipoint = debug
-log4j.category.OpenEJB.server.discovery.multicast = debug</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">log4j.category.OpenEJB.server.discovery.multipoint = debug
+log4j.category.OpenEJB.server.discovery.multicast = debug</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The nature of the debug output is to display all configuration
 information at startup:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>DEBUG - Using default 'heart_rate=500'
+<pre class="highlight"><code class="language-properties" data-lang="properties">DEBUG - Using default 'heart_rate=500'
 DEBUG - Using default 'max_missed_heartbeats=10'
 DEBUG - Using default 'max_reconnect_delay=30000'
 DEBUG - Using default 'reconnect_delay=5000'
 DEBUG - Using default 'exponential_backoff=0'
 DEBUG - Using default 'max_reconnect_attempts=10'
-INFO - Created Tracker{group='default', groupPrefix='default:', heartRate=500, maxMissedHeartbeats=10, reconnectDelay=5000, maxReconnectDelay=30000, maxReconnectAttempts=10, exponentialBackoff=0, useExponentialBackOff=false, registeredServices=0, discoveredServices=0}</pre>
+INFO - Created Tracker{group='default', groupPrefix='default:', heartRate=500, maxMissedHeartbeats=10, reconnectDelay=5000, maxReconnectDelay=30000, maxReconnectAttempts=10, exponentialBackoff=0, useExponentialBackOff=false, registeredServices=0, discoveredServices=0}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Changing the configuration should reflect in the logging as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>INFO - Using 'heart_rate=200'
+<pre class="highlight"><code class="language-properties" data-lang="properties">INFO - Using 'heart_rate=200'
 INFO - Using 'max_missed_heartbeats=2'
 DEBUG - Using default 'max_reconnect_delay=30000'
 DEBUG - Using default 'reconnect_delay=5000'
 DEBUG - Using default 'exponential_backoff=0'
 DEBUG - Using default 'max_reconnect_attempts=10'
-INFO - Created Tracker{group='default', groupPrefix='default:', heartRate=200, maxMissedHeartbeats=2, reconnectDelay=5000, maxReconnectDelay=30000, maxReconnectAttempts=10, exponentialBackoff=0, useExponentialBackOff=false, registeredServices=0, discoveredServices=0}</pre>
+INFO - Created Tracker{group='default', groupPrefix='default:', heartRate=200, maxMissedHeartbeats=2, reconnectDelay=5000, maxReconnectDelay=30000, maxReconnectAttempts=10, exponentialBackoff=0, useExponentialBackOff=false, registeredServices=0, discoveredServices=0}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>As well as any events at runtime:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>DEBUG - Expired Service{uri=green://localhost:0, broadcastString='default:green://localhost:0&amp;#39;} Timeout{lastSeen=-5005, threshold=5000}
+<pre class="highlight"><code class="language-properties" data-lang="properties">DEBUG - Expired Service{uri=green://localhost:0, broadcastString='default:green://localhost:0&amp;#39;} Timeout{lastSeen=-5005, threshold=5000}
 
 DEBUG - Added Service{uri=green://localhost:0}
 
-DEBUG - Removed Service{uri=green://localhost:0}</pre>
+DEBUG - Removed Service{uri=green://localhost:0}</code></pre>
 </div>
 </div>
             </div>

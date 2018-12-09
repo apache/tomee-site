@@ -116,9 +116,9 @@ functionnal reasons (filtering, aggregation, enriching&#8230;&#8203;).</p>
 <p>The interface Router (<em>org.apache.openejb.resource.jdbc.Router</em>) have
 only one method to get the datasource to use:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Router.getDataSource()</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">Router.getDataSource()</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -176,9 +176,9 @@ to set to choose the real database to use between three.</p>
 <div class="paragraph">
 <p>So in your code you want something like:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class RoutedEJBBean {
+<pre class="highlight"><code class="language-java" data-lang="java">public class RoutedEJBBean {
     @PersistenceContext(unitName = "router")
     private EntityManager em;
 
@@ -191,7 +191,7 @@ to set to choose the real database to use between three.</p>
         router.setDataSource(clientDatasource);
         em.persist(new Person(id, name));
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -204,9 +204,9 @@ to set to choose the real database to use between three.</p>
 <p>The router will simply manage a map to store proxied datasources and a
 field to store the datasource used in the current thread (ThreadLocal).</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class DeterminedRouter implements Router {
+<pre class="highlight"><code class="language-java" data-lang="java">public class DeterminedRouter implements Router {
     private String dataSourceNames; // used to store configuration (openejb.xml)
     private String defaultDataSourceName; // defautl data source name
     private Map&lt;String, DataSource&gt; dataSources = null; // proxied data sources
@@ -282,7 +282,7 @@ field to store the datasource used in the current thread (ThreadLocal).</p>
     public void setDefaultDataSourceName(String name) {
         this.defaultDataSourceName = name;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -297,15 +297,15 @@ META-INF/. For example META-INF/org.router.</p>
 <div class="paragraph">
 <p>This file will contain something like:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ServiceJar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ServiceJar&gt;
   &lt;ServiceProvider id="DeterminedRouter" service="Resource"
            type="org.apache.openejb.resource.jdbc.Router" class-name="implementation class"&gt;
     Param defaultValue
     ParamWithNoDefaultValue
   &lt;/ServiceProvider&gt;
-&lt;/ServiceJar&gt;</pre>
+&lt;/ServiceJar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -317,9 +317,9 @@ META-INF/. For example META-INF/org.router.</p>
 <p>In the openejb.xml file, you have to declare your dynamic database and
 in our example it needs the proxied datasources too:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="router" type="&lt;your implementation&gt;" provider="&lt;your provider&gt;"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="router" type="&lt;your implementation&gt;" provider="&lt;your provider&gt;"&gt;
   Param value
 &lt;/Resource&gt;
 
@@ -348,7 +348,7 @@ in our example it needs the proxied datasources too:</p>
   UserName sa
   Password
   JtaManaged true
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>

@@ -151,9 +151,9 @@ clients not running in an EJB container, etc.</p>
 method call. In this case, the <em>OtherBean</em> instance, will have the same
 security as <em>MyBean</em>, including the principal (username), roles, etc.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.ejb.EJB;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.ejb.EJB;
 import javax.naming.InitialContext;
 
 @EJB(name = "otherBean", beanInterface = IOtherBean.class)
@@ -164,7 +164,7 @@ public class MyBean
     InitialContext context = new InitialContext();
     return (IOtherBean) context.lookup("java:comp/env/otherBean");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>

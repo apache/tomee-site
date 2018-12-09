@@ -170,9 +170,9 @@ and then @Lock(WRITE) on specific methods if needed.</p>
 _http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReadWriteLock.html[java.util.concurrent.ReadWriteLock]
 _ API which looks like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public interface ReadWriteLock {
+<pre class="highlight"><code class="language-java" data-lang="java">public interface ReadWriteLock {
    /**
     * Returns the lock used for reading.
     *
@@ -186,7 +186,7 @@ _ API which looks like this:</p>
     * @return the lock used for writing.
     */
    Lock writeLock();
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -228,9 +228,9 @@ the
 <a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/Lock.html">java.util.concurrent.locks.Lock</a>
 interface.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public interface Lock {
+<pre class="highlight"><code class="language-java" data-lang="java">public interface Lock {
 
     /**
      * Blocks (potentially) forever
@@ -253,7 +253,7 @@ interface.</p>
      */
     boolean tryLock(long time, TimeUnit unit) throws InterruptedException;
 
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -317,13 +317,13 @@ the <em>@DependsOn</em> annotation which can be used to list the names of
 Singleton beans that must be started before the Singleton bean using the
 annotation.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@DependsOn({"SingletonB", "SingletonC"})
+<pre class="highlight"><code class="language-java" data-lang="java">@DependsOn({"SingletonB", "SingletonC"})
 @Singleton
 public class SingletonA {
 
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -354,9 +354,9 @@ needed.</p>
 <div class="paragraph">
 <p>Singletons can be declared in the ejb-jar.xml as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar&gt;
   &lt;enterprise-beans&gt;
     &lt;session&gt;
       &lt;ejb-name&gt;MySingletonBean&lt;/ejb-name&gt;
@@ -369,7 +369,7 @@ needed.</p>
       &lt;/depends-on&gt;
     &lt;/session&gt;
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
             </div>

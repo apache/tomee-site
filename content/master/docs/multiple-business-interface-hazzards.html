@@ -103,9 +103,9 @@ some very nasty side effects happen, namely you loose the ability to
 throw any checked exceptions that are not in the throws clause of both
 methods.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import junit.framework.TestCase;
+<pre class="highlight"><code class="language-java" data-lang="java">import junit.framework.TestCase;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -118,25 +118,25 @@ public class ExceptionTest extends TestCase {
 
     public void test() throws Exception {
     ClassLoader classLoader = this.getClass().getClassLoader();
-        Class[]</pre>
+        Class[]</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>interfaces = new Class[]\{One.class, Two.class};</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    InvocationHandler h = new TestInvocationHandler();
+<pre class="highlight"><code class="language-java" data-lang="java">    InvocationHandler h = new TestInvocationHandler();
 
-    Object proxy =</pre>
+    Object proxy =</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>java.lang.reflect.Proxy.newProxyInstance(classLoader, interfaces, h);</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    One one = (One) proxy;
+<pre class="highlight"><code class="language-java" data-lang="java">    One one = (One) proxy;
 
     try {
         one.run(new CommonException());
@@ -154,29 +154,29 @@ public class ExceptionTest extends TestCase {
     } catch (OneException e) {
     } catch(UndeclaredThrowableException u) {
         Throwable t = u.getCause();
-        fail("Undeclared: "+t); // This will always be the code that</pre>
+        fail("Undeclared: "+t); // This will always be the code that</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>executes } catch(Throwable t)\{ fail("Caught: "+t); }</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    Two two = (Two) proxy;
+<pre class="highlight"><code class="language-java" data-lang="java">    Two two = (Two) proxy;
     try {
         two.run(new CommonException());
     } catch (TwoException e) {
     } catch(UndeclaredThrowableException u) {
         Throwable t = u.getCause();
-        fail("Undeclared: "+t); // This will always be the code that</pre>
+        fail("Undeclared: "+t); // This will always be the code that</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>executes } catch(Throwable t)\{ fail("Caught: "+t); }</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    }
+<pre class="highlight"><code class="language-java" data-lang="java">    }
 
     public static class CommonException extends Exception {
     public CommonException() {
@@ -201,7 +201,7 @@ public class ExceptionTest extends TestCase {
     }
     }
 
-    private static class TestInvocationHandler implements InvocationHandler</pre>
+    private static class TestInvocationHandler implements InvocationHandler</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -216,9 +216,9 @@ those two interfaces declare the <em>same method</em> but with <em>different
 return types</em> the VM proxy code will refuse to create a proxy at all.
 Take this code example:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import junit.framework.TestCase;
+<pre class="highlight"><code class="language-java" data-lang="java">import junit.framework.TestCase;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -230,25 +230,25 @@ public class ReturnTest extends TestCase {
 
     public void test() throws Exception {
     ClassLoader classLoader = this.getClass().getClassLoader();
-        Class[]</pre>
+        Class[]</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>interfaces = new Class[]\{ReturnTest.One.class, ReturnTest.Two.class};</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    InvocationHandler h = new ReturnTest.TestInvocationHandler();
+<pre class="highlight"><code class="language-java" data-lang="java">    InvocationHandler h = new ReturnTest.TestInvocationHandler();
 
-    Object proxy =</pre>
+    Object proxy =</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>java.lang.reflect.Proxy.newProxyInstance(classLoader, interfaces, h);</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    One one = (One) proxy;
+<pre class="highlight"><code class="language-java" data-lang="java">    One one = (One) proxy;
     try {
         Object object = one.run(new ThingOne());
     } catch (Throwable t) {
@@ -278,7 +278,7 @@ public class ReturnTest extends TestCase {
     public static class ThingTwo {
     }
 
-    private static class TestInvocationHandler implements InvocationHandler</pre>
+    private static class TestInvocationHandler implements InvocationHandler</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -288,9 +288,9 @@ throws Throwable \{ return args[0] ; } } }</p>
 <div class="paragraph">
 <p>Running this code will result in the following exception:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>java.lang.IllegalArgumentException: methods with same signature</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">java.lang.IllegalArgumentException: methods with same signature</code></pre>
 </div>
 </div>
 <div class="paragraph">

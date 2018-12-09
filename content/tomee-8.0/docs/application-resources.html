@@ -113,7 +113,7 @@ the following configuration.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyQueue" type="javax.jms.Queue"/&gt;
 &lt;/tomee&gt;</code></pre>
 </div>
@@ -145,7 +145,7 @@ defined using system properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">MyQueue = new://Resource?type=javax.jms.Queue</code></pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">MyQueue = new://Resource?type=javax.jms.Queue</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -172,7 +172,7 @@ for the properties within the <code>&lt;Resource&gt;</code> tag.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="DB" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="DB" type="DataSource"&gt;
   JdbcDriver  com.mysql.jdbc.Driver
   JdbcUrl     jdbc:mysql://localhost/test
   UserName    test
@@ -292,7 +292,7 @@ the <code>class-name</code> attribute):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
     url http://localhost
     username tomee
     poolSize 20
@@ -341,7 +341,7 @@ you could do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
     url http://localhost
     username tomee
     poolSize 20
@@ -371,7 +371,7 @@ file, include a <code>WEB-INF/resources.xml</code>. For an ejb-jar module, use
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;resources&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resources&gt;
     &lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
         url http://localhost
         username tomee
@@ -465,7 +465,7 @@ specify the arguments as a comma separated list:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="config" class-name="org.superbiz.Configuration" constructor="id, poolSize"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="config" class-name="org.superbiz.Configuration" constructor="id, poolSize"&gt;
     url http://localhost
     username tomee
     poolSize 20

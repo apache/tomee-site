@@ -101,7 +101,7 @@ may fail with an error along the lines of:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">Caused by: java.lang.ClassNotFoundException: com.sun.jersey.core.util.FeaturesAndProperties
+<pre class="highlight"><code class="language-properties" data-lang="properties">Caused by: java.lang.ClassNotFoundException: com.sun.jersey.core.util.FeaturesAndProperties
 at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java)
 at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java)
 at org.apache.tomee.catalina.LazyStopWebappClassLoader.loadClass(LazyStopWebappClassLoader.java)
@@ -121,7 +121,7 @@ you can use set the following property in your <em>[TomEE].properties</em></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">openejb.api.javax.ws.rs.Path.validation=false</code></pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">openejb.api.javax.ws.rs.Path.validation=false</code></pre>
 </div>
 </div>
 <div class="paragraph">

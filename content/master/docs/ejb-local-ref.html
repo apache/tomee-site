@@ -99,9 +99,9 @@
 <div class="paragraph">
 <p>Usable by EJB, Interceptor, Servlet, Filter, or Listener</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.superbiz.refs;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.superbiz.refs;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -122,16 +122,16 @@ public class MyEjbLocalRefBean implements MyBeanInterface {
         FooLocal fooLocal = (FooLocal) context.lookup("java:comp/env/myFooEjb");
         BarLocal barLocal = (BarLocal) context.lookup("java:comp/env/org.superbiz.refs.MyEjbLocalRefBean/myBarEjb");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <h1 id="_via_xml" class="sect0">Via xml</h1>
 <div class="paragraph">
 <p>The above @EJB annotation usage is 100% equivalent to the following xml.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-local-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-local-ref&gt;
   &lt;ejb-ref-name&gt;myFooEjb&lt;/ejb-ref-name&gt;
   &lt;local&gt;org.superbiz.refs.FooLocal&lt;/local&gt;
 &lt;/ejb-local-ref&gt;
@@ -143,7 +143,7 @@ public class MyEjbLocalRefBean implements MyBeanInterface {
     &lt;injection-target-class&gt;org.superbiz.refs.MyEjbLocalRefBean&lt;/injection-target-class&gt;
     &lt;injection-target-name&gt;myBarEjb&lt;/injection-target-name&gt;
   &lt;/injection-target&gt;
-&lt;/ejb-local-ref&gt;</pre>
+&lt;/ejb-local-ref&gt;</code></pre>
 </div>
 </div>
             </div>

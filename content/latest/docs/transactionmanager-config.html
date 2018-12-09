@@ -101,9 +101,9 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;TransactionManager id="myTransactionManager" type="TransactionManager"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;TransactionManager id="myTransactionManager" type="TransactionManager"&gt;
     adler32Checksum = true
     bufferSizeKb = 32
     checksumEnabled = true
@@ -118,7 +118,7 @@ body are optional.</p>
     minBuffers = 4
     threadsWaitingForceThreshold = -1
     txRecovery = false
-&lt;/TransactionManager&gt;</pre>
+&lt;/TransactionManager&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -128,9 +128,9 @@ VirtualMachine <code>-D</code> properties. The properties can also be used when
 embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myTransactionManager = new://TransactionManager?type=TransactionManager
+<pre class="highlight"><code class="language-properties" data-lang="properties">myTransactionManager = new://TransactionManager?type=TransactionManager
 myTransactionManager.adler32Checksum = true
 myTransactionManager.bufferSizeKb = 32
 myTransactionManager.checksumEnabled = true
@@ -144,7 +144,7 @@ myTransactionManager.maxBuffers = 0
 myTransactionManager.maxLogFiles = 2
 myTransactionManager.minBuffers = 4
 myTransactionManager.threadsWaitingForceThreshold = -1
-myTransactionManager.txRecovery = false</pre>
+myTransactionManager.txRecovery = false</code></pre>
 </div>
 </div>
 <div class="paragraph">

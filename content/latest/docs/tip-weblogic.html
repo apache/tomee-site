@@ -98,15 +98,15 @@
                 <div class="paragraph">
 <p>How to lookup WebLogic Objects from within a TomEE context:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Hashtable&lt;String, String&gt; props = new Hashtable&lt;String, String&gt;();
+<pre class="highlight"><code class="language-java" data-lang="java">Hashtable&lt;String, String&gt; props = new Hashtable&lt;String, String&gt;();
 props.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
 props.put(javax.naming.Context.URL_PKG_PREFIXES, "weblogic.jndi.factories");
 props.put("java.naming.provider.url", "t3://your.host.name:7023");
 Context ctx = new InitialContext(props);
 
-IService s = (IService) ctx.lookup("java:global.com.test.ServiceImpl!com.test.IService");</pre>
+IService s = (IService) ctx.lookup("java:global.com.test.ServiceImpl!com.test.IService");</code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -103,14 +103,14 @@
 <p>To include a single jar by name, just declare a 'Deployments' element
 with a 'jar' attribute pointing to the jar file on the file system.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb&gt;
 ...
 &lt;Deployments jar="c:\my\app\superEjbs.jar" /&gt;
 &lt;Deployments jar="c:\someplace\purchasing.jar" /&gt;
 &lt;Deployments jar="timeTrack.jar" /&gt;
-&lt;/openejb&gt;</pre>
+&lt;/openejb&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -130,16 +130,16 @@ for more details.</p>
 should load, simply declare a 'Deployments' element with a 'dir'
 attribute pointing to the directory containing the jar files.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb&gt;
 ...
 
 &lt;Deployments dir="c:\my\app\beans\" /&gt;
 &lt;Deployments dir="c:\crimestopper\lib" /&gt;
 &lt;Deployments dir="ejbs" /&gt;
 &lt;Deployments dir="beans" /&gt;
-&lt;/openejb&gt;</pre>
+&lt;/openejb&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -169,9 +169,9 @@ in OpenEJB. You still need to follow the ejb jar layout and include an
 <div class="paragraph">
 <p>For example, if you have a directory structure like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&gt; C:\myapp\
+<pre class="highlight"><code class="language-java" data-lang="java">&gt; C:\myapp\
 &gt; C:\myapp\acmeEjbs\
 &gt; C:\myapp\acmeEjbs\META-INF\ejb-jar.xml
 &gt; C:\myapp\acmeEjbs\org\acme\Foo.class
@@ -179,20 +179,20 @@ in OpenEJB. You still need to follow the ejb jar layout and include an
 &gt; C:\myapp\acmeEjbs\org\acme\FooHome.class
 &gt; C:\myapp\acmeEjbs\org\acme\Bar.class
 &gt; C:\myapp\acmeEjbs\org\acme\BarBean.class
-&gt; C:\myapp\acmeEjbs\org\acme\BarHome.class</pre>
+&gt; C:\myapp\acmeEjbs\org\acme\BarHome.class</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Then you would delcare a 'Deployments' element with the 'dir' attribute
 set to 'C:' as shown below.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb&gt;
 ...
 
 &lt;Deployments dir="c:\myapp\acmeEjbs" /&gt;
-&lt;/openejb&gt;</pre>
+&lt;/openejb&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -215,22 +215,22 @@ is an incredible asset.</p>
 <p>If your ejbs were loaded successfully you should see entries like the
 following (1.x and higher only):</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>INFO :  Loaded EJBs from
+<pre class="highlight"><code class="language-properties" data-lang="properties">INFO :  Loaded EJBs from
 /usr/local/openejb-1.0-beta1/beans/openejb-itests-beans.jar
 INFO :  Loaded EJBs from
-/usr/local/openejb-1.0-beta1/beans/openejb-webadmin-clienttools.jar</pre>
+/usr/local/openejb-1.0-beta1/beans/openejb-webadmin-clienttools.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If your ejbs failed to load, you will see an entry similar to the
 following.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>WARN :  Jar not loaded. /usr/local/openejb-1.0-beta1/beans/helloworld.jar.
-Jar failed validation.  Use the validation tool for more details</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">WARN :  Jar not loaded. /usr/local/openejb-1.0-beta1/beans/helloworld.jar.
+Jar failed validation.  Use the validation tool for more details</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -239,9 +239,9 @@ in the log file at startup. The Deployment ID listed is the JNDI name
 used to lookup the ejb from a client of the Local or Remote Servers. The
 beans listed below are from our test suite.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>DEBUG:  Deployments   : 19
+<pre class="highlight"><code class="language-properties" data-lang="properties">DEBUG:  Deployments   : 19
 DEBUG:  Type        Deployment ID
 DEBUG:     CMP_ENTITY  client/tests/entity/cmp/RMI-over-IIOP/EJBHome
 DEBUG:     STATEFUL    client/tests/stateful/EncBean
@@ -261,7 +261,7 @@ DEBUG:     CMP_ENTITY  client/tests/entity/cmp/BasicCmpHome
 DEBUG:     STATELESS   client/tools/DatabaseHome
 DEBUG:     CMP_ENTITY client/tests/entity/cmp/allowed_operations/EntityHome
 DEBUG:     BMP_ENTITY  client/tests/entity/bmp/EncBean
-DEBUG:     STATELESS   client/tests/stateless/RMI-over-IIOP/EJBHome</pre>
+DEBUG:     STATELESS   client/tests/stateless/RMI-over-IIOP/EJBHome</code></pre>
 </div>
 </div>
 </div>

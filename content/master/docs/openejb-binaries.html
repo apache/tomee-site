@@ -100,9 +100,9 @@
 the Apache Nexus repo. This works for snapshots or staging final
 binaries.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;settings&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;settings&gt;
   &lt;servers&gt;
     &lt;server&gt;
       &lt;id&gt;apache.snapshots.https&lt;/id&gt;
@@ -115,15 +115,15 @@ binaries.</p>
       &lt;password&gt;yourapachepass&lt;/password&gt;
     &lt;/server&gt;
   &lt;/servers&gt;
-&lt;/settings&gt;</pre>
+&lt;/settings&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Then publish via:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>$ mvn clean deploy</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">$ mvn clean deploy</code></pre>
 </div>
 </div>
             </div>

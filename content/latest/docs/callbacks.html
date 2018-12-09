@@ -155,9 +155,9 @@ throws Exception</p>
 <div class="sect1">
 <h2 id="_stateless">Stateless</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.ejb.Stateless;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.ejb.Stateless;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.interceptor.AroundInvoke;
@@ -180,7 +180,7 @@ public class MyStatelessBean implements  MyBusinessInterface  {
     public Object invoke(InvocationContext invocationContext) throws Exception {
     return invocationContext.proceed();
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -188,9 +188,9 @@ public class MyStatelessBean implements  MyBusinessInterface  {
 <div class="sect1">
 <h2 id="_stateful">Stateful</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.ejb.Stateful;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.ejb.Stateful;
 import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.annotation.PostConstruct;
@@ -225,7 +225,7 @@ public class MyStatefulBean implements  MyBusinessInterface  {
     public void passivate(){
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -233,9 +233,9 @@ public class MyStatefulBean implements  MyBusinessInterface  {
 <div class="sect1">
 <h2 id="_messagedriven">MessageDriven</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.ejb.MessageDriven;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.ejb.MessageDriven;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.interceptor.AroundInvoke;
@@ -258,7 +258,7 @@ public class MyMessageDrivenBean implements  MyListenerInterface  {
     public Object invoke(InvocationContext invocationContext) throws Exception {
           return invocationContext.proceed();
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -266,9 +266,9 @@ public class MyMessageDrivenBean implements  MyListenerInterface  {
 <div class="sect1">
 <h2 id="_interceptor">Interceptor</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.annotation.PostConstruct;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.interceptor.InvocationContext;
 import javax.interceptor.AroundInvoke;
@@ -301,7 +301,7 @@ public class MyInterceptor {
     public void passivate(InvocationContext invocationContext){
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>

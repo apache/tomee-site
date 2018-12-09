@@ -114,9 +114,9 @@ you don&#8217;t want them to be started.</p>
 <p>In TomEE the transport is the Tomcat one. It uses a servlet brought by
 TomEE webapp. Here is the servlet as defined in TomEE webapp:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;servlet&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;servlet&gt;
     &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
     &lt;servlet-class&gt;org.apache.openejb.server.httpd.ServerServlet&lt;/servlet-class&gt;
 &lt;/servlet&gt;
@@ -124,7 +124,7 @@ TomEE webapp. Here is the servlet as defined in TomEE webapp:</p>
 &lt;servlet-mapping&gt;
     &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
     &lt;url-pattern&gt;/ejb/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
+&lt;/servlet-mapping&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -240,9 +240,9 @@ default for <code>tomee.serialization.class.blacklist</code> is <code>*</code> s
 <p>If an EJB request fails because a class is not whitelisted you will find
 this log entry:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>WARN - "null OEJP/4.7" FAIL "Security error - foo.Bar is not whitelisted as deserializable, prevented before loading it." - Debug for StackTrace</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">WARN - "null OEJP/4.7" FAIL "Security error - foo.Bar is not whitelisted as deserializable, prevented before loading it." - Debug for StackTrace</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -254,20 +254,20 @@ on server side as well as on client side.</p>
 <p>If you only want to support serialization of the classes <code>foo.Bar</code> and
 <code>foo.Baz</code> you can configure the properties like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>tomee.serialization.class.whitelist = foo.Bar,foo.Baz
-tomee.serialization.class.blacklist = -</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist = foo.Bar,foo.Baz
+tomee.serialization.class.blacklist = -</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If you trust all classes in the package <code>foo</code> define the properties like
 this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>tomee.serialization.class.whitelist = foo.
-tomee.serialization.class.blacklist = -</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist = foo.
+tomee.serialization.class.blacklist = -</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -278,10 +278,10 @@ classes in the package <code>foo2</code> otherwise.)</p>
 <p>If you trust all classes in the package <code>foo</code> except the class <code>foo.Bar</code>
 you have to configure the properties like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>tomee.serialization.class.whitelist = foo.
-tomee.serialization.class.blacklist = foo.Bar</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist = foo.
+tomee.serialization.class.blacklist = foo.Bar</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -295,10 +295,10 @@ applications runs on TomEE 1.7.3 but does not on TomEE 1.7.4 showing the
 aforementioned log message, you can define the configuration so that the
 serialization will work in the same way as it did with TomEE 1.7.3:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>tomee.serialization.class.whitelist =
-tomee.serialization.class.blacklist = org.codehaus.groovy.runtime.,org.apache.commons.collections.functors.,org.apache.xalan,java.lang.Process</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist =
+tomee.serialization.class.blacklist = org.codehaus.groovy.runtime.,org.apache.commons.collections.functors.,org.apache.xalan,java.lang.Process</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -340,10 +340,10 @@ that the respective URL is not accessible from untrusted sources.</p>
 objects over Ejbd. If you want to revert to this behavior you can simply
 deactivate the blacklist with this configuration:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>tomee.serialization.class.whitelist =
-tomee.serialization.class.blacklist = -</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist =
+tomee.serialization.class.blacklist = -</code></pre>
 </div>
 </div>
 <div class="paragraph">

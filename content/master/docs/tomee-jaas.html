@@ -122,17 +122,17 @@ JAAS LoginModule as in Tomcat.</p>
 <p>Add to your <code>CATALINA_OPTS</code> the <code>java.security.auth.login.config</code> system
 property:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>-Djava.security.auth.login.config=$CATALINA_BASE/conf/login.config</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">-Djava.security.auth.login.config=$CATALINA_BASE/conf/login.config</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Configure your realm in server.xml file</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version='1.0' encoding='utf-8'?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
 &lt;Server port="8005" shutdown="SHUTDOWN"&gt;
   &lt;Listener className="org.apache.tomee.loader.OpenEJBListener" /&gt;
   &lt;Listener className="org.apache.catalina.security.SecurityListener" /&gt;
@@ -153,20 +153,20 @@ property:</p>
             unpackWARs="true" autoDeploy="true" /&gt;
     &lt;/Engine&gt;
   &lt;/Service&gt;
-&lt;/Server&gt;</pre>
+&lt;/Server&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Configure your <code>login.config</code> file</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>PropertiesLogin {
+<pre class="highlight"><code class="language-java" data-lang="java">PropertiesLogin {
     org.apache.openejb.core.security.jaas.PropertiesLoginModule required
     Debug=false
     UsersFile="users.properties"
     GroupsFile="groups.properties";
-};</pre>
+};</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -178,20 +178,20 @@ snippets of this page for instance).</p>
 <code>$CATALINA_BASE/conf/</code> folder. <code>users.properties</code> file contains user
 name and associated password entries, ex.:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>me=password
-tomee=tomee</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">me=password
+tomee=tomee</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><code>groups.properties</code> file specifies groups and their users, ex.:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>my-role=me
+<pre class="highlight"><code class="language-properties" data-lang="properties">my-role=me
 manager-gui=tomee,me
-tomee-admin=tomee</pre>
+tomee-admin=tomee</code></pre>
 </div>
 </div>
 <div class="paragraph">

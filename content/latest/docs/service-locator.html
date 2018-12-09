@@ -116,9 +116,9 @@ examples start with this basic class that has a built-in lookup allowing
 for a common prefix to be optionally applied to the beginning of all
 lookup strings.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class MyLocator {
+<pre class="highlight"><code class="language-java" data-lang="java">public class MyLocator {
     private final Context context;
 
     public MyLocator() throws NamingException {
@@ -140,7 +140,7 @@ lookup strings.</p>
             throw new IllegalArgumentException(e);
         }
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="sect1">
@@ -149,16 +149,16 @@ lookup strings.</p>
 <div class="paragraph">
 <p>class name of the interface such as: - {interfaceClass}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public &lt;T&gt; T lookup(Class&lt;T&gt; type) {
+<pre class="highlight"><code class="language-java" data-lang="java">public &lt;T&gt; T lookup(Class&lt;T&gt; type) {
     return (T) lookup(type.getName());
 }
 
 
 
 MyLocator locator = new MyLocator();
-Widget widget = locator.lookup(Widget.class);</pre>
+Widget widget = locator.lookup(Widget.class);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -166,11 +166,11 @@ Widget widget = locator.lookup(Widget.class);</pre>
 such as: - {moduleId}/{interfaceClass} -
 ejb/{moduleId}/{interfaceClass}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>MyLocator locator = new MyLocator("ejb/superbiz");
+<pre class="highlight"><code class="language-java" data-lang="java">MyLocator locator = new MyLocator("ejb/superbiz");
 Widget widget = locator.lookup(Widget.class);
-Store store = locator.lookup(Store.class);</pre>
+Store store = locator.lookup(Store.class);</code></pre>
 </div>
 </div>
 </div>
@@ -206,11 +206,11 @@ Widget blueWidget = locator.lookup("BlueWidgetBean", Widget.class);</p>
 such as: - {moduleId}/{ejbName}/{interfaceClass} -
 ejb/{moduleId}/{deploymentId}/{interfaceClass}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>MyLocator locator = new MyLocator("accountingApp");
+<pre class="highlight"><code class="language-java" data-lang="java">MyLocator locator = new MyLocator("accountingApp");
 Widget widget = locator.lookup("RedWidgetBean", Widget.class);
-Store store = locator.lookup("StoreBean", Store.class);</pre>
+Store store = locator.lookup("StoreBean", Store.class);</code></pre>
 </div>
 </div>
 </div>
@@ -231,16 +231,16 @@ class.</p>
 <div class="paragraph">
 <p>Works with: - {interfaceClass}/{ejbClass}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public &lt;T&gt; T lookup(Class&lt;T&gt; type, Class ejbClass) {
+<pre class="highlight"><code class="language-java" data-lang="java">public &lt;T&gt; T lookup(Class&lt;T&gt; type, Class ejbClass) {
     return (T) lookup(type.getName() + "/" + ejbClass.getName());
 }
 
 
 
 MyLocator locator = new MyLocator();
-Widget widget = locator.lookup(Widget.class, BlueWidgetBean.class);</pre>
+Widget widget = locator.lookup(Widget.class, BlueWidgetBean.class);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -248,11 +248,11 @@ Widget widget = locator.lookup(Widget.class, BlueWidgetBean.class);</pre>
 such as: - {moduleId}/{interfaceClass}/{ejbClass} -
 ejb/{moduleId}/{interfaceClass}/{ejbClass}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>MyLocator locator = new MyLocator("ejb/purchasingApp");
+<pre class="highlight"><code class="language-java" data-lang="java">MyLocator locator = new MyLocator("ejb/purchasingApp");
 Widget widget = locator.lookup(Widget.class, RedWidgetBean.class);
-Store store = locator.lookup(Store.class, StoreBean.class);</pre>
+Store store = locator.lookup(Store.class, StoreBean.class);</code></pre>
 </div>
 </div>
 </div>
@@ -265,20 +265,20 @@ Store store = locator.lookup(Store.class, StoreBean.class);</pre>
 resulting in a JNDI tree that&#8217;s a bit more human readable. -
 \{ejbClass.simpleName}/\{interfaceClass.simpleName}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public &lt;T&gt; T lookup(Class ejbClass, Class&lt;T&gt; type) {
+<pre class="highlight"><code class="language-java" data-lang="java">public &lt;T&gt; T lookup(Class ejbClass, Class&lt;T&gt; type) {
     return (T) lookup(ejbClass.getSimpleName() + "" + type.getSimpleName());
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>and</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>MyLocator locator = new MyLocator();
-Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">MyLocator locator = new MyLocator();
+Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -287,11 +287,11 @@ such as: -
 {moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName} -
 ejb/{moduleId}/\{ejbClass.simpleName}/\{interfaceClass.simpleName}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>MyLocator locator = new MyLocator("shippingApp");
+<pre class="highlight"><code class="language-java" data-lang="java">MyLocator locator = new MyLocator("shippingApp");
 Widget widget = locator.lookup(GreenWidgetBean.class, Widget.class);
-Store store = locator.lookup(SuperStoreBean.class, Store.class);</pre>
+Store store = locator.lookup(SuperStoreBean.class, Store.class);</code></pre>
 </div>
 </div>
 </div>

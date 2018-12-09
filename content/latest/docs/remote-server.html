@@ -138,9 +138,9 @@ example.</p>
 <div class="paragraph">
 <p>Deploy your bean with the Deploy Tool:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>c:\openejb&gt; openejb.bat deploy beans\myBean.jar</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">c:\openejb&gt; openejb.bat deploy beans\myBean.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -150,9 +150,9 @@ documentation for more details on deploying beans.</p>
 <div class="paragraph">
 <p>Start the server:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>c:\openejb&gt; openejb.bat start -h 25.14.3.92 -p 4201</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">c:\openejb&gt; openejb.bat start -h 25.14.3.92 -p 4201</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -162,15 +162,15 @@ the Remote Server.</p>
 <div class="paragraph">
 <p>Create an initial context in your client as such:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
 p.put("java.naming.provider.url", "ejbd://25.14.3.92:4201");
 p.put("java.naming.security.principal", "myuser");
 p.put("java.naming.security.credentials", "mypass");
 
-InitialContext ctx = new InitialContext(p);</pre>
+InitialContext ctx = new InitialContext(p);</code></pre>
 </div>
 </div>
 <div class="paragraph">

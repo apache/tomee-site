@@ -105,7 +105,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Container id="myStatefulContainer" type="STATEFUL"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myStatefulContainer" type="STATEFUL"&gt;
     accessTimeout = 30 seconds
     bulkPassivate = 100
     cache = org.apache.openejb.core.stateful.SimpleCache
@@ -124,7 +124,7 @@ via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialConte
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myStatefulContainer = new://Container?type=STATEFUL
+<pre class="highlight"><code class="language-properties" data-lang="properties">myStatefulContainer = new://Container?type=STATEFUL
 myStatefulContainer.accessTimeout = 30 seconds
 myStatefulContainer.bulkPassivate = 100
 myStatefulContainer.cache = org.apache.openejb.core.stateful.SimpleCache

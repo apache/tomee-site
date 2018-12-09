@@ -135,13 +135,13 @@ maintained list.</p>
 <p>In the server this list can be specified via the
 <code>conf/multipoint.properties</code> file like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>server      = org.apache.openejb.server.discovery.MultipointDiscoveryAgent
+<pre class="highlight"><code class="language-properties" data-lang="properties">server      = org.apache.openejb.server.discovery.MultipointDiscoveryAgent
 bind        = 127.0.0.1
 port        = 4212
 disabled    = false
-initialServers = 192.168.1.20:4212, 192.168.1.30:4212, 192.168.1.40:4212</pre>
+initialServers = 192.168.1.20:4212, 192.168.1.30:4212, 192.168.1.40:4212</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -163,12 +163,12 @@ participate directly in multipoint communication and do <strong>not</strong> con
 the multipoint port. The server list is simply a list of the regular
 <code>ejbd://</code> urls that a client normally uses to connect to a server.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
 p.put(Context.PROVIDER_URL, "failover:ejbd://192.168.1.20:4201,ejbd://192.168.1.30:4201");
-InitialContext remoteContext = new InitialContext(p);</pre>
+InitialContext remoteContext = new InitialContext(p);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -176,12 +176,12 @@ InitialContext remoteContext = new InitialContext(p);</pre>
 need to be configured to participate. A client can connect as usual to
 the server.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
 p.put(Context.PROVIDER_URL, "ejbd://192.168.1.20:4201");
-InitialContext remoteContext = new InitialContext(p);</pre>
+InitialContext remoteContext = new InitialContext(p);</code></pre>
 </div>
 </div>
 <div class="paragraph">

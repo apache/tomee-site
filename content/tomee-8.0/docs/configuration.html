@@ -150,7 +150,7 @@ OpenEJB saves deployment descriptors - ejb-jar.xml and openejb-jar.xml</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;?xml version="1.0"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
 &lt;openejb&gt;
   &lt;Container id="Default CMP Container" ctype="CMP_ENTITY"&gt;
     Global_TX_Database  c:/my/app/conf/postgresql.cmp_global_database.xml
@@ -229,7 +229,7 @@ openejb.home are added to the classpath.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">openejb.home = user.dir (can be set explicitly)
+<pre class="highlight"><code class="language-properties" data-lang="properties">openejb.home = user.dir (can be set explicitly)
 openejb.base = openejb.home (can be set explicitly)
 openejb.conf = openejb.base/conf/openejb.conf (can be set explicitly)
 logging.conf = openejb.base/conf/logging.conf (can be set explicitly)

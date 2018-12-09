@@ -101,14 +101,14 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Container id="myMessageDrivenContainer" type="MESSAGE"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myMessageDrivenContainer" type="MESSAGE"&gt;
     activationSpecClass = org.apache.activemq.ra.ActiveMQActivationSpec
     instanceLimit = 10
     messageListenerInterface = javax.jms.MessageListener
     resourceAdapter = Default JMS Resource Adapter
-&lt;/Container&gt;</pre>
+&lt;/Container&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -118,13 +118,13 @@ VirtualMachine <code>-D</code> properties. The properties can also be used when
 embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myMessageDrivenContainer = new://Container?type=MESSAGE
+<pre class="highlight"><code class="language-properties" data-lang="properties">myMessageDrivenContainer = new://Container?type=MESSAGE
 myMessageDrivenContainer.activationSpecClass = org.apache.activemq.ra.ActiveMQActivationSpec
 myMessageDrivenContainer.instanceLimit = 10
 myMessageDrivenContainer.messageListenerInterface = javax.jms.MessageListener
-myMessageDrivenContainer.resourceAdapter = Default JMS Resource Adapter</pre>
+myMessageDrivenContainer.resourceAdapter = Default JMS Resource Adapter</code></pre>
 </div>
 </div>
 <div class="paragraph">

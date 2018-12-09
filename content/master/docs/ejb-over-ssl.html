@@ -130,9 +130,9 @@ from a remote client can happen two different ways:</p>
 an EJB client can invoke over <code>https</code> using the following
 <code>InitialContext</code> setup:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
 p.put("java.naming.provider.url", "https://127.0.0.1:8443/tomee/ejb");
 // user and pass optional
@@ -141,7 +141,7 @@ p.put("java.naming.security.credentials", "mypass");
 
 InitialContext ctx = new InitialContext(p);
 
-MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");</pre>
+MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -172,25 +172,25 @@ and setup in OpenEJB Standalone by default.</p>
 <div class="paragraph">
 <p>Its configuration <code>conf/ejbds.properties</code> looks like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>server      = org.apache.openejb.server.ejbd.EjbServer
+<pre class="highlight"><code class="language-properties" data-lang="properties">server      = org.apache.openejb.server.ejbd.EjbServer
 bind        = 127.0.0.1
 port        = 4203
 disabled    = false
 threads     = 200
 backlog     = 200
 secure      = true
-discovery   = ejb:ejbds://{bind}:{port}</pre>
+discovery   = ejb:ejbds://{bind}:{port}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>To access this service from a remote client, the <code>InitialContext</code> would
 be setup like the following:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
 p.put("java.naming.provider.url", "ejbd://localhost:4201");
 // user and pass optional
@@ -199,7 +199,7 @@ p.put("java.naming.security.credentials", "mypass");
 
 InitialContext ctx = new InitialContext(p);
 
-MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");</pre>
+MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -230,9 +230,9 @@ listing</a>.</p>
 <div class="paragraph">
 <p>On the server:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>server      = org.apache.openejb.server.ejbd.EjbServer
+<pre class="highlight"><code class="language-properties" data-lang="properties">server      = org.apache.openejb.server.ejbd.EjbServer
 bind        = 127.0.0.1
 port        = 4203
 disabled    = false
@@ -240,15 +240,15 @@ threads     = 200
 backlog     = 200
 secure      = true
 enabledCipherSuites = TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA
-discovery   = ejb:ejbds://{bind}:{port}</pre>
+discovery   = ejb:ejbds://{bind}:{port}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>On the client, you must supply a property:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>-Dopenejb.client.enabledCipherSuites=TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">-Dopenejb.client.enabledCipherSuites=TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA</code></pre>
 </div>
 </div>
 <div class="paragraph">

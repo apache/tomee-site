@@ -282,9 +282,9 @@ Detached object.</p>
 <p>Servlets and EJBs can use RESOURCE_LOCAL persistence units through the
 EntityManagerFactory as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
 
   &lt;!-- Tutorial "unit" --&gt;
@@ -293,15 +293,15 @@ EntityManagerFactory as follows:</p>
     &lt;class&gt;org.superbiz.jpa.Account&lt;/class&gt;
   &lt;/persistence-unit&gt;
 
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>And referenced as follows</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.persistence.EntityManagerFactory;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceUnit;
@@ -327,7 +327,7 @@ public class MyEjbOrServlet ... {
     }
 
     ...
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="sect1">
@@ -336,9 +336,9 @@ public class MyEjbOrServlet ... {
 <div class="paragraph">
 <p>EJBs can use JTA persistence units through the EntityManager as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 &lt;persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"&gt;
 
   &lt;!-- Tutorial "unit" --&gt;
@@ -348,15 +348,15 @@ public class MyEjbOrServlet ... {
     &lt;class&gt;org.superbiz.jpa.Account&lt;/class&gt;
   &lt;/persistence-unit&gt;
 
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>And referenced as follows</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import javax.ejb.Stateless;
+<pre class="highlight"><code class="language-java" data-lang="java">import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.persistence.EntityManager;
@@ -377,7 +377,7 @@ public class MyEjb implements MyEjbInterface {
     account.setBalance(5000);
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>

@@ -103,9 +103,9 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Container id="myStatefulContainer" type="STATEFUL"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myStatefulContainer" type="STATEFUL"&gt;
     accessTimeout = 30 seconds
     bulkPassivate = 100
     cache = org.apache.openejb.core.stateful.SimpleCache
@@ -113,7 +113,7 @@ body are optional.</p>
     frequency = 60
     passivator = org.apache.openejb.core.stateful.SimplePassivater
     timeOut = 20
-&lt;/Container&gt;</pre>
+&lt;/Container&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -122,16 +122,16 @@ body are optional.</p>
 <code>-D</code> properties. The properties can also be used when embedding TomEE
 via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myStatefulContainer = new://Container?type=STATEFUL
+<pre class="highlight"><code class="language-properties" data-lang="properties">myStatefulContainer = new://Container?type=STATEFUL
 myStatefulContainer.accessTimeout = 30 seconds
 myStatefulContainer.bulkPassivate = 100
 myStatefulContainer.cache = org.apache.openejb.core.stateful.SimpleCache
 myStatefulContainer.capacity = 1000
 myStatefulContainer.frequency = 60
 myStatefulContainer.passivator = org.apache.openejb.core.stateful.SimplePassivater
-myStatefulContainer.timeOut = 20</pre>
+myStatefulContainer.timeOut = 20</code></pre>
 </div>
 </div>
 <div class="paragraph">

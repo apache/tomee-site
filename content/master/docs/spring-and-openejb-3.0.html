@@ -106,9 +106,9 @@ page.{note} # Bootstrapping OpenEJB in Spring</p>
 Include OpenEJB and its dependencies in your classpath as you would in a
 plain embedded scenario then add a custom factory like the following:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class OpenEjbFactoryBean implements org.springframework.beans.factory.FactoryBean {
+<pre class="highlight"><code class="language-java" data-lang="java">public class OpenEjbFactoryBean implements org.springframework.beans.factory.FactoryBean {
 
     private Properties properties = new Properties();
 
@@ -139,15 +139,15 @@ plain embedded scenario then add a custom factory like the following:</p>
     boolean isSingleton() {
         return true;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>And include that at the top of your spring xml file as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
   &lt;property name="jndiEnvironment"&gt;
     &lt;props&gt;
       &lt;prop key="myDs"&gt;new://Resource?type=DataSource&lt;/prop&gt;
@@ -157,7 +157,7 @@ plain embedded scenario then add a custom factory like the following:</p>
       &lt;prop key="myDs.Password"&gt;&lt;/prop&gt;
     &lt;/props&gt;
   &lt;/property&gt;
-&lt;/bean&gt;</pre>
+&lt;/bean&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -191,9 +191,9 @@ pull the EntityManager out and return it</p>
 <div class="paragraph">
 <p>OrangeUnitBean.java</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>/*
+<pre class="highlight"><code class="language-java" data-lang="java">/*
  * OpenEJB will automatically find this bean.  Just put it in the same jar
  * that your META-INF/persistence.xml file is located in and make sure that
  * that same jar file also has a META-INF/ejb-jar.xml file.  The ejb-jar.xml
@@ -208,28 +208,28 @@ public class OrangeUnitBean implements OrangeUnitLocal {
     public EntityManager getEntityManager() {
         return entityManager;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>OrangeUnitLocal.java</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>/**
+<pre class="highlight"><code class="language-java" data-lang="java">/**
  * The local interface for the OrangeUnitBean
  */
 public interface OrangeUnitLocal {
    public EntityManager getEntityManager();
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>OrangeUnitFactoryBean.java</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>/**
+<pre class="highlight"><code class="language-java" data-lang="java">/**
  * This factory bean will lookup the OrangeUnitBean using the javax.naming.Context
  * that is created via the OpenEjbFactoryBean above.  It will simply grab the EntityManager
  * from that bean and hand it over to Spring.  Anyone in Spring-land can then easily get
@@ -262,26 +262,26 @@ public class OrangeUnitFactoryBean implements org.springframework.beans.factory.
     boolean isSingleton() {
         return true;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The factory bean would then be declared in your spring xml file as
 follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;bean id="OrangeUnit" class="org.acme.OrangeUnitFactoryBean"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="OrangeUnit" class="org.acme.OrangeUnitFactoryBean"&gt;
   &lt;property name="context" ref="OpenEjbContext"&gt;
-&lt;/bean&gt;</pre>
+&lt;/bean&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The EntityManager can then easily be consumed by a spring bean.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class SomePojo {
+<pre class="highlight"><code class="language-java" data-lang="java">public class SomePojo {
 
     private EntityManager entityManager;
 
@@ -290,17 +290,17 @@ follows:</p>
     }
 
     ...
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>In the spring xml</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;bean id="SomePojo" class="org.acme.SomePojo"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="SomePojo" class="org.acme.SomePojo"&gt;
   &lt;property name="entityManager" ref="OrangeUnit"&gt;
-&lt;/bean&gt;</pre>
+&lt;/bean&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -310,9 +310,9 @@ spring xml:</p>
 <div class="paragraph">
 <p>Spring bean definitions combined</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
   &lt;property name="jndiEnvironment"&gt;
     &lt;props&gt;
       &lt;prop key="myDs"&gt;new://Resource?type=DataSource&lt;/prop&gt;
@@ -330,7 +330,7 @@ spring xml:</p>
 
 &lt;bean id="SomePojo" class="org.acme.SomePojo"&gt;
   &lt;property name="entityManager" ref="OrangeUnit"&gt;
-&lt;/bean&gt;</pre>
+&lt;/bean&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">

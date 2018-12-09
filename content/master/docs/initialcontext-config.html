@@ -101,10 +101,10 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;JndiProvider id="myInitialContext" type="javax.naming.InitialContext"&gt;
-&lt;/JndiProvider&gt;</pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;JndiProvider id="myInitialContext" type="javax.naming.InitialContext"&gt;
+&lt;/JndiProvider&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -113,9 +113,9 @@ body are optional.</p>
 <code>-D</code> properties. The properties can also be used when embedding TomEE
 via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myInitialContext = new://JndiProvider?type=javax.naming.InitialContext</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">myInitialContext = new://JndiProvider?type=javax.naming.InitialContext</code></pre>
 </div>
 </div>
 <div class="paragraph">

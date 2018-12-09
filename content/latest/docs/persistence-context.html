@@ -100,9 +100,9 @@
 <p>Both lookup and injection of an EntityManager can be configured via the
 <code>@PersistenceContext</code> annotation.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.superbiz;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.superbiz;
 
 import javax.persistence.PersistenceContext;
 import javax.persistence.EntityManager;
@@ -124,7 +124,7 @@ public class MyBean implements MyInterface {
         EntityManager fooEntityManager = (EntityManager) context.lookup("java:comp/env/myFooEntityManager");
         EntityManager barEntityManager = (EntityManager) context.lookup("java:comp/env/org.superbiz.MyBean/myBarEntityManager");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <h1 id="_via_xml" class="sect0">Via xml</h1>
@@ -132,9 +132,9 @@ public class MyBean implements MyInterface {
 <p>The above @PersistenceContext annotation usage is 100% equivalent to the
 following xml.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence-context-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence-context-ref&gt;
     &lt;persistence-context-ref-name&gt;myFooEntityManager&lt;/persistence-context-ref-name&gt;
     &lt;persistence-unit-name&gt;foo-unit&lt;/persistence-unit-name&gt;
     &lt;persistence-context-type&gt;Transaction&lt;/persistence-context-type&gt;
@@ -148,7 +148,7 @@ following xml.</p>
         &lt;injection-target-class&gt;org.superbiz.calculator.MyBean&lt;/injection-target-class&gt;
         &lt;injection-target-name&gt;myBarEntityManager&lt;/injection-target-name&gt;
     &lt;/injection-target&gt;
-&lt;/persistence-context-ref&gt;</pre>
+&lt;/persistence-context-ref&gt;</code></pre>
 </div>
 </div>
             </div>

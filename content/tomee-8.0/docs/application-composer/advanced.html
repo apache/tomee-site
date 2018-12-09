@@ -88,22 +88,24 @@
           <div class="col-md-12">
             <div class='page-header'>
               
-              <h1>null</h1>
+              <h1>Application Composer Advanced</h1>
             </div>
           </div>
         </div>
         <div class="row">
             
             <div class="col-md-12">
-                <div class="sect1">
-<h2 id="_application_composer_advanced">Application Composer Advanced</h2>
+                <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="getting-started.html">Getting Started</a> page gives you already a lot
 of inputs but you caneven go further.</p>
 </div>
-<div class="sect2">
-<h3 id="__descriptors">@Descriptors</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="__descriptors">@Descriptors</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>You can reuse existing file descriptors using <code>@Descriptors</code>. The name
 is the file name and the path either a classpath path or a file path:</p>
@@ -121,8 +123,10 @@ public class MyTest {
 <p>Note: this can be put in a <code>@Module</code> method as well.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_services">Services</h3>
+</div>
+<div class="sect1">
+<h2 id="_services">Services</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you want to test a JAXRS or JAXWS service you need to activate these
 services.</p>
@@ -140,8 +144,10 @@ public class MyTest {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_random_port">Random port</h3>
+</div>
+<div class="sect1">
+<h2 id="_random_port">Random port</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Services like JAXRS and JAXWS relies on HTTP. Often it is nice to have a
 random port to be able to deploy multiple tests/projects on the same CI
@@ -167,21 +173,27 @@ the service it will apply on (being said http is an alias for httpejbd
 which is our embedded http layer).</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_nice_logs">Nice logs</h3>
+</div>
+<div class="sect1">
+<h2 id="_nice_logs">Nice logs</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>@SimpleLog</code> annotation allows you to have one liner logs</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__jaxrsprovider">@JaxrsProvider</h3>
+</div>
+<div class="sect1">
+<h2 id="__jaxrsprovider">@JaxrsProvider</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>@JaxrsProvider</code> allows you to specify on a <code>@Module</code> method the list of
 JAXRS provider you want to use.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_dependencies_without_hacky_code">Dependencies without hacky code</h3>
+</div>
+<div class="sect1">
+<h2 id="_dependencies_without_hacky_code">Dependencies without hacky code</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>@Jars</code> allows you to add dependencies (scanned) to your application
 automatically (like CDI libraries):</p>
@@ -197,22 +209,28 @@ public WebApp app() {
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__default">@Default</h3>
+</div>
+<div class="sect1">
+<h2 id="__default">@Default</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>@Default</code> automatically adds in the application <code>target/classes</code> as
 binaries and <code>src/main/webapp</code> as resources for maven projects.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__cdiextensions">@CdiExtensions</h3>
+</div>
+<div class="sect1">
+<h2 id="__cdiextensions">@CdiExtensions</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>This annotation allows you to control which extensions are activated
 during the test.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__appresource">@AppResource</h3>
+</div>
+<div class="sect1">
+<h2 id="__appresource">@AppResource</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>This annotation allows injection of few particular test resources like:</p>
 </div>
@@ -233,18 +251,21 @@ during the test.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__mockinjector">@MockInjector</h3>
+</div>
+<div class="sect1">
+<h2 id="__mockinjector">@MockInjector</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Allows to mock EJB injections. It decorates a dedicated method returning
 an instance (or Class) implementing <code>FallbackPropertyInjector</code>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="__webresource">@WebResource</h3>
+</div>
+<div class="sect1">
+<h2 id="__webresource">@WebResource</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Allow for web application to add folders containing web resources.</p>
-</div>
 </div>
 </div>
 </div>

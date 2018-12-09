@@ -108,9 +108,9 @@ through SQL queries)</p>
 your InitialContext with the standard javax.naming.Context properties
 for user/pass info, which is:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties props = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties props = new Properties();
 props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
 props.setProperty(Context.PROVIDER_URL, "ejbd://localhost:4201");
 props.setProperty(Context.SECURITY_PRINCIPAL, "someuser");
@@ -118,7 +118,7 @@ props.setProperty(Context.SECURITY_CREDENTIALS, "thepass");
 props.setProperty("openejb.authentication.realmName", "PropertiesLogin");
 // optional
 InitialContext ctx = new InitialContext(props);
-ctx.lookup(...);</pre>
+ctx.lookup(...);</code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -165,9 +165,9 @@ libraries have been moved into <code>&lt;tomcat-home&gt;/lib/</code></p>
 EJBs over HTTP. However this can easily be added to a different webapp
 like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;servlet&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;servlet&gt;
   &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
   &lt;servlet-class&gt;org.apache.openejb.server.httpd.ServerServlet&lt;/servlet-class&gt;
 &lt;/servlet&gt;
@@ -175,16 +175,16 @@ like so:</p>
 &lt;servlet-mapping&gt;
   &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
   &lt;url-pattern&gt;/myejbs/*&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;</pre>
+&lt;/servlet-mapping&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Then you can create an <code>InitialContext</code> that points to that webapp like
 so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
 p.put("java.naming.provider.url", "http://127.0.0.1:8080/mywebapp/myejbs");
 // user and pass optional
@@ -193,7 +193,7 @@ p.put("java.naming.security.credentials", "mypass");
 
 InitialContext ctx = new InitialContext(p);
 
-MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");</pre>
+MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");</code></pre>
 </div>
 </div>
 </div>

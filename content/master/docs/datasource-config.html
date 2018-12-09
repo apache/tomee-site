@@ -103,9 +103,9 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myDataSource" type="javax.sql.DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDataSource" type="javax.sql.DataSource"&gt;
     accessToUnderlyingConnectionAllowed = false
     alternateUsernameAllowed = false
     connectionProperties =
@@ -134,7 +134,7 @@ body are optional.</p>
     timeBetweenEvictionRuns = -1 millisecond
     userName = sa
     validationQuery =
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -143,9 +143,9 @@ body are optional.</p>
 <code>-D</code> properties. The properties can also be used when embedding TomEE
 via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myDataSource = new://Resource?type=javax.sql.DataSource
+<pre class="highlight"><code class="language-properties" data-lang="properties">myDataSource = new://Resource?type=javax.sql.DataSource
 myDataSource.accessToUnderlyingConnectionAllowed = false
 myDataSource.alternateUsernameAllowed = false
 myDataSource.connectionProperties =
@@ -173,7 +173,7 @@ myDataSource.testOnReturn = false
 myDataSource.testWhileIdle = false
 myDataSource.timeBetweenEvictionRuns = -1 millisecond
 myDataSource.userName = sa
-myDataSource.validationQuery =</pre>
+myDataSource.validationQuery =</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -564,12 +564,12 @@ SQL SELECT statement that returns at least one row.</p>
 <p>If true the raw physical connection to the database can be accessed
 using the following construct:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Connection conn = ds.getConnection();
+<pre class="highlight"><code class="language-java" data-lang="java">Connection conn = ds.getConnection();
 Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
 ...
-conn.close()</pre>
+conn.close()</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -702,10 +702,10 @@ statements.</p>
 <p>If true, a statement pool is created for each Connection and
 PreparedStatements created by one of the following methods are pooled:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public PreparedStatement prepareStatement(String sql);
-public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">public PreparedStatement prepareStatement(String sql);
+public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)</code></pre>
 </div>
 </div>
 </div>
@@ -770,15 +770,15 @@ XaDataSource can be defined as a standard resource using <code>class-name</code>
 <div class="paragraph">
 <p>First solution is to define as <code>JdbcDriver</code> an XADataSource:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myXaDs" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myXaDs" type="DataSource"&gt;
     JdbcDriver = org.foo.MyXaDataSource
 
     myXaProperty = value
 
     myPoolProperty = 10
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -801,22 +801,22 @@ factory mecanism.</p>
 <div class="paragraph">
 <p>An alternative is to define a resource for the XaDataSource:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myXa" class-name="org.foo.MyXaDataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myXa" class-name="org.foo.MyXaDataSource"&gt;
     myXaProperty = value
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>And then wrap it in the pool:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myXaDs" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myXaDs" type="DataSource"&gt;
     DataSourceCreator = [dbcp|dbcp-alternative]
     myPoolProperty = 10
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -829,9 +829,9 @@ because it is reusing direct dbcp JTA management.</p>
 <div class="paragraph">
 <p>For TomEE 1.7.0/1.7.1 you can need to add the property:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre> openejb.datasource.pool = true</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties"> openejb.datasource.pool = true</code></pre>
 </div>
 </div>
 <div class="paragraph">

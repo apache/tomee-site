@@ -101,16 +101,16 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myJmsConnectionFactory" type="javax.jms.ConnectionFactory"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myJmsConnectionFactory" type="javax.jms.ConnectionFactory"&gt;
     connectionMaxIdleTime = 15 Minutes
     connectionMaxWaitTime = 5 seconds
     poolMaxSize = 10
     poolMinSize = 0
     resourceAdapter = Default JMS Resource Adapter
     transactionSupport = xa
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -120,15 +120,15 @@ VirtualMachine <code>-D</code> properties. The properties can also be used when
 embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myJmsConnectionFactory = new://Resource?type=javax.jms.ConnectionFactory
+<pre class="highlight"><code class="language-properties" data-lang="properties">myJmsConnectionFactory = new://Resource?type=javax.jms.ConnectionFactory
 myJmsConnectionFactory.connectionMaxIdleTime = 15 Minutes
 myJmsConnectionFactory.connectionMaxWaitTime = 5 seconds
 myJmsConnectionFactory.poolMaxSize = 10
 myJmsConnectionFactory.poolMinSize = 0
 myJmsConnectionFactory.resourceAdapter = Default JMS Resource Adapter
-myJmsConnectionFactory.transactionSupport = xa</pre>
+myJmsConnectionFactory.transactionSupport = xa</code></pre>
 </div>
 </div>
 <div class="paragraph">

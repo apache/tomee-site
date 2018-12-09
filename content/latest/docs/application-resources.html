@@ -111,11 +111,11 @@ available server-wide, whereas defining the resource within a
 <p>As a simple example, a JMS queue can be defined within <code>tomee.xml</code> with
 the following configuration.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyQueue" type="javax.jms.Queue"/&gt;
-&lt;/tomee&gt;</pre>
+&lt;/tomee&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -125,9 +125,9 @@ into managed components using the <code>@Resource</code> annotation, as shown
 below. The <code>name</code> attribute on the <code>@Resource</code> annotation should match
 the <code>id</code> attribute on the <code>Resource</code> tag.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class JmsClient {
+<pre class="highlight"><code class="language-java" data-lang="java">public class JmsClient {
 
     @Resource(name="MyQueue")
     private Queue queue;
@@ -136,16 +136,16 @@ the <code>id</code> attribute on the <code>Resource</code> tag.</p>
         // implementation here...
     }
 
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>As an alternative to defining a resource in XML, resources can also be
 defined using system properties:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>MyQueue = new://Resource?type=javax.jms.Queue</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">MyQueue = new://Resource?type=javax.jms.Queue</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -170,14 +170,14 @@ and password to be able to connect to a database. That would be
 configured with the following syntax. Notice the key/value pair syntax
 for the properties within the <code>&lt;Resource&gt;</code> tag.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="DB" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="DB" type="DataSource"&gt;
   JdbcDriver  com.mysql.jdbc.Driver
   JdbcUrl     jdbc:mysql://localhost/test
   UserName    test
   Password    password
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -187,13 +187,13 @@ specifying an additional property for each key/value pair, using the
 resource ID as a prefix: <code>&lt;resourceId&gt;.&lt;propertyName&gt;=&lt;value&gt;</code>. The
 system properties equivalent of the resource above is:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>p.setProperty("DB", "new://Resource?type=DataSource");
+<pre class="highlight"><code class="language-java" data-lang="java">p.setProperty("DB", "new://Resource?type=DataSource");
 p.setProperty("DB.JdbcDriver", "com.mysql.jdbc.Driver");
 p.setProperty("DB,JdbcUrl", "jdbc:mysql://localhost/test");
 p.setProperty("DB.UserName", "test");
-p.setProperty("DB.Password", "password");</pre>
+p.setProperty("DB.Password", "password");</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -274,29 +274,29 @@ known resource types are.</p>
 <div class="paragraph">
 <p>So the following simple resource</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class Configuration {
+<pre class="highlight"><code class="language-java" data-lang="java">public class Configuration {
 
     private String url;
     private String username;
     private int poolSize;
 
     // getters and setters
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Can be defined in <code>tomee.xml</code> using the following configuration (note
 the <code>class-name</code> attribute):</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
     url http://localhost
     username tomee
     poolSize 20
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -319,9 +319,9 @@ below, and this will have any used properties from the resource
 configuration set added to it. So as an alternative to the above code,
 you could do:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class Configuration {
+<pre class="highlight"><code class="language-java" data-lang="java">public class Configuration {
 
     private Properties properties;
 
@@ -333,19 +333,19 @@ you could do:</p>
         this.properties = properties;
     }
 
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Using the same resource definition:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
     url http://localhost
     username tomee
     poolSize 20
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -369,15 +369,15 @@ file, include a <code>WEB-INF/resources.xml</code>. For an ejb-jar module, use
 <code>tomee.xml</code>. One key difference is the root element of the XML is
 <code>&lt;resources&gt;</code> and not <code>&lt;tomee&gt;</code>.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;resources&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resources&gt;
     &lt;Resource id="config" class-name="org.superbiz.Configuration"&gt;
         url http://localhost
         username tomee
         poolSize 20
     &lt;/Resource&gt;
-&lt;/resources&gt;</pre>
+&lt;/resources&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -463,13 +463,13 @@ specified on the <code>Resource</code>, TomEE will instantiate the resource usin
 its no-arg constructor. If you wish to pass constructor arguments,
 specify the arguments as a comma separated list:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="config" class-name="org.superbiz.Configuration" constructor="id, poolSize"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="config" class-name="org.superbiz.Configuration" constructor="id, poolSize"&gt;
     url http://localhost
     username tomee
     poolSize 20
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -486,9 +486,9 @@ no argument method that returns an object on the class specified in the
 <div class="paragraph">
 <p>For example:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class Factory {
+<pre class="highlight"><code class="language-java" data-lang="java">public class Factory {
 
     private Properties properties;
 
@@ -514,7 +514,7 @@ no argument method that returns an object on the class specified in the
     &lt;Resource id="MyResource" class-name="org.superbiz.Factory" factory-name="create"&gt;
         UserName tomee
     &lt;/Resource&gt;
-&lt;/resources&gt;</pre>
+&lt;/resources&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -530,9 +530,9 @@ destroyed. Using @PostConstruct will effectively force a lazily loaded
 resource to be instantiated when the application is starting - in the
 same way that the <code>InitializeAfterDeployment</code> property does.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class MyClass {
+<pre class="highlight"><code class="language-java" data-lang="java">public class MyClass {
 
     private Properties properties;
 
@@ -550,7 +550,7 @@ same way that the <code>InitializeAfterDeployment</code> property does.</p>
         }
     }
 
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>

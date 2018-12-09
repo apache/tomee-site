@@ -101,9 +101,9 @@
 "movieDatabase" and "movieDatabaseUnmanaged" the following
 persistence.xml would work.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;persistence version="1.0"
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;persistence version="1.0"
        xmlns="http://java.sun.com/xml/ns/persistence"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
@@ -120,7 +120,7 @@ persistence.xml would work.</p>
                 value="org.apache.openejb.hibernate.TransactionManagerLookup"/&gt;
     &lt;/properties&gt;
   &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</pre>
+&lt;/persistence&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -156,9 +156,9 @@ strategy like the following will do the trick. This
 "DynamicTransactionManagerLookup" class can be packed in your jar and
 deployed with your app.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>import org.hibernate.HibernateException;
+<pre class="highlight"><code class="language-java" data-lang="java">import org.hibernate.HibernateException;
 import org.hibernate.transaction.TransactionManagerLookup;
 import javax.transaction.TransactionManager;
 import java.util.Properties;
@@ -192,7 +192,7 @@ public class DynamicTransactionManagerLookup implements TransactionManagerLookup
     public String getUserTransactionName() {
         return impl.getUserTransactionName();
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">

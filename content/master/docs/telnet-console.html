@@ -113,14 +113,14 @@
 </div>
 </blockquote>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>OPENEJB_HOME=/Users/dblevins/Desktop/openejb-1.0
+<pre class="highlight"><code class="language-properties" data-lang="properties">OPENEJB_HOME=/Users/dblevins/Desktop/openejb-1.0
 OpenEJB 1.0    build: 20060226-1701
 http://www.openejb.org
 resources 1
 OpenEJB ready.
-[init]</pre>
+[init]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -142,11 +142,11 @@ admin 0.0.0.0 4200<br>
 </div>
 </blockquote>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Trying ::1...
+<pre class="highlight"><code class="language-properties" data-lang="properties">Trying ::1...
 Connected to localhost.
-Escape character is '^]</pre>
+Escape character is '^]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -155,9 +155,9 @@ Escape character is '^]</pre>
 Containers: Default BMP Container Default CMP Container Default Stateful
 Container Default Stateless Container</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Deployments:
+<pre class="highlight"><code class="language-java" data-lang="java">Deployments:
  client/tests/stateful/EncBean
  client/tests/entity/cmp/RMI-over-IIOP/EJBHome
  client/tests/stateful/BasicStatefulHome
@@ -194,7 +194,7 @@ Container Default Stateless Container</p>
  httpd/session
  client/tests/entity/cmp/allowed_operations/EntityHome
  client/tests/stateless/RMI-over-IIOP/EJBHome
-[openejb]</pre>
+[openejb]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -214,14 +214,14 @@ you automatically after the first time OpenEJB boots.</p>
 </div>
 </blockquote>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    server  = org.openejb.server.telnet.TelnetServer
+<pre class="highlight"><code class="language-properties" data-lang="properties">    server  = org.openejb.server.telnet.TelnetServer
     bind    = 127.0.0.1
     port    = 4202
     disabled    = false
     threads = 5
-#   only_from   = 192.168.1.123</pre>
+#   only_from   = 192.168.1.123</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -232,9 +232,9 @@ concurrently access the Telnet service via this file.</p>
 <div class="paragraph">
 <p>Simply edit the config file and set 'disabled' to true</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    disabled    = true</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">    disabled    = true</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -253,28 +253,28 @@ rest of the file is a direct copy of the xinet.d syntax for HBA.</p>
 <p>For an example to restrict access to the localhost, you could configure
 the Telnet Service like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    server  = org.openejb.server.telnet.TelnetServer
+<pre class="highlight"><code class="language-properties" data-lang="properties">    server  = org.openejb.server.telnet.TelnetServer
     bind    = 127.0.0.1
     port    = 4202
     disabled    = false
     threads = 5
-    only_from   = localhost</pre>
+    only_from   = localhost</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If you wanted to restrict access to localhost <em>and</em> say the hosts
 192.168.1.207 and 192.168.1.16, you can simply add them to the list.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    server  = org.openejb.server.telnet.TelnetServer
+<pre class="highlight"><code class="language-properties" data-lang="properties">    server  = org.openejb.server.telnet.TelnetServer
     bind    = 127.0.0.1
     port    = 4202
     disabled    = false
     threads = 5
-    only_from   = localhost, 192.168.1.207, 192.168.1.16</pre>
+    only_from   = localhost, 192.168.1.207, 192.168.1.16</code></pre>
 </div>
 </div>
             </div>

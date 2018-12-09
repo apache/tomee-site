@@ -105,7 +105,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Container id="myStatelessContainer" type="STATELESS"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myStatelessContainer" type="STATELESS"&gt;
     accessTimeout = 30 seconds
     callbackThreads = 5
     closeTimeout = 5 minutes
@@ -131,7 +131,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myStatelessContainer = new://Container?type=STATELESS
+<pre class="highlight"><code class="language-properties" data-lang="properties">myStatelessContainer = new://Container?type=STATELESS
 myStatelessContainer.accessTimeout = 30 seconds
 myStatelessContainer.callbackThreads = 5
 myStatelessContainer.closeTimeout = 5 minutes

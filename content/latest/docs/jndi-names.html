@@ -106,9 +106,9 @@
 <div class="sect1">
 <h2 id="_default_jndi_name_the_default_jndi_name_is_in_the_following_format">Default JNDI name The default JNDI name is in the following format:</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>{deploymentId}{interfaceType.annotationName}</pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{deploymentId}{interfaceType.annotationName}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -269,10 +269,10 @@ and override that further for a specific interface of that ejb.</p>
 <p>The jndi name format can be set on a server level via a <em>system
 property</em>, for example:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>$ ./bin/openejb start
--Dopenejb.jndiname.format=\{ejbName}/\{interfaceClass}"</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">$ ./bin/openejb start
+-Dopenejb.jndiname.format=\{ejbName}/\{interfaceClass}"</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -289,14 +289,14 @@ InitialContext properties when embedded.</p>
 <p>It&#8217;s possible to set the openejb.jndiname.format for an ejb-jar jar in a
 META-INF/openejb-jar.xml file as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;properties&gt;
      openejb.deploymentId.format = {ejbName}
      openejb.jndiname.format = {deploymentId}{interfaceType.annotationName}
   &lt;/properties&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -308,49 +308,49 @@ META-INF/openejb-jar.xml file as follows:</p>
 <p>The following sets the name specifically for the interface
 org.superbiz.Foo.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="foo" interface="org.superbiz.Foo"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or more generally&#8230;&#8203;</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="foo" interface="Remote"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or more generally still&#8230;&#8203;</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="foo"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The 'name' attribute can still use templates if it likes, such as:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="ejb/{interfaceClass.simpleName}" interface="org.superbiz.Foo"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -373,9 +373,9 @@ intention with these examples is to show the various ways you can
 isolate specific interfaces or types of interfaces to gain more specific
 control on how they are named.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="LocalOne" interface="org.superbiz.LocalOne"/&gt;
     &lt;jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/&gt;
@@ -384,15 +384,15 @@ control on how they are named.</p>
     &lt;jndi name="FooHome" interface="org.superbiz.FooHome"/&gt;
     &lt;jndi name="FooLocalHome" interface="org.superbiz.FooLocalHome"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;!-- applies to LocalOne and LocalTwo --&gt;
     &lt;jndi name="{interfaceClass.simpleName}" interface="Local"/&gt;
@@ -406,15 +406,15 @@ control on how they are named.</p>
     &lt;!-- applies to FooLocalHome --&gt;
     &lt;jndi name="{interfaceClass.simpleName}" interface="LocalHome"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;!-- applies to RemoteOne, RemoteTwo, FooHome, and FooLocalHome --&gt;
     &lt;jndi name="{interfaceClass.simpleName}"/&gt;
@@ -423,20 +423,20 @@ control on how they are named.</p>
     &lt;jndi name="LocalOne" interface="org.superbiz.LocalOne"/&gt;
     &lt;jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>or</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;!-- applies to LocalOne, LocalTwo, RemoteOne, RemoteTwo, FooHome, and FooLocalHome --&gt;
     &lt;jndi name="{interfaceClass.simpleName}"/&gt;
   &lt;/ejb-deployment&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -446,8 +446,9 @@ control on how they are named.</p>
 <div class="paragraph">
 <p><em>You are responsible for ensuring the names don&#8217;t conflict.</em></p>
 </div>
-<div class="sect2">
-<h3 id="_conservative_settings">Conservative settings</h3>
+<div class="sect1">
+<h2 id="_conservative_settings">Conservative settings</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A very conservative setting such as</p>
 </div>
@@ -467,7 +468,6 @@ in<br>
 <div class="paragraph">
 <p>The above two settings would work if you the interface wasn&#8217;t shared by
 other beans.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_pragmatic_settings">Pragmatic settings</h3>
@@ -576,6 +576,8 @@ UndeclaredThrowableException thrown by the VM.</p>
 <p>The only way to guarantee the proxy has the 'doIt() throws
 RemoteException \{}' method of InterfaceB is to cut out InterfaceA when
 we create the proxy dedicated to InterfaceB.</p>
+</div>
+</div>
 </div>
 </div>
             </div>

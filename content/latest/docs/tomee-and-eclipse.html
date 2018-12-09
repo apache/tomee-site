@@ -298,9 +298,9 @@ hot deployment alter this value to true and restart Tomee.</p>
 <div class="paragraph">
 <p>This is the relevant snippet of the web.xml file.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;servlet&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;servlet&gt;
     &lt;servlet-name&gt;jsp&lt;/servlet-name&gt;
     &lt;servlet-class&gt;org.apache.jasper.servlet.JspServlet&lt;/servlet-class&gt;
     ....
@@ -309,7 +309,7 @@ hot deployment alter this value to true and restart Tomee.</p>
         &lt;param-value&gt;true&lt;/param-value&gt;
     &lt;/init-param&gt;
     ....
-&lt;/servlet&gt;</pre>
+&lt;/servlet&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -323,10 +323,10 @@ hot deployment alter this value to true and restart Tomee.</p>
 (which needs to be done through system properties). A quick workaround
 is to add these properties manually:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>-Djava.util.logging.config.file="&lt;tomee&gt;/conf/logging.properties"
--Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">-Djava.util.logging.config.file="&lt;tomee&gt;/conf/logging.properties"
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager</code></pre>
 </div>
 </div>
 <div class="paragraph">

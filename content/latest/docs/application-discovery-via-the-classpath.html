@@ -109,9 +109,9 @@ like deployed while in an embedded mode.</p>
 <p>Simplify the issue of searching for annotated applications by adding an
 ejb-jar.xml like this to your app:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar/&gt;</pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar/&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -187,11 +187,11 @@ should always be used even on OSs using backslash ("").</p>
 opposite direction or change the processing order. The default values
 for the properties are as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  openejb.exclude-include.order=include-exclude //Defines the processing order
+<pre class="highlight"><code class="language-properties" data-lang="properties">  openejb.exclude-include.order=include-exclude //Defines the processing order
    openejb.deployments.classpath.include=""      //Include nothing
-   openejb.deployments.classpath.exclude=".*"    //Exclude everything</pre>
+   openejb.deployments.classpath.exclude=".*"    //Exclude everything</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -199,13 +199,13 @@ for the properties are as follows:</p>
 each are combined together to create the list of paths OpenEJB will
 scrape for annotations.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>*Note:* by default these settings will only affect which jars OpenEJB will
+<pre class="highlight"><code class="language-java" data-lang="java">*Note:* by default these settings will only affect which jars OpenEJB will
  scan for annotated components when no descriptor is found.  If you would
  like to use these settings to also filter out jars that do contain
  descriptors, set the *openejb.deployments.classpath.filter.descriptors*
- property to _true_.  The default is _false_.</pre>
+ property to _true_.  The default is _false_.</code></pre>
 </div>
 </div>
 </div>
@@ -225,14 +225,14 @@ for your ejb module is in the classpath, a little debug code like this
 in your test setup will help you see what OpenEJB sees (which may be
 nothing):</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Enumeration&lt;URL&gt; ejbJars =
+<pre class="highlight"><code class="language-properties" data-lang="properties">Enumeration&lt;URL&gt; ejbJars =
 this.getClass().getClassLoader().getResources("META-INF/ejb-jar.xml");
 while (ejbJars.hasMoreElements()) {
     URL url = ejbJars.nextElement();
     System.out.println("app = " + url);
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>

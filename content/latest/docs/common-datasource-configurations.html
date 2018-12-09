@@ -110,14 +110,14 @@ details on all configuration options for DataSources.</p>
 <p>The drivers are included with OpenEJB 3.0 and HSQLDB is the default
 database.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="HSQLDB Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="HSQLDB Database" type="DataSource"&gt;
     JdbcDriver org.hsqldb.jdbcDriver
     JdbcUrl jdbc:hsqldb:file:hsqldb
     UserName sa
     Password
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -125,16 +125,16 @@ database.</p>
 <div class="sect1">
 <h2 id="_derby_embedded">Derby (Embedded)</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="Derby Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Derby Database" type="DataSource"&gt;
     #Embedded Derby example
 
     JdbcDriver org.apache.derby.jdbc.EmbeddedDriver
     JdbcUrl jdbc:derby:derbyDB;create=true
     UserName admin
     Password pass
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -142,9 +142,9 @@ database.</p>
 <div class="sect1">
 <h2 id="_mysql">MySQL</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="MySQL Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="MySQL Database" type="DataSource"&gt;
     #  MySQL example
     #
     #  This connector will not work until you download the driver at:
@@ -153,7 +153,7 @@ database.</p>
     JdbcDriver  com.mysql.jdbc.Driver
     JdbcUrl jdbc:mysql://localhost/test
     UserName    test
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -161,9 +161,9 @@ database.</p>
 <div class="sect1">
 <h2 id="_oracle">Oracle</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="Oracle Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Oracle Database" type="DataSource"&gt;
     #  Oracle example
     #
     #  This connector will not work until you download the driver at:
@@ -172,7 +172,7 @@ database.</p>
     JdbcUrl jdbc:oracle:thin:@localhost:1521:orcl
     UserName    scott
     Password    tiger
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -180,9 +180,9 @@ database.</p>
 <div class="sect1">
 <h2 id="_oraclexa">OracleXA</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="OracleXA Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="OracleXA Database" type="DataSource"&gt;
     #  OracleXA example
     #
     #  This connector will not work until you download the driver at:
@@ -191,7 +191,7 @@ database.</p>
     JdbcUrl jdbc:oracle:thin:@localhost:1521:orcl
     UserName    scott
     Password    tiger
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -199,9 +199,9 @@ database.</p>
 <div class="sect1">
 <h2 id="_posgresql">PosgreSQL</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="PostgreSQL Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="PostgreSQL Database" type="DataSource"&gt;
     #  PostgreSQL example
     #
     #  This connector will not work until you download the driver at:
@@ -210,7 +210,7 @@ database.</p>
     JdbcUrl  jdbc:postgresql://localhost/test
     UserName     postgres
     Password     pass
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -218,16 +218,16 @@ database.</p>
 <div class="sect1">
 <h2 id="_instantdb">InstantDB</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="InstantDB Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="InstantDB Database" type="DataSource"&gt;
     #  InstantDB example
     #
     JdbcDriver   org.enhydra.instantdb.jdbc.idbDriver
     JdbcUrl  jdbc:idb:conf/instantdb.properties
     UserName     Admin
     Password     pass
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">

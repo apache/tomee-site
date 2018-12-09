@@ -101,11 +101,11 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Container id="myBmpEntityContainer" type="BMP_ENTITY"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myBmpEntityContainer" type="BMP_ENTITY"&gt;
     poolSize = 10
-&lt;/Container&gt;</pre>
+&lt;/Container&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -115,10 +115,10 @@ VirtualMachine <code>-D</code> properties. The properties can also be used when
 embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myBmpEntityContainer = new://Container?type=BMP_ENTITY
-myBmpEntityContainer.poolSize = 10</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">myBmpEntityContainer = new://Container?type=BMP_ENTITY
+myBmpEntityContainer.poolSize = 10</code></pre>
 </div>
 </div>
 <div class="paragraph">

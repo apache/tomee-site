@@ -119,7 +119,7 @@ attributes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myDerbyDatasource" type="javax.sql.DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="javax.sql.DataSource"&gt;
  . . . .
 &lt;Resource&gt;</code></pre>
 </div>
@@ -130,7 +130,7 @@ can abbreviated to just <em>DataSource</em> as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myDerbyDatasource" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="DataSource"&gt;
  . . . .
 &lt;Resource&gt;</code></pre>
 </div>
@@ -141,7 +141,7 @@ classpath attribute like so:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar"&gt;
  . . . .
 &lt;Resource&gt;</code></pre>
 </div>
@@ -151,7 +151,7 @@ classpath attribute like so:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1"&gt;
  . . . .
 &lt;Resource&gt;</code></pre>
 </div>
@@ -189,7 +189,7 @@ other business criteria. That&#8217;s also an available feature. See
 <h3 id="_example_1">Example 1</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="Default JDBC Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Default JDBC Database" type="DataSource"&gt;
    . . . . .
 &lt;/Resource&gt;</code></pre>
 </div>
@@ -203,7 +203,7 @@ Database</em></p>
 <h3 id="_example_2">Example 2</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="Derby Database"  type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Derby Database"  type="DataSource"&gt;
   . . . . .
 &lt;/Resource&gt;</code></pre>
 </div>
@@ -248,7 +248,7 @@ example of Derby.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myDerbyDatabase"  type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatabase"  type="DataSource"&gt;
   . . . . .
 &lt;/Resource&gt;</code></pre>
 </div>
@@ -306,7 +306,7 @@ public class FooBean {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
   &lt;res-ref-name&gt;myDerbyDatabase&lt;/res-ref-name&gt;
   &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
 &lt;/resource-ref&gt;</code></pre>
@@ -317,7 +317,7 @@ public class FooBean {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
    &lt;res-ref-name&gt;jdbc/myDerbyDatabase&lt;/res-ref-name&gt;
    &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
 &lt;/resource-ref&gt;</code></pre>
@@ -328,7 +328,7 @@ public class FooBean {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
    &lt;res-ref-name&gt;someOtherName&lt;/res-ref-name&gt;
    &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
    &lt;mapped-name&gt;myDerbyDatabase&lt;/mapped-name&gt;

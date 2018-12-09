@@ -105,7 +105,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myActiveMQResourceAdapter" type="ActiveMQResourceAdapter"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myActiveMQResourceAdapter" type="ActiveMQResourceAdapter"&gt;
     brokerXmlConfig = broker:(tcp://localhost:61616)?useJmx=false
     dataSource = Default Unmanaged JDBC Database
     serverUrl = vm://localhost?waitForStart=20000&amp;async=true
@@ -122,7 +122,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myActiveMQResourceAdapter = new://Resource?type=ActiveMQResourceAdapter
+<pre class="highlight"><code class="language-properties" data-lang="properties">myActiveMQResourceAdapter = new://Resource?type=ActiveMQResourceAdapter
 myActiveMQResourceAdapter.brokerXmlConfig = broker:(tcp://localhost:61616)?useJmx=false
 myActiveMQResourceAdapter.dataSource = Default Unmanaged JDBC Database
 myActiveMQResourceAdapter.serverUrl = vm://localhost?waitForStart=20000&amp;async=true

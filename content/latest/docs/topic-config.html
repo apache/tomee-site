@@ -100,11 +100,11 @@
 file or in a <code>WEB-INF/resources.xml</code> file using a declaration like the
 following. All properties in the element body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myTopic" type="javax.jms.Topic"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myTopic" type="javax.jms.Topic"&gt;
     destination =
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -113,10 +113,10 @@ following. All properties in the element body are optional.</p>
 <code>-D</code> properties. The properties can also be used when embedding TomEE
 via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myTopic = new://Resource?type=javax.jms.Topic
-myTopic.destination =</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">myTopic = new://Resource?type=javax.jms.Topic
+myTopic.destination =</code></pre>
 </div>
 </div>
 <div class="paragraph">

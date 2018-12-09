@@ -108,7 +108,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">{deploymentId}{interfaceType.annotationName}</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{deploymentId}{interfaceType.annotationName}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -291,7 +291,7 @@ META-INF/openejb-jar.xml file as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;properties&gt;
      openejb.deploymentId.format = {ejbName}
      openejb.jndiname.format = {deploymentId}{interfaceType.annotationName}
@@ -310,7 +310,7 @@ org.superbiz.Foo.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="foo" interface="org.superbiz.Foo"/&gt;
   &lt;/ejb-deployment&gt;
@@ -322,7 +322,7 @@ org.superbiz.Foo.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="foo" interface="Remote"/&gt;
   &lt;/ejb-deployment&gt;
@@ -334,7 +334,7 @@ org.superbiz.Foo.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="foo"/&gt;
   &lt;/ejb-deployment&gt;
@@ -346,7 +346,7 @@ org.superbiz.Foo.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="ejb/{interfaceClass.simpleName}" interface="org.superbiz.Foo"/&gt;
   &lt;/ejb-deployment&gt;
@@ -375,7 +375,7 @@ control on how they are named.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;jndi name="LocalOne" interface="org.superbiz.LocalOne"/&gt;
     &lt;jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/&gt;
@@ -392,7 +392,7 @@ control on how they are named.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;!-- applies to LocalOne and LocalTwo --&gt;
     &lt;jndi name="{interfaceClass.simpleName}" interface="Local"/&gt;
@@ -414,7 +414,7 @@ control on how they are named.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;!-- applies to RemoteOne, RemoteTwo, FooHome, and FooLocalHome --&gt;
     &lt;jndi name="{interfaceClass.simpleName}"/&gt;
@@ -431,7 +431,7 @@ control on how they are named.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;openejb-jar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;openejb-jar&gt;
   &lt;ejb-deployment ejb-name="FooBean"&gt;
     &lt;!-- applies to LocalOne, LocalTwo, RemoteOne, RemoteTwo, FooHome, and FooLocalHome --&gt;
     &lt;jndi name="{interfaceClass.simpleName}"/&gt;
@@ -446,8 +446,9 @@ control on how they are named.</p>
 <div class="paragraph">
 <p><em>You are responsible for ensuring the names don&#8217;t conflict.</em></p>
 </div>
-<div class="sect2">
-<h3 id="_conservative_settings">Conservative settings</h3>
+<div class="sect1">
+<h2 id="_conservative_settings">Conservative settings</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A very conservative setting such as</p>
 </div>
@@ -467,7 +468,6 @@ in<br>
 <div class="paragraph">
 <p>The above two settings would work if you the interface wasn&#8217;t shared by
 other beans.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_pragmatic_settings">Pragmatic settings</h3>
@@ -576,6 +576,8 @@ UndeclaredThrowableException thrown by the VM.</p>
 <p>The only way to guarantee the proxy has the 'doIt() throws
 RemoteException \{}' method of InterfaceB is to cut out InterfaceA when
 we create the proxy dedicated to InterfaceB.</p>
+</div>
+</div>
 </div>
 </div>
             </div>

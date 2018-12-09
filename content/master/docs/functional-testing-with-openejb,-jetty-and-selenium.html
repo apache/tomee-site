@@ -113,15 +113,16 @@ some sample code demonstrating this, available
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_creating_an_embedded_server">Creating an embedded server</h3>
+<div class="sect1">
+<h2 id="_creating_an_embedded_server">Creating an embedded server</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>I created a class to start my embedded OpenEJB and Jetty instances and
 configure them to see the EJB and WAR modules of my application:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class EmbeddedServer {
+<pre class="highlight"><code class="language-java" data-lang="java">public class EmbeddedServer {
     private static EmbeddedServer instance = new EmbeddedServer();
     private Server server;
 
@@ -219,7 +220,7 @@ configure them to see the EJB and WAR modules of my application:</p>
     }
     return webApp;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -232,16 +233,18 @@ convenience, so you can run this straight from an IDE, and record tests
 using tools like the Selenium Firefox plugin.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_supporting_ejb_dependency_injection">Supporting @EJB Dependency injection</h3>
+</div>
+<div class="sect1">
+<h2 id="_supporting_ejb_dependency_injection">Supporting @EJB Dependency injection</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In the last code sample, we also set up a custom ServletHandler in Jetty
 - this is to perform dependency injection. The custom ServletHandler
 looks like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class EmbeddedServerServletHandler extends ServletHandler {
+<pre class="highlight"><code class="language-java" data-lang="java">public class EmbeddedServerServletHandler extends ServletHandler {
     private InitialContext initialContext;
 
     public EmbeddedServerServletHandler(InitialContext initialContext) {
@@ -250,24 +253,24 @@ looks like this:</p>
 
     public Servlet customizeServlet(Servlet servlet) throws Exception {
     Class&lt;? extends Servlet&gt; servletClass = servlet.getClass();
-        Field[]</pre>
+        Field[]</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>declaredFields = servletClass.getDeclaredFields();</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    for (Field declaredField : declaredFields) {
-            Annotation[]</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">    for (Field declaredField : declaredFields) {
+            Annotation[]</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>annotations = declaredField.getAnnotations();</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>        for (Annotation annotation : annotations) {
+<pre class="highlight"><code class="language-java" data-lang="java">        for (Annotation annotation : annotations) {
         if (EJB.class.equals(annotation.annotationType())) {
             // inject into this field
             Class&lt;?&gt; fieldType = declaredField.getType();
@@ -291,7 +294,7 @@ looks like this:</p>
     private EnterpriseBeanInfo getBeanFor(Class&lt;?&gt; fieldType) {
     return new EJBHelper().getBeanInfo(fieldType);
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -299,15 +302,17 @@ looks like this:</p>
 reflection to set the field.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_writing_a_functional_test">Writing a Functional test</h3>
+</div>
+<div class="sect1">
+<h2 id="_writing_a_functional_test">Writing a Functional test</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We can now write a functional test. I use a base abstract class to make
 sure the Embedded server is running, and start Selenium:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public abstract class FunctionalTestCase extends TestCase {
+<pre class="highlight"><code class="language-java" data-lang="java">public abstract class FunctionalTestCase extends TestCase {
     protected DefaultSelenium selenium;
 
     protected void setUp() throws Exception {
@@ -320,15 +325,15 @@ sure the Embedded server is running, and start Selenium:</p>
     protected void tearDown() throws Exception {
     selenium.stop();
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>and I can then I write a test like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class AddPersonTest extends FunctionalTestCase {
+<pre class="highlight"><code class="language-java" data-lang="java">public class AddPersonTest extends FunctionalTestCase {
     public void testShouldAddAPerson() throws Exception {
     selenium.open("/People");
     selenium.type("firstname", "Jonathan");
@@ -342,12 +347,14 @@ sure the Embedded server is running, and start Selenium:</p>
         assertEquals("Jonathan Gallimore", selenium.getText("//div[@id='people']/ul/li[1]"));
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_sample_code">Sample code</h3>
+</div>
+<div class="sect1">
+<h2 id="_sample_code">Sample code</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>I&#8217;ve made a sample project which demonstrates this, source is available
 <a href="http://people.apache.org/~jgallimore/PersonApp.zip">here</a> . You&#8217;ll need
@@ -355,6 +362,7 @@ Maven to build it, and you can build it and run the tests by running
 'mvn clean install'. If want to run the tests from your IDE, you&#8217;ll need
 to have a Selenium server running, which you can do by running 'mvn
 selenium:start-server'.</p>
+</div>
 </div>
 </div>
             </div>

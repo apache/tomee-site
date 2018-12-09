@@ -389,14 +389,14 @@ line or via system properties. So it is possible easily set the
 <div class="paragraph">
 <p>A bash example might look something like:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>!/bin/bash
+<pre class="highlight"><code class="language-java" data-lang="java">!/bin/bash
 
 OPENEJB_HOME=/opt/openejb-3.1.3
 INITIAL_LIST=$(cat /some/shared/directory/our_initial_servers.txt)
 
-$OPENEJB_HOME/bin/openejb start -Dmultipoint.initialServers=$INITIAL_LIST</pre>
+$OPENEJB_HOME/bin/openejb start -Dmultipoint.initialServers=$INITIAL_LIST</code></pre>
 </div>
 </div>
 </div>

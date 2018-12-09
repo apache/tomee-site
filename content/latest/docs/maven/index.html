@@ -95,7 +95,9 @@
         <div class="row">
             
             <div class="col-md-12">
-                <div class="paragraph">
+                <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
 <p>Inspired by the Jetty Maven Plugin, the TomEE Maven Plugin is a
 feature-rich plugin that allows for:</p>
 </div>
@@ -116,9 +118,9 @@ feature-rich plugin that allows for:</p>
 <p>Simply add the following to the , and optionally the ), section of your
 <code>pom.xml</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;plugins&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;plugins&gt;
     &lt;plugin&gt;
       &lt;groupId&gt;org.apache.openejb.maven&lt;/groupId&gt;
       &lt;artifactId&gt;tomee-maven-plugin&lt;/artifactId&gt;
@@ -128,12 +130,14 @@ feature-rich plugin that allows for:</p>
         &lt;tomeeClassifier&gt;plus&lt;/tomeeClassifier&gt;
       &lt;/configuration&gt;
     &lt;/plugin&gt;
-&lt;/plugins&gt;</pre>
+&lt;/plugins&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>###Plugin Goals</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_plugin_goals">Plugin Goals</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Goal</p>
 </div>
@@ -256,9 +260,9 @@ with the specified prefix</p>
 you can use it in a pom project to setup a TomEE install, add libraries,
 deploy apps then run the server.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  &lt;plugin&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;plugin&gt;
     &lt;groupId&gt;org.apache.openejb.maven&lt;/groupId&gt;
     &lt;artifactId&gt;tomee-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;1.7.1&lt;/version&gt;
@@ -285,15 +289,15 @@ deploy apps then run the server.</p>
           &lt;lib&gt;remove:openjpa-&lt;/lib&gt;
       &lt;/libs&gt;
     &lt;/configuration&gt;
-  &lt;/plugin&gt;</pre>
+  &lt;/plugin&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>###Auto Reloading Example</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;plugin&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;plugin&gt;
   &lt;groupId&gt;org.apache.openejb.maven&lt;/groupId&gt;
   &lt;artifactId&gt;tomee-maven-plugin&lt;/artifactId&gt;
   &lt;version&gt;1.7.1&lt;/version&gt;
@@ -305,7 +309,7 @@ deploy apps then run the server.</p>
     &lt;/synchronization&gt;
     &lt;reloadOnUpdate&gt;true&lt;/reloadOnUpdate&gt;
   &lt;/configuration&gt;
-&lt;/plugin&gt;</pre>
+&lt;/plugin&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -339,6 +343,8 @@ deploy apps then run the server.</p>
 <div class="paragraph">
 <p>reloadOnUpdate means to reload the entire context (webapp). This means
 undeploying/redeploying the application.</p>
+</div>
+</div>
 </div>
             </div>
             

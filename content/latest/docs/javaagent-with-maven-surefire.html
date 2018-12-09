@@ -102,11 +102,11 @@
 <p>In maven2 you can enable the javaagent for your tests by adding this to
 your pom.xml file:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;build&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;build&gt;
   &lt;plugins&gt;
-    &lt;!-- this configures the surefire plugin to run your tests with the</pre>
+    &lt;!-- this configures the surefire plugin to run your tests with the</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -116,9 +116,9 @@ pertest</p>
 <div class="paragraph">
 <p>-javaagent:\(${basedir}/target/openejb-javaagent-3.0.jar&lt;/argLine&gt;  &lt;workingDirectory&gt;$\){basedir}/target</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    &lt;!-- this tells maven to copy the openejb-javaagent jar into your</pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">    &lt;!-- this tells maven to copy the openejb-javaagent jar into your</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -128,10 +128,10 @@ copy process-resources copy org.apache.openejb openejb-javaagent 3.0</p>
 <div class="paragraph">
 <p>$\{project.build.directory}</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  &lt;/plugins&gt;
-&lt;/build&gt;</pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">  &lt;/plugins&gt;
+&lt;/build&gt;</code></pre>
 </div>
 </div>
 </div>

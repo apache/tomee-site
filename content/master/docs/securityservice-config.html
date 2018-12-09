@@ -101,11 +101,11 @@
 using a declaration like the following. All properties in the element
 body are optional.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;SecurityService id="mySecurityService" type="SecurityService"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;SecurityService id="mySecurityService" type="SecurityService"&gt;
     defaultUser = guest
-&lt;/SecurityService&gt;</pre>
+&lt;/SecurityService&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -114,10 +114,10 @@ body are optional.</p>
 <code>-D</code> properties. The properties can also be used when embedding TomEE
 via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialContext</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>mySecurityService = new://SecurityService?type=SecurityService
-mySecurityService.defaultUser = guest</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">mySecurityService = new://SecurityService?type=SecurityService
+mySecurityService.defaultUser = guest</code></pre>
 </div>
 </div>
 <div class="paragraph">

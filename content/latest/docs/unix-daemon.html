@@ -116,11 +116,11 @@ used.</p>
 <p>First, we&#8217;ll need to locate and unpack the
 <code>commons-daemon-native.tar.gz</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>cd $TOMEE_HOME/bin
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd $TOMEE_HOME/bin
 tar xzvf commons-daemon-native.tar.gz
-cd commons-daemon-1.0.7-native-src/unix/</pre>
+cd commons-daemon-1.0.7-native-src/unix/</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -149,18 +149,18 @@ system you will need:</p>
 <code>--with-java=&lt;dir&gt;</code> parameter or set the <code>JAVA_HOME</code> environment to
 point to your SDK installation. For example:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>./configure --with-java=/usr/java</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">./configure --with-java=/usr/java</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>or</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>export JAVA_HOME
-./configure</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">export JAVA_HOME
+./configure</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -169,9 +169,9 @@ cleanly, otherwise it will report an error (please send us the details
 of your OS/JDK, or a patch against the sources). To build the binaries
 and libraries simply do:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>make</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">make</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -180,10 +180,10 @@ and libraries simply do:</p>
 <div class="paragraph">
 <p>Finally, we&#8217;ll want to set the execution bits and move the <code>jsvc</code> binary</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>chmod 755 jsvc
-mv jsvc $TOMEE_HOME/bin</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">chmod 755 jsvc
+mv jsvc $TOMEE_HOME/bin</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -192,15 +192,15 @@ mv jsvc $TOMEE_HOME/bin</pre>
 <div class="paragraph">
 <p>As one script, the above might look like:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>cd $TOMEE_HOME/bin
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd $TOMEE_HOME/bin
 tar xzvf commons-daemon-native.tar.gz
 cd commons-daemon-1.0.7-native-src/unix/
 ./configure
 make
 chmod 755 jsvc
-mv jsvc ../..</pre>
+mv jsvc ../..</code></pre>
 </div>
 </div>
 </div>
@@ -208,11 +208,11 @@ mv jsvc ../..</pre>
 <div class="sect1">
 <h2 id="_starting_unix">Starting (unix)</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>sudo "$TOMEE_HOME/bin/jsvc" -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo "$TOMEE_HOME/bin/jsvc" -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
     "-javaagent:$TOMEE_HOME/lib/openejb-javaagent.jar" -outfile "$TOMEE_HOME/logs/catalina.out" \
-    -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</pre>
+    -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</code></pre>
 </div>
 </div>
 </div>
@@ -223,21 +223,21 @@ mv jsvc ../..</pre>
 <div class="paragraph">
 <p>For a 64-bit JVM such as OSX Lion</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>sudo arch -arch x86_64 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo arch -arch x86_64 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
     "-javaagent:$TOMEE_HOME/lib/openejb-javaagent.jar" -outfile "$TOMEE_HOME/logs/catalina.out" \
-    -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</pre>
+    -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>For a 32-bit JVM</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>sudo arch -arch i386 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo arch -arch i386 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
     "-javaagent:$TOMEE_HOME/lib/openejb-javaagent.jar" -outfile "$TOMEE_HOME/logs/catalina.out" \
-    -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</pre>
+    -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -258,25 +258,25 @@ as long as the resulting command is one long line.</p>
 <p>Ensure your <code>$TOME_HOME</code> and <code>$JAVA_HOME</code> variables are set correctly.
 You should see similar output with the following two commands</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>mingus:~ 01:51:37
+<pre class="highlight"><code class="language-bash" data-lang="bash">mingus:~ 01:51:37
 $ ls $TOMEE_HOME
 LICENSE     RELEASE-NOTES   bin     endorsed    logs        webapps
 NOTICE      RUNNING.txt conf        lib     temp        work
 
 mingus:~ 01:51:46
 $ ls $JAVA_HOME
-bin bundle  lib man</pre>
+bin bundle  lib man</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The <code>jsvc -debug</code> option can also show useful information for
 troubleshooting:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>$TOMEE_HOME/bin/jsvc -debug</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">$TOMEE_HOME/bin/jsvc -debug</code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -299,7 +299,7 @@ META-INF/. For example META-INF/org.router.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;ServiceJar&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ServiceJar&gt;
   &lt;ServiceProvider id="DeterminedRouter" service="Resource"
            type="org.apache.openejb.resource.jdbc.Router" class-name="implementation class"&gt;
     Param defaultValue
@@ -319,7 +319,7 @@ in our example it needs the proxied datasources too:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="router" type="&lt;your implementation&gt;" provider="&lt;your provider&gt;"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="router" type="&lt;your implementation&gt;" provider="&lt;your provider&gt;"&gt;
   Param value
 &lt;/Resource&gt;
 

@@ -98,9 +98,9 @@
                 <div class="sect1">
 <h2 id="_external_activemq_broker">External ActiveMQ Broker</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         # Do not start the embedded ActiveMQ broker
         BrokerXmlConfig  =
@@ -117,7 +117,7 @@
 
     &lt;Resource id="FooQueue" type="javax.jms.Queue"/&gt;
     &lt;Resource id="BarTopic" type="javax.jms.Topic"/&gt;
-&lt;/tomee&gt;</pre>
+&lt;/tomee&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -130,9 +130,9 @@ work, such as 'failover:'.</p>
 <div class="sect1">
 <h2 id="_internal_activemq_broker">Internal ActiveMQ Broker</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         BrokerXmlConfig =  broker:(tcp://someHostName:61616)
         ServerUrl       =  tcp://someHostName:61616
@@ -148,7 +148,7 @@ work, such as 'failover:'.</p>
 
     &lt;Resource id="FooQueue" type="javax.jms.Queue"/&gt;
     &lt;Resource id="BarTopic" type="javax.jms.Topic"/&gt;
-&lt;/tomee&gt;</pre>
+&lt;/tomee&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -162,9 +162,9 @@ work, such as 'failover:'.</p>
 config will automatically setup JDBC Persistence using the
 <code>org.apache.activemq.store.jdbc.JDBCPersistenceAdapter</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         BrokerXmlConfig =  broker:(tcp://someHostName:61616)
         ServerUrl       =  tcp://someHostName:61616
@@ -177,7 +177,7 @@ config will automatically setup JDBC Persistence using the
         UserName    = sa
         Password    = foo
     &lt;/Resource&gt;
-&lt;/tomee&gt;</pre>
+&lt;/tomee&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -229,9 +229,9 @@ for a basic example).</p>
 <p>Then use the <code>xbean:file:</code> url prefix in the <code>BrokerXmlConfig</code> as shown
 belog.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         BrokerXmlConfig =  xbean:file:conf/activemq.xml
         ServerUrl       =  tcp://someHostName:61616
@@ -247,7 +247,7 @@ belog.</p>
 
     &lt;Resource id="FooQueue" type="javax.jms.Queue"/&gt;
     &lt;Resource id="BarTopic" type="javax.jms.Topic"/&gt;
-&lt;/tomee&gt;</pre>
+&lt;/tomee&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -263,9 +263,9 @@ belog.</p>
 <p>The same can be done via properties in an embedded configuration, via
 the <code>conf/system.properties</code> file or on the command line via <code>-D</code> flags.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, LocalInitialContextFactory.class.getName());
 
 p.put("MyJmsResourceAdapter", "new://Resource?type=ActiveMQResourceAdapter");
@@ -281,7 +281,7 @@ p.put("MyJmsMdbContainer.ResourceAdapter", "MyJmsResourceAdapter");
 p.put("FooQueue", "new://Resource?type=javax.jms.Queue");
 p.put("BarTopic", "new://Resource?type=javax.jms.Topic");
 
-InitialContext context = new InitialContext(p);</pre>
+InitialContext context = new InitialContext(p);</code></pre>
 </div>
 </div>
 </div>
@@ -293,13 +293,13 @@ InitialContext context = new InitialContext(p);</pre>
 <p>From anywhere in the same VM as the EJB Container you could lookup the
 above resources like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>javax.jms.ConnectionFactory cf = (ConnectionFactory)
+<pre class="highlight"><code class="language-properties" data-lang="properties">javax.jms.ConnectionFactory cf = (ConnectionFactory)
         context.lookup("openejb:Resource/MyJmsConnectionFactory");
 
 javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
-javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");</pre>
+javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");</code></pre>
 </div>
 </div>
 </div>

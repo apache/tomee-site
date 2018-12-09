@@ -116,13 +116,13 @@ of the format:</p>
 <div class="paragraph">
 <p>..where id is the value in the config file for example:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Connector id="mysql"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Connector id="mysql"&gt;
     JdbcDriver com.mysql.jdbc.Driver
     JdbcUrl jdbc:mysql://localhost/test
     UserName test
-&lt;/Connector&gt;</pre>
+&lt;/Connector&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -149,9 +149,9 @@ fashion as things in the openejb.xml file.</p>
 <div class="paragraph">
 <p>For example, when OpenEJB starts it prints out the following:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  ** Starting Services **
+<pre class="highlight"><code class="language-java" data-lang="java">  ** Starting Services **
   NAME             IP          PORT
   httpejbd         0.0.0.0         4204
   telnet           0.0.0.0         4202
@@ -159,7 +159,7 @@ fashion as things in the openejb.xml file.</p>
   hsql             0.0.0.0         9001
   activemq         127.0.0.1       4206
   derbynet         0.0.0.0         4205
-  admin thread         0.0.0.0         4200</pre>
+  admin thread         0.0.0.0         4200</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -181,9 +181,9 @@ one of the following: bind, port, threads, disabled, only_from.</p>
 <p>So to set the address and port the ejbd service will bind to, simply
 specify this on the command line:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>./bin/openejb start -Dejbd.bind=192.168.1.12 -Dejbd.port=9988</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">./bin/openejb start -Dejbd.bind=192.168.1.12 -Dejbd.port=9988</code></pre>
 </div>
 </div>
 </div>

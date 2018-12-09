@@ -163,7 +163,7 @@ These values can be overridden in the <code>tomee.xml</code> or <code>openejb.xm
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;ServiceJar&gt;
   &lt;ServiceProvider
       id="genericra"
@@ -245,7 +245,7 @@ file as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="My Generic Adapter" type="GenericJMSRA" provider="org.superbiz:genericra"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="My Generic Adapter" type="GenericJMSRA" provider="org.superbiz:genericra"&gt;
 AdapterProperty1 PropertyValue1
 AdapterProperty2 PropertyValue2
 ...
@@ -257,7 +257,7 @@ AdapterProperty2 PropertyValue2
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myGenericAdapter = new://Resource?type=GenericJMSRA&amp;provider=org.superbiz:genericra
+<pre class="highlight"><code class="language-properties" data-lang="properties">myGenericAdapter = new://Resource?type=GenericJMSRA&amp;provider=org.superbiz:genericra
 myGenericAdapter.AdapterProperty1 = PropertyValue1
 myGenericAdapter.AdapterProperty2 = PropertyValue2</code></pre>
 </div>

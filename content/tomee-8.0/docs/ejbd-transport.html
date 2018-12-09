@@ -116,7 +116,7 @@ TomEE webapp. Here is the servlet as defined in TomEE webapp:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;servlet&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;servlet&gt;
     &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
     &lt;servlet-class&gt;org.apache.openejb.server.httpd.ServerServlet&lt;/servlet-class&gt;
 &lt;/servlet&gt;
@@ -242,7 +242,7 @@ this log entry:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">WARN - "null OEJP/4.7" FAIL "Security error - foo.Bar is not whitelisted as deserializable, prevented before loading it." - Debug for StackTrace</code></pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">WARN - "null OEJP/4.7" FAIL "Security error - foo.Bar is not whitelisted as deserializable, prevented before loading it." - Debug for StackTrace</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -256,7 +256,7 @@ on server side as well as on client side.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">tomee.serialization.class.whitelist = foo.Bar,foo.Baz
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist = foo.Bar,foo.Baz
 tomee.serialization.class.blacklist = -</code></pre>
 </div>
 </div>
@@ -266,7 +266,7 @@ this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">tomee.serialization.class.whitelist = foo.
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist = foo.
 tomee.serialization.class.blacklist = -</code></pre>
 </div>
 </div>
@@ -280,7 +280,7 @@ you have to configure the properties like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">tomee.serialization.class.whitelist = foo.
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist = foo.
 tomee.serialization.class.blacklist = foo.Bar</code></pre>
 </div>
 </div>
@@ -297,7 +297,7 @@ serialization will work in the same way as it did with TomEE 1.7.3:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">tomee.serialization.class.whitelist =
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist =
 tomee.serialization.class.blacklist = org.codehaus.groovy.runtime.,org.apache.commons.collections.functors.,org.apache.xalan,java.lang.Process</code></pre>
 </div>
 </div>
@@ -342,7 +342,7 @@ deactivate the blacklist with this configuration:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">tomee.serialization.class.whitelist =
+<pre class="highlight"><code class="language-properties" data-lang="properties">tomee.serialization.class.whitelist =
 tomee.serialization.class.blacklist = -</code></pre>
 </div>
 </div>

@@ -107,7 +107,7 @@ configuration options in the <strong>src/test/resources/arquillian.xml</strong>:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;container qualifier="tomee" default="true"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;container qualifier="tomee" default="true"&gt;
     &lt;configuration&gt;
         &lt;property name="httpPort"&gt;-1&lt;/property&gt;
         &lt;property name="stopPort"&gt;-1&lt;/property&gt;
@@ -130,7 +130,7 @@ configuration options in the <strong>src/test/resources/arquillian.xml</strong>:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;build&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;build&gt;
   &lt;plugins&gt;
     &lt;plugin&gt;
       &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
@@ -200,7 +200,7 @@ dependencies to your Maven pom.xml:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;dependency&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
   &lt;artifactId&gt;arquillian-tomee-embedded&lt;/artifactId&gt;
   &lt;version&gt;1.7.1&lt;/version&gt; &lt;!--Current version--&gt;
@@ -296,7 +296,7 @@ following System property:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;properties&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;properties&gt;
   &lt;tomee.version&gt;1.7.1&lt;/tomee.version&gt;
   &lt;tomee.classifier&gt;webprofile&lt;/tomee.classifier&gt;
 &lt;/properties&gt;
@@ -408,7 +408,7 @@ with <code>-Ptomee-webprofile-remote</code> specified as a <code>mvn</code> comm
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;profiles&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;profiles&gt;
 
   &lt;profile&gt;
     &lt;id&gt;tomee-embedded&lt;/id&gt;

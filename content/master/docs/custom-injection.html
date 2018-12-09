@@ -138,9 +138,9 @@ in the <a href="downloads.html">openejb-examples.zip</a> available on the
 <div class="sect1">
 <h2 id="_bean_class">Bean Class</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 public class Stratocaster {
 
     @Resource(name = "pickups")
@@ -184,7 +184,7 @@ public class Stratocaster {
     public File getCertificateOfAuthenticity() {
         return certificateOfAuthenticity;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -192,13 +192,13 @@ public class Stratocaster {
 <div class="sect1">
 <h2 id="_the_meta_inf_env_entries_properties_file">The META-INF/env-entries.properties file</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>guitarStringGuages=E1=0.052\nA=0.042\nD=0.030\nG=0.017\nB=0.013\nE=0.010
+<pre class="highlight"><code class="language-properties" data-lang="properties">guitarStringGuages=E1=0.052\nA=0.042\nD=0.030\nG=0.017\nB=0.013\nE=0.010
 certificateOfAuthenticity=/tmp/strat-certificate.txt
 dateCreated=1962-03-01
 pickups=S,S,S
-style=VINTAGE</pre>
+style=VINTAGE</code></pre>
 </div>
 </div>
 </div>
@@ -212,9 +212,9 @@ we&#8217;d like to allow abbreviated versions of the enum constants to be
 usable. We do this by creating a custom PropertyEditor for our Pickup
 enum like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class PickupEditor extends java.beans.PropertyEditorSupport {
+<pre class="highlight"><code class="language-java" data-lang="java">public class PickupEditor extends java.beans.PropertyEditorSupport {
     public void setAsText(String text) throws IllegalArgumentException {
         text = text.trim();
 
@@ -222,7 +222,7 @@ enum like so:</p>
         else if (text.equalsIgnoreCase("S")) setValue(Pickup.SINGLE_COIL);
         else throw new IllegalStateException("H and S are the only supported Pickup aliases");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -230,9 +230,9 @@ enum like so:</p>
 class that will be executed should someone actually reference the Pickup
 type.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public enum Pickup {
+<pre class="highlight"><code class="language-java" data-lang="java">public enum Pickup {
 
     HUMBUCKER,
     SINGLE_COIL;
@@ -243,15 +243,15 @@ type.</p>
     static {
         PropertyEditorManager.registerEditor(Pickup.class, PickupEditor.class);
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
 </div>
 <h1 id="_test_case" class="sect0">Test Case</h1>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class StratocasterTest extends TestCase {
+<pre class="highlight"><code class="language-java" data-lang="java">public class StratocasterTest extends TestCase {
 
     @EJB
     private Stratocaster strat;
@@ -279,7 +279,7 @@ type.</p>
 
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <h1 id="_running_it" class="sect0">Running it</h1>
@@ -297,9 +297,9 @@ directory of the openejb:download.html[examples zip], just run:</p>
 <div class="paragraph">
 <p>Which should create output like the following.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>-------------------------------------------------------
+<pre class="highlight"><code class="language-java" data-lang="java">-------------------------------------------------------
  T E S T S
 -------------------------------------------------------
 Running org.superbiz.enventries.StratocasterTest
@@ -323,7 +323,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.705 sec
 
 Results :
 
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</pre>
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0</code></pre>
 </div>
 </div>
             </div>

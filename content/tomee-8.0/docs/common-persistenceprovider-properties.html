@@ -107,7 +107,7 @@ various persistence providers out there.</p>
 <h1 id="_toplink" class="sect0">TopLink</h1>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;properties&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;properties&gt;
 
   &lt;!--http://www.oracle.com/technology/products/ias/toplink/JPA/essentials/toplink-jpa-extensions.html--&gt;
   &lt;property name="toplink.ddl-generation" value="drop-and-create-tables"/&gt;
@@ -120,7 +120,7 @@ various persistence providers out there.</p>
 <h1 id="_openjpa" class="sect0">OpenJPA</h1>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;properties&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;properties&gt;
   &lt;!--http://openjpa.apache.org/faq.html--&gt;
   &lt;!-- does not create foreign keys, creates schema and deletes content of a database
        (deleteTableContents - foreign keys are created twice???), use dropDB instead --&gt;
@@ -136,7 +136,7 @@ various persistence providers out there.</p>
 <h1 id="_hibernate" class="sect0">Hibernate</h1>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;properties&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;properties&gt;
   &lt;property name="hibernate.hbm2ddl.auto" value="create-drop"/&gt;
   &lt;property name="hibernate.transaction.manager_lookup_class" value="org.apache.openejb.hibernate.TransactionManagerLookup"/&gt;
 &lt;/properties&gt;</code></pre>

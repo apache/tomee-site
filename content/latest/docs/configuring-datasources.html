@@ -109,51 +109,51 @@ attributes.</p>
 <div class="paragraph">
 <p>For example, this annotation in your bean:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Resource(name = "myDerbyDatasource", type = javax.sql.DataSource.class)</pre>
+<pre class="highlight"><code class="language-java" data-lang="java">@Resource(name = "myDerbyDatasource", type = javax.sql.DataSource.class)</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Would map to a Resource declared in your openejb.xml as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myDerbyDatasource" type="javax.sql.DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="javax.sql.DataSource"&gt;
  . . . .
-&lt;Resource&gt;</pre>
+&lt;Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Note that in the xml element, the <em>type</em> value of <em>javax.sql.DataSource</em>
 can abbreviated to just <em>DataSource</em> as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myDerbyDatasource" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="DataSource"&gt;
  . . . .
-&lt;Resource&gt;</pre>
+&lt;Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>It is also possible to specify the path to the driver jar file using a
 classpath attribute like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar"&gt;
  . . . .
-&lt;Resource&gt;</pre>
+&lt;Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>&#8230;&#8203;Or in a <a href="http://maven.apache.org/">Maven</a> environment like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1"&gt;
  . . . .
-&lt;Resource&gt;</pre>
+&lt;Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -187,11 +187,11 @@ other business criteria. That&#8217;s also an available feature. See
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_example_1">Example 1</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="Default JDBC Database" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Default JDBC Database" type="DataSource"&gt;
    . . . . .
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -201,11 +201,11 @@ Database</em></p>
 </div>
 <div class="sect2">
 <h3 id="_example_2">Example 2</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="Derby Database"  type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="Derby Database"  type="DataSource"&gt;
   . . . . .
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -246,11 +246,11 @@ example of Derby.</p>
 <div class="paragraph">
 <p>With a Resource declaration in your openejb.xml like this:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="myDerbyDatabase"  type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDerbyDatabase"  type="DataSource"&gt;
   . . . . .
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -259,32 +259,32 @@ example of Derby.</p>
 <div class="paragraph">
 <p><em>BY matching variable name to resource name</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 public class FooBean {
     @Resource DataSource myDerbyDatabase;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><em>OR BY matching name</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 public class FooBean {
     @Resource(name="myDerbyDatabase")
     DataSource dataSource;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><em>OR BY JNDI lookup</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Resource(name="myDerbyDatabase", type=javax.sql.DataSource.class)
+<pre class="highlight"><code class="language-java" data-lang="java">@Resource(name="myDerbyDatabase", type=javax.sql.DataSource.class)
 @Stateless
 public class FooBean {
 
@@ -298,41 +298,41 @@ public class FooBean {
         DataSource dataSource = (DataSource)
         initialContext.lookup("java:comp/env/myDerbyDatabase");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><em>OR</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
   &lt;res-ref-name&gt;myDerbyDatabase&lt;/res-ref-name&gt;
   &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
-&lt;/resource-ref&gt;</pre>
+&lt;/resource-ref&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><em>OR</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
    &lt;res-ref-name&gt;jdbc/myDerbyDatabase&lt;/res-ref-name&gt;
    &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
-&lt;/resource-ref&gt;</pre>
+&lt;/resource-ref&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><em>OR</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
    &lt;res-ref-name&gt;someOtherName&lt;/res-ref-name&gt;
    &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
    &lt;mapped-name&gt;myDerbyDatabase&lt;/mapped-name&gt;
-&lt;/resource-ref&gt;</pre>
+&lt;/resource-ref&gt;</code></pre>
 </div>
 </div>
 </div>

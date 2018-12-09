@@ -88,17 +88,15 @@
           <div class="col-md-12">
             <div class='page-header'>
               
-              <h1>null</h1>
+              <h1>Debugging an Apache</h1>
             </div>
           </div>
         </div>
         <div class="row">
             
             <div class="col-md-12">
-                <div class="paragraph">
-<p>#Debugging an Apache
-TomEE App in Intellij IDEA</p>
-</div>
+                <div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>Stepping through the <a href="http://tomee.apache.org/apache-tomee.html">TomEE</a>
 source code is a must-to-follow step if you want to understand how TomEE
@@ -121,9 +119,11 @@ debugging session with TomEE as a TomEE developer.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>###Download the Source Code</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_download_the_source_code">Download the Source Code</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>For beginners it is recommended not to start with the trunk, because it
 is common to have some blockers or non-stable functionality which could
@@ -135,9 +135,11 @@ modification on TomEE.</p>
 <p><a href="http://www.apache.org/dyn/closer.cgi/tomee/tomee-1.7.1/openejb-4.7.1-source-release.zip">Click
 here to download TomEE 1.7.1 Source code</a></p>
 </div>
-<div class="paragraph">
-<p>###Build the Source Code</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_build_the_source_code">Build the Source Code</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>First extract the zip file named <strong>openejb-4.7.1-source-release.zip</strong> to
 any location. Lets assume it is your home folder.</p>
@@ -171,9 +173,11 @@ clean install</p>
 <p>More details about building the product from the source can be found
 <a href="http://tomee.apache.org/dev/source-code.html">here</a>.</p>
 </div>
-<div class="paragraph">
-<p>###Deploy TomEE</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_deploy_tomee">Deploy TomEE</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The TomEE build builds several distributions (zip &amp; war files) to cater
 the different needs of different users. Here we discuss about the tomee
@@ -216,9 +220,11 @@ folder. Lets run the TomEE.</p>
 <div class="paragraph">
 <p>"INFO: Server startup in xxxx ms" is the Green light!</p>
 </div>
-<div class="paragraph">
-<p>###Prepare your IDE</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_prepare_your_ide">Prepare your IDE</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Lets prepare our IntelliJ IDEA for the debugging session.</p>
 </div>
@@ -270,9 +276,11 @@ folder. Lets run the TomEE.</p>
 <div class="paragraph">
 <p>Now your IDE will load the project.</p>
 </div>
-<div class="paragraph">
-<p>###First Breakpoint</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_first_breakpoint">First Breakpoint</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Next step is to put a breakpoint at the place where the code is
 triggered. Lets understand how the code is triggered.</p>
@@ -291,9 +299,11 @@ ServerListener.</p>
 <p>The execution of TomEE code starts in this lifecycleEvent method. So the
 first breakpoint should be on the lifecycleEvent method.</p>
 </div>
-<div class="paragraph">
-<p>###Run TomEE+ in debug mode</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_run_tomee_in_debug_mode">Run TomEE+ in debug mode</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you simply run <strong>catalina.sh jpda run</strong> in the bin folder of tomee
 deployment, the server starts in the debug mode but it will quckly pass
@@ -311,7 +321,7 @@ right after the #!/bin/sh line.</p>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
-<p>#!/bin/sh JPDA_SUSPEND="y"</p>
+<p>= !/bin/sh JPDA_SUSPEND="y"</p>
 </div>
 <div class="paragraph">
 <p>Now to time to run TomEE+ on debug mode.</p>
@@ -329,9 +339,11 @@ right after the #!/bin/sh line.</p>
 <p>The terminal should hang with the message <strong>"Listening for transport
 dt_socket at address: 8000"</strong></p>
 </div>
-<div class="paragraph">
-<p>###Attach IntelliJ IDEA debugger</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_attach_intellij_idea_debugger">Attach IntelliJ IDEA debugger</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -365,6 +377,8 @@ the Port to 8000</p>
 <div class="paragraph">
 <p>Congratulations! You hit the break point you put at the startup of the
 TomEE code. Carry on with your debugging session to learn more.</p>
+</div>
+</div>
 </div>
             </div>
             

@@ -88,72 +88,76 @@
           <div class="col-md-12">
             <div class='page-header'>
               
-              <h1>null</h1>
+              <h1>Application Composer Getting Started</h1>
             </div>
           </div>
         </div>
         <div class="row">
             
             <div class="col-md-12">
-                <div class="sect1">
-<h2 id="_application_composer_getting_started">Application Composer Getting Started</h2>
+                <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>ApplicationComposer API is mainly contained in
 <code>org.apache.openejb.testing</code> package (historically, today we would have
 called the package <code>org.apache.tomee.applicationcomposer</code>).</p>
 </div>
-<div class="sect2">
-<h3 id="_dependencies">Dependencies</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dependencies">Dependencies</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>To start using ApplicationComposer you need to add some dependencies.</p>
 </div>
 <div class="paragraph">
 <p>The minimum required one is <code>openejb-core</code>:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;dependency&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
   &lt;artifactId&gt;openejb-core&lt;/artifactId&gt;
   &lt;version&gt;${openejb.version&gt;&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+&lt;/dependency&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If you need JAXRS services you&#8217;ll add (or replace thanks to transitivity
 of maven) <code>openejb-cxf-rs</code>:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;dependency&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
   &lt;artifactId&gt;openejb-cxf-rs&lt;/artifactId&gt;
   &lt;version&gt;${openejb.version&gt;&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+&lt;/dependency&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>If you need JAXWS services you&#8217;ll add (or replace thanks to transitivity
 of maven) <code>openejb-cxf</code>:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;dependency&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.openejb&lt;/groupId&gt;
   &lt;artifactId&gt;openejb-cxf&lt;/artifactId&gt;
   &lt;version&gt;${openejb.version&gt;&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+&lt;/dependency&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>etc&#8230;&#8203;</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_applicationcomposer_components">ApplicationComposer Components</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_applicationcomposer_components">ApplicationComposer Components</h3>
-<div class="sect3">
-<h4 id="__module">@Module</h4>
+<h3 id="__module">@Module</h3>
 <div class="paragraph">
 <p>An ApplicationComposer needs at minimum a module (the application you
 need to deploy).</p>
@@ -218,18 +222,18 @@ module and some scanned classes. For instance the following snippet will
 create a web application with classes C1, C2 as CDI beans and E1 as an
 EJB automatically:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Module
+<pre class="highlight"><code class="language-java" data-lang="java">@Module
 @Classes(cdi = true, value = { C1.class, C2.class, E1.class })
 public WebApp app() {
     return new WebApp();
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="__configuration">@Configuration</h4>
+<div class="sect2">
+<h3 id="__configuration">@Configuration</h3>
 <div class="paragraph">
 <p>Often you need to customize a bit the container or at least create some
 resources like test databases. To do so you can create a method
@@ -246,35 +250,35 @@ resources.</p>
 <div class="paragraph">
 <p>Here is a sample:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Configuration
+<pre class="highlight"><code class="language-java" data-lang="java">@Configuration
 public Properties configuration() {
     return new PropertiesBuilder()
         .p("db", "new://Resource?type=DataSource")
         .p("db.JdbcUrld", "jdbc:hsqldb:mem:test")
         .build();
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Since TomEE 2.x you can also put properties on ApplicationComposer class
 using <code>@ContainerProperties</code> API:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@ContainerProperties({
+<pre class="highlight"><code class="language-java" data-lang="java">@ContainerProperties({
   @ContainerProperties.Property(name = "db", value = "new://Resource?type=DataSource"),
   @ContainerProperties.Property(name = "db.JdbcUrl", value = "jdbc:hsqldb:mem:test")
 })
 public class MyAppComposer() {
   // ...
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="__component">@Component</h4>
+<div class="sect2">
+<h3 id="__component">@Component</h3>
 <div class="paragraph">
 <p>Sometimes you need to customize a container component. The most common
 use case is the security service to mock a little bit authorization if
@@ -289,20 +293,22 @@ instance you desire.</p>
 be a <code>Class</code>. This one is deduced from the returned type of the
 <code>@Component</code> method:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Component
+<pre class="highlight"><code class="language-java" data-lang="java">@Component
 public SecurityService mockSecurity() {
     return new MySecurityService();
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_run_it">How to run it?</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_how_to_run_it">How to run it?</h3>
-<div class="sect3">
-<h4 id="_junit">JUnit</h4>
+<h3 id="_junit">JUnit</h3>
 <div class="paragraph">
 <p>If you use JUnit you have mainly 2 solutions to run you "model" using
 the ApplicationComposer:</p>
@@ -339,8 +345,8 @@ service for instance).</p>
 test class was a managed bean!</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_testng">TestNG</h4>
+<div class="sect2">
+<h3 id="_testng">TestNG</h3>
 <div class="paragraph">
 <p>TestNG integration is quite simple today and mainly
 <code>ApplicationComposerListener</code> class you can configure as a listener to
@@ -351,21 +357,21 @@ get ApplicationComposer features.</p>
 if the test class was a managed bean!</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_standalone">Standalone</h4>
+<div class="sect2">
+<h3 id="_standalone">Standalone</h3>
 <div class="paragraph">
 <p>Since TomEE 2.x you can also use <code>ApplicationComposers</code> to directly run
 you ApplicationComposer model as a standalone application:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>public class MyApp {
+<pre class="highlight"><code class="language-java" data-lang="java">public class MyApp {
     public static void main(String[] args) {
         ApplicationComposers.run(MyApp.class, args);
     }
 
     // @Module, @Configuration etc...
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -377,11 +383,13 @@ depending it!)</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_junit_sample">JUnit Sample</h3>
-<div class="literalblock">
+</div>
+<div class="sect1">
+<h2 id="_junit_sample">JUnit Sample</h2>
+<div class="sectionbody">
+<div class="listingblock">
 <div class="content">
-<pre>@Classes(cdi = true, value = { MyService.class, MyOtherService.class })
+<pre class="highlight"><code class="language-java" data-lang="java">@Classes(cdi = true, value = { MyService.class, MyOtherService.class })
 @ContainerProperties(@ContainerProperties.Property(name = "myDb", value = "new://Resource?type=DataSource"))
 @RunWith(ApplicationComposer.class)
 public class MyTest {
@@ -395,16 +403,17 @@ public class MyTest {
     public void myTest() {
         // do test using injections
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_going_further">Going further</h3>
+</div>
+<div class="sect1">
+<h2 id="_going_further">Going further</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you want to learn more about ApplicationComposer see
 <a href="advanced.html">Advanced</a> page.</p>
-</div>
 </div>
 </div>
 </div>

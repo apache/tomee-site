@@ -103,7 +103,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Container id="myCmpEntityContainer" type="CMP_ENTITY"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myCmpEntityContainer" type="CMP_ENTITY"&gt;
     cmpEngineFactory = org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory
 &lt;/Container&gt;</code></pre>
 </div>
@@ -117,7 +117,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myCmpEntityContainer = new://Container?type=CMP_ENTITY
+<pre class="highlight"><code class="language-properties" data-lang="properties">myCmpEntityContainer = new://Container?type=CMP_ENTITY
 myCmpEntityContainer.cmpEngineFactory = org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory</code></pre>
 </div>
 </div>

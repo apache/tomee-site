@@ -261,9 +261,9 @@ state.</p>
 <div class="sect1">
 <h2 id="_on_methods">On Methods</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 public static class MyBean implements MyBusinessInterface {
 
     @TransactionAttribute(TransactionAttributeType.MANDATORY)
@@ -274,7 +274,7 @@ public static class MyBean implements MyBusinessInterface {
     public String codeBlue(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -292,9 +292,9 @@ public static class MyBean implements MyBusinessInterface {
 <div class="sect1">
 <h2 id="_on_classes">On Classes</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @TransactionAttribute(TransactionAttributeType.MANDATORY)
 public static class MyBean implements MyBusinessInterface {
 
@@ -305,7 +305,7 @@ public static class MyBean implements MyBusinessInterface {
     public String codeBlue(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -321,9 +321,9 @@ public static class MyBean implements MyBusinessInterface {
 <div class="sect1">
 <h2 id="_mixed_on_classes_and_methods">Mixed on classes and methods</h2>
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @TransactionAttribute(TransactionAttributeType.SUPPORTS)
 public static class MyBean implements MyBusinessInterface {
 
@@ -340,7 +340,7 @@ public static class MyBean implements MyBusinessInterface {
     public String codeGreen(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -366,9 +366,9 @@ methods and most callbacks.</p>
 <div class="paragraph">
 <p>The following usages of @TransactionAttribute have no effect.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateful
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateful
 public class MyStatefulBean implements  MyBusinessInterface  {
 
     @PostConstruct
@@ -400,7 +400,7 @@ public class MyStatefulBean implements  MyBusinessInterface  {
     public void passivate(){
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
             </div>

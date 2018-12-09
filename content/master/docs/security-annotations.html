@@ -155,9 +155,9 @@ methods</p>
 <div class="paragraph">
 <p>These three examples are all equivalent.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 public class OpenSourceProjectBean implements Project {
 
     public String svnCheckout(String s) {
@@ -183,7 +183,7 @@ public class OpenSourceProjectBean implements Project {
     public String svnCheckout(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -202,9 +202,9 @@ public class OpenSourceProjectBean implements Project {
 <p>Restrict the 'svnCommit' method to only individuals logged in and part
 of the "committer" role. Note that more than one role can be listed.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @DeclareRoles({"committer"})
 public class OpenSourceProjectBean implements Project {
 
@@ -216,7 +216,7 @@ public class OpenSourceProjectBean implements Project {
     public String svnCheckout(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -239,9 +239,9 @@ public class OpenSourceProjectBean implements Project {
 <p>You need to update the @DeclareRoles when referencing roles via
 isCallerInRole(roleName).</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @DeclareRoles({"committer", "contributor"})
 public class OpenSourceProjectBean implements Project {
 
@@ -257,7 +257,7 @@ public class OpenSourceProjectBean implements Project {
     public String submitPatch(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -269,9 +269,9 @@ public class OpenSourceProjectBean implements Project {
 <p>Placing the annotation at the class level changes the default of
 PermitAll</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @DeclareRoles({"committer"})
 @RolesAllowed({"committer"})
 public class OpenSourceProjectBean implements Project {
@@ -287,7 +287,7 @@ public class OpenSourceProjectBean implements Project {
     public String submitPatch(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -308,9 +308,9 @@ public class OpenSourceProjectBean implements Project {
 the same time. These rules do not stack, so marking 'submitPatch'
 overrides the default of "committers".</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @DeclareRoles({"committer", "contributor"})
 @RolesAllowed({"committer"})
 public class OpenSourceProjectBean implements Project {
@@ -327,7 +327,7 @@ public class OpenSourceProjectBean implements Project {
     public String submitPatch(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -352,9 +352,9 @@ public class OpenSourceProjectBean implements Project {
 annotation becomes very useful on individual methods to open them back
 up again.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @DeclareRoles({"committer", "contributor"})
 @RolesAllowed({"committer"})
 public class OpenSourceProjectBean implements Project {
@@ -372,7 +372,7 @@ public class OpenSourceProjectBean implements Project {
     public String submitPatch(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -400,9 +400,9 @@ public class OpenSourceProjectBean implements Project {
 access from anyone, logged in or not. The method is still invokable from
 within the bean class itself.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @DeclareRoles({"committer", "contributor"})
 @RolesAllowed({"committer"})
 public class OpenSourceProjectBean implements Project {
@@ -425,7 +425,7 @@ public class OpenSourceProjectBean implements Project {
     public String deleteProject(String s) {
     return s;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -456,9 +456,9 @@ and most callbacks.</p>
 <div class="paragraph">
 <p>The following usages of @RolesAllowed have no effect.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateful
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateful
 @DecalredRoles({"committer"})
 public class MyStatefulBean implements  MyBusinessInterface  {
 
@@ -476,15 +476,15 @@ public class MyStatefulBean implements  MyBusinessInterface  {
 
     @AroundInvoke
     @RolesAllowed({"committer"})
-    public Object invoke(InvocationContext invocationContext) throws</pre>
+    public Object invoke(InvocationContext invocationContext) throws</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Exception \{ return invocationContext.proceed(); }</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>    @PostActivate
+<pre class="highlight"><code class="language-java" data-lang="java">    @PostActivate
     @RolesAllowed({"committer"})
     public void activated(){
 
@@ -495,7 +495,7 @@ public class MyStatefulBean implements  MyBusinessInterface  {
     public void passivate(){
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
             </div>

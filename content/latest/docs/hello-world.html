@@ -185,17 +185,17 @@ file under this directory - <em>logs</em>: Contains log files.</p>
 <div class="paragraph">
 <p>create a directory named projects</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~$ mkdir projects</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~$ mkdir projects</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Go to the projects directory</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~$ cd projects</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~$ cd projects</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -204,9 +204,9 @@ install Java (version 5 or higher). Also set it up so that you can run
 the java and javac commands from any directory </mark># Set OPENEJB_HOME We
 will setup this variable to refer to the openejb install location.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ export</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ export</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -222,14 +222,14 @@ will setup this variable to refer to the openejb install location.</p>
 <p>projects directory <mark>#</mark> Create the Remote Interface Using your favorite
 editor, create a file named Hello.java (shown below)</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.acme;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.acme;
 import javax.ejb.Remote;
 @Remote
 public interface Hello{
     public String sayHello();
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="sect2">
@@ -237,16 +237,16 @@ public interface Hello{
 <div class="paragraph">
 <p>below)</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.acme;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.acme;
 import javax.ejb.Stateless;
 @Stateless
 public class HelloBean implements Hello{
     public String sayHello(){
         return "Hello World!!!!";
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -258,9 +258,9 @@ our classpath to compile our source code. These annotations can be found
 in the $OPENEJB_HOME/lib/javaee-5.0-1.jar. Lets compile our source (make
 sure you are in the projects directory)</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ javac -cp $OPENEJB_HOME/lib/javaee-5.0-1.jar -d</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ javac -cp $OPENEJB_HOME/lib/javaee-5.0-1.jar -d</code></pre>
 </div>
 </div>
 <div class="olist arabic">
@@ -277,9 +277,9 @@ directory. All class files should be under org/acme directory. <mark>#</mark>
 Package the EJB To package the EJB into a JAR, run the following command
 while you are in the projects directory</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ jar cvf hello.jar org</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ jar cvf hello.jar org</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -287,14 +287,14 @@ while you are in the projects directory</p>
 (including the org directory itself) into a jar file named hello.jar.
 Below is the output from running the above command:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ jar cvf hello.jar org
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ jar cvf hello.jar org
 added manifest
 adding: org/(in = 0) (out= 0)(stored 0%)
 adding: org/acme/(in = 0) (out= 0)(stored 0%)
 adding: org/acme/Hello.class(in = 203) (out= 168)(deflated 17%)
-adding: org/acme/HelloBean.class(in = 383) (out= 275)(deflated 28%)</pre>
+adding: org/acme/HelloBean.class(in = 383) (out= 275)(deflated 28%)</code></pre>
 </div>
 </div>
 </div>
@@ -309,15 +309,15 @@ value returned from the method. While you are in the projects directory,
 create a new file named HelloClient.java . Add the following to this
 file:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.acme;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.acme;
 import java.util.Properties;
 import javax.naming.InitialContext;
 import javax.naming.Context;
 import javax.rmi.PortableRemoteObject;
 public class HelloClient{
-        public static void main(String[]</pre>
+        public static void main(String[]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -332,9 +332,9 @@ result = h.sayHello(); System.out.println(result); } }</p>
 </div>
 <div class="sect2">
 <h3 id="_compile_helloclient_java_run_the_following_command">Compile HelloClient.java Run the following command:</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ javac  -d . HelloClient.java</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ javac  -d . HelloClient.java</code></pre>
 </div>
 </div>
 </div>
@@ -346,22 +346,22 @@ result = h.sayHello(); System.out.println(result); } }</p>
 <div class="paragraph">
 <p>OPENEJB_HOME) and run the following command:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/install/openejb-3.0$ bin/openejb start</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/install/openejb-3.0$ bin/openejb start</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Once the Server starts, you will see an output similar to the below in
 your console:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/install/openejb-3.0$ bin/openejb start
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/install/openejb-3.0$ bin/openejb start
 Apache OpenEJB 3.0    build: 20070926-12:34
 http://tomee.apache.org/
 OpenEJB ready.
-[OPENEJB:init]</pre>
+[OPENEJB:init]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -380,22 +380,22 @@ directories. ## Deploy the EJB We will now use the deploy command to
 deploy the EJB in hello.jar. While you are in the projects directory,
 run the following command:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ $OPENEJB_HOME/bin/openejb deploy hello.jar</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ $OPENEJB_HOME/bin/openejb deploy hello.jar</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The above command should give you the following output:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ $OPENEJB_HOME/bin/openejb deploy hello.jar
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ $OPENEJB_HOME/bin/openejb deploy hello.jar
 Application deployed successfully at "hello.jar"
 App(id=/home/karan/projects/hello.jar)
     EjbJar(id=hello.jar, path=/home/karan/projects/hello.jar)
     Ejb(ejb-name=HelloBean, id=HelloBean)
-        Jndi(name=HelloBeanRemote)</pre>
+        Jndi(name=HelloBeanRemote)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -405,9 +405,9 @@ the JNDI name we used in the client to lookup the EJB ## Run the Client
 While you are in the projects directory, run the following command to
 run the client:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>karan@poweredge:~/projects$ java -cp</pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">karan@poweredge:~/projects$ java -cp</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -417,9 +417,9 @@ org.acme.HelloClient</p>
 <div class="paragraph">
 <p>The above should give you the following output:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Hello World!!!!</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">Hello World!!!!</code></pre>
 </div>
 </div>
 </div>

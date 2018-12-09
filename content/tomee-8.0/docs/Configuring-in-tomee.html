@@ -95,7 +95,9 @@
         <div class="row">
             
             <div class="col-md-12">
-                <div class="admonitionblock note">
+                <div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
@@ -118,9 +120,11 @@ License.
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>###Configuring Resources:</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_resources">Configuring Resources:</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -150,7 +154,7 @@ License.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="moviesDatabase" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="moviesDatabase" type="DataSource"&gt;
 JdbcDriver org.hsqldb.jdbcDriver
 JdbcUrl jdbc:mysql:localhost:3306/moviesdb
 UserName sa
@@ -163,6 +167,8 @@ JtaManaged true
 <p>For more on how to configure, read through
 <a href="/configuring-datasources.html">configuring-datasources</a>,
 <a href="containers-and-resources.html">containers-and-resources</a> docs.</p>
+</div>
+</div>
 </div>
             </div>
             

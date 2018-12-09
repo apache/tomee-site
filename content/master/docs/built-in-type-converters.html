@@ -245,9 +245,9 @@ via plain properties in a META-INF/env-entries.properties file.</p>
 java.lang.String and it will be converted on the fly to the field/setter
 type used by the bean class. For example:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.superbiz.foo;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.superbiz.foo;
 
 import java.util.Date;
 
@@ -256,15 +256,15 @@ public class MyBean {
 
     @Resource
     private Date myDate;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Works with an ejb-jar.xml as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0"
 metadata-complete="false"&gt;
   &lt;enterprise-beans&gt;
     &lt;session&gt;
@@ -276,15 +276,15 @@ metadata-complete="false"&gt;
       &lt;/env-entry&gt;
     &lt;/session&gt;
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or with an env-entries.properties file as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>org.superbiz.foo.MyBean/myDate = 2008-04-19</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">org.superbiz.foo.MyBean/myDate = 2008-04-19</code></pre>
 </div>
 </div>
             </div>

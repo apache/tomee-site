@@ -135,14 +135,14 @@ breeze.</p>
 Hello World example. As you can see, the file format is extremely
 simple.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
 &lt;openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1"&gt;
     &lt;ejb-deployment  ejb-name="Hello"
          deployment-id="Hello"
          container-id="Default Stateless Container"/&gt;
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -159,9 +159,9 @@ your jar.</p>
 <div class="paragraph">
 <p>Then you simply add a element to your element like this</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
 &lt;openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1"&gt;
 
     &lt;ejb-deployment  ejb-name="Hello"
@@ -173,7 +173,7 @@ your jar.</p>
 
     &lt;/ejb-deployment&gt;
 
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -189,9 +189,9 @@ and provide access to the desired resource.</p>
 <p>You will need one element for every element in your ejb-jar.xml. So if
 you had an ejb-jar.xml like the following</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
 &lt;ejb-jar&gt;
   &lt;enterprise-beans&gt;
     &lt;session&gt;
@@ -222,16 +222,16 @@ you had an ejb-jar.xml like the following</p>
 
     &lt;/session&gt;
   &lt;/enterprise-beans&gt;
-&lt;/ejb-jar&gt;</pre>
+&lt;/ejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Then you would need two elements for that bean in your openejb-jar.xml
 file as such.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0"?&gt;
 &lt;openejb-jar xmlns="http://www.openejb.org/openejb-jar/1.1"&gt;
 
     &lt;ejb-deployment  ejb-name="MyExampleBean"
@@ -246,7 +246,7 @@ file as such.</p>
 
     &lt;/ejb-deployment&gt;
 
-&lt;/openejb-jar&gt;</pre>
+&lt;/openejb-jar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">

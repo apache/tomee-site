@@ -133,9 +133,11 @@ script</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>##Install openejb.war</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_install_openejb_war">Install openejb.war</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Once Tomcat has been <a href="tomcat-installation.html">installed</a> , the
 OpenEJB plugin for Tomcat can be installed. The war can be obtained from
@@ -191,7 +193,7 @@ your conf/server.xml file to load the OpenEJB listener:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;!-- Note:  A "Server" is not itself a "Container", so you may not
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;!-- Note:  A "Server" is not itself a "Container", so you may not
 define subcomponents such as "Valves" at this
 level.
 Documentation at /docs/config/server.html
@@ -238,7 +240,7 @@ bin/catalina.sh (Unix) file to enable the OpenEJB javaagent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">if not exist "%CATALINA_BASE%\conf\logging.properties" goto noJuli
+<pre class="highlight"><code class="language-properties" data-lang="properties">if not exist "%CATALINA_BASE%\conf\logging.properties" goto noJuli
 set JAVA_OPTS=%JAVA_OPTS%
 -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
 -Djava.util.logging.config.file="%CATALINA_BASE%\conf\logging.properties"
@@ -277,9 +279,13 @@ fi
 #End of Snippet to add</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note_the_example_above_is_an_excerpt_from_the_middle_of_the">Note: The example above is an excerpt from the middle of the</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>##Note: The example above is an excerpt from the middle of the
-bin/catalina.sh file. Search for the this section and add the snippet
+<p>bin/catalina.sh file. Search for the this section and add the snippet
 shown</p>
 </div>
 </div>

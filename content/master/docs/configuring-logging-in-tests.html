@@ -146,9 +146,9 @@ replace it completely if all you want to do is tweak a few values.</p>
 <p>You can also put logging tweaks right in your InitialContext properties
 like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.core.LocalInitialContextFactory");
 
 p.put("log4j.rootLogger", "fatal,C");
@@ -167,7 +167,7 @@ p.put("log4j.category.openjpa", "error");
 p.put("log4j.appender.C", "org.apache.log4j.ConsoleAppender");
 p.put("log4j.appender.C.layout", "org.apache.log4j.SimpleLayout");
 
-Context context = new InitialContext(p);</pre>
+Context context = new InitialContext(p);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -206,9 +206,9 @@ source of logging information.</p>
 <p>For your purposes, here are the contents of the default
 embedded.logging.properties file contained in OpenEJB 3.1.1</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>log4j.rootLogger           = fatal,C
+<pre class="highlight"><code class="language-properties" data-lang="properties">log4j.rootLogger           = fatal,C
 log4j.category.OpenEJB         = warn
 log4j.category.OpenEJB.server      = info
 log4j.category.OpenEJB.startup     = info
@@ -222,7 +222,7 @@ log4j.category.org.apache.geronimo = error
 log4j.category.openjpa         = error
 
 log4j.appender.C           = org.apache.log4j.ConsoleAppender
-log4j.appender.C.layout        = org.apache.log4j.SimpleLayout</pre>
+log4j.appender.C.layout        = org.apache.log4j.SimpleLayout</code></pre>
 </div>
 </div>
 <div class="paragraph">

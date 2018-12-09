@@ -105,7 +105,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myDataSource" type="javax.sql.DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myDataSource" type="javax.sql.DataSource"&gt;
     accessToUnderlyingConnectionAllowed = false
     alternateUsernameAllowed = false
     connectionProperties =
@@ -145,7 +145,7 @@ via the <code>javax.ejb.embeddable.EJBContainer</code> API or <code>InitialConte
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myDataSource = new://Resource?type=javax.sql.DataSource
+<pre class="highlight"><code class="language-properties" data-lang="properties">myDataSource = new://Resource?type=javax.sql.DataSource
 myDataSource.accessToUnderlyingConnectionAllowed = false
 myDataSource.alternateUsernameAllowed = false
 myDataSource.connectionProperties =
@@ -772,7 +772,7 @@ XaDataSource can be defined as a standard resource using <code>class-name</code>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myXaDs" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myXaDs" type="DataSource"&gt;
     JdbcDriver = org.foo.MyXaDataSource
 
     myXaProperty = value
@@ -803,7 +803,7 @@ factory mecanism.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myXa" class-name="org.foo.MyXaDataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myXa" class-name="org.foo.MyXaDataSource"&gt;
     myXaProperty = value
 &lt;/Resource&gt;</code></pre>
 </div>
@@ -813,7 +813,7 @@ factory mecanism.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Resource id="myXaDs" type="DataSource"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="myXaDs" type="DataSource"&gt;
     DataSourceCreator = [dbcp|dbcp-alternative]
     myPoolProperty = 10
 &lt;/Resource&gt;</code></pre>
@@ -831,7 +831,7 @@ because it is reusing direct dbcp JTA management.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java"> openejb.datasource.pool = true</code></pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties"> openejb.datasource.pool = true</code></pre>
 </div>
 </div>
 <div class="paragraph">

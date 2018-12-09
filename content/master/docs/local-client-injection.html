@@ -145,9 +145,9 @@ wishes.</p>
 LocalInitialContextFactory and calling <em>bind("inject", instance)</em>
 passing in the instantiated local client object:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@LocalClient
+<pre class="highlight"><code class="language-java" data-lang="java">@LocalClient
 public class MoviesTest extends TestCase {
 
     @EJB
@@ -167,7 +167,7 @@ public class MoviesTest extends TestCase {
     }
 
     //... other test methods
-}</pre>
+}</code></pre>
 </div>
 </div>
 <h1 id="_discovery" class="sect0">Discovery</h1>

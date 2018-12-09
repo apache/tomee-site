@@ -104,9 +104,9 @@ your wish has come true. This is a feature we intended to add to OpenEJB
 release and with a bit of luck and support from people like yourself,
 we&#8217;ll see this as an EJB 3.1 feature as well.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 public class WidgetBean implements Widget {
 
     @EJB(beanName = "FooBean")
@@ -131,16 +131,16 @@ public class WidgetBean implements Widget {
     public Foo getFoo() {
     return foo;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>The @EJB, @Resource, @PersistenceUnit, and @PersistenceContext
 annotations can be placed at the class-level instead such as:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 @EJB(name = "foo", beanInterface = Foo.class, beanName = "FooBean")
 @Resource(name = "count", type = int.class)
 @Resource(name = "ds", type = DataSource.class)
@@ -157,7 +157,7 @@ public class WidgetBean implements Widget {
     public Foo getFoo() {
     return foo;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -178,9 +178,9 @@ sending note to
 <div class="paragraph">
 <p>Not yet possible</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>@Stateless
+<pre class="highlight"><code class="language-java" data-lang="java">@Stateless
 
 public class WidgetBean implements Widget {
 
@@ -195,7 +195,7 @@ public class WidgetBean implements Widget {
     public Foo getFoo() {
         return foo;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
             </div>

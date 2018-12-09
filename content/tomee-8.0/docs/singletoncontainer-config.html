@@ -105,7 +105,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Container id="mySingletonContainer" type="SINGLETON"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="mySingletonContainer" type="SINGLETON"&gt;
     accessTimeout = 30 seconds
 &lt;/Container&gt;</code></pre>
 </div>
@@ -119,7 +119,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">mySingletonContainer = new://Container?type=SINGLETON
+<pre class="highlight"><code class="language-properties" data-lang="properties">mySingletonContainer = new://Container?type=SINGLETON
 mySingletonContainer.accessTimeout = 30 seconds</code></pre>
 </div>
 </div>

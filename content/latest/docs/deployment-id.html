@@ -216,11 +216,11 @@ and resources in the container system. name.</p>
 id as its JNDI lookup. For example, if a bean had a deployment-id of
 "/my/bean/foo", a non-bean client could lookup that bean as follows.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...
+<pre class="highlight"><code class="language-java" data-lang="java">...
 Object bean = initialContext.lookup("/my/bean/Foo");
-...</pre>
+...</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -263,11 +263,11 @@ consist of the deployment ids of the beans in the container system.</p>
 the bean&#8217;s deployment id. For example, if a bean had a deployment-id of
 "/my/bean/foo", a client could lookup that bean as follows.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...
+<pre class="highlight"><code class="language-java" data-lang="java">...
 Object bean = initialContext.lookup("/my/bean/Foo");
-...</pre>
+...</code></pre>
 </div>
 </div>
 </div>
@@ -289,9 +289,9 @@ So, just as with the Local Server and Remote Server, clients can lookup
 beans using the bean&#8217;s deployment id. OpenORB has a JNDI implementation
 of their naming service, so lookups can be done just as before.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>...
+<pre class="highlight"><code class="language-java" data-lang="java">...
 String[] args = ...
 
 // The ORB and Object
@@ -318,7 +318,7 @@ name[0] = new org.omg.CosNaming.NameComponent("/my/bean/foo","");
 // Finally, get the bean as a CORBA object
 // Equvalent to an InitialContext.lookup("/my/bean/foo");
 bean = context.resolve( name );
-...</pre>
+...</code></pre>
 </div>
 </div>
 </div>
@@ -335,9 +335,9 @@ loaded. In addition, the system will log a warning like the following
 one asking you to redeploy the jar and choose an different deployment ID
 for the bean.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>WARN : Jar C:\openejb\beans\fooEjbs.jar cannot be loaded.  The Deployment ID "/my/bean/foo" is already in use.  Please redeploy this jar and assign a different deployment ID to the bean with the ejb-name "FooBean".</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">WARN : Jar C:\openejb\beans\fooEjbs.jar cannot be loaded.  The Deployment ID "/my/bean/foo" is already in use.  Please redeploy this jar and assign a different deployment ID to the bean with the ejb-name "FooBean".</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -366,9 +366,9 @@ rest of the beans in the disneyEjbs.jar as they may need the
 "DonaldDuckBean" bean to function properly. The disneyEjbs.jar is
 skipped and the following warning is logged.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>WARN : Jar C:\openejb\beans\disneyEjbs.jar cannot be loaded.  The  Deployment ID "/my/favorite/duck" is already in use.  Please redeploy  this jar and assign a different deployment ID to the bean with the ejb-name "DonaldDuckBean".</pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">WARN : Jar C:\openejb\beans\disneyEjbs.jar cannot be loaded.  The  Deployment ID "/my/favorite/duck" is already in use.  Please redeploy  this jar and assign a different deployment ID to the bean with the ejb-name "DonaldDuckBean".</code></pre>
 </div>
 </div>
             </div>

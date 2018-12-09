@@ -97,9 +97,9 @@
             <div class="col-md-12">
                 <div id="preamble">
 <div class="sectionbody">
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>package org.superbiz.refs;
+<pre class="highlight"><code class="language-java" data-lang="java">package org.superbiz.refs;
 
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
@@ -121,7 +121,7 @@ public class MyDataSourceRefBean implements MyBeanInterface {
         DataSource fooDataSource = (DataSource) context.lookup("java:comp/env/myFooDataSource");
         DataSource barDataSource = (DataSource) context.lookup("java:comp/env/org.superbiz.refs.MyDataSourceRefBean/myBarDataSource");
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -133,9 +133,9 @@ public class MyDataSourceRefBean implements MyBeanInterface {
 <p>The above @Resource annotation usage is 100% equivalent to the following
 xml.</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;resource-ref&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;resource-ref&gt;
     &lt;res-ref-name&gt;myFooDataSource&lt;/res-ref-name&gt;
     &lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt;
 &lt;/resource-ref&gt;
@@ -146,7 +146,7 @@ xml.</p>
         &lt;injection-target-class&gt;org.superbiz.refs.MyDataSourceRefBean&lt;/injection-target-class&gt;
         &lt;injection-target-name&gt;myBarDataSource&lt;/injection-target-name&gt;
     &lt;/injection-target&gt;
-&lt;/resource-ref&gt;</pre>
+&lt;/resource-ref&gt;</code></pre>
 </div>
 </div>
 </div>

@@ -100,7 +100,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         # Do not start the embedded ActiveMQ broker
         BrokerXmlConfig  =
@@ -132,7 +132,7 @@ work, such as 'failover:'.</p>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         BrokerXmlConfig =  broker:(tcp://someHostName:61616)
         ServerUrl       =  tcp://someHostName:61616
@@ -164,7 +164,7 @@ config will automatically setup JDBC Persistence using the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         BrokerXmlConfig =  broker:(tcp://someHostName:61616)
         ServerUrl       =  tcp://someHostName:61616
@@ -231,7 +231,7 @@ belog.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;tomee&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;tomee&gt;
     &lt;Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter"&gt;
         BrokerXmlConfig =  xbean:file:conf/activemq.xml
         ServerUrl       =  tcp://someHostName:61616
@@ -295,7 +295,7 @@ above resources like so:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">javax.jms.ConnectionFactory cf = (ConnectionFactory)
+<pre class="highlight"><code class="language-properties" data-lang="properties">javax.jms.ConnectionFactory cf = (ConnectionFactory)
         context.lookup("openejb:Resource/MyJmsConnectionFactory");
 
 javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");

@@ -147,7 +147,7 @@ plain embedded scenario then add a custom factory like the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
   &lt;property name="jndiEnvironment"&gt;
     &lt;props&gt;
       &lt;prop key="myDs"&gt;new://Resource?type=DataSource&lt;/prop&gt;
@@ -271,7 +271,7 @@ follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;bean id="OrangeUnit" class="org.acme.OrangeUnitFactoryBean"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="OrangeUnit" class="org.acme.OrangeUnitFactoryBean"&gt;
   &lt;property name="context" ref="OpenEjbContext"&gt;
 &lt;/bean&gt;</code></pre>
 </div>
@@ -298,7 +298,7 @@ follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;bean id="SomePojo" class="org.acme.SomePojo"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="SomePojo" class="org.acme.SomePojo"&gt;
   &lt;property name="entityManager" ref="OrangeUnit"&gt;
 &lt;/bean&gt;</code></pre>
 </div>
@@ -312,7 +312,7 @@ spring xml:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;bean id="OpenEjbContext" class="org.acme.OpenEjbFactoryBean"&gt;
   &lt;property name="jndiEnvironment"&gt;
     &lt;props&gt;
       &lt;prop key="myDs"&gt;new://Resource?type=DataSource&lt;/prop&gt;

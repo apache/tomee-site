@@ -103,7 +103,7 @@ body are optional.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;Container id="myMessageDrivenContainer" type="MESSAGE"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Container id="myMessageDrivenContainer" type="MESSAGE"&gt;
     activationSpecClass = org.apache.activemq.ra.ActiveMQActivationSpec
     instanceLimit = 10
     messageListenerInterface = javax.jms.MessageListener
@@ -120,7 +120,7 @@ embedding TomEE via the <code>javax.ejb.embeddable.EJBContainer</code> API or
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">myMessageDrivenContainer = new://Container?type=MESSAGE
+<pre class="highlight"><code class="language-properties" data-lang="properties">myMessageDrivenContainer = new://Container?type=MESSAGE
 myMessageDrivenContainer.activationSpecClass = org.apache.activemq.ra.ActiveMQActivationSpec
 myMessageDrivenContainer.instanceLimit = 10
 myMessageDrivenContainer.messageListenerInterface = javax.jms.MessageListener

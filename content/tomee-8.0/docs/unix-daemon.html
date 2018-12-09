@@ -118,7 +118,7 @@ used.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">cd $TOMEE_HOME/bin
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd $TOMEE_HOME/bin
 tar xzvf commons-daemon-native.tar.gz
 cd commons-daemon-1.0.7-native-src/unix/</code></pre>
 </div>
@@ -151,7 +151,7 @@ point to your SDK installation. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">./configure --with-java=/usr/java</code></pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">./configure --with-java=/usr/java</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -159,7 +159,7 @@ point to your SDK installation. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">export JAVA_HOME
+<pre class="highlight"><code class="language-properties" data-lang="properties">export JAVA_HOME
 ./configure</code></pre>
 </div>
 </div>
@@ -182,7 +182,7 @@ and libraries simply do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">chmod 755 jsvc
+<pre class="highlight"><code class="language-properties" data-lang="properties">chmod 755 jsvc
 mv jsvc $TOMEE_HOME/bin</code></pre>
 </div>
 </div>
@@ -194,7 +194,7 @@ mv jsvc $TOMEE_HOME/bin</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">cd $TOMEE_HOME/bin
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd $TOMEE_HOME/bin
 tar xzvf commons-daemon-native.tar.gz
 cd commons-daemon-1.0.7-native-src/unix/
 ./configure
@@ -210,7 +210,7 @@ mv jsvc ../..</code></pre>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">sudo "$TOMEE_HOME/bin/jsvc" -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo "$TOMEE_HOME/bin/jsvc" -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
     "-javaagent:$TOMEE_HOME/lib/openejb-javaagent.jar" -outfile "$TOMEE_HOME/logs/catalina.out" \
     -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</code></pre>
 </div>
@@ -225,7 +225,7 @@ mv jsvc ../..</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">sudo arch -arch x86_64 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo arch -arch x86_64 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
     "-javaagent:$TOMEE_HOME/lib/openejb-javaagent.jar" -outfile "$TOMEE_HOME/logs/catalina.out" \
     -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</code></pre>
 </div>
@@ -235,7 +235,7 @@ mv jsvc ../..</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">sudo arch -arch i386 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo arch -arch i386 "$TOMEE_HOME/bin/jsvc" -jvm server -cp "$TOMEE_HOME/bin/bootstrap.jar:$TOMEE_HOME/bin/tomcat-juli.jar" \
     "-javaagent:$TOMEE_HOME/lib/openejb-javaagent.jar" -outfile "$TOMEE_HOME/logs/catalina.out" \
     -errfile "$TOMEE_HOME/logs/catalina.err" org.apache.catalina.startup.Bootstrap</code></pre>
 </div>
@@ -260,7 +260,7 @@ You should see similar output with the following two commands</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">mingus:~ 01:51:37
+<pre class="highlight"><code class="language-bash" data-lang="bash">mingus:~ 01:51:37
 $ ls $TOMEE_HOME
 LICENSE     RELEASE-NOTES   bin     endorsed    logs        webapps
 NOTICE      RUNNING.txt conf        lib     temp        work

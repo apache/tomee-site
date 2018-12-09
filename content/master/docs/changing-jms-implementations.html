@@ -161,9 +161,9 @@ These values can be overridden in the <code>tomee.xml</code> or <code>openejb.xm
 <p>Let&#8217;s say that the following file lives in the jar at
 <code>META-INF/org.superbiz/service-jar.xml</code></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;ServiceJar&gt;
   &lt;ServiceProvider
       id="genericra"
@@ -228,7 +228,7 @@ These values can be overridden in the <code>tomee.xml</code> or <code>openejb.xm
           JndiProperties
           TopicClassName
   &lt;/ServiceProvider&gt;
-&lt;/ServiceJar&gt;</pre>
+&lt;/ServiceJar&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -243,23 +243,23 @@ several sets of defaults in a <code>service-jar.xml</code> or via several
 "instances" of these things in your <code>tomee.xml</code> or <code>openejb.xml</code> config
 file as follows:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>&lt;Resource id="My Generic Adapter" type="GenericJMSRA" provider="org.superbiz:genericra"&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;Resource id="My Generic Adapter" type="GenericJMSRA" provider="org.superbiz:genericra"&gt;
 AdapterProperty1 PropertyValue1
 AdapterProperty2 PropertyValue2
 ...
-&lt;/Resource&gt;</pre>
+&lt;/Resource&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Or in properties like so:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>myGenericAdapter = new://Resource?type=GenericJMSRA&amp;provider=org.superbiz:genericra
+<pre class="highlight"><code class="language-properties" data-lang="properties">myGenericAdapter = new://Resource?type=GenericJMSRA&amp;provider=org.superbiz:genericra
 myGenericAdapter.AdapterProperty1 = PropertyValue1
-myGenericAdapter.AdapterProperty2 = PropertyValue2</pre>
+myGenericAdapter.AdapterProperty2 = PropertyValue2</code></pre>
 </div>
 </div>
 <div class="paragraph">

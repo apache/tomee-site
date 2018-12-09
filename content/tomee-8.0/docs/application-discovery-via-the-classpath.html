@@ -111,7 +111,7 @@ ejb-jar.xml like this to your app:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;ejb-jar/&gt;</code></pre>
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;ejb-jar/&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -189,7 +189,7 @@ for the properties are as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">  openejb.exclude-include.order=include-exclude //Defines the processing order
+<pre class="highlight"><code class="language-properties" data-lang="properties">  openejb.exclude-include.order=include-exclude //Defines the processing order
    openejb.deployments.classpath.include=""      //Include nothing
    openejb.deployments.classpath.exclude=".*"    //Exclude everything</code></pre>
 </div>
@@ -227,7 +227,7 @@ nothing):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">Enumeration&lt;URL&gt; ejbJars =
+<pre class="highlight"><code class="language-properties" data-lang="properties">Enumeration&lt;URL&gt; ejbJars =
 this.getClass().getClassLoader().getResources("META-INF/ejb-jar.xml");
 while (ejbJars.hasMoreElements()) {
     URL url = ejbJars.nextElement();

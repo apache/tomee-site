@@ -224,7 +224,7 @@ META-INF, but at the root of any of the paths in the classpath.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code># set the initial context factory
+<pre class="highlight"><code class="language-properties" data-lang="properties"># set the initial context factory
 java.naming.factory.initial = org.apache.openejb.client.LocalInitialContextFactory
 
 # change some logging
@@ -252,7 +252,7 @@ Properties can still be used to override any of the above properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>Properties p = new Properties();
+<pre class="highlight"><code class="language-java" data-lang="java">Properties p = new Properties();
 
 p.put("openejb.validation.output.level ", " medium");
 

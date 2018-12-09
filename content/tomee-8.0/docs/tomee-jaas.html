@@ -124,7 +124,7 @@ property:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">-Djava.security.auth.login.config=$CATALINA_BASE/conf/login.config</code></pre>
+<pre class="highlight"><code class="language-properties" data-lang="properties">-Djava.security.auth.login.config=$CATALINA_BASE/conf/login.config</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -132,7 +132,7 @@ property:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">&lt;?xml version='1.0' encoding='utf-8'?&gt;
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
 &lt;Server port="8005" shutdown="SHUTDOWN"&gt;
   &lt;Listener className="org.apache.tomee.loader.OpenEJBListener" /&gt;
   &lt;Listener className="org.apache.catalina.security.SecurityListener" /&gt;
@@ -180,7 +180,7 @@ name and associated password entries, ex.:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">me=password
+<pre class="highlight"><code class="language-properties" data-lang="properties">me=password
 tomee=tomee</code></pre>
 </div>
 </div>
@@ -189,7 +189,7 @@ tomee=tomee</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">my-role=me
+<pre class="highlight"><code class="language-properties" data-lang="properties">my-role=me
 manager-gui=tomee,me
 tomee-admin=tomee</code></pre>
 </div>
