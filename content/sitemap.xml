@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
+    	<loc>http://tomee.apache.org/community/contributing/jira-ticket.html</loc>
+    	<lastmod>2018-12-10</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/community/contributing/process-task.html</loc>
+    	<lastmod>2018-12-10</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/community/contributing/submit-changes.html</loc>
+    	<lastmod>2018-12-10</lastmod>
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/community/contributing/workflow.html</loc>
+    	<lastmod>2018-12-08</lastmod>
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/docs/Configuring-in-tomee.html</loc>
     	<lastmod>2018-12-05</lastmod>
     </url>
@@ -3262,11 +3282,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/latest/examples/access-timeout-meta.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/latest/examples/access-timeout.html</loc>
     	
     </url>
@@ -3517,6 +3532,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/moviefun-rest.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/moviefun.html</loc>
     	
     </url>
@@ -3532,6 +3552,21 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-config-example.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-custom-healthcheck.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-faulttolerance-fallback.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-faulttolerance-retry.html</loc>
     	
     </url>
@@ -3542,7 +3577,27 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-metrics-histogram.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-metrics-timed.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-opentracing-traced.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-rest-client.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-rest-jwt.html</loc>
     	
     </url>
 
@@ -3553,6 +3608,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/mvc-cxf.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mvc-resteasy.html</loc>
     	
     </url>
 
@@ -3608,11 +3668,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/rest-example.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/latest/examples/rest-mp-jwt.html</loc>
     	
     </url>
 
@@ -3838,11 +3893,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/docs/application-composer/index.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/examples/access-timeout-meta.html</loc>
     	
     </url>
 
@@ -4097,6 +4147,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/moviefun-rest.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/moviefun.html</loc>
     	
     </url>
@@ -4112,6 +4167,21 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-config-example.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-custom-healthcheck.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-faulttolerance-fallback.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/mp-faulttolerance-retry.html</loc>
     	
     </url>
@@ -4122,7 +4192,27 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-metrics-histogram.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/mp-metrics-timed.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-opentracing-traced.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-rest-client.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-rest-jwt.html</loc>
     	
     </url>
 
@@ -4133,6 +4223,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/mvc-cxf.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mvc-resteasy.html</loc>
     	
     </url>
 
@@ -4188,11 +4283,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/rest-example.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/master/examples/rest-mp-jwt.html</loc>
     	
     </url>
 
@@ -5472,11 +5562,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/examples/access-timeout-meta.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/access-timeout.html</loc>
     	
     </url>
@@ -5727,6 +5812,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/moviefun-rest.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/moviefun.html</loc>
     	
     </url>
@@ -5742,6 +5832,21 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-config-example.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-custom-healthcheck.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-faulttolerance-fallback.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-faulttolerance-retry.html</loc>
     	
     </url>
@@ -5752,7 +5857,27 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-metrics-histogram.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-metrics-timed.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-opentracing-traced.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-rest-client.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-rest-jwt.html</loc>
     	
     </url>
 
@@ -5763,6 +5888,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mvc-cxf.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mvc-resteasy.html</loc>
     	
     </url>
 
@@ -5818,11 +5948,6 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/rest-example.html</loc>
-    	
-    </url>
-
-    <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/examples/rest-mp-jwt.html</loc>
     	
     </url>
 
