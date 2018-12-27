@@ -3582,6 +3582,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-metrics-metered.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-metrics-timed.html</loc>
     	
     </url>
@@ -3607,6 +3612,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/multi-jpa-provider-testing.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mvc-cxf.html</loc>
     	
     </url>
@@ -3623,6 +3633,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/persistence-fragment.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/pojo-webservice.html</loc>
     	
     </url>
 
@@ -4197,6 +4212,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-metrics-metered.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/mp-metrics-timed.html</loc>
     	
     </url>
@@ -4222,6 +4242,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/multi-jpa-provider-testing.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/mvc-cxf.html</loc>
     	
     </url>
@@ -4238,6 +4263,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/persistence-fragment.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/pojo-webservice.html</loc>
     	
     </url>
 
@@ -5862,6 +5892,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-metrics-metered.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-metrics-timed.html</loc>
     	
     </url>
@@ -5887,6 +5922,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/multi-jpa-provider-testing.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mvc-cxf.html</loc>
     	
     </url>
@@ -5903,6 +5943,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/persistence-fragment.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/pojo-webservice.html</loc>
     	
     </url>
 
