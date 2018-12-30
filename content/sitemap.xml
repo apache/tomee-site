@@ -3332,11 +3332,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/latest/examples/cdi-alternative-and-stereotypes.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/latest/examples/cdi-application-scope.html</loc>
     	
     </url>
@@ -3368,6 +3363,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/cdi-request-scope.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/cdi-session-scope.html</loc>
     	
     </url>
 
@@ -3962,11 +3962,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/master/examples/cdi-alternative-and-stereotypes.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/master/examples/cdi-application-scope.html</loc>
     	
     </url>
@@ -3998,6 +3993,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/cdi-request-scope.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/cdi-session-scope.html</loc>
     	
     </url>
 
@@ -5642,11 +5642,6 @@
     </url>
 
     <url>
-    	<loc>http://tomee.apache.org/tomee-8.0/examples/cdi-alternative-and-stereotypes.html</loc>
-    	
-    </url>
-
-    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/cdi-application-scope.html</loc>
     	
     </url>
@@ -5678,6 +5673,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/cdi-request-scope.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/cdi-session-scope.html</loc>
     	
     </url>
 
