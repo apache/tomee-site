@@ -3647,6 +3647,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/projectstage-demo.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/quartz-app.html</loc>
     	
     </url>
@@ -4273,6 +4278,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/polling-parent.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/projectstage-demo.html</loc>
     	
     </url>
 
@@ -5953,6 +5963,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/polling-parent.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/projectstage-demo.html</loc>
     	
     </url>
 
