@@ -3262,6 +3262,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/jakartaee-8.0/index.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/docs/application-composer/advanced.html</loc>
     	
     </url>
@@ -3783,6 +3788,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/simple-mdb.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/simple-remote-tomcatusers.html</loc>
     	
     </url>
 
@@ -4462,6 +4472,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/simple-remote-tomcatusers.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/simple-rest.html</loc>
     	
     </url>
@@ -4608,6 +4623,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/index.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/microprofile-2.0/index.html</loc>
     	
     </url>
 
@@ -6183,6 +6203,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/simple-mdb.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/simple-remote-tomcatusers.html</loc>
     	
     </url>
 
