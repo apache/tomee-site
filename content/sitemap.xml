@@ -3287,6 +3287,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/es/examples/access-timeout.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/access-timeout.html</loc>
     	
     </url>
@@ -3303,6 +3308,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/application-composer.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/applicationcomposer-jaxws-cdi.html</loc>
     	
     </url>
 
@@ -3582,6 +3592,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-config-source-database.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-custom-healthcheck.html</loc>
     	
     </url>
@@ -3593,6 +3608,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-faulttolerance-retry.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-faulttolerance-timeout.html</loc>
     	
     </url>
 
@@ -3907,6 +3927,21 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/vaadin-lts-v08-simple.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/vaadin-lts-v10-simple.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/vaadin-vxx-simple.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/webservice-attachments.html</loc>
     	
     </url>
@@ -3967,6 +4002,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/es/examples/access-timeout.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/access-timeout.html</loc>
     	
     </url>
@@ -3983,6 +4023,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/application-composer.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/applicationcomposer-jaxws-cdi.html</loc>
     	
     </url>
 
@@ -4262,6 +4307,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-config-source-database.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/master/examples/mp-custom-healthcheck.html</loc>
     	
     </url>
@@ -4273,6 +4323,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/mp-faulttolerance-retry.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-faulttolerance-timeout.html</loc>
     	
     </url>
 
@@ -4583,6 +4638,21 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/troubleshooting.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/vaadin-lts-v08-simple.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/vaadin-lts-v10-simple.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/vaadin-vxx-simple.html</loc>
     	
     </url>
 
@@ -5702,6 +5772,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/es/examples/access-timeout.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/access-timeout.html</loc>
     	
     </url>
@@ -5718,6 +5793,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/application-composer.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/applicationcomposer-jaxws-cdi.html</loc>
     	
     </url>
 
@@ -5997,6 +6077,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-config-source-database.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-custom-healthcheck.html</loc>
     	
     </url>
@@ -6008,6 +6093,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-faulttolerance-retry.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-faulttolerance-timeout.html</loc>
     	
     </url>
 
@@ -6322,6 +6412,21 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/vaadin-lts-v08-simple.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/vaadin-lts-v10-simple.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/vaadin-vxx-simple.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/webservice-attachments.html</loc>
     	
     </url>
@@ -6387,7 +6492,17 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/es/examples/index.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/index.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/es/examples/index.html</loc>
     	
     </url>
 
@@ -6403,6 +6518,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-7.1/examples/index.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/es/examples/index.html</loc>
     	
     </url>
 
