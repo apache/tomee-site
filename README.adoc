@@ -1,0 +1,37 @@
+# WARNING
+
+This is not the source of the website content.  Any manual changes should be made here:
+
+ - https://github.com/apache/tomee-site-generator
+
+Try this:
+
+----
+git clone git@github.com:apache/tomee-site-generator.git
+cd tomee-site-generator
+mvn clean install-Djbake.http=true
+----
+
+Then open a browser to http://localhost:8080
+
+## Committing
+
+That content can be pushed to this repo via:
+
+----
+mvn clean compile pre-site -Dsite.username=joecool -Dsite.password=DoYourThing
+----
+
+This command of the `tomee-site-generator` will generate the html, checkout this `tomee-site` content, copy it over and attempt to commit it.  The commits you see in this `tomee-site` repo are originating from that process.
+
+## Publishing
+
+Once the generated data is committed here, it will become available for preview at:
+
+ - http://tomee.staging.apache.org
+
+If you like what you see, you can officially publish it via:
+
+ - https://cms.apache.org/tomee/publish
+
+Our site is quite large, so the process of staging and the final publish usually is above a half hour.  It things do not show up in 2 hours or so, you may need to publish again as the staging might not have been fully updated.
