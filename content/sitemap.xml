@@ -3482,6 +3482,16 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-jwt-bean-validation-strongly-typed.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/latest/examples/mp-jwt-bean-validation.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/examples/mp-metrics-counted.html</loc>
     	
     </url>
@@ -3863,6 +3873,16 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/examples/mp-faulttolerance-timeout.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-jwt-bean-validation-strongly-typed.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/examples/mp-jwt-bean-validation.html</loc>
     	
     </url>
 
@@ -5303,6 +5323,16 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-faulttolerance-timeout.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-jwt-bean-validation-strongly-typed.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/examples/mp-jwt-bean-validation.html</loc>
     	
     </url>
 
