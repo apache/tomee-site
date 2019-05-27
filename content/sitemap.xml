@@ -3647,6 +3647,11 @@
     </url>
 
     <url>
+    	<loc>http://tomee.apache.org/latest/pt/examples/jpa-enumerated.html</loc>
+    	
+    </url>
+
+    <url>
     	<loc>http://tomee.apache.org/latest/pt/examples/jpa-hibernate.html</loc>
     	
     </url>
@@ -4038,6 +4043,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/master/pt/examples/jpa-eclipselink.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/master/pt/examples/jpa-enumerated.html</loc>
     	
     </url>
 
@@ -5488,6 +5498,11 @@
 
     <url>
     	<loc>http://tomee.apache.org/tomee-8.0/pt/examples/jpa-eclipselink.html</loc>
+    	
+    </url>
+
+    <url>
+    	<loc>http://tomee.apache.org/tomee-8.0/pt/examples/jpa-enumerated.html</loc>
     	
     </url>
 
